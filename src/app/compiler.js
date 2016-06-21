@@ -1,5 +1,6 @@
 var webworkify = require('webworkify');
 var utils = require('./utils');
+var solWarnings = require('./sol-warnings');
 
 var Base64 = require('js-base64').Base64;
 
@@ -107,6 +108,10 @@ function Compiler (editor, renderer, queryParams, handleGithubCall, outputField,
       renderer.error('Invalid JSON output from the compiler: ' + exception);
       return;
     }
+
+    solWarnings.find(editor.getValue(), data).forEach(function (message) {
+      renderer.warning(message);
+    });
 
     if (data['error'] !== undefined) {
       renderer.error(data['error']);

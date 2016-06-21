@@ -7,9 +7,18 @@ var utils = require('./utils');
 function Renderer (editor, executionContext, updateFiles) {
   var detailsOpen = {};
 
-  function renderError (message) {
+  this.warning = function (message) {
+    var $pre = $('<pre />').html(message);
+    renderProblem('warning', $pre, message);
+  };
+
+  this.error = function (message) {
     var type = utils.errortype(message);
     var $pre = $('<pre />').text(message);
+    renderProblem(type, $pre, message);
+  };
+
+  function renderProblem (type, $pre, message) {
     var $error = $('<div class="sol ' + type + '"><div class="close"><i class="fa fa-close"></i></div></div>').prepend($pre);
     $('#output').append($error);
     var err = message.match(/^([^:]*):([0-9]*):(([0-9]*):)? /);
@@ -41,7 +50,6 @@ function Renderer (editor, executionContext, updateFiles) {
       });
     }
   }
-  this.error = renderError;
 
   var combined = function (contractName, jsonInterface, bytecode) {
     return JSON.stringify([{ name: contractName, interface: jsonInterface, bytecode: bytecode }]);
@@ -85,7 +93,7 @@ function Renderer (editor, executionContext, updateFiles) {
 
     function renderAccounts (err, accounts) {
       if (err) {
-        renderError(err.message);
+        this.error(err.message);
       }
       if (accounts && accounts[0]) {
         $txOrigin.empty();
