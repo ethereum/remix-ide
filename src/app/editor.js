@@ -27,11 +27,12 @@ function Editor (loadingFromGist) {
 
   this.uploadFile = function (file, callback) {
     var fileReader = new FileReader();
+    var cacheName = utils.fileKey(file.name);
 
-    SOL_CACHE_FILE = utils.fileKey(file.name);
     fileReader.onload = function (e) {
-      window.localStorage[SOL_CACHE_FILE] = e.target.result;
-      sessions[SOL_CACHE_FILE] = null;
+      window.localStorage[cacheName] = e.target.result;
+      sessions[cacheName] = null;
+      SOL_CACHE_FILE = cacheName;
       callback();
     };
     fileReader.readAsText(file);
