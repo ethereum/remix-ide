@@ -18,12 +18,12 @@ function Editor (loadingFromGist) {
 
   this.uploadFile = function (file, callback) {
     var fileReader = new FileReader();
-
     var cacheName = utils.fileKey(file.name);
+
     fileReader.onload = function (e) {
+      window.localStorage[cacheName] = e.target.result;
+      sessions[cacheName] = null;
       SOL_CACHE_FILE = cacheName;
-      window.localStorage[SOL_CACHE_FILE] = e.target.result;
-      sessions[SOL_CACHE_FILE] = null;
       callback();
     };
     fileReader.readAsText(file);
