@@ -1,6 +1,6 @@
 var webworkify = require('webworkify');
 var utils = require('./utils');
-var solWarnings = require('./sol-warnings');
+var staticAnalysis = require('./static-analysis');
 
 var Base64 = require('js-base64').Base64;
 
@@ -109,7 +109,7 @@ function Compiler (editor, renderer, queryParams, handleGithubCall, outputField,
       return;
     }
 
-    solWarnings.analyze(editor.getValue(), data).forEach(function (message) {
+    staticAnalysis.analyze(editor.getValue(), data).forEach(function (message) {
       renderer.warning(message);
     });
 

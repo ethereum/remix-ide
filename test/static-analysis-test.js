@@ -1,7 +1,7 @@
 var test = require('tape');
 var solc = require('solc');
 
-var solWarnings = require('../src/app/sol-warnings');
+var staticAnalysis = require('../src/app/static-analysis');
 
 test('no warnings on simple contract', function (t) {
   t.plan(1);
@@ -9,7 +9,7 @@ test('no warnings on simple contract', function (t) {
   var source = 'contract foo {}';
   var compiledResult = solc.compile(source);
 
-  var warnings = solWarnings.analyze(source, compiledResult);
+  var warnings = staticAnalysis.analyze(source, compiledResult);
   t.equal(warnings.length, 0);
 });
 
@@ -24,7 +24,7 @@ test('send', function (t) {
   '}';
   var compiledResult = solc.compile(source);
 
-  var warnings = solWarnings.analyze(source, compiledResult);
+  var warnings = staticAnalysis.analyze(source, compiledResult);
   t.equal(warnings.length, 1);
   t.ok(warnings[0] && warnings[0].match(/send/i));
 });
