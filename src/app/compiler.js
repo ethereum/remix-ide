@@ -109,7 +109,7 @@ function Compiler (editor, renderer, queryParams, handleGithubCall, outputField,
       return;
     }
 
-    solWarnings.find(editor.getValue(), data).forEach(function (message) {
+    solWarnings.analyze(editor.getValue(), data).forEach(function (message) {
       renderer.warning(message);
     });
 

@@ -9,7 +9,7 @@ test('no warnings on simple contract', function (t) {
   var source = 'contract foo {}';
   var compiledResult = solc.compile(source);
 
-  var warnings = solWarnings.find(source, compiledResult);
+  var warnings = solWarnings.analyze(source, compiledResult);
   t.equal(warnings.length, 0);
 });
 
@@ -24,7 +24,7 @@ test('send', function (t) {
   '}';
   var compiledResult = solc.compile(source);
 
-  var warnings = solWarnings.find(source, compiledResult);
+  var warnings = solWarnings.analyze(source, compiledResult);
   t.equal(warnings.length, 1);
   t.ok(warnings[0] && warnings[0].match(/send/i));
 });

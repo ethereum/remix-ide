@@ -1,4 +1,4 @@
-module.exports = { find: find };
+module.exports = { analyze: analyze };
 
 // source: just a big string of the current tab's source code.
 //
@@ -6,7 +6,7 @@ module.exports = { find: find };
 //   success keys: 'contracts' (contains opcodes, bytecode) and 'sources' (contains AST)
 //   error key: 'error' (contains compile error string)
 
-function find (source, compiledResult) {
+function analyze (source, compiledResult) {
   var messages = [];
 
   if (compiledResult) {
