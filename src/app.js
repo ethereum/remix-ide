@@ -16,6 +16,8 @@ var ExecutionContext = require('./app/execution-context');
 var Debugger = require('./app/debugger');
 var FormalVerification = require('./app/formalVerification');
 var EthJSVM = require('ethereumjs-vm');
+var SourceTracker = require('./app/sourceTracker');
+
 
 // The event listener needs to be registered as early as possible, because the
 // parent will send the message upon the "load" event.
@@ -444,7 +446,8 @@ var run = function () {
   };
   var renderer = new Renderer(editor, executionContext, updateFiles, transactionDebugger, vm);
   var formalVerification = new FormalVerification($('#verificationView'), renderer);
-  var compiler = new Compiler(editor, renderer, queryParams, handleGithubCall, $('#output'), getHidingRHP, formalVerification, updateFiles);
+  var sourceTracker = new SourceTracker(editor, transactionDebugger.debugger)
+  var compiler = new Compiler(editor, renderer, queryParams, handleGithubCall, $('#output'), getHidingRHP, formalVerification, sourceTracker, updateFiles);
   executionContext.setCompiler(compiler);
 
   function setVersionText (text) {

@@ -5,7 +5,7 @@ var utils = require('./utils');
 
 var Base64 = require('js-base64').Base64;
 
-function Compiler (editor, renderer, queryParams, handleGithubCall, outputField, hidingRHP, formalVerification, updateFiles) {
+function Compiler (editor, renderer, queryParams, handleGithubCall, outputField, hidingRHP, formalVerification, sourceTracker, updateFiles) {
   var compileJSON;
   var compilerAcceptsMultipleFiles;
 
@@ -118,6 +118,7 @@ function Compiler (editor, renderer, queryParams, handleGithubCall, outputField,
     } else if (noFatalErrors && !hidingRHP()) {
       renderer.contracts(data, editor.getValue());
       formalVerification.compilationFinished(data);
+      sourceTracker.setCompilationData(data)
     }
   }
 
