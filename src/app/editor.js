@@ -8,12 +8,60 @@ require('../mode-solidity.js');
 function Editor (loadingFromGist, storage) {
   var SOL_CACHE_UNTITLED = utils.fileKey('Untitled');
   var SOL_CACHE_FILE = null;
-
+  var Range = ace.acequire('ace/range').Range
   var editor = ace.edit('input');
   var sessions = {};
   var sourceAnnotations = [];
 
   setupStuff(getFiles());
+   
+  this.marker
+  this.hightlightRange = function (range) {
+    if (this.marker) {
+      editor.session.removeMarker(this.marker)
+    }
+    
+    range = new Range(range.start.row, range.start.column, range.end.row, range.end.column)
+    this.marker = editor.session.addMarker(range, 'highlightcode')
+  }
+  
+  this.getRowColumnLocation = function (char, length) {
+    var text = editor.getValue()
+    var splitted = text.split('\n')
+    var currentPos = 0
+    var ret = []
+    for (var k in splitted) { // TODO put it elsewhere
+      var row = {
+        start: currentPos,
+        end: currentPos + splitted[k].length
+      }
+      ret.push(row)
+      currentPos += splitted[k].length + 1
+    }
+    
+    // retrieve current
+    var retrieveCurrent = function (pos) {
+     for (var k in ret) {
+       if (ret[k].start <= pos && ret[k].end >= pos) {
+         return {
+           row: k,
+           column: pos - ret[k].start
+         }
+       }
+     }
+    }
+    
+    var start = retrieveCurrent(char)
+    var end = retrieveCurrent(char + length)
+    return {
+      start: start,
+      end: end
+    }
+  }
+  
+  this.rangeFunction = function () {
+    return editor.acequire('ace/range')
+  }
 
   this.newFile = function () {
     var untitledCount = '';
