@@ -91,7 +91,6 @@ Renderer.prototype.contracts = function (data, source) {
 
     if (contract.bytecode) {
       $contractOutput.append(uiHelper.textRow('Web3 deploy', uiHelper.gethDeploy(contractName.toLowerCase(), contract['interface'], contract.bytecode), 'deploy'));
-      $contractOutput.append(uiHelper.textRow('uDApp', combined(contractName, contract['interface'], contract.bytecode), 'deploy'));
     }
     return $contractOutput.append(uiHelper.getDetails(contract, source, contractName));
   };

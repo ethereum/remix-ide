@@ -14,10 +14,16 @@ module.exports = {
       $('<input readonly="readonly"/>').val(data));
   },
 
+  tableRowPre: function (description, data) {
+    return this.tableRowItems(
+      $('<span/>').text(description),
+      $('<pre/>').text(data));
+  },
+
   textRow: function (description, data, cls) {
     return this.tableRowItems(
       $('<strong/>').text(description),
-      $('<textarea readonly="readonly" class="gethDeployText"/>').val(data),
+      $('<input readonly="readonly"/>').val(data),
       cls);
   },
 
@@ -122,8 +128,10 @@ module.exports = {
   detailsOpen: {},
   getDetails: function (contract, source, contractName) {
     var button = $('<button>Toggle Details</button>');
-    var details = $('<div style="display: none;"/>')
-      .append(this.tableRow('Solidity Interface', contract.solidity_interface));
+    var details = $('<div style="display: none;"/>');
+    if (contract.solidity_interface !== undefined) {
+      details.append(this.tableRow('Solidity Interface', contract.solidity_interface));
+    }
 
     if (contract.opcodes !== '') {
       details.append(this.tableRow('Opcodes', contract.opcodes));
@@ -133,13 +141,11 @@ module.exports = {
     for (var fun in contract.functionHashes) {
       funHashes += contract.functionHashes[fun] + ' ' + fun + '\n';
     }
-    details.append($('<span class="col1">Functions</span>'));
-    details.append($('<pre/>').text(funHashes));
+    details.append(this.tableRowPre('Functions', funHashes));
 
     var gasEstimates = this.formatGasEstimates(contract.gasEstimates);
     if (gasEstimates) {
-      details.append($('<span class="col1">Gas Estimates</span>'));
-      details.append($('<pre/>').text(gasEstimates));
+      details.append(this.tableRowPre('Gas Estimates', gasEstimates));
     }
 
     if (contract.runtimeBytecode && contract.runtimeBytecode.length > 0) {
@@ -147,9 +153,9 @@ module.exports = {
     }
 
     if (contract.assembly !== null) {
-      details.append($('<span class="col1">Assembly</span>'));
-      var assembly = $('<pre/>').text(this.formatAssemblyText(contract.assembly, '', source));
-      details.append(assembly);
+      details.append(this.tableRowPre(
+        'Assembly',
+        this.formatAssemblyText(contract.assembly, '', source)));
     }
 
     var self = this;
