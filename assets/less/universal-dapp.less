@@ -1,0 +1,328 @@
+@color_1: #7A7AE2;
+@color_2: white;
+@color_3: red;
+@color_4: #4C4B4B;
+@color_5: #666;
+@color_6: transparent;
+@font-family_1: monospace;
+
+.udapp {
+	padding: 1em;
+	border: 1px dotted #4D5686;
+	position: relative;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	box-sizing: border-box;
+	overflow: auto;
+	a {
+		color: @color_1;
+		&:visited {
+			color: @color_1;
+		}
+	}
+	.caveat {
+		color: @color_1;
+	}
+	input {
+		display: block;
+		width: 100%;
+		padding: 0.6em;
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		width: 33%;
+		display: block;
+		float: left;
+		padding: 0.25em;
+		border-left: 0 none;
+	}
+	button {
+		display: block;
+		width: 100%;
+		padding: 0.6em;
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		width: 33%;
+		display: block;
+		float: left;
+		padding: 0.25em;
+		background-color: #666;
+		color: @color_4;
+		cursor: pointer;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.contract {
+		margin-bottom: 1em;
+		clear: both;
+	}
+	.create {
+		overflow: auto;
+		margin-bottom: 1em;
+	}
+	.title {
+		margin-bottom: 0.4em;
+		padding: 0.2em;
+		background-color: rgba(255, 255, 255, 0.5);
+		display: block;
+		font-weight: bold;
+		padding-right: 2em;
+		word-wrap: break-word;
+		position: relative;
+		.size {
+			position: absolute;
+			right: 2.2em;
+			top: 0.2em;
+			font-weight: normal;
+		}
+	}
+	.output {
+		padding: 1em;
+		clear: both;
+		word-wrap: break-word;
+		.error {
+			color: @color_3;
+		}
+		.result {
+			position: relative;
+			margin-bottom: 3.5em;
+			white-space: pre;
+			.returned {
+				padding-right: 2em;
+				word-wrap: break-word;
+			}
+			.value {
+				padding-right: 2em;
+				word-wrap: break-word;
+			}
+			.waiting {
+				padding-right: 2em;
+				word-wrap: break-word;
+			}
+			.gasUsed {
+				padding-right: 2em;
+				word-wrap: break-word;
+			}
+			.debugTx {
+				position: absolute;
+				top: 0.4em;
+				right: 1.4em;
+				height: 1.5em;
+				width: 2.5em;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+		&:empty {
+			display: none;
+		}
+	}
+	.constructor {
+		>.output {
+			padding-right: 1em;
+		}
+	}
+	.result {
+		position: relative;
+	}
+	.instance {
+		padding: 0.4em;
+		background-color: rgb(244, 246, 255);
+		margin-bottom: 1em;
+		position: relative;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.title {
+			cursor: pointer;
+			&:before {
+				content: "\25BC";
+				opacity: 0.5;
+				margin-right: 0.4em;
+				font-size: 10px;
+			}
+		}
+		input {
+			width: 50%;
+			float: left;
+			box-sizing: border-box;
+		}
+		button {
+			width: 50%;
+			float: left;
+			box-sizing: border-box;
+		}
+	}
+	.instance.hide {
+		.title {
+			margin-bottom: 0;
+			padding-right: 1.5em;
+			word-wrap: break-word;
+		}
+		>* {
+			&:not(.title) {
+				display: none;
+			}
+		}
+		>.title {
+			&:before {
+				content: "\25B6";
+			}
+		}
+	}
+	.contractProperty {
+		overflow: auto;
+		margin-bottom: 0.4em;
+		button {
+			width: 25%;
+			&:disabled {
+				cursor: not-allowed;
+				background-color: white;
+				border-color: lightgray;
+			}
+		}
+		button.debug {
+			width: 21px;
+		}
+		.call {
+			background-color: #FF8B8B;
+			border-color: #FF8B8B;
+		}
+		.debug {
+			background-color: #9DC1F5;
+			border-color: #9DC1F5;
+		}
+		input {
+			display: none;
+		}
+		>.value {
+			padding: 0 0.4em;
+			box-sizing: border-box;
+			width: 75%;
+			float: left;
+			word-wrap: break-word;
+		}
+	}
+	.atAddress {
+		background-color: #B1EAC5;
+		border-color: #B1EAC5;
+		margin-right: 1em;
+		border-radius: 3px;
+	}
+	.contractProperty.hasArgs {
+		input {
+			width: 75%;
+			display: block;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+		button {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: 0;
+		}
+	}
+	.contractProperty.constant {
+		.call {
+			background-color: #9DC1F5;
+			border-color: #9DC1F5;
+			width: 25%;
+		}
+	}
+	.events {
+		&:not(:empty) {
+			&:before {
+				content: "Events";
+				font-weight: bold;
+				display: block;
+				margin-bottom: 0.4em;
+			}
+		}
+		.event {
+			padding: 0.4em;
+			position: relative;
+			word-wrap: break-word;
+			padding-right: 3em;
+			background-color: white;
+			margin-bottom: 0.5em;
+			white-space: pre;
+			.name {
+				margin-right: 0.5em;
+			}
+		}
+	}
+	.legend {
+		font-size: 12px;
+		float: left;
+		color: @color_5;
+		div {
+			display: inline-block;
+			margin-right: 0.5em;
+			margin-bottom: 1em;
+			&:before {
+				content: ".";
+				color: @color_6;
+				display: inline-block;
+				background-color: #ccc;
+				height: 1em;
+				margin-right: 0.5em;
+				width: 1em;
+			}
+		}
+		.attach {
+			&:before {
+				background-color: #62B762;
+			}
+		}
+		.transact {
+			&:before {
+				background-color: #D42828;
+			}
+		}
+		.call {
+			&:before {
+				background-color: #556DF3;
+			}
+		}
+	}
+}
+.udapp-setup {
+	textarea {
+		display: block;
+		width: 100%;
+		padding: 0.6em;
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		border-radius: 0;
+		margin-bottom: 1em;
+		height: 7em;
+	}
+	button {
+		display: block;
+		width: 100%;
+		padding: 0.6em;
+		box-sizing: border-box;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		background-color: #556DF3;
+		border-color: #556DF3;
+		color: @color_2;
+		cursor: pointer;
+	}
+}
+.udapp-close {
+	&:before {
+		position: absolute;
+		font-family: @font-family_1;
+		top: .4em;
+		right: .4em;
+		width: 1.5em;
+		height: 1.5em;
+		text-align: center;
+		content: "x";
+		cursor: pointer;
+		z-index: 9999;
+	}
+}
