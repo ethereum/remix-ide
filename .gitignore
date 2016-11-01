@@ -2,4 +2,4 @@
 build
 node_modules
 reports
-.DS_Store
+**/.DS_Store
