@@ -30,6 +30,7 @@ function Compiler (editor, handleGithubCall) {
     gatherImports(files, missingInputs, function (error, input) {
       if (error) {
         self.lastCompilationResult = null
+
         self.event.trigger('compilationFinished', [false, { 'error': error }, files])
       } else {
         compileJSON(input, optimize ? 1 : 0)
