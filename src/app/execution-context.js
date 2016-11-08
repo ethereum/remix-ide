@@ -16,7 +16,7 @@ if (typeof window.web3 !== 'undefined') {
   web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
 }
 
-var vm = new EthJSVM(null, null, { activatePrecompiles: true, enableHomestead: true })
+var vm = new EthJSVM({ activatePrecompiles: true, enableHomestead: true })
 vm.stateManager.checkpoint()
 
 /*
