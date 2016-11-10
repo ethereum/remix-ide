@@ -13,6 +13,7 @@ body {
 	color: @color_1;
 	font-weight: normal;
 }
+
 #editor {
 	position: absolute;
 	top: 0;
@@ -34,6 +35,7 @@ body {
 		}
 	}
 }
+
 .scroller {
 	position: absolute;
 	z-index: 999;
@@ -49,12 +51,15 @@ body {
 		line-height: 3em;
 	}
 }
+
 .scroller-right {
 	right: 0;
 }
+
 .scroller-left {
 	left: 0;
 }
+
 .files-wrapper {
 	position: absolute;
 	overflow: hidden;
@@ -62,6 +67,7 @@ body {
 	left: 5em;
 	right: 3em;
 }
+
 #files {
 	list-style: none;
 	margin: 0;
@@ -116,6 +122,7 @@ body {
 		}
 	}
 }
+
 .newFile {
 	display: block;
 	float: left;
@@ -125,6 +132,7 @@ body {
 	cursor: pointer;
 	color: @color_3;
 }
+
 .uploadFile {
 	display: block;
 	float: left;
@@ -134,6 +142,7 @@ body {
 	cursor: pointer;
 	color: @color_3;
 }
+
 .toggleRHP {
 	display: block;
 	float: right;
@@ -145,6 +154,7 @@ body {
 	position: absolute;
 	right: 0;
 }
+
 #input {
 	border-top: 3px solid #F4F6FF;
 	padding-top: 0.5em;
@@ -156,6 +166,7 @@ body {
 	bottom: 0;
 	min-width: 20vw;
 }
+
 #righthand-panel {
 	position: absolute;
 	top: 0;
@@ -166,6 +177,7 @@ body {
 	overflow: auto;
 	box-sizing: border-box;
 }
+
 #output {
 	display: block;
 	.udapp {
@@ -174,6 +186,7 @@ body {
 		border-bottom: 3px solid #F4F6FF;
 	}
 }
+
 #header {
 	font-size: 12px;
 	#solIcon {
@@ -297,6 +310,7 @@ body {
 		background-color: transparent;
 	}
 }
+
 #settingsView {
 	button {
 		background-color: #C6CFF7;
@@ -311,6 +325,7 @@ body {
 		cursor: pointer;
 	}
 }
+
 #publishView {
 	button {
 		background-color: #C6CFF7;
@@ -325,6 +340,7 @@ body {
 		cursor: pointer;
 	}
 }
+
 #staticanalysisView {
 	button {
 		background-color: #C6CFF7;
@@ -339,18 +355,22 @@ body {
 		cursor: pointer;
 	}
 }
+
 .col1 {
 	width: 30%;
 	float: left;
 }
+
 .col2 {
 	width: 70%;
 	float: left;
 }
+
 #formalVerificationInput {
 	height: 4.5em;
 	width: 100%;
 }
+
 .contract.hide {
 	padding-bottom: 0;
 	margin: 0;
@@ -365,6 +385,7 @@ body {
 		}
 	}
 }
+
 .udapp {
 	.contract {
 		>.title {
@@ -378,12 +399,14 @@ body {
 		}
 	}
 }
+
 .crow {
 	overflow: auto;
 	display: block;
 	clear: both;
 	margin: 0.5em;
 }
+
 .contractDetails {
 	button {
 		background-color: transparent;
@@ -398,6 +421,7 @@ body {
 		margin-bottom: 1em;
 	}
 }
+
 .sol.error {
 	word-wrap: break-word;
 	cursor: pointer;
@@ -423,6 +447,7 @@ body {
 		padding: 0.5em;
 	}
 }
+
 .sol.warning {
 	word-wrap: break-word;
 	cursor: pointer;
@@ -448,6 +473,7 @@ body {
 		padding: 0.5em;
 	}
 }
+
 #ghostbar {
 	width: 1px;
 	background-color: red;
@@ -458,6 +484,7 @@ body {
 	top: 0;
 	bottom: 0;
 }
+
 #dragbar {
 	background-color: transparent;
 	position: absolute;
@@ -469,6 +496,7 @@ body {
 	z-index: 999;
 	border-right: 3px solid #F4F6FF;
 }
+
 input[readonly] {
 	padding: .4em;
 	border: 1px solid #ccc;
@@ -476,9 +504,11 @@ input[readonly] {
 	display: block;
 	width: 100%;
 }
+
 input[type="file"] {
 	display: none;
 }
+
 .highlightcode {
 	position: absolute;
 	z-index: 20;
