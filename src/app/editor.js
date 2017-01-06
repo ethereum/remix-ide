@@ -83,6 +83,11 @@ function Editor (doNotLoadStorage, storage) {
     }
   }
 
+  this.renameFile = function (oldName, newName) {
+    storage.rename(utils.fileKey(oldName), utils.fileKey(newName))
+    this.renameSession(utils.fileKey(oldName), utils.fileKey(newName))
+  }
+
   this.hasFile = function (name) {
     return this.getFiles().indexOf(name) !== -1
   }
