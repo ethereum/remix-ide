@@ -545,8 +545,7 @@ var run = function () {
       window.clearTimeout(saveTimeout)
     }
     saveTimeout = window.setTimeout(function () {
-      var input = editor.getValue()
-      editor.setCacheFileContent(input)
+      editor.saveCurrentFile()
     }, 5000)
 
     // special case: there's nothing else to do

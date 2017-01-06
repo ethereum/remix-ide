@@ -60,6 +60,11 @@ function Editor (doNotLoadStorage, storage) {
     return this.getValue()
   }
 
+  this.saveCurrentFile = function () {
+    var input = editor.getValue()
+    this.setCacheFileContent(input)
+  }
+
   this.switchToFile = function (name) {
     this.setCacheFile(utils.fileKey(name))
   }
