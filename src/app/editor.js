@@ -56,6 +56,10 @@ function Editor (doNotLoadStorage, storage) {
     return this.getCacheFile()
   }
 
+  this.getCurrentFileContent = function () {
+    return this.getValue()
+  }
+
   this.switchToFile = function (name) {
     this.setCacheFile(utils.fileKey(name))
   }
