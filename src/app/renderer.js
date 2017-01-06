@@ -66,7 +66,7 @@ Renderer.prototype.error = function (message, container, options) {
     $error.click(function (ev) {
       if (errFile !== '' && errFile !== self.editor.getCacheFile() && self.editor.hasFile(errFile)) {
         // Switch to file
-        self.editor.setCacheFile(errFile)
+        self.editor.switchToFile(errFile)
         self.updateFiles()
       }
       self.editor.handleErrorClick(errLine, errCol)
