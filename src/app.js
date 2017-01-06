@@ -276,14 +276,13 @@ var run = function () {
 
   function updateFiles () {
     var $filesEl = $('#files')
-    var files = editor.getFiles()
+    var files = editor.getFileNames()
 
     $filesEl.find('.file').remove()
     $('#output').empty()
 
     for (var f in files) {
-      var name = files[f]
-      $filesEl.append($('<li class="file"><span class="name">' + name + '</span><span class="remove"><i class="fa fa-close"></i></span></li>'))
+      $filesEl.append($('<li class="file"><span class="name">' + files[f] + '</span><span class="remove"><i class="fa fa-close"></i></span></li>'))
     }
 
     if (editor.cacheFileIsPresent()) {

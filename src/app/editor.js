@@ -132,6 +132,15 @@ function Editor (doNotLoadStorage, storage) {
   }
   this.getFiles = getFiles
 
+  // FIXME: merge this with the above
+  this.getFileNames = function () {
+    var ret = []
+    this.getFiles().forEach(function (f) {
+      ret.push(utils.fileNameFromKey(f))
+    })
+    return ret
+  }
+
   this.packageFiles = function () {
     var files = {}
     var filesArr = this.getFiles()
