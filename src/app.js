@@ -257,9 +257,7 @@ var run = function () {
     var name = $(this).parent().find('.name').text()
 
     if (confirm('Are you sure you want to remove: ' + name + ' from local storage?')) {
-      storage.remove(name)
-      editor.removeSession(name)
-      editor.setNextFile(name)
+      editor.removeFile(name)
       updateFiles()
     }
     return false
