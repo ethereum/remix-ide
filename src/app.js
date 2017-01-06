@@ -287,7 +287,7 @@ var run = function () {
     }
 
     if (editor.cacheFileIsPresent()) {
-      var currentFileName = editor.getCacheFile()
+      var currentFileName = editor.getCurrentFileName()
       var active = $('#files .file').filter(function () { return $(this).find('.name').text() === currentFileName })
       active.addClass('active')
       editor.resetSession()
@@ -519,7 +519,7 @@ var run = function () {
 
   function runCompiler () {
     var files = {}
-    var target = editor.getCacheFile()
+    var target = editor.getCurrentFileName()
 
     files[target] = editor.getValue()
 
