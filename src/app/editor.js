@@ -7,8 +7,6 @@ var ace = require('brace')
 require('../mode-solidity.js')
 
 function Editor (doNotLoadStorage, storage) {
-  var SOL_CACHE_UNTITLED = 'Untitled'
-
   var editor = ace.edit('input')
   document.getElementById('input').editor = editor // required to access the editor during tests
   var sessions = {}
@@ -34,7 +32,7 @@ function Editor (doNotLoadStorage, storage) {
   }
 
   this.newFile = function () {
-    currentFileName = findNonClashingName(SOL_CACHE_UNTITLED)
+    currentFileName = findNonClashingName(utils.fileKey('Untitled'))
     storage.set(currentFileName, '')
   }
 
