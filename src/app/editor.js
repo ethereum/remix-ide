@@ -25,12 +25,16 @@ function Editor (doNotLoadStorage, storage) {
     editor.session.removeMarker(markerId)
   }
 
-  this.newFile = function () {
-    var untitledCount = ''
-    while (storage.exists(SOL_CACHE_UNTITLED + untitledCount)) {
-      untitledCount = (untitledCount - 0) + 1
+  function findNonClashingName (name) {
+    var counter = ''
+    while (storage.exists(name + counter)) {
+      counter = (counter | 0) + 1
     }
-    SOL_CACHE_FILE = SOL_CACHE_UNTITLED + untitledCount
+    return name + counter
+  }
+
+  this.newFile = function () {
+    SOL_CACHE_FILE = findNonClashingName(SOL_CACHE_UNTITLED)
     this.setCacheFileContent('')
   }
 
@@ -41,9 +45,8 @@ function Editor (doNotLoadStorage, storage) {
   this.replaceFileWithBackup = function (name, content) {
     name = utils.fileKey(name)
     if (storage.exists(name) && storage.get(name) !== content) {
-      var count = ''
-      while (storage.exists(name + count)) count = count - 1
-      storage.rename(name, name + count)
+      var newName = findNonClashingName(name)
+      storage.rename(name, newName)
     }
     storage.set(name, content)
   }
