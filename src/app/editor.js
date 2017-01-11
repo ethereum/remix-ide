@@ -8,12 +8,12 @@ require('../mode-solidity.js')
 
 function Editor (doNotLoadStorage, storage) {
   var SOL_CACHE_UNTITLED = 'Untitled'
-  var SOL_CACHE_FILE = null
 
   var editor = ace.edit('input')
   document.getElementById('input').editor = editor // required to access the editor during tests
   var sessions = {}
   var sourceAnnotations = []
+  var currentFileName
 
   setupStuff()
 
@@ -34,7 +34,7 @@ function Editor (doNotLoadStorage, storage) {
   }
 
   this.newFile = function () {
-    SOL_CACHE_FILE = findNonClashingName(SOL_CACHE_UNTITLED)
+    currentFileName = findNonClashingName(SOL_CACHE_UNTITLED)
     this.setCacheFileContent('')
   }
 
@@ -63,14 +63,14 @@ function Editor (doNotLoadStorage, storage) {
 
     fileReader.onload = function (e) {
       storage.set(name, e.target.result)
-      SOL_CACHE_FILE = name
+      currentFileName = name
       callback()
     }
     fileReader.readAsText(file)
   }
 
   this.getCurrentFileName = function () {
-    return this.getCacheFile()
+    return currentFileName
   }
 
   this.getCurrentFileContent = function () {
@@ -83,32 +83,32 @@ function Editor (doNotLoadStorage, storage) {
   }
 
   this.switchToFile = function (name) {
-    this.setCacheFile(utils.fileKey(name))
+    currentFileName = utils.fileKey(name)
   }
 
   this.setCacheFileContent = function (content) {
-    storage.set(SOL_CACHE_FILE, content)
+    storage.set(currentFileName, content)
   }
 
   this.setCacheFile = function (cacheFile) {
-    SOL_CACHE_FILE = cacheFile
+    currentFileName = cahceFIle
   }
 
   this.getCacheFile = function () {
-    return SOL_CACHE_FILE
+    return currentFileName
   }
 
   this.cacheFileIsPresent = function () {
-    return !!SOL_CACHE_FILE
+    return !!currentFileName
   }
 
   this.setNextFile = function (fileKey) {
     var index = this.getFiles().indexOf(fileKey)
-    this.setCacheFile(this.getFiles()[ Math.max(0, index - 1) ])
+    currentFileName = this.getFiles()[ Math.max(0, index - 1) ]
   }
 
   this.resetSession = function () {
-    editor.setSession(sessions[SOL_CACHE_FILE])
+    editor.setSession(sessions[currentFileName])
     editor.focus()
   }
 
@@ -240,13 +240,13 @@ function Editor (doNotLoadStorage, storage) {
       storage.set(examples.ballot.name, examples.ballot.content)
     }
 
-    SOL_CACHE_FILE = files[0]
+    currentFileName = files[0]
 
     for (var x in files) {
       sessions[files[x]] = newEditorSession(files[x])
     }
 
-    editor.setSession(sessions[SOL_CACHE_FILE])
+    editor.setSession(sessions[currentFileName])
     editor.resize(true)
   }
 }
