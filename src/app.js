@@ -287,14 +287,16 @@ var run = function () {
       $filesEl.append($('<li class="file"><span class="name">' + files[f] + '</span><span class="remove"><i class="fa fa-close"></i></span></li>'))
     }
 
-    if (editor.cacheFileIsPresent()) {
-      var currentFileName = editor.getCurrentFileName()
+    var currentFileName = editor.getCurrentFileName()
+    var isFilePresent = !!currentFileName
+
+    if (isFilePresent) {
       var active = $('#files .file').filter(function () { return $(this).find('.name').text() === currentFileName })
       active.addClass('active')
       editor.resetSession()
     }
-    $('#input').toggle(editor.cacheFileIsPresent())
-    $('#output').toggle(editor.cacheFileIsPresent())
+    $('#input').toggle(isFilePresent)
+    $('#output').toggle(isFilePresent)
     reAdjust()
   }
 

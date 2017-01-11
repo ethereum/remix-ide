@@ -35,7 +35,7 @@ function Editor (doNotLoadStorage, storage) {
 
   this.newFile = function () {
     currentFileName = findNonClashingName(SOL_CACHE_UNTITLED)
-    this.setCacheFileContent('')
+    storage.set(currentFileName, '')
   }
 
   this.replaceFile = function (name, content) {
@@ -79,27 +79,11 @@ function Editor (doNotLoadStorage, storage) {
 
   this.saveCurrentFile = function () {
     var input = editor.getValue()
-    this.setCacheFileContent(input)
+    storage.set(currentFileName, input)
   }
 
   this.switchToFile = function (name) {
     currentFileName = utils.fileKey(name)
-  }
-
-  this.setCacheFileContent = function (content) {
-    storage.set(currentFileName, content)
-  }
-
-  this.setCacheFile = function (cacheFile) {
-    currentFileName = cahceFIle
-  }
-
-  this.getCacheFile = function () {
-    return currentFileName
-  }
-
-  this.cacheFileIsPresent = function () {
-    return !!currentFileName
   }
 
   this.setNextFile = function (fileKey) {
