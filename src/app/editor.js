@@ -34,6 +34,10 @@ function Editor (doNotLoadStorage, storage) {
     this.setCacheFileContent('')
   }
 
+  this.replaceFile = function (name, content) {
+    storage.set(utils.fileKey(name), content)
+  }
+
   this.replaceFileWithBackup = function (name, content) {
     name = utils.fileKey(name)
     if (storage.exists(name) && storage.get(name) !== content) {
