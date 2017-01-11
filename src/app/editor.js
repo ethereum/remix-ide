@@ -34,6 +34,16 @@ function Editor (doNotLoadStorage, storage) {
     this.setCacheFileContent('')
   }
 
+  this.replaceFileWithBackup = function (name, content) {
+    name = utils.fileKey(name)
+    if (storage.exists(name) && storage.get(name) !== content) {
+      var count = ''
+      while (storage.exists(name + count)) count = count - 1
+      storage.rename(name, name + count)
+    }
+    storage.set(name, content)
+  }
+
   this.removeFile = function (name) {
     storage.remove(utils.fileKey(name))
     this.removeSession(utils.fileKey(name))

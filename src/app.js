@@ -44,7 +44,7 @@ var run = function () {
 
   function loadFiles (files) {
     for (var f in files) {
-      storage.loadFile(f, files[f].content)
+      editor.replaceFileWithBackup(f, files[f].content)
     }
     // Set the first file as current tab
     editor.switchToFile(Object.keys(files)[0])
