@@ -85,6 +85,7 @@ function Editor (doNotLoadStorage, storage) {
 
   this.switchToFile = function (name) {
     currentFileName = utils.fileKey(name)
+    this.resetSession()
   }
 
   this.resetSession = function () {

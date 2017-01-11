@@ -293,7 +293,6 @@ var run = function () {
     if (isFilePresent) {
       var active = $('#files .file').filter(function () { return $(this).find('.name').text() === currentFileName })
       active.addClass('active')
-      editor.resetSession()
     }
     $('#input').toggle(isFilePresent)
     $('#output').toggle(isFilePresent)
