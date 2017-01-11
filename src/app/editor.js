@@ -50,9 +50,12 @@ function Editor (doNotLoadStorage, storage) {
   }
 
   this.removeFile = function (name) {
+    var files = this.getFileNames()
+    var nextFileName = files[ Math.max(0, files.indexOf(name) - 1) ]
+
     storage.remove(utils.fileKey(name))
     this.removeSession(utils.fileKey(name))
-    this.setNextFile(utils.fileKey(name))
+    this.switchToFile(nextFileName)
   }
 
   this.uploadFile = function (file, callback) {
@@ -82,11 +85,6 @@ function Editor (doNotLoadStorage, storage) {
 
   this.switchToFile = function (name) {
     currentFileName = utils.fileKey(name)
-  }
-
-  this.setNextFile = function (fileKey) {
-    var index = this.getFiles().indexOf(fileKey)
-    currentFileName = this.getFiles()[ Math.max(0, index - 1) ]
   }
 
   this.resetSession = function () {
