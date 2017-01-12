@@ -85,11 +85,11 @@ function Editor (doNotLoadStorage, storage) {
 
   this.switchToFile = function (name) {
     currentFileName = utils.fileKey(name)
-    this.resetSession()
+    this.changeSession(currentFileName)
   }
 
-  this.resetSession = function () {
-    editor.setSession(sessions[currentFileName])
+  this.changeSession = function (fileKey) {
+    editor.setSession(sessions[currentKey])
     editor.focus()
   }
 
@@ -227,7 +227,7 @@ function Editor (doNotLoadStorage, storage) {
       sessions[files[x]] = newEditorSession(files[x])
     }
 
-    editor.setSession(sessions[currentFileName])
+    this.changeSession(currentFileName)
     editor.resize(true)
   }
 }
