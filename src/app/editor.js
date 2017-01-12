@@ -15,6 +15,22 @@ function Editor (doNotLoadStorage, storage) {
 
   setupStuff()
 
+  function changeSession (fileKey) {
+    editor.setSession(sessions[currentKey])
+    editor.focus()
+  }
+
+  function removeSession (fileKey) {
+    delete sessions[fileKey]
+  }
+
+  function renameSession (oldFileKey, newFileKey) {
+    if (oldFileKey !== newFileKey) {
+      sessions[newFileKey] = sessions[oldFileKey]
+      removeSession(oldFileKey)
+    }
+  }
+
   this.addMarker = function (range, cssClass) {
     return editor.session.addMarker(range, cssClass)
   }
@@ -85,28 +101,12 @@ function Editor (doNotLoadStorage, storage) {
 
   this.switchToFile = function (name) {
     currentFileName = utils.fileKey(name)
-    this.changeSession(currentFileName)
-  }
-
-  this.changeSession = function (fileKey) {
-    editor.setSession(sessions[currentKey])
-    editor.focus()
-  }
-
-  this.removeSession = function (fileKey) {
-    delete sessions[fileKey]
-  }
-
-  this.renameSession = function (oldFileKey, newFileKey) {
-    if (oldFileKey !== newFileKey) {
-      sessions[newFileKey] = sessions[oldFileKey]
-      this.removeSession(oldFileKey)
-    }
+    changeSession(currentFileName)
   }
 
   this.renameFile = function (oldName, newName) {
     storage.rename(utils.fileKey(oldName), utils.fileKey(newName))
-    this.renameSession(utils.fileKey(oldName), utils.fileKey(newName))
+    renameSession(utils.fileKey(oldName), utils.fileKey(newName))
   }
 
   this.hasFile = function (name) {
@@ -227,7 +227,7 @@ function Editor (doNotLoadStorage, storage) {
       sessions[files[x]] = newEditorSession(files[x])
     }
 
-    this.changeSession(currentFileName)
+    changeSession(currentFileName)
     editor.resize(true)
   }
 }
