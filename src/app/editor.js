@@ -91,7 +91,7 @@ function Editor (doNotLoadStorage, storage) {
   }
 
   this.getCurrentFileContent = function () {
-    return this.getValue()
+    return editor.getValue()
   }
 
   this.saveCurrentFile = function () {
@@ -163,10 +163,6 @@ function Editor (doNotLoadStorage, storage) {
         session.setWrapLimit(parseInt(contentWidth / characterWidth, 10))
       }
     }
-  }
-
-  this.getValue = function () {
-    return editor.getValue()
   }
 
   this.clearAnnotations = function () {
