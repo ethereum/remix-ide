@@ -210,7 +210,6 @@ function Editor (doNotLoadStorage, storage) {
     editor.getSession().on('change', onChange)
     editor.on('changeSession', function () {
       editor.getSession().on('change', onChange)
-      onChange()
     })
 
     if (doNotLoadStorage) {
