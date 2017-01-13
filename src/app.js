@@ -259,13 +259,9 @@ var run = function () {
     return false
   })
 
-  function swicthToFile (file) {
-    editor.switchToFile(file)
-  }
-
   function showFileHandler (ev) {
     ev.preventDefault()
-    switchToFile($(this).find('.name').text())
+    editor.switchToFile($(this).find('.name').text())
     return false
   }
 
@@ -485,7 +481,7 @@ var run = function () {
 
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(compiler.event)
 
-  var transactionDebugger = new Debugger('#debugger', editor, compiler, executionContext.event, switchToFile, offsetToLineColumnConverter)
+  var transactionDebugger = new Debugger('#debugger', editor, compiler, executionContext.event, offsetToLineColumnConverter)
   transactionDebugger.addProvider('vm', executionContext.vm())
   transactionDebugger.switchProvider('vm')
   transactionDebugger.addProvider('injected', executionContext.web3())

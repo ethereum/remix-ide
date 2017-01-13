@@ -7,14 +7,13 @@ var Range = ace.acequire('ace/range').Range
 /**
  * Manage remix and source highlighting
  */
-function Debugger (id, editor, compiler, executionContextEvent, switchToFile, offsetToLineColumnConverter) {
+function Debugger (id, editor, compiler, executionContextEvent, offsetToLineColumnConverter) {
   this.el = document.querySelector(id)
   this.offsetToLineColumnConverter = offsetToLineColumnConverter
   this.debugger = new remix.ui.Debugger()
   this.sourceMappingDecoder = new remix.util.SourceMappingDecoder()
   this.el.appendChild(this.debugger.render())
   this.editor = editor
-  this.switchToFile = switchToFile
   this.compiler = compiler
 
   var self = this
@@ -71,7 +70,7 @@ Debugger.prototype.highlight = function (lineColumnPos, rawLocation) {
   var source = this.compiler.lastCompilationResult.data.sourceList[rawLocation.file] // auto switch to that tab
   this.removeCurrentMarker()
   if (name !== source) {
-    this.switchToFile(source) // command the app to swicth to the next file
+    this.editor.switchToFile(source) // command the app to swicth to the next file
   }
   this.currentRange = new Range(lineColumnPos.start.line, lineColumnPos.start.column, lineColumnPos.end.line, lineColumnPos.end.column)
   this.currentMarker = this.editor.addMarker(this.currentRange, 'highlightcode')
