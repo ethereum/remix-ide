@@ -26,7 +26,7 @@ function Debugger (id, editor, compiler, executionContextEvent, switchToFile, of
     self.removeCurrentMarker()
   })
 
-  this.editor.onChangeSetup(function () {
+  editor.event.register('currentEdited', this, function () {
     if (arguments.length > 0) { // if arguments.length === 0 this is a session change, we don't want to stop debugging in that case
       self.debugger.unLoad()
     }

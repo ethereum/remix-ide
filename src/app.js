@@ -562,7 +562,7 @@ var run = function () {
     compileTimeout = window.setTimeout(runCompiler, 300)
   }
 
-  editor.onChangeSetup(editorOnChange)
+  editor.event.register('currentEdited', this, editorOnChange)
 
   $('#compile').click(function () {
     runCompiler()
