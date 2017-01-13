@@ -2,6 +2,7 @@
 'use strict'
 
 var examples = require('./example-contracts')
+var EventManager = require('../lib/eventManager')
 
 var ace = require('brace')
 require('../mode-solidity.js')
@@ -13,11 +14,14 @@ function Editor (doNotLoadStorage, storage) {
   var sourceAnnotations = []
   var currentFileName
 
+  this.event = new EventManager()
+
   setupStuff()
 
   function changeSession (fileKey) {
     editor.setSession(sessions[currentKey])
     editor.focus()
+    this.event.trigger('currentSwitched', [fileKey])
   }
 
   function removeSession (fileKey) {
@@ -50,6 +54,7 @@ function Editor (doNotLoadStorage, storage) {
   this.newFile = function () {
     currentFileName = findNonClashingName(utils.fileKey('Untitled'))
     storage.set(currentFileName, '')
+    changeSession(currentFileName)
   }
 
   this.replaceFile = function (name, content) {
@@ -74,14 +79,14 @@ function Editor (doNotLoadStorage, storage) {
     this.switchToFile(nextFileName)
   }
 
-  this.uploadFile = function (file, callback) {
+  this.uploadFile = function (file) {
     var fileReader = new FileReader()
     var name = file.name
 
     fileReader.onload = function (e) {
       storage.set(name, e.target.result)
       currentFileName = name
-      callback()
+      changeSession(currentFileName)
     }
     fileReader.readAsText(file)
   }

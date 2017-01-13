@@ -48,7 +48,6 @@ var run = function () {
     }
     // Set the first file as current tab
     editor.switchToFile(Object.keys(files)[0])
-    updateFiles()
   }
 
   loadFilesCallback = function (files) {
@@ -101,11 +100,9 @@ var run = function () {
         if (typeof resp[key] !== 'undefined' && obj[key] !== resp[key] && confirm('Overwrite "' + key + '"? Click Ok to overwrite local file with file from cloud. Cancel will push your local file to the cloud.')) {
           console.log('Overwriting', key)
           editor.replaceFile(key, resp[key])
-          updateFiles()
         } else {
           console.log('add to obj', obj, key)
           editor.replaceFile(key, resp[key])
-          updateFiles()
         }
         done++
         if (done >= count) {
@@ -195,7 +192,6 @@ var run = function () {
 
   $('.newFile').on('click', function () {
     editor.newFile()
-    updateFiles()
 
     $filesEl.animate({ left: Math.max((0 - activeFilePos() + (FILE_SCROLL_DELTA / 2)), 0) + 'px' }, 'slow', function () {
       reAdjust()
@@ -209,7 +205,7 @@ var run = function () {
     for (var i = 0; i < fileList.length; i++) {
       var name = fileList[i].name
       if (!editor.hasFile(name) || confirm('The file ' + name + ' already exists! Would you like to overwrite it?')) {
-        editor.uploadFile(fileList[i], updateFiles)
+        editor.uploadFile(fileList[i])
       }
     }
 
@@ -247,7 +243,6 @@ var run = function () {
         editor.switchToFile(newName)
       }
 
-      updateFiles()
       return false
     }
 
@@ -260,14 +255,12 @@ var run = function () {
 
     if (confirm('Are you sure you want to remove: ' + name + ' from local storage?')) {
       editor.removeFile(name)
-      updateFiles()
     }
     return false
   })
 
   function swicthToFile (file) {
     editor.switchToFile(file)
-    updateFiles()
   }
 
   function showFileHandler (ev) {
@@ -298,6 +291,11 @@ var run = function () {
     $('#output').toggle(isFilePresent)
     reAdjust()
   }
+
+  editor.event.register('currentSwitched', this, updateFiles)
+
+  // FIXME: is this needed?
+  updateFiles()
 
   var $filesWrapper = $('.files-wrapper')
   var $scrollerRight = $('.scroller-right')
@@ -359,7 +357,6 @@ var run = function () {
     })
   })
 
-  updateFiles()
 
   // ----------------- resizeable ui ---------------
 
@@ -503,7 +500,7 @@ var run = function () {
     startdebugging(txResult.transactionHash)
   })
 
-  var renderer = new Renderer(editor, updateFiles, udapp, executionContext, formalVerification.event, compiler.event) // eslint-disable-line
+  var renderer = new Renderer(editor, udapp, executionContext, formalVerification.event, compiler.event) // eslint-disable-line
 
   var staticanalysis = new StaticAnalysis(compiler.event, renderer, editor, offsetToLineColumnConverter)
   $('#staticanalysisView').append(staticanalysis.render())

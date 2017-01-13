@@ -4,9 +4,8 @@ var $ = require('jquery')
 
 var utils = require('./utils')
 
-function Renderer (editor, updateFiles, udapp, executionContext, formalVerificationEvent, compilerEvent) {
+function Renderer (editor, udapp, executionContext, formalVerificationEvent, compilerEvent) {
   this.editor = editor
-  this.updateFiles = updateFiles
   this.udapp = udapp
   this.executionContext = executionContext
   var self = this
@@ -67,7 +66,6 @@ Renderer.prototype.error = function (message, container, options) {
       if (errFile !== '' && errFile !== self.editor.getCurrentFileName() && self.editor.hasFile(errFile)) {
         // Switch to file
         self.editor.switchToFile(errFile)
-        self.updateFiles()
       }
       self.editor.handleErrorClick(errLine, errCol)
     })
