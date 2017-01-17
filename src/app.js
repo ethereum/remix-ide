@@ -32,7 +32,7 @@ var examples = require('./app/example-contracts')
 var filesToLoad = null
 var loadFilesCallback = function (files) { filesToLoad = files } // will be replaced later
 
-window.addEventListener('message', function (ev) {
+$(window).on('message', function (ev) {
   if (typeof ev.data === typeof [] && ev.data[0] === 'loadFiles') {
     loadFilesCallback(ev.data[1])
   }
@@ -158,7 +158,7 @@ var run = function () {
 
   // ----------------- editor ----------------------
 
-  var editor = new Editor(document.getElementById('input'))
+  var editor = new Editor($('#input'))
 
   // ----------------- tabbed menu -------------------
   $('#options li').click(function (ev) {
@@ -489,14 +489,14 @@ var run = function () {
   // ----------------- editor resize ---------------
 
   function onResize () {
-    editor.resize(document.querySelector('#editorWrap').checked)
+    editor.resize($('#editorWrap').checked)
     reAdjust()
   }
-  window.onresize = onResize
+  $(window).on('resize', onResize)
   onResize()
 
-  document.querySelector('#editor').addEventListener('change', onResize)
-  document.querySelector('#editorWrap').addEventListener('change', onResize)
+  $('#editor').on('change', onResize)
+  $('#editorWrap').on('change', onResize)
 
   // ----------------- compiler output renderer ----------------------
 
@@ -771,14 +771,14 @@ var run = function () {
   $('#staticanalysisView').append(staticanalysis.render())
 
   // ----------------- autoCompile -----------------
-  var autoCompile = document.querySelector('#autoCompile').checked
+  var autoCompile = $('#autoCompile').checked
   if (config.exists('autoCompile')) {
     autoCompile = config.get('autoCompile')
     $('#autoCompile').checked = autoCompile
   }
 
-  document.querySelector('#autoCompile').addEventListener('change', function () {
-    autoCompile = document.querySelector('#autoCompile').checked
+  $('#autoCompile').on('change', function () {
+    autoCompile = $('#autoCompile').checked
     config.set('autoCompile', autoCompile)
   })
 
@@ -915,11 +915,11 @@ var run = function () {
   }
 
   // set default
-  $('#optimize').attr('checked', (queryParams.get().optimize === 'true'))
-  compiler.setOptimize(document.querySelector('#optimize').checked)
+  $('#optimize').checked = (queryParams.get().optimize === 'true')
+  compiler.setOptimize($('#optimize').checked)
 
-  document.querySelector('#optimize').addEventListener('change', function () {
-    var optimize = document.querySelector('#optimize').checked
+  $('#optimize').on('change', function () {
+    var optimize = $('#optimize').checked
     queryParams.update({ optimize: optimize })
     compiler.setOptimize(optimize)
     runCompiler()

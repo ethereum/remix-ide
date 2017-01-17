@@ -1,5 +1,7 @@
 'use strict'
 
+var $ = require('jquery')
+
 var solc = require('solc/wrapper')
 var solcABI = require('solc/abi')
 
@@ -153,10 +155,11 @@ function Compiler (handleImportCall) {
       compilationFinished({error: 'Compiler not yet loaded.'})
     })
 
-    var newScript = document.createElement('script')
-    newScript.type = 'text/javascript'
-    newScript.src = url
-    document.getElementsByTagName('head')[0].appendChild(newScript)
+    $('head').append($('<script />', {
+      type: 'text/javascript',
+      src: url
+    }))
+
     var check = window.setInterval(function () {
       if (!window.Module) {
         return
