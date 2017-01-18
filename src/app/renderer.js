@@ -4,9 +4,8 @@ var $ = require('jquery')
 
 var utils = require('./utils')
 
-function Renderer (editor, updateFiles, udapp, executionContext, formalVerificationEvent, compilerEvent) {
+function Renderer (editor, udapp, executionContext, formalVerificationEvent, compilerEvent) {
   this.editor = editor
-  this.updateFiles = updateFiles
   this.udapp = udapp
   this.executionContext = executionContext
   var self = this
@@ -55,7 +54,7 @@ Renderer.prototype.error = function (message, container, options) {
     var errFile = err[1]
     var errLine = parseInt(err[2], 10) - 1
     var errCol = err[4] ? parseInt(err[4], 10) : 0
-    if (!opt.noAnnotations && (errFile === '' || errFile === self.editor.getCacheFile())) {
+    if (!opt.noAnnotations && (errFile === '' || errFile === self.editor.getCurrentFileName())) {
       self.editor.addAnnotation({
         row: errLine,
         column: errCol,
@@ -64,10 +63,9 @@ Renderer.prototype.error = function (message, container, options) {
       })
     }
     $error.click(function (ev) {
-      if (errFile !== '' && errFile !== self.editor.getCacheFile() && self.editor.hasFile(errFile)) {
+      if (errFile !== '' && errFile !== self.editor.getCurrentFileName() && self.editor.hasFile(errFile)) {
         // Switch to file
-        self.editor.setCacheFile(errFile)
-        self.updateFiles()
+        self.editor.switchToFile(errFile)
       }
       self.editor.handleErrorClick(errLine, errCol)
     })
@@ -287,8 +285,7 @@ Renderer.prototype.contracts = function (data, source) {
   var self = this
 
   var getSource = function (contractName, source, data) {
-    var currentFile = self.editor.getCacheFile()
-    return source.sources[currentFile]
+    return source.sources[self.editor.getCurrentFileName()]
   }
 
   var getAddress = function (cb) {

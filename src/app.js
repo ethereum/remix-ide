@@ -44,11 +44,10 @@ var run = function () {
 
   function loadFiles (files) {
     for (var f in files) {
-      storage.loadFile(f, files[f].content)
+      editor.replaceFileWithBackup(f, files[f].content)
     }
     // Set the first file as current tab
-    editor.setCacheFile(Object.keys(files)[0])
-    updateFiles()
+    editor.switchToFile(Object.keys(files)[0])
   }
 
   loadFilesCallback = function (files) {
@@ -100,11 +99,10 @@ var run = function () {
         console.log('comparing to cloud', key, resp)
         if (typeof resp[key] !== 'undefined' && obj[key] !== resp[key] && confirm('Overwrite "' + key + '"? Click Ok to overwrite local file with file from cloud. Cancel will push your local file to the cloud.')) {
           console.log('Overwriting', key)
-          storage.set(key, resp[key])
-          updateFiles()
+          editor.replaceFile(key, resp[key])
         } else {
           console.log('add to obj', obj, key)
-          obj[key] = storage.get(key)
+          editor.replaceFile(key, resp[key])
         }
         done++
         if (done >= count) {
@@ -115,9 +113,10 @@ var run = function () {
       })
     }
 
-    for (var y in storage.keys()) {
+    var files = editor.getFiles()
+    for (var y in files) {
       console.log('checking', y)
-      obj[y] = storage.get(y)
+      obj[y] = files[y]
       count++
       check(y)
     }
@@ -193,7 +192,6 @@ var run = function () {
 
   $('.newFile').on('click', function () {
     editor.newFile()
-    updateFiles()
 
     $filesEl.animate({ left: Math.max((0 - activeFilePos() + (FILE_SCROLL_DELTA / 2)), 0) + 'px' }, 'slow', function () {
       reAdjust()
@@ -207,7 +205,7 @@ var run = function () {
     for (var i = 0; i < fileList.length; i++) {
       var name = fileList[i].name
       if (!editor.hasFile(name) || confirm('The file ' + name + ' already exists! Would you like to overwrite it?')) {
-        editor.uploadFile(fileList[i], updateFiles)
+        editor.uploadFile(fileList[i])
       }
     }
 
@@ -241,12 +239,10 @@ var run = function () {
           editor.hasFile(newName)
             ? 'Are you sure you want to overwrite: ' + newName + ' with ' + originalName + '?'
             : 'Are you sure you want to rename: ' + originalName + ' to ' + newName + '?')) {
-        storage.rename(originalName, newName)
-        editor.renameSession(originalName, newName)
-        editor.setCacheFile(newName)
+        editor.renameFile(originalName, newName)
+        editor.switchToFile(newName)
       }
 
-      updateFiles()
       return false
     }
 
@@ -258,47 +254,44 @@ var run = function () {
     var name = $(this).parent().find('.name').text()
 
     if (confirm('Are you sure you want to remove: ' + name + ' from local storage?')) {
-      storage.remove(name)
-      editor.removeSession(name)
-      editor.setNextFile(name)
-      updateFiles()
+      editor.removeFile(name)
     }
     return false
   })
 
-  function swicthToFile (file) {
-    editor.setCacheFile(file)
-    updateFiles()
-  }
-
   function showFileHandler (ev) {
     ev.preventDefault()
-    swicthToFile($(this).find('.name').text())
+    editor.switchToFile($(this).find('.name').text())
     return false
   }
 
   function updateFiles () {
     var $filesEl = $('#files')
-    var files = editor.getFiles()
+    var files = editor.getFileNames()
 
     $filesEl.find('.file').remove()
     $('#output').empty()
 
     for (var f in files) {
-      var name = files[f]
-      $filesEl.append($('<li class="file"><span class="name">' + name + '</span><span class="remove"><i class="fa fa-close"></i></span></li>'))
+      $filesEl.append($('<li class="file"><span class="name">' + files[f] + '</span><span class="remove"><i class="fa fa-close"></i></span></li>'))
     }
 
-    if (editor.cacheFileIsPresent()) {
-      var currentFileName = editor.getCacheFile()
+    var currentFileName = editor.getCurrentFileName()
+    var isFilePresent = !!currentFileName
+
+    if (isFilePresent) {
       var active = $('#files .file').filter(function () { return $(this).find('.name').text() === currentFileName })
       active.addClass('active')
-      editor.resetSession()
     }
-    $('#input').toggle(editor.cacheFileIsPresent())
-    $('#output').toggle(editor.cacheFileIsPresent())
+    $('#input').toggle(isFilePresent)
+    $('#output').toggle(isFilePresent)
     reAdjust()
   }
+
+  editor.event.register('currentSwitched', this, updateFiles)
+
+  // FIXME: is this needed?
+  updateFiles()
 
   var $filesWrapper = $('.files-wrapper')
   var $scrollerRight = $('.scroller-right')
@@ -360,7 +353,6 @@ var run = function () {
     })
   })
 
-  updateFiles()
 
   // ----------------- resizeable ui ---------------
 
@@ -489,7 +481,7 @@ var run = function () {
 
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(compiler.event)
 
-  var transactionDebugger = new Debugger('#debugger', editor, compiler, executionContext.event, swicthToFile, offsetToLineColumnConverter)
+  var transactionDebugger = new Debugger('#debugger', editor, compiler, executionContext.event, offsetToLineColumnConverter)
   transactionDebugger.addProvider('vm', executionContext.vm())
   transactionDebugger.switchProvider('vm')
   transactionDebugger.addProvider('injected', executionContext.web3())
@@ -504,7 +496,7 @@ var run = function () {
     startdebugging(txResult.transactionHash)
   })
 
-  var renderer = new Renderer(editor, updateFiles, udapp, executionContext, formalVerification.event, compiler.event) // eslint-disable-line
+  var renderer = new Renderer(editor, udapp, executionContext, formalVerification.event, compiler.event) // eslint-disable-line
 
   var staticanalysis = new StaticAnalysis(compiler.event, renderer, editor, offsetToLineColumnConverter)
   $('#staticanalysisView').append(staticanalysis.render())
@@ -522,9 +514,9 @@ var run = function () {
 
   function runCompiler () {
     var files = {}
-    var target = editor.getCacheFile()
+    var target = editor.getCurrentFileName()
 
-    files[target] = editor.getValue()
+    files[target] = editor.getCurrentFileContent()
 
     compiler.compile(files, target)
   }
@@ -534,7 +526,7 @@ var run = function () {
   var saveTimeout = null
 
   function editorOnChange () {
-    var input = editor.getValue()
+    var input = editor.getCurrentFileContent()
 
     // if there's no change, don't do anything
     if (input === previousInput) {
@@ -548,8 +540,7 @@ var run = function () {
       window.clearTimeout(saveTimeout)
     }
     saveTimeout = window.setTimeout(function () {
-      var input = editor.getValue()
-      editor.setCacheFileContent(input)
+      editor.saveCurrentFile()
     }, 5000)
 
     // special case: there's nothing else to do
@@ -567,7 +558,7 @@ var run = function () {
     compileTimeout = window.setTimeout(runCompiler, 300)
   }
 
-  editor.onChangeSetup(editorOnChange)
+  editor.event.register('currentEdited', this, editorOnChange)
 
   $('#compile').click(function () {
     runCompiler()

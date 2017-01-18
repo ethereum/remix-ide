@@ -7,14 +7,13 @@ var Range = ace.acequire('ace/range').Range
 /**
  * Manage remix and source highlighting
  */
-function Debugger (id, editor, compiler, executionContextEvent, switchToFile, offsetToLineColumnConverter) {
+function Debugger (id, editor, compiler, executionContextEvent, offsetToLineColumnConverter) {
   this.el = document.querySelector(id)
   this.offsetToLineColumnConverter = offsetToLineColumnConverter
   this.debugger = new remix.ui.Debugger()
   this.sourceMappingDecoder = new remix.util.SourceMappingDecoder()
   this.el.appendChild(this.debugger.render())
   this.editor = editor
-  this.switchToFile = switchToFile
   this.compiler = compiler
 
   var self = this
@@ -26,10 +25,8 @@ function Debugger (id, editor, compiler, executionContextEvent, switchToFile, of
     self.removeCurrentMarker()
   })
 
-  this.editor.onChangeSetup(function () {
-    if (arguments.length > 0) { // if arguments.length === 0 this is a session change, we don't want to stop debugging in that case
-      self.debugger.unLoad()
-    }
+  editor.event.register('currentEdited', this, function () {
+    self.debugger.unLoad()
   })
 
   // register selected code item, highlight the corresponding source location
@@ -69,11 +66,11 @@ Debugger.prototype.debug = function (txHash) {
  * @param {Object} rawLocation - raw position of the source code to hightlight {start, length, file, jump}
  */
 Debugger.prototype.highlight = function (lineColumnPos, rawLocation) {
-  var name = this.editor.getCacheFile() // current opened tab
+  var name = this.editor.getCurrentFileName()
   var source = this.compiler.lastCompilationResult.data.sourceList[rawLocation.file] // auto switch to that tab
   this.removeCurrentMarker()
   if (name !== source) {
-    this.switchToFile(source) // command the app to swicth to the next file
+    this.editor.switchToFile(source) // command the app to swicth to the next file
   }
   this.currentRange = new Range(lineColumnPos.start.line, lineColumnPos.start.column, lineColumnPos.end.line, lineColumnPos.end.column)
   this.currentMarker = this.editor.addMarker(this.currentRange, 'highlightcode')

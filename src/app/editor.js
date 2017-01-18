@@ -2,20 +2,38 @@
 'use strict'
 
 var examples = require('./example-contracts')
+var EventManager = require('../lib/eventManager')
 
 var ace = require('brace')
 require('../mode-solidity.js')
 
 function Editor (doNotLoadStorage, storage) {
-  var SOL_CACHE_UNTITLED = 'Untitled'
-  var SOL_CACHE_FILE = null
-
   var editor = ace.edit('input')
   document.getElementById('input').editor = editor // required to access the editor during tests
   var sessions = {}
   var sourceAnnotations = []
+  var currentFileName
+
+  this.event = new EventManager()
 
   setupStuff()
+
+  function changeSession (fileKey) {
+    editor.setSession(sessions[currentKey])
+    editor.focus()
+    this.event.trigger('currentSwitched', [fileKey])
+  }
+
+  function removeSession (fileKey) {
+    delete sessions[fileKey]
+  }
+
+  function renameSession (oldFileKey, newFileKey) {
+    if (oldFileKey !== newFileKey) {
+      sessions[newFileKey] = sessions[oldFileKey]
+      removeSession(oldFileKey)
+    }
+  }
 
   this.addMarker = function (range, cssClass) {
     return editor.session.addMarker(range, cssClass)
@@ -25,62 +43,75 @@ function Editor (doNotLoadStorage, storage) {
     editor.session.removeMarker(markerId)
   }
 
-  this.newFile = function () {
-    var untitledCount = ''
-    while (storage.exists(SOL_CACHE_UNTITLED + untitledCount)) {
-      untitledCount = (untitledCount - 0) + 1
+  function findNonClashingName (name) {
+    var counter = ''
+    while (storage.exists(name + counter)) {
+      counter = (counter | 0) + 1
     }
-    SOL_CACHE_FILE = SOL_CACHE_UNTITLED + untitledCount
-    this.setCacheFileContent('')
+    return name + counter
   }
 
-  this.uploadFile = function (file, callback) {
+  this.newFile = function () {
+    currentFileName = findNonClashingName(utils.fileKey('Untitled'))
+    storage.set(currentFileName, '')
+    changeSession(currentFileName)
+  }
+
+  this.replaceFile = function (name, content) {
+    storage.set(utils.fileKey(name), content)
+  }
+
+  this.replaceFileWithBackup = function (name, content) {
+    name = utils.fileKey(name)
+    if (storage.exists(name) && storage.get(name) !== content) {
+      var newName = findNonClashingName(name)
+      storage.rename(name, newName)
+    }
+    storage.set(name, content)
+  }
+
+  this.removeFile = function (name) {
+    var files = this.getFileNames()
+    var nextFileName = files[ Math.max(0, files.indexOf(name) - 1) ]
+
+    storage.remove(utils.fileKey(name))
+    this.removeSession(utils.fileKey(name))
+    this.switchToFile(nextFileName)
+  }
+
+  this.uploadFile = function (file) {
     var fileReader = new FileReader()
-    var cacheName = file.name
+    var name = file.name
 
     fileReader.onload = function (e) {
-      storage.set(cacheName, e.target.result)
-      SOL_CACHE_FILE = cacheName
-      callback()
+      storage.set(name, e.target.result)
+      currentFileName = name
+      changeSession(currentFileName)
     }
     fileReader.readAsText(file)
   }
 
-  this.setCacheFileContent = function (content) {
-    storage.set(SOL_CACHE_FILE, content)
+  this.getCurrentFileName = function () {
+    return currentFileName
   }
 
-  this.setCacheFile = function (cacheFile) {
-    SOL_CACHE_FILE = cacheFile
+  this.getCurrentFileContent = function () {
+    return editor.getValue()
   }
 
-  this.getCacheFile = function () {
-    return SOL_CACHE_FILE
+  this.saveCurrentFile = function () {
+    var input = editor.getValue()
+    storage.set(currentFileName, input)
   }
 
-  this.cacheFileIsPresent = function () {
-    return !!SOL_CACHE_FILE
+  this.switchToFile = function (name) {
+    currentFileName = utils.fileKey(name)
+    changeSession(currentFileName)
   }
 
-  this.setNextFile = function (fileKey) {
-    var index = this.getFiles().indexOf(fileKey)
-    this.setCacheFile(this.getFiles()[ Math.max(0, index - 1) ])
-  }
-
-  this.resetSession = function () {
-    editor.setSession(sessions[SOL_CACHE_FILE])
-    editor.focus()
-  }
-
-  this.removeSession = function (fileKey) {
-    delete sessions[fileKey]
-  }
-
-  this.renameSession = function (oldFileKey, newFileKey) {
-    if (oldFileKey !== newFileKey) {
-      sessions[newFileKey] = sessions[oldFileKey]
-      this.removeSession(oldFileKey)
-    }
+  this.renameFile = function (oldName, newName) {
+    storage.rename(utils.fileKey(oldName), utils.fileKey(newName))
+    renameSession(utils.fileKey(oldName), utils.fileKey(newName))
   }
 
   this.hasFile = function (name) {
@@ -103,6 +134,15 @@ function Editor (doNotLoadStorage, storage) {
     return files
   }
   this.getFiles = getFiles
+
+  // FIXME: merge this with the above
+  this.getFileNames = function () {
+    var ret = []
+    this.getFiles().forEach(function (f) {
+      ret.push(utils.fileNameFromKey(f))
+    })
+    return ret
+  }
 
   this.packageFiles = function () {
     var files = {}
@@ -130,10 +170,6 @@ function Editor (doNotLoadStorage, storage) {
     }
   }
 
-  this.getValue = function () {
-    return editor.getValue()
-  }
-
   this.clearAnnotations = function () {
     sourceAnnotations = []
     editor.getSession().clearAnnotations()
@@ -146,14 +182,6 @@ function Editor (doNotLoadStorage, storage) {
 
   this.setAnnotations = function (sourceAnnotations) {
     editor.getSession().setAnnotations(sourceAnnotations)
-  }
-
-  this.onChangeSetup = function (onChange) {
-    editor.getSession().on('change', onChange)
-    editor.on('changeSession', function () {
-      editor.getSession().on('change', onChange)
-      onChange()
-    })
   }
 
   this.handleErrorClick = function (errLine, errCol) {
@@ -175,6 +203,15 @@ function Editor (doNotLoadStorage, storage) {
     editor.commands.bindKeys({ 'ctrl-t': null })
     editor.commands.bindKeys({ 'ctrl-f': null })
 
+    function onChange() {
+      this.event.trigger('currentEdited')
+    }
+
+    editor.getSession().on('change', onChange)
+    editor.on('changeSession', function () {
+      editor.getSession().on('change', onChange)
+    })
+
     if (doNotLoadStorage) {
       return
     }
@@ -186,13 +223,13 @@ function Editor (doNotLoadStorage, storage) {
       storage.set(examples.ballot.name, examples.ballot.content)
     }
 
-    SOL_CACHE_FILE = files[0]
+    currentFileName = files[0]
 
     for (var x in files) {
       sessions[files[x]] = newEditorSession(files[x])
     }
 
-    editor.setSession(sessions[SOL_CACHE_FILE])
+    changeSession(currentFileName)
     editor.resize(true)
   }
 }
