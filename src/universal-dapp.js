@@ -750,7 +750,10 @@ UniversalDApp.prototype.runTx = function (args, cb) {
     // query value
     function (callback) {
       tx.value = 0
-
+      if (tx.useCall) {
+        callback()
+        return
+      }
       if (self.getValue) {
         self.getValue(function (err, ret) {
           if (err) {
