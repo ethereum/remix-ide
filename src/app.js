@@ -714,6 +714,8 @@ var run = function () {
     })
   })
 
+  $('#createAccount').click(function () { udapp.newAccount() })
+
   // ----------------- Renderer -----------------
   var transactionContextAPI = {
     getAddress: (cb) => {
