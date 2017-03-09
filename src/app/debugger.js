@@ -1,13 +1,12 @@
 'use strict'
 
-var $ = require('jquery')
 var remix = require('ethereum-remix')
 
 /**
  * Manage remix and source highlighting
  */
-function Debugger (id, appAPI, executionContextEvent, editorEvent) {
-  this.el = $(id)
+function Debugger (debuggerElement, appAPI, executionContextEvent, editorEvent) {
+  this.el = debuggerElement
   this.debugger = new remix.ui.Debugger()
   this.sourceMappingDecoder = new remix.util.SourceMappingDecoder()
   this.el.append(this.debugger.render())

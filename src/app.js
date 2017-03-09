@@ -631,7 +631,7 @@ var run = function () {
       return offsetToLineColumnConverter.offsetToLineColumn(location, file, compiler.lastCompilationResult)
     }
   }
-  var transactionDebugger = new Debugger('#debugger', debugAPI, executionContext.event, editor.event)
+  var transactionDebugger = new Debugger($('#debugger'), debugAPI, executionContext.event, editor.event)
   transactionDebugger.addProvider('vm', executionContext.vm())
   transactionDebugger.addProvider('injected', executionContext.web3())
   transactionDebugger.addProvider('web3', executionContext.web3())
