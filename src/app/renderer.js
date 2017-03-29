@@ -213,7 +213,6 @@ Renderer.prototype.contracts = function (data, source) {
 
   var detailsOpen = {}
   var getDetails = function (contract, source, contractName) {
-    var button = $('<button>Toggle Details</button>')
     var details = $('<div style="display: none;"/>')
 
     if (contract.metadata) {
@@ -245,14 +244,8 @@ Renderer.prototype.contracts = function (data, source) {
       details.append(preRow('Assembly', formatAssemblyText(contract.assembly, '', source)))
     }
 
-    button.click(function () {
-      detailsOpen[contractName] = !detailsOpen[contractName]
-      details.toggle()
-    })
-    if (detailsOpen[contractName]) {
-      details.show()
-    }
-    return $('<div class="contractDetails"/>').append(button).append(details)
+    details.show()
+    return $('<div class="contractDetails"/>').append(details)
   }
 
   var self = this
@@ -301,7 +294,8 @@ Renderer.prototype.contracts = function (data, source) {
   })
 
   $contractOutput.find('.title').click(function (ev) { $(this).closest('.contract').toggleClass('hide') })
-  $('#output').append($contractOutput)
+  $('#contract').append($contractOutput)
+  document.querySelector('#options .compilationView').click()
   $('.col2 input,textarea').click(function () { this.select() })
 }
 

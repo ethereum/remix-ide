@@ -1,8 +1,7 @@
 .udapp {
 	padding: 1em;
-	border: 1px dotted #4D5686;
+	margin-bottom: 10px;
 	position: relative;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	box-sizing: border-box;
 	overflow: auto;
 }

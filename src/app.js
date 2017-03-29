@@ -679,7 +679,7 @@ var run = function () {
     }
   }
   var staticanalysis = new StaticAnalysis(staticAnalysisAPI, compiler.event)
-  $('#staticanalysisView').append(staticanalysis.render())
+  $('#verificationView').append(staticanalysis.render())
 
   // ----------------- autoCompile -----------------
   var autoCompile = document.querySelector('#autoCompile').checked
@@ -765,7 +765,7 @@ var run = function () {
   })
 
   compiler.event.register('loadingCompiler', this, function (url, usingWorker) {
-    setVersionText(usingWorker ? '(loading using worker)' : '(loading)')
+    setVersionText(usingWorker ? '(loading using worker)' : '(Loading...please, wait a moment)')
   })
 
   compiler.event.register('compilerLoaded', this, function (version) {
