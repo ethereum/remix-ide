@@ -2,8 +2,11 @@ var test = require('tape')
 
 var common = require('../../src/app/staticanalysis/modules/staticAnalysisCommon')
 var utils = require('../../src/app/utils')
+<<<<<<< cacd285edf2be361fd9c2e585f0899ae9edce6bb
 
 // #################### helpers Test
+=======
+>>>>>>> ADD browserify livereload & refactor npm scripts
 
 test('staticAnalysisCommon.helpers.buildFunctionSignature', function (t) {
   t.plan(7)
