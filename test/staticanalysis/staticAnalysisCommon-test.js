@@ -8,6 +8,8 @@ var utils = require('../../src/app/utils')
 =======
 >>>>>>> ADD browserify livereload & refactor npm scripts
 
+// #################### helpers Test
+
 test('staticAnalysisCommon.helpers.buildFunctionSignature', function (t) {
   t.plan(7)
 
@@ -1069,6 +1071,7 @@ test('staticAnalysisCommon.isInlineAssembly', function (t) {
 
 // #################### Complex Node Identification
 
+<<<<<<< c916b65ad0663d676ef59882cc7f19bff322aea9
 test('staticAnalysisCommon.isBuiltinFunctionCall', function (t) {
   t.plan(2)
   var selfdestruct = {
@@ -1122,6 +1125,8 @@ test('staticAnalysisCommon.isBuiltinFunctionCall', function (t) {
   t.notOk(common.isBuiltinFunctionCall(localCall), 'local call is not builtin')
 })
 
+=======
+>>>>>>> Static Analysis: more unit tests
 test('staticAnalysisCommon.isStorageVariableDeclaration', function (t) {
   t.plan(3)
   var node1 = {
@@ -1578,17 +1583,34 @@ test('staticAnalysisCommon.isCallToNonConstLocalFunction', function (t) {
           'type': 'function (struct Ballot.Voter storage pointer)',
           'value': 'bli'
         },
+<<<<<<< c916b65ad0663d676ef59882cc7f19bff322aea9
         'name': 'Identifier'
+=======
+        'id': 37,
+        'name': 'Identifier',
+        'src': '540:3:0'
+>>>>>>> Static Analysis: more unit tests
       },
       {
         'attributes': {
           'type': 'struct Ballot.Voter storage pointer',
           'value': 'x'
         },
+<<<<<<< c916b65ad0663d676ef59882cc7f19bff322aea9
         'name': 'Identifier'
       }
     ],
     'name': 'FunctionCall'
+=======
+        'id': 38,
+        'name': 'Identifier',
+        'src': '544:1:0'
+      }
+    ],
+    'id': 39,
+    'name': 'FunctionCall',
+    'src': '540:6:0'
+>>>>>>> Static Analysis: more unit tests
   }
 
   t.ok(common.isCallToNonConstLocalFunction(node1), 'should be call to non const Local func')
@@ -1643,6 +1665,7 @@ test('staticAnalysisCommon.isBlockTimestampAccess', function (t) {
   t.notOk(common.isNowAccess(node), 'is now used should not work')
 })
 
+<<<<<<< c916b65ad0663d676ef59882cc7f19bff322aea9
 test('staticAnalysisCommon.isBlockBlockhashAccess', function (t) {
   t.plan(4)
   var node = {
@@ -1668,6 +1691,8 @@ test('staticAnalysisCommon.isBlockBlockhashAccess', function (t) {
   t.notOk(common.isNowAccess(node), 'is now used should not work')
 })
 
+=======
+>>>>>>> Static Analysis: more unit tests
 test('staticAnalysisCommon.isThisLocalCall', function (t) {
   t.plan(3)
   var node = { name: 'MemberAccess', children: [{attributes: { value: 'this', type: 'contract test' }}], attributes: { value: 'b', type: 'function (bytes32,address) returns (bool)' } }
