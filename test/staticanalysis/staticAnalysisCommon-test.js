@@ -2,11 +2,8 @@ var test = require('tape')
 
 var common = require('../../src/app/staticanalysis/modules/staticAnalysisCommon')
 var utils = require('../../src/app/utils')
-<<<<<<< aeb01acc715194845b1abd3b6fbfdbda33bcfb80
 
 // #################### helpers Test
-=======
->>>>>>> ADD browserify livereload & refactor npm scripts
 
 test('staticAnalysisCommon.helpers.buildFunctionSignature', function (t) {
   t.plan(7)
@@ -415,6 +412,9 @@ test('staticAnalysisCommon.getSuperLocalCallName', function (t) {
     ],
     'name': 'MemberAccess'
   }
+
+test('staticAnalysisCommon.getExternalDirectCallContractName', function (t) {
+  t.plan(3)
   var localCall = {
     'attributes': {
       'type': 'tuple()',
@@ -523,6 +523,7 @@ test('staticAnalysisCommon.getExternalDirectCallContractName', function (t) {
     name: 'MemberAccess',
     src: '405:6:0'
   }
+
   t.ok(common.getExternalDirectCallContractName(externalDirect) === 'InfoFeed', 'external direct call contract name from node')
   t.throws(() => common.getExternalDirectCallContractName(thisLocalCall), undefined, 'throws on other nodes')
   t.throws(() => common.getExternalDirectCallContractName(localCall), undefined, 'throws on other nodes')
@@ -814,6 +815,7 @@ test('staticAnalysisCommon.getStateVariableDeclarationsFormContractNode', functi
     'name': 'ContractDefinition'
   }
   var res = common.getStateVariableDeclarationsFormContractNode(contract).map(common.getDeclaredVariableName)
+
   t.ok(res[0] === 'chairperson', 'var 1 should be ')
   t.ok(res[1] === 'voters', 'var 2 should be ')
   t.ok(res[2] === 'proposals', 'var 3 should be ')
@@ -1194,6 +1196,7 @@ test('staticAnalysisCommon.isBuiltinFunctionCall', function (t) {
   t.ok(common.isBuiltinFunctionCall(selfdestruct), 'selfdestruct is builtin')
   t.notOk(common.isBuiltinFunctionCall(localCall), 'local call is not builtin')
 })
+
 
 test('staticAnalysisCommon.isStorageVariableDeclaration', function (t) {
   t.plan(3)
@@ -1716,6 +1719,7 @@ test('staticAnalysisCommon.isBlockTimestampAccess', function (t) {
   t.notOk(common.isNowAccess(node), 'is now used should not work')
 })
 
+<<<<<<< 1ca54743848c4b5087105325dbc095c1b6a8b428
 test('staticAnalysisCommon.isBlockBlockhashAccess', function (t) {
   t.plan(4)
   var node = {
