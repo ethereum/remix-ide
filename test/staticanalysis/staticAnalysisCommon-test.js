@@ -1197,7 +1197,10 @@ test('staticAnalysisCommon.isBuiltinFunctionCall', function (t) {
   t.notOk(common.isBuiltinFunctionCall(localCall), 'local call is not builtin')
 })
 
+<<<<<<< 410e1ef899bf0ba8cd918b398ee0a328d542907f
 
+=======
+>>>>>>> Static Analysis: fix blockBlockhash, warn on modifiers
 test('staticAnalysisCommon.isStorageVariableDeclaration', function (t) {
   t.plan(3)
   var node1 = {
