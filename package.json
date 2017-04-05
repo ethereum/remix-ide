@@ -58,7 +58,7 @@
     "onchange": "^3.2.1",
     "rimraf": "^2.6.1",
     "selenium-standalone": "^6.0.1",
-    "solc": "https://github.com/ethereum/solc-js",
+    "solc": "^0.4.3",
     "standard": "^8.5.0",
     "swarmgw": "^0.2.0",
     "tape": "^4.5.1",
