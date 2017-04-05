@@ -644,7 +644,8 @@ var run = function () {
   // ----------------- UniversalDApp -----------------
   var udapp = new UniversalDApp(executionContext, {
     removable: false,
-    removable_instances: true
+    removable_instances: true,
+    personalMode: $('#personalMode').val() === 'true'
   })
 
   udapp.event.register('debugRequested', this, function (txResult) {
@@ -713,6 +714,8 @@ var run = function () {
       }
     })
   })
+
+  $('#createAccount').click(function () { udapp.newAccount() })
 
   // ----------------- Renderer -----------------
   var transactionContextAPI = {
