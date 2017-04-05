@@ -30,7 +30,7 @@ function QueryParams (_window) {
     for (var x in keys) {
       currentParams[keys[x]] = params[keys[x]]
     }
-    var queryString = '#'
+    var queryString = '#compilationView'
     var updatedKeys = Object.keys(currentParams)
     for (var y in updatedKeys) {
       queryString += updatedKeys[y] + '=' + currentParams[updatedKeys[y]] + '&'

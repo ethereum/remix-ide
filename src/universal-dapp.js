@@ -16,7 +16,6 @@ var TxRunner = require('./app/txRunner')
 function UniversalDApp (executionContext, options) {
   this.event = new EventManager()
   var self = this
-
   self.options = options || {}
   self.$el = $('<div class="udapp" />')
   self.personalMode = self.options.personalMode || false
@@ -168,7 +167,6 @@ UniversalDApp.prototype.render = function () {
     }
     self.$el.append(self.renderOutputModifier(self.contracts[c].name, $contractEl))
   }
-
   return self.$el
 }
 

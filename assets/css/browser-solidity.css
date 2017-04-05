@@ -178,8 +178,8 @@ body {
 
 #header #options li {
     float: left;
-    padding: 0.3em 0.6em;
-    font-size: 1em;
+    padding: 0.7em 0.3em;
+    font-size: .9em;
     cursor: pointer;
     background-color: transparent;
     margin-right: 0.5em;
@@ -217,6 +217,10 @@ body {
 }
 
 #header #optionViews.envView #envView {
+    display: block;
+}
+
+#header #optionViews.compilationView #compilationView {
     display: block;
 }
 
@@ -275,6 +279,19 @@ body {
 }
 
 #publishView button {
+    background-color: #C6CFF7;
+    font-size: 12px;
+    padding: 0.25em;
+    margin-bottom: .5em;
+    color: black;
+    border:0 none;
+    border-radius: 3px;
+    width: 8em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+#compilationView button {
     background-color: #C6CFF7;
     font-size: 12px;
     padding: 0.25em;
@@ -479,7 +496,7 @@ input[type="file"] {
     position:absolute;
     z-index:20;
     background-color:#F77E79;
-} 
+}
 
 .highlightcode_fullLine {
     position:absolute;
@@ -488,6 +505,6 @@ input[type="file"] {
     opacity: 0.5;
 }
 
-.ace_gutter-cell.ace_breakpoint{ 
+.ace_gutter-cell.ace_breakpoint{
     background-color: #F77E79;
 }
