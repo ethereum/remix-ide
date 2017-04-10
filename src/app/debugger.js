@@ -5,11 +5,11 @@ var remix = require('ethereum-remix')
 /**
  * Manage remix and source highlighting
  */
-function Debugger (id, appAPI, executionContextEvent, editorEvent) {
-  this.el = document.querySelector(id)
+function Debugger (debuggerElement, appAPI, executionContextEvent, editorEvent) {
+  this.el = debuggerElement
   this.debugger = new remix.ui.Debugger()
   this.sourceMappingDecoder = new remix.util.SourceMappingDecoder()
-  this.el.appendChild(this.debugger.render())
+  this.el.append(this.debugger.render())
   this.appAPI = appAPI
 
   this.breakPointManager = new remix.code.BreakpointManager(this.debugger, (sourceLocation) => {
