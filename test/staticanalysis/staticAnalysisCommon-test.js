@@ -2,11 +2,6 @@ var test = require('tape')
 
 var common = require('../../src/app/staticanalysis/modules/staticAnalysisCommon')
 var utils = require('../../src/app/utils')
-<<<<<<< f983d49cbe89a07fc51ca14cbec3f607eaa8415e
-
-// #################### helpers Test
-=======
->>>>>>> ADD browserify livereload & refactor npm scripts
 
 test('staticAnalysisCommon.helpers.buildFunctionSignature', function (t) {
   t.plan(7)
@@ -432,9 +427,6 @@ test('staticAnalysisCommon.getSuperLocalCallName', function (t) {
     ],
     'name': 'MemberAccess'
   }
-
-test('staticAnalysisCommon.getExternalDirectCallContractName', function (t) {
-  t.plan(3)
   var localCall = {
     'attributes': {
       'type': 'tuple()',
@@ -1261,10 +1253,6 @@ test('staticAnalysisCommon.isBuiltinFunctionCall', function (t) {
   t.notOk(common.isBuiltinFunctionCall(localCall), 'local call is not builtin')
 })
 
-<<<<<<< 410e1ef899bf0ba8cd918b398ee0a328d542907f
-
-=======
->>>>>>> Static Analysis: fix blockBlockhash, warn on modifiers
 test('staticAnalysisCommon.isStorageVariableDeclaration', function (t) {
   t.plan(3)
   var node1 = {
@@ -1786,7 +1774,6 @@ test('staticAnalysisCommon.isBlockTimestampAccess', function (t) {
   t.notOk(common.isNowAccess(node), 'is now used should not work')
 })
 
-<<<<<<< 1ca54743848c4b5087105325dbc095c1b6a8b428
 test('staticAnalysisCommon.isBlockBlockhashAccess', function (t) {
   t.plan(4)
   var node = {
