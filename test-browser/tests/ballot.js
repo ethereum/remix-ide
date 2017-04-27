@@ -24,6 +24,11 @@ module.exports = {
 }
 
 function runTests (browser, testData) {
+  console.log(browser.options.desiredCapabilities)
+  if (browser.options.desiredCapabilities.browserName === 'internet explorer') {
+    browser.end() // REMOVING THIS TEST FOR WINDOWS
+    return
+  }
   browser
     .waitForElementVisible('.newFile', 10000)
     .click('.envView')
