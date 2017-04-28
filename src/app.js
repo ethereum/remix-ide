@@ -406,11 +406,13 @@ var run = function () {
     return $filesEl.position().left
   }
 
+/*
   function activeFilePos () {
     var el = $filesEl.find('.active')
     var l = el.position().left
     return l
   }
+*/
 
   function reAdjust () {
     if (widthOfList() + getLeftPosi() > widthOfVisible()) {

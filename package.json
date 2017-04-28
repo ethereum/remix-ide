@@ -8,14 +8,13 @@
     "babel-eslint": "^7.1.1",
     "babel-plugin-yo-yoify": "^0.3.3",
     "babel-polyfill": "^6.22.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-es2015": "^6.24.0",
     "babelify": "^7.3.0",
     "brace": "^0.8.0",
     "browserify-reload": "^1.0.3",
     "csjs-inject": "^1.0.1",
     "csslint": "^1.0.2",
-    "ethereum-remix": "https://github.com/ethereum/remix",
+    "ethereum-remix": "git://github.com/ethereum/remix",
     "ethereumjs-abi": "https://github.com/ethereumjs/ethereumjs-abi",
     "ethereumjs-block": "https://github.com/ethereumjs/ethereumjs-block",
     "ethereumjs-tx": "https://github.com/ethereumjs/ethereumjs-tx",
@@ -105,7 +104,7 @@
               "wrapAwait": true
             }
           }],
-          ["yo-yoify"], ["transform-object-assign"]
+          ["yo-yoify"]
         ],
         "presets": ["es2015"]
       }],
@@ -124,7 +123,7 @@
     "nightwatch_remote_chrome": "nightwatch --config nightwatch.js --env chrome",
     "nightwatch_remote_firefox": "nightwatch --config nightwatch.js --env default",
     "nightwatch_remote_ie": "nightwatch --config nightwatch.js --env ie",
-    "nightwatch_remote_parallel": "nightwatch --config nightwatch.js --env ie,safari,chrome,default",
+    "nightwatch_remote_parallel": "nightwatch --config nightwatch.js --env safari,chrome,default,ie",
     "nightwatch_remote_safari": "nightwatch --config nightwatch.js --env safari",
     "onchange": "onchange build/app.js -- npm-run-all lint",
     "prepublish": "mkdirp build; npm-run-all -ls downloadsolc build",
