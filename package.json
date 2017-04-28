@@ -15,7 +15,7 @@
     "browserify-reload": "^1.0.3",
     "csjs-inject": "^1.0.1",
     "csslint": "^1.0.2",
-    "ethereum-remix": "https://github.com/ethereum/remix",
+    "ethereum-remix": "git://github.com/ethereum/remix#2ea0925",
     "ethereumjs-abi": "https://github.com/ethereumjs/ethereumjs-abi",
     "ethereumjs-block": "https://github.com/ethereumjs/ethereumjs-block",
     "ethereumjs-tx": "https://github.com/ethereumjs/ethereumjs-tx",
@@ -105,7 +105,7 @@
               "wrapAwait": true
             }
           }],
-          ["yo-yoify"], ["transform-object-assign"]
+          ["yo-yoify"]
         ],
         "presets": ["es2015"]
       }],
