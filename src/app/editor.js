@@ -183,7 +183,7 @@ function Editor (editorElement) {
   // Unmap ctrl-t & ctrl-f
   editor.commands.bindKeys({ 'ctrl-t': null })
   editor.commands.bindKeys({ 'ctrl-f': null })
-  
+
   editor.resize(true)
 }
 
