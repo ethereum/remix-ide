@@ -57,9 +57,8 @@ function settingsTab () {
         <span class="${css.checkboxText}">Enable Optimization</span>
       </div>
       <div class="${css.crow}">
-        <div><input class="${css.col1}" id="autoCompile" type="checkbox" checked></div>
+        <div><input class="${css.col1}" id="autoCompile" type="checkbox"></div>
         <span class="${css.checkboxText}">Auto Compile</span>
-      </div>
       </div>
       <div class="${css.crow}">
         <div class="${css.button} "id="compile" title="Compile source code">Compile</div>
