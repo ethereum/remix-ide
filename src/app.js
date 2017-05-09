@@ -808,7 +808,7 @@ var run = function () {
   var autoCompile = document.querySelector('#autoCompile').checked
   if (config.exists('autoCompile')) {
     autoCompile = config.get('autoCompile')
-    $('#autoCompile').checked = autoCompile
+    document.querySelector('#autoCompile').checked = autoCompile
   }
 
   document.querySelector('#autoCompile').addEventListener('change', function () {
