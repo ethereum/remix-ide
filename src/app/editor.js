@@ -157,6 +157,20 @@ function Editor (editorElement) {
     editor.gotoLine(line + 1, col - 1, true)
   }
 
+  this.bindKey = function (shorcut) {
+    editor.commands.addCommand({
+      name: shorcut.key,
+      bindKey: {
+        win: shorcut.key,
+        mac: shorcut.key.replace('ctrl', 'command'),
+        sender: 'editor|cli'
+      },
+      exec: function (env, args, request) {
+        shorcut.action()
+      }
+    })
+  }
+
   // Do setup on initialisation here
   editor.on('changeSession', function () {
     event.trigger('sessionSwitched', [])
@@ -169,7 +183,7 @@ function Editor (editorElement) {
   // Unmap ctrl-t & ctrl-f
   editor.commands.bindKeys({ 'ctrl-t': null })
   editor.commands.bindKeys({ 'ctrl-f': null })
-
+  
   editor.resize(true)
 }
 
