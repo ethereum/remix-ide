@@ -61,7 +61,7 @@ function settingsTab () {
         <span class="${css.checkboxText}">Auto Compile</span>
       </div>
       <div class="${css.crow}">
-        <div class="${css.button} "id="compile" title="Compile source code">Compile</div>
+        <div class="${css.button} "id="compile" title="Compile source code">Compile (Ctrl+S)</div>
       </div>
     </div>
   `
