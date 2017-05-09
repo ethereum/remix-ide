@@ -36,7 +36,15 @@ var css = csjs`
   }
   .contract {
     display: block;
-    margin: 4em 0 2em 0;
+    margin: 0em 0 2em 0;
+  }
+  .compilewarning {
+    font-size: 20px;
+    color: orange;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.15em;
   }
 `
 
@@ -87,6 +95,7 @@ function contractTab () {
         <div class="${css.col1_1}"> Value</div>
         <input type="text" class="${css.col2}" id="value" value="0" title="(e.g. .7 ether ...)">
       </div>
+      <div><i class="compilewarning fa fa-exclamation-circle ${css.compilewarning}" aria-hidden="true" title="Please refresh the current compilation result (Ctrl+S)"></i></div>
       <div id="output" class="${css.contract}"></div>
     </div>
   `
