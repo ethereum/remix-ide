@@ -26,6 +26,7 @@ var EventManager = require('ethereum-remix').lib.EventManager
 var StaticAnalysis = require('./app/staticanalysis/staticAnalysisView')
 var OffsetToLineColumnConverter = require('./lib/offsetToLineColumnConverter')
 var FilePanel = require('./app/file-panel')
+var shortCuts = require('./app/shortcuts')
 
 var examples = require('./app/example-contracts')
 
@@ -1004,6 +1005,12 @@ var run = function () {
 
     loadVersion('builtin')
   })
+
+  // shortCuts
+  var shortCutsAPI = {
+    runCompiler: runCompiler
+  }
+  shortCuts.init(editor, shortCutsAPI)
 }
 
 module.exports = {
