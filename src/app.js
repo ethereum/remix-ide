@@ -817,9 +817,14 @@ var run = function () {
     config.set('autoCompile', autoCompile)
   })
 
+  contractView.querySelector('.compilewarning').addEventListener('click', function () {
+    runCompiler()
+  })
+
   function runCompiler () {
     if (transactionDebugger.isActive) return
 
+    contractView.querySelector('.compilewarning').style.visibility = 'hidden'
     editorSyncFile()
     var currentFile = config.get('currentFile')
     if (currentFile) {
@@ -868,6 +873,7 @@ var run = function () {
     }
 
     if (!autoCompile) {
+      contractView.querySelector('.compilewarning').style.visibility = 'visible'
       return
     }
 

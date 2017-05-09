@@ -95,7 +95,7 @@ function contractTab () {
         <div class="${css.col1_1}"> Value</div>
         <input type="text" class="${css.col2}" id="value" value="0" title="(e.g. .7 ether ...)">
       </div>
-      <div><i class="compilewarning fa fa-exclamation-circle ${css.compilewarning}" aria-hidden="true" title="Please refresh the current compilation result (Ctrl+S)"></i></div>
+      <div><i class="compilewarning fa fa-exclamation-circle ${css.compilewarning}" aria-hidden="true" title="content changed, a compilation might need to be restarted (F5)"></i></div>
       <div id="output" class="${css.contract}"></div>
     </div>
   `

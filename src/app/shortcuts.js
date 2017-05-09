@@ -2,7 +2,7 @@ var hotkeys = require('hotkeys-js')
 
 module.exports = {
   init: function (editor, api) {
-    applyHotKey('ctrl+s', editor, () => {
+    applyHotKey('F5', editor, () => {
       api.runCompiler()
       return false
     })
