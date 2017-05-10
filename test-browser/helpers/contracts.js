@@ -20,7 +20,11 @@ function testContracts (browser, contractCode, compiledContractNames, callback) 
   browser
       .clearValue('#input textarea')
       .click('.newFile')
+      .click('.settingsView')
+      .click('#autoCompile')
+      .click('.envView')
       .setValue('#input textarea', contractCode, function () {})
+      .keys(browser.Keys.F5)
       .waitForElementPresent('.udapp .create', 5000, true, function () {
         checkCompiledContracts(browser, compiledContractNames, callback)
       })
