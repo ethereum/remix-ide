@@ -182,9 +182,6 @@ var run = function () {
   var editor = new Editor(document.getElementById('input'))
 
   // ---------------- FilePanel --------------------
-  // TODO: All FilePanel related CSS should move into file-panel.js
-  // app.js provides file-panel.js with a css selector or a DOM element
-  // and file-panel.js adds its elements (including css), see "Editor" above
   var css = csjs`
     .filepanel-container    {
       display     : flex;
@@ -198,35 +195,34 @@ var run = function () {
     switchToFile: switchToFile,
     event: this.event
   }
-  var filePanel = new FilePanel(FilePanelAPI, files)
-  // TODO this should happen inside file-panel.js
-  filepanelContainer.appendChild(filePanel)
+  var filepanel = new FilePanel(filepanelContainer, FilePanelAPI, files)
 
-  filePanel.events.register('ui-hidden', function changeLayout (isHidden) {
+  filepanel.events.register('ui-hidden', function changeLayout (isHidden) {
+    var tabsbar = window['tabs-bar']
     var value
     if (isHidden) {
-      value = -parseInt(window['filepanel'].style.width)
-      value = (isNaN(value) ? -window['filepanel'].getBoundingClientRect().width : value)
-      window['filepanel'].style.position = 'absolute'
-      window['filepanel'].style.left = (value - 5) + 'px'
-      window['filepanel'].style.width = -value + 'px'
-      window['tabs-bar'].style.left = '45px'
+      value = -parseInt(filepanel.style.width)
+      value = (isNaN(value) ? -filepanelContainer.getBoundingClientRect().width : value)
+      filepanelContainer.style.position = 'absolute'
+      filepanelContainer.style.left = (value - 5) + 'px'
+      filepanelContainer.style.width = -value + 'px'
+      tabsbar.style.left = '45px'
     } else {
-      value = -parseInt(window['filepanel'].style.left) + 'px'
-      window['filepanel'].style.position = 'static'
-      window['filepanel'].style.width = value
-      window['filepanel'].style.left = ''
-      window['tabs-bar'].style.left = value
+      value = -parseInt(filepanelContainer.style.left) + 'px'
+      filepanelContainer.style.position = 'static'
+      filepanelContainer.style.width = value
+      filepanelContainer.style.left = ''
+      tabsbar.style.left = value
     }
   })
-  filePanel.events.register('ui-resize', function changeLayout (width) {
-    window['filepanel'].style.width = width + 'px'
-    window['tabs-bar'].style.left = width + 'px'
+  filepanel.events.register('ui-resize', function changeLayout (width) {
+    var tabsbar = window['tabs-bar']
+    filepanelContainer.style.width = width + 'px'
+    tabsbar.style.left = width + 'px'
   })
   files.event.register('fileRenamed', function (oldName, newName) {
-    // TODO please never use 'window' when it is possible to use a variable
-    // that references the DOM node
-    [...window.files.querySelectorAll('.file .name')].forEach(function (span) {
+    var filetabs = filepanelContainer.querySelectorAll('.file .name')
+    ;[...filetabs].forEach(function (span) {
       if (span.innerText === oldName) span.innerText = newName
     })
   })
