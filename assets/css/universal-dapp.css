@@ -80,6 +80,7 @@
 }
 
 .udapp .output .result .debugTx {
+	margin-top: 1em;
 	height: 1.5em;
 	width: 2.5em;
 }
