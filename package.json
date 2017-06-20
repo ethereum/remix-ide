@@ -17,6 +17,7 @@
     "clipboard-copy": "^1.2.0",
     "csjs-inject": "^1.0.1",
     "csslint": "^1.0.2",
+    "ethereum-ens": "^0.7.1",
     "ethereum-remix": "https://github.com/ethereum/remix",
     "ethereumjs-abi": "https://github.com/ethereumjs/ethereumjs-abi",
     "ethereumjs-block": "^1.6.0",
@@ -26,6 +27,7 @@
     "execr": "^1.0.1",
     "exorcist": "^0.4.0",
     "fast-async": "^6.1.2",
+    "fast-levenshtein": "^2.0.6",
     "http-server": "0.9.0",
     "jquery": "^2.2.0",
     "js-base64": "^2.1.9",
@@ -44,8 +46,7 @@
     "watchify": "^3.9.0",
     "web3": "^0.18.0",
     "webworkify": "^1.2.1",
-    "yo-yo": "^1.2.2",
-    "fast-levenshtein": "^2.0.6"
+    "yo-yo": "^1.2.2"
   },
   "repository": {
     "type": "git",

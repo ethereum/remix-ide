@@ -96,12 +96,12 @@ var cssInstance = csjs`
   .instance.hidesub > *:not(.title) {
       display: none;
   }
-  .copy extends ${styles.button}  {
+  .action extends ${styles.button}  {
     border: 1px dotted ${styles.colors.grey};
     padding: 0 .3em;
     font-weight: bold;
   }
-  .copy:hover{
+  .action:hover{
     opacity: .7;
   }
 `
@@ -112,7 +112,6 @@ var cssInstance = csjs`
 function UniversalDApp (executionContext, options) {
   this.event = new EventManager()
   var self = this
-
   self.options = options || {}
   self.$el = $('<div class="udapp" />')
   self.personalMode = self.options.personalMode || false
@@ -362,11 +361,16 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
     var title = yo`
       <div class="${cssInstance.title}" onclick=${toggleClass}>
         <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
-        <div class="${cssInstance.copy}" onclick=${copyToClipboard}> <i class="fa fa-clipboard" aria-hidden="true"></i> Copy address </div>
+        <div class="${cssInstance.action}" onclick=${publishABI} title="Publish ABI"> Publish ABI </div>
+        <div class="${cssInstance.action}" onclick=${copyToClipboard}> <i class="fa fa-clipboard" aria-hidden="true"></i> Copy address </div>
       </div>
     `
     function toggleClass () {
       $instance.toggleClass(`${cssInstance.hidesub}`)
+    }
+
+    function publishABI () {
+      self.event.trigger('publishABIRequested', [address, abi])
     }
 
     function copyToClipboard (event) {
@@ -706,7 +710,8 @@ UniversalDApp.prototype.getCallButton = function (args) {
       } else if (isConstructor) {
         replaceOutput($result, getGasUsedOutput(result, result.vm))
         $result.append(getDebugTransaction(txResult))
-        args.appendFunctions(self.executionContext.isVM() ? result.createdAddress : result.contractAddress)
+        var createdAddress = self.executionContext.isVM() ? result.createdAddress : result.contractAddress
+        args.appendFunctions(createdAddress)
       } else if (self.executionContext.isVM()) {
         var outputObj = '0x' + result.vm.return.toString('hex')
         clearOutput($result)

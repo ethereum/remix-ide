@@ -28,6 +28,7 @@ var StaticAnalysis = require('./app/staticanalysis/staticAnalysisView')
 var FilePanel = require('./app/file-panel')
 var RighthandPanel = require('./app/righthand-panel')
 var examples = require('./app/example-contracts')
+var EnsView = require('./app/ens/EnsView')
 
 var css = csjs`
   html { box-sizing: border-box; }
@@ -618,12 +619,24 @@ function run () {
   var renderer = new Renderer(rendererAPI, compiler.event)
 
   // ------------------------------------------------------------
+
   var executionContext = new ExecutionContext()
+
+  // ------------------ ENS --------------------------
+
+  var ensAPI = {
+    web3: () => { return executionContext.web3() }
+  }
+  var ensview = new EnsView(ensAPI, {}, {})
 
   // ----------------- UniversalDApp -----------------
   var udapp = new UniversalDApp(executionContext, {
     removable: false,
     removable_instances: true
+  })
+
+  udapp.event.register('publishABIRequested', this, function (address, abi) {
+    ensview.show(address, abi, $('#txorigin').val())
   })
 
   udapp.event.register('debugRequested', this, function (txResult) {
