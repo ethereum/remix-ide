@@ -23,8 +23,5 @@ function compileTab (container, appAPI, appEvents, opts) {
       <div id="output" class="${css.contract}"></div>
     </div>
   `
-  appEvents.udapp.register('transactionExecuted', (to, data, lookupOnly, txResult) => {
-    if (!lookupOnly) el.querySelector('#value').value = '0'
-  })
   container.appendChild(el)
 }

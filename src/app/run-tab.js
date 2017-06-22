@@ -21,6 +21,8 @@ var css = csjs`
   }
   .col1_1 extends ${styles.titleM} {
     width: 30%;
+    min-width: 50px;
+    margin-left: 1em;
     float: left;
     align-self: center;
   }
@@ -28,7 +30,6 @@ var css = csjs`
     width: 70%;
     height: 32px;
     float: left;
-    padding: .8em;
   }
   .select extends ${styles.dropdown} {
     width: 70%;
@@ -38,12 +39,12 @@ var css = csjs`
   }
   .copyaddress {
     color: #C6CFF7;
-    margin-right: 0.2em;
+    margin-right: 0.3em;
     margin-top: 0.7em;
     cursor: pointer;
   }
   .selectAddress extends ${styles.dropdown} {
-    width: 74%;
+    width: 81%;
     float: left;
     text-align: center;
     height: 32px;
@@ -54,7 +55,7 @@ module.exports = runTab
 
 function runTab (container, appAPI, appEvents, opts) {
   function copyAddress () {
-    copy(document.querySelector('#compileTabView #txorigin').value)
+    copy(document.querySelector('#runTabView #txorigin').value)
   }
   var el = yo`
     <div class="${css.runTabView}" id="runTabView">
@@ -86,7 +87,8 @@ function runTab (container, appAPI, appEvents, opts) {
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Account</div>
-        <i title="Copy Address" class="copytxorigin fa fa-clipboard ${css.copyaddress}" onclick=${copyAddress} aria-hidden="true"></i><select name="txorigin" class="${css.selectAddress}" id="txorigin"></select>
+        <i title="Copy Address" class="copytxorigin fa fa-clipboard ${css.copyaddress}" onclick=${copyAddress} aria-hidden="true"></i>
+        <select name="txorigin" class="${css.selectAddress}" id="txorigin"></select>
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Gas limit</div>
@@ -102,6 +104,9 @@ function runTab (container, appAPI, appEvents, opts) {
       </div>
     </div>
   `
+  appEvents.udapp.register('transactionExecuted', (to, data, lookupOnly, txResult) => {
+    if (!lookupOnly) el.querySelector('#value').value = '0'
+  })
   /* ---------------------------------------------------------------------------
   DROPDOWN
   --------------------------------------------------------------------------- */
