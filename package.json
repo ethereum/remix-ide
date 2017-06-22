@@ -17,6 +17,7 @@
     "clipboard-copy": "^1.2.0",
     "csjs-inject": "^1.0.1",
     "csslint": "^1.0.2",
+    "dom-console": "^5.1.1",
     "ethereum-remix": "https://github.com/ethereum/remix",
     "ethereumjs-abi": "https://github.com/ethereumjs/ethereumjs-abi",
     "ethereumjs-block": "https://github.com/ethereumjs/ethereumjs-block",

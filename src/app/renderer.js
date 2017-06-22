@@ -36,6 +36,22 @@ var css = csjs`
   .toggle:hover {
     opacity: .8;
   }
+  .pre {
+    padding: 8px 15px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    overflow-x: auto;
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+    color: #333;
+    font-size: 12px;
+    margin: 0 0 20px;
+  }
+  @media print, screen and (max-width: 720px) {
+    pre {
+      word-wrap: normal;
+    }
+  }
 `
 // ----------------------------------------------
 
@@ -77,9 +93,9 @@ Renderer.prototype.error = function (message, container, options) {
   }
   var $pre
   if (opt.isHTML) {
-    $pre = $(opt.useSpan ? '<span />' : '<pre />').html(message)
+    $pre = $(opt.useSpan ? '<span />' : '<pre class="' + css.pre + '" />').html(message)
   } else {
-    $pre = $(opt.useSpan ? '<span />' : '<pre />').text(message)
+    $pre = $(opt.useSpan ? '<span />' : '<pre class="' + css.pre + '" />').text(message)
   }
   var $error = $('<div class="sol ' + opt.type + '"><div class="close"><i class="fa fa-close"></i></div></div>').prepend($pre)
   if (container === undefined) {
@@ -147,7 +163,7 @@ Renderer.prototype.contracts = function (data, source) {
   var preRow = function (description, data) {
     return tableRowItems(
       $('<span/>').text(description),
-      $('<pre/>').text(data)
+      $('<pre class="' + css.pre + '" />').text(data)
     )
   }
 
