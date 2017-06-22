@@ -105,6 +105,10 @@
     display: block;
 }
 
+#header #optionViews.runView #runTabView {
+    display: block;
+}
+
 #header #optionViews.debugView #debugView {
     display: block;
 }
