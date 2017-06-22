@@ -83,7 +83,10 @@ var limit = 60
 var canUpload = window.File || window.FileReader || window.FileList || window.Blob
 var ghostbar = yo`<div class=${css.ghostbar}></div>`
 
-function filepanel (appAPI, files) {
+function filepanel (container, appAPI, files) {
+  if (!container) return
+  if (typeof container === 'string') container = document.querySelector(container)
+
   var fileExplorer = new FileExplorer(appAPI, files)
   var dragbar = yo`<div onmousedown=${mousedown} class=${css.dragbar}></div>`
 
@@ -123,12 +126,16 @@ function filepanel (appAPI, files) {
   element.querySelector('.decreditorsize').addEventListener('click', () => { appAPI.editorFontSize(-1) })
   // TODO please do not add custom javascript objects, which have no
   // relation to the DOM to DOM nodes
-  element.events = events
   fileExplorer.events.register('focus', function (path) {
     appAPI.switchToFile(path)
   })
 
-  return element
+  var api = {
+    events: events
+  }
+  container.appendChild(element)
+
+  return api
 
   function toggle (event) {
     var isHidden = element.classList.toggle(css.isHidden)
