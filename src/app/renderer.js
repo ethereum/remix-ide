@@ -46,10 +46,9 @@ function Renderer (appAPI, compilerEvent) {
     $('#output').empty()
     if (success) {
       self.contracts(data, source)
-      $('#header #menu .envView').css('color', '')
+      $('#header #menu .compileView').css('color', '')
     } else {
-      // envView is the `Contract` tab, as a refactor the entire envView should have his own module
-      $('#header #menu .envView').css('color', '#FF8B8B')
+      $('#header #menu .compileView').css('color', '#FF8B8B')
     }
 
     // NOTE: still need to display as there might be warnings

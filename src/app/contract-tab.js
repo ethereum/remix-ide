@@ -58,10 +58,10 @@ module.exports = contractTab
 
 function contractTab (container, appAPI, appEvents, opts) {
   function copyAddress () {
-    copy(document.querySelector('#envView #txorigin').value)
+    copy(document.querySelector('#compileTabView #txorigin').value)
   }
   var el = yo`
-    <div class="${css.contractTabView}" id="envView">
+    <div class="${css.contractTabView}" id="compileTabView">
       <div class="${css.crow}">
         <div id="selectExEnv" class="${css.col1_1}">
           Environment
