@@ -7,7 +7,7 @@ var styleGuide = require('./style-guide')
 var styles = styleGuide()
 
 var css = csjs`
-  .contractTabView {
+  .compileTabView {
     padding: 2%;
   }
   .crow {
@@ -54,14 +54,14 @@ var css = csjs`
   }
 `
 
-module.exports = contractTab
+module.exports = compileTab
 
-function contractTab (container, appAPI, appEvents, opts) {
+function compileTab (container, appAPI, appEvents, opts) {
   function copyAddress () {
     copy(document.querySelector('#compileTabView #txorigin').value)
   }
   var el = yo`
-    <div class="${css.contractTabView}" id="compileTabView">
+    <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.crow}">
         <div id="selectExEnv" class="${css.col1_1}">
           Environment
