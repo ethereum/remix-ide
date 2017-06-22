@@ -159,6 +159,7 @@ var run = function () {
       width       : 200px;
     }
   `
+
   var filepanelContainer = document.querySelector('#filepanel')
   filepanelContainer.className = css['filepanel-container']
   var FilePanelAPI = {
@@ -655,8 +656,25 @@ var run = function () {
       var match = handler.match.exec(url)
       if (match) {
         found = true
-
-        $('#output').append($('<div/>').append($('<pre/>').text('Loading ' + url + ' ...')))
+        var css = csjs`
+          .pre {
+            padding: 8px 15px;
+            background: #f8f8f8;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            overflow-x: auto;
+            font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+            color: #333;
+            font-size: 12px;
+            margin: 0 0 20px;
+          }
+          @media print, screen and (max-width: 720px) {
+            pre {
+              word-wrap: normal;
+            }
+          }
+        `
+        $('#output').append($('<div/>').append($('<pre class="' + css.pre + '" />').text('Loading ' + url + ' ...')))
         handler.handler(match, function (err, content) {
           if (err) {
             cb('Unable to import "' + url + '": ' + err)
