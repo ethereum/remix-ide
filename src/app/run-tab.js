@@ -39,9 +39,12 @@ var css = csjs`
   }
   .copyaddress {
     color: #C6CFF7;
-    margin-right: 0.3em;
+    margin-right: 0.5em;
     margin-top: 0.7em;
     cursor: pointer;
+  }
+  .copyaddress:hover {
+    opacity: .7;
   }
   .selectAddress extends ${styles.dropdown} {
     width: 81%;

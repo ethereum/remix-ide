@@ -96,10 +96,10 @@ var cssInstance = csjs`
   .instance.hidesub > *:not(.title) {
       display: none;
   }
-  .copy extends ${styles.button}  {
-    border: 1px dotted ${styles.colors.grey};
+  .copy {
     padding: 0 .3em;
     font-weight: bold;
+    color: #666;
   }
   .copy:hover{
     opacity: .7;
@@ -362,7 +362,7 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
     var title = yo`
       <div class="${cssInstance.title}" onclick=${toggleClass}>
         <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
-        <div class="${cssInstance.copy}" onclick=${copyToClipboard}> <i class="fa fa-clipboard" aria-hidden="true"></i> Copy address </div>
+        <i class="fa fa-clipboard ${cssInstance.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
       </div>
     `
     function toggleClass () {
