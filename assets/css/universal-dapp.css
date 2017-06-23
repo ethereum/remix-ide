@@ -194,6 +194,7 @@
 
 .udapp .contractProperty.hasArgs input {
 	width: 75%;
+	padding: .36em;
 }
 .udapp .contractProperty button {
 	width: 25%;
@@ -245,8 +246,9 @@
 
 .udapp .contractProperty.hasArgs input {
 	display: block;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+	border: 1px solid #dddddd;  // lightGrey -> see style-guide.js
+	padding: .36em;
+	border-left: none;
 }
 
 .udapp .contractProperty.hasArgs button {
