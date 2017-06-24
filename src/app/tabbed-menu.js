@@ -18,17 +18,17 @@ function tabbedMenu (container, appAPI, events, opts) {
 
   // add event listeners for loading spinner
   events.compiler.register('loadingCompiler', function start () {
-    var settingsTab = document.querySelector('.settingsView')
-    if (settingsTab.children.length) return
+    var compileTab = document.querySelector('.compileView')
+    if (compileTab.children.length) return
 
     var spinner = loadingSpinner()
-    settingsTab.appendChild(spinner)
+    compileTab.appendChild(spinner)
 
     appAPI.warnCompilerLoading('Solidity compiler is currently loading. Please wait a moment...')
     events.compiler.register('compilerLoaded', finish)
     function finish () {
       events.compiler.unregister('compilerLoaded', finish)
-      settingsTab.removeChild(spinner)
+      compileTab.removeChild(spinner)
     }
   })
 

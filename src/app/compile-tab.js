@@ -11,24 +11,34 @@ var css = csjs`
   }
   .contract {
     display: block;
-    margin: 5% 0;
+    margin: 3% 0;
   }
-  .compile {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  .autocompileTitle {
+    font-weight: bold;
+    margin: 1% 0;
   }
   .autocompile {
     float: left;
     align-self: center;
+    margin: 1% 1%;
+  }
+  .autocompileText {
+    align-self: center;
+    margin: 1% 0;
   }
   .compilationWarning extends ${styles.warningTextBox} {
     margin-top: 5%;
   }
   .button extends ${styles.button} {
-    background-color: #C6CFF7;
-    width: 30%;
-    text-align: -webkit-center;
+    width: 10em;
+    background-color: ${styles.colors.blue};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:.3em;
+  }
+  .icon {
+    margin-right: .3em;
   }
 `
 
@@ -56,8 +66,9 @@ function compileTab (container, appAPI, appEvents, opts) {
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.compile}">
+        <div class="${css.button} "id="compile" title="Compile source code"><i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>Start to compile</div>
         <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
-        <div class="${css.button} "id="compile" title="Compile source code">Compile</div>
+        <span class="${css.autocompileText}">Auto compile</span>
         ${warnCompilationSlow}
       </div>
       <div id="output" class="${css.contract}"></div>
