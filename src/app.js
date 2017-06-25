@@ -639,7 +639,8 @@ function run () {
   var rhpEvents = {
     compiler: compiler.event,
     app: self.event,
-    udapp: udapp.event
+    udapp: udapp.event,
+    editor: editor.event
   }
   self._components.righthandpanel = new RighthandPanel(rhpAPI, rhpEvents, {})
   self._view.rightpanel.appendChild(self._components.righthandpanel.render())

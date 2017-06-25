@@ -50,6 +50,10 @@ function compileTab (container, appAPI, appEvents, opts) {
   if (typeof container === 'string') container = document.querySelector(container)
   if (!container) throw new Error('no container given')
   var warnCompilationSlow = yo`<div id="warnCompilationSlow"></div>`
+
+  // REGISTER EVENTS
+
+  // compilationDuration
   appEvents.compiler.register('compilationDuration', function tabHighlighting (speed) {
     var settingsView = document.querySelector('#header #menu .settingsView')
     warnCompilationSlow.className = css.compilationWarning
@@ -63,6 +67,24 @@ function compileTab (container, appAPI, appEvents, opts) {
       settingsView.style.color = ''
     }
   })
+  // loadingCompiler
+  appEvents.editor.register('contentChanged', function changedFile () {
+    var compileButton = document.querySelector(`.${css.icon}`)
+    console.log('File changed')
+    compileButton.style.color = 'orange'
+  })
+
+  appEvents.compiler.register('loadingCompiler', function start () {
+    var compileButton = document.querySelector(`.${css.icon}`)
+    console.log('Compilation started')
+    compileButton.style.color = 'green'
+  })
+  appEvents.compiler.register('compilationFinished', function finish () {
+    var compileButton = document.querySelector(`.${css.icon}`)
+    console.log('Compilation finished')
+    compileButton.style.color = 'black'
+  })
+
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.compile}">
