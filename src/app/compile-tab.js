@@ -70,18 +70,14 @@ function compileTab (container, appAPI, appEvents, opts) {
   // loadingCompiler
   appEvents.editor.register('contentChanged', function changedFile () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    console.log('File changed')
     compileButton.style.color = 'orange'
   })
-
   appEvents.compiler.register('loadingCompiler', function start () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    console.log('Compilation started')
-    compileButton.style.color = 'green'
+    compileButton.style.color = 'orange'
   })
   appEvents.compiler.register('compilationFinished', function finish () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    console.log('Compilation finished')
     compileButton.style.color = 'black'
   })
 
