@@ -13,7 +13,7 @@ var filesTab = require('./files-tab')
 var css = csjs`
   .options {
       float: left;
-      padding: 0.7em 0.3em;
+      padding-top: 0.7em;
       min-width: 65px;
       font-size: 0.9em;
       cursor: pointer;

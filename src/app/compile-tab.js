@@ -13,6 +13,9 @@ var css = csjs`
     display: block;
     margin: 3% 0;
   }
+  .compileContainer {
+    margin: 0;
+  }
   .autocompileTitle {
     font-weight: bold;
     margin: 1% 0;
@@ -27,7 +30,7 @@ var css = csjs`
     margin: 1% 0;
   }
   .compilationWarning extends ${styles.warningTextBox} {
-    margin-top: 5%;
+    margin: 5% 0 0 0;
   }
   .button extends ${styles.button} {
     width: 10em;
@@ -67,11 +70,11 @@ function compileTab (container, appAPI, appEvents, opts) {
     warnCompilationSlow.className = css.compilationWarning
     if (speed > 1000) {
       warnCompilationSlow.innerHTML = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
-      warnCompilationSlow.style.visibility = 'visible'
+      warnCompilationSlow.style.display = 'block'
       settingsView.style.color = '#FF8B8B'
     } else {
       warnCompilationSlow.innerHTML = ''
-      warnCompilationSlow.style.visibility = 'hidden'
+      warnCompilationSlow.style.display = 'none'
       settingsView.style.color = ''
     }
   })
@@ -92,7 +95,7 @@ function compileTab (container, appAPI, appEvents, opts) {
 
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
-      <div class="${css.compile}">
+      <div class="${css.compileContainer}">
         <div class="${css.button} "id="compile" title="Compile source code"><i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>Start to compile</div>
         <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
         <span class="${css.autocompileText}">Auto compile</span>
