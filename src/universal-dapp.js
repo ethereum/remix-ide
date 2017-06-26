@@ -445,7 +445,7 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
       }))
     }
 
-    $.each(abi, function (i, funABI) {
+    $.each(abi, function (i, funABI) {  // append a call button for each function in an instance
       if (funABI.type !== 'function') {
         return
       }
@@ -704,8 +704,8 @@ UniversalDApp.prototype.getCallButton = function (args) {
         replaceOutput($result, $('<span/>').text('Exception during execution. Please debug the transaction for more information.').addClass('error'))
         $result.append(getDebugTransaction(txResult))
       } else if (isConstructor) {
-        replaceOutput($result, getGasUsedOutput(result, result.vm))
-        $result.append(getDebugTransaction(txResult))
+        replaceOutput($result, getGasUsedOutput(result, result.vm)) // transation cost + execution cost
+        $result.append(getDebugTransaction(txResult)) // button launch debugger
         args.appendFunctions(self.executionContext.isVM() ? result.createdAddress : result.contractAddress)
       } else if (self.executionContext.isVM()) {
         var outputObj = '0x' + result.vm.return.toString('hex')

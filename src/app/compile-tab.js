@@ -40,6 +40,14 @@ var css = csjs`
   .icon {
     margin-right: .3em;
   }
+  .spinningIcon {
+    margin-right: .3em;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
 `
 
 // HELPERS
@@ -74,11 +82,12 @@ function compileTab (container, appAPI, appEvents, opts) {
   })
   appEvents.compiler.register('loadingCompiler', function start () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.style.color = 'orange'
+    compileButton.classList.add(`${css.spinningIcon}`)
   })
   appEvents.compiler.register('compilationFinished', function finish () {
     var compileButton = document.querySelector(`.${css.icon}`)
     compileButton.style.color = 'black'
+    compileButton.classList.remove(`${css.spinningIcon}`)
   })
 
   var el = yo`
