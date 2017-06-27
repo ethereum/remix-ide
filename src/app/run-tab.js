@@ -54,6 +54,18 @@ var css = csjs`
   }
 `
 
+module.exports = runTab
+
+function runTab (container, appAPI, appEvents, opts) {
+  var el = yo`
+  <div class="${css.runTabView}" id="runTabView">
+    ${settings(appAPI, appEvents)}
+    ${legend()}
+  </div>
+  `
+  container.appendChild(el)
+}
+
 /* ------------------------------------------------
     SETTINGS: Environment, Account, Gas, Value
 ------------------------------------------------ */
@@ -183,16 +195,4 @@ function legend () {
     </div>
   `
   return el
-}
-
-module.exports = runTab
-
-function runTab (container, appAPI, appEvents, opts) {
-  var el = yo`
-    <div class="${css.runTabView}" id="runTabView">
-      ${settings(appAPI, appEvents)}
-      ${legend()}
-    </div>
-  `
-  container.appendChild(el)
 }
