@@ -242,15 +242,6 @@ UniversalDApp.prototype.render = function () {
     return self.$el
   }
 
-  var $legend = $('<div class="legend" />')
-    .append($('<div class="publish"/>').text('Publish'))
-    .append($('<div class="attach"/>').text('Attach'))
-    .append($('<div class="transact"/>').text('Transact'))
-    .append($('<div class="payable"/>').text('Transact(Payable)'))
-    .append($('<div class="call"/>').text('Call'))
-
-  self.$el.append($legend)
-
   for (var c in self.contracts) {
     var $contractEl = $(`<div class="contract ${css.contract}"/>`)
 
@@ -445,7 +436,7 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
       }))
     }
 
-    $.each(abi, function (i, funABI) {  // append a call button for each function in an instance
+    $.each(abi, function (i, funABI) {
       if (funABI.type !== 'function') {
         return
       }
@@ -704,8 +695,8 @@ UniversalDApp.prototype.getCallButton = function (args) {
         replaceOutput($result, $('<span/>').text('Exception during execution. Please debug the transaction for more information.').addClass('error'))
         $result.append(getDebugTransaction(txResult))
       } else if (isConstructor) {
-        replaceOutput($result, getGasUsedOutput(result, result.vm)) // transation cost + execution cost
-        $result.append(getDebugTransaction(txResult)) // button launch debugger
+        replaceOutput($result, getGasUsedOutput(result, result.vm)) // transation cost +
+        $result.append(getDebugTransaction(txResult))
         args.appendFunctions(self.executionContext.isVM() ? result.createdAddress : result.contractAddress)
       } else if (self.executionContext.isVM()) {
         var outputObj = '0x' + result.vm.return.toString('hex')

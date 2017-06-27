@@ -54,14 +54,18 @@ var css = csjs`
   }
 `
 
-module.exports = runTab
-
-function runTab (container, appAPI, appEvents, opts) {
+/* ------------------------------------------------
+    SETTINGS: Environment, Account, Gas, Value
+------------------------------------------------ */
+function settings (appAPI, appEvents) {
+  // COPY ADDRESS
   function copyAddress () {
     copy(document.querySelector('#runTabView #txorigin').value)
   }
+
+  // SETTINGS HTML
   var el = yo`
-    <div class="${css.runTabView}" id="runTabView">
+    <div>
       <div class="${css.crow}">
         <div id="selectExEnv" class="${css.col1_1}">
           Environment
@@ -107,12 +111,13 @@ function runTab (container, appAPI, appEvents, opts) {
       </div>
     </div>
   `
+
+  // EVENTS
   appEvents.udapp.register('transactionExecuted', (to, data, lookupOnly, txResult) => {
     if (!lookupOnly) el.querySelector('#value').value = '0'
   })
-  /* ---------------------------------------------------------------------------
-  DROPDOWN
-  --------------------------------------------------------------------------- */
+
+  // DROPDOWN
   var selectExEnv = el.querySelector('#selectExEnvOptions')
   selectExEnv.addEventListener('change', function (event) {
     if (!appAPI.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
@@ -120,5 +125,74 @@ function runTab (container, appAPI, appEvents, opts) {
     }
   })
   selectExEnv.value = appAPI.executionContextProvider()
+
+  return el
+}
+
+/* ------------------------------------------------
+              section  LEGEND
+------------------------------------------------ */
+function legend () {
+  var css = csjs`
+    .legend {
+      margin-top: 3%;
+      background-color: white;
+      line-height: 20px;
+      border: .2em dotted ${styles.colors.lightGrey};
+      padding: 8px 15px;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .item {
+      margin-right: 1em;
+      display: flex;
+      align-items: center;
+    }
+    .publish {
+      color: #EC96EC;
+      margin-right: .3em;
+    }
+    .attach {
+      color: #B1EAC5;
+      margin-right: .3em;
+    }
+    .transact {
+      color: #FFB9B9;
+      margin-right: .3em;
+    }
+    .payable {
+      color: #FF8B8B;
+      margin-right: .3em;
+    }
+    .call {
+      color: #9DC1F5;
+      margin-right: .3em;
+    }
+  `
+  var el =
+  yo`
+    <div class="${css.legend}">
+      <div class="${css.item}"><i class="fa fa-circle ${css.publish}" aria-hidden="true"></i>Publish</div>
+      <div class="${css.item}"><i class="fa fa-circle ${css.attach}" aria-hidden="true"></i>Attach</div/>
+      <div class="${css.item}"><i class="fa fa-circle ${css.transact}" aria-hidden="true"></i>Transact</div/>
+      <div class="${css.item}"><i class="fa fa-circle ${css.payable}" aria-hidden="true"></i>Transact(Payable)</div/>
+      <div class="${css.item}"><i class="fa fa-circle ${css.call}" aria-hidden="true"></i>Call</div/>
+    </div>
+  `
+  return el
+}
+
+module.exports = runTab
+
+function runTab (container, appAPI, appEvents, opts) {
+  var el = yo`
+    <div class="${css.runTabView}" id="runTabView">
+      ${settings(appAPI, appEvents)}
+      ${legend()}
+    </div>
+  `
   container.appendChild(el)
 }
