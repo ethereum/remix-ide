@@ -1,6 +1,6 @@
-'use strict'
-
-var TRAVIS_JOB_NUMBER = process.env.TRAVIS_JOB_NUMBER
+if (process.version.slice(1).split('.')[0] < 6) {
+  throw new Error('requires nodejs version v6.0.0 or higher')
+}
 
 module.exports = {
   'src_folders': ['test-browser/tests'],
@@ -9,15 +9,26 @@ module.exports = {
   'custom_assertions_path': '',
   'page_objects_path': '',
   'globals_path': '',
-
+  // "selenium" : {
+  //   "start_process" : true,
+  //   "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server/3.3.1-server.jar",
+  //   "log_path" : "reports/selunium",
+  //   "port" : 4444,
+  //   "cli_args" : {
+  //     "webdriver.chrome.driver" : "",
+  //     "webdriver.gecko.driver" : "",
+  //     "webdriver.edge.driver" : ""
+  //   },
+  // },
   'test_settings': {
     'default': {
       'launch_url': 'http://ondemand.saucelabs.com:80',
+      // 'launch_url': 'http://remix.ethereum.org/',
       'selenium_host': 'ondemand.saucelabs.com',
       'selenium_port': 80,
-      'silent': true,
-      'username': 'chriseth',
-      'access_key': 'b781828a-9e9c-43d8-89d4-2fbb879595ca',
+      //'silent': true,
+      'username': process.env.SAUCE_USER,
+      'access_key': process.env.SAUCE_GUID,
       'use_ssl': false,
       'globals': {
         'waitForConditionTimeout': 10000,

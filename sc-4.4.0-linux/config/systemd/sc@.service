@@ -1,0 +1,28 @@
+[Unit]
+Description=Sauce Connect worker service on port %i
+PartOf=sc.service
+ReloadPropagatedFrom=sc.service
+
+[Service]
+  Type=simple
+  User=nobody
+  Group=nogroup
+  WorkingDirectory=/tmp
+  LimitNOFILE=8192
+  Restart=always
+
+  # Set those to match your Saucelabs credentials
+  Environment=SAUCE_USERNAME=username
+  Environment=SAUCE_ACCESS_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+  ExecStart = /usr/local/bin/sc \
+                --logfile - \
+                --pidfile "/tmp/sauceconnect_%i.pid" \
+                --se-port "%i" \
+                --no-remove-colliding-tunnels \
+                --wait-tunnel-shutdown
+  # Not needed with systemd
+  ExecStartPost = /bin/rm -f /tmp/sauceconnect_%i.pid
+
+[Install]
+WantedBy=multi-user.target

@@ -145,13 +145,16 @@
     "nightwatch_remote_safari": "nightwatch --config nightwatch.js --env safari",
     "onchange": "onchange build/app.js -- npm-run-all lint",
     "prepublish": "mkdirp build; npm-run-all -ls downloadsolc build",
+    "saucelabs": "npm run nightwatch_remote_firefox # env-cmd .env.local nightwatch_remote_$(echo $MODE) #node ci/sc",
     "selenium": "execr --silent selenium-standalone start",
-    "selenium-install": "selenium-standalone install",
+    "selenium-install": "selenium-standalone install --version=3.3.1",
     "serve": "execr --silent http-server .",
     "sourcemap": "exorcist --root ../ build/app.js.map > build/app.js",
     "start": "npm-run-all -lpr serve watch onchange",
-    "test": "standard; npm run csslint; node test/index.js",
-    "test-browser": "npm-run-all -lpr selenium downloadsolc make-mock-compiler serve browsertest",
+    "test": "npm-run-all -ls lint csslint test-node",
+    "test-browser": "npm-run-all -ls  selenium-install downloadsolc make-mock-compiler -lpr selenium serve browsertest",
+    "test-node": "node test/index.js",
+    "test-sauce": "npm-run-all -ls selenium-install downloadsolc make-mock-compiler saucelabs",
     "watch": "watchify src/index.js --transform-key=development -dv -p browserify-reload -o build/app.js"
   }
 }

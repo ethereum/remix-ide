@@ -29,43 +29,23 @@ Run `npm start` and open `http://127.0.0.1:8080` in your browser.
 Then open your `text editor` and start developing.
 The browser will automatically refresh when files are saved
 
-### Troubleshooting building
-
-Here are some things to consider if you have trouble building the package.
-
-- Make sure that you have the correct version of `node`, `npm` and `nvm`. You can find the version that is tested on Travis CI by looking at the log in the [build results](https://travis-ci.org/ethereum/browser-solidity).
-
-Run:
-
-	node --version
-	npm --version
-	nvm --version
-
-- In Debian based OSes such as Ubuntu 14.04LTS you may need to run `apt-get install build-essential`. After installing `build-essential` run `npm rebuild`.
-
-## Unit Testing
-
+## TESTING
 Register new unit test files in `test/index.js`.
-The tests are written using [tape](https://www.npmjs.com/package/tape).
+The tests are written using [tape](https://www.npmjs.com/package/tape)
 
-Run the unit tests via: `npm test`
-
-For local headless browser tests run `npm run test-browser`
-(Requires selenium to be installed - can be done with `npm run selenium-install`)
-
-## Browser Testing
-
-To run the Selenium tests via Nightwatch serve the app through a local web server:
-
-	npm run serve # starts web server at localhost:8080
-
-Then you will need to either:
-
-1. Have a Selenium server running locally on port 4444.
-	- Run: `npm run browser-test`
-2. Or, install and run SauceConnect.
-	- Run: `sc -u <USERNAME> -k <ACCESS_KEY>` (see `.travis.yml` for values)
-	- Run: `npm run browser-test-sc`
+1. **Unit Testing**
+  - Run the unit tests via: `npm test`
+2. **Local Browser Testing**
+To serve the app through a local web server and run the Selenium tests via Nightwatch:
+	- `npm run test-browser` for local browser tests
+3. **Saucelabs Browser Testing**
+To prepare and execute tests remote via sauce labs you need to open **`.env` file and follow the instructions there** so later you can always:
+	- login to [saucelabs dashboard](https://saucelabs.com/beta/tunnels) and run one of the following options:
+		- `npm run test-sauce chrome`
+		- `npm run test-sauce firefox`
+		- `npm run test-sauce safari`
+		- `npm run test-sauce ie`
+		- `npm run test-sauce` (=== `npm run test-sauce parallel`)
 
 ## Usage as a Chrome Extension
 
@@ -76,3 +56,15 @@ After that, follow these steps:
 - Make sure 'Developer mode' has been checked
 - Click 'Load unpacked extension...' to pop up a file-selection dialog
 - Select your `browser-solidity` folder
+
+### Troubleshooting building
+
+Here are some things to consider if you have trouble building the package.
+
+- Make sure that you have the correct version of `node`, `npm` and `nvm`.  
+You can find the version that is tested on Travis CI by looking at the log in the [build results](https://travis-ci.org/ethereum/browser-solidity).
+
+Run:
+- `node --version`
+- `npm --version`
+- `nvm --version`
