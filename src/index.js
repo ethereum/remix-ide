@@ -1,7 +1,10 @@
 'use strict'
-
 require('babel-polyfill')
-var app = require('./app.js')
-var $ = require('jquery')
 
-$(document).ready(function () { app.run() })
+require('./app/style-base')
+
+var App = require('./app.js')
+
+var app = new App({})
+
+document.body.appendChild(app.render())

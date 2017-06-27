@@ -6,6 +6,7 @@ var $ = require('jquery')
 var base64 = require('js-base64').Base64
 var swarmgw = require('swarmgw')
 var csjs = require('csjs-inject')
+var yo = require('yo-yo')
 
 var QueryParams = require('./app/query-params')
 var queryParams = new QueryParams()
@@ -42,7 +43,7 @@ window.addEventListener('message', function (ev) {
 }, false)
 var run = function () {
   var self = this
-  this.event = new EventManager()
+  self.event = new EventManager()
   var fileStorage = new Storage('sol:')
   var config = new Config(fileStorage)
   var remixd = new Remixd()
@@ -51,6 +52,33 @@ var run = function () {
   filesProviders['localhost'] = new SharedFolder(remixd)
 
   var tabbedFiles = {} // list of files displayed in the tabs bar
+
+  document.head.appendChild(yo`<title>Remix - Solidity IDE</title>`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/pygment_trac.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/universal-dapp.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/browser-solidity.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/font-awesome.min.css">`)
+  document.head.appendChild(yo`<link rel="icon" type="x-icon" href="icon.png">`)
+
+  self.render = function () {
+    return yo`
+      <div id="editor">
+        <div id="tabs-bar">
+          <div class="scroller scroller-left"><i class="fa fa-chevron-left "></i></div>
+          <div class="scroller scroller-right"><i class="fa fa-chevron-right "></i></div>
+          <ul id="files" class="nav nav-tabs"></ul>
+        </div>
+        <span class="toggleRHP" title="Toggle right hand panel"><i class="fa fa-angle-double-right"></i></span>
+        <div id="editor-container">
+          <div id="filepanel"></div>
+          <div id="input"></div>
+        </div>
+        <div id="dragbar"></div>
+      </div>
+    `
+  }
+
+setTimeout(function () {
 
   // return all the files, except the temporary/readonly ones.. package only files from the browser storage.
   function packageFiles (cb) {
@@ -186,7 +214,7 @@ var run = function () {
   var FilePanelAPI = {
     createName: createNonClashingName,
     switchToFile: switchToFile,
-    event: this.event,
+    event: self.event,
     editorFontSize: function (incr) {
       editor.editorFontSize(incr)
     },
@@ -1009,8 +1037,7 @@ var run = function () {
 
     loadVersion('builtin')
   })
+}, 0)
 }
 
-module.exports = {
-  'run': run
-}
+module.exports = run

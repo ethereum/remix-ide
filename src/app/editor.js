@@ -23,7 +23,9 @@ var css = csjs`
     width             : 100%;
   }
 `
-document.querySelector('#editor-container').className = css['editor-container']
+setTimeout(_ => {
+  document.querySelector('#editor-container').className = css['editor-container']
+}, 0)
 
 function Editor (editorElement) {
   var editor = ace.edit(editorElement)
