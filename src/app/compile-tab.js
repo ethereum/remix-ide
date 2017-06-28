@@ -47,10 +47,28 @@ var css = csjs`
     margin-right: .3em;
     animation: spin 2s linear infinite;
   }
+  .bouncingIcon {
+    margin-right: .3em;
+    animation: bounce 3s infinite;
+  }
   @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
   }
+  @-webkit-keyframes bounce {
+  0% {
+    margin-bottom: 0;
+    color: ${styles.colors.violet};
+  }
+  70% {
+    margin-bottom: 0;
+    color: ${styles.colors.pink};
+  }
+  100% {
+    margin-bottom: 0;
+    color: ${styles.colors.violet};
+  }
+}
 `
 
 // HELPERS
@@ -81,10 +99,11 @@ function compileTab (container, appAPI, appEvents, opts) {
   // loadingCompiler
   appEvents.editor.register('contentChanged', function changedFile () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.style.color = 'orange'
+    compileButton.classList.add(`${css.bouncingIcon}`)
   })
   appEvents.compiler.register('loadingCompiler', function start () {
     var compileButton = document.querySelector(`.${css.icon}`)
+    compileButton.classList.remove(`${css.bouncingIcon}`)
     compileButton.classList.add(`${css.spinningIcon}`)
   })
   appEvents.compiler.register('compilationFinished', function finish () {

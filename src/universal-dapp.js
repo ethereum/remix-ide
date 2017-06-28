@@ -35,7 +35,7 @@ var css = csjs`
   }
   .title extends ${styles.titleBox} {
     cursor: pointer;
-    background-color: ${styles.colors.violet};
+    background-color: ${styles.colors.blue};
     justify-content: flex-start;
     min-width: 400px;
   }
@@ -114,7 +114,7 @@ function UniversalDApp (executionContext, options) {
   var self = this
 
   self.options = options || {}
-  self.$el = $('<div class="udapp" />')
+  self.el = yo`<div class="udapp"></div>`
   self.personalMode = self.options.personalMode || false
   self.contracts
   self.transactionContextAPI
@@ -133,7 +133,7 @@ function UniversalDApp (executionContext, options) {
 }
 
 UniversalDApp.prototype.reset = function (contracts, transactionContextAPI, renderer) {
-  this.$el.empty()
+  this.el.innerHTML = ''
   this.contracts = contracts
   this.transactionContextAPI = transactionContextAPI
   this.renderOutputModifier = renderer
@@ -237,10 +237,11 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 UniversalDApp.prototype.render = function () {
   var self = this
   var contracts = self.contracts
+  var udapp = self.el
 
   // NOTE: don't display anything if there are no contracts to display
   if (self.contracts.length === 0) {
-    return self.$el
+    return self.el
   }
   for (var item in contracts) {
     var contractContainer = yo`<div class="contract ${css.contract}"></div>`
@@ -262,10 +263,10 @@ UniversalDApp.prototype.render = function () {
       contractContainer.appendChild(title)
       contractContainer.appendChild(self.getCreateInterface(contractContainer, contract))
     }
-    self.$el.append(self.renderOutputModifier(name, contractContainer))
+    udapp.appendChild(self.renderOutputModifier(name, contractContainer))
   }
 
-  return self.$el
+  return udapp
 
 }
 
@@ -280,7 +281,7 @@ UniversalDApp.prototype.getContractByName = function (contractName) {
 }
 
 UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
-  function remove () { self.$el.remove() }
+  function remove () { self.el.parentNode.removeChild(self.el) }
   var self = this
   var createInterface = yo`<div class="create"></div>`
   if (self.options.removable) {
@@ -288,11 +289,13 @@ UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
     createInterface.appendChild(close)
   }
 
-  var $publishButton = $(`<button class="publishContract"/>`).text('Publish').click(function () { self.event.trigger('publishContract', [contract]) })
-  createInterface.appendChild($publishButton.get(0))
+  var publishButton = yo`<button class="publishContract" onclick=${clickPublish}>Publish</button>`
+  function clickPublish () { self.event.trigger('publishContract', [contract]) }
+  createInterface.appendChild(publishButton)
 
-  var $atButton = $('<button class="atAddress"/>').text('At Address').click(function () { self.clickContractAt(self, $container.find('.createContract'), contract) })
-  createInterface.appendChild($atButton.get(0))
+  var atButton = yo`<button class="atAddress" onclick=${clickAtAddress}>At Address</button>`
+  function clickAtAddress () { self.clickContractAt(self, document.querySelector('.createContract'), contract) }
+  createInterface.appendChild(atButton)
 
   var $newButton = self.getInstanceInterface(contract)
   if (!$newButton) {
@@ -314,8 +317,8 @@ UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
   }
 
   if ((contract.metadata === undefined) || (contract.metadata.length === 0)) {
-    $publishButton.attr('disabled', 'disabled')
-    $publishButton.attr('title', 'This contract does not implement all functions and thus cannot be published.')
+    publishButton.setAttribute('disabled', 'disabled')
+    publishButton.setAttribute('title', 'This contract does not implement all functions and thus cannot be published.')
   }
 
   return createInterface

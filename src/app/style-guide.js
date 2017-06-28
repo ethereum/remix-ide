@@ -7,6 +7,9 @@ function styleGuide () {
   COLORS
   -------------------------------------------------------------------------- */
   var colors = {
+    transparent: 'transparent',
+    white: '#fff',
+    black: '#000',
     blue: '#C6CFF7',
     lightBlue: '#F4F6FF',
     greyBlue: '#102026',

@@ -1,6 +1,7 @@
 'use strict'
 
 var $ = require('jquery')
+var yo = require('yo-yo')
 
 var utils = require('./utils')
 var helper = require('../lib/helper.js')
@@ -11,9 +12,18 @@ var styleGuide = require('./style-guide')
 var styles = styleGuide()
 
 var css = csjs`
-  .col2 {
+  .crow extends ${styles.infoTextBox}{
+    overflow: auto;
+    padding: .5em;
+    font-size: .9em;
+    cursor: default;
+    background-color: ${styles.colors.lightBlue};
+  }
+  .col2 extends ${styles.textBoxL} {
       width: 70%;
       float: left;
+      color: ${styles.colors.black};
+      background-color: ${styles.colors.white};
   }
   .col1 extends ${styles.titleL} {
       width: 30%;
@@ -23,12 +33,12 @@ var css = csjs`
     text-decoration: underline;
     margin-left: 2px;
     font-size: .9em;
+    cursor: pointer;
   }
   .toggle  {
     font-size: 1.1em;
     color: ${styles.colors.blue};
     margin: 1em;
-    cursor: pointer;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -128,27 +138,6 @@ Renderer.prototype.contracts = function (data, source) {
       metadata: contract.metadata,
       metadataHash: contract.bytecode && retrieveMetadataHash(contract.bytecode)
     })
-  }
-
-  var tableRowItems = function (first, second, cls) {
-    second.get(0).classList.add(styles.textBoxL) // replace <pre> styling with textBoxL
-    return $('<div class="crow"/>')
-      .addClass(cls)
-      .append($(`<div class="${css.col1}">`).append(first))
-      .append($(`<div class="${css.col2}">`).append(second))
-  }
-
-  var tableRow = function (description, data) {
-    return tableRowItems(
-      $('<span/>').text(description),
-      $(`<input class="${css.col2} ${styles.textBoxL}" readonly="readonly"/>`).val(data))
-  }
-
-  var preRow = function (description, data) {
-    return tableRowItems(
-      $('<span/>').text(description),
-      $('<pre/>').text(data)
-    )
   }
 
   var formatAssemblyText = function (asm, prefix, source) {
@@ -253,29 +242,31 @@ Renderer.prototype.contracts = function (data, source) {
     return text
   }
 
-  var detailsOpen = {}
+  var detailsOpen = false
   var getDetails = function (contract, source, contractName) {
-    var button = $(`<div class="${css.toggle}"><i class="fa fa-info-circle" aria-hidden="true"></i><div class="${css.toggleText}">Contract details (bytecode, interface etc.)</div></div>`)
-    var details = $('<div style="display: none;"/>')
+    var button = yo`<div class="${css.toggle}" onclick=${toggleDetails}><i class="fa fa-info-circle" aria-hidden="true"></i><div class="${css.toggleText}">Contract details (bytecode, interface etc.)</div></div>`
+    var details = yo`<div style="display: none;"></div>`
 
     if (contract.bytecode) {
-      details.append(preRow('Bytecode', contract.bytecode))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Bytecode</div><div class="${css.col2}">${contract.bytecode}</div></div>`)
     }
 
-    details.append(preRow('Interface', contract['interface']))
+    details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Interface</div><div class="${css.col2}">${contract['interface']}</div></div>`)
 
     if (contract.bytecode) {
-      details.append(preRow('Web3 deploy', gethDeploy(contractName.toLowerCase(), contract['interface'], contract.bytecode), 'deploy'))
+      var deploy = gethDeploy(contractName.toLowerCase(), contract['interface'], contract.bytecode)
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Web3 deploy</div><div class="${css.col2}">${deploy}</div></div>`)
 
       // check if there's a metadata hash appended
       var metadataHash = retrieveMetadataHash(contract.bytecode)
       if (metadataHash) {
-        details.append(preRow('Metadata location', 'bzzr://' + metadataHash))
+        var location = 'bzzr://' + metadataHash
+        details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Metadata location</div><div class="${css.col2}">${location}</div></div>`)
       }
     }
 
     if (contract.metadata) {
-      details.append(preRow('Metadata', contract.metadata))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Metadata</div><div class="${css.col2}">${contract.metadata}</div></div>`)
     }
 
     var funHashes = ''
@@ -283,43 +274,50 @@ Renderer.prototype.contracts = function (data, source) {
       funHashes += contract.functionHashes[fun] + ' ' + fun + '\n'
     }
     if (funHashes.length > 0) {
-      details.append(preRow('Functions', funHashes))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Functions</div><div class="${css.col2}">${funHashes}</div></div>`)
     }
 
     var gasEstimates = formatGasEstimates(contract.gasEstimates)
     if (gasEstimates) {
-      details.append(preRow('Gas Estimates', gasEstimates))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Gas Estimates</div><div class="${css.col2}">${gasEstimates}</div></div>`)
     }
 
     if (contract.runtimeBytecode && contract.runtimeBytecode.length > 0) {
-      details.append(tableRow('Runtime Bytecode', contract.runtimeBytecode))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Runtime Bytecode</div><div class="${css.col2}">${contract.runtimeBytecode}</div></div>`)
     }
 
     if (contract.opcodes !== undefined && contract.opcodes !== '') {
-      details.append(tableRow('Opcodes', contract.opcodes))
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Opcodes</div><div class="${css.col2}">${contract.opcodes}</div></div>`)
     }
 
     if (contract.assembly !== null) {
-      details.append(preRow('Assembly', formatAssemblyText(contract.assembly, '', source)))
+      var assembly = formatAssemblyText(contract.assembly, '', source)
+      details.appendChild(yo`<div class="${css.crow}"><div class="${css.col1}">Assembly</div><div class="${css.col2}">${assembly}</div></div>`)
     }
 
-    button.click(function () {
-      detailsOpen[contractName] = !detailsOpen[contractName]
-      details.toggle()
-    })
-    if (detailsOpen[contractName]) {
-      details.show()
+    function toggleDetails () {
+      if (detailsOpen === false) {
+        details.style.display = 'block'
+        detailsOpen = true
+      } else {
+        details.style.display = 'none'
+        detailsOpen = false
+      }
     }
-    return $('<div class="contractDetails"/>').append(button).append(details)
+    var contractDetails = yo`<div class="contractDetails"></div>`
+    contractDetails.appendChild(button)
+    contractDetails.appendChild(details)
+
+    return contractDetails
   }
 
-  var renderOutputModifier = function (contractName, $contractOutput) {
+  var renderOutputModifier = function (contractName, contractOutput) {
     var contract = data.contracts[contractName]
     var ctrSource = self.appAPI.currentCompiledSourceCode()
     if (ctrSource) {
-      $contractOutput.append(getDetails(contract, ctrSource, contractName))
+      contractOutput.appendChild(getDetails(contract, ctrSource, contractName))
     }
-    return $contractOutput
+    return contractOutput
   }
 
   this.appAPI.resetDapp(udappContracts, renderOutputModifier)
