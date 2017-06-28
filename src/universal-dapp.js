@@ -236,29 +236,37 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 
 UniversalDApp.prototype.render = function () {
   var self = this
+  var contracts = self.contracts
 
   // NOTE: don't display anything if there are no contracts to display
   if (self.contracts.length === 0) {
     return self.$el
   }
+  for (var item in contracts) {
+    var contractContainer = yo`<div class="contract ${css.contract}"></div>`
+    var address = contracts[item].address
+    var contract = contracts[item]
+    var bytecode = contract.bytecode
+    var name = contract.name
 
-  for (var c in self.contracts) {
-    var $contractEl = $(`<div class="contract ${css.contract}"/>`)
-
-    if (self.contracts[c].address) {
-      self.getInstanceInterface(self.contracts[c], self.contracts[c].address, $contractEl)
+    if (address) {
+      self.getInstanceInterface(contract, address, contractContainer)
     } else {
-      var $title = $(`<span class="${css.title}"/>`).text(self.contracts[c].name)
-      $title.click(function (ev) { $(this).closest(`.${css.contract}`).toggleClass(`${css.hidesub}`) })
-      if (self.contracts[c].bytecode) {
-        $title.append($(`<div class="${css.size}"></div>`).text((self.contracts[c].bytecode.length / 2) + ' bytes'))
+      var title = yo`<span class="${css.title}" onclick=${clickTitle}>${name}</span>`
+      function clickTitle (ev) { this.closest(`.${css.contract}`).classList.toggle(`${css.hidesub}`) }
+
+      if (contract.bytecode) {
+        var bytes = yo`<div class="${css.size}">${(bytecode.length / 2) + ' bytes'}</div>`
+        title.appendChild(bytes)
       }
-      $contractEl.append($title).append(self.getCreateInterface($contractEl, self.contracts[c]))
+      contractContainer.appendChild(title)
+      contractContainer.appendChild(self.getCreateInterface(contractContainer, contract))
     }
-    self.$el.append(self.renderOutputModifier(self.contracts[c].name, $contractEl))
+    self.$el.append(self.renderOutputModifier(name, contractContainer))
   }
 
   return self.$el
+
 }
 
 UniversalDApp.prototype.getContractByName = function (contractName) {
@@ -272,9 +280,7 @@ UniversalDApp.prototype.getContractByName = function (contractName) {
 }
 
 UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
-  function remove () {
-    self.$el.remove()
-  }
+  function remove () { self.$el.remove() }
   var self = this
   var createInterface = yo`<div class="create"></div>`
   if (self.options.removable) {
@@ -315,7 +321,7 @@ UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
   return createInterface
 }
 
-UniversalDApp.prototype.getInstanceInterface = function (contract, address, $target) {
+UniversalDApp.prototype.getInstanceInterface = function (contract, address, target) {
   var self = this
   var abi = JSON.parse(contract.interface).sort(function (a, b) {
     if (a.name > b.name) {
@@ -338,8 +344,7 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
 
   var createInterface = yo`<div class="createContract"></div>`
 
-  var appendFunctions = function (address, $el) {
-    if ($el) $el = $el.get(0)
+  var appendFunctions = function (address, el) {
     function remove () { $instance.remove() }
     var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
     if (self.options.removable_instances) {
@@ -455,11 +460,11 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
       }))
     })
 
-    $el = $el || createInterface
-    $el.appendChild($instance.append($events).get(0))
+    el = el || createInterface
+    el.appendChild($instance.append($events).get(0))
   }
 
-  if (!address || !$target) {
+  if (!address || !target) {
     createInterface.appendChild(self.getCallButton({
       abi: funABI,
       encode: function (args) {
@@ -477,7 +482,7 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
       appendFunctions: appendFunctions
     }).get(0))
   } else {
-    appendFunctions(address, $target)
+    appendFunctions(address, target)
   }
 
   return createInterface
