@@ -49,7 +49,7 @@ var css = csjs`
   }
   .bouncingIcon {
     margin-right: .3em;
-    animation: bounce 3s infinite;
+    animation: bounce 2s infinite;
   }
   @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -58,15 +58,15 @@ var css = csjs`
   @-webkit-keyframes bounce {
   0% {
     margin-bottom: 0;
-    color: ${styles.colors.violet};
+    color: ${styles.colors.transparent};
   }
   70% {
     margin-bottom: 0;
-    color: ${styles.colors.pink};
+    color: ${styles.colors.red};
   }
   100% {
     margin-bottom: 0;
-    color: ${styles.colors.violet};
+    color: ${styles.colors.transparent};
   }
 }
 `
@@ -98,18 +98,22 @@ function compileTab (container, appAPI, appEvents, opts) {
   })
   // loadingCompiler
   appEvents.editor.register('contentChanged', function changedFile () {
+    var compileTab = document.querySelector('.compileView')
+    compileTab.style.color = styles.colors.red
     var compileButton = document.querySelector(`.${css.icon}`)
     compileButton.classList.add(`${css.bouncingIcon}`)
   })
   appEvents.compiler.register('loadingCompiler', function start () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.classList.remove(`${css.bouncingIcon}`)
     compileButton.classList.add(`${css.spinningIcon}`)
   })
   appEvents.compiler.register('compilationFinished', function finish () {
     var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.style.color = 'black'
+    var compileTab = document.querySelector('.compileView')
+    compileTab.style.color = styles.colors.black
+    compileButton.style.color = styles.colors.black
     compileButton.classList.remove(`${css.spinningIcon}`)
+    compileButton.classList.remove(`${css.bouncingIcon}`)
   })
 
   var el = yo`
