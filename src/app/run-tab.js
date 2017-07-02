@@ -61,6 +61,7 @@ function runTab (container, appAPI, appEvents, opts) {
   <div class="${css.runTabView}" id="runTabView">
     ${settings(appAPI, appEvents)}
     ${legend()}
+    <div id="output" class="${css.contract}"></div>
   </div>
   `
   container.appendChild(el)
@@ -163,14 +164,6 @@ function legend () {
       display: flex;
       align-items: center;
     }
-    .publish {
-      color: #EC96EC;
-      margin-right: .3em;
-    }
-    .attach {
-      color: #B1EAC5;
-      margin-right: .3em;
-    }
     .transact {
       color: #FFB9B9;
       margin-right: .3em;
@@ -187,8 +180,6 @@ function legend () {
   var el =
   yo`
     <div class="${css.legend}">
-      <div class="${css.item}"><i class="fa fa-circle ${css.publish}" aria-hidden="true"></i>Publish</div>
-      <div class="${css.item}"><i class="fa fa-circle ${css.attach}" aria-hidden="true"></i>Attach</div/>
       <div class="${css.item}"><i class="fa fa-circle ${css.transact}" aria-hidden="true"></i>Transact</div/>
       <div class="${css.item}"><i class="fa fa-circle ${css.payable}" aria-hidden="true"></i>Transact(Payable)</div/>
       <div class="${css.item}"><i class="fa fa-circle ${css.call}" aria-hidden="true"></i>Call</div/>

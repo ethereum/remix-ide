@@ -124,7 +124,6 @@ function compileTab (container, appAPI, appEvents, opts) {
         <span class="${css.autocompileText}">Auto compile</span>
         ${warnCompilationSlow}
       </div>
-      <div id="output" class="${css.contract}"></div>
     </div>
   `
   container.appendChild(el)
