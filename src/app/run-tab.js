@@ -52,23 +52,79 @@ var css = csjs`
     text-align: center;
     height: 32px;
   }
+  .contractNamesDropdown extends ${styles.dropdown} {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+  }
+  .atAddress extends ${styles.button} {
+    margin: 1%;
+    width: 35%;
+    background-color: ${styles.colors.green};
+  }
+  .create extends ${styles.button} {
+    margin: 1%;
+    width: 35%;
+    background-color: ${styles.colors.lightRed};
+  }
 `
 
 module.exports = runTab
 
 function runTab (container, appAPI, appEvents, opts) {
+  appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
+    getContractNames(success, DATA)
+  })
   var el = yo`
   <div class="${css.runTabView}" id="runTabView">
     ${settings(appAPI, appEvents)}
     ${legend()}
-    <div id="output" class="${css.contract}"></div>
+    <select class="${css.contractNames} ${css.contractNamesDropdown}"></select>
+    <div class="${css.buttons}">
+      <div class="${css.atAddress}" onclick=${loadFromAddress(appAPI)}>At Address</div>
+      <div class="${css.create}" onclick=${createInstance(appAPI)}>Create</div>
+    </div>
   </div>
   `
   container.appendChild(el)
 }
 
 /* ------------------------------------------------
-    SETTINGS: Environment, Account, Gas, Value
+    section CONTRACT DROPDOWN and BUTTONS
+------------------------------------------------ */
+
+// ADD BUTTONS AT ADDRESS AND CREATE
+function createInstance (appAPI) {
+  // var contractNames = document.querySelector(`.${css.contractNames}`)
+  // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
+  // appAPI.createContract(contract, function () { console.log(contract) })
+}
+function loadFromAddress (appAPI) {
+  // var contractNames = document.querySelector(`.${css.contractNames}`)
+  // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
+  // appAPI.loadContract(contract, function () { console.log(contract) })
+}
+
+// GET NAMES OF ALL THE CONTRACTS
+function getContractNames (success, data) {
+  var contractNames = document.querySelector(`.${css.contractNames}`)
+  contractNames.innerHTML = ''
+  if (success) {
+    for (var name in data.contracts) {
+      contractNames.appendChild(yo`<option>${name}</option>`)
+    }
+  } else {
+    contractNames.appendChild(yo`<option></option>`)
+  }
+}
+
+/* ------------------------------------------------
+    section SETTINGS: Environment, Account, Gas, Value
 ------------------------------------------------ */
 function settings (appAPI, appEvents) {
   // COPY ADDRESS

@@ -32,13 +32,22 @@ var css = csjs`
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
-  .button extends ${styles.button} {
-    width: 10em;
-    background-color: ${styles.colors.blue};
+  .buttons {
     display: flex;
-    align-items: center;
+    cursor: pointer;
     justify-content: center;
-    margin-bottom:.3em;
+    text-align: center;
+  }
+  .publish extends ${styles.button} {
+    margin: 1%;
+    width: 70%;
+    background-color: ${styles.colors.pink};
+  }
+  .contractNamesDropdown extends ${styles.dropdown} {
+    margin-top: 1%;
+    width: 100%;
+    height: 32px;
+    text-align: center;
   }
   .icon {
     margin-right: .3em;
@@ -71,13 +80,14 @@ var css = csjs`
 }
 `
 
-// HELPERS
-
 module.exports = compileTab
 
 function compileTab (container, appAPI, appEvents, opts) {
   if (typeof container === 'string') container = document.querySelector(container)
   if (!container) throw new Error('no container given')
+  appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
+    getContractNames(success, DATA)
+  })
   var warnCompilationSlow = yo`<div id="warnCompilationSlow"></div>`
 
   // REGISTER EVENTS
@@ -124,7 +134,34 @@ function compileTab (container, appAPI, appEvents, opts) {
         <span class="${css.autocompileText}">Auto compile</span>
         ${warnCompilationSlow}
       </div>
+      <select class="${css.contractNames} ${css.contractNamesDropdown}"></select>
+      <div class="${css.buttons}">
+        <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
+      </div>
     </div>
   `
   container.appendChild(el)
+
+  /* ------------------------------------------------
+    section CONTRACT DROPDOWN, DETAILS AND PUBLISH
+  ------------------------------------------------ */
+
+  function publish (appAPI) {
+    // var contractNames = document.querySelector(`.${css.contractNames}`)
+    // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
+    // appAPI.publishContract(contract, function () { console.log(contract) })
+  }
+
+  // GET NAMES OF ALL THE CONTRACTS
+  function getContractNames (success, data) {
+    var contractNames = document.querySelector(`.${css.contractNames}`)
+    contractNames.innerHTML = ''
+    if (success) {
+      for (var name in data.contracts) {
+        contractNames.appendChild(yo`<option>${name}</option>`)
+      }
+    } else {
+      contractNames.appendChild(yo`<option></option>`)
+    }
+  }
 }
