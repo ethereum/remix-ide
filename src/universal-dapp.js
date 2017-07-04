@@ -1,4 +1,4 @@
-/* global prompt */
+/* global prompt alert */
 'use strict'
 
 var $ = require('jquery')
@@ -9,8 +9,11 @@ var EventManager = require('ethereum-remix').lib.EventManager
 var crypto = require('crypto')
 var async = require('async')
 var TxRunner = require('./app/txRunner')
-var helper = require('./lib/helper')
 var yo = require('yo-yo')
+var txFormat = require('./app/execution/txFormat')
+var txHelper = require('./app/execution/txHelper')
+var txExecution = require('./app/execution/txExecution')
+var helper = require('./lib/helper')
 
 // copy to copyToClipboard
 const copy = require('clipboard-copy')
@@ -19,47 +22,6 @@ const copy = require('clipboard-copy')
 var csjs = require('csjs-inject')
 var styleGuide = require('./app/style-guide')
 var styles = styleGuide()
-
-var css = csjs`
-  html {
-    overflow: hidden;
-  }
-  .options {
-    float: left;
-    padding: 0.7em 0.3em;
-    font-size: 0.9em;
-    cursor: pointer;
-    background-color: transparent;
-    margin-right: 0.5em;
-    font-size: 1em;
-  }
-  .title extends ${styles.titleBox} {
-    cursor: pointer;
-    background-color: ${styles.colors.blue};
-    justify-content: flex-start;
-    min-width: 400px;
-  }
-  .contract .title:before {
-    margin-right: 30%;
-    margin-left: 5%;
-    content: "\\25BE";
-  }
-  .contract.hidesub .title:before {
-    margin-right: 30%;
-    margin-left: 5%;
-    content: "\\25B8";
-  }
-  .contract.hidesub {
-      padding-bottom: 0;
-      margin: 0;
-  }
-  .contract.hidesub > *:not(.title) {
-      display: none;
-  }
-  .size {
-    margin-left: 20%;
-  }
-`
 
 var cssInstance = csjs`
   .title {
@@ -96,10 +58,10 @@ var cssInstance = csjs`
   .instance.hidesub > *:not(.title) {
       display: none;
   }
-  .copy {
+  .copy extends ${styles.button}  {
+    border: 1px dotted ${styles.colors.grey};
     padding: 0 .3em;
     font-weight: bold;
-    color: #666;
   }
   .copy:hover{
     opacity: .7;
@@ -234,291 +196,132 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
   }
 }
 
-UniversalDApp.prototype.render = function () {
-  var self = this
-  var contracts = self.contracts
-  var udapp = self.el
-
-  // NOTE: don't display anything if there are no contracts to display
-  if (self.contracts.length === 0) {
-    return self.el
-  }
-  for (var item in contracts) {
-    var contractContainer = yo`<div class="contract ${css.contract}"></div>`
-    var address = contracts[item].address
-    var contract = contracts[item]
-    var bytecode = contract.bytecode
-    var name = contract.name
-
-    if (address) {
-      self.getInstanceInterface(contract, address, contractContainer)
-    } else {
-      var title = yo`<span class="${css.title}" onclick=${clickTitle}>${name}</span>`
-      function clickTitle (ev) { this.closest(`.${css.contract}`).classList.toggle(`${css.hidesub}`) }
-
-      if (contract.bytecode) {
-        var bytes = yo`<div class="${css.size}">${(bytecode.length / 2) + ' bytes'}</div>`
-        title.appendChild(bytes)
-      }
-      contractContainer.appendChild(title)
-      contractContainer.appendChild(self.getCreateInterface(contractContainer, contract))
-    }
-    udapp.appendChild(self.renderOutputModifier(name, contractContainer))
-  }
-
-  return udapp
-
-}
-
-UniversalDApp.prototype.getContractByName = function (contractName) {
-  var self = this
-  for (var c in self.contracts) {
-    if (self.contracts[c].name === contractName) {
-      return self.contracts[c]
-    }
-  }
-  return null
-}
-
-UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
-  function remove () { self.el.parentNode.removeChild(self.el) }
-  var self = this
-  var createInterface = yo`<div class="create"></div>`
-  if (self.options.removable) {
+// TODO this function was named before "appendChild".
+// this will render an instance: contract name, contract address, and all the public functions
+// basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
+// this returns a DOM element
+UniversalDApp.prototype.renderInstance = function (contract, address) {
+  function remove () { $instance.remove() }
+  var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
+  if (this.options.removable_instances) {
     var close = yo`<div class="udapp-close" onclick=${remove}></div>`
-    createInterface.appendChild(close)
+    $instance.get(0).appendChild(close)
   }
+  var context = this.executionContext.isVM() ? 'memory' : 'blockchain'
 
-  var publishButton = yo`<button class="publishContract" onclick=${clickPublish}>Publish</button>`
-  function clickPublish () { self.event.trigger('publishContract', [contract]) }
-  createInterface.appendChild(publishButton)
-
-  var atButton = yo`<button class="atAddress" onclick=${clickAtAddress}>At Address</button>`
-  function clickAtAddress () { self.clickContractAt(self, document.querySelector('.createContract'), contract) }
-  createInterface.appendChild(atButton)
-
-  var $newButton = self.getInstanceInterface(contract)
-  if (!$newButton) {
-    return createInterface
-  }
-
-  createInterface.appendChild($newButton)
-
-  // Only display creation interface for non-abstract contracts.
-  // FIXME: maybe have a flag for this in the JSON?
-  // FIXME: maybe fix getInstanceInterface() below for this case
-  if (contract.bytecode.length === 0) {
-    var $createButton = $newButton.querySelector('.constructor .call')
-
-    // NOTE: we must show the button to have CSS properly lined up
-    $createButton.innerText = 'Create'
-    $createButton.setAttribute('disabled', 'disabled')
-    $createButton.setAttribute('title', 'This contract does not implement all functions and thus cannot be created.')
-  }
-
-  if ((contract.metadata === undefined) || (contract.metadata.length === 0)) {
-    publishButton.setAttribute('disabled', 'disabled')
-    publishButton.setAttribute('title', 'This contract does not implement all functions and thus cannot be published.')
-  }
-
-  return createInterface
-}
-
-UniversalDApp.prototype.getInstanceInterface = function (contract, address, target) {
-  var self = this
-  var abi = JSON.parse(contract.interface).sort(function (a, b) {
-    if (a.name > b.name) {
-      return -1
-    } else {
-      return 1
-    }
-  }).sort(function (a, b) {
-    if (a.constant === true) {
-      return -1
-    } else {
-      return 1
-    }
-  })
-
-  var funABI = self.getConstructorInterface(abi)
-  if (!funABI) {
-    return
-  }
-
-  var createInterface = yo`<div class="createContract"></div>`
-
-  var appendFunctions = function (address, el) {
-    function remove () { $instance.remove() }
-    var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
-    if (self.options.removable_instances) {
-      var close = yo`<div class="udapp-close" onclick=${remove}></div>`
-      $instance.get(0).appendChild(close)
-    }
-    var context = self.executionContext.isVM() ? 'memory' : 'blockchain'
-
-    address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
-    var shortAddress = helper.shortenAddress(address)
-    var title = yo`
+  address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
+  var shortAddress = helper.shortenAddress(address)
+  var title = yo`
       <div class="${cssInstance.title}" onclick=${toggleClass}>
         <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
         <i class="fa fa-clipboard ${cssInstance.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
       </div>
     `
-    function toggleClass () {
-      $instance.toggleClass(`${cssInstance.hidesub}`)
+  function toggleClass () {
+    $instance.toggleClass(`${cssInstance.hidesub}`)
+  }
+
+  function copyToClipboard (event) {
+    event.stopPropagation()
+    copy(address)
+  }
+
+  var $events = $('<div class="events"/>')
+
+  var parseLogs = function (err, response) {
+    if (err) {
+      return
     }
 
-    function copyToClipboard (event) {
-      event.stopPropagation()
-      copy(address)
-    }
+    var $event = $('<div class="event" />')
 
-    var $events = $('<div class="events"/>')
+    var close = yo`<div class="udapp-close" onclick=${remove}></div>`
+    function remove () { $event.remove() }
 
-    var parseLogs = function (err, response) {
-      if (err) {
-        return
-      }
+    $event.append($('<span class="name"/>').text(response.event))
+      .append($('<span class="args" />').text(JSON.stringify(response.args, null, 2)))
+    $event.get(0).appendChild(close)
+    $events.append($event)
+  }
 
-      var $event = $('<div class="event" />')
-
-      var close = yo`<div class="udapp-close" onclick=${remove}></div>`
-      function remove () { $event.remove() }
-
-      $event.append($('<span class="name"/>').text(response.event))
-        .append($('<span class="args" />').text(JSON.stringify(response.args, null, 2)))
-      $event.get(0).appendChild(close)
-      $events.append($event)
-    }
-
-    if (self.executionContext.isVM()) {
-      // FIXME: support indexed events
-      var eventABI = {}
-
-      $.each(abi, function (i, funABI) {
-        if (funABI.type !== 'event') {
-          return
-        }
-
-        var hash = ethJSABI.eventID(funABI.name, funABI.inputs.map(function (item) { return item.type }))
-        eventABI[hash.toString('hex')] = { event: funABI.name, inputs: funABI.inputs }
-      })
-
-      self.vm.on('afterTx', function (response) {
-        for (var i in response.vm.logs) {
-          // [address, topics, mem]
-          var log = response.vm.logs[i]
-          var event
-          var decoded
-
-          try {
-            var abi = eventABI[log[1][0].toString('hex')]
-            event = abi.event
-            var types = abi.inputs.map(function (item) {
-              return item.type
-            })
-            decoded = ethJSABI.rawDecode(types, log[2])
-            decoded = ethJSABI.stringify(types, decoded)
-          } catch (e) {
-            decoded = '0x' + log[2].toString('hex')
-          }
-
-          parseLogs(null, { event: event, args: decoded })
-        }
-      })
-    } else {
-      var eventFilter = self.web3.eth.contract(abi).at(address).allEvents()
-      eventFilter.watch(parseLogs)
-    }
-    $instance.get(0).appendChild(title)
-
-    // Add the fallback function
-    var fallback = self.getFallbackInterface(abi)
-    if (fallback) {
-      $instance.append(self.getCallButton({
-        abi: fallback,
-        encode: function (args) {
-          return ''
-        },
-        address: address
-      }))
-    }
-
+  if (this.executionContext.isVM()) {
+    // FIXME: support indexed events
+    var eventABI = {}
+    var abi = txHelper.sortAbiFunction(contract)
     $.each(abi, function (i, funABI) {
-      if (funABI.type !== 'function') {
+      if (funABI.type !== 'event') {
         return
       }
-      // @todo getData cannot be used with overloaded functions
-      $instance.append(self.getCallButton({
-        abi: funABI,
-        encode: function (args) {
-          var types = []
-          for (var i = 0; i < funABI.inputs.length; i++) {
-            types.push(funABI.inputs[i].type)
-          }
 
-          return Buffer.concat([ ethJSABI.methodID(funABI.name, types), ethJSABI.rawEncode(types, args) ]).toString('hex')
-        },
-        address: address
-      }))
+      var hash = ethJSABI.eventID(funABI.name, funABI.inputs.map(function (item) { return item.type }))
+      eventABI[hash.toString('hex')] = { event: funABI.name, inputs: funABI.inputs }
     })
 
-    el = el || createInterface
-    el.appendChild($instance.append($events).get(0))
-  }
+    this.vm.on('afterTx', function (response) {
+      for (var i in response.vm.logs) {
+        // [address, topics, mem]
+        var log = response.vm.logs[i]
+        var event
+        var decoded
 
-  if (!address || !target) {
-    createInterface.appendChild(self.getCallButton({
-      abi: funABI,
-      encode: function (args) {
-        var types = []
-        for (var i = 0; i < funABI.inputs.length; i++) {
-          types.push(funABI.inputs[i].type)
+        try {
+          var abi = eventABI[log[1][0].toString('hex')]
+          event = abi.event
+          var types = abi.inputs.map(function (item) {
+            return item.type
+          })
+          decoded = ethJSABI.rawDecode(types, log[2])
+          decoded = ethJSABI.stringify(types, decoded)
+        } catch (e) {
+          decoded = '0x' + log[2].toString('hex')
         }
 
-        // NOTE: the caller will concatenate the bytecode and this
-        //       it could be done here too for consistency
-        return ethJSABI.rawEncode(types, args).toString('hex')
-      },
-      contractName: contract.name,
-      bytecode: contract.bytecode,
-      appendFunctions: appendFunctions
-    }).get(0))
+        parseLogs(null, { event: event, args: decoded })
+      }
+    })
   } else {
-    appendFunctions(address, target)
+    var eventFilter = this.web3.eth.contract(abi).at(address).allEvents()
+    eventFilter.watch(parseLogs)
+  }
+  $instance.get(0).appendChild(title)
+
+  // Add the fallback function
+  var fallback = txHelper.getFallbackInterface(abi)
+  if (fallback) {
+    $instance.append(this.getCallButton({
+      abi: fallback,
+      address: address,
+      contractAbi: abi
+    }))
   }
 
-  return createInterface
-}
-
-UniversalDApp.prototype.getConstructorInterface = function (abi) {
-  for (var i = 0; i < abi.length; i++) {
-    if (abi[i].type === 'constructor') {
-      return abi[i]
+  $.each(abi, function (i, funABI) {
+    if (funABI.type !== 'function') {
+      return
     }
-  }
+    // @todo getData cannot be used with overloaded functions
+    $instance.append(this.getCallButton({
+      funABI: funABI,
+      address: address,
+      contractAbi: abi
+    }))
+  })
 
-  return { 'type': 'constructor', 'payable': false, 'inputs': [] }
+  $instance.append($events)
+  return $instance.get(0)
 }
 
-UniversalDApp.prototype.getFallbackInterface = function (abi) {
-  for (var i = 0; i < abi.length; i++) {
-    if (abi[i].type === 'fallback') {
-      return abi[i]
-    }
-  }
-}
-
+// TODO this is used by renderInstance when a new instance is displayed.
+// this returns a DOM element.
 UniversalDApp.prototype.getCallButton = function (args) {
   var self = this
-  // args.abi, args.encode, args.bytecode [constr only], args.address [fun only]
-  // args.contractName [constr only], args.appendFunctions [constr only]
-  var isConstructor = args.bytecode !== undefined
-  var lookupOnly = (args.abi.constant && !isConstructor)
+  // args.funABI, args.address [fun only]
+  // args.contractName [constr only]
+  var lookupOnly = args.funABI.constant
 
   var inputs = ''
-  if (args.abi.inputs) {
-    $.each(args.abi.inputs, function (i, inp) {
+  if (args.funABI.inputs) {
+    $.each(args.funABI.inputs, function (i, inp) {
       if (inputs !== '') {
         inputs += ', '
       }
@@ -527,219 +330,10 @@ UniversalDApp.prototype.getCallButton = function (args) {
   }
   var inputField = $('<input/>').attr('placeholder', inputs).attr('title', inputs)
   var $outputOverride = $('<div class="value" />')
-  var outputSpan = $('<div class="output"/>')
-
-  var getReturnOutput = function (result) {
-    var returnName = lookupOnly ? 'Value' : 'Result'
-    var returnCls = lookupOnly ? 'value' : 'returned'
-    return $('<div class="' + returnCls + '">').html('<strong>' + returnName + ':</strong> ' + JSON.stringify(result, null, 2))
-  }
-
-  var getDebugTransaction = function (result) {
-    var $debugTx = $('<div class="debugTx">')
-    var $button = $('<button title="Launch Debugger" class="debug"><i class="fa fa-bug"></i>  Launch debugger </button>')
-    $button.click(function () {
-      self.event.trigger('debugRequested', [result])
-    })
-    $debugTx.append($button)
-    return $debugTx
-  }
-
-  var getDebugCall = function (result) {
-    var $debugTx = $('<div class="debugCall">')
-    var $button = $('<button title="Launch Debugger" class="debug"><i class="fa fa-bug"></i>  Launch debugger </button>')
-    $button.click(function () {
-      self.event.trigger('debugRequested', [result])
-    })
-    $debugTx.append($button)
-    return $debugTx
-  }
-
-  var getGasUsedOutput = function (result, vmResult) {
-    var $gasUsed = $('<div class="gasUsed"></div>')
-    var caveat = lookupOnly ? '<em>(<span class="caveat" title="Cost only applies when called by a contract">caveat</span>)</em>' : ''
-    var gas
-    if (result.gasUsed) {
-      gas = result.gasUsed.toString(10)
-      $gasUsed.html('<strong>Transaction cost:</strong> ' + gas + ' gas. ' + caveat)
-    }
-    if (vmResult && vmResult.gasUsed) {
-      var $callGasUsed = $('<div class="gasUsed">')
-      gas = vmResult.gasUsed.toString(10)
-      $callGasUsed.append('<strong>Execution cost:</strong> ' + gas + ' gas.')
-      $gasUsed.append($callGasUsed)
-    }
-    return $gasUsed
-  }
-
-  var getDecodedOutput = function (result) {
-    var $decoded
-    if (Array.isArray(result)) {
-      $decoded = $('<ol>')
-      for (var i = 0; i < result.length; i++) {
-        $decoded.append($('<li>').text(result[i]))
-      }
-    } else {
-      $decoded = result
-    }
-    return $('<div class="decoded">').html('<strong>Decoded:</strong> ').append($decoded)
-  }
-
-  var getOutput = function () {
-    var $result = $('<div class="result" />')
-    var close = yo`<div class="udapp-close" onclick=${remove}></div>`
-    function remove () { $result.remove() }
-    $result.get(0).appendChild(close)
-    return $result
-  }
-  var clearOutput = function ($result) {
-    $(':not(.udapp-close)', $result).remove()
-  }
-  var replaceOutput = function ($result, message) {
-    clearOutput($result)
-    $result.append(message)
-  }
-
-  var handleCallButtonClick = function (ev, $result) {
-    if (!$result) {
-      $result = getOutput()
-      if (lookupOnly && !inputs.length) {
-        $outputOverride.empty().append($result)
-      } else {
-        outputSpan.append($result)
-      }
-    }
-
-    var funArgs = ''
-    try {
-      funArgs = $.parseJSON('[' + inputField.val() + ']')
-    } catch (e) {
-      replaceOutput($result, $('<span/>').text('Error encoding arguments: ' + e))
-      return
-    }
-    var data = ''
-    if (!isConstructor || funArgs.length > 0) {
-      try {
-        data = args.encode(funArgs)
-      } catch (e) {
-        replaceOutput($result, $('<span/>').text('Error encoding arguments: ' + e))
-        return
-      }
-    }
-    if (data.slice(0, 9) === 'undefined') {
-      data = data.slice(9)
-    }
-    if (data.slice(0, 2) === '0x') {
-      data = data.slice(2)
-    }
-
-    replaceOutput($result, $('<span>Waiting for transaction to be mined...</span>'))
-
-    if (isConstructor) {
-      if (args.bytecode.indexOf('_') >= 0) {
-        replaceOutput($result, $('<span>Deploying and linking required libraries...</span>'))
-        self.linkBytecode(args.contractName, function (err, bytecode) {
-          if (err) {
-            replaceOutput($result, $('<span/>').text('Error deploying required libraries: ' + err))
-          } else {
-            args.bytecode = bytecode
-            handleCallButtonClick(ev, $result)
-          }
-        })
-        return
-      } else {
-        data = args.bytecode + data
-      }
-    }
-
-    var decodeResponse = function (response) {
-      // Only decode if there supposed to be fields
-      if (args.abi.outputs && args.abi.outputs.length > 0) {
-        try {
-          var i
-
-          var outputTypes = []
-          for (i = 0; i < args.abi.outputs.length; i++) {
-            outputTypes.push(args.abi.outputs[i].type)
-          }
-
-          // decode data
-          var decodedObj = ethJSABI.rawDecode(outputTypes, response)
-
-          // format decoded data
-          decodedObj = ethJSABI.stringify(outputTypes, decodedObj)
-          for (i = 0; i < outputTypes.length; i++) {
-            var name = args.abi.outputs[i].name
-            if (name.length > 0) {
-              decodedObj[i] = outputTypes[i] + ' ' + name + ': ' + decodedObj[i]
-            } else {
-              decodedObj[i] = outputTypes[i] + ': ' + decodedObj[i]
-            }
-          }
-
-          return getDecodedOutput(decodedObj)
-        } catch (e) {
-          return getDecodedOutput('Failed to decode output: ' + e)
-        }
-      }
-    }
-
-    var decoded
-    self.runTx({ to: args.address, data: data, useCall: lookupOnly }, function (err, txResult) {
-      self.event.trigger('transactionExecuted', [args.address, data, lookupOnly, txResult])
-      if (!txResult) {
-        replaceOutput($result, $('<span/>').text('callback contain no result ' + err).addClass('error'))
-        return
-      }
-      var result = txResult.result
-      if (err) {
-        replaceOutput($result, $('<span/>').text(err).addClass('error'))
-      // VM only
-      } else if (self.executionContext.isVM() && result.vm.exception === 0 && result.vm.exceptionError) {
-        replaceOutput($result, $('<span/>').text('Exception during execution. (' + result.vm.exceptionError + '). Please debug the transaction for more information.').addClass('error'))
-        $result.append(getDebugTransaction(txResult))
-      // VM only
-      } else if (self.executionContext.isVM() && result.vm.return === undefined) {
-        replaceOutput($result, $('<span/>').text('Exception during execution. Please debug the transaction for more information.').addClass('error'))
-        $result.append(getDebugTransaction(txResult))
-      } else if (isConstructor) {
-        replaceOutput($result, getGasUsedOutput(result, result.vm)) // transation cost +
-        $result.append(getDebugTransaction(txResult))
-        args.appendFunctions(self.executionContext.isVM() ? result.createdAddress : result.contractAddress)
-      } else if (self.executionContext.isVM()) {
-        var outputObj = '0x' + result.vm.return.toString('hex')
-        clearOutput($result)
-        $result.append(getReturnOutput(outputObj)).append(getGasUsedOutput(result, result.vm))
-        decoded = decodeResponse(result.vm.return)
-        if (decoded) {
-          $result.append(decoded)
-        }
-        if (lookupOnly) {
-          $result.append(getDebugCall(txResult))
-        } else {
-          $result.append(getDebugTransaction(txResult))
-        }
-      } else if (lookupOnly) {
-        clearOutput($result)
-        $result.append(getReturnOutput(result)).append(getGasUsedOutput({}))
-
-        decoded = decodeResponse(ethJSUtil.toBuffer(result))
-        if (decoded) {
-          $result.append(decoded)
-        }
-      } else {
-        clearOutput($result)
-        $result.append(getReturnOutput(result)).append(getGasUsedOutput(result))
-        $result.append(getDebugTransaction(txResult))
-      }
-    })
-  }
 
   var title
-  if (isConstructor) {
-    title = 'Create'
-  } else if (args.abi.name) {
-    title = args.abi.name
+  if (args.funABI.name) {
+    title = args.funABI.name
   } else {
     title = '(fallback)'
   }
@@ -748,20 +342,33 @@ UniversalDApp.prototype.getCallButton = function (args) {
     .addClass('call')
     .attr('title', title)
     .text(title)
-    .click(handleCallButtonClick)
+    .click(() => {
+      var funArgs
+      try {
+        funArgs = $.parseJSON('[' + inputField.val() + ']')
+      } catch (e) {
+        alert('Error encoding arguments: ' + e)
+        return
+      }
+      txFormat.buildData(args.contractAbi, self.contracts, false, args.funABI, funArgs, self, self.executionContext, (error, data) => {
+        if (!error) {
+          txExecution.callFunction(args.address, data, args.funABI, self, (error, result) => {
+            // TODO here should send the result to the dom-console
+            console.log(error, result)
+            alert(error + ' ' + JSON.stringify(result))
+          })
+        } else {
+          alert(error)
+        }
+      })
+    })
 
-  if (lookupOnly && !inputs.length) {
-    handleCallButtonClick()
-  }
+  // TODO the auto call to constant function has been removed. needs to readd it later.
 
   var $contractProperty = $('<div class="contractProperty"/>')
   $contractProperty
     .append(button)
     .append((lookupOnly && !inputs.length) ? $outputOverride : inputField)
-
-  if (isConstructor) {
-    $contractProperty.addClass('constructor')
-  }
 
   if (lookupOnly) {
     $contractProperty.addClass('constant')
@@ -775,67 +382,14 @@ UniversalDApp.prototype.getCallButton = function (args) {
     $contractProperty.addClass('payable')
   }
 
-  return $contractProperty.append(outputSpan)
+  return $contractProperty
 }
 
-UniversalDApp.prototype.linkBytecode = function (contractName, cb) {
-  var self = this
-  var bytecode = self.getContractByName(contractName).bytecode
-  if (bytecode.indexOf('_') < 0) {
-    return cb(null, bytecode)
-  }
-  var m = bytecode.match(/__([^_]{1,36})__/)
-  if (!m) {
-    return cb('Invalid bytecode format.')
-  }
-  var libraryName = m[1]
-  if (!self.getContractByName(libraryName)) {
-    return cb('Library ' + libraryName + ' not found.')
-  }
-  self.deployLibrary(libraryName, function (err, address) {
-    if (err) {
-      return cb(err)
-    }
-    var libLabel = '__' + libraryName + Array(39 - libraryName.length).join('_')
-    var hexAddress = address.toString('hex')
-    if (hexAddress.slice(0, 2) === '0x') {
-      hexAddress = hexAddress.slice(2)
-    }
-    hexAddress = Array(40 - hexAddress.length + 1).join('0') + hexAddress
-    while (bytecode.indexOf(libLabel) >= 0) {
-      bytecode = bytecode.replace(libLabel, hexAddress)
-    }
-    self.getContractByName(contractName).bytecode = bytecode
-    self.linkBytecode(contractName, cb)
-  })
-}
-
-UniversalDApp.prototype.deployLibrary = function (contractName, cb) {
-  var self = this
-  if (self.getContractByName(contractName).address) {
-    return cb(null, self.getContractByName(contractName).address)
-  }
-  var bytecode = self.getContractByName(contractName).bytecode
-  if (bytecode.indexOf('_') >= 0) {
-    self.linkBytecode(contractName, function (err, bytecode) {
-      if (err) cb(err)
-      else self.deployLibrary(contractName, cb)
-    })
-  } else {
-    self.runTx({ data: bytecode, useCall: false }, function (err, txResult) {
-      if (err) {
-        return cb(err)
-      }
-      var address = self.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
-      self.getContractByName(contractName).address = address
-      cb(err, address)
-    })
-  }
-}
-
+// TODO this is used when  the user used the atAddress feature.
 UniversalDApp.prototype.clickContractAt = function (self, $output, contract) {
   var address = prompt('What Address is this contract at in the Blockchain? ie: 0xdeadbeaf...')
-  self.getInstanceInterface(contract, address, $output)
+  var instance = self.renderInstance(contract, address)
+  // TODO this is a new 'atAddress' instance (a DOM element), should then be appended somewhere.
 }
 
 UniversalDApp.prototype.runTx = function (args, cb) {

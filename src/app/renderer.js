@@ -322,8 +322,6 @@ Renderer.prototype.contracts = function (data, source) {
 
   this.appAPI.resetDapp(udappContracts, renderOutputModifier)
 
-  var $contractOutput = this.appAPI.renderDapp()
-
   var $txOrigin = $('#txorigin')
 
   this.appAPI.getAccounts(function (err, accounts) {
@@ -339,7 +337,6 @@ Renderer.prototype.contracts = function (data, source) {
     }
   })
 
-  $('#output').append($contractOutput)
   $('.' + css.col2 + ' input,textarea').click(function () { this.select() })
 }
 
