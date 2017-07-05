@@ -52,7 +52,7 @@ var css = csjs`
     text-align: center;
     height: 32px;
   }
-  .contractNamesDropdown extends ${styles.dropdown} {
+  .contractNames extends ${styles.dropdown} {
     width: 100%;
     height: 32px;
     text-align: center;
@@ -66,11 +66,13 @@ var css = csjs`
     margin: 1%;
     width: 35%;
     background-color: ${styles.colors.green};
+    text-align: center;
   }
   .create extends ${styles.button} {
     margin: 1%;
     width: 35%;
     background-color: ${styles.colors.lightRed};
+    text-align: center;
   }
 `
 
@@ -84,7 +86,7 @@ function runTab (container, appAPI, appEvents, opts) {
   <div class="${css.runTabView}" id="runTabView">
     ${settings(appAPI, appEvents)}
     ${legend()}
-    <select class="${css.contractNames} ${css.contractNamesDropdown}"></select>
+    <select class="${css.contractNames}"></select>
     <div class="${css.buttons}">
       <div class="${css.atAddress}" onclick=${loadFromAddress(appAPI)}>At Address</div>
       <div class="${css.create}" onclick=${createInstance(appAPI)}>Create</div>
@@ -112,14 +114,17 @@ function loadFromAddress (appAPI) {
 
 // GET NAMES OF ALL THE CONTRACTS
 function getContractNames (success, data) {
-  var contractNames = document.querySelector(`.${css.contractNames}`)
+  var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+  console.log('contractNames', contractNames)
   contractNames.innerHTML = ''
   if (success) {
     for (var name in data.contracts) {
       contractNames.appendChild(yo`<option>${name}</option>`)
+      console.log('contractNames after success', contractNames)
     }
   } else {
     contractNames.appendChild(yo`<option></option>`)
+    console.log('contractNames else of success', contractNames)
   }
 }
 

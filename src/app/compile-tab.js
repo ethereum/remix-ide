@@ -32,6 +32,14 @@ var css = csjs`
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
+  .button extends ${styles.button} {
+    width: 10em;
+    background-color: ${styles.colors.blue};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:.3em;
+  }
   .buttons {
     display: flex;
     cursor: pointer;
@@ -42,8 +50,9 @@ var css = csjs`
     margin: 1%;
     width: 70%;
     background-color: ${styles.colors.pink};
+    text-align: center;
   }
-  .contractNamesDropdown extends ${styles.dropdown} {
+  .contractNames extends ${styles.dropdown} {
     margin-top: 1%;
     width: 100%;
     height: 32px;
@@ -134,7 +143,7 @@ function compileTab (container, appAPI, appEvents, opts) {
         <span class="${css.autocompileText}">Auto compile</span>
         ${warnCompilationSlow}
       </div>
-      <select class="${css.contractNames} ${css.contractNamesDropdown}"></select>
+      <select class="${css.contractNames}"></select>
       <div class="${css.buttons}">
         <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
       </div>
@@ -154,7 +163,7 @@ function compileTab (container, appAPI, appEvents, opts) {
 
   // GET NAMES OF ALL THE CONTRACTS
   function getContractNames (success, data) {
-    var contractNames = document.querySelector(`.${css.contractNames}`)
+    var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     contractNames.innerHTML = ''
     if (success) {
       for (var name in data.contracts) {
