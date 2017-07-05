@@ -347,7 +347,6 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
   var appendFunctions = function (address, $el) {
     function remove () { $instance.remove() }
     if ($el) $el = $el.get(0)
-    function remove () { $instance.remove() }
     var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
     if (self.options.removable_instances) {
       var close = yo`<div class="udapp-close" onclick=${remove}></div>`

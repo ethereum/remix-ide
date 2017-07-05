@@ -19,8 +19,8 @@ var css = csjs`
     display           : flex;
     flex-direction    : column;
     position          : relative;
-    top               : -33px;
     width             : 100%;
+    height            : 100%;
   }
   .menu               {
     display           : flex;

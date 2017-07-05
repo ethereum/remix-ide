@@ -3,8 +3,7 @@ require('babel-polyfill')
 
 require('./app/style-base')
 
-var App = require('./app.js')
-
-var app = new App({})
+var app = require('./app.js')
 
 document.body.appendChild(app.render())
+app.init()
