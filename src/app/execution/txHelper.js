@@ -10,7 +10,7 @@ module.exports = {
 
     // NOTE: the caller will concatenate the bytecode and this
     //       it could be done here too for consistency
-    return ethJSABI.rawEncode(types, args).toString('hex')
+    return ethJSABI.rawEncode(types, args)
   },
 
   encodeFunctionId: function (funABI) {

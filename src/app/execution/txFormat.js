@@ -25,19 +25,21 @@ module.exports = {
       return
     }
     var data = ''
+    var dataHex = ''
     if (!isConstructor || funArgs.length > 0) {
       try {
-        data = this.encodeParams(funAbi, funArgs)
+        data = helper.encodeParams(funAbi, funArgs)
+        dataHex = data.toString('hex')
       } catch (e) {
         callback('Error encoding arguments: ' + e)
         return
       }
     }
     if (data.slice(0, 9) === 'undefined') {
-      data = data.slice(9)
+      dataHex = data.slice(9)
     }
     if (data.slice(0, 2) === '0x') {
-      data = data.slice(2)
+      dataHex = data.slice(2)
     }
     if (isConstructor) {
       var bytecodeToDeploy = contract.bytecode
@@ -46,18 +48,18 @@ module.exports = {
           if (err) {
             callback('Error deploying required libraries: ' + err)
           } else {
-            bytecodeToDeploy = bytecode + data
+            bytecodeToDeploy = bytecode + dataHex
             return callback(null, bytecodeToDeploy)
           }
         })
         return
       } else {
-        data = bytecodeToDeploy + data
+        dataHex = bytecodeToDeploy + dataHex
       }
     } else {
-      data = Buffer.concat([this.encodeFunctionId(funAbi), data]).toString('hex')
+      dataHex = Buffer.concat([helper.encodeFunctionId(funAbi), data]).toString('hex')
     }
-    callback(null, data)
+    callback(null, dataHex)
   },
 
   atAddress: function () {},

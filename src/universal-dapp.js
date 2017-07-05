@@ -352,10 +352,10 @@ UniversalDApp.prototype.getCallButton = function (args) {
       }
       txFormat.buildData(args.contractAbi, self.contracts, false, args.funABI, funArgs, self, self.executionContext, (error, data) => {
         if (!error) {
-          txExecution.callFunction(args.address, data, args.funABI, self, (error, result) => {
+          txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {
             // TODO here should send the result to the dom-console
-            console.log(error, result)
-            alert(error + ' ' + JSON.stringify(result))
+            console.log('function call', error, txResult)
+            alert(error + ' ' + txResult.transactionHash)
           })
         } else {
           alert(error)

@@ -113,10 +113,12 @@ function createInstance (appAPI) {
   var args = '' // TODO retrieve input parameter
   txFormat.buildData(contract, contracts, true, constructor, args, appAPI.udapp(), appAPI.executionContext(), (error, data) => {
     if (!error) {
-      txExecution.createContract(data, appAPI.udapp(), (error, result) => {
-        // TODO here should send the result to the dom-console
-        console.log(error, result)
-        alert(error + ' ' + result.transactionHash)
+      txExecution.createContract(data, appAPI.udapp(), (error, txResult) => {
+        console.log('contract creation', error, txResult)
+        alert(error + ' ' + txResult.transactionHash)
+        var instances = document.querySelector(`.${css.instances}`)
+        var address = appAPI.executionContext().isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+        instances.appendChild(appAPI.udapp().renderInstance(contract, address))
       })
     } else {
       alert(error)
