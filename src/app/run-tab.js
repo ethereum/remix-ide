@@ -13,9 +13,14 @@ var styles = styleGuide()
 var css = csjs`
   .runTabView {
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .settings extends ${styles.displayBox} {
+    margin-top: 5%;
   }
   .crow {
-    margin-top: 1em;
+    margin-top: .5em;
     display: flex;
   }
   .col1 extends ${styles.titleL} {
@@ -26,20 +31,17 @@ var css = csjs`
   .col1_1 extends ${styles.titleM} {
     width: 30%;
     min-width: 50px;
-    margin-left: 1em;
     float: left;
     align-self: center;
   }
-  .col2 extends ${styles.textBoxL}{
+  .col2 extends ${styles.input}{
     width: 70%;
-    height: 32px;
     float: left;
   }
   .select extends ${styles.dropdown} {
     width: 70%;
     float: left;
     text-align: center;
-    height: 32px;
   }
   .copyaddress {
     color: #C6CFF7;
@@ -51,15 +53,14 @@ var css = csjs`
     opacity: .7;
   }
   .selectAddress extends ${styles.dropdown} {
-    width: 81%;
+    width: 80%;
     float: left;
     text-align: center;
-    height: 32px;
   }
   .contractNames extends ${styles.dropdown} {
     width: 100%;
     height: 32px;
-    text-align: center;
+    background-color: ${styles.colors.blue};
   }
   .buttons {
     display: flex;
@@ -68,15 +69,17 @@ var css = csjs`
   }
   .atAddress extends ${styles.button} {
     margin: 1%;
-    width: 35%;
     background-color: ${styles.colors.green};
     text-align: center;
   }
   .create extends ${styles.button} {
     margin: 1%;
-    width: 35%;
     background-color: ${styles.colors.lightRed};
     text-align: center;
+  }
+  .instance {
+    width: 100%;
+    margin-top: 5%;
   }
 `
 
@@ -88,13 +91,14 @@ function runTab (container, appAPI, appEvents, opts) {
   })
   var el = yo`
   <div class="${css.runTabView}" id="runTabView">
-    ${settings(appAPI, appEvents)}
-    ${legend()}
     <select class="${css.contractNames}"></select>
     <div class="${css.buttons}">
-      <div class="${css.atAddress}" onclick=${function () { loadFromAddress(appAPI) }}>At Address</div>
-      <div class="${css.create}" onclick=${function () { createInstance(appAPI) }} >Create</div>
+    <div class="${css.atAddress}" onclick=${function () { loadFromAddress(appAPI) }}>At Address</div>
+    <div class="${css.create}" onclick=${function () { createInstance(appAPI) }} >Create</div>
     </div>
+    ${settings(appAPI, appEvents)}
+    <div class="${css.instance}"></div>
+    ${legend()}
   </div>
   `
   container.appendChild(el)
@@ -115,10 +119,9 @@ function createInstance (appAPI) {
     if (!error) {
       txExecution.createContract(data, appAPI.udapp(), (error, txResult) => {
         console.log('contract creation', error, txResult)
-        alert(error + ' ' + txResult.transactionHash)
-        var instances = document.querySelector(`.${css.instances}`)
+        var instance = document.querySelector(`.${css.instance}`)
         var address = appAPI.executionContext().isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
-        instances.appendChild(appAPI.udapp().renderInstance(contract, address))
+        instance.appendChild(appAPI.udapp().renderInstance(contract, address))
       })
     } else {
       alert(error)
@@ -157,7 +160,7 @@ function settings (appAPI, appEvents) {
 
   // SETTINGS HTML
   var el = yo`
-    <div>
+    <div class="${css.settings}">
       <div class="${css.crow}">
         <div id="selectExEnv" class="${css.col1_1}">
           Environment
@@ -226,14 +229,9 @@ function settings (appAPI, appEvents) {
 ------------------------------------------------ */
 function legend () {
   var css = csjs`
-    .legend {
-      margin-top: 3%;
-      background-color: white;
-      line-height: 20px;
-      border: .2em dotted ${styles.colors.lightGrey};
-      padding: 8px 15px;
+    .legend extends ${styles.displayBox} {
+      margin-top: 5%;
       border-radius: 5px;
-      margin-bottom: 1em;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;

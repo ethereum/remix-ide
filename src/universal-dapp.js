@@ -59,8 +59,7 @@ var cssInstance = csjs`
       display: none;
   }
   .copy extends ${styles.button}  {
-    border: 1px dotted ${styles.colors.grey};
-    padding: 0 .3em;
+    margin-right: 3%;
     font-weight: bold;
   }
   .copy:hover{
@@ -213,8 +212,8 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
   var shortAddress = helper.shortenAddress(address)
   var title = yo`
       <div class="${cssInstance.title}" onclick=${toggleClass}>
-        <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
         <i class="fa fa-clipboard ${cssInstance.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
+        <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
       </div>
     `
   function toggleClass () {

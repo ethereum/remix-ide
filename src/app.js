@@ -982,7 +982,7 @@ function run () {
   }
 
   function setVersionText (text) {
-    $('#version').text(text)
+    document.querySelector('#version').innerText = text
   }
 
   function loadVersion (version) {

@@ -56,13 +56,13 @@ function styleGuide () {
                                 TEXT-BOXES
   -------------------------------------------------------------------------- */
   var textBoxes = csjs`
-    .display-box-L {
+    .display-box {
       font-size             : 1em;
       padding               : 8px 15px;
       line-height           : 20px;
-      background            : #f8f8f8;
+      background            : ${colors.white};
       border-radius         : 3px;
-      border                : 1px solid #e5e5e5;
+      border                : 1px solid ${colors.lightGrey};
       overflow-x            : auto;
       width                 : 100%;
     }
@@ -70,7 +70,7 @@ function styleGuide () {
     .info-text-box {
       background-color      : white;
       line-height           : 20px;
-      border                : .2em dotted lightGrey;
+      border                : .2em dotted ${colors.lightGrey};
       padding               : 8px 15px;
       border-radius         : 5px;
       margin-bottom         : 1em;
@@ -86,7 +86,7 @@ function styleGuide () {
     }
 
     .error-text-box {
-      background-color      : #FFB9B9;  // light-red
+      background-color      : ${colors.lightRed};  // light-red
       line-height           : 20px;
       padding               : 1em 1em .5em 1em;
       border-radius         : 3px;
@@ -105,6 +105,13 @@ function styleGuide () {
       position              : relative;
       border-radius         : 3px;
     }
+    .input {
+      border                : 1px solid ${colors.lightGrey};  // light-grey
+      margin                : .3em;
+      height                : 25px;
+      font-size             : 1em;
+      border-radius         : 3px;
+    }
   `
   /* --------------------------------------------------------------------------
                                     BUTTONS
@@ -113,43 +120,40 @@ function styleGuide () {
     .button {
       border-color            : transparent;
       border-radius           : 3px;
+      border                  : .3px solid ${colors.lightGrey};
       cursor                  : pointer;
-      padding                 : .3em;
+      min-height              : 25px;
+      max-height              : 25px;
+      padding                 : 3px;
+      min-width               : 100px;
     }
 
     .button:hover {
       opacity                 : 0.8;
     }
 
-    .dropdown-menu {
+    .dropdown {
       font-size               : 1em;
       text-decoration         : none;
-      background-color        : #C6CFF7;
+      background-color        : ${colors.white};
       cursor                  : pointer;
-      font-size               : 12px;
-      border                  : none;
-      height                  : 20px;
+      border                  : 1px solid ${colors.lightGrey};
+      height                  : 25px;
+      text-align              : center;
     }
 
   `
 
-  /* --------------------------------------------------------------------------
-                                INPUT FIELDS
-  -------------------------------------------------------------------------- */
-  /*
-  .input-field {
-    border                : 1px solid #f0f0f0;  // light-grey
-    padding               : .3em;
-    margin                : .3em;
-  }
-  */
+
   return {
     textBoxL: textBoxes['display-box-L'],
     infoTextBox: textBoxes['info-text-box'],
+    input: textBoxes['input'],
+    displayBox: textBoxes['display-box'],
     warningTextBox: textBoxes['warning-text-box'],
     titleL: texts['title-L'],
     titleM: texts['title-M'],
-    dropdown: buttons['dropdown-menu'],
+    dropdown: buttons['dropdown'],
     button: buttons['button'],
     colors: colors,
     titleBox: textBoxes['title-box']

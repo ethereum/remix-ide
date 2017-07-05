@@ -22,7 +22,6 @@ var css = csjs`
     margin-top: 2em;
   }
   .button extends ${styles.button} {
-    width: 10em;
     background-color: ${styles.colors.blue};
     margin-bottom: .5em;
     margin-right: 1em;

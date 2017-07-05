@@ -13,8 +13,8 @@ var css = csjs`
     display: block;
     margin: 3% 0;
   }
-  .compileContainer {
-    margin: 0;
+  .compileContainer extends ${styles.displayBox} {
+    margin-bottom: 5%;
   }
   .autocompileTitle {
     font-weight: bold;
@@ -33,10 +33,10 @@ var css = csjs`
     margin: 5% 0 0 0;
   }
   .button extends ${styles.button} {
-    width: 10em;
+    width: 150px;
     background-color: ${styles.colors.blue};
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     margin-bottom:.3em;
   }
@@ -48,18 +48,16 @@ var css = csjs`
   }
   .publish extends ${styles.button} {
     margin: 1%;
-    width: 70%;
     background-color: ${styles.colors.pink};
     text-align: center;
   }
   .contractNames extends ${styles.dropdown} {
-    margin-top: 1%;
     width: 100%;
     height: 32px;
-    text-align: center;
+    background-color: ${styles.colors.blue};
   }
   .icon {
-    margin-right: .3em;
+    margin-right: 3%;
   }
   .spinningIcon {
     margin-right: .3em;
