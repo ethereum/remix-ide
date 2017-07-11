@@ -40,13 +40,13 @@ function Compiler (handleImportCall) {
     compilationStartTime = new Date().getTime()
   })
 
-  var internalCompile = function (files, target, missingInputs) {
-    gatherImports(files, target, missingInputs, function (error, input) {
+  var internalCompile = function (files, target, missingInputs, smtResponses) {
+    gatherImports(files, target, missingInputs, smtResponses, function (error, input, smtResponses) {
       if (error) {
         self.lastCompilationResult = null
         self.event.trigger('compilationFinished', [false, { 'error': error }, files])
       } else {
-        compileJSON(input, optimize ? 1 : 0)
+        compileJSON(input, optimize ? 1 : 0, smtResponses)
       }
     })
   }
@@ -73,11 +73,15 @@ function Compiler (handleImportCall) {
 
       compilerAcceptsMultipleFiles = compiler.supportsMulti
 
-      compileJSON = function (source, optimize, cb) {
+      compileJSON = function (source, optimize, smtResponses) {
         var missingInputs = []
         var missingInputsCallback = function (path) {
-          missingInputs.push(path)
-          return { error: 'Deferred import' }
+          if (smtResponses && smtResponses[path] !== undefined) {
+            return { contents: smtResponses[path]}
+          } else {
+            missingInputs.push(path)
+            return { error: 'Deferred import' }
+          }
         }
 
         var result
@@ -87,7 +91,7 @@ function Compiler (handleImportCall) {
           result = { error: 'Uncaught JavaScript exception:\n' + exception }
         }
 
-        compilationFinished(result, missingInputs, source)
+        compilationFinished(result, missingInputs, source, smtResponses)
       }
       onCompilerLoaded(compiler.version())
     }
@@ -97,7 +101,7 @@ function Compiler (handleImportCall) {
     data: null,
     source: null
   }
-  function compilationFinished (data, missingInputs, source) {
+  function compilationFinished (data, missingInputs, source, smtResponses) {
     var noFatalErrors = true // ie warnings are ok
 
     function isValidError (error) {
@@ -131,7 +135,7 @@ function Compiler (handleImportCall) {
       self.event.trigger('compilationFinished', [false, data, source])
     } else if (missingInputs !== undefined && missingInputs.length > 0) {
       // try compiling again with the new set of inputs
-      internalCompile(source.sources, source.target, missingInputs)
+      internalCompile(source.sources, source.target, missingInputs, smtResponses)
     } else {
       data = updateInterface(data)
 
@@ -212,15 +216,21 @@ function Compiler (handleImportCall) {
     worker.addEventListener('error', function (msg) {
       compilationFinished({ error: 'Worker error: ' + msg.data })
     })
-    compileJSON = function (source, optimize) {
+    compileJSON = function (source, optimize, smtResponses) {
       jobs.push({sources: source})
-      worker.postMessage({cmd: 'compile', job: jobs.length - 1, source: JSON.stringify(source), optimize: optimize})
+      worker.postMessage({
+        cmd: 'compile',
+        job: jobs.length - 1,
+        source: JSON.stringify(source),
+        optimize: optimize,
+        smtResponses: smtResponses})
     }
     worker.postMessage({cmd: 'loadVersion', data: url})
   }
 
-  function gatherImports (files, target, importHints, cb) {
+  function gatherImports (files, target, importHints, smtResponses, cb) {
     importHints = importHints || []
+    smtResponses = smtResponses || {}
     if (!compilerAcceptsMultipleFiles) {
       cb(null, files[target])
       return
@@ -252,19 +262,23 @@ function Compiler (handleImportCall) {
         continue
       }
 
-      handleImportCall(m, function (err, content) {
+      handleImportCall(m, function (err, content, isSMTQuery) {
         if (err) {
           cb(err)
         } else {
-          files[m] = content
-          gatherImports(files, target, importHints, cb)
+          if (isSMTQuery) {
+            smtResponses[m] = content
+          } else {
+            files[m] = content
+          }
+          gatherImports(files, target, importHints, smtResponses, cb)
         }
       })
 
       return
     }
 
-    cb(null, { 'sources': files, 'target': target })
+    cb(null, { 'sources': files, 'target': target }, smtResponses)
   }
 
   function truncateVersion (version) {
