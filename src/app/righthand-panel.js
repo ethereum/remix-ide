@@ -2,29 +2,24 @@ var yo = require('yo-yo')
 var EventManager = require('ethereum-remix').lib.EventManager
 
 var tabbedMenu = require('./tabbed-menu')
-var compileTab = require('./compile-tab')
-var runTab = require('./run-tab')
+var contractTab = require('./contract-tab')
 var settingsTab = require('./settings-tab')
 var analysisTab = require('./analysis-tab')
 var debuggerTab = require('./debugger-tab')
 var filesTab = require('./files-tab')
 
-// -------------- styling ----------------------
 var csjs = require('csjs-inject')
-var styleGuide = require('./style-guide')
-var styles = styleGuide()
 
 var css = csjs`
   .options {
       float: left;
-      padding-top: 0.7em;
+      padding: 0.7em 0.3em;
       min-width: 65px;
       font-size: 0.9em;
       cursor: pointer;
-      background-color: ${styles.colors.transparent};
+      background-color: transparent;
       margin-right: 0.5em;
       font-size: 1em;
-      text-align: center;
   }
   .dragbar             {
     position           : absolute;
@@ -84,8 +79,7 @@ function RighthandPanel (appAPI, events, opts) {
       </div>
     </div>
   `
-  compileTab(optionViews, appAPI, events, opts)
-  runTab(optionViews, appAPI, events, opts)
+  contractTab(optionViews, appAPI, events, opts)
   settingsTab(optionViews, appAPI, events, opts)
   analysisTab(optionViews, appAPI, events, opts)
   debuggerTab(optionViews, appAPI, events, opts)

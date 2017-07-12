@@ -14,8 +14,8 @@ var css = csjs`
   .filesTabView {
     padding: 2%;
   }
-  .crow {
-    margin-top: 1em;
+  .crow extends ${styles.displayBox} {
+    margin-bottom: 1%;
     display: flex;
   }
   .infoBox extends ${styles.infoTextBox} {

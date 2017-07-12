@@ -58,7 +58,7 @@ function styleGuide () {
   var textBoxes = csjs`
     .display-box {
       font-size             : 1em;
-      padding               : 8px 15px;
+      padding               : 10px 15px;
       line-height           : 20px;
       background            : ${colors.white};
       border-radius         : 3px;
@@ -109,8 +109,9 @@ function styleGuide () {
       border                : 1px solid ${colors.lightGrey};  // light-grey
       margin                : .3em;
       height                : 25px;
-      font-size             : 1em;
+      font-size             : 10px;
       border-radius         : 3px;
+      padding               : 8px;
     }
   `
   /* --------------------------------------------------------------------------
@@ -126,6 +127,7 @@ function styleGuide () {
       max-height              : 25px;
       padding                 : 3px;
       min-width               : 100px;
+      font-size               : 12px;
     }
 
     .button:hover {
@@ -133,11 +135,13 @@ function styleGuide () {
     }
 
     .dropdown {
-      font-size               : 1em;
+      font-size               : 10px;
+      padding                 : 8px;
       text-decoration         : none;
       background-color        : ${colors.white};
       cursor                  : pointer;
       border                  : 1px solid ${colors.lightGrey};
+      border-radius           : 3px;
       height                  : 25px;
       text-align              : center;
     }

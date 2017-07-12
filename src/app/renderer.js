@@ -56,9 +56,9 @@ function Renderer (appAPI, compilerEvent) {
     $('#output').empty()
     if (success) {
       self.contracts(data, source)
-      $('#header #menu .compileView').css('color', '')
+      $('#righthand-panel #menu .compileView').css('color', '')
     } else {
-      $('#header #menu .compileView').css('color', '#FF8B8B')
+      $('#righthand-panel #menu .compileView').css('color', '#FF8B8B')
     }
 
     // NOTE: still need to display as there might be warnings

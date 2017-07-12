@@ -24,18 +24,15 @@ var styleGuide = require('./app/style-guide')
 var styles = styleGuide()
 
 var cssInstance = csjs`
-  .title {
+  .title extends ${styles.dropdown} {
     display: flex;
-    justify-content: space-around;
-    min-width: 400px;
     align-items: center;
-    margin-bottom: 1em;
-    padding: .3em;
-    font-size: .95em;
-    cursor: pointer;
-    background-color: ${styles.colors.violet};
-    border: 2px dotted ${styles.colors.blue};
-    border-radius: 5px;
+    height: 32px;
+    font-size: 12px;
+    width: 100%;
+    min-width: 400px;
+    font-weight: bold;
+    background-color: ${styles.colors.blue};
   }
   .titleText {
     margin-right: 1em;
@@ -43,8 +40,7 @@ var cssInstance = csjs`
   }
   .instance .title:before {
     content: "\\25BE";
-    margin-right: .5em;
-    margin-left: .5em;
+    margin-right: 10px;
   }
   .instance.hidesub .title:before {
     content: "\\25B8";

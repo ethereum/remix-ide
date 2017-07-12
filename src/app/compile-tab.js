@@ -32,13 +32,18 @@ var css = csjs`
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
   .compileButton extends ${styles.button} {
-    width: 125px;
+    width: 130px;
     background-color: ${styles.colors.blue};
     display: flex;
     align-items: baseline;
     justify-content: center;
-    margin-bottom:.3em;
+    margin-right: 1%;
+    font-size: 13px;
   }
   .icon {
     margin-right: 3%;
@@ -77,12 +82,13 @@ function compileTab (container, appAPI, appEvents, opts) {
   if (typeof container === 'string') container = document.querySelector(container)
   if (!container) throw new Error('no container given')
   var warnCompilationSlow = yo`<div id="warnCompilationSlow"></div>`
+  var compileIcon = yo`<i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>`
 
   // REGISTER EVENTS
 
   // compilationDuration
   appEvents.compiler.register('compilationDuration', function tabHighlighting (speed) {
-    var settingsView = document.querySelector('#header #menu .settingsView')
+    var settingsView = document.querySelector('#righthand-panel #menu .settingsView')
     warnCompilationSlow.className = css.compilationWarning
     if (speed > 1000) {
       warnCompilationSlow.innerHTML = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
@@ -98,28 +104,27 @@ function compileTab (container, appAPI, appEvents, opts) {
   appEvents.editor.register('contentChanged', function changedFile () {
     var compileTab = document.querySelector('.compileView')
     compileTab.style.color = styles.colors.red
-    var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.classList.add(`${css.bouncingIcon}`)
+    compileIcon.classList.add(`${css.bouncingIcon}`)
   })
   appEvents.compiler.register('loadingCompiler', function start () {
-    var compileButton = document.querySelector(`.${css.icon}`)
-    compileButton.classList.add(`${css.spinningIcon}`)
+    compileIcon.classList.add(`${css.spinningIcon}`)
   })
   appEvents.compiler.register('compilationFinished', function finish () {
-    var compileButton = document.querySelector(`.${css.icon}`)
     var compileTab = document.querySelector('.compileView')
     compileTab.style.color = styles.colors.black
-    compileButton.style.color = styles.colors.black
-    compileButton.classList.remove(`${css.spinningIcon}`)
-    compileButton.classList.remove(`${css.bouncingIcon}`)
+    compileIcon.style.color = styles.colors.black
+    compileIcon.classList.remove(`${css.spinningIcon}`)
+    compileIcon.classList.remove(`${css.bouncingIcon}`)
   })
 
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.compileContainer}">
-        <div class="${css.compileButton} "id="compile" title="Compile source code"><i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>Start to compile</div>
-        <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
-        <span class="${css.autocompileText}">Auto compile</span>
+        <div class="${css.buttons}">
+          <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
+          <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
+          <span class="${css.autocompileText}">Auto compile</span>
+        </div>
         ${warnCompilationSlow}
       </div>
       ${contractNames(container, appAPI, appEvents, opts)}
@@ -145,6 +150,8 @@ function compileTab (container, appAPI, appEvents, opts) {
         width: 70%;
         margin-right: 5%;
         height: 32px;
+        font-size: 12px;
+        font-weight: bold;
         background-color: ${styles.colors.blue};
       }
       .buttons {
