@@ -58,12 +58,13 @@ var cssInstance = csjs`
   .instance.hidesub > *:not(.title) {
       display: none;
   }
-  .copy extends ${styles.button}  {
+  .copy  {
     margin-right: 3%;
-    font-weight: bold;
+    cursor: pointer;
+    opacity: .7;
   }
   .copy:hover{
-    opacity: .7;
+    opacity: .5;
   }
 `
 
@@ -200,6 +201,8 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
 UniversalDApp.prototype.renderInstance = function (contract, address) {
+  console.log('----------')
+  var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
   function remove () { $instance.remove() }
   var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
   if (this.options.removable_instances) {
@@ -212,8 +215,8 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
   var shortAddress = helper.shortenAddress(address)
   var title = yo`
       <div class="${cssInstance.title}" onclick=${toggleClass}>
+        <div class="${cssInstance.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
         <i class="fa fa-clipboard ${cssInstance.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
-        <div class="${cssInstance.titleText}"> ${contract.name} at ${shortAddress} (${context}) </div>
       </div>
     `
   function toggleClass () {

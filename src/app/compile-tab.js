@@ -32,29 +32,13 @@ var css = csjs`
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
-  .button extends ${styles.button} {
-    width: 150px;
+  .compileButton extends ${styles.button} {
+    width: 125px;
     background-color: ${styles.colors.blue};
     display: flex;
     align-items: baseline;
     justify-content: center;
     margin-bottom:.3em;
-  }
-  .buttons {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    text-align: center;
-  }
-  .publish extends ${styles.button} {
-    margin: 1%;
-    background-color: ${styles.colors.pink};
-    text-align: center;
-  }
-  .contractNames extends ${styles.dropdown} {
-    width: 100%;
-    height: 32px;
-    background-color: ${styles.colors.blue};
   }
   .icon {
     margin-right: 3%;
@@ -78,7 +62,7 @@ var css = csjs`
   }
   70% {
     margin-bottom: 0;
-    color: ${styles.colors.red};
+    color: ${styles.colors.grey};
   }
   100% {
     margin-bottom: 0;
@@ -92,9 +76,6 @@ module.exports = compileTab
 function compileTab (container, appAPI, appEvents, opts) {
   if (typeof container === 'string') container = document.querySelector(container)
   if (!container) throw new Error('no container given')
-  appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
-    getContractNames(success, DATA)
-  })
   var warnCompilationSlow = yo`<div id="warnCompilationSlow"></div>`
 
   // REGISTER EVENTS
@@ -136,15 +117,12 @@ function compileTab (container, appAPI, appEvents, opts) {
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.compileContainer}">
-        <div class="${css.button} "id="compile" title="Compile source code"><i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>Start to compile</div>
+        <div class="${css.compileButton} "id="compile" title="Compile source code"><i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>Start to compile</div>
         <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
         <span class="${css.autocompileText}">Auto compile</span>
         ${warnCompilationSlow}
       </div>
-      <select class="${css.contractNames}"></select>
-      <div class="${css.buttons}">
-        <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
-      </div>
+      ${contractNames(container, appAPI, appEvents, opts)}
     </div>
   `
   container.appendChild(el)
@@ -153,22 +131,60 @@ function compileTab (container, appAPI, appEvents, opts) {
     section CONTRACT DROPDOWN, DETAILS AND PUBLISH
   ------------------------------------------------ */
 
-  function publish (appAPI) {
-    // var contractNames = document.querySelector(`.${css.contractNames}`)
-    // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
-    // appAPI.publishContract(contract, function () { console.log(contract) })
-  }
-
-  // GET NAMES OF ALL THE CONTRACTS
-  function getContractNames (success, data) {
-    var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
-    contractNames.innerHTML = ''
-    if (success) {
-      for (var name in data.contracts) {
-        contractNames.appendChild(yo`<option>${name}</option>`)
+  function contractNames (container, appAPI, appEvents, opts) {
+    appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
+      getContractNames(success, DATA)
+    })
+    var css = csjs`
+      .container extends ${styles.displayBox} {
+        margin: 0;
+        display: flex;
+        align-items: center;
       }
-    } else {
-      contractNames.appendChild(yo`<option></option>`)
+      .contractNames extends ${styles.dropdown} {
+        width: 70%;
+        margin-right: 5%;
+        height: 32px;
+        background-color: ${styles.colors.blue};
+      }
+      .buttons {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        text-align: center;
+      }
+      .publish extends ${styles.button} {
+        background-color: ${styles.colors.pink};
+      }
+    `
+    var el = yo`
+      <div class="${css.container}">
+        <select class="${css.contractNames}"></select>
+        <div class="${css.buttons}">
+          <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
+        </div>
+      </div>
+    `
+
+    // HELPERS
+    function publish (appAPI) {
+      // var contractNames = document.querySelector(`.${css.contractNames}`)
+      // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
+      // appAPI.publishContract(contract, function () { console.log(contract) })
     }
+
+    // GET NAMES OF ALL THE CONTRACTS
+    function getContractNames (success, data) {
+      var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+      contractNames.innerHTML = ''
+      if (success) {
+        for (var name in data.contracts) {
+          contractNames.appendChild(yo`<option>${name}</option>`)
+        }
+      } else {
+        contractNames.appendChild(yo`<option></option>`)
+      }
+    }
+    return el
   }
 }

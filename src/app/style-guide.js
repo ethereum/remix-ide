@@ -148,7 +148,7 @@ function styleGuide () {
   return {
     textBoxL: textBoxes['display-box-L'],
     infoTextBox: textBoxes['info-text-box'],
-    input: textBoxes['input'],
+    inputField: textBoxes['input'],
     displayBox: textBoxes['display-box'],
     warningTextBox: textBoxes['warning-text-box'],
     titleL: texts['title-L'],

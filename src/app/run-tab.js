@@ -17,7 +17,8 @@ var css = csjs`
     flex-direction: column;
   }
   .settings extends ${styles.displayBox} {
-    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10px 15px 15px 15px;
   }
   .crow {
     margin-top: .5em;
@@ -29,23 +30,24 @@ var css = csjs`
     align-self: center;
   }
   .col1_1 extends ${styles.titleM} {
-    width: 30%;
+    font-size: 12px;
+    width: 25%;
     min-width: 50px;
     float: left;
     align-self: center;
   }
-  .col2 extends ${styles.input}{
-    width: 70%;
+  .col2 extends ${styles.inputField}{
+    width: 75%;
     float: left;
   }
   .select extends ${styles.dropdown} {
-    width: 70%;
+    width: 75%;
     float: left;
     text-align: center;
   }
   .copyaddress {
     color: #C6CFF7;
-    margin-right: 0.5em;
+    margin-left: 0.5em;
     margin-top: 0.7em;
     cursor: pointer;
   }
@@ -53,51 +55,99 @@ var css = csjs`
     opacity: .7;
   }
   .selectAddress extends ${styles.dropdown} {
-    width: 80%;
+    width: 70%;
     float: left;
     text-align: center;
   }
+  .instanceContainer extends ${styles.displayBox}  {
+    display: flex;
+    flex-direction: column;
+    background-color: ${styles.colors.lightBlue};
+    margin-top: 3%;
+  }
+  .container extends ${styles.displayBox} {
+    margin: 0;
+  }
   .contractNames extends ${styles.dropdown} {
-    width: 100%;
     height: 32px;
+    font-size: 12px;
+    width: 100%;
+    font-weight: bold;
     background-color: ${styles.colors.blue};
   }
   .buttons {
     display: flex;
     cursor: pointer;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+  }
+  .button {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2%;
   }
   .atAddress extends ${styles.button} {
-    margin: 1%;
     background-color: ${styles.colors.green};
-    text-align: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .create extends ${styles.button} {
-    margin: 1%;
     background-color: ${styles.colors.lightRed};
-    text-align: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  .instance {
-    width: 100%;
+  .input extends ${styles.inputField} {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 75%;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  .noInstancesText extends ${styles.displayBox} {
+    text-align: center;
+    color: ${styles.colors.lightGrey};
+    font-style: italic;
+  }
+  .legend extends ${styles.displayBox} {
     margin-top: 5%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 15px 8px;
+    word-break: normal;
+    flex-wrap: wrap;
+  }
+  .item {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .transact {
+    color: ${styles.colors.lightRed};
+    margin-right: .3em;
+  }
+  .payable {
+    color: ${styles.colors.red};
+    margin-right: .3em;
+  }
+  .call {
+    color: #9DC1F5;
+    margin-right: .3em;
   }
 `
 
 module.exports = runTab
 
+var instanceContainer = yo`<div class="${css.instanceContainer}"></div>`
+
 function runTab (container, appAPI, appEvents, opts) {
-  appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
-    getContractNames(success, DATA)
-  })
   var el = yo`
   <div class="${css.runTabView}" id="runTabView">
-    <select class="${css.contractNames}"></select>
-    <div class="${css.buttons}">
-    <div class="${css.atAddress}" onclick=${function () { loadFromAddress(appAPI) }}>At Address</div>
-    <div class="${css.create}" onclick=${function () { createInstance(appAPI) }} >Create</div>
-    </div>
     ${settings(appAPI, appEvents)}
-    <div class="${css.instance}"></div>
+    ${contractDropdown(appAPI, appEvents, instanceContainer)}
+    ${instanceContainer}
     ${legend()}
   </div>
   `
@@ -108,45 +158,100 @@ function runTab (container, appAPI, appEvents, opts) {
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
-// ADD BUTTONS AT ADDRESS AND CREATE
-function createInstance (appAPI) {
-  var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
-  var contracts = appAPI.getContracts()
-  var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
-  var constructor = txHelper.getConstructorInterface(contracts)
-  var args = '' // TODO retrieve input parameter
-  txFormat.buildData(contract, contracts, true, constructor, args, appAPI.udapp(), appAPI.executionContext(), (error, data) => {
-    if (!error) {
-      txExecution.createContract(data, appAPI.udapp(), (error, txResult) => {
-        console.log('contract creation', error, txResult)
-        var instance = document.querySelector(`.${css.instance}`)
-        var address = appAPI.executionContext().isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
-        instance.appendChild(appAPI.udapp().renderInstance(contract, address))
-      })
-    } else {
-      alert(error)
-    }
-  })
-}
-function loadFromAddress (appAPI) {
-  // var contractNames = document.querySelector(`.${css.contractNames}`)
-  // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
-  // appAPI.loadContract(contract, function () { console.log(contract) })
-}
+function contractDropdown (appAPI, appEvents, instanceContainer) {
+  var noInstancesText = yo`<div class="${css.noInstancesText}">No Contract Instances.</div>`
+  instanceContainer.appendChild(noInstancesText)
 
-// GET NAMES OF ALL THE CONTRACTS
-function getContractNames (success, data) {
-  var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
-  contractNames.innerHTML = ''
-  if (success) {
-    for (var name in data.contracts) {
-      contractNames.appendChild(yo`<option>${name}</option>`)
-      console.log('contractNames after success', contractNames)
+  appEvents.compiler.register('compilationFinished', function (success, data, source) {
+    getContractNames(success, data)
+  })
+
+  var atAddressButtonInput = yo`<input class="${css.input} ataddressinput" placeholder="Enter contract's address - i.e. 0x60606..." title="atAddress" />`
+  var createButtonInput = yo`<input class="${css.input}" placeholder="" title="create" />`
+  var selectContractNames = yo`<select class="${css.contractNames}"></select>`
+  var el = yo`
+    <div class="${css.container}">
+      ${selectContractNames}
+      <div class="${css.buttons}">
+        <div class="${css.button}">
+          <div class="${css.atAddress}" onclick=${function () { loadFromAddress(appAPI) }}>At Address</div>
+          ${atAddressButtonInput}
+        </div>
+        <div class="${css.button}">
+          <div class="${css.create}" onclick=${function () { createInstance() }} >Create</div>
+          ${createButtonInput}
+        </div>
+      </div>
+    </div>
+  `
+
+  function setInputParamsPlaceHolder () {
+    createButtonInput.value = ''
+    if (appAPI.getContracts()) {
+      var contract = appAPI.getContracts()[selectContractNames.children[selectContractNames.selectedIndex].innerText]
+      var ctrabi = txHelper.getConstructorInterface(contract.interface)
+      if (ctrabi.inputs.length) {
+        createButtonInput.setAttribute('placeholder', txHelper.inputParametersDeclarationToString(ctrabi.inputs))
+        createButtonInput.removeAttribute('disabled')
+        return
+      }
     }
-  } else {
-    contractNames.appendChild(yo`<option></option>`)
-    console.log('contractNames else of success', contractNames)
+    createButtonInput.setAttribute('placeholder', '')
+    createButtonInput.setAttribute('disabled', true)
   }
+
+  selectContractNames.addEventListener('change', setInputParamsPlaceHolder)
+
+  var init = false
+  // ADD BUTTONS AT ADDRESS AND CREATE
+  function createInstance () {
+    var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+    var contracts = appAPI.getContracts()
+    var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
+    var constructor = txHelper.getConstructorInterface(contract.interface)
+    var selectedContractName = selectContractNames.value
+    console.log(selectedContractName)
+    var args = createButtonInput.value
+    txFormat.buildData(contract, contracts, true, constructor, args, appAPI.udapp(), appAPI.executionContext(), (error, data) => {
+      if (!error) {
+        txExecution.createContract(data, appAPI.udapp(), (error, txResult) => {
+          // TODO here should send the result to the dom-console
+          console.log('Contract creation', error, txResult)
+          var address = appAPI.executionContext().isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+          if (!init) {
+            instanceContainer.innerHTML = ''
+            init = true
+          }
+          instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectedContractName))
+        })
+      } else {
+        alert(error)
+      }
+    })
+  }
+
+  function loadFromAddress (appAPI) {
+    var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+    var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
+    var address = atAddressButtonInput.value
+    instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address))
+  }
+
+  // GET NAMES OF ALL THE CONTRACTS
+  function getContractNames (success, data) {
+    var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+    contractNames.innerHTML = ''
+    if (success) {
+      for (var name in data.contracts) {
+        contractNames.appendChild(yo`<option>${name}</option>`)
+      }
+    } else {
+      contractNames.appendChild(yo`<option></option>`)
+    }
+    setInputParamsPlaceHolder()
+  }
+
+  return el
 }
 
 /* ------------------------------------------------
@@ -189,8 +294,8 @@ function settings (appAPI, appEvents) {
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Account</div>
-        <i title="Copy Address" class="copytxorigin fa fa-clipboard ${css.copyaddress}" onclick=${copyAddress} aria-hidden="true"></i>
         <select name="txorigin" class="${css.selectAddress}" id="txorigin"></select>
+        <i title="Copy Address" class="copytxorigin fa fa-clipboard ${css.copyaddress}" onclick=${copyAddress} aria-hidden="true"></i>
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Gas limit</div>
@@ -228,32 +333,6 @@ function settings (appAPI, appEvents) {
               section  LEGEND
 ------------------------------------------------ */
 function legend () {
-  var css = csjs`
-    .legend extends ${styles.displayBox} {
-      margin-top: 5%;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .item {
-      margin-right: 1em;
-      display: flex;
-      align-items: center;
-    }
-    .transact {
-      color: #FFB9B9;
-      margin-right: .3em;
-    }
-    .payable {
-      color: #FF8B8B;
-      margin-right: .3em;
-    }
-    .call {
-      color: #9DC1F5;
-      margin-right: .3em;
-    }
-  `
   var el =
   yo`
     <div class="${css.legend}">
