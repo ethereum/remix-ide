@@ -20,6 +20,7 @@ var css = csjs`
       background-color: transparent;
       margin-right: 0.5em;
       font-size: 1em;
+      text-align: center;
   }
   .dragbar             {
     position           : absolute;

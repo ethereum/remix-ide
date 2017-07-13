@@ -23,20 +23,25 @@ var csjs = require('csjs-inject')
 var styleGuide = require('./app/style-guide')
 var styles = styleGuide()
 
-var cssInstance = csjs`
+var css = csjs`
   .title extends ${styles.dropdown} {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 32px;
-    font-size: 12px;
+    font-size: 11px;
     width: 100%;
-    min-width: 400px;
+    min-width: 265px;
     font-weight: bold;
     background-color: ${styles.colors.blue};
   }
   .titleText {
     margin-right: 1em;
     word-break: break-all;
+  }
+  .instance extends ${styles.displayBox} {
+    margin-top: 3%;
+    padding: 10px 15px 6px 15px
   }
   .instance .title:before {
     content: "\\25BE";
@@ -48,13 +53,13 @@ var cssInstance = csjs`
     margin-left: .5em;
   }
   .instance.hidesub {
-      padding-bottom: 0;
       margin: 0;
   }
   .instance.hidesub > *:not(.title) {
       display: none;
   }
   .copy  {
+    font-size: 14px;
     margin-right: 3%;
     cursor: pointer;
     opacity: .7;
@@ -62,6 +67,11 @@ var cssInstance = csjs`
   .copy:hover{
     opacity: .5;
   }
+  .buttonsContainer {
+    margin-top: 2%;
+    display: flex;
+  }
+  .instanceButton {}
 `
 
 /*
@@ -197,10 +207,10 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
 UniversalDApp.prototype.renderInstance = function (contract, address) {
-  console.log('----------')
-  var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
+  // var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
+  var contractName = 'contractName'
   function remove () { $instance.remove() }
-  var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
+  var $instance = $(`<div class="instance ${css.instance}"/>`)
   if (this.options.removable_instances) {
     var close = yo`<div class="udapp-close" onclick=${remove}></div>`
     $instance.get(0).appendChild(close)
@@ -210,13 +220,13 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
   var shortAddress = helper.shortenAddress(address)
   var title = yo`
-      <div class="${cssInstance.title}" onclick=${toggleClass}>
-        <div class="${cssInstance.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
-        <i class="fa fa-clipboard ${cssInstance.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
+      <div class="${css.title}" onclick=${toggleClass}>
+        <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
+        <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
       </div>
     `
   function toggleClass () {
-    $instance.toggleClass(`${cssInstance.hidesub}`)
+    $instance.toggleClass(`${css.hidesub}`)
   }
 
   function copyToClipboard (event) {
@@ -336,7 +346,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
     title = '(fallback)'
   }
 
-  var button = $('<button />')
+  var button = $(`<button class="${css.instanceButton}"/>`)
     .addClass('call')
     .attr('title', title)
     .text(title)
@@ -363,7 +373,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
   // TODO the auto call to constant function has been removed. needs to readd it later.
 
-  var $contractProperty = $('<div class="contractProperty"/>')
+  var $contractProperty = $(`<div class="contractProperty ${css.buttonsContainer}"></div>`)
   $contractProperty
     .append(button)
     .append((lookupOnly && !inputs.length) ? $outputOverride : inputField)

@@ -4,7 +4,7 @@ module.exports = styleGuide
 
 function styleGuide () {
   /* --------------------------------------------------------------------------
-  COLORS
+  COLORS 
   -------------------------------------------------------------------------- */
   var colors = {
     transparent: 'transparent',
