@@ -24,28 +24,32 @@ var styleGuide = require('./app/style-guide')
 var styles = styleGuide()
 
 var css = csjs`
+  .instanceTitleContainer {
+    display: flex;
+    align-items: center;
+  }
   .title extends ${styles.dropdown} {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 32px;
     font-size: 11px;
     width: 100%;
-    min-width: 265px;
     font-weight: bold;
     background-color: ${styles.colors.blue};
   }
   .titleText {
     margin-right: 1em;
     word-break: break-all;
+    min-width: 195px;
+    font-style: italic;
   }
   .instance extends ${styles.displayBox} {
-    margin-top: 3%;
     padding: 10px 15px 6px 15px
   }
   .instance .title:before {
     content: "\\25BE";
-    margin-right: 10px;
+    margin-right: 10%;
   }
   .instance.hidesub .title:before {
     content: "\\25B8";
@@ -59,10 +63,10 @@ var css = csjs`
       display: none;
   }
   .copy  {
-    font-size: 14px;
-    margin-right: 3%;
+    font-size: 13px;
     cursor: pointer;
-    opacity: .7;
+    opacity: 0.8;
+    margin-right: 10%;
   }
   .copy:hover{
     opacity: .5;
@@ -207,8 +211,7 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
 UniversalDApp.prototype.renderInstance = function (contract, address) {
-  // var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
-  var contractName = 'contractName'
+  var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
   function remove () { $instance.remove() }
   var $instance = $(`<div class="instance ${css.instance}"/>`)
   if (this.options.removable_instances) {
@@ -219,12 +222,11 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
 
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
   var shortAddress = helper.shortenAddress(address)
-  var title = yo`
-      <div class="${css.title}" onclick=${toggleClass}>
-        <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
-        <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
-      </div>
-    `
+  var title = yo`<div class="${css.title}" onclick=${toggleClass}>
+    <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
+    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
+  </div>`
+
   function toggleClass () {
     $instance.toggleClass(`${css.hidesub}`)
   }
@@ -291,6 +293,7 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
     var eventFilter = this.web3.eth.contract(abi).at(address).allEvents()
     eventFilter.watch(parseLogs)
   }
+
   $instance.get(0).appendChild(title)
 
   // Add the fallback function

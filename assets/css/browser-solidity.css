@@ -49,7 +49,6 @@
     max-width: 80vw;
     right: 0;
     bottom: 0;
-    overflow: auto;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -73,6 +72,8 @@
     font-size: 1em;
     padding-top: 0.5em;
     box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
 }
 
 #righthand-panel #options {
@@ -94,7 +95,7 @@
 #righthand-panel #optionViews {
     background-color: #F4F6FF;
     overflow: scroll;
-    min-height: 100%;
+    height: 100%;
 }
 
 #righthand-panel #optionViews > div {

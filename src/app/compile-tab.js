@@ -23,11 +23,11 @@ var css = csjs`
   .autocompile {
     float: left;
     align-self: center;
-    margin: 1% 1%;
   }
   .autocompileText {
     align-self: center;
     margin: 1% 0;
+    font-size: 11px;
   }
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
@@ -38,6 +38,7 @@ var css = csjs`
   }
   .compileButton extends ${styles.button} {
     width: 130px;
+    min-width: 130px;
     background-color: ${styles.colors.blue};
     display: flex;
     align-items: baseline;

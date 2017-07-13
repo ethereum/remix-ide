@@ -232,6 +232,7 @@
 	background-color: #9DC1F5;
 	border-color: #9DC1F5;
 	width: 25%;
+	font-style: italic;
 }
 
 #runTabView .contractProperty.payable .call {

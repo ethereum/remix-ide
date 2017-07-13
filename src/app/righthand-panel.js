@@ -8,17 +8,19 @@ var analysisTab = require('./analysis-tab')
 var debuggerTab = require('./debugger-tab')
 var filesTab = require('./files-tab')
 
+// -------------- styling ----------------------
 var csjs = require('csjs-inject')
+var styleGuide = require('./style-guide')
+var styles = styleGuide()
 
 var css = csjs`
   .options {
       float: left;
-      padding: 0.7em 0.3em;
-      min-width: 65px;
+      padding-top: 0.7em;
+      min-width: 60px;
       font-size: 0.9em;
       cursor: pointer;
-      background-color: transparent;
-      margin-right: 0.5em;
+      background-color: ${styles.colors.transparent};
       font-size: 1em;
       text-align: center;
   }

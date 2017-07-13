@@ -4,7 +4,7 @@ module.exports = styleGuide
 
 function styleGuide () {
   /* --------------------------------------------------------------------------
-  COLORS 
+  COLORS
   -------------------------------------------------------------------------- */
   var colors = {
     transparent: 'transparent',
@@ -12,7 +12,7 @@ function styleGuide () {
     black: '#000',
     blue: '#C6CFF7',
     lightBlue: '#F4F6FF',
-    greyBlue: '#102026',
+    greyBlue: '#999999',
     grey: '#666',
     lightGrey: '#dddddd',
     red: '#FF8080',
