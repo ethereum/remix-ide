@@ -32,9 +32,15 @@ var css = csjs`
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
-  .buttons {
+  .compileButtons {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .name {
+    display: flex;
+  }
+  .size {
+    display: flex;
   }
   .compileButton extends ${styles.button} {
     width: 130px;
@@ -45,6 +51,28 @@ var css = csjs`
     justify-content: center;
     margin-right: 1%;
     font-size: 13px;
+  }
+  .container extends ${styles.displayBox} {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  .contractNames extends ${styles.dropdown} {
+    width: 250px;
+    margin-right: 5%;
+    height: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: ${styles.colors.blue};
+  }
+  .contractButtons {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+  }
+  .publish extends ${styles.button} {
+    background-color: ${styles.colors.pink};
   }
   .icon {
     margin-right: 3%;
@@ -121,7 +149,7 @@ function compileTab (container, appAPI, appEvents, opts) {
   var el = yo`
     <div class="${css.compileTabView}" id="compileTabView">
       <div class="${css.compileContainer}">
-        <div class="${css.buttons}">
+        <div class="${css.compileButtons}">
           <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
           <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
           <span class="${css.autocompileText}">Auto compile</span>
@@ -141,34 +169,11 @@ function compileTab (container, appAPI, appEvents, opts) {
     appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
       getContractNames(success, DATA)
     })
-    var css = csjs`
-      .container extends ${styles.displayBox} {
-        margin: 0;
-        display: flex;
-        align-items: center;
-      }
-      .contractNames extends ${styles.dropdown} {
-        width: 70%;
-        margin-right: 5%;
-        height: 32px;
-        font-size: 12px;
-        font-weight: bold;
-        background-color: ${styles.colors.blue};
-      }
-      .buttons {
-        display: flex;
-        cursor: pointer;
-        justify-content: center;
-        text-align: center;
-      }
-      .publish extends ${styles.button} {
-        background-color: ${styles.colors.pink};
-      }
-    `
+
     var el = yo`
       <div class="${css.container}">
         <select class="${css.contractNames}"></select>
-        <div class="${css.buttons}">
+        <div class="${css.contractButtons}">
           <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
         </div>
       </div>
@@ -187,7 +192,13 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         for (var name in data.contracts) {
-          contractNames.appendChild(yo`<option>${name}</option>`)
+          var size = (data.contracts[name].bytecode.length / 2) + ' bytes'
+          var contractName = yo`
+            <option>
+              <div class="${css.name}">${name}</div>
+              <div class="${css.size}">  (${size})</div>
+            </option>`
+          contractNames.appendChild(contractName)
         }
       } else {
         contractNames.appendChild(yo`<option></option>`)

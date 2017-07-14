@@ -93,19 +93,6 @@
 	display: none;
 }
 
-.udapp-close:before {
-	position: absolute;
-	font-family: monospace;
-	top: .4em;
-	right: .4em;
-	width: 1.5em;
-	height: 1.5em;
-	text-align: center;
-	content: "x";
-	cursor: pointer;
-	z-index: 9999;
-}
-
 .udapp .instance {
 	padding: 0.4em;
 	background-color: rgb(244, 246, 255);
@@ -233,6 +220,7 @@
 	border-color: #9DC1F5;
 	width: 25%;
 	font-style: italic;
+	outline: none;
 }
 
 #runTabView .contractProperty.payable .call {

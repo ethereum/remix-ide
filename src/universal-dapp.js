@@ -35,13 +35,14 @@ var css = csjs`
     height: 32px;
     font-size: 11px;
     width: 100%;
+    min-width: 270px;
     font-weight: bold;
     background-color: ${styles.colors.blue};
   }
   .titleText {
     margin-right: 1em;
     word-break: break-all;
-    min-width: 195px;
+    min-width: 230px;
     font-style: italic;
   }
   .instance extends ${styles.displayBox} {
@@ -53,20 +54,22 @@ var css = csjs`
   }
   .instance.hidesub .title:before {
     content: "\\25B8";
-    margin-right: .5em;
-    margin-left: .5em;
+    margin-right: 10%;
   }
   .instance.hidesub {
       margin: 0;
   }
-  .instance.hidesub > *:not(.title) {
+  .instance.hidesub > * {
       display: none;
+  }
+  .instance.hidesub .title {
+      display: flex;
   }
   .copy  {
     font-size: 13px;
     cursor: pointer;
     opacity: 0.8;
-    margin-right: 10%;
+    margin-left: 5%;
   }
   .copy:hover{
     opacity: .5;
@@ -76,6 +79,12 @@ var css = csjs`
     display: flex;
   }
   .instanceButton {}
+  .closeIcon {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-bottom: 1%;
+  }
 `
 
 /*
@@ -210,12 +219,11 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 // this will render an instance: contract name, contract address, and all the public functions
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
-UniversalDApp.prototype.renderInstance = function (contract, address) {
-  var contractName = Object.keys(JSON.parse(contract.metadata).settings.compilationTarget)[0]
+UniversalDApp.prototype.renderInstance = function (contract, address, contractName) {
   function remove () { $instance.remove() }
   var $instance = $(`<div class="instance ${css.instance}"/>`)
   if (this.options.removable_instances) {
-    var close = yo`<div class="udapp-close" onclick=${remove}></div>`
+    var close = yo`<div class="udapp-close" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
     $instance.get(0).appendChild(close)
   }
   var context = this.executionContext.isVM() ? 'memory' : 'blockchain'
@@ -223,8 +231,8 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
   var shortAddress = helper.shortenAddress(address)
   var title = yo`<div class="${css.title}" onclick=${toggleClass}>
-    <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
     <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
+    <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
   </div>`
 
   function toggleClass () {
@@ -245,7 +253,7 @@ UniversalDApp.prototype.renderInstance = function (contract, address) {
 
     var $event = $('<div class="event" />')
 
-    var close = yo`<div class="udapp-close" onclick=${remove}></div>`
+    var close = yo`<div class="udapp-close" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
     function remove () { $event.remove() }
 
     $event.append($('<span class="name"/>').text(response.event))
