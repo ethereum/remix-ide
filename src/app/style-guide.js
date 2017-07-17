@@ -148,7 +148,6 @@ function styleGuide () {
 
   `
 
-
   return {
     textBoxL: textBoxes['display-box-L'],
     infoTextBox: textBoxes['info-text-box'],
