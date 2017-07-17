@@ -31,7 +31,7 @@ var css = csjs`
   .title extends ${styles.dropdown} {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     height: 32px;
     font-size: 11px;
     width: 100%;
@@ -50,11 +50,11 @@ var css = csjs`
   }
   .instance .title:before {
     content: "\\25BE";
-    margin-right: 10%;
+    margin-right: 5%;
   }
   .instance.hidesub .title:before {
     content: "\\25B8";
-    margin-right: 10%;
+    margin-right: 5%;
   }
   .instance.hidesub {
       margin: 0;
@@ -69,7 +69,7 @@ var css = csjs`
     font-size: 13px;
     cursor: pointer;
     opacity: 0.8;
-    margin-left: 5%;
+    margin-left: 3%;
   }
   .copy:hover{
     opacity: .5;
@@ -80,10 +80,11 @@ var css = csjs`
   }
   .instanceButton {}
   .closeIcon {
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    margin-bottom: 1%;
+    font-size: 13px;
+  }
+  .udappClose {
+    margin-left: 3%;
+    align-self: flex-end;
   }
 `
 
@@ -222,10 +223,6 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 UniversalDApp.prototype.renderInstance = function (contract, address, contractName) {
   function remove () { $instance.remove() }
   var $instance = $(`<div class="instance ${css.instance}"/>`)
-  if (this.options.removable_instances) {
-    var close = yo`<div class="udapp-close" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
-    $instance.get(0).appendChild(close)
-  }
   var context = this.executionContext.isVM() ? 'memory' : 'blockchain'
 
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
@@ -234,6 +231,11 @@ UniversalDApp.prototype.renderInstance = function (contract, address, contractNa
     <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
     <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
   </div>`
+
+  if (this.options.removable_instances) {
+    var close = yo`<div class="${css.udappClose}" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
+    title.appendChild(close)
+  }
 
   function toggleClass () {
     $instance.toggleClass(`${css.hidesub}`)
