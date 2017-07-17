@@ -1,4 +1,12 @@
+var yo = require('yo-yo')
+
 module.exports = (title, content, ok, cancel) => {
+  var container = document.querySelector('.modal')
+  if (!container) {
+    document.querySelector('body').appendChild(html())
+    container = document.querySelector('.modal')
+  }
+
   var okDiv = document.getElementById('modal-footer-ok')
   var cancelDiv = document.getElementById('modal-footer-cancel')
   okDiv.innerHTML = (ok && ok.label !== undefined) ? ok.label : 'OK'
@@ -13,7 +21,6 @@ module.exports = (title, content, ok, cancel) => {
   modal.innerHTML = ''
   if (content) modal.appendChild(content)
 
-  var container = document.querySelector('.modal')
   container.style.display = container.style.display === 'block' ? hide() : show()
 
   function okListenner () {
@@ -43,4 +50,19 @@ module.exports = (title, content, ok, cancel) => {
 
   okDiv.addEventListener('click', okListenner)
   cancelDiv.addEventListener('click', cancelListenner)
+}
+
+function html () {
+  return yo`<div id="modaldialog" style="display:none" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+    <h2></h2>
+  </div>
+  <div class="modal-body">
+  </div>
+  <div class="modal-footer">
+    <span id="modal-footer-ok">OK</span><span id="modal-footer-cancel">Cancel</span>
+  </div>
+  </div>
+  </div>`
 }

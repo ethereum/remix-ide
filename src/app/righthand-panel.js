@@ -30,8 +30,7 @@ module.exports = RighthandPanel
 function RighthandPanel (container, appAPI, events, opts) {
   var optionViews = yo`<div id="optionViews" class="settingsView"></div>`
   var element = yo`
-    <div id="righthand-panel">
-      <div id="header">
+    <div id="header">
         <div id="menu">
           <img id="solIcon" title="Solidity realtime compiler and runtime" src="assets/img/remix_logo_512x512.svg" alt="Solidity realtime compiler and runtime">
           <ul id="options">
@@ -45,7 +44,6 @@ function RighthandPanel (container, appAPI, events, opts) {
         </div>
         ${optionViews}
       </div>
-    </div>
   `
   contractTab(optionViews, appAPI, events, opts)
   settingsTab(optionViews, appAPI, events, opts)
@@ -61,7 +59,6 @@ function RighthandPanel (container, appAPI, events, opts) {
   var hidingRHP = false
   $('.toggleRHP').click(function () {
     hidingRHP = !hidingRHP
-    setEditorSize(hidingRHP ? 0 : appAPI.config.get(EDITOR_WINDOW_SIZE))
     $('.toggleRHP i').toggleClass('fa-angle-double-right', !hidingRHP)
     $('.toggleRHP i').toggleClass('fa-angle-double-left', hidingRHP)
   })
@@ -74,56 +71,4 @@ function RighthandPanel (container, appAPI, events, opts) {
   var tabContainer // @TODO
   var tabEvents = {compiler: events.compiler, app: events.app}
   tabbedMenu(tabContainer, tabbedMenuAPI, tabEvents, {})
-
-  // ----------------- resizeable ui ---------------
-
-  var EDITOR_WINDOW_SIZE = 'editorWindowSize'
-
-  var dragging = false
-  $('#dragbar').mousedown(function (e) {
-    e.preventDefault()
-    dragging = true
-    var main = $('#righthand-panel')
-    var ghostbar = $('<div id="ghostbar">', {
-      css: {
-        top: main.offset().top,
-        left: main.offset().left
-      }
-    }).prependTo('body')
-
-    $(document).mousemove(function (e) {
-      ghostbar.css('left', e.pageX + 2)
-    })
-  })
-
-  var $body = $('body')
-
-  function setEditorSize (delta) {
-    $('#righthand-panel').css('width', delta)
-    $('#editor').css('right', delta)
-    appAPI.onResize()
-  }
-
-  function getEditorSize () {
-    return $('#righthand-panel').width()
-  }
-
-  $(document).mouseup(function (e) {
-    if (dragging) {
-      var delta = $body.width() - e.pageX + 2
-      $('#ghostbar').remove()
-      $(document).unbind('mousemove')
-      dragging = false
-      delta = (delta < 50) ? 50 : delta
-      setEditorSize(delta)
-      appAPI.config.set(EDITOR_WINDOW_SIZE, delta)
-      appAPI.reAdjust()
-    }
-  })
-
-  if (appAPI.config.exists(EDITOR_WINDOW_SIZE)) {
-    setEditorSize(appAPI.config.get(EDITOR_WINDOW_SIZE))
-  } else {
-    appAPI.config.set(EDITOR_WINDOW_SIZE, getEditorSize())
-  }
 }

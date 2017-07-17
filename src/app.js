@@ -6,6 +6,7 @@ var $ = require('jquery')
 var base64 = require('js-base64').Base64
 var swarmgw = require('swarmgw')
 var csjs = require('csjs-inject')
+var yo = require('yo-yo')
 
 var QueryParams = require('./app/query-params')
 var queryParams = new QueryParams()
@@ -35,23 +36,85 @@ var examples = require('./app/example-contracts')
 var filesToLoad = null
 var loadFilesCallback = function (files) { filesToLoad = files } // will be replaced later
 
+var css = csjs`
+  .remixcontainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  .leftpanel {
+    display: table-cell;
+    width: 15%;
+    height: 100%;
+  }
+  .centerpanel {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+  }
+  .rightpanel {
+    display: table-cell;
+    width: 35%;
+    height: 100%;
+  }
+`
+
 window.addEventListener('message', function (ev) {
   if (typeof ev.data === typeof [] && ev.data[0] === 'loadFiles') {
     loadFilesCallback(ev.data[1])
   }
 }, false)
-var run = function () {
+
+var app = {
+  render: render,
+  init: init
+}
+
+var fileStorage
+var config
+var remixd
+var filesProviders = {}
+var tabbedFiles = {} // list of files displayed in the tabs bar
+
+function render () {
   var self = this
-  this.event = new EventManager()
-  var fileStorage = new Storage('sol:')
-  var config = new Config(fileStorage)
-  var remixd = new Remixd()
-  var filesProviders = {}
+  self.event = new EventManager()
+
+  fileStorage = new Storage('sol:')
+  config = new Config(fileStorage)
+  remixd = new Remixd()
   filesProviders['browser'] = new Browserfiles(fileStorage)
   filesProviders['localhost'] = new SharedFolder(remixd)
+  tabbedFiles = {} // list of files displayed in the tabs bar
 
-  var tabbedFiles = {} // list of files displayed in the tabs bar
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/pygment_trac.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/universal-dapp.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/browser-solidity.css">`)
+  document.head.appendChild(yo`<link rel="stylesheet" href="assets/css/font-awesome.min.css">`)
+  document.head.appendChild(yo`<link rel="icon" type="x-icon" href="icon.png">`)
+  return yo`<div id="editor" class="${css.remixcontainer}">
+    <div id="lefthand-panel" class="${css.leftpanel}">
+      <div id="filepanel"></div>
+      <div id="dragbar"></div>
+    </div>
+    <div id="center-panel" class=${css.centerpanel}>
+      <div id="tabs-bar">
+        <div class="scroller scroller-left"><i class="fa fa-chevron-left "></i></div>
+        <div class="scroller scroller-right"><i class="fa fa-chevron-right "></i></div>
+        <ul id="files" class="nav nav-tabs"></ul>
+      </div>
+       <div id="input"></div>
+       <div id="dragbar"></div>
+    </div>
+    <div id="righthand-panel" class="${css.rightpanel}">
+      <div id="dragbar"></div>
+    </div>
+    </div>`
+}
 
+function init () {
+  var self = this
   // return all the files, except the temporary/readonly ones.. package only files from the browser storage.
   function packageFiles (cb) {
     var ret = {}
@@ -178,7 +241,6 @@ var run = function () {
   var css = csjs`
     .filepanel-container    {
       display     : flex;
-      width       : 200px;
     }
   `
   var filepanelContainer = document.querySelector('#filepanel')
@@ -186,7 +248,7 @@ var run = function () {
   var FilePanelAPI = {
     createName: createNonClashingName,
     switchToFile: switchToFile,
-    event: this.event,
+    event: self.event,
     editorFontSize: function (incr) {
       editor.editorFontSize(incr)
     },
@@ -435,7 +497,7 @@ var run = function () {
   }
 
   function widthOfVisible () {
-    return document.querySelector('#editor-container').offsetWidth
+    return document.querySelector('#center-panel').offsetWidth
   }
 
   function getLeftPosi () {
@@ -617,8 +679,6 @@ var run = function () {
   // ---------------- Righthand-panel --------------------
   var rhpAPI = {
     config: config,
-    onResize: onResize,
-    reAdjust: reAdjust,
     warnCompilerLoading: (msg) => {
       renderer.clear()
       if (msg) {
@@ -637,18 +697,7 @@ var run = function () {
     app: self.event,
     udapp: udapp.event
   }
-  var righthandPanel = new RighthandPanel(document.body, rhpAPI, rhpEvents, {}) // eslint-disable-line
-  // ----------------- editor resize ---------------
-
-  function onResize () {
-    editor.resize(document.querySelector('#editorWrap').checked)
-    reAdjust()
-  }
-  window.onresize = onResize
-  onResize()
-
-  document.querySelector('#editor').addEventListener('change', onResize)
-  document.querySelector('#editorWrap').addEventListener('change', onResize)
+  var righthandPanel = new RighthandPanel(document.getElementById('righthand-panel'), rhpAPI, rhpEvents, {}) // eslint-disable-line
 
   // ----------------- compiler ----------------------
 
@@ -1013,6 +1062,4 @@ var run = function () {
   })
 }
 
-module.exports = {
-  'run': run
-}
+module.exports = app

@@ -280,9 +280,7 @@ UniversalDApp.prototype.getContractByName = function (contractName) {
 }
 
 UniversalDApp.prototype.getCreateInterface = function ($container, contract) {
-  function remove () {
-    self.$el.remove()
-  }
+  function remove () { self.$el.remove() }
   var self = this
   var createInterface = yo`<div class="create"></div>`
   if (self.options.removable) {
@@ -347,8 +345,8 @@ UniversalDApp.prototype.getInstanceInterface = function (contract, address, $tar
   var createInterface = yo`<div class="createContract"></div>`
 
   var appendFunctions = function (address, $el) {
-    if ($el) $el = $el.get(0)
     function remove () { $instance.remove() }
+    if ($el) $el = $el.get(0)
     var $instance = $(`<div class="instance ${cssInstance.instance}"/>`)
     if (self.options.removable_instances) {
       var close = yo`<div class="udapp-close" onclick=${remove}></div>`

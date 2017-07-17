@@ -1,4 +1,4 @@
-html { box-sizing: border-box; }
+html { box-sizing: border-box; height: 100%; }
 *, *:before, *:after { box-sizing: inherit; }
 
 body {
@@ -6,15 +6,7 @@ body {
     font-size: 12px;
     color: #111111;
     font-weight: normal;
-}
-
-#editor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    bottom: 0;
-    right: 37em;
+    height: 100%;
 }
 
 .scroller {
@@ -40,14 +32,6 @@ body {
 
 .scroller-left {
     left: 0;
-}
-
-#tabs-bar {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 200px;
-    right: 3em;
 }
 
 #files {
