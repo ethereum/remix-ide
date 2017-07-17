@@ -1,4 +1,4 @@
-/* global prompt alert */
+/* global alert */
 'use strict'
 
 var $ = require('jquery')
@@ -314,7 +314,7 @@ UniversalDApp.prototype.renderInstance = function (contract, address, contractNa
     }))
   }
 
-  $.each(abi, function (i, funABI) {
+  $.each(abi, (i, funABI) => {
     if (funABI.type !== 'function') {
       return
     }
@@ -340,12 +340,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
   var inputs = ''
   if (args.funABI.inputs) {
-    $.each(args.funABI.inputs, function (i, inp) {
-      if (inputs !== '') {
-        inputs += ', '
-      }
-      inputs += inp.type + ' ' + inp.name
-    })
+    inputs = txHelper.inputParametersDeclarationToString(args.funABI.inputs)
   }
   var inputField = $('<input/>').attr('placeholder', inputs).attr('title', inputs)
   var $outputOverride = $('<div class="value" />')

@@ -1,5 +1,6 @@
 'use strict'
 var ethJSABI = require('ethereumjs-abi')
+var $ = require('jquery')
 
 module.exports = {
   encodeParams: function (funABI, args) {
@@ -40,13 +41,24 @@ module.exports = {
   },
 
   getConstructorInterface: function (abi) {
-    for (var i = 0; i < abi.length; i++) {
-      if (abi[i].type === 'constructor') {
-        return abi[i]
+    var funABI = { 'name': '', 'inputs': [], 'type': 'constructor', 'outputs': [] }
+    if (typeof abi === 'string') {
+      try {
+        abi = JSON.parse(abi)
+      } catch (e) {
+        console.log('exception retrieving ctor abi ' + abi)
+        return funABI
       }
     }
 
-    return { 'type': 'constructor', 'payable': false, 'inputs': [] }
+    for (var i = 0; i < abi.length; i++) {
+      if (abi[i].type === 'constructor') {
+        funABI.inputs = abi[i].inputs || []
+        break
+      }
+    }
+
+    return funABI
   },
 
   getFunction: function (abi, fnName) {
@@ -73,5 +85,18 @@ module.exports = {
       }
     }
     return null
+  },
+
+  inputParametersDeclarationToString: function (abiinputs) {
+    var inputs = ''
+    if (abiinputs) {
+      $.each(abiinputs, function (i, inp) {
+        if (inputs !== '') {
+          inputs += ', '
+        }
+        inputs += inp.type + ' ' + inp.name
+      })
+    }
+    return inputs
   }
 }
