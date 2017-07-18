@@ -399,13 +399,6 @@ UniversalDApp.prototype.getCallButton = function (args) {
   return $contractProperty
 }
 
-// TODO this is used when  the user used the atAddress feature.
-UniversalDApp.prototype.clickContractAt = function (self, $output, contract) {
-  var address = prompt('What Address is this contract at in the Blockchain? ie: 0xdeadbeaf...')
-  var instance = self.renderInstance(contract, address)
-  // TODO this is a new 'atAddress' instance (a DOM element), should then be appended somewhere.
-}
-
 UniversalDApp.prototype.runTx = function (args, cb) {
   var self = this
   var tx = {
