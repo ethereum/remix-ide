@@ -64,7 +64,7 @@ function styleGuide () {
       border-radius         : 3px;
       border                : 1px solid ${colors.lightGrey};
       overflow              : hidden;
-      word-break            : normal;
+      word-break            : break-word;
       width                 : 100%;
     }
 
@@ -76,7 +76,7 @@ function styleGuide () {
       border-radius         : 5px;
       margin-bottom         : 1em;
       overflow              : hidden;
-      word-break            : normal;
+      word-break            : break-word;
     }
 
     .warning-text-box {
@@ -87,7 +87,7 @@ function styleGuide () {
       border                : .2em dotted #ffbd01; // orange-yellow
       margin-bottom         : 1em;
       overflow              : hidden;
-      word-break            : normal;
+      word-break            : break-word;
     }
 
     .error-text-box {
@@ -98,7 +98,7 @@ function styleGuide () {
       box-shadow            : rgba(0,0,0,.2) 0 1px 4px;
       margin-bottom         : 1em;
       overflow              : hidden;
-      word-break            : normal;
+      word-break            : break-word;
     }
 
     .title-box {
@@ -139,6 +139,8 @@ function styleGuide () {
       padding                 : 3px;
       min-width               : 100px;
       font-size               : 12px;
+      overflow              : hidden;
+      word-break            : normal;
     }
 
     .button:hover {
@@ -155,6 +157,8 @@ function styleGuide () {
       border-radius           : 3px;
       height                  : 25px;
       text-align              : center;
+      overflow              : hidden;
+      word-break            : normal;
     }
 
   `

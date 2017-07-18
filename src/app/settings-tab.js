@@ -12,6 +12,7 @@ var css = csjs`
   }
   .info extends ${styles.infoTextBox} {
     margin-bottom: 2em;
+    word-break: break-word;
   }
   .crow {
     margin-top: 1em;
