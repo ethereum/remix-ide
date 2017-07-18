@@ -388,7 +388,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
     $contractProperty.addClass('constant')
   }
 
-  if (args.funABI.inputs && args.abi.inputs.length > 0) {
+  if (args.funABI.inputs && args.funABI.inputs.length > 0) {
     $contractProperty.addClass('hasArgs')
   }
 
