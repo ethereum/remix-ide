@@ -315,7 +315,7 @@ UniversalDApp.prototype.renderInstance = function (contract, address, contractNa
   var fallback = txHelper.getFallbackInterface(abi)
   if (fallback) {
     $instance.append(this.getCallButton({
-      abi: fallback,
+      funABI: fallback,
       address: address,
       contractAbi: abi
     }))
@@ -364,14 +364,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
     .attr('title', title)
     .text(title)
     .click(() => {
-      var funArgs
-      try {
-        funArgs = $.parseJSON('[' + inputField.val() + ']')
-      } catch (e) {
-        alert('Error encoding arguments: ' + e)
-        return
-      }
-      txFormat.buildData(args.contractAbi, self.contracts, false, args.funABI, funArgs, self, self.executionContext, (error, data) => {
+      txFormat.buildData(args.contractAbi, self.contracts, false, args.funABI, inputField.val(), self, self.executionContext, (error, data) => {
         if (!error) {
           txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {
             // TODO here should send the result to the dom-console
@@ -395,11 +388,11 @@ UniversalDApp.prototype.getCallButton = function (args) {
     $contractProperty.addClass('constant')
   }
 
-  if (args.abi.inputs && args.abi.inputs.length > 0) {
+  if (args.funABI.inputs && args.abi.inputs.length > 0) {
     $contractProperty.addClass('hasArgs')
   }
 
-  if (args.abi.payable === true) {
+  if (args.funABI.payable === true) {
     $contractProperty.addClass('payable')
   }
 

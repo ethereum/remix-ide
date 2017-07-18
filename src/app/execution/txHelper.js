@@ -5,8 +5,10 @@ var $ = require('jquery')
 module.exports = {
   encodeParams: function (funABI, args) {
     var types = []
-    for (var i = 0; i < funABI.inputs.length; i++) {
-      types.push(funABI.inputs[i].type)
+    if (funABI.inputs && funABI.inputs.length) {
+      for (var i = 0; i < funABI.inputs.length; i++) {
+        types.push(funABI.inputs[i].type)
+      }
     }
 
     // NOTE: the caller will concatenate the bytecode and this
@@ -16,8 +18,10 @@ module.exports = {
 
   encodeFunctionId: function (funABI) {
     var types = []
-    for (var i = 0; i < funABI.inputs.length; i++) {
-      types.push(funABI.inputs[i].type)
+    if (funABI.inputs && funABI.inputs.length) {
+      for (var i = 0; i < funABI.inputs.length; i++) {
+        types.push(funABI.inputs[i].type)
+      }
     }
 
     return ethJSABI.methodID(funABI.name, types)
