@@ -63,7 +63,8 @@ function styleGuide () {
       background            : ${colors.white};
       border-radius         : 3px;
       border                : 1px solid ${colors.lightGrey};
-      overflow-x            : auto;
+      overflow              : hidden;
+      word-break            : normal;
       width                 : 100%;
     }
 
@@ -74,6 +75,8 @@ function styleGuide () {
       padding               : 8px 15px;
       border-radius         : 5px;
       margin-bottom         : 1em;
+      overflow              : hidden;
+      word-break            : normal;
     }
 
     .warning-text-box {
@@ -83,6 +86,8 @@ function styleGuide () {
       border-radius         : 5px;
       border                : .2em dotted #ffbd01; // orange-yellow
       margin-bottom         : 1em;
+      overflow              : hidden;
+      word-break            : normal;
     }
 
     .error-text-box {
@@ -92,6 +97,8 @@ function styleGuide () {
       border-radius         : 3px;
       box-shadow            : rgba(0,0,0,.2) 0 1px 4px;
       margin-bottom         : 1em;
+      overflow              : hidden;
+      word-break            : normal;
     }
 
     .title-box {
@@ -104,6 +111,8 @@ function styleGuide () {
       word-wrap             : break-word;
       position              : relative;
       border-radius         : 3px;
+      overflow              : hidden;
+      word-break            : normal;
     }
     .input {
       border                : 1px solid ${colors.lightGrey};  // light-grey
@@ -112,6 +121,8 @@ function styleGuide () {
       font-size             : 10px;
       border-radius         : 3px;
       padding               : 8px;
+      overflow              : hidden;
+      word-break            : normal;
     }
   `
   /* --------------------------------------------------------------------------

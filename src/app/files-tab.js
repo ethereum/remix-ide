@@ -17,6 +17,7 @@ var css = csjs`
   .crow extends ${styles.displayBox} {
     margin-bottom: 1%;
     display: flex;
+    flex-wrap: wrap;
   }
   .infoBox extends ${styles.infoTextBox} {
     margin-top: 2em;

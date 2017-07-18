@@ -35,7 +35,9 @@ var css = csjs`
     height: 32px;
     font-size: 11px;
     width: 100%;
-    min-width: 270px;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: initial;
     font-weight: bold;
     background-color: ${styles.colors.blue};
   }
@@ -80,7 +82,10 @@ var css = csjs`
   }
   .instanceButton {}
   .closeIcon {
-    font-size: 13px;
+    font-size: 10px;
+    position: relative;
+    top: -5px;
+    right: -2px;
   }
   .udappClose {
     margin-left: 3%;

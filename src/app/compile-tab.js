@@ -16,6 +16,9 @@ var css = csjs`
   .compileContainer extends ${styles.displayBox} {
     margin-bottom: 5%;
   }
+  .autocompileContainer {
+    width: 90px;
+  }
   .autocompileTitle {
     font-weight: bold;
     margin: 1% 0;
@@ -28,13 +31,18 @@ var css = csjs`
     align-self: center;
     margin: 1% 0;
     font-size: 11px;
+    overflow: hidden;
+    word-break: normal;
+    line-height: initial;
+    margin-left: 3%;
   }
   .compilationWarning extends ${styles.warningTextBox} {
     margin: 5% 0 0 0;
   }
   .compileButtons {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
   }
   .name {
     display: flex;
@@ -73,6 +81,7 @@ var css = csjs`
   }
   .publish extends ${styles.button} {
     background-color: ${styles.colors.pink};
+    min-width: 70px;
   }
   .icon {
     margin-right: 3%;
@@ -122,8 +131,10 @@ function compileTab (container, appAPI, appEvents, opts) {
       <div class="${css.compileContainer}">
         <div class="${css.compileButtons}">
           <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
-          <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
-          <span class="${css.autocompileText}">Auto compile</span>
+          <div class="${css.autocompileContainer}">
+            <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
+            <span class="${css.autocompileText}">Auto compile</span>
+          </div>
         </div>
         ${warnCompilationSlow}
       </div>
