@@ -172,6 +172,8 @@ function compileTab (container, appAPI, appEvents, opts) {
     compileIcon.style.color = styles.colors.black
     compileIcon.classList.remove(`${css.spinningIcon}`)
     compileIcon.classList.remove(`${css.bouncingIcon}`)
+  })
+  appEvents.compiler.register('compilerLoaded', function loaded () {
     compileContainer.removeChild(compilerLoading)
   })
 
