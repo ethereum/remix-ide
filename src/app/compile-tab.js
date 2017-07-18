@@ -1,4 +1,6 @@
 var yo = require('yo-yo')
+var async = require('async')
+var swarmgw = require('swarmgw')
 
 // -------------- styling ----------------------
 var csjs = require('csjs-inject')
@@ -198,17 +200,12 @@ function compileTab (container, appAPI, appEvents, opts) {
       <div class="${css.container}">
         <select class="${css.contractNames}"></select>
         <div class="${css.contractButtons}">
-          <div class="${css.publish}" onclick=${publish(appAPI)}>Publish</div>
+          <div class="${css.publish}" onclick=${() => {publish(appAPI)}}>Publish</div>
         </div>
       </div>
     `
 
     // HELPERS
-    function publish (appAPI) {
-      // var contractNames = document.querySelector(`.${css.contractNames}`)
-      // var contract = appAPI.getContracts()[contractNames.children[contractNames.selected].innerText]
-      // appAPI.publishContract(contract, function () { console.log(contract) })
-    }
 
     // GET NAMES OF ALL THE CONTRACTS
     function getContractNames (success, data) {
@@ -216,11 +213,9 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         for (var name in data.contracts) {
-          var size = (data.contracts[name].bytecode.length / 2) + ' bytes'
           var contractName = yo`
             <option>
               <div class="${css.name}">${name}</div>
-              <div class="${css.size}">  (${size})</div>
             </option>`
           contractNames.appendChild(contractName)
         }
@@ -228,6 +223,80 @@ function compileTab (container, appAPI, appEvents, opts) {
         contractNames.appendChild(yo`<option></option>`)
       }
     }
+
+    function publish (appAPI) {
+      var selectContractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+      var contract = appAPI.getContracts()[selectContractNames.children[selectContractNames.selectedIndex].innerText]
+
+      publishOnSwarm(contract, function (err) {
+        if (err) {
+          alert('Failed to publish metadata: ' + err)
+        } else {
+          alert('Metadata published successfully')
+        }
+      })
+    }
+
+    function publishOnSwarm (contract, cb) {
+      // gather list of files to publish
+      var sources = []
+
+      sources.push({
+        content: contract.metadata,
+        hash: contract.metadataHash
+      })
+
+      var metadata
+      try {
+        metadata = JSON.parse(contract.metadata)
+      } catch (e) {
+        return cb(e)
+      }
+
+      if (metadata === undefined) {
+        return cb('No metadata')
+      }
+
+      async.eachSeries(Object.keys(metadata.sources), function (fileName, cb) {
+        // find hash
+        var hash
+        try {
+          hash = metadata.sources[fileName].urls[0].match('bzzr://(.+)')[1]
+        } catch (e) {
+          return cb('Metadata inconsistency')
+        }
+
+        appAPI.fileProviderOf(fileName).get(fileName, (error, content) => {
+          if (error) {
+            console.log(error)
+          } else {
+            sources.push({
+              content: content,
+              hash: hash
+            })
+          }
+          cb()
+        })
+      }, function () {
+        // publish the list of sources in order, fail if any failed
+        async.eachSeries(sources, function (item, cb) {
+          swarmVerifiedPublish(item.content, item.hash, cb)
+        }, cb)
+      })
+      function swarmVerifiedPublish (content, expectedHash, cb) {
+        swarmgw.put(content, function (err, ret) {
+          if (err) {
+            cb(err)
+          } else if (ret !== expectedHash) {
+            cb('Hash mismatch')
+          } else {
+            cb()
+          }
+        })
+      }
+    }
+
+
     return el
   }
 }
