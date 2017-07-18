@@ -209,8 +209,6 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
     var contracts = appAPI.getContracts()
     var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
     var constructor = txHelper.getConstructorInterface(contract.interface)
-    var selectedContractName = selectContractNames.value
-    console.log(selectedContractName)
     var args = createButtonInput.value
     txFormat.buildData(contract, contracts, true, constructor, args, appAPI.udapp(), appAPI.executionContext(), (error, data) => {
       if (!error) {
@@ -222,7 +220,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
             instanceContainer.innerHTML = ''
             init = true
           }
-          instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectedContractName))
+          instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectContractNames.value))
         })
       } else {
         alert(error)
@@ -234,7 +232,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
     var address = atAddressButtonInput.value
-    instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address))
+    instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectContractNames.value))
   }
 
   // GET NAMES OF ALL THE CONTRACTS
