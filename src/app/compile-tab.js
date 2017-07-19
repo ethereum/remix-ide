@@ -5,6 +5,8 @@ var yo = require('yo-yo')
 var async = require('async')
 var swarmgw = require('swarmgw')
 
+var contractParser = require('./contract/contractParser')
+
 // -------------- styling ----------------------
 var csjs = require('csjs-inject')
 var styleGuide = require('./style-guide')
@@ -186,6 +188,7 @@ function compileTab (container, appAPI, appEvents, opts) {
     <div class="${css.compileTabView}" id="compileTabView">
       ${compileContainer}
       ${contractNames(container, appAPI, appEvents, opts)}
+      <pre class='details'></pre>
       <div class='error'></div>
     </div>
   `
@@ -196,10 +199,10 @@ function compileTab (container, appAPI, appEvents, opts) {
   ------------------------------------------------ */
 
   function contractNames (container, appAPI, appEvents, opts) {
-    var contractsMetadata = {}
+    var contractsDetails = {}
     appEvents.compiler.register('compilationFinished', function (success, data, source) {
       // reset the contractMetadata list (used by the publish action)
-      contractsMetadata = {}
+      contractsDetails = {}
       // refill the dropdown list
       getContractNames(success, data)
       // hightlight the tab if error
@@ -224,13 +227,6 @@ function compileTab (container, appAPI, appEvents, opts) {
       }
     })
 
-    var retrieveMetadataHash = function (bytecode) {
-      var match = /a165627a7a72305820([0-9a-f]{64})0029$/.exec(bytecode)
-      if (match) {
-        return match[1]
-      }
-    }
-
     var el = yo`
       <div class="${css.container}">
         <select class="${css.contractNames}"></select>
@@ -240,6 +236,11 @@ function compileTab (container, appAPI, appEvents, opts) {
       </div>
     `
 
+    var select = el.querySelector('select')
+    select.addEventListener('change', () => {
+      el.querySelector('.details').innerText = JSON.stringify(contractsDetails[select.children[select.selectedIndex].innerText])
+    })
+
     // HELPERS
 
     // GET NAMES OF ALL THE CONTRACTS
@@ -248,10 +249,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         for (var name in data.contracts) {
-          contractsMetadata[name] = {
-            metadata: data.contracts[name].metadata,
-            metadataHash: data.contracts[name].bytecode && retrieveMetadataHash(data.contracts[name].bytecode)
-          }
+          contractsDetails[name] = contractParser.parseContracts(name, data.contracts[name], appAPI.currentCompiledSourceCode())
           var contractName = yo`
             <option>
               <div class="${css.name}">${name}</div>
@@ -265,7 +263,7 @@ function compileTab (container, appAPI, appEvents, opts) {
 
     function publish (appAPI) {
       var selectContractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
-      var contract = contractsMetadata[selectContractNames.children[selectContractNames.selectedIndex].innerText]
+      var contract = contractsDetails[selectContractNames.children[selectContractNames.selectedIndex].innerText]
       publishOnSwarm(contract, function (err) {
         if (err) {
           alert('Failed to publish metadata: ' + err)
