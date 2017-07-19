@@ -194,9 +194,14 @@ function compileTab (container, appAPI, appEvents, opts) {
 
   function contractNames (container, appAPI, appEvents, opts) {
     var contractsMetadata = {}
-    appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
+    appEvents.compiler.register('compilationFinished', function (success, data, source) {
       contractsMetadata = {}
-      getContractNames(success, DATA)
+      getContractNames(success, data)
+      if (success) {
+        document.querySelector('#righthand-panel #menu .compileView').style.color = ''
+      } else {
+        document.querySelector('#righthand-panel #menu .compileView').style.color = '#FF8B8B'
+      }
     })
 
     var retrieveMetadataHash = function (bytecode) {

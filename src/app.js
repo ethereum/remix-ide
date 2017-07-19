@@ -479,23 +479,6 @@ function run () {
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(compiler.event)
 
   // ----------------- Renderer -----------------
-  var transactionContextAPI = {
-    getAddress: (cb) => {
-      cb(null, $('#txorigin').val())
-    },
-    getValue: (cb) => {
-      try {
-        var comp = $('#value').val().split(' ')
-        cb(null, executionContext.web3().toWei(comp[0], comp.slice(1).join(' ')))
-      } catch (e) {
-        cb(e)
-      }
-    },
-    getGasLimit: (cb) => {
-      cb(null, $('#gasLimit').val())
-    }
-  }
-
   var rendererAPI = {
     error: (file, error) => {
       if (file === config.get('currentFile')) {
@@ -507,23 +490,9 @@ function run () {
         switchToFile(errFile)
       }
       editor.gotoLine(errLine, errCol)
-    },
-    currentCompiledSourceCode: () => {
-      if (compiler.lastCompilationResult.source) {
-        return compiler.lastCompilationResult.source.sources[compiler.lastCompilationResult.source.target]
-      }
-      return ''
-    },
-    resetDapp: (udappContracts, renderOutputModifier) => {
-      udapp.reset(udappContracts, transactionContextAPI, renderOutputModifier)
-    },
-    getAccounts: (callback) => {
-      udapp.getAccounts(callback)
-    },
-    currentblockGasLimit: () => { return executionContext.currentblockGasLimit() }
     }
- 
-  var renderer = new Renderer(rendererAPI, compiler.event)
+  }
+  var renderer = new Renderer(rendererAPI)
 
   // ------------------------------------------------------------
   var executionContext = new ExecutionContext()
@@ -547,7 +516,6 @@ function run () {
       document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
       onResize()
     },
-    reAdjust: reAdjust,
     executionContextChange: (context) => {
       return executionContext.executionContextChange(context)
     },
