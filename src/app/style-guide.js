@@ -155,7 +155,7 @@ function styleGuide () {
       cursor                  : pointer;
       border                  : 1px solid ${colors.lightGrey};
       border-radius           : 3px;
-      height                  : 25px;
+      height                  : 30px;
       text-align              : center;
       overflow              : hidden;
       word-break            : normal;
