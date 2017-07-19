@@ -1,5 +1,8 @@
 /* global alert */
+var $ = require('jquery')
+
 var yo = require('yo-yo')
+var helper = require('../lib/helper.js')
 var txExecution = require('./execution/txExecution')
 var txFormat = require('./execution/txFormat')
 var txHelper = require('./execution/txHelper')
@@ -152,6 +155,20 @@ function runTab (container, appAPI, appEvents, opts) {
   </div>
   `
   container.appendChild(el)
+  setInterval(() => { updateAccountBalances(container, appAPI) }, 1000)
+}
+
+function updateAccountBalances (container, appAPI) {
+  var accounts = $(container.querySelector('#txorigin')).children('option')
+  accounts.each(function (index, value) {
+    (function (acc) {
+      appAPI.getBalance(accounts[acc].value, function (err, res) {
+        if (!err) {
+          accounts[acc].innerText = helper.shortenAddress(accounts[acc].value, res)
+        }
+      })
+    })(index)
+  })
 }
 
 /* ------------------------------------------------
