@@ -549,10 +549,13 @@ function run () {
   // ---------------- Righthand-panel --------------------
   var rhpAPI = {
     config: config,
-    warnCompilerLoading: (msg) => {
-      renderer.clear()
-      if (msg) renderer.error(msg, $('#output'), {type: 'warning'})
+    setEditorSize (delta) {
+      $('#righthand-panel').css('width', delta)
+      self._view.centerpanel.style.right = delta + 'px'
+      document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
+      onResize()
     },
+    reAdjust: reAdjust,
     executionContextChange: (context) => {
       return executionContext.executionContextChange(context)
     },
