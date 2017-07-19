@@ -1,3 +1,4 @@
+/* global alert */
 var yo = require('yo-yo')
 var async = require('async')
 var swarmgw = require('swarmgw')
@@ -192,9 +193,18 @@ function compileTab (container, appAPI, appEvents, opts) {
   ------------------------------------------------ */
 
   function contractNames (container, appAPI, appEvents, opts) {
+    var contractsMetadata = {}
     appEvents.compiler.register('compilationFinished', function (success, DATA, source) {
+      contractsMetadata = {}
       getContractNames(success, DATA)
     })
+
+    var retrieveMetadataHash = function (bytecode) {
+      var match = /a165627a7a72305820([0-9a-f]{64})0029$/.exec(bytecode)
+      if (match) {
+        return match[1]
+      }
+    }
 
     var el = yo`
       <div class="${css.container}">
@@ -213,6 +223,10 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         for (var name in data.contracts) {
+          contractsMetadata[name] = {
+            metadata: data.contracts[name].metadata,
+            metadataHash: data.contracts[name].bytecode && retrieveMetadataHash(data.contracts[name].bytecode)
+          }
           var contractName = yo`
             <option>
               <div class="${css.name}">${name}</div>
@@ -226,8 +240,7 @@ function compileTab (container, appAPI, appEvents, opts) {
 
     function publish (appAPI) {
       var selectContractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
-      var contract = appAPI.getContracts()[selectContractNames.children[selectContractNames.selectedIndex].innerText]
-
+      var contract = contractsMetadata[selectContractNames.children[selectContractNames.selectedIndex].innerText]
       publishOnSwarm(contract, function (err) {
         if (err) {
           alert('Failed to publish metadata: ' + err)
