@@ -261,6 +261,7 @@
     margin-bottom: 1em;
 }
 
+.sol.success,
 .sol.error,
 .sol.warning {
     word-wrap: break-word;
@@ -272,6 +273,7 @@
     padding: 8px 15px;
 }
 
+.sol.success pre,
 .sol.error pre,
 .sol.warning pre {
     background-color: transparent;
@@ -282,6 +284,7 @@
     border-radius: 0;
 }
 
+.sol.success .close,
 .sol.error .close,
 .sol.warning .close {
     font-weight: bold;
@@ -300,6 +303,22 @@
 .sol.warning {
     background-color: hsla(59, 56%, 78%, 0.5);
     border: .2em dotted #ffbd01;
+}
+
+.sol.success {
+    background-color: hsla(59, 56%, 78%, 0.5);
+    border: .2em dotted green;
+}
+
+#ghostbar {
+    width: 1px;
+    background-color: red;
+    opacity: 0.5;
+    position: absolute;
+    cursor: col-resize;
+    z-index: 9999;
+    top: 0;
+    bottom: 0;
 }
 
 input[readonly] {

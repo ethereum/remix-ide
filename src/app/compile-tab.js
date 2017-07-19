@@ -1,4 +1,6 @@
 /* global alert */
+var $ = require('jquery')
+
 var yo = require('yo-yo')
 var async = require('async')
 var swarmgw = require('swarmgw')
@@ -184,6 +186,7 @@ function compileTab (container, appAPI, appEvents, opts) {
     <div class="${css.compileTabView}" id="compileTabView">
       ${compileContainer}
       ${contractNames(container, appAPI, appEvents, opts)}
+      <div class='error'></div>
     </div>
   `
   container.appendChild(el)
@@ -195,12 +198,29 @@ function compileTab (container, appAPI, appEvents, opts) {
   function contractNames (container, appAPI, appEvents, opts) {
     var contractsMetadata = {}
     appEvents.compiler.register('compilationFinished', function (success, data, source) {
+      // reset the contractMetadata list (used by the publish action)
       contractsMetadata = {}
+      // refill the dropdown list
       getContractNames(success, data)
+      // hightlight the tab if error
       if (success) {
         document.querySelector('#righthand-panel #menu .compileView').style.color = ''
       } else {
         document.querySelector('#righthand-panel #menu .compileView').style.color = '#FF8B8B'
+      }
+      // display warning error if any
+      var errorContainer = container.querySelector('.error')
+      errorContainer.innerHTML = ''
+      if (data['error']) {
+        appAPI.compilationMessage(data['error'], $(errorContainer))
+      }
+      if (data['errors']) {
+        data['errors'].forEach(function (err) {
+          appAPI.compilationMessage(err, $(errorContainer))
+        })
+      }
+      if (errorContainer.innerHTML === '') {
+        appAPI.compilationMessage('Compilation successful without warning', $(errorContainer), {type: 'success'})
       }
     })
 
