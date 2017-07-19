@@ -5,7 +5,7 @@ var yo = require('yo-yo')
 var async = require('async')
 var swarmgw = require('swarmgw')
 
-var contractParser = require('./contract/contractParser')
+var parseContracts = require('./contract/contractParser')
 
 // -------------- styling ----------------------
 var csjs = require('csjs-inject')
@@ -249,7 +249,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         for (var name in data.contracts) {
-          contractsDetails[name] = contractParser.parseContracts(name, data.contracts[name], appAPI.currentCompiledSourceCode())
+          contractsDetails[name] = parseContracts(name, data.contracts[name], appAPI.currentCompiledSourceCode())
           var contractName = yo`
             <option>
               <div class="${css.name}">${name}</div>
