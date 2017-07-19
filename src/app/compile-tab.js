@@ -5,6 +5,7 @@ var yo = require('yo-yo')
 
 var parseContracts = require('./contract/contractParser')
 var publishOnSwarm = require('./contract/publishOnSwarm')
+var modalDialog = require('./modaldialog')
 
 // -------------- styling ----------------------
 var csjs = require('csjs-inject')
@@ -230,15 +231,11 @@ function compileTab (container, appAPI, appEvents, opts) {
       <div class="${css.container}">
         <select class="${css.contractNames}"></select>
         <div class="${css.contractButtons}">
-          <div class="${css.publish}" onclick=${() => {publish(appAPI)}}>Publish</div>
+          <div class="${css.publish}" onclick=${() => { details() }}>Details</div>
+          <div class="${css.publish}" onclick=${() => { publish(appAPI) }}>Publish</div>
         </div>
       </div>
     `
-
-    var select = el.querySelector('select')
-    select.addEventListener('change', () => {
-      el.querySelector('.details').innerText = JSON.stringify(contractsDetails[select.children[select.selectedIndex].innerText])
-    })
 
     // HELPERS
 
@@ -258,6 +255,14 @@ function compileTab (container, appAPI, appEvents, opts) {
       } else {
         contractNames.appendChild(yo`<option></option>`)
       }
+    }
+
+    function details () {
+      var select = el.querySelector('select')
+      var pre = document.createElement('pre')
+      var contractName = select.children[select.selectedIndex].innerText
+      pre.innerHTML = JSON.stringify(contractsDetails[contractName], null, '\t')
+      modalDialog(contractName, pre)
     }
 
     function publish (appAPI) {
