@@ -262,7 +262,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       var pre = document.createElement('pre')
       var contractName = select.children[select.selectedIndex].innerText
       pre.innerHTML = JSON.stringify(contractsDetails[contractName], null, '\t')
-      modalDialog(contractName, pre)
+      modalDialog(contractName, pre, {label: 'OK'}, {label: ''})
     }
 
     function publish (appAPI) {
