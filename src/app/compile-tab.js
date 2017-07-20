@@ -188,7 +188,6 @@ function compileTab (container, appAPI, appEvents, opts) {
     <div class="${css.compileTabView}" id="compileTabView">
       ${compileContainer}
       ${contractNames(container, appAPI, appEvents, opts)}
-      <pre class='details'></pre>
       <div class='error'></div>
     </div>
   `
