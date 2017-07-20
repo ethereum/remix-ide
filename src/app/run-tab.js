@@ -20,7 +20,7 @@ var css = csjs`
     flex-direction: column;
   }
   .settings extends ${styles.displayBox} {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding: 10px 15px 15px 15px;
   }
   .crow {
@@ -66,10 +66,10 @@ var css = csjs`
     display: flex;
     flex-direction: column;
     background-color: ${styles.colors.lightBlue};
-    margin-top: 3%;
+    margin-top: 2%;
   }
   .container extends ${styles.displayBox} {
-    margin: 0;
+    margin-top: 2%;
   }
   .contractNames extends ${styles.dropdown} {
     height: 32px;
@@ -114,7 +114,6 @@ var css = csjs`
     font-style: italic;
   }
   .legend extends ${styles.displayBox} {
-    margin-top: 5%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -149,9 +148,9 @@ function runTab (container, appAPI, appEvents, opts) {
   var el = yo`
   <div class="${css.runTabView}" id="runTabView">
     ${settings(appAPI, appEvents)}
+    ${legend()}
     ${contractDropdown(appAPI, appEvents, instanceContainer)}
     ${instanceContainer}
-    ${legend()}
   </div>
   `
   container.appendChild(el)
