@@ -84,6 +84,7 @@ function RighthandPanel (appAPI, events, opts) {
       </div>
     </div>
   `
+
   compileTab(optionViews, appAPI, events, opts)
   runTab(optionViews, appAPI, events, opts)
   settingsTab(optionViews, appAPI, events, opts)
