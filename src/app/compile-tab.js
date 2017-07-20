@@ -61,7 +61,6 @@ var css = csjs`
   .compileButton extends ${styles.button} {
     width: 130px;
     min-width: 130px;
-    background-color: ${styles.colors.blue};
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -79,7 +78,6 @@ var css = csjs`
     height: 32px;
     font-size: 12px;
     font-weight: bold;
-    background-color: ${styles.colors.blue};
   }
   .contractButtons {
     display: flex;
@@ -87,9 +85,12 @@ var css = csjs`
     justify-content: center;
     text-align: center;
   }
-  .publish extends ${styles.button} {
-    background-color: ${styles.colors.pink};
+  .details extends ${styles.button} {
     min-width: 70px;
+  }
+  .publish extends ${styles.button} {
+    min-width: 70px;
+    margin-left: 2%;
   }
   .icon {
     margin-right: 3%;
@@ -233,7 +234,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       <div class="${css.container}">
         <select class="${css.contractNames}" disabled></select>
         <div class="${css.contractButtons}">
-          <div class="${css.publish}" onclick=${() => { details() }}>Details</div>
+          <div class="${css.details}" onclick=${() => { details() }}>Details</div>
           <div class="${css.publish}" onclick=${() => { publish(appAPI) }}>Publish</div>
         </div>
       </div>

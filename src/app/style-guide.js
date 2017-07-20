@@ -141,6 +141,7 @@ function styleGuide () {
       font-size               : 12px;
       overflow              : hidden;
       word-break            : normal;
+      background-color      : #E8E8E8;
     }
 
     .button:hover {

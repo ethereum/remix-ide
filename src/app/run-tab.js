@@ -76,7 +76,6 @@ var css = csjs`
     font-size: 12px;
     width: 100%;
     font-weight: bold;
-    background-color: ${styles.colors.blue};
   }
   .buttons {
     display: flex;
