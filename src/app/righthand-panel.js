@@ -2,7 +2,8 @@ var yo = require('yo-yo')
 var EventManager = require('ethereum-remix').lib.EventManager
 
 var tabbedMenu = require('./tabbed-menu')
-var contractTab = require('./contract-tab')
+var compileTab = require('./compile-tab')
+var runTab = require('./run-tab')
 var settingsTab = require('./settings-tab')
 var analysisTab = require('./analysis-tab')
 var debuggerTab = require('./debugger-tab')
@@ -61,7 +62,8 @@ function RighthandPanel (appAPI, events, opts) {
   var optionViews = yo`<div id="optionViews" class="settingsView"></div>`
   var options = yo`
     <ul id="options">
-      <li class="envView" title="Environment">Contract</li>
+      <li class="compileView" title="Compile">Compile</li>
+      <li class="runView" title="Run">Run</li>
       <li class="settingsView" title="Settings">Settings</li>
       <li class="publishView" title="Publish" >Files</li>
       <li class="debugView" title="Debugger">Debugger</li>
@@ -82,7 +84,8 @@ function RighthandPanel (appAPI, events, opts) {
       </div>
     </div>
   `
-  contractTab(optionViews, appAPI, events, opts)
+  compileTab(optionViews, appAPI, events, opts)
+  runTab(optionViews, appAPI, events, opts)
   settingsTab(optionViews, appAPI, events, opts)
   analysisTab(optionViews, appAPI, events, opts)
   debuggerTab(optionViews, appAPI, events, opts)
