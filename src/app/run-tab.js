@@ -338,10 +338,25 @@ function settings (appAPI, appEvents) {
     if (!appAPI.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
       selectExEnv.value = appAPI.executionContextProvider()
     }
+    fillAccountsList(appAPI)
   })
   selectExEnv.value = appAPI.executionContextProvider()
-
+  fillAccountsList(appAPI)
   return el
+}
+
+function fillAccountsList (appAPI) {
+  var $txOrigin = $('#txorigin')
+  $txOrigin.empty()
+  appAPI.udapp().getAccounts((err, accounts) => {
+    if (err) { console.log(err) }
+    if (accounts && accounts[0]) {
+      for (var a in accounts) { $txOrigin.append($('<option />').val(accounts[a]).text(accounts[a])) }
+      $txOrigin.val(accounts[0])
+    } else {
+      $txOrigin.val('unknown')
+    }
+  })
 }
 
 /* ------------------------------------------------
