@@ -105,8 +105,6 @@ function UniversalDApp (executionContext, options) {
   self.personalMode = self.options.personalMode || false
   self.contracts
   self.transactionContextAPI
-  var defaultRenderOutputModifier = function (name, content) { return content }
-  self.renderOutputModifier = defaultRenderOutputModifier
   self.web3 = executionContext.web3()
   self.vm = executionContext.vm()
   self.executionContext = executionContext
@@ -119,11 +117,10 @@ function UniversalDApp (executionContext, options) {
   })
 }
 
-UniversalDApp.prototype.reset = function (contracts, transactionContextAPI, renderer) {
+UniversalDApp.prototype.reset = function (contracts, transactionContextAPI) {
   this.el.innerHTML = ''
   this.contracts = contracts
   this.transactionContextAPI = transactionContextAPI
-  this.renderOutputModifier = renderer
   this.accounts = {}
   if (this.executionContext.isVM()) {
     this._addAccount('3cd7232cd6f3fc66a57a6bedc1a8ed6c228fff0a327e169c2bcc5e869ed49511')
