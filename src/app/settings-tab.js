@@ -39,6 +39,14 @@ function SettingsTab (container, appAPI, appEvents, opts) {
       <div class="${css.crow}">
         <select class="${css.select}" id="versionSelector"></select>
       </div>
+      <div class="${css.crow}">
+        <div><input class="${css.col1}" id="editorWrap" type="checkbox"></div>
+        <span class="${css.checkboxText}">Text Wrap</span>
+      </div>
+      <div class="${css.crow}">
+        <div><input class="${css.col1}" id="optimize" type="checkbox"></div>
+        <span class="${css.checkboxText}">Enable Optimization</span>
+      </div>
     </div>
   `
   container.appendChild(el)

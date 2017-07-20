@@ -930,6 +930,17 @@ function run () {
     }
   }
 
+  // set default
+  $('#optimize').attr('checked', (queryParams.get().optimize === 'true'))
+  compiler.setOptimize(document.querySelector('#optimize').checked)
+
+  document.querySelector('#optimize').addEventListener('change', function () {
+    var optimize = document.querySelector('#optimize').checked
+    queryParams.update({ optimize: optimize })
+    compiler.setOptimize(optimize)
+    runCompiler()
+  })
+
   // ----------------- version selector-------------
 
   // clear and disable the version selector
