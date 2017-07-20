@@ -2,6 +2,7 @@
 var $ = require('jquery')
 
 var yo = require('yo-yo')
+const copy = require('clipboard-copy')
 
 var parseContracts = require('./contract/contractParser')
 var publishOnSwarm = require('./contract/publishOnSwarm')
@@ -258,10 +259,14 @@ function compileTab (container, appAPI, appEvents, opts) {
 
     function details () {
       var select = el.querySelector('select')
-      var pre = document.createElement('pre')
       var contractName = select.children[select.selectedIndex].innerText
-      pre.innerHTML = JSON.stringify(contractsDetails[contractName], null, '\t')
-      modalDialog(contractName, pre, {label: 'OK'}, {label: ''})
+      var details = JSON.stringify(contractsDetails[contractName], null, '\t')
+      var log = yo`<div>
+      <pre>${details}</pre>
+      <i title="Copy Address" class="copytxorigin fa fa-clipboard" onclick=${() => { copy(details) }} aria-hidden="true"></i>
+      </div>
+      `
+      modalDialog(contractName, log, {label: 'OK'}, {label: ''})
     }
 
     function publish (appAPI) {
