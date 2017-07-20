@@ -231,7 +231,7 @@ function compileTab (container, appAPI, appEvents, opts) {
 
     var el = yo`
       <div class="${css.container}">
-        <select class="${css.contractNames}"></select>
+        <select class="${css.contractNames}" disabled></select>
         <div class="${css.contractButtons}">
           <div class="${css.publish}" onclick=${() => { details() }}>Details</div>
           <div class="${css.publish}" onclick=${() => { publish(appAPI) }}>Publish</div>

@@ -184,7 +184,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
 
   var atAddressButtonInput = yo`<input class="${css.input} ataddressinput" placeholder="Enter contract's address - i.e. 0x60606..." title="atAddress" />`
   var createButtonInput = yo`<input class="${css.input}" placeholder="" title="create" />`
-  var selectContractNames = yo`<select class="${css.contractNames}"></select>`
+  var selectContractNames = yo`<select class="${css.contractNames}" disabled></select>`
   var el = yo`
     <div class="${css.container}">
       ${selectContractNames}
