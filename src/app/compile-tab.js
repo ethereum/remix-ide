@@ -22,7 +22,7 @@ var css = csjs`
     margin: 3% 0;
   }
   .compileContainer extends ${styles.displayBox} {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
   .autocompileContainer {
     width: 90px;
@@ -44,8 +44,8 @@ var css = csjs`
     line-height: initial;
     margin-left: 3%;
   }
-  .compilationWarning extends ${styles.warningTextBox} {
-    margin: 5% 0 0 0;
+  .warnCompilationSlow {
+    color:  orange;
   }
   .compileButtons {
     display: flex;
@@ -102,9 +102,6 @@ var css = csjs`
     margin-right: .3em;
     animation: bounce 2s infinite;
   }
-  .compilerLoadingInfo extends ${styles.warningTextBox} {
-    margin: 5% 0 5% 0;
-  }
   @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -132,8 +129,7 @@ function compileTab (container, appAPI, appEvents, opts) {
   if (!container) throw new Error('no container given')
 
   // Containers
-  var warnCompilationSlow = yo`<div id="warnCompilationSlow"></div>`
-  var compilerLoading = yo`<div class="${css.compilerLoadingInfo}">Compiler is loading. Please wait a few moments.</div>`
+  var warnCompilationSlow = yo`<i title="Copy Address" style="display:none" class="${css.warnCompilationSlow} fa fa-exclamation-triangle" aria-hidden="true"></i>`
   var compileIcon = yo`<i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>`
   var compileContainer = yo`
       <div class="${css.compileContainer}">
@@ -141,10 +137,10 @@ function compileTab (container, appAPI, appEvents, opts) {
           <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
           <div class="${css.autocompileContainer}">
             <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
-            <span class="${css.autocompileText}">Auto compile</span>
+            <span class="${css.autocompileText}">Auto compile</span>            
           </div>
+          ${warnCompilationSlow}
         </div>
-        ${warnCompilationSlow}
       </div>
   `
 
@@ -153,13 +149,11 @@ function compileTab (container, appAPI, appEvents, opts) {
   // compilationDuration
   appEvents.compiler.register('compilationDuration', function tabHighlighting (speed) {
     var settingsView = document.querySelector('#righthand-panel #menu .settingsView')
-    warnCompilationSlow.className = css.compilationWarning
     if (speed > 1000) {
-      warnCompilationSlow.innerHTML = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
-      warnCompilationSlow.style.display = 'block'
+      warnCompilationSlow.setAttribute('title', `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`)
+      warnCompilationSlow.style.display = 'inline-block'
       settingsView.style.color = '#FF8B8B'
     } else {
-      warnCompilationSlow.innerHTML = ''
       warnCompilationSlow.style.display = 'none'
       settingsView.style.color = ''
     }
@@ -172,7 +166,8 @@ function compileTab (container, appAPI, appEvents, opts) {
   })
   appEvents.compiler.register('loadingCompiler', function start () {
     compileIcon.classList.add(`${css.spinningIcon}`)
-    compileContainer.appendChild(compilerLoading)
+    warnCompilationSlow.style.display = 'none'
+    compileIcon.setAttribute('title', 'compiler is loading, please wait a few moments.')
   })
   appEvents.compiler.register('compilationFinished', function finish () {
     var compileTab = document.querySelector('.compileView')
@@ -180,9 +175,16 @@ function compileTab (container, appAPI, appEvents, opts) {
     compileIcon.style.color = styles.colors.black
     compileIcon.classList.remove(`${css.spinningIcon}`)
     compileIcon.classList.remove(`${css.bouncingIcon}`)
+    compileIcon.setAttribute('title', 'idle')
+  })
+  appEvents.compiler.register('compilationStarted', function start () {
+    compileIcon.classList.remove(`${css.bouncingIcon}`)
+    compileIcon.classList.add(`${css.spinningIcon}`)
+    compileIcon.setAttribute('title', 'compiling...')
   })
   appEvents.compiler.register('compilerLoaded', function loaded () {
-    compileContainer.removeChild(compilerLoading)
+    compileIcon.classList.remove(`${css.spinningIcon}`)
+    compileIcon.setAttribute('title', '')
   })
 
   var el = yo`
