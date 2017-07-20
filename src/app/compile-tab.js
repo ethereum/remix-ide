@@ -246,6 +246,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
       contractNames.innerHTML = ''
       if (success) {
+        contractNames.removeAttribute('disabled')
         for (var name in data.contracts) {
           contractsDetails[name] = parseContracts(name, data.contracts[name], appAPI.currentCompiledSourceCode())
           var contractName = yo`
@@ -256,6 +257,7 @@ function compileTab (container, appAPI, appEvents, opts) {
         }
         appAPI.resetDapp(contractsDetails)
       } else {
+        contractNames.setAttribute('disabled', true)
         contractNames.appendChild(yo`<option></option>`)
         appAPI.resetDapp({})
       }

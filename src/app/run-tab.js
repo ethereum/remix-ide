@@ -256,10 +256,12 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     contractNames.innerHTML = ''
     if (success) {
+      selectContractNames.removeAttribute('disabled')
       for (var name in data.contracts) {
         contractNames.appendChild(yo`<option>${name}</option>`)
       }
     } else {
+      selectContractNames.setAttribute('disabled', true)
       contractNames.appendChild(yo`<option></option>`)
     }
     setInputParamsPlaceHolder()
