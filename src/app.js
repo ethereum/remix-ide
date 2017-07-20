@@ -508,6 +508,23 @@ function run () {
   })
 
   // ---------------- Righthand-panel --------------------
+  var transactionContextAPI = {
+    getAddress: (cb) => {
+      cb(null, $('#txorigin').val())
+    },
+    getValue: (cb) => {
+      try {
+        var comp = $('#value').val().split(' ')
+        cb(null, executionContext.web3().toWei(comp[0], comp.slice(1).join(' ')))
+      } catch (e) {
+        cb(e)
+      }
+    },
+    getGasLimit: (cb) => {
+      cb(null, $('#gasLimit').val())
+    }
+  }
+
   var rhpAPI = {
     config: config,
     setEditorSize (delta) {
@@ -557,6 +574,9 @@ function run () {
         return compiler.lastCompilationResult.source.sources[compiler.lastCompilationResult.source.target]
       }
       return ''
+    },
+    resetDapp: (contracts) => {
+      udapp.reset(contracts, transactionContextAPI)
     }
   }
   var rhpEvents = {

@@ -252,8 +252,10 @@ function compileTab (container, appAPI, appEvents, opts) {
             </option>`
           contractNames.appendChild(contractName)
         }
+        appAPI.resetDapp(contractsDetails)
       } else {
         contractNames.appendChild(yo`<option></option>`)
+        appAPI.resetDapp({})
       }
     }
 
