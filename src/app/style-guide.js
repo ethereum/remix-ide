@@ -20,7 +20,8 @@ function styleGuide () {
     green: '#B1EAC5',
     violet: '#C6CFF7',
     pink: '#EC96EC',
-    yellow: '#ffbd01'
+    yellow: '#ffbd01',
+    lightYellow: 'hsla(59, 56%, 78%, 0.5)'
   }
 
   /* --------------------------------------------------------------------------
@@ -80,11 +81,11 @@ function styleGuide () {
     }
 
     .warning-text-box {
-      background-color      : hsla(59, 56%, 78%, 0.5);  // yellow
+      background-color      : hsla(59, 56%, 78%, 0.5);  // light yellow
       line-height           : 20px;
       padding               : 8px 15px;
       border-radius         : 5px;
-      border                : .2em dotted #ffbd01; // orange-yellow
+      border                : .2em dotted ${colors.yellow}; // orange-yellow
       margin-bottom         : 1em;
       overflow              : hidden;
       word-break            : break-word;
@@ -120,7 +121,7 @@ function styleGuide () {
       height                : 25px;
       font-size             : 10px;
       border-radius         : 3px;
-      padding               : 8px;
+      padding               : 0 8px;
       overflow              : hidden;
       word-break            : normal;
     }
@@ -150,7 +151,7 @@ function styleGuide () {
 
     .dropdown {
       font-size               : 10px;
-      padding                 : 8px;
+      padding                 : 0 8px;
       text-decoration         : none;
       background-color        : ${colors.white};
       cursor                  : pointer;

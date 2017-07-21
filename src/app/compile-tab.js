@@ -92,6 +92,21 @@ var css = csjs`
     min-width: 70px;
     margin-left: 2%;
   }
+  .copyDetails {
+    margin-top: 5%;
+    font-size: 20px;
+    cursor: pointer;
+    color: ${styles.colors.grey}
+  }
+  .copyDetails:hover {
+    opacity: .8;
+  }
+  .detailsJSON {
+    padding: 8px 0;
+    background-color: ${styles.colors.white};
+    border: none;
+    color: ${styles.colors.grey};
+  }
   .icon {
     margin-right: 3%;
   }
@@ -138,7 +153,7 @@ function compileTab (container, appAPI, appEvents, opts) {
           <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
           <div class="${css.autocompileContainer}">
             <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
-            <span class="${css.autocompileText}">Auto compile</span>            
+            <span class="${css.autocompileText}">Auto compile</span>
           </div>
           ${warnCompilationSlow}
         </div>
@@ -268,11 +283,8 @@ function compileTab (container, appAPI, appEvents, opts) {
       var select = el.querySelector('select')
       var contractName = select.children[select.selectedIndex].innerText
       var details = JSON.stringify(contractsDetails[contractName], null, '\t')
-      var log = yo`<div>
-      <pre>${details}</pre>
-      <i title="Copy Address" class="copytxorigin fa fa-clipboard" onclick=${() => { copy(details) }} aria-hidden="true"></i>
-      </div>
-      `
+      var copyDetails = yo`<div class="${css.copyDetails}"><i title="Copy details" class="fa fa-clipboard" onclick=${() => { copy(details) }} aria-hidden="true"></i></div>`
+      var log = yo`<div><pre class="${css.detailsJSON}">${details} ${copyDetails}</pre></div>`
       modalDialog(contractName, log, {label: 'OK'}, {label: ''})
     }
 

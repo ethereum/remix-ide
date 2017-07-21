@@ -366,8 +366,13 @@ input[type="file"] {
 /* Modal Header */
 .modal-header {
     padding: 2px 16px;
-    background-color: orange;
+    background-color: hsla(59, 56%, 78%, 0.5);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
     color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 /* Modal Body */
@@ -376,8 +381,10 @@ input[type="file"] {
 /* Modal Footer */
 .modal-footer {
     padding: 2px 16px;
-    background-color: orange;
-    color: white;
+    background-color: hsla(59, 56%, 78%, 0.5);
+    color: black;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Modal Content */
@@ -386,13 +393,14 @@ input[type="file"] {
     background-color: #fefefe;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
     width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
 }
 
 #modal-footer-cancel {
@@ -406,7 +414,7 @@ input[type="file"] {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top: -300px; opacity: 0} 
+    from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
 

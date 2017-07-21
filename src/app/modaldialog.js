@@ -2,6 +2,45 @@ var yo = require('yo-yo')
 var csjs = require('csjs-inject')
 
 var css = csjs`
+.scroller {
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    padding: 0 0.9em;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    font-size: 1.3em;
+}
+
+.scroller i {
+    line-height: 3em;
+}
+
+.scroller-right {
+    right: 0;
+}
+
+.scroller-left {
+    left: 0;
+}
+
+#files {
+    list-style: none;
+    margin: 0;
+    font-size: 15px;
+    height: 2.5em;
+    box-sizing: border-box;
+    line-height: 2em;
+    padding: 0.5em 0 0;
+    position: relative;
+    left: 40px;
+    top:0;
+    min-width:3000px;
+    border-bottom: 0 none;
+}
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

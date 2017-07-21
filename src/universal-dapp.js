@@ -45,10 +45,9 @@ var css = csjs`
     margin-right: 1em;
     word-break: break-all;
     min-width: 230px;
-    font-style: italic;
   }
   .instance extends ${styles.displayBox} {
-    padding: 10px 15px 6px 15px
+    padding: 10px 15px 6px 15px;
   }
   .instance .title:before {
     content: "\\25BE";
@@ -72,6 +71,7 @@ var css = csjs`
     cursor: pointer;
     opacity: 0.8;
     margin-left: 3%;
+    color: ${styles.colors.black}
   }
   .copy:hover{
     opacity: .5;
@@ -89,7 +89,7 @@ var css = csjs`
   }
   .udappClose {
     margin-left: 3%;
-    align-self: flex-end;
+    align-self: center;
   }
 `
 
