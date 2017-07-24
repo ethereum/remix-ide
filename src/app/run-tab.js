@@ -154,7 +154,35 @@ function runTab (container, appAPI, appEvents, opts) {
   </div>
   `
   container.appendChild(el)
+
+  // DROPDOWN
+  var selectExEnv = el.querySelector('#selectExEnvOptions')
+  selectExEnv.addEventListener('change', function (event) {
+    if (!appAPI.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
+      selectExEnv.value = appAPI.executionContextProvider()
+    }
+    fillAccountsList(appAPI, el)
+    instanceContainer.innerHTML = '' // clear the instances list
+    instanceContainer.appendChild(noInstancesText)
+  })
+  selectExEnv.value = appAPI.executionContextProvider()
+  fillAccountsList(appAPI, el)
   setInterval(() => { updateAccountBalances(container, appAPI) }, 1000)
+}
+
+
+function fillAccountsList (appAPI, container) {
+  var $txOrigin = $(container.querySelector('#txorigin'))
+  $txOrigin.empty()
+  appAPI.udapp().getAccounts((err, accounts) => {
+    if (err) { console.log(err) }
+    if (accounts && accounts[0]) {
+      for (var a in accounts) { $txOrigin.append($('<option />').val(accounts[a]).text(accounts[a])) }
+      $txOrigin.val(accounts[0])
+    } else {
+      $txOrigin.val('unknown')
+    }
+  })
 }
 
 function updateAccountBalances (container, appAPI) {
@@ -265,7 +293,6 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
       }
     } else {
       selectContractNames.setAttribute('disabled', true)
-      contractNames.appendChild(yo`<option></option>`)
     }
     setInputParamsPlaceHolder()
   }
@@ -335,34 +362,8 @@ function settings (appAPI, appEvents) {
   appEvents.udapp.register('transactionExecuted', (to, data, lookupOnly, txResult) => {
     if (!lookupOnly) el.querySelector('#value').value = '0'
   })
-
-  // DROPDOWN
-  var selectExEnv = el.querySelector('#selectExEnvOptions')
-  selectExEnv.addEventListener('change', function (event) {
-    if (!appAPI.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
-      selectExEnv.value = appAPI.executionContextProvider()
-    }
-    fillAccountsList(appAPI)
-    instanceContainer.innerHTML = '' // clear the instances list
-    instanceContainer.appendChild(noInstancesText)
-  })
-  selectExEnv.value = appAPI.executionContextProvider()
-  fillAccountsList(appAPI)
+ 
   return el
-}
-
-function fillAccountsList (appAPI) {
-  var $txOrigin = $('#txorigin')
-  $txOrigin.empty()
-  appAPI.udapp().getAccounts((err, accounts) => {
-    if (err) { console.log(err) }
-    if (accounts && accounts[0]) {
-      for (var a in accounts) { $txOrigin.append($('<option />').val(accounts[a]).text(accounts[a])) }
-      $txOrigin.val(accounts[0])
-    } else {
-      $txOrigin.val('unknown')
-    }
-  })
 }
 
 /* ------------------------------------------------

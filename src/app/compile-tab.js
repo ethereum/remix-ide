@@ -274,7 +274,6 @@ function compileTab (container, appAPI, appEvents, opts) {
         appAPI.resetDapp(contractsDetails)
       } else {
         contractNames.setAttribute('disabled', true)
-        contractNames.appendChild(yo`<option></option>`)
         appAPI.resetDapp({})
       }
     }
