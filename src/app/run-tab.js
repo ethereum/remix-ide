@@ -142,6 +142,7 @@ var css = csjs`
 module.exports = runTab
 
 var instanceContainer = yo`<div class="${css.instanceContainer}"></div>`
+var noInstancesText = yo`<div class="${css.noInstancesText}">No Contract Instances.</div>`
 
 function runTab (container, appAPI, appEvents, opts) {
   var el = yo`
@@ -173,8 +174,7 @@ function updateAccountBalances (container, appAPI) {
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
-function contractDropdown (appAPI, appEvents, instanceContainer) {
-  var noInstancesText = yo`<div class="${css.noInstancesText}">No Contract Instances.</div>`
+function contractDropdown (appAPI, appEvents, instanceContainer) {  
   instanceContainer.appendChild(noInstancesText)
 
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
@@ -343,6 +343,8 @@ function settings (appAPI, appEvents) {
       selectExEnv.value = appAPI.executionContextProvider()
     }
     fillAccountsList(appAPI)
+    instanceContainer.innerHTML = '' // clear the instances list
+    instanceContainer.appendChild(noInstancesText)
   })
   selectExEnv.value = appAPI.executionContextProvider()
   fillAccountsList(appAPI)
