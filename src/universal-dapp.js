@@ -266,10 +266,10 @@ UniversalDApp.prototype.renderInstance = function (contract, address, contractNa
     $events.append($event)
   }
 
+  var abi = txHelper.sortAbiFunction(contract)
   if (this.executionContext.isVM()) {
     // FIXME: support indexed events
     var eventABI = {}
-    var abi = txHelper.sortAbiFunction(contract)
     $.each(abi, function (i, funABI) {
       if (funABI.type !== 'event') {
         return
