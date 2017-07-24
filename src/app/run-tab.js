@@ -244,6 +244,10 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
   }
 
   function loadFromAddress (appAPI) {
+    if (!init) {
+      instanceContainer.innerHTML = ''
+      init = true
+    }
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
     var address = atAddressButtonInput.value
