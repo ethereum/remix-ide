@@ -39,11 +39,11 @@ var css = csjs`
     word-break: break-word;
     line-height: initial;
     font-weight: bold;
-    background-color: ${styles.colors.blue};
+    background-color: ${styles.colors.white};
   }
   .titleText {
     margin-right: 1em;
-    word-break: break-all;
+    word-break: break-word;
     min-width: 230px;
   }
   .instance extends ${styles.displayBox} {
@@ -71,10 +71,11 @@ var css = csjs`
     cursor: pointer;
     opacity: 0.8;
     margin-left: 3%;
-    color: ${styles.colors.black}
+    color: ${styles.colors.black};
+    opacity: .5;
   }
   .copy:hover{
-    opacity: .5;
+    opacity: 1;
   }
   .buttonsContainer {
     margin-top: 2%;

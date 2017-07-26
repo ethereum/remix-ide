@@ -53,9 +53,10 @@ var css = csjs`
     margin-left: 0.5em;
     margin-top: 0.7em;
     cursor: pointer;
+    opacity: .7;
   }
   .copyaddress:hover {
-    opacity: .7;
+    opacity: 1;
   }
   .selectAddress extends ${styles.dropdown} {
     width: 70%;
@@ -76,6 +77,7 @@ var css = csjs`
     font-size: 12px;
     width: 100%;
     font-weight: bold;
+    background-color: ${styles.colors.lightGrey}
   }
   .buttons {
     display: flex;
@@ -202,7 +204,7 @@ function updateAccountBalances (container, appAPI) {
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
-function contractDropdown (appAPI, appEvents, instanceContainer) {  
+function contractDropdown (appAPI, appEvents, instanceContainer) {
   instanceContainer.appendChild(noInstancesText)
 
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
@@ -362,7 +364,7 @@ function settings (appAPI, appEvents) {
   appEvents.udapp.register('transactionExecuted', (to, data, lookupOnly, txResult) => {
     if (!lookupOnly) el.querySelector('#value').value = '0'
   })
- 
+
   return el
 }
 

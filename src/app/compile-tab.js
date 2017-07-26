@@ -96,10 +96,11 @@ var css = csjs`
     margin-top: 5%;
     font-size: 20px;
     cursor: pointer;
-    color: ${styles.colors.grey}
+    color: ${styles.colors.grey};
+    opacity: .5;
   }
   .copyDetails:hover {
-    opacity: .8;
+    opacity: 1;
   }
   .detailsJSON {
     padding: 8px 0;
