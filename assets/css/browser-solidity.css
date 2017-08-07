@@ -43,10 +43,7 @@
 }
 
 #righthand-panel {
-    position: absolute;
     top: 0;
-    width: 34em;
-    max-width: 80vw;
     right: 0;
     bottom: 0;
     box-sizing: border-box;
@@ -73,7 +70,6 @@
     padding-top: 0.5em;
     box-sizing: content-box;
     display: flex;
-    justify-content: space-between;
 }
 
 #righthand-panel #options {

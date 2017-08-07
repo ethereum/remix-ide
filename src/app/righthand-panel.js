@@ -47,6 +47,9 @@ var css = csjs`
   .panel              {
     height            : 100%;  
   }
+  .header             {
+    height            : 100%;
+  }
 `
 
 // ------------------------------------------------------------------
@@ -75,7 +78,7 @@ function RighthandPanel (appAPI, events, opts) {
   self._view.element = yo`
     <div id="righthand-panel" class=${css.panel}>
       ${self._view.dragbar}
-      <div id="header">
+      <div id="header" class=${css.header}>
         <div id="menu">
           <img id="solIcon" title="Solidity realtime compiler and runtime" src="assets/img/remix_logo_512x512.svg" alt="Solidity realtime compiler and runtime">
           ${options}
