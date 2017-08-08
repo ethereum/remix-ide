@@ -243,7 +243,7 @@
 
 #runTabView .contractProperty.hasArgs input {
 	display: block;
-	border: 1px solid #dddddd;  // lightGrey -> see style-guide.js
+	border: 1px solid #dddddd;
 	padding: .36em;
 	border-left: none;
 	padding: 8px 8px 8px 10px;
