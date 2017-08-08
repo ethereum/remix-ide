@@ -21,7 +21,6 @@ function checkCompiledContracts (browser, compiled, callback) {
     if (!result.value) {
       browser.end('no compiled contracts')
     } else {
-      console.log('out', result.value)
       result.value.map(function (item, i) {
         browser.assert.equal(item, compiled[i])
       })
