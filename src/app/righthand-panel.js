@@ -1,6 +1,5 @@
 var yo = require('yo-yo')
 var EventManager = require('ethereum-remix').lib.EventManager
-
 var tabbedMenu = require('./tabbed-menu')
 var compileTab = require('./compile-tab')
 var runTab = require('./run-tab')
@@ -87,7 +86,6 @@ function RighthandPanel (appAPI, events, opts) {
       </div>
     </div>
   `
-
   compileTab(optionViews, appAPI, events, opts)
   runTab(optionViews, appAPI, events, opts)
   settingsTab(optionViews, appAPI, events, opts)
