@@ -646,6 +646,16 @@ function run () {
       })
   }
 
+  function handleSMTLib2 (query, cb) {
+    query = query.replace(/^SMTLIB2Solver>> /, '')
+
+    remixd.call('smtsolver', 'query', {SMTLIB2: query}, function (error, response) {
+      console.log(arguments)
+      var isSMTQuery = true
+      cb(error, response, isSMTQuery)
+    })
+  }
+
   function handleImportCall (url, cb) {
     var provider = fileProviderOf(url)
     if (provider && provider.exists(url)) {
@@ -655,7 +665,8 @@ function run () {
     var handlers = [
       { match: /^(https?:\/\/)?(www.)?github.com\/([^/]*\/[^/]*)\/(.*)/, handler: function (match, cb) { handleGithubCall(match[3], match[4], cb) } },
       { match: /^(bzz[ri]?:\/\/?.*)$/, handler: function (match, cb) { handleSwarmImport(match[1], cb) } },
-      { match: /^(ipfs:\/\/?.+)/, handler: function (match, cb) { handleIPFS(match[1], cb) } }
+      { match: /^(ipfs:\/\/?.+)/, handler: function (match, cb) { handleIPFS(match[1], cb) } },
+      { match: /^SMTLIB2Solver>> ([^]*)/, handler: function (match, cb) { handleSMTLib2(match[1], cb) } }
     ]
 
     var found = false
@@ -669,15 +680,18 @@ function run () {
         found = true
 
         $('#output').append($('<div/>').append($('<pre/>').text('Loading ' + url + ' ...')))
-        handler.handler(match, function (err, content) {
+        handler.handler(match, function (err, content, isSMTQuery) {
           if (err) {
             cb('Unable to import "' + url + '": ' + err)
             return
           }
 
           // FIXME: at some point we should invalidate the cache
-          filesProviders['browser'].addReadOnly(url, content)
-          cb(null, content)
+          if (!isSMTQuery) {
+            // FIXME: at some point we should invalidate the cache
+            filesProviders['browser'].addReadOnly(url, content)
+          }
+          cb(null, content, isSMTQuery)
         })
       }
     })

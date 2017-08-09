@@ -20,11 +20,15 @@ module.exports = function (self) {
 
         var compiler = solc(self.Module)
 
-        compileJSON = function (input, optimize) {
+        compileJSON = function (input, optimize, smtResponses) {
           try {
             return JSON.stringify(compiler.compile(JSON.parse(input), optimize, function (path) {
-              missingInputs.push(path)
-              return { 'error': 'Deferred import' }
+              if (smtResponses && smtResponses[path] !== undefined) {
+                return { 'contents': smtResponses[path] }
+              } else {
+                missingInputs.push(path)
+                return { 'error': 'Deferred import' }
+              }
             }))
           } catch (exception) {
             return JSON.stringify({ error: 'Uncaught JavaScript exception:\n' + exception })
@@ -39,7 +43,11 @@ module.exports = function (self) {
         break
       case 'compile':
         missingInputs.length = 0
-        self.postMessage({cmd: 'compiled', job: data.job, data: compileJSON(data.source, data.optimize), missingInputs: missingInputs})
+        self.postMessage({
+          cmd: 'compiled',
+          job: data.job,
+          data: compileJSON(data.source, data.optimize, data.smtResponses),
+          missingInputs: missingInputs})
         break
     }
   }, false)
