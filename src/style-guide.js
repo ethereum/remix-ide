@@ -22,7 +22,8 @@ function styleGuide () {
     violet: '#C6CFF7',
     pink: '#EC96EC',
     yellow: '#ffbd01',
-    lightYellow: 'hsla(59, 56%, 78%, 0.5)'
+    lightYellow: 'hsla(59, 56%, 78%, 0.5)',
+    orange: 'orange'
   }
 
   /* --------------------------------------------------------------------------

@@ -3,7 +3,6 @@
 
 var $ = require('jquery')
 var ethJSUtil = require('ethereumjs-util')
-var ethJSABI = require('ethereumjs-abi')
 var BN = ethJSUtil.BN
 var EventManager = require('ethereum-remix').lib.EventManager
 var crypto = require('crypto')
@@ -73,6 +72,10 @@ var css = csjs`
     margin-left: 3%;
     color: ${styles.colors.black};
     opacity: .5;
+  }
+  .warning  {
+    color: ${styles.colors.orange};
+    margin-right: 3px;
   }
   .copy:hover{
     opacity: 1;
@@ -222,15 +225,25 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
 // this will render an instance: contract name, contract address, and all the public functions
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
-UniversalDApp.prototype.renderInstance = function (contract, address, contractName) {
-  function remove () { $instance.remove() }
+UniversalDApp.prototype.renderInstance = function (contract, address, contractName, removedFn) {
+  function remove () {
+    $instance.remove()
+    if (removedFn) removedFn()
+  }
   var $instance = $(`<div class="instance ${css.instance}"/>`)
   var context = this.executionContext.isVM() ? 'memory' : 'blockchain'
-
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
-  var shortAddress = helper.shortenAddress(address)
+  var text = ''
+  var warning = null
+  if (contractName) {
+    var shortAddress = helper.shortenAddress(address)
+    text = contractName + ' at ' + shortAddress + ' (' + context + ')'
+  } else {
+    text = address + ' (' + context + ')'
+    warning = yo`<i class="fa fa-exclamation-triangle ${css.warning}" aria-hidden="true" title='This instance does not correspond to any compiled contracts'></i>`
+  }
   var title = yo`<div class="${css.title}" onclick=${toggleClass}>
-    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
+    <div class="${css.titleText}">  ${warning} ${text} </div>
     <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
   </div>`
 

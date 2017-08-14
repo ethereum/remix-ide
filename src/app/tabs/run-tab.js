@@ -6,6 +6,8 @@ var txExecution = require('../execution/txExecution')
 var txFormat = require('../execution/txFormat')
 var txHelper = require('../execution/txHelper')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
+var remix = require('ethereum-remix')
+var codeUtil = remix.util.code
 const copy = require('clipboard-copy')
 
 // -------------- styling ----------------------
@@ -77,7 +79,7 @@ var css = csjs`
     font-size: 12px;
     width: 100%;
     font-weight: bold;
-    background-color: ${styles.colors.lightGrey}
+    background-color: ${styles.colors.lightGrey};
   }
   .buttons {
     display: flex;
@@ -153,13 +155,15 @@ module.exports = runTab
 
 var instanceContainer = yo`<div class="${css.instanceContainer}"></div>`
 var noInstancesText = yo`<div class="${css.noInstancesText}">No Contract Instances.</div>`
+var instances = {}
 
 function runTab (container, appAPI, appEvents, opts) {
+  var self = this
   var el = yo`
   <div class="${css.runTabView}" id="runTabView">
     ${settings(appAPI, appEvents)}
     ${legend()}
-    ${contractDropdown(appAPI, appEvents, instanceContainer)}
+    ${contractDropdown(self, appAPI, appEvents, instanceContainer)}
     ${instanceContainer}
   </div>
   `
@@ -175,13 +179,14 @@ function runTab (container, appAPI, appEvents, opts) {
     instanceContainer.innerHTML = '' // clear the instances list
     noInstancesText.style.display = 'block'
     instanceContainer.appendChild(noInstancesText)
+    instances = {}
   })
   selectExEnv.value = appAPI.executionContextProvider()
   fillAccountsList(appAPI, el)
   setInterval(() => {
     updateAccountBalances(container, appAPI)
     updatePendingTxs(container, appAPI)
-  }, 500)
+  }, 1000)
 }
 
 function fillAccountsList (appAPI, container) {
@@ -219,11 +224,35 @@ function updatePendingTxs (container, appAPI) {
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
-function contractDropdown (appAPI, appEvents, instanceContainer) {
+function contractDropdown (self, appAPI, appEvents, instanceContainer) {
   instanceContainer.appendChild(noInstancesText)
 
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
     getContractNames(success, data)
+
+    if (!success) return
+    updateInstances()
+    function updateInstances () {
+      for (var c in instances) {
+        var instance = instances[c]
+        var found = false
+        var matchedContract = null
+        for (var compiled in data.contracts) {
+          var compiledContract = data.contracts[compiled]
+          if (codeUtil.compareByteCode(instance.bytecode, compiledContract.bytecode)) {
+            found = true
+            matchedContract = compiled
+            break
+          }
+        }
+        if (!found || found && !instance.resolved) {
+          var contractInstance = appAPI.udapp().renderInstance(instance.contract, instance.address, matchedContract)
+          instanceContainer.replaceChild(contractInstance, instance.view)
+          instance.view = contractInstance
+          instance.resolved = matchedContract !== null
+        }
+      }
+    }
   })
 
   var atAddressButtonInput = yo`<input class="${css.input} ataddressinput" placeholder="Enter contract's address - i.e. 0x60606..." title="atAddress" />`
@@ -278,7 +307,12 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
 
             noInstancesText.style.display = 'none'
             var address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
-            instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectContractNames.value))
+            var contractInstance = appAPI.udapp().renderInstance(contract, address, selectContractNames.value, () => {
+              // removed
+              delete instances[address]
+            })
+            instanceContainer.appendChild(contractInstance)
+            instances[address] = { address: address, contract: contract, bytecode: contract.bytecode, view: contractInstance }
           } else {
             modalDialogCustom.alert(error)
           }
