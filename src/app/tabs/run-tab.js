@@ -9,6 +9,7 @@ var modalDialogCustom = require('../ui/modal-dialog-custom')
 var remix = require('ethereum-remix')
 var codeUtil = remix.util.code
 const copy = require('clipboard-copy')
+var Web3VMProvider = remix.web3.web3VMProvider
 
 // -------------- styling ----------------------
 var csjs = require('csjs-inject')
@@ -344,7 +345,24 @@ function contractDropdown (self, appAPI, appEvents, instanceContainer) {
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerText]
     var address = atAddressButtonInput.value
-    instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address, selectContractNames.value))
+    var contractInstance = appAPI.udapp().renderInstance(contract, address, selectContractNames.value)
+
+    // TODO the following should be put in execution context
+    var web3VM = new Web3VMProvider()
+    web3VM.setVM(appAPI.executionContext().vm())
+
+    var currentWeb3 = function () {
+      return appAPI.executionContext().isVM() ? web3VM : appAPI.executionContext().web3()
+    }
+
+    currentWeb3().eth.getCode(address, (error, code) => {
+      if (error) modalDialogCustom.alert(error)
+      if (!codeUtil.compareByteCode(code, '0x' + contract.runtimeBytecode)) {
+        modalDialogCustom.alert('The deployed contract differs from the compiled one. use it carefully.')
+      }
+      instanceContainer.appendChild(contractInstance)
+      instances[address] = { address: address, contract: contract, bytecode: '0x', view: contractInstance }
+    })
   }
 
   // GET NAMES OF ALL THE CONTRACTS
