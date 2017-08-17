@@ -111,8 +111,9 @@ class App {
     self._api.config = new Config(fileStorage)
     executionContext.init(self._api.config)
     self._api.filesProviders = {}
+    self._remixd = new Remixd()
     self._api.filesProviders['browser'] = new Browserfiles(fileStorage)
-    self._api.filesProviders['localhost'] = new SharedFolder(new Remixd())
+    self._api.filesProviders['localhost'] = new SharedFolder(self._remixd)
     self._api.filesProviders['swarm'] = new BasicReadOnlyExplorer('swarm')
     self._api.filesProviders['github'] = new BasicReadOnlyExplorer('github')
     self._api.filesProviders['gist'] = new BasicReadOnlyExplorer('gist')
@@ -196,7 +197,7 @@ function run () {
   var self = this
 
   // ----------------- Compiler -----------------
-  var compiler = new Compiler((url, cb) => {
+  var handleImportCall = (url, cb) => {
     var provider = fileManager.fileProviderOf(url)
     if (provider && provider.exists(url)) {
       return provider.get(url, cb)
@@ -209,7 +210,14 @@ function run () {
         cb(error)
       }
     })
-  })
+  }
+
+  var compiler = new Compiler({ api:
+  {
+    handleImportCall: handleImportCall,
+    sharedFolder: self._api.filesProviders['localhost']
+  } })
+
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(compiler.event)
 
   // ----------------- UniversalDApp -----------------
