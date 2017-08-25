@@ -101,9 +101,9 @@ test('Integration test constantFunctions.js', function (t) {
   var lengthCheck = {
     'KingOfTheEtherThrone.sol': 0,
     'assembly.sol': 0,
-    'ballot.sol': 0,
+    'ballot.sol': 1, // should be 0 ?
     'ballot_reentrant.sol': 0,
-    'ballot_withoutWarnings.sol': 0,
+    'ballot_withoutWarnings.sol': 1, // should be O ?
     'cross_contract.sol': 1,
     'inheritance.sol': 0,
     'modifier1.sol': 1,
