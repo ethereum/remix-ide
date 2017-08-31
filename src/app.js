@@ -402,6 +402,9 @@ function run () {
     },
     runCompiler: () => {
       runCompiler()
+    },
+    logMessage: (msg) => {
+      EditorPanel.log(msg)
     }
   }
   var rhpEvents = {
@@ -630,6 +633,8 @@ function run () {
   compiler.event.register('compilationStarted', this, function () {
     editor.clearAnnotations()
   })
+
+
 
   function startdebugging (txHash) {
     self.event.trigger('debuggingRequested', [])
