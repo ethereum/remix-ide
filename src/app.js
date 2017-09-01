@@ -404,7 +404,7 @@ function run () {
       runCompiler()
     },
     logMessage: (msg) => {
-      EditorPanel.log(msg)
+      self._components.editorpanel.log({type: 'log', value: msg})
     }
   }
   var rhpEvents = {
