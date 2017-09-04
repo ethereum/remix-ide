@@ -96,13 +96,18 @@ var css = csjs`
 /*
   trigger debugRequested
 */
-function UniversalDApp (options) {
+function UniversalDApp (opts = {}) {
   this.event = new EventManager()
   var self = this
 
-  self.options = options || {}
+  self._api = opts.api
+  self.removable = opts.opt.removable
+  self.removable_instance = opts.opt.removable_instance
+
+  // self.options = options || {}
   self.el = yo`<div class="udapp"></div>`
-  self.personalMode = self.options.personalMode || false
+  // self.personalMode = self.options.personalMode || false
+  self.personalMode = opts.opt.personalMode || false
   self.contracts
   self.transactionContextAPI
   executionContext.event.register('contextChanged', this, function (context) {
@@ -230,7 +235,8 @@ UniversalDApp.prototype.renderInstance = function (contract, address, contractNa
     <i class="fa fa-clipboard ${css.copy}" aria-hidden="true" onclick=${copyToClipboard} title='Copy to clipboard'></i>
   </div>`
 
-  if (this.options.removable_instances) {
+  // if (this.options.removable_instances) {
+  if (this.removable_instance) {
     var close = yo`<div class="${css.udappClose}" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
     title.appendChild(close)
   }
@@ -304,6 +310,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
     })
 
   function call () {
+    self._api.logMessage('UDApp transaction added ...')
     txFormat.buildData(args.contractAbi, self.contracts, false, args.funABI, inputField.val(), self, (error, data) => {
       if (!error) {
         txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {

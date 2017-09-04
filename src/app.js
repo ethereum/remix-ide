@@ -343,9 +343,14 @@ function run () {
   }
 
   var udapp = new UniversalDApp({
-    removable: false,
-    removable_instances: true
+    api: {
+      logMessage: (msg) => {
+        self._components.editorpanel.log({ type: 'log', value: msg })
+      }
+    },
+    opt: { removable: false, removable_instances: true }
   })
+
   udapp.reset({}, transactionContextAPI)
   udapp.event.register('debugRequested', this, function (txResult) {
     startdebugging(txResult.transactionHash)
@@ -402,6 +407,9 @@ function run () {
     },
     runCompiler: () => {
       runCompiler()
+    },
+    logMessage: (msg) => {
+      self._components.editorpanel.log({type: 'log', value: msg})
     }
   }
   var rhpEvents = {
