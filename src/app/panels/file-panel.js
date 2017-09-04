@@ -84,6 +84,7 @@ var css = csjs`
   }
   .treeview {
     background-color  : ${styles.colors.white};
+    overflow          : scroll;
   }
   .treeviews {
     overflow-y        : auto;
