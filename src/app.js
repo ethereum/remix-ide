@@ -343,9 +343,14 @@ function run () {
   }
 
   var udapp = new UniversalDApp({
-    removable: false,
-    removable_instances: true
+    api: {
+      logMessage: (msg) => {
+        self._components.editorpanel.log({ type: 'log', value: msg })
+      }
+    },
+    opt: { removable: false, removable_instances: true }
   })
+
   udapp.reset({}, transactionContextAPI)
   udapp.event.register('debugRequested', this, function (txResult) {
     startdebugging(txResult.transactionHash)
@@ -402,6 +407,9 @@ function run () {
     },
     runCompiler: () => {
       runCompiler()
+    },
+    logMessage: (msg) => {
+      self._components.editorpanel.log({type: 'log', value: msg})
     }
   }
   var rhpEvents = {
@@ -441,9 +449,8 @@ function run () {
         if (config.get('currentFile') !== this.source) {
           fileManager.switchFile(this.source)
         }
-        this.statementMarker = editor.addMarker(lineColumnPos, this.source, 'highlightcode')
-        editor.scrollToLine(lineColumnPos.start.line, true, true, function () {})
-
+        this.statementMarker = editor.addMarker(lineColumnPos, 'highlightcode')
+        editor.gotoLine(lineColumnPos.start.line, lineColumnPos.start.column)
         if (lineColumnPos.start.line === lineColumnPos.end.line) {
           this.fullLineMarker = editor.addMarker({
             start: {
