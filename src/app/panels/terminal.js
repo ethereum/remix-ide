@@ -448,6 +448,8 @@ class Terminal {
     }
   }
   _keep (item) {
+    return true // everything is logged
+    /*
     var self = this
     if (self.data.activeFilters.commands[item.root.cmd]) {
       var query = self.data.activeFilters.input
@@ -455,6 +457,7 @@ class Terminal {
       // @TODO: implement a `match(query, args)` function
       if (item.args === query) return true
     }
+    */
   }
   _appendItem (item) {
     var self = this
