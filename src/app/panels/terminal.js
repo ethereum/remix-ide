@@ -195,7 +195,7 @@ class Terminal {
             <i class="fa fa-ban" aria-hidden="true" onmouseenter=${hover} onmouseleave=${hover}></i>
           </div>
           ${self._view.dropdown}
-          <input type="text" class=${css.filter} onkeypress=${filter}></div>
+          <input type="text" class=${css.filter} onkeyup=${filter}></div>
           ${self._view.icon}
         </div>
       </div>
