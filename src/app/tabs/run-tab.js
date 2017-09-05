@@ -293,6 +293,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
 
   // ADD BUTTONS AT ADDRESS AND CREATE
   function createInstance () {
+    // appAPI.logMessage('transaction added ...')
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     var contracts = appAPI.getContracts()
     var contract = appAPI.getContracts()[contractNames.children[contractNames.selectedIndex].innerHTML]

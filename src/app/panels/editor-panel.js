@@ -219,6 +219,7 @@ class EditorPanel {
     var self = this
     self._components.terminal.registerType(typename, template)
   }
+
   log () {
     var self = this
     self._components.terminal._output.apply(self._components.terminal, arguments)
