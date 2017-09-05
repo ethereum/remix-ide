@@ -428,14 +428,36 @@ class Terminal {
   updateJournal (filterEvent) {
     var self = this
     var value = filterEvent.value
+    var idx
+
+    function toggleCommand (command, status) {
+      for (idx in self._INDEX.commandsMain[command]) {
+        for (var step in self._INDEX.commandsMain[value][idx].root.steps) {
+          // no need to fo deeper for now
+          self._INDEX.commandsMain[value][idx].root.steps[step].el.style.display = status
+        }
+      }
+    }
+
     if (filterEvent.type === 'select') {
       self.data.activeFilters.commands[value] = true
       // @TODO: add all items with `value === item.cmd`
+      toggleCommand(value, 'block')
     } else if (filterEvent.type === 'deselect') {
       self.data.activeFilters.commands[value] = false
       // @TODO: remove all items with `value === item.cmd`
+      toggleCommand(value, 'none')
     } else if (filterEvent.type === 'search') {
       self.data.activeFilters.input = value
+
+      for (idx in self._INDEX.all) {
+        if (self._keep(self._INDEX.all[idx])) {
+          self._INDEX.all[idx].el.style.display = 'block'
+        } else {
+          self._INDEX.all[idx].el.style.display = 'none'
+        }
+      }
+
       // @TODO: filter all active items with not `match(value, item.args)`
 
       // @TODO: implement a `match(query, args)` function
@@ -448,26 +470,25 @@ class Terminal {
     }
   }
   _keep (item) {
-    return true // everything is logged
-    /*
     var self = this
     if (self.data.activeFilters.commands[item.root.cmd]) {
       var query = self.data.activeFilters.input
+      if (!self.data.activeFilters.input) return true
       // @TODO: filter item if not `match(value, item.args)`
       // @TODO: implement a `match(query, args)` function
-      if (item.args === query) return true
-    }
-    */
+      return JSON.stringify(item.args).indexOf(query) !== -1
+    } else return false
   }
   _appendItem (item) {
     var self = this
     var { el, gidx } = item
-    if (self._keep(item)) {
-      self._view.journal.appendChild(yo`
-        <div data-gidx=${gidx} class=${css.block}>${el}</div>
-      `)
-      self.scroll2bottom()
-    }
+    var log = yo`
+      <div data-gidx=${gidx} class=${css.block}>${el}</div>
+    `
+    if (!self._keep(item)) el.style.display = 'none'
+
+    self._view.journal.appendChild(log)
+    self.scroll2bottom()
   }
   scroll2bottom () {
     var self = this
