@@ -566,9 +566,9 @@ class Terminal {
   }
   _shell (script, scopedCommands, done) { // default shell
     var self = this
-    var context = domTerminalFeatures(self, scopedCommands)
+    var cmds = domTerminalFeatures(self, scopedCommands)
     try {
-      var context = vm.createContext(Object.assign(self._jsSandboxContext, context))
+      var context = vm.createContext(Object.assign(self._jsSandboxContext, cmds))
       var result = vm.runInContext(script, context)
       self._jsSandboxContext = Object.assign({}, context)
       done(null, result)
