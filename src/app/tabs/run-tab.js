@@ -212,9 +212,11 @@ function runTab (container, appAPI, appEvents, opts) {
   // DROPDOWN
   var selectExEnv = el.querySelector('#selectExEnvOptions')
   selectExEnv.addEventListener('change', function (event) {
-    if (!executionContext.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
+    executionContext.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value, null, () => {
       selectExEnv.value = executionContext.getProvider()
-    }
+      console.log('came back neg')
+    })
+
     fillAccountsList(appAPI, el)
     instanceContainer.innerHTML = '' // clear the instances list
     noInstancesText.style.display = 'block'
