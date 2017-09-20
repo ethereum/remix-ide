@@ -7,6 +7,7 @@ var txFormat = require('../execution/txFormat')
 var txHelper = require('../execution/txHelper')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
 var executionContext = require('../../execution-context')
+var Recorder = require('../../recorder')
 const copy = require('clipboard-copy')
 
 // -------------- styling ----------------------
@@ -239,6 +240,59 @@ function updateAccountBalances (container, appAPI) {
 }
 
 /* ------------------------------------------------
+    RECORDER
+------------------------------------------------ */
+function makeRecorder (appAPI, appEvents) {
+  var udapp = appAPI.udapp()
+  var recorder = new Recorder({ events: {
+    udapp: appEvents.udapp,
+    executioncontext: executionContext.event
+  }})
+  var css = csjs`
+    .container {
+      margin-top: 10px;
+      display: flex;
+    }
+    .recorder {
+      ${styles.button}
+      width: 135px;
+    }
+    .runTxs {
+      ${styles.button}
+      margin-left: 10px;
+      width: 135px;
+    }
+  `
+  var recordButton = yo`<button class=${css.recorder}>copy ran transactions</button>`
+  var runButton = yo`<button class=${css.runTxs}>re-run transactions</button>`
+  var el = yo`
+    <div class=${css.container}>
+     ${recordButton}
+     ${runButton}
+    </div>
+  `
+  recordButton.onclick = () => {
+    var txJSON = JSON.stringify(recorder.getAll(), null, 2)
+    copy(txJSON)
+    modalDialogCustom.alert(txJSON)
+  }
+  runButton.onclick = () => { // on modal OR run tab
+    var txArray = recorder.getAll()
+    udapp.runTx(txArray, CALLBACK) // ???
+    // OR
+    // txArray.forEach(tx => udapp.runTx(tx, CALLBACK)) // ???
+  }
+  function CALLBACK () {
+    /*
+      at each callback call, if the transaction succeed and if this is a creation transaction, we should call
+      runtab.addInstance( ... ) which basically do:
+      instanceContainer.appendChild(appAPI.udapp().renderInstance(contract, address,
+      selectContractNames.value))
+    */
+  }
+  return el
+}
+/* ------------------------------------------------
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
@@ -414,6 +468,9 @@ function settings (appAPI, appEvents) {
       <div class="${css.crow}">
       <div class="${css.col1_1}">Value</div>
         <input type="text" class="${css.col2}" id="value" value="0" title="(e.g. .7 ether ...)">
+      </div>
+      <div class=${css.buttons}>
+        ${makeRecorder(appAPI, appEvents)}
       </div>
     </div>
   `
