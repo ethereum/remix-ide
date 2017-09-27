@@ -351,7 +351,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
             if (isVM) {
               var vmError = txExecution.checkVMError(txResult)
               if (vmError.error) {
-                modalDialogCustom.alert(vmError.message)
+                appAPI.logMessage(vmError.message)
                 return
               }
             }
