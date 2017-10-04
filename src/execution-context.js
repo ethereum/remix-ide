@@ -1,4 +1,3 @@
-/* global confirm, prompt */
 'use strict'
 
 var Web3 = require('web3')
@@ -9,6 +8,7 @@ var StateManager = require('ethereumjs-vm/lib/stateManager')
 var remix = require('ethereum-remix')
 var Web3VMProvider = remix.web3.web3VMProvider
 var rlp = ethUtil.rlp
+var modalDialogCustom = require('./app/ui/modal-dialog-custom')
 
 var injectedProvider
 
@@ -111,32 +111,47 @@ function ExecutionContext () {
     this.executionContextChange(context, endPointUrl)
   }
 
-  this.executionContextChange = function (context, endPointUrl) {
-    if (context === 'web3' && !confirm('Are you sure you want to connect to an ethereum node?')) {
-      return false
-    } else if (context === 'injected' && injectedProvider === undefined) {
-      return false
-    } else {
-      if (context === 'web3') {
-        executionContext = context
-        if (!endPointUrl) {
-          endPointUrl = 'http://localhost:8545'
-        }
-        endPointUrl = prompt('Web3 Provider Endpoint', endPointUrl)
-        setProviderFromEndpoint(endPointUrl)
-        self.event.trigger('contextChanged', ['web3'])
-      } else if (context === 'injected') {
+  this.executionContextChange = function (context, endPointUrl, cb) {
+    if (!cb) cb = () => {}
+    function runPrompt () {
+      if (!endPointUrl) {
+        endPointUrl = 'http://localhost:8545'
+      }
+      modalDialogCustom.prompt(null, 'Web3 Provider Endpoint', endPointUrl, (target) => {
+        setProviderFromEndpoint(target, context, cb)
+      }, () => {
+        cb()
+      })
+    }
+
+    if (context === 'vm') {
+      executionContext = context
+      vm.stateManager.revert(function () {
+        vm.stateManager.checkpoint()
+      })
+      self.event.trigger('contextChanged', ['vm'])
+      cb()
+    }
+
+    if (context === 'injected') {
+      if (injectedProvider === undefined) {
+        var alertMsg = 'No injected Web3 provider found. '
+        alertMsg += 'Make sure your provider (e.g. MetaMask) is active and running '
+        alertMsg += '(when recently activated you may have to reload the page).'
+        modalDialogCustom.alert(alertMsg)
+        cb()
+      } else {
         executionContext = context
         web3.setProvider(injectedProvider)
         self.event.trigger('contextChanged', ['injected'])
-      } else if (context === 'vm') {
-        executionContext = context
-        vm.stateManager.revert(function () {
-          vm.stateManager.checkpoint()
-        })
-        self.event.trigger('contextChanged', ['vm'])
+        cb()
       }
-      return true
+    }
+
+    if (context === 'web3') {
+      modalDialogCustom.confirm(null, 'Are you sure you want to connect to an ethereum node?',
+        () => { runPrompt(endPointUrl) }, () => { cb() }
+      )
     }
   }
 
@@ -147,23 +162,38 @@ function ExecutionContext () {
   this.blockGasLimitDefault = 4300000
   this.blockGasLimit = this.blockGasLimitDefault
   setInterval(() => {
-    web3.eth.getBlock('latest', (err, block) => {
-      if (!err) {
-        // we can't use the blockGasLimit cause the next blocks could have a lower limit : https://github.com/ethereum/remix/issues/506
-        this.blockGasLimit = (block && block.gasLimit) ? Math.floor(block.gasLimit - (5 * block.gasLimit) / 1024) : this.blockGasLimitDefault
-      } else {
-        this.blockGasLimit = this.blockGasLimitDefault
-      }
-    })
+    if (this.getProvider() !== 'vm') {
+      web3.eth.getBlock('latest', (err, block) => {
+        if (!err) {
+          // we can't use the blockGasLimit cause the next blocks could have a lower limit : https://github.com/ethereum/remix/issues/506
+          this.blockGasLimit = (block && block.gasLimit) ? Math.floor(block.gasLimit - (5 * block.gasLimit) / 1024) : this.blockGasLimitDefault
+        } else {
+          this.blockGasLimit = this.blockGasLimitDefault
+        }
+      })
+    }
   }, 15000)
 
-  function setProviderFromEndpoint (endpoint) {
+  function setProviderFromEndpoint (endpoint, context, cb) {
+    var oldProvider = web3.currentProvider
+
     if (endpoint === 'ipc') {
       web3.setProvider(new web3.providers.IpcProvider())
     } else {
       web3.setProvider(new web3.providers.HttpProvider(endpoint))
     }
-    self.event.trigger('web3EndpointChanged')
+    if (web3.isConnected()) {
+      executionContext = context
+      self.event.trigger('contextChanged', ['web3'])
+      self.event.trigger('web3EndpointChanged')
+      cb()
+    } else {
+      web3.setProvider(oldProvider)
+      var alertMsg = 'Not possible to connect to the Web3 provider. '
+      alertMsg += 'Make sure the provider is running and a connection is open (via IPC or RPC).'
+      modalDialogCustom.alert(alertMsg)
+      cb()
+    }
   }
 }
 

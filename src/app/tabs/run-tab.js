@@ -212,10 +212,12 @@ function runTab (container, appAPI, appEvents, opts) {
   // DROPDOWN
   var selectExEnv = el.querySelector('#selectExEnvOptions')
   selectExEnv.addEventListener('change', function (event) {
-    if (!executionContext.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value)) {
+    executionContext.executionContextChange(selectExEnv.options[selectExEnv.selectedIndex].value, null, () => {
+      // set the final context. Cause it is possible that this is not the one we've originaly selected
       selectExEnv.value = executionContext.getProvider()
-    }
-    fillAccountsList(appAPI, el)
+      fillAccountsList(appAPI, el)
+    })
+
     instanceContainer.innerHTML = '' // clear the instances list
     noInstancesText.style.display = 'block'
     instanceContainer.appendChild(noInstancesText)
@@ -260,33 +262,14 @@ function updateAccountBalances (container, appAPI) {
 ------------------------------------------------ */
 
 function contractDropdown (appAPI, appEvents, instanceContainer) {
-  var iconContainer
-  var iFail
-  var errOn
-  var failCont
-  var iFailDesc
   instanceContainer.appendChild(noInstancesText)
+  var compFails = yo`<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-thumbs-down ${css.errorIcon}" ></i>`
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
+    getContractNames(success, data)
     if (success) {
-      getContractNames(success, data)
-      if (errOn) {
-        iconContainer.removeChild(failCont)
-        errOn = false
-      }
+      compFails.style.display = 'none'
     } else {
-      if (!errOn) {
-        iconContainer = document.querySelector(`.${css.runTabView} .${css.subcontainer}`)
-        failCont = document.createElement('div')
-        iFail = document.createElement('i')
-        iFailDesc = document.createElement('p')
-        iFailDesc.innerHTML = 'Compiler ERROR'
-        iFailDesc.className = `${css.failDesc}`
-        iconContainer.appendChild(failCont)
-        failCont.appendChild(iFail)
-        failCont.appendChild(iFailDesc)
-        iFail.className = `fa fa-thumbs-down fa-2x ${css.errorIcon}`
-        errOn = true
-      }
+      compFails.style.display = 'block'
     }
   })
 
@@ -296,7 +279,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
   var el = yo`
     <div class="${css.container}">
       <div class="${css.subcontainer}">
-        ${selectContractNames}
+        ${selectContractNames} ${compFails}
       </div>
       <div class="${css.buttons}">
         <div class="${css.button}">
@@ -351,7 +334,7 @@ function contractDropdown (appAPI, appEvents, instanceContainer) {
             if (isVM) {
               var vmError = txExecution.checkVMError(txResult)
               if (vmError.error) {
-                modalDialogCustom.alert(vmError.message)
+                appAPI.logMessage(vmError.message)
                 return
               }
             }

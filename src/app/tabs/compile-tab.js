@@ -1,4 +1,4 @@
-/* global alert */
+/* global */
 var $ = require('jquery')
 
 var yo = require('yo-yo')
@@ -174,7 +174,7 @@ function compileTab (container, appAPI, appEvents, opts) {
         <div class="${css.compileButtons}">
           <div class="${css.compileButton} "id="compile" title="Compile source code">${compileIcon} Start to compile</div>
           <div class="${css.autocompileContainer}">
-            <input class="${css.autocompile}" id="autoCompile" type="checkbox" checked title="Auto compile">
+            <input class="${css.autocompile}" id="autoCompile" type="checkbox" title="Auto compile">
             <span class="${css.autocompileText}">Auto compile</span>
           </div>
           ${warnCompilationSlow}
@@ -215,7 +215,9 @@ function compileTab (container, appAPI, appEvents, opts) {
     autoCompile = appAPI.config.get('autoCompile')
   }
   appAPI.config.set('autoCompile', autoCompile)
-  autoCompileInput.setAttribute('checked', autoCompile)
+  if (autoCompile) {
+    autoCompileInput.setAttribute('checked', autoCompile)
+  }
 
   autoCompileInput.addEventListener('change', function () {
     appAPI.config.set('autoCompile', autoCompileInput.checked)
@@ -432,9 +434,13 @@ function compileTab (container, appAPI, appEvents, opts) {
         } else {
           publishOnSwarm(contract, appAPI, function (err) {
             if (err) {
-              alert('Failed to publish metadata: ' + err)
+              try {
+                err = JSON.stringify(err)
+              } catch (e) {}
+              modalDialogCustom.alert(yo`<span>Failed to publish metadata file to swarm, please check the Swarm gateways is available ( swarm-gateways.net ).<br />
+              ${err}</span>`)
             } else {
-              alert('Metadata published successfully. You\'l find the Swarm address in the Contract details.')
+              modalDialogCustom.alert(yo`<span>Metadata published successfully.<br />The Swarm address of the metadata file is available in the contract details.</span>`)
             }
           })
         }
