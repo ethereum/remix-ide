@@ -159,7 +159,7 @@ module.exports = {
         var json = {}
         for (i = 0; i < outputTypes.length; i++) {
           var name = fnabi.outputs[i].name
-          json[i] = name ? name + ' ' + decodedObj[i] : decodedObj[i]
+          json[i] = outputTypes[i] + ': ' + (name ? name + ' ' + decodedObj[i] : decodedObj[i])
         }
 
         return json
