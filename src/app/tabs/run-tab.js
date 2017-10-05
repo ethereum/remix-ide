@@ -96,7 +96,7 @@ var css = csjs`
   .subcontainer {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
   }
   .buttons {
     display: flex;
@@ -263,8 +263,7 @@ function updateAccountBalances (container, appAPI) {
 
 function contractDropdown (appAPI, appEvents, instanceContainer) {
   instanceContainer.appendChild(noInstancesText)
-  // I left the <span> tag here - even though it don't work
-  var compFails = yo`<div><span class="${css.errorSymb}"></span><i class="fa fa-times fa-2x ${css.errorIcon}"></i></div>`
+  var compFails = yo`<span title='Contract compilation failed. Please check the compile tab for more information' class="${css.errorSymb}"></span>`
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
     getContractNames(success, data)
     if (success) {
