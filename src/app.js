@@ -315,7 +315,7 @@ function run () {
             }
           }
         }
-        return editor.addMarker(lineColumn, compiler.lastCompilationResult.data.sourceList[position.file], css)
+        return editor.addMarker(lineColumn, Object.keys(compiler.lastCompilationResult.data.contracts)[position.file], css)
       }
       return null
     },
@@ -333,7 +333,7 @@ function run () {
     jumpTo: (position) => {
       if (compiler.lastCompilationResult && compiler.lastCompilationResult.data) {
         var lineColumn = offsetToLineColumnConverter.offsetToLineColumn(position, position.file, compiler.lastCompilationResult)
-        var filename = compiler.lastCompilationResult.data.sourceList[position.file]
+        var filename = Object.keys(compiler.lastCompilationResult.data.contracts)[position.file]
         if (filename !== config.get('currentFile') && (filesProviders['browser'].exists(filename) || filesProviders['localhost'].exists(filename))) {
           fileManager.switchFile(filename)
         }
@@ -493,7 +493,7 @@ function run () {
 
   var staticAnalysisAPI = {
     renderWarning: (label, warningContainer, type) => {
-      return renderer.error(label, warningContainer, type)
+      return renderer.error({ severity: 'warning', formattedMessage: label }, warningContainer, type)
     },
     offsetToLineColumn: (location, file) => {
       return offsetToLineColumnConverter.offsetToLineColumn(location, file, compiler.lastCompilationResult)
@@ -511,9 +511,16 @@ function run () {
       document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
       onResize()
     },
-    getContracts: () => {
+    getContract: (name) => {
       if (compiler.lastCompilationResult && compiler.lastCompilationResult.data) {
-        return compiler.lastCompilationResult.data.contracts
+        var contracts = compiler.lastCompilationResult.data.contracts
+        for (var filename in contracts) {
+          for (var contractName in contracts[filename]) {
+            if (name === contractName) {
+              return contracts[filename][contractName]
+            }
+          }
+        }
       }
       return null
     },
@@ -534,12 +541,6 @@ function run () {
     },
     compilationMessage: (message, container, options) => {
       renderer.error(message, container, options)
-    },
-    currentCompiledSourceCode: () => {
-      if (compiler.lastCompilationResult.source) {
-        return compiler.lastCompilationResult.source.sources[compiler.lastCompilationResult.source.target]
-      }
-      return ''
     },
     resetDapp: (contracts) => {
       udapp.reset(contracts, transactionContextAPI)
@@ -595,7 +596,7 @@ function run () {
       this.fullLineMarker = null
       this.source = null
       if (lineColumnPos) {
-        this.source = compiler.lastCompilationResult.data.sourceList[location.file] // auto switch to that tab
+        this.source = Object.keys(compiler.lastCompilationResult.data.contracts)[location.file] // auto switch to that tab
         if (config.get('currentFile') !== this.source) {
           fileManager.switchFile(this.source)
         }
@@ -664,7 +665,7 @@ function run () {
           if (error) {
             console.log(error)
           } else {
-            sources[target] = content
+            sources[target] = { content }
             compiler.compile(sources, target)
           }
         })

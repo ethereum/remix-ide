@@ -4,7 +4,8 @@ var solc = require('solc/wrapper')
 var solcABI = require('solc/abi')
 
 var webworkify = require('webworkify')
-var utils = require('../../lib/utils')
+
+var compilerInput = require('./compiler-input')
 
 var EventManager = require('ethereum-remix').lib.EventManager
 
@@ -82,7 +83,9 @@ function Compiler (handleImportCall) {
 
         var result
         try {
-          result = compiler.compile(source, optimize, missingInputsCallback)
+          var input = compilerInput(source, {optimize})
+          result = compiler.compileStandardWrapper(input, missingInputsCallback)
+          result = JSON.parse(result)
         } catch (exception) {
           result = { error: 'Uncaught JavaScript exception:\n' + exception }
         }
@@ -107,7 +110,7 @@ function Compiler (handleImportCall) {
         return false
       }
 
-      return utils.errortype(error) !== 'warning'
+      return error.severity !== 'warning'
     }
 
     if (data['error'] !== undefined) {
@@ -261,7 +264,7 @@ function Compiler (handleImportCall) {
         if (err) {
           cb(err)
         } else {
-          files[m] = content
+          files[m] = { content }
           gatherImports(files, target, importHints, cb)
         }
       })
@@ -269,7 +272,7 @@ function Compiler (handleImportCall) {
       return
     }
 
-    cb(null, { 'sources': files, 'target': target })
+    cb(null, files)
   }
 
   function truncateVersion (version) {
@@ -281,10 +284,10 @@ function Compiler (handleImportCall) {
   }
 
   function updateInterface (data) {
-    for (var contract in data.contracts) {
-      var abi = JSON.parse(data.contracts[contract].interface)
-      abi = solcABI.update(truncateVersion(currentVersion), abi)
-      data.contracts[contract].interface = JSON.stringify(abi)
+    for (var file in data.contracts) {
+      for (var contract in data.contracts[file]) {
+        data.contracts[file][contract].abi = solcABI.update(truncateVersion(currentVersion), data.contracts[file][contract].abi)
+      }
     }
 
     return data

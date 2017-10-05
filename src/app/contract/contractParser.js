@@ -3,23 +3,23 @@
 var $ = require('jquery')
 var txHelper = require('../execution/txHelper')
 
-module.exports = (contractName, contract, compiledSource) => {
-  return getDetails(contractName, contract, compiledSource)
+module.exports = (contractName, contract) => {
+  return getDetails(contractName, contract)
 }
 
-var getDetails = function (contractName, contract, source) {
+var getDetails = function (contractName, contract) {
   var detail = {}
   detail.name = contractName
   detail.metadata = contract.metadata
-  if (contract.bytecode) {
-    detail.bytecode = contract.bytecode
+  if (contract.evm.bytecode.object) {
+    detail.bytecode = contract.evm.bytecode.object
   }
 
-  detail.interface = contract.interface
+  detail.abi = contract.abi
 
   if (contract.bytecode) {
-    detail.bytecode = contract.bytecode
-    detail.web3Deploy = gethDeploy(contractName.toLowerCase(), contract['interface'], contract.bytecode)
+    detail.bytecode = contract.evm.bytecode.object
+    detail.web3Deploy = gethDeploy(contractName.toLowerCase(), contract.abi, contract.bytecode)
 
     detail.metadataHash = retrieveMetadataHash(contract.bytecode)
     if (detail.metadataHash) {
@@ -32,7 +32,7 @@ var getDetails = function (contractName, contract, source) {
     detail.functionHashes[contract.functionHashes[fun]] = fun
   }
 
-  detail.gasEstimates = formatGasEstimates(contract.gasEstimates)
+  detail.gasEstimates = formatGasEstimates(contract.evm.gasEstimates)
 
   if (contract.runtimeBytecode && contract.runtimeBytecode.length > 0) {
     detail['Runtime Bytecode'] = contract.runtimeBytecode
@@ -40,10 +40,6 @@ var getDetails = function (contractName, contract, source) {
 
   if (contract.opcodes !== undefined && contract.opcodes !== '') {
     detail['Opcodes'] = contract.opcodes
-  }
-
-  if (contract.assembly !== null) {
-    detail['Assembly'] = formatAssemblyText(contract.assembly, '', source)
   }
 
   return detail
@@ -54,35 +50,6 @@ var retrieveMetadataHash = function (bytecode) {
   if (match) {
     return match[1]
   }
-}
-
-var formatAssemblyText = function (asm, prefix, source) {
-  if (typeof asm === typeof '' || asm === null || asm === undefined) {
-    return prefix + asm + '\n'
-  }
-  var text = prefix + '.code\n'
-  $.each(asm['.code'], function (i, item) {
-    var v = item.value === undefined ? '' : item.value
-    var src = ''
-    if (item.begin !== undefined && item.end !== undefined) {
-      src = source.slice(item.begin, item.end).replace('\n', '\\n', 'g')
-    }
-    if (src.length > 30) {
-      src = src.slice(0, 30) + '...'
-    }
-    if (item.name !== 'tag') {
-      text += '  '
-    }
-    text += prefix + item.name + ' ' + v + '\t\t\t' + src + '\n'
-  })
-  text += prefix + '.data\n'
-  if (asm['.data']) {
-    $.each(asm['.data'], function (i, item) {
-      text += '  ' + prefix + '' + i + ':\n'
-      text += formatAssemblyText(item, prefix + '    ', source)
-    })
-  }
-  return text
 }
 
 var gethDeploy = function (contractName, jsonInterface, bytecode) {

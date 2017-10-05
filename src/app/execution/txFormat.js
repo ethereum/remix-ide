@@ -46,7 +46,7 @@ module.exports = {
       dataHex = data.slice(2)
     }
     if (isConstructor) {
-      var bytecodeToDeploy = contract.bytecode
+      var bytecodeToDeploy = contract.evm.bytecode.object
       if (bytecodeToDeploy.indexOf('_') >= 0) {
         this.linkBytecode(contract, contracts, udapp, (err, bytecode) => {
           if (err) {
@@ -69,7 +69,7 @@ module.exports = {
   atAddress: function () {},
 
   linkBytecode: function (contract, contracts, udapp, callback, callbackStep) {
-    var bytecode = contract.bytecode
+    var bytecode = contract.evm.bytecode.object
     if (bytecode.indexOf('_') < 0) {
       return callback(null, bytecode)
     }
@@ -95,7 +95,7 @@ module.exports = {
       while (bytecode.indexOf(libLabel) >= 0) {
         bytecode = bytecode.replace(libLabel, hexAddress)
       }
-      contract.bytecode = bytecode
+      contract.evm.bytecode.object = bytecode
       this.linkBytecode(contract, contracts, udapp, callback, callbackStep)
     }, callbackStep)
   },
@@ -105,7 +105,7 @@ module.exports = {
     if (address) {
       return callback(null, address)
     }
-    var bytecode = library.bytecode
+    var bytecode = library.evm.bytecode.object
     if (bytecode.indexOf('_') >= 0) {
       this.linkBytecode(libraryName, library, udapp, (err, bytecode) => {
         if (err) callback(err)
