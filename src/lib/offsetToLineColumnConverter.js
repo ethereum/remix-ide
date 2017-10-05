@@ -12,7 +12,7 @@ function offsetToColumnConverter (compilerEvent) {
 
 offsetToColumnConverter.prototype.offsetToLineColumn = function (rawLocation, file, compilationResult) {
   if (!this.lineBreakPositionsByContent[file]) {
-    this.lineBreakPositionsByContent[file] = this.sourceMappingDecoder.getLinebreakPositions(compilationResult.source.sources[compilationResult.data.sourceList[file]])
+    this.lineBreakPositionsByContent[file] = this.sourceMappingDecoder.getLinebreakPositions(compilationResult.source.sources[Object.keys(compilationResult.contracts)[file]])
   }
   return this.sourceMappingDecoder.convertOffsetToLineColumn(rawLocation, this.lineBreakPositionsByContent[file])
 }

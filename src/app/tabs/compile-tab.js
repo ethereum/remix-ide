@@ -306,7 +306,7 @@ function compileTab (container, appAPI, appEvents, opts) {
       if (!error) {
         if (data.contracts) {
           for (var contract in data.contracts) {
-            appAPI.compilationMessage(contract, $(errorContainer), {type: 'success'})
+            appAPI.compilationMessage({ formattedMessage: contract, severity: 'success' }, $(errorContainer))
           }
         }
       }
@@ -315,7 +315,7 @@ function compileTab (container, appAPI, appEvents, opts) {
     appEvents.staticAnalysis.register('staticAnaysisWarning', (count) => {
       if (count) {
         var errorContainer = container.querySelector('.error')
-        appAPI.compilationMessage(`Static Analysis raised ${count} warning(s) that requires your attention.`, $(errorContainer), {
+        appAPI.compilationMessage({ severity: 'warning', formattedMessage: `Static Analysis raised ${count} warning(s) that requires your attention.` }, $(errorContainer), {
           type: 'warning',
           click: () => appAPI.switchTab('staticanalysisView')
         })
@@ -340,13 +340,15 @@ function compileTab (container, appAPI, appEvents, opts) {
       contractNames.innerHTML = ''
       if (success) {
         contractNames.removeAttribute('disabled')
-        for (var name in data.contracts) {
-          contractsDetails[name] = parseContracts(name, data.contracts[name], appAPI.currentCompiledSourceCode())
-          var contractName = yo`
-            <option>
-              ${name}
-            </option>`
-          contractNames.appendChild(contractName)
+        for (var file in data.contracts) {
+          for (var name in data.contracts[file]) {
+            contractsDetails[name] = parseContracts(name, data.contracts[file][name])
+            var contractName = yo`
+              <option>
+                ${name}
+              </option>`
+            contractNames.appendChild(contractName)
+          }
         }
         appAPI.resetDapp(contractsDetails)
       } else {
@@ -366,7 +368,6 @@ function compileTab (container, appAPI, appEvents, opts) {
           var copyDetails = yo`<span class="${css.copyDetails}"><i title="Copy value to clipboard" class="fa fa-clipboard" onclick=${() => { copy(details[x]) }} aria-hidden="true"></i></span>`
           var questionMark = yo`<span class="${css.questionMark}"><i title="${detailsHelpSection()[x]}" class="fa fa-question-circle" aria-hidden="true"></i></span>`
           var keyDisplayName
-          (x === 'interface') ? keyDisplayName = 'interface - abi' : keyDisplayName = x
           log.appendChild(yo`
             <div class=${css.log}>
               <div class="${css.key}">${keyDisplayName} ${copyDetails} ${questionMark}</div>
@@ -385,7 +386,7 @@ function compileTab (container, appAPI, appEvents, opts) {
         node = yo`<div>${details[x].slice(0, 60) + '...'}</div>`
       } else if (x === 'web3Deploy' || x === 'name') {
         node = yo`<pre>${details[x]}</pre>`
-      } else if (x === 'interface' || x === 'metadata') {
+      } else if (x === 'abi' || x === 'metadata') {
         var treeView = new TreeView({
           extractData: function (item, parent, key) {
             var ret = {}
@@ -457,7 +458,7 @@ function detailsHelpSection () {
     'gasEstimates': 'Gas estimation for each function call',
     'metadata': 'Contains all informations related to the compilation',
     'metadataHash': 'Hash representing all metadata information',
-    'interface': 'ABI: describing all the functions (input/output params, scope, ...)',
+    'abi': 'ABI: describing all the functions (input/output params, scope, ...)',
     'name': 'Name of the compiled contract',
     'swarmLocation': 'Swarm url where all metadata information can be found (contract needs to be published first)',
     'web3Deploy': 'Copy/paste this code to any JavaScript/Web3 console to deploy this contract'

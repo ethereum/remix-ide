@@ -36,7 +36,7 @@ class EventsDecoder {
   }
 
   _eventABI (contractabi) {
-    contractabi = JSON.parse(contractabi.interface)
+    contractabi = JSON.parse(contractabi.abi)
     var eventABI = {}
     contractabi.forEach(function (funABI, i) {
       if (funABI.type !== 'event') {

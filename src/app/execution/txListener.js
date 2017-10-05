@@ -215,7 +215,7 @@ class TxListener {
       // if web3: we have to call getTransactionReceipt to get the created address
       // if VM: created address already included
       var code = tx.input
-      contractName = this._tryResolveContract(code, contracts, 'bytecode')
+      contractName = this._tryResolveContract(code, contracts, true)
       if (contractName) {
         this._api.resolveReceipt(tx, (error, receipt) => {
           if (error) return cb(error)
@@ -237,7 +237,7 @@ class TxListener {
         executionContext.web3().eth.getCode(tx.to, (error, code) => {
           if (error) return cb(error)
           if (code) {
-            var contractName = this._tryResolveContract(code, contracts, 'runtimeBytecode')
+            var contractName = this._tryResolveContract(code, contracts, false)
             if (contractName) {
               this._resolvedContracts[tx.to] = contractName
               var fun = this._resolveFunction(contractName, contracts, tx, false)
@@ -257,7 +257,7 @@ class TxListener {
   }
 
   _resolveFunction (contractName, compiledContracts, tx, isCtor) {
-    var abi = JSON.parse(compiledContracts[contractName].interface)
+    var abi = JSON.parse(compiledContracts[contractName].abi)
     var inputData = tx.input.replace('0x', '')
     if (!isCtor) {
       for (var fn in compiledContracts[contractName].functionHashes) {
@@ -283,7 +283,7 @@ class TxListener {
         params: null
       }
     } else {
-      var bytecode = compiledContracts[contractName].bytecode
+      var bytecode = compiledContracts[contractName].evm.bytecode.object
       var params = null
       if (bytecode && bytecode.length) {
         params = this._decodeInputParams(inputData.substring(bytecode.length), getConstructorInterface(abi))
@@ -298,10 +298,13 @@ class TxListener {
     return this._resolvedTransactions[tx.hash]
   }
 
-  _tryResolveContract (codeToResolve, compiledContracts, type) {
-    for (var k in compiledContracts) {
-      if (codeUtil.compareByteCode(codeToResolve, '0x' + compiledContracts[k][type])) {
-        return k
+  _tryResolveContract (codeToResolve, compiledContracts, isCreation) {
+    for (var file in compiledContracts) {
+      for (var contract in compiledContracts[file]) {
+        var bytes = isCreation ? compiledContracts[file][contract].evm.bytecode.object : compiledContracts.evm.deployedBytecode.object
+        if (codeUtil.compareByteCode(codeToResolve, '0x' + bytes)) {
+          return contract
+        }
       }
     }
     return null

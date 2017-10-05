@@ -32,7 +32,7 @@ module.exports = {
   },
 
   sortAbiFunction: function (contract) {
-    var abi = JSON.parse(contract.interface).sort(function (a, b) {
+    var abi = contract.abi.sort(function (a, b) {
       if (a.name > b.name) {
         return -1
       } else {
