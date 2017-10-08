@@ -1,6 +1,5 @@
 'use strict'
 
-var $ = require('jquery')
 var txHelper = require('../execution/txHelper')
 
 module.exports = (contractName, contract) => {
