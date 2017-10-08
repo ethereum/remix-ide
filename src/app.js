@@ -506,18 +506,14 @@ function run () {
       document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
       onResize()
     },
+    getContracts: () => {
+      return compiler.getContracts()
+    },
     getContract: (name) => {
-      if (compiler.lastCompilationResult && compiler.lastCompilationResult.data) {
-        var contracts = compiler.lastCompilationResult.data.contracts
-        for (var filename in contracts) {
-          for (var contractName in contracts[filename]) {
-            if (name === contractName) {
-              return contracts[filename][contractName]
-            }
-          }
-        }
-      }
-      return null
+      return compiler.getContract(name)
+    },
+    visitContracts: (cb) => {
+      compiler.visitContracts(cb)
     },
     udapp: () => {
       return udapp

@@ -78,11 +78,19 @@ module.exports = {
       return callback('Invalid bytecode format.')
     }
     var libraryName = m[1]
-    var libraryabi = helper.getContractByName(libraryName, contracts)
-    if (!libraryabi) {
+    // file_name:library_name
+    var libRef = libraryName.match(/(.*):(.*)/)
+    if (!libRef) {
+      return callback('Cannot extract library reference ' + libraryName)
+    }
+    if (!contracts[libRef[1]] || !contracts[libRef[1]][libRef[2]]) {
+      return callback('Cannot find library reference ' + libraryName)
+    }
+    var library = contracts[libRef[1]][libRef[2]]
+    if (!library) {
       return callback('Library ' + libraryName + ' not found.')
     }
-    this.deployLibrary(libraryName, libraryabi, udapp, (err, address) => {
+    this.deployLibrary(libraryName, library, contracts, udapp, (err, address) => {
       if (err) {
         return callback(err)
       }
@@ -100,16 +108,16 @@ module.exports = {
     }, callbackStep)
   },
 
-  deployLibrary: function (libraryName, library, udapp, callback, callbackStep) {
+  deployLibrary: function (libraryName, library, contracts, udapp, callback, callbackStep) {
     var address = library.address
     if (address) {
       return callback(null, address)
     }
     var bytecode = library.evm.bytecode.object
     if (bytecode.indexOf('_') >= 0) {
-      this.linkBytecode(libraryName, library, udapp, (err, bytecode) => {
+      this.linkBytecode(libraryName, contracts, udapp, (err, bytecode) => {
         if (err) callback(err)
-        else this.deployLibrary(libraryName, library, udapp, callback, callbackStep)
+        else this.deployLibrary(libraryName, library, contracts, udapp, callback, callbackStep)
       }, callbackStep)
     } else {
       callbackStep(`creation of library ${libraryName} pending...`)
