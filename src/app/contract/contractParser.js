@@ -17,29 +17,25 @@ var getDetails = function (contractName, contract) {
 
   detail.abi = contract.abi
 
-  if (contract.bytecode) {
-    detail.bytecode = contract.evm.bytecode.object
-    detail.web3Deploy = gethDeploy(contractName.toLowerCase(), contract.abi, contract.bytecode)
+  if (contract.evm.bytecode.object) {
+    detail.bytecode = contract.evm.bytecode
+    detail.web3Deploy = gethDeploy(contractName.toLowerCase(), contract.abi, contract.evm.bytecode.object)
 
-    detail.metadataHash = retrieveMetadataHash(contract.bytecode)
+    detail.metadataHash = retrieveMetadataHash(contract.evm.bytecode.object)
     if (detail.metadataHash) {
-      detail.swarmLocation = 'bzz://' + detail.metadataHash
+      detail.swarmLocation = 'bzzr://' + detail.metadataHash
     }
   }
 
   detail.functionHashes = {}
-  for (var fun in contract.functionHashes) {
-    detail.functionHashes[contract.functionHashes[fun]] = fun
+  for (var fun in contract.evm.methodIdentifiers) {
+    detail.functionHashes[contract.evm.methodIdentifiers[fun]] = fun
   }
 
   detail.gasEstimates = formatGasEstimates(contract.evm.gasEstimates)
 
-  if (contract.runtimeBytecode && contract.runtimeBytecode.length > 0) {
-    detail['Runtime Bytecode'] = contract.runtimeBytecode
-  }
-
-  if (contract.opcodes !== undefined && contract.opcodes !== '') {
-    detail['Opcodes'] = contract.opcodes
+  if (contract.evm.deployedBytecode && contract.evm.deployedBytecode.object.length > 0) {
+    detail['Runtime Bytecode'] = contract.evm.deployedBytecode
   }
 
   return detail
@@ -54,14 +50,14 @@ var retrieveMetadataHash = function (bytecode) {
 
 var gethDeploy = function (contractName, jsonInterface, bytecode) {
   var code = ''
-  var funABI = txHelper.getConstructorInterface(JSON.parse(jsonInterface))
+  var funABI = txHelper.getConstructorInterface(jsonInterface)
 
   funABI.inputs.forEach(function (inp) {
     code += 'var ' + inp.name + ' = /* var of type ' + inp.type + ' here */ ;\n'
   })
 
   contractName = contractName.replace(/[:./]/g, '_')
-  code += 'var ' + contractName + 'Contract = web3.eth.contract(' + jsonInterface.replace('\n', '') + ');' +
+  code += 'var ' + contractName + 'Contract = web3.eth.contract(' + JSON.stringify(jsonInterface).replace('\n', '') + ');' +
     '\nvar ' + contractName + ' = ' + contractName + 'Contract.new('
 
   funABI.inputs.forEach(function (inp) {

@@ -9,6 +9,8 @@ var compilerInput = require('./compiler-input')
 
 var EventManager = require('ethereum-remix').lib.EventManager
 
+var txHelper = require('../execution/txHelper')
+
 /*
   trigger compilationFinished, compilerLoaded, compilationStarted, compilationDuration
 */
@@ -100,6 +102,53 @@ function Compiler (handleImportCall) {
     data: null,
     source: null
   }
+
+  /**
+    * return the contract obj of the given @arg name. Uses last compilation result.
+    * return null if not found
+    * @param {String} name    - contract name
+    * @returns contract obj and associated file: { contract, file } or null
+    */
+  this.getContract = (name) => {
+    if (this.lastCompilationResult.data && this.lastCompilationResult.data.contracts) {
+      return txHelper.getContract(name, this.lastCompilationResult.data.contracts)
+    }
+    return null
+  }
+
+  /**
+    * call the given @arg cb (function) for all the contracts. Uses last compilation result
+    * @param {Function} cb    - callback
+    */
+  this.visitContracts = (cb) => {
+    if (this.lastCompilationResult.data && this.lastCompilationResult.data.contracts) {
+      return txHelper.visitContracts(this.lastCompilationResult.data.contracts, cb)
+    }
+    return null
+  }
+
+  /**
+    * return the compiled contracts from the last compilation result
+    * @return {Object}     - contracts
+    */
+  this.getContracts = () => {
+    if (this.lastCompilationResult.data && this.lastCompilationResult.data.contracts) {
+      return this.lastCompilationResult.data.contracts
+    }
+    return null
+  }
+
+   /**
+    * return the sources from the last compilation result
+    * @param {Object} cb    - map of sources
+    */
+  this.getSources = () => {
+    if (this.lastCompilationResult.data) {
+      return this.lastCompilationResult.source
+    }
+    return null
+  }
+
   function compilationFinished (data, missingInputs, source) {
     var noFatalErrors = true // ie warnings are ok
 
@@ -284,12 +333,9 @@ function Compiler (handleImportCall) {
   }
 
   function updateInterface (data) {
-    for (var file in data.contracts) {
-      for (var contract in data.contracts[file]) {
-        data.contracts[file][contract].abi = solcABI.update(truncateVersion(currentVersion), data.contracts[file][contract].abi)
-      }
-    }
-
+    txHelper.visitContracts(data.contracts, (contract) => {
+      data.contracts[contract.file][contract.name].abi = solcABI.update(truncateVersion(currentVersion), contract.object.abi)
+    })
     return data
   }
 }
