@@ -4,16 +4,14 @@ var init = require('../helpers/init')
 var sauce = require('./sauce')
 
 var sources = {
-  'sources': {
-    'browser/Untitled.sol': `pragma solidity ^0.4.0;
+  'browser/Untitled.sol': { content: `pragma solidity ^0.4.0;
       contract TestContract { function f() returns (uint) { return 8; } 
       function g() returns (uint, string, bool, uint) {  
         uint payment = 345;
         bool payed = true;
         string memory comment = "comment_comment_";
         uint month = 4;
-        return (payment, comment, payed, month); } }`
-  }
+        return (payment, comment, payed, month); } }`}
 }
 
 module.exports = {

@@ -5,15 +5,13 @@ var sauce = require('./sauce')
 var dom = require('../helpers/dom')
 
 var sources = {
-  'sources': {
-    'browser/Untitled.sol': `
+  'browser/Untitled.sol': { content: `
 contract test1 { address test = tx.origin; }
 contract test2 {}
 contract TooMuchGas {
   uint x;
   function() { x++; }
-}`
-  }
+}`}
 }
 
 module.exports = {

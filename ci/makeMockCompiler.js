@@ -5,6 +5,8 @@ var solc = require('solc/wrapper')
 var soljson = require('../soljson')
 var compiler = solc(soljson)
 
+var compilerInput = require('../src/app/compiler/compiler-input')
+
 gatherCompilationResults(function (error, data) {
   if (error) {
     console.log(error)
@@ -25,9 +27,9 @@ function gatherCompilationResults (callback) {
         var testDef = require('../test-browser/tests/' + item)
         if ('@sources' in testDef) {
           var source = testDef['@sources']()
-          var result = compile(source, 1)
+          var result = compile(source, true)
           compilationResult[result.key] = result
-          result = compile(source, 0)
+          result = compile(source, false)
           compilationResult[result.key] = result
         }
       })
@@ -39,16 +41,13 @@ function gatherCompilationResults (callback) {
 
 function compile (source, optimization) {
   var missingInputs = []
-  var result = compiler.compile(source, optimization, function (path) {
+  var input = compilerInput(source, {optimize: optimization})
+  var result = compiler.compileStandardWrapper(input, function (path) {
     missingInputs.push(path)
   })
-  var key = optimization.toString()
-  for (var k in source.sources) {
-    key += k + source.sources[k]
-  }
-  key = key.replace(/(\t)|(\n)|( )/g, '')
+  input = input.replace(/(\t)|(\n)|( )/g, '')
   return {
-    key: key,
+    key: input,
     source: source,
     optimization: optimization,
     missingInputs: missingInputs,

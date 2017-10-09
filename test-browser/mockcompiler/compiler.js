@@ -1,7 +1,7 @@
 'use strict'
 
 var Module = { // eslint-disable-line
-  cwrap: function () { return arguments[0] === 'version' ? version : compile },
+  cwrap: function () { return arguments[0] === 'version' ? version : compileStandard },
   writeStringToMemory: function () {},
   setValue: function () {},
   Pointer_stringify: function () {},
@@ -11,22 +11,16 @@ var Module = { // eslint-disable-line
   },
   _compileJSONMulti: {},
   _compileJSONCallback: {},
-  _compileJSON: {}
+  _compileJSON: {},
+  _compileStandard: compileStandard
 }
 
-function compile (source, optimization, missingInputs) {
-  if (typeof source === 'string') {
-    source = JSON.parse(source)
-  }
-  var key = optimization.toString()
-  for (var k in source.sources) {
-    key += k + source.sources[k]
-  }
-  key = key.replace(/(\t)|(\n)|( )/g, '')
-  var data = mockData[key] // eslint-disable-line
+function compileStandard (source, missingInputs) {
+  source = source.replace(/(\t)|(\n)|( )/g, '')
+  var data = mockData[source] // eslint-disable-line
   if (data === undefined) {
     return JSON.stringify({
-      errors: ['mock compiler: source not found']
+      errors: [{ formattedMessage: 'mock compiler: source not found', severity: 'error' }]
     })
   } else {
     data.missingInputs.map(function (item, i) {
@@ -35,7 +29,7 @@ function compile (source, optimization, missingInputs) {
       }
     })
   }
-  return JSON.stringify(data.result)
+  return data.result
 }
 
 function version () {

@@ -4,9 +4,7 @@ var init = require('../helpers/init')
 var sauce = require('./sauce')
 
 var sources = {
-  'sources': {
-    'browser/Untitled.sol': 'contract test1 {} contract test2 {}'
-  }
+  'browser/Untitled.sol': { content: 'contract test1 {} contract test2 {}' }
 }
 
 module.exports = {
