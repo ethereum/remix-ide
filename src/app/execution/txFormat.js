@@ -127,9 +127,8 @@ module.exports = {
       })
     }
   },
-  
+
   linkLibraryStandard: function (libraryName, address, contract) {
-    
     var bytecode = contract.evm.bytecode.object
     for (var file in contract.evm.bytecode.linkReferences) {
       for (var libName in contract.evm.bytecode.linkReferences[file]) {
@@ -152,7 +151,7 @@ module.exports = {
     }
     return bytecodeToLink
   },
-  
+
   linkLibrary: function (libraryName, address, bytecodeToLink) {
     var libLabel = '__' + libraryName + Array(39 - libraryName.length).join('_')
     if (bytecodeToLink.indexOf(libLabel) === -1) return bytecodeToLink
