@@ -31,7 +31,7 @@ function runTests (browser) {
   browser
     .waitForElementVisible('.newFile', 10000)
     .click('.compileView')
-  contractHelper.testContracts(browser, sources.sources['browser/Untitled.sol'], ['TooMuchGas', 'test1', 'test2'], function () {
+  contractHelper.testContracts(browser, sources['browser/Untitled.sol'], ['TooMuchGas', 'test1', 'test2'], function () {
     browser
       .click('.staticanalysisView')
       .click('#staticanalysisView button')
