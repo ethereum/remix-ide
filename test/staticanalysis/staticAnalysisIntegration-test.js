@@ -9,6 +9,8 @@ var compiler = solc(require('../../soljson'))
 var fs = require('fs')
 var path = require('path')
 
+var helper = require('../helper')
+
 var testFiles = [
   'KingOfTheEtherThrone.sol',
   'assembly.sol',
@@ -32,7 +34,7 @@ var testFileAsts = {}
 
 testFiles.forEach((fileName) => {
   var contents = fs.readFileSync(path.join(__dirname, 'test-contracts', fileName), 'utf8')
-  testFileAsts[fileName] = compiler.compile(contents, 0)
+  testFileAsts[fileName] = JSON.parse(compiler.compileStandardWrapper(helper.compilerInput(contents)))
 })
 
 test('Integration test thisLocal.js', function (t) {
