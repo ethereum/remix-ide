@@ -25,7 +25,7 @@ function runTests (browser, testData) {
   browser
     .waitForElementVisible('.newFile', 10000)
     .click('.compileView')
-  contractHelper.testContracts(browser, sources.sources['browser/Untitled.sol'], ['Ballot'], function () {
+  contractHelper.testContracts(browser, sources['browser/Untitled.sol'], ['Ballot'], function () {
     browser.end()
   })
 }

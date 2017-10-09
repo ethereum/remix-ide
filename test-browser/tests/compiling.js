@@ -31,7 +31,7 @@ function runTests (browser) {
   browser
     .waitForElementVisible('.newFile', 10000)
     .click('.compileView')
-  contractHelper.testContracts(browser, sources.sources['browser/Untitled.sol'], ['TestContract'], function () {
+  contractHelper.testContracts(browser, sources['browser/Untitled.sol'], ['TestContract'], function () {
     browser.click('.runView')
     .click('#runTabView div[class^="create"]')
     .waitForElementPresent('.instance button[title="f - transact (not payable)"]')
