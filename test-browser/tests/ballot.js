@@ -5,9 +5,7 @@ var init = require('../helpers/init')
 var sauce = require('./sauce')
 
 var sources = {
-  'sources': {
-    'browser/Untitled.sol': examples.ballot.content
-  }
+  'browser/Untitled.sol': { content: examples.ballot.content }
 }
 
 module.exports = {
