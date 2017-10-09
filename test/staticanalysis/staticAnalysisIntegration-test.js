@@ -9,7 +9,7 @@ var compiler = solc(require('../../soljson'))
 var fs = require('fs')
 var path = require('path')
 
-var compilerInput = require('../src/app/compiler/compiler-input.js')
+var compilerInput = require('../../src/app/compiler/compiler-input.js')
 
 var testFiles = [
   'KingOfTheEtherThrone.sol',
