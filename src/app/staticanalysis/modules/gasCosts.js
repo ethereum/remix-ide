@@ -8,16 +8,16 @@ function gasCosts () {
 
 gasCosts.prototype.report = function (compilationResults) {
   var report = []
-  txHelper.visitContracts(compilationResults, (contract) => {
+  txHelper.visitContracts(compilationResults.contracts, (contract) => {
     if (
-      contract.gasEstimates === undefined ||
-      contract.gasEstimates.external === undefined
+      !contract.object.evm.gasEstimates ||
+      !contract.object.evm.gasEstimates.external
     ) {
       return
     }
-    var fallback = contract.gasEstimates.external['']
+    var fallback = contract.object.evm.gasEstimates.external['']
     if (fallback !== undefined) {
-      if (fallback === null || fallback >= 2100) {
+      if (fallback === null || fallback >= 2100 || fallback === 'infinite') {
         report.push({
           warning: `Fallback function of contract ${contract.name} requires too much gas (${fallback}).<br />
           If the fallback function requires more than 2300 gas, the contract cannot receive Ether.`
@@ -25,13 +25,13 @@ gasCosts.prototype.report = function (compilationResults) {
       }
     }
 
-    for (var functionName in contract.gasEstimates.external) {
+    for (var functionName in contract.object.evm.gasEstimates.external) {
       if (functionName === '') {
         continue
       }
-      var gas = contract.gasEstimates.external[functionName]
+      var gas = contract.object.evm.gasEstimates.external[functionName]
       var gasString = gas === null ? 'unknown or not constant' : 'high: ' + gas
-      if (gas === null || gas >= 3000000) {
+      if (gas === null || gas >= 3000000 || gas === 'infinite') {
         report.push({
           warning: `Gas requirement of function ${contract.name}.${functionName} ${gasString}.<br />
           If the gas requirement of a function is higher than the block gas limit, it cannot be executed.
