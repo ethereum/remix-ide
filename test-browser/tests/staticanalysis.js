@@ -37,7 +37,7 @@ function runTests (browser) {
       .click('#staticanalysisView button')
       .waitForElementPresent('#staticanalysisresult .warning', 2000, true, function () {
         dom.listSelectorContains(['browser/Untitled.sol:2:33: Use of tx.origin',
-          'Fallback function of contract browser/Untitled.sol:TooMuchGas requires too much gas'],
+          'Fallback function of contract TooMuchGas requires too much gas'],
           '#staticanalysisresult .warning span',
           browser, function () {
             browser.end()
