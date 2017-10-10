@@ -315,12 +315,21 @@ function run () {
             }
           }
         }
-        return editor.addMarker(lineColumn, Object.keys(compiler.lastCompilationResult.data.contracts)[position.file], css)
+        var fileName = compiler.getSourceName(position.file)
+        if (fileName) {
+          var eventId = editor.addMarker(lineColumn, fileName, css)
+          return {
+            position,
+            fileName,
+            eventId
+          }
+        }
+        return null
       }
       return null
     },
     stopHighlighting: (event) => {
-      editor.removeMarker(event.eventId, event.fileTarget)
+      editor.removeMarker(event.eventId, event.fileName)
     }
   }, {
     compiler: compiler.event,

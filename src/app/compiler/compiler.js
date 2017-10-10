@@ -149,6 +149,17 @@ function Compiler (handleImportCall) {
     return null
   }
 
+  /**
+    * return the source from the last compilation result that has the given index. null if source not found
+    * @param {Int} index    - index of the source
+    */
+  this.getSourceName = (index) => {
+    if (this.lastCompilationResult.data && this.lastCompilationResult.data.sources) {
+      return Object.keys(this.lastCompilationResult.data.sources)[index]
+    }
+    return null
+  }
+
   function compilationFinished (data, missingInputs, source) {
     var noFatalErrors = true // ie warnings are ok
 
