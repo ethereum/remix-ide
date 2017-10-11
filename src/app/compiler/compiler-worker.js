@@ -23,7 +23,7 @@ module.exports = function (self) {
 
         compileJSON = function (input, optimize) {
           try {
-            var inputStandard = compilerInput(JSON.parse(input), {optimize})
+            var inputStandard = compilerInput(JSON.parse(input), {optimize: optimize})
             return compiler.compileStandardWrapper(inputStandard, function (path) {
               missingInputs.push(path)
               return { 'error': 'Deferred import' }

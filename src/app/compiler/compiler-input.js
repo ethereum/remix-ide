@@ -8,10 +8,10 @@
 module.exports = (sources, opts) => {
   return JSON.stringify({
     language: 'Solidity',
-    sources,
+    sources: sources,
     settings: {
       optimizer: {
-        enabled: opts.optimize ? opts.optimize : false,
+        enabled: opts.optimize === true,
         runs: 500
       }
     },
