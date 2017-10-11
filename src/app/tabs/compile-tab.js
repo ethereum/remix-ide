@@ -379,7 +379,7 @@ function compileTab (container, appAPI, appEvents, opts) {
     function insertValue (details, propertyName) {
       var value = yo`<pre class="${css.value}"></pre>`
       var node
-      if (propertyName === 'web3Deploy' || propertyName === 'name' || propertyName === 'metadataHash' || propertyName === 'swarmLocation') {
+      if (propertyName === 'web3Deploy' || propertyName === 'name') {
         node = yo`<pre>${details[propertyName]}</pre>`
       } else if (propertyName === 'abi' || propertyName === 'metadata') {
         var treeView = new TreeView({
@@ -404,7 +404,7 @@ function compileTab (container, appAPI, appEvents, opts) {
         })
         if (details[propertyName] !== '') {
           try {
-            node = yo`<div>${treeView.render(typeof details[x] === 'object' ? details[x] : JSON.parse(details[x]))}</div>` // catch in case the parsing fails.
+            node = yo`<div>${treeView.render(typeof details[propertyName] === 'object' ? details[propertyName] : JSON.parse(details[propertyName]))}</div>` // catch in case the parsing fails.
           } catch (e) {
             node = yo`<div>Unable to display "${propertyName}": ${e.message}</div>`
           }
