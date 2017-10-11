@@ -5,9 +5,7 @@ var init = require('../helpers/init')
 var sauce = require('./sauce')
 
 var sources = {
-  'sources': {
-    'browser/Untitled.sol': examples.ballot.content
-  }
+  'browser/Untitled.sol': { content: examples.ballot.content }
 }
 
 module.exports = {
@@ -27,7 +25,7 @@ function runTests (browser, testData) {
   browser
     .waitForElementVisible('.newFile', 10000)
     .click('.compileView')
-  contractHelper.testContracts(browser, sources.sources['browser/Untitled.sol'], ['browser/Untitled.sol:Ballot'], function () {
+  contractHelper.testContracts(browser, sources['browser/Untitled.sol'], ['Ballot'], function () {
     browser.end()
   })
 }

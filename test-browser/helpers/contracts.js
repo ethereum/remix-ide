@@ -33,7 +33,7 @@ function testContracts (browser, contractCode, compiledContractNames, callback) 
   browser
       .clearValue('#input textarea')
       .click('.newFile')
-      .setValue('#input textarea', contractCode, function () {})
+      .setValue('#input textarea', contractCode.content, function () {})
       .waitForElementPresent('#compileTabView select option', 50000, true, function () {
         checkCompiledContracts(browser, compiledContractNames, callback)
       })
