@@ -80,12 +80,13 @@ Renderer.prototype.error = function (message, container, options) {
   var self = this
   var opt = options || {}
   var $pre
+  var type = message.severity || opt.type
   if (opt.isHTML) {
     $pre = $(opt.useSpan ? '<span />' : '<pre />').html(message.formattedMessage)
   } else {
     $pre = $(opt.useSpan ? '<span />' : '<pre />').text(message.formattedMessage)
   }
-  var $error = $('<div class="sol ' + message.severity + '"><div class="close"><i class="fa fa-close"></i></div></div>').prepend($pre)
+  var $error = $('<div class="sol ' + type + '"><div class="close"><i class="fa fa-close"></i></div></div>').prepend($pre)
   container.append($error)
   var err = message.formattedMessage.match(/^([^:]*):([0-9]*):(([0-9]*):)? /)
   if (err) {
@@ -97,7 +98,7 @@ Renderer.prototype.error = function (message, container, options) {
         row: errLine,
         column: errCol,
         text: message.formattedMessage,
-        type: message.severity
+        type: type
       })
     }
     $error.click(function (ev) {
