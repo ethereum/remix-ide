@@ -342,7 +342,7 @@ function run () {
     jumpTo: (position) => {
       if (compiler.lastCompilationResult && compiler.lastCompilationResult.data) {
         var lineColumn = offsetToLineColumnConverter.offsetToLineColumn(position, position.file, compiler.lastCompilationResult)
-        var filename = Object.keys(compiler.lastCompilationResult.data.contracts)[position.file]
+        var filename = compiler.getSourceName(position.file)
         if (filename !== config.get('currentFile') && (filesProviders['browser'].exists(filename) || filesProviders['localhost'].exists(filename))) {
           fileManager.switchFile(filename)
         }
@@ -601,7 +601,7 @@ function run () {
       this.fullLineMarker = null
       this.source = null
       if (lineColumnPos) {
-        this.source = Object.keys(compiler.lastCompilationResult.data.contracts)[location.file] // auto switch to that tab
+        this.source = compiler.getSourceName(location.file)
         if (config.get('currentFile') !== this.source) {
           fileManager.switchFile(this.source)
         }
