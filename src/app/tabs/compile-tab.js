@@ -305,8 +305,8 @@ function compileTab (container, appAPI, appEvents, opts) {
       }
       if (!error) {
         if (data.contracts) {
-          appAPI.visitContracts((contrract) => {
-            appAPI.compilationMessage({ formattedMessage: contrract.name, severity: 'success' }, $(errorContainer))
+          appAPI.visitContracts((contract) => {
+            appAPI.compilationMessage({ formattedMessage: contract.name, severity: 'success' }, $(errorContainer))
           })
         }
       }
