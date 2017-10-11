@@ -45,7 +45,7 @@ function compile (source, optimization) {
   var result = compiler.compileStandardWrapper(input, function (path) {
     missingInputs.push(path)
   })
-  input = input.replace(/(\t)|(\n)|( )/g, '')
+  input = input.replace(/(\t)|(\n)|(\\n)|( )/g, '')
   return {
     key: input,
     source: source,

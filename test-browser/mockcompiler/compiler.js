@@ -16,7 +16,7 @@ var Module = { // eslint-disable-line
 }
 
 function compileStandard (source, missingInputs) {
-  source = source.replace(/(\t)|(\n)|( )/g, '')
+  source = source.replace(/(\t)|(\n)|(\\n)|( )/g, '')
   var data = mockData[source] // eslint-disable-line
   if (data === undefined) {
     return JSON.stringify({
