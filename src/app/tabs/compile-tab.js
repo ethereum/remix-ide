@@ -379,9 +379,7 @@ function compileTab (container, appAPI, appEvents, opts) {
     function insertValue (details, x) {
       var value = yo`<pre class="${css.value}"></pre>`
       var node
-      if (x === 'bytkecode' || x === 'Runtjime Bytecode' || x === 'Opcoldes') {
-        node = yo`<div>${details[x].slice(0, 60) + '...'}</div>`
-      } else if (x === 'web3Deploy' || x === 'name') {
+      if (x === 'web3Deploy' || x === 'name') {
         node = yo`<pre>${details[x]}</pre>`
       } else if (x === 'abi' || x === 'metadata') {
         var treeView = new TreeView({
