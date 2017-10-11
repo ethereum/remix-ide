@@ -43,20 +43,20 @@ function Compiler (handleImportCall) {
     compilationStartTime = new Date().getTime()
   })
 
-  var internalCompile = function (files, target, missingInputs) {
-    gatherImports(files, target, missingInputs, function (error, input) {
+  var internalCompile = function (files, missingInputs) {
+    gatherImports(files, missingInputs, function (error, input) {
       if (error) {
         self.lastCompilationResult = null
-        self.event.trigger('compilationFinished', [false, { 'error': error }, files])
+        self.event.trigger('compilationFinished', [false, {'error': { formattedMessage: error, severity: 'error' }}, files])
       } else {
         compileJSON(input, optimize ? 1 : 0)
       }
     })
   }
 
-  var compile = function (files, target) {
+  var compile = function (files) {
     self.event.trigger('compilationStarted', [])
-    internalCompile(files, target)
+    internalCompile(files)
   }
   this.compile = compile
 
@@ -166,7 +166,7 @@ function Compiler (handleImportCall) {
     function isValidError (error) {
       // The deferred import is not a real error
       // FIXME: maybe have a better check?
-      if (/Deferred import/.exec(error)) {
+      if (/Deferred import/.exec(error.message)) {
         return false
       }
 
@@ -194,7 +194,7 @@ function Compiler (handleImportCall) {
       self.event.trigger('compilationFinished', [false, data, source])
     } else if (missingInputs !== undefined && missingInputs.length > 0) {
       // try compiling again with the new set of inputs
-      internalCompile(source.sources, source.target, missingInputs)
+      internalCompile(source, missingInputs)
     } else {
       data = updateInterface(data)
 
@@ -282,10 +282,14 @@ function Compiler (handleImportCall) {
     worker.postMessage({cmd: 'loadVersion', data: url})
   }
 
-  function gatherImports (files, target, importHints, cb) {
+  function gatherImports (files, importHints, cb) {
     importHints = importHints || []
+    var fileList = Object.keys(files)
+    if (!fileList.length) {
+      return cb(null, {})
+    }
     if (!compilerAcceptsMultipleFiles) {
-      cb(null, files[target])
+      cb(null, files[fileList[0]])
       return
     }
 
@@ -299,7 +303,7 @@ function Compiler (handleImportCall) {
       while ((match = importRegex.exec(files[fileName]))) {
         var importFilePath = match[1]
         if (importFilePath.startsWith('./')) {
-          var path = /(.*\/).*/.exec(target)
+          var path = /(.*\/).*/.exec(fileName)
           if (path !== null) {
             importFilePath = importFilePath.replace('./', path[1])
           } else {
@@ -325,7 +329,7 @@ function Compiler (handleImportCall) {
           cb(err)
         } else {
           files[m] = { content }
-          gatherImports(files, target, importHints, cb)
+          gatherImports(files, importHints, cb)
         }
       })
 
