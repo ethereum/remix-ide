@@ -78,10 +78,8 @@ var gethDeploy = function (contractName, jsonInterface, bytecode) {
 }
 
 var formatGasEstimates = function (data) {
-  // FIXME: the whole gasEstimates object should be nil instead
-  if (data.creation === undefined && data.external === undefined && data.internal === undefined) {
-    return
-  }
+  if (!data) return {}
+  if (data.creation === undefined && data.external === undefined && data.internal === undefined) return {}
 
   var gasToText = function (g) {
     return g === null ? 'unknown' : g
@@ -90,7 +88,7 @@ var formatGasEstimates = function (data) {
   var ret = {}
   var fun
   if ('creation' in data) {
-    ret['Creation'] = gasToText(data.creation[0]) + ' + ' + gasToText(data.creation[1]) + '\n'
+    ret['Creation'] = data.creation
   }
 
   if ('external' in data) {
