@@ -363,11 +363,10 @@ function compileTab (container, appAPI, appEvents, opts) {
         var log = yo`<div class="${css.detailsJSON}"></div>`
         Object.keys(contractProperties).map(propertyName => {
           var copyDetails = yo`<span class="${css.copyDetails}"><i title="Copy value to clipboard" class="fa fa-clipboard" onclick=${() => { copy(contractProperties[propertyName]) }} aria-hidden="true"></i></span>`
-          var questionMark = yo`<span class="${css.questionMark}"><i title="${detailsHelpSection()[propertyName]}" class="fa fa-question-circle" aria-hidden="true"></i></span>`
-          var keyDisplayName
+          var questionMark = yo`<span class="${css.questionMark}"><i title="${detailsHelpSection()[propertyName]}" class="fa fa-question-circle" aria-hidden="true"></i></span>`          
           log.appendChild(yo`
             <div class=${css.log}>
-              <div class="${css.key}">${keyDisplayName} ${copyDetails} ${questionMark}</div>
+              <div class="${css.key}">${propertyName} ${copyDetails} ${questionMark}</div>
               ${insertValue(contractProperties, propertyName)}
             </div>
             `)
