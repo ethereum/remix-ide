@@ -215,7 +215,13 @@ function run () {
     getValue: (cb) => {
       try {
         var comp = $('#value').val().split(' ')
-        cb(null, executionContext.web3().toWei(comp[0], comp.slice(1).join(' ')))
+        if (comp.length === 1) {
+          cb(null, comp[0])
+        } else if (comp.length === 2) {
+          cb(null, executionContext.web3().toWei(comp[0], comp.slice(1).join(' ')))
+        } else {
+          cb(new Error('Value has the wrong format!'))
+        }
       } catch (e) {
         cb(e)
       }
