@@ -25,7 +25,8 @@ var testFiles = [
   'globals.sol',
   'library.sol',
   'transfer.sol',
-  'ctor.sol'
+  'ctor.sol',
+  'forgottenReturn.sol'
 ]
 
 var testFileAsts = {}
@@ -56,7 +57,8 @@ test('Integration test thisLocal.js', function (t) {
     'globals.sol': 0,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -85,7 +87,8 @@ test('Integration test checksEffectsInteraction.js', function (t) {
     'globals.sol': 1,
     'library.sol': 1,
     'transfer.sol': 1,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -114,7 +117,8 @@ test('Integration test constantFunctions.js', function (t) {
     'globals.sol': 0,
     'library.sol': 1,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -143,7 +147,8 @@ test('Integration test inlineAssembly.js', function (t) {
     'globals.sol': 0,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -172,7 +177,8 @@ test('Integration test txOrigin.js', function (t) {
     'globals.sol': 1,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -201,7 +207,8 @@ test('Integration test gasCosts.js', function (t) {
     'globals.sol': 1,
     'library.sol': 1,
     'transfer.sol': 1,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 3
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -230,7 +237,8 @@ test('Integration test similarVariableNames.js', function (t) {
     'globals.sol': 0,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 1
+    'ctor.sol': 1,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -259,7 +267,8 @@ test('Integration test inlineAssembly.js', function (t) {
     'globals.sol': 0,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -288,7 +297,8 @@ test('Integration test blockTimestamp.js', function (t) {
     'globals.sol': 2,
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -317,7 +327,8 @@ test('Integration test lowLevelCalls.js', function (t) {
     'globals.sol': 1,
     'library.sol': 1,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
@@ -346,11 +357,42 @@ test('Integration test blockBlockhash.js', function (t) {
     'globals.sol': 0, // was 1 !! @TODO
     'library.sol': 0,
     'transfer.sol': 0,
-    'ctor.sol': 0
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 0
   }
 
   runModuleOnFiles(module, t, (file, report) => {
     t.equal(report.length, lengthCheck[file], `${file} has right amount of blockBlockhash warnings`)
+  })
+})
+
+test('Integration test noReturn.js', function (t) {
+  t.plan(testFiles.length)
+
+  var module = require('../../src/app/staticanalysis/modules/noReturn')
+
+  var lengthCheck = {
+    'KingOfTheEtherThrone.sol': 0,
+    'assembly.sol': 1,
+    'ballot.sol': 0,
+    'ballot_reentrant.sol': 0,
+    'ballot_withoutWarnings.sol': 0,
+    'cross_contract.sol': 0,
+    'inheritance.sol': 0,
+    'modifier1.sol': 1,
+    'modifier2.sol': 0,
+    'notReentrant.sol': 0,
+    'structReentrant.sol': 0,
+    'thisLocal.sol': 1,
+    'globals.sol': 0,
+    'library.sol': 0,
+    'transfer.sol': 0,
+    'ctor.sol': 0,
+    'forgottenReturn.sol': 1
+  }
+
+  runModuleOnFiles(module, t, (file, report) => {
+    t.equal(report.length, lengthCheck[file], `${file} has right amount of noReturn warnings`)
   })
 })
 

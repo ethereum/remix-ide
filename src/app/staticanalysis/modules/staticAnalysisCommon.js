@@ -18,7 +18,8 @@ var nodeTypes = {
   USERDEFINEDTYPENAME: 'UserDefinedTypeName',
   INLINEASSEMBLY: 'InlineAssembly',
   BLOCK: 'Block',
-  NEWEXPRESSION: 'NewExpression'
+  NEWEXPRESSION: 'NewExpression',
+  RETURN: 'Return'
 }
 
 var basicTypes = {
@@ -257,6 +258,18 @@ function getFunctionOrModifierDefinitionParameterPart (funcNode) {
 }
 
 /**
+ * Returns return parameter node for a function or modifier definition, Throws on wrong node.
+ * Example:
+ * function bar(uint a, uint b) returns (bool a, bool b) => bool a, bool b
+ * @funcNode {ASTNode} Contract Definition node
+ * @return {parameterlist node} parameterlist node
+ */
+function getFunctionOrModifierDefinitionReturnParameterPart (funcNode) {
+  if (!isFunctionDefinition(funcNode) && !isModifierDefinition(funcNode)) throw new Error('staticAnalysisCommon.js: not an function definition')
+  return funcNode.children[1]
+}
+
+/**
  * Extracts the parameter types for a function type signature
  * Example:
  * function(uint a, uint b) returns (bool) => uint a, uint b
@@ -338,6 +351,10 @@ function isModifierInvocation (node) {
 
 function isVariableDeclaration (node) {
   return nodeType(node, exactMatch(nodeTypes.VARIABLEDECLARATION))
+}
+
+function isReturn (node) {
+  return nodeType(node, exactMatch(nodeTypes.RETURN))
 }
 
 function isInheritanceSpecifier (node) {
@@ -742,6 +759,7 @@ module.exports = {
   getFullQuallyfiedFuncDefinitionIdent: getFullQuallyfiedFuncDefinitionIdent,
   getStateVariableDeclarationsFormContractNode: getStateVariableDeclarationsFormContractNode,
   getFunctionOrModifierDefinitionParameterPart: getFunctionOrModifierDefinitionParameterPart,
+  getFunctionOrModifierDefinitionReturnParameterPart: getFunctionOrModifierDefinitionReturnParameterPart,
 
   // #################### Complex Node Identification
   hasFunctionBody: hasFunctionBody,
@@ -783,6 +801,7 @@ module.exports = {
   isConstantFunction: isConstantFunction,
   isInlineAssembly: isInlineAssembly,
   isNewExpression: isNewExpression,
+  isReturn: isReturn,
 
   // #################### Constants
   nodeTypes: nodeTypes,
