@@ -413,7 +413,7 @@ function settings (appAPI, appEvents) {
       </div>
       <div class="${css.crow}">
       <div class="${css.col1_1}">Value</div>
-        <input type="text" class="${css.col2}" id="value" value="0" title="(e.g. .7 ether ...)">
+        <input type="text" class="${css.col2}" id="value" value="0" title="Examples: 5 ether, 100 wei, 40 (base unit: wei)">
       </div>
     </div>
   `
