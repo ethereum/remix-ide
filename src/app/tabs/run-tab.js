@@ -376,7 +376,7 @@ function settings (appAPI, appEvents) {
         <div id="selectExEnv" class="${css.col1_1}">
           Environment
         </div>
-        <select id="selectExEnvOptions" class="${css.select}">
+        <select id="selectExEnvOptions" class="${css.select}" title="Run your contract in a simulated environment (JavaScript VM) or connect to an actual Ethereum network.">
           <option id="vm-mode"
             title="Execution environment does not connect to any node, everything is local and in memory only."
             value="vm"
@@ -384,7 +384,7 @@ function settings (appAPI, appEvents) {
             JavaScript VM
           </option>
           <option id="injected-mode"
-            title="Execution environment has been provided by Mist or similar provider."
+            title="Execution environment has been provided by MetaMask or similar provider."
             value="injected"
             checked name="executionContext">
             Injected Web3
@@ -400,16 +400,16 @@ function settings (appAPI, appEvents) {
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Account</div>
-        <select name="txorigin" class="${css.select}" id="txorigin"></select>
+        <select name="txorigin" class="${css.select}" id="txorigin" title="Dummy accounts provided with some ether (JavaScript VM), otherwise the accounts set up in your connected environment (handle with care!)."></select>
         <i title="Copy Address" class="copytxorigin fa fa-clipboard ${css.copyaddress}" onclick=${copyAddress} aria-hidden="true"></i>
       </div>
       <div class="${css.crow}">
         <div class="${css.col1_1}">Gas limit</div>
-        <input type="number" class="${css.col2}" id="gasLimit" value="3000000">
+        <input type="number" class="${css.col2}" id="gasLimit" value="3000000" title="Gas limit for contract creation and execution. Set this high in simulated environment, otherwise appropriate to contract needs (see gas estimates in compile details view for orientation).">
       </div>
       <div class="${css.crow} hide">
       <div class="${css.col1_1}">Gas Price</div>
-        <input type="number" class="${css.col2}" id="gasPrice" value="0">
+        <input type="number" class="${css.col2}" id="gasPrice" value="0" title="Not implemented yet, just ignore (gas price is set to 1), so the current gas price from the network will be taken.">
       </div>
       <div class="${css.crow}">
       <div class="${css.col1_1}">Value</div>
