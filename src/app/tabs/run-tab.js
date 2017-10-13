@@ -285,7 +285,7 @@ function makeRecorder (appAPI, appEvents) {
         modalDialogCustom.alert('Invalid JSON, please try again')
       }
       if (txArray.length) {
-        txArray.forEach(tx => udapp.runTx(tx, CALLBACK))
+        txArray.forEach(tx => udapp.replayTx(tx.record, CALLBACK))
       }
     }, function cancel () { })
   }
