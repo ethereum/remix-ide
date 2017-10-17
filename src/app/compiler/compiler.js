@@ -6,6 +6,7 @@ var solcABI = require('solc/abi')
 var webworkify = require('webworkify')
 
 var compilerInput = require('./compiler-input')
+var resolveSMTLib2Query = require('./smtlib2query')
 
 var EventManager = require('ethereum-remix').lib.EventManager
 
@@ -43,7 +44,7 @@ function Compiler (handleImportCall) {
   })
 
   var internalCompile = function (files, target, missingInputs) {
-    gatherImports(files, target, missingInputs, function (error, input) {
+    gatherImports(files, null, target, missingInputs, function (error, input) {
       if (error) {
         self.lastCompilationResult = null
         self.event.trigger('compilationFinished', [false, {'error': { formattedMessage: error, severity: 'error' }}, files])
@@ -82,7 +83,7 @@ function Compiler (handleImportCall) {
 
         var result
         try {
-          var input = compilerInput(source.sources, {optimize: optimize, target: source.target})
+          var input = compilerInput(source.sources, {optimize: optimize, target: source.target, auxiliaryInput: source.auxiliaryInput})
           result = compiler.compileStandardWrapper(input, missingInputsCallback)
           result = JSON.parse(result)
         } catch (exception) {
@@ -200,8 +201,18 @@ function Compiler (handleImportCall) {
       // There are fatal errors - abort here
       self.lastCompilationResult = null
       self.event.trigger('compilationFinished', [false, data, source])
-    } else if (missingInputs !== undefined && missingInputs.length > 0) {
+    } else if ((missingInputs !== undefined && missingInputs.length > 0) ||
+        (data.auxiliaryInputRequested && Object.keys(data.auxiliaryInputRequested).length > 0)) {
       // try compiling again with the new set of inputs
+      for (var i = 0; i < missingInputs.length; i++) {
+        missingInputs[i] = {type: 'source', filename: missingInputs[i]}
+      }
+      if (data.auxiliaryInputRequested && data.auxiliaryInputRequested.smtlib2) {
+        var smtlib2Requests = data.auxiliaryInputRequested.smtlib2
+        for (var key in smtlib2Requests) {
+          missingInputs.push({type: 'smtlib2', key: key, query: smtlib2Requests[key]})
+        }
+      }
       internalCompile(source.sources, source.target, missingInputs)
     } else {
       data = updateInterface(data)
@@ -284,33 +295,50 @@ function Compiler (handleImportCall) {
     })
     compileJSON = function (source, optimize) {
       jobs.push({sources: source})
-      worker.postMessage({cmd: 'compile', job: jobs.length - 1, input: compilerInput(source.sources, {optimize: optimize, target: source.target})})
+      var options = {optimize: optimize, target: source.target, auxiliaryInput: source.auxiliaryInput}
+      worker.postMessage({cmd: 'compile', job: jobs.length - 1, input: compilerInput(source.sources, options)})
     }
     worker.postMessage({cmd: 'loadVersion', data: url})
   }
 
-  function gatherImports (files, target, importHints, cb) {
+  function gatherImports (files, auxInput, target, importHints, cb) {
     importHints = importHints || []
 
     while (importHints.length > 0) {
       var m = importHints.pop()
-      if (m in files) {
-        continue
-      }
-
-      handleImportCall(m, function (err, content) {
-        if (err) {
-          cb(err)
-        } else {
-          files[m] = { content }
-          gatherImports(files, target, importHints, cb)
+      if (m.type === 'source') {
+        if (m.filename in files) {
+          continue
         }
-      })
 
-      return
+        handleImportCall(m.filename, function (err, content) {
+          if (err) {
+            cb(err)
+          } else {
+            files[m.filename] = { content }
+            gatherImports(files, auxInput, target, importHints, cb)
+          }
+        })
+
+        return
+      } else if (m.type === 'smtlib2') {
+        resolveSMTLib2Query(m.query, function (err, result) {
+          if (err) {
+            cb(err)
+          } else {
+            auxInput = auxInput || {smtlib2: {}}
+            auxInput['smtlib2'][m.key] = result
+            gatherImports(files, auxInput, target, importHints, cb)
+          }
+        })
+
+        return
+      } else {
+        console.log('Invalid missing input type: ' + m.type)
+      }
     }
 
-    cb(null, { 'sources': files, 'target': target })
+    cb(null, { 'sources': files, 'target': target, 'auxiliaryInput': auxInput })
   }
 
   function truncateVersion (version) {

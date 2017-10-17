@@ -12,6 +12,7 @@ module.exports = (sources, opts) => {
       }
     },
     libraries: opts.libraries,
+    auxiliaryInput: opts.auxiliaryInput ? opts.auxiliaryInput : {},
     outputSelection: {
       [target]: {
         '*': [ 'metadata', 'evm.bytecode', 'evm.deployedBytecode', 'abi', 'legacyAST', 'metadata', 'evm.assembly', 'evm.methodIdentifiers', 'evm.gasEstimates' ]
