@@ -292,31 +292,6 @@ function Compiler (handleImportCall) {
   function gatherImports (files, target, importHints, cb) {
     importHints = importHints || []
 
-    // FIXME: This will only match imports if the file begins with one.
-    //        It should tokenize by lines and check each.
-    // eslint-disable-next-line no-useless-escape
-    var importRegex = /^\s*import\s*[\'\"]([^\'\"]+)[\'\"];/g
-
-    for (var fileName in files) {
-      var match
-      while ((match = importRegex.exec(files[fileName].content))) {
-        var importFilePath = match[1]
-        if (importFilePath.startsWith('./')) {
-          var path = /(.*\/).*/.exec(target)
-          if (path !== null) {
-            importFilePath = importFilePath.replace('./', path[1])
-          } else {
-            importFilePath = importFilePath.slice(2)
-          }
-        }
-
-        // FIXME: should be using includes or sets, but there's also browser compatibility..
-        if (importHints.indexOf(importFilePath) === -1) {
-          importHints.push(importFilePath)
-        }
-      }
-    }
-
     while (importHints.length > 0) {
       var m = importHints.pop()
       if (m in files) {
