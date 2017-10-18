@@ -213,7 +213,7 @@ function getFunctionDefinitionName (funcDef) {
  * @return {string} name of contract inherited from
  */
 function getInheritsFromName (inheritsNode) {
-  if (!isInheritanceSpecifier(inheritsNode)) throw new Error('staticAnalysisCommon.js: not an InheritanceSpecifier node Node')
+  if (!isInheritanceSpecifier(inheritsNode)) throw new Error('staticAnalysisCommon.js: not an InheritanceSpecifier Node')
   return inheritsNode.children[0].attributes.name
 }
 
@@ -225,7 +225,7 @@ function getInheritsFromName (inheritsNode) {
  * @return {string} variable name
  */
 function getDeclaredVariableName (varDeclNode) {
-  if (!isVariableDeclaration(varDeclNode)) throw new Error('staticAnalysisCommon.js: not an variable declaration')
+  if (!isVariableDeclaration(varDeclNode)) throw new Error('staticAnalysisCommon.js: not a variable declaration')
   return varDeclNode.attributes.name
 }
 
@@ -240,7 +240,7 @@ function getDeclaredVariableName (varDeclNode) {
  * @return {list variable declaration} state variable node list
  */
 function getStateVariableDeclarationsFormContractNode (contractNode) {
-  if (!isContractDefinition(contractNode)) throw new Error('staticAnalysisCommon.js: not an contract definition declaration')
+  if (!isContractDefinition(contractNode)) throw new Error('staticAnalysisCommon.js: not a contract definition declaration')
   if (!contractNode.children) return []
   return contractNode.children.filter((el) => isVariableDeclaration(el))
 }
@@ -253,7 +253,7 @@ function getStateVariableDeclarationsFormContractNode (contractNode) {
  * @return {parameterlist node} parameterlist node
  */
 function getFunctionOrModifierDefinitionParameterPart (funcNode) {
-  if (!isFunctionDefinition(funcNode) && !isModifierDefinition(funcNode)) throw new Error('staticAnalysisCommon.js: not an function definition')
+  if (!isFunctionDefinition(funcNode) && !isModifierDefinition(funcNode)) throw new Error('staticAnalysisCommon.js: not a function definition')
   return funcNode.children[0]
 }
 
@@ -265,7 +265,7 @@ function getFunctionOrModifierDefinitionParameterPart (funcNode) {
  * @return {parameterlist node} parameterlist node
  */
 function getFunctionOrModifierDefinitionReturnParameterPart (funcNode) {
-  if (!isFunctionDefinition(funcNode) && !isModifierDefinition(funcNode)) throw new Error('staticAnalysisCommon.js: not an function definition')
+  if (!isFunctionDefinition(funcNode) && !isModifierDefinition(funcNode)) throw new Error('staticAnalysisCommon.js: not a function definition')
   return funcNode.children[1]
 }
 

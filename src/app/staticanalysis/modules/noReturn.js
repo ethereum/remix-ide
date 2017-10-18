@@ -51,8 +51,8 @@ function hasReturnStatement (func) {
 
 function hasAssignToAllNamedReturns (func) {
   var namedReturns = func.returns.filter((n) => n.name.length > 0).map((n) => n.name)
-  var assignedvars = func.relevantNodes.filter(common.isAssignment).map(common.getEffectedVariableName)
-  var diff = namedReturns.filter(e => !assignedvars.includes(e))
+  var assignedVars = func.relevantNodes.filter(common.isAssignment).map(common.getEffectedVariableName)
+  var diff = namedReturns.filter(e => !assignedVars.includes(e))
   return diff.length === 0
 }
 
