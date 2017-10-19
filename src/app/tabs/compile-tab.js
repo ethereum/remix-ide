@@ -337,6 +337,13 @@ function compileTab (container, appAPI, appEvents, opts) {
     // GET NAMES OF ALL THE CONTRACTS
     function getContractNames (success, data) {
       var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
+      if (success) {
+        contractNames.title = ''
+        contractNames.style.border = '1px solid hsla(0, 0%, 40%, .2)'
+      } else {
+        contractNames.title = 'Contract compilation failed. Please check error below.'
+        contractNames.style.border = `2px solid ${styles.colors.red}`
+      }
       contractNames.innerHTML = ''
       if (success) {
         contractNames.removeAttribute('disabled')
