@@ -42,7 +42,12 @@ module.exports = {
         'javascriptEnabled': true,
         'acceptSslCerts': true,
         'build': 'build-' + TRAVIS_JOB_NUMBER,
-        'tunnel-identifier': 'browsersolidity_tests_' + TRAVIS_JOB_NUMBER
+        'tunnel-identifier': 'browsersolidity_tests_' + TRAVIS_JOB_NUMBER,
+        'chromeOptions': {
+          'args': [
+            'window-size=1280,800'
+          ]
+        }
       }
     },
 
