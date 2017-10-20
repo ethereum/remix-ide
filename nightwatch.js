@@ -28,6 +28,7 @@ module.exports = {
         'path': ''
       },
       'desiredCapabilities': {
+        'screenResolution': '1280x800',
         'browserName': 'firefox',
         'javascriptEnabled': true,
         'acceptSslCerts': true,
@@ -38,6 +39,7 @@ module.exports = {
 
     'chrome': {
       'desiredCapabilities': {
+        'screenResolution': '1280x800',
         'browserName': 'chrome',
         'javascriptEnabled': true,
         'acceptSslCerts': true,
@@ -53,6 +55,7 @@ module.exports = {
 
     'safari': {
       'desiredCapabilities': {
+        'screenResolution': '1280x800',
         'browserName': 'safari',
         'javascriptEnabled': true,
         'platform': 'OS X 10.11',
@@ -65,6 +68,7 @@ module.exports = {
 
     'ie': {
       'desiredCapabilities': {
+        'screenResolution': '1280x800',
         'browserName': 'internet explorer',
         'javascriptEnabled': true,
         'platform': 'Windows 10',
