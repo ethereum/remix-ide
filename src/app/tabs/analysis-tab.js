@@ -8,7 +8,7 @@ var styles = styleGuide()
 
 var css = csjs`
   .analysisTabView {
-    padding: 2%;
+    padding: 4%;
     padding-bottom: 3em;
     display: flex;
     flex-direction: column;
