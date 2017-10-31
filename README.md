@@ -14,7 +14,7 @@ The `gh-pages` branch always has the latest stable build of Remix. It also conta
 Note: it contains the latest release of Solidity available at the time of the packaging. No other compiler versions are supported.
 
 
-## INSTALLATION:
+### INSTALLATION:
 
 Install npm and node.js (see https://docs.npmjs.com/getting-started/installing-node), then do:
 
@@ -22,7 +22,7 @@ Install npm and node.js (see https://docs.npmjs.com/getting-started/installing-n
 * `cd browser-solidity`
 * `npm install` - fetch dependencies & executes `npm run prepublish` to build the application
 
-## DEVELOPING:
+### DEVELOPING:
 
 Run `npm start` and open `http://127.0.0.1:8080` in your browser.
 
