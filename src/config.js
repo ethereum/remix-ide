@@ -2,10 +2,11 @@
 
 var CONFIG_FILE = '.remix.config'
 
-function Config (storage) {
+function Config (storage)
+{
   this.items = {}
 
-  // load on instantiation
+  /* load on instantiation */
   try {
     var config = storage.get(CONFIG_FILE)
     if (config) {
