@@ -69,6 +69,17 @@ module.exports = {
         'tunnel-identifier': 'browsersolidity_tests_' + TRAVIS_JOB_NUMBER
       }
     },
+    
+    'opera': {
+      'desiredCapabilities': {
+        'browserName': 'opera',
+        'javascriptEnabled': true,
+        'acceptSslCerts': true,
+        'version': '12.15',
+        'build': 'build-' + TRAVIS_JOB_NUMBER,
+        'tunnel-identifier': 'browsersolidity_tests_' + TRAVIS_JOB_NUMBER
+      }
+    }
 
     'local': {
       'launch_url': 'http://localhost:8080',
