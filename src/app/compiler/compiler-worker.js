@@ -21,10 +21,14 @@ module.exports = function (self) {
 
         var compiler = solc(self.Module)
 
-        compileJSON = function (input, optimize) {
+        compileJSON = function (input) {
           try {
+<<<<<<< HEAD
             var inputStandard = compilerInput(JSON.parse(input), {optimize: optimize})
             return compiler.compileStandardWrapper(inputStandard, function (path) {
+=======
+            return compiler.compileStandardWrapper(input, function (path) {
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
               missingInputs.push(path)
               return { 'error': 'Deferred import' }
             })
@@ -35,13 +39,12 @@ module.exports = function (self) {
 
         self.postMessage({
           cmd: 'versionLoaded',
-          data: compiler.version(),
-          acceptsMultipleFiles: compiler.supportsMulti
+          data: compiler.version()
         })
         break
       case 'compile':
         missingInputs.length = 0
-        self.postMessage({cmd: 'compiled', job: data.job, data: compileJSON(data.source, data.optimize), missingInputs: missingInputs})
+        self.postMessage({cmd: 'compiled', job: data.job, data: compileJSON(data.input), missingInputs: missingInputs})
         break
     }
   }, false)

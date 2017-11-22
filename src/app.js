@@ -297,6 +297,9 @@ function run () {
     getCurrentFile: () => {
       return config.get('currentFile')
     },
+    getSourceName: (index) => {
+      return compiler.getSourceName(index)
+    },
     highlight: (position, node) => {
       if (compiler.lastCompilationResult && compiler.lastCompilationResult.data) {
         var lineColumn = offsetToLineColumnConverter.offsetToLineColumn(position, position.file, compiler.lastCompilationResult)
@@ -317,6 +320,7 @@ function run () {
         }
         var fileName = compiler.getSourceName(position.file)
         if (fileName) {
+<<<<<<< HEAD
           var eventId = editor.addMarker(lineColumn, fileName, css)
           return {
             position,
@@ -325,6 +329,10 @@ function run () {
           }
         }
         return null
+=======
+          return editor.addMarker(lineColumn, fileName, css)
+        }
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
       }
       return null
     },
@@ -519,6 +527,9 @@ function run () {
       self._view.centerpanel.style.right = delta + 'px'
       document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
       onResize()
+    },
+    getSource: (fileName) => {
+      return compiler.getSource(fileName)
     },
     getContracts: () => {
       return compiler.getContracts()

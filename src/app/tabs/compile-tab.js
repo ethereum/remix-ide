@@ -295,18 +295,22 @@ function compileTab (container, appAPI, appEvents, opts) {
       var error = false
       if (data['error']) {
         error = true
-        appAPI.compilationMessage(data['error'], $(errorContainer))
+        appAPI.compilationMessage(data['error'].formattedMessage, $(errorContainer), {type: data['error'].severity})
       }
       if (data['errors']) {
         if (data['errors'].length) error = true
         data['errors'].forEach(function (err) {
-          appAPI.compilationMessage(err, $(errorContainer))
+          appAPI.compilationMessage(err.formattedMessage, $(errorContainer), {type: err.severity})
         })
       }
       if (!error) {
         if (data.contracts) {
           appAPI.visitContracts((contract) => {
+<<<<<<< HEAD
             appAPI.compilationMessage({ formattedMessage: contract.name }, $(errorContainer), {type: 'success'})
+=======
+            appAPI.compilationMessage(contract.name, $(errorContainer), {type: 'success'})
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
           })
         }
       }
@@ -341,7 +345,11 @@ function compileTab (container, appAPI, appEvents, opts) {
       if (success) {
         contractNames.removeAttribute('disabled')
         appAPI.visitContracts((contract) => {
+<<<<<<< HEAD
           contractsDetails[contract.name] = parseContracts(contract.name, contract.object)
+=======
+          contractsDetails[contract.name] = parseContracts(contract.name, contract.object, appAPI.getSource(contract.file))
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
           var contractName = yo`
             <option>
               ${contract.name}
@@ -378,7 +386,11 @@ function compileTab (container, appAPI, appEvents, opts) {
     function insertValue (details, propertyName) {
       var value = yo`<pre class="${css.value}"></pre>`
       var node
+<<<<<<< HEAD
       if (propertyName === 'web3Deploy' || propertyName === 'name') {
+=======
+      if (propertyName === 'web3Deploy' || propertyName === 'name' || propertyName === 'Assembly') {
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
         node = yo`<pre>${details[propertyName]}</pre>`
       } else if (propertyName === 'abi' || propertyName === 'metadata') {
         var treeView = new TreeView({

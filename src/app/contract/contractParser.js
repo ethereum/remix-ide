@@ -35,6 +35,13 @@ var getDetails = function (contractName, contract) {
 
   if (contract.evm.deployedBytecode && contract.evm.deployedBytecode.object.length > 0) {
     detail['Runtime Bytecode'] = contract.evm.deployedBytecode
+<<<<<<< HEAD
+=======
+  }
+
+  if (contract.assembly !== null) {
+    detail['Assembly'] = formatAssemblyText(contract.evm.legacyAssembly, '', source.content)
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
   }
 
   return detail

@@ -19,7 +19,6 @@ function Compiler (handleImportCall) {
   this.event = new EventManager()
 
   var compileJSON
-  var compilerAcceptsMultipleFiles
 
   var worker = null
 
@@ -74,8 +73,6 @@ function Compiler (handleImportCall) {
     if (worker === null) {
       var compiler = solc(window.Module)
 
-      compilerAcceptsMultipleFiles = compiler.supportsMulti
-
       compileJSON = function (source, optimize, cb) {
         var missingInputs = []
         var missingInputsCallback = function (path) {
@@ -85,7 +82,11 @@ function Compiler (handleImportCall) {
 
         var result
         try {
+<<<<<<< HEAD
           var input = compilerInput(source, {optimize})
+=======
+          var input = compilerInput(source.sources, {optimize: optimize, target: source.target})
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
           result = compiler.compileStandardWrapper(input, missingInputsCallback)
           result = JSON.parse(result)
         } catch (exception) {
@@ -143,8 +144,24 @@ function Compiler (handleImportCall) {
     * @param {Object} cb    - map of sources
     */
   this.getSources = () => {
+<<<<<<< HEAD
     if (this.lastCompilationResult.data) {
       return this.lastCompilationResult.source
+=======
+    if (this.lastCompilationResult.source) {
+      return this.lastCompilationResult.source.sources
+    }
+    return null
+  }
+
+  /**
+    * return the sources @arg fileName from the last compilation result
+    * @param {Object} cb    - map of sources
+    */
+  this.getSource = (fileName) => {
+    if (this.lastCompilationResult.source) {
+      return this.lastCompilationResult.source.sources[fileName]
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
     }
     return null
   }
@@ -250,7 +267,6 @@ function Compiler (handleImportCall) {
       var data = msg.data
       switch (data.cmd) {
         case 'versionLoaded':
-          compilerAcceptsMultipleFiles = !!data.acceptsMultipleFiles
           onCompilerLoaded(data.data)
           break
         case 'compiled':
@@ -277,13 +293,14 @@ function Compiler (handleImportCall) {
     })
     compileJSON = function (source, optimize) {
       jobs.push({sources: source})
-      worker.postMessage({cmd: 'compile', job: jobs.length - 1, source: JSON.stringify(source), optimize: optimize})
+      worker.postMessage({cmd: 'compile', job: jobs.length - 1, input: compilerInput(source.sources, {optimize: optimize, target: source.target})})
     }
     worker.postMessage({cmd: 'loadVersion', data: url})
   }
 
   function gatherImports (files, importHints, cb) {
     importHints = importHints || []
+<<<<<<< HEAD
     var fileList = Object.keys(files)
     if (!fileList.length) {
       return cb(null, {})
@@ -292,6 +309,8 @@ function Compiler (handleImportCall) {
       cb(null, files[fileList[0]])
       return
     }
+=======
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
 
     // FIXME: This will only match imports if the file begins with one.
     //        It should tokenize by lines and check each.
@@ -300,7 +319,7 @@ function Compiler (handleImportCall) {
 
     for (var fileName in files) {
       var match
-      while ((match = importRegex.exec(files[fileName]))) {
+      while ((match = importRegex.exec(files[fileName].content))) {
         var importFilePath = match[1]
         if (importFilePath.startsWith('./')) {
           var path = /(.*\/).*/.exec(fileName)
@@ -329,7 +348,11 @@ function Compiler (handleImportCall) {
           cb(err)
         } else {
           files[m] = { content }
+<<<<<<< HEAD
           gatherImports(files, importHints, cb)
+=======
+          gatherImports(files, target, importHints, cb)
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
         }
       })
 

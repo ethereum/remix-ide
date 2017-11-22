@@ -3,9 +3,17 @@ var contractHelper = require('../helpers/contracts')
 var init = require('../helpers/init')
 var sauce = require('./sauce')
 
+<<<<<<< HEAD
 var sources = {
   'localhost/folder1/contract2.sol': { content: 'contract test2 { function get () returns (uint) { return 11; }}' }
 }
+=======
+var sources = [
+  {
+    'localhost/folder1/contract2.sol': {content: 'contract test2 { function get () returns (uint) { return 11; }}'}
+  }
+]
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
 
 module.exports = {
   before: function (browser, done) {
@@ -41,7 +49,11 @@ function runTests (browser, testData) {
     .assert.containsText('[data-path="localhost/folder1/contract2.sol"]', 'contract2.sol')
     .click('[data-path="localhost/folder1/contract2.sol"]')
     .waitForElementPresent('#compileTabView select option', 50000, true, function () {
+<<<<<<< HEAD
       contractHelper.checkCompiledContracts(browser, ['test2'], function () {
+=======
+      contractHelper.verifyContract(browser, ['test2'], function () {
+>>>>>>> 57a496aa1f3a3f66c485f84651dbac671d0f6225
         browser.click('.websocketconn').end()
       })
     })
