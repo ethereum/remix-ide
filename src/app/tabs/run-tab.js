@@ -301,8 +301,14 @@ function makeRecorder (self, appAPI, appEvents) {
   `
   recordButton.onclick = () => {
     var txJSON = JSON.stringify(recorder.getAll(), null, 2)
-    copy(txJSON)
-    modalDialogCustom.alert(txJSON)
+    modalDialogCustom.prompt(null, 'journal file name', 'scenario.json', input => {
+      var newName = appAPI.filesProvider['browser'].type + '/' + helper.createNonClashingName(input, appAPI.filesProvider['browser'])
+      if (!appAPI.filesProvider['browser'].set(newName, txJSON)) {
+        modalDialogCustom.alert('Failed to create file ' + newName)
+      } else {
+        appAPI.switchFile(newName)
+      }
+    })
   }
   runButton.onclick = () => {
     var opts = { title: `Enter Transactions`, text: `Paste the array of transaction you want to replay here`, inputValue: '', multiline: true }
@@ -313,7 +319,13 @@ function makeRecorder (self, appAPI, appEvents) {
         modalDialogCustom.alert('Invalid JSON, please try again')
       }
       if (txArray.length) {
-        txArray.forEach(tx => udapp.rerunTx(tx.record, CALLBACK))
+        txArray.forEach(tx => {
+          udapp.getAccounts((err, accounts = []) => {
+            if (err) console.error(err)
+            tx.record = recorder.resolveAddress(tx.record, accounts)
+            udapp.rerunTx(tx.record, CALLBACK)
+          })
+        })
       }
     }, function cancel () { })
   }

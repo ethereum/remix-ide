@@ -520,6 +520,7 @@ function run () {
     udapp: () => {
       return udapp
     },
+    filesProviders: filesProviders,
     fileProviderOf: (path) => {
       return fileManager.fileProviderOf(path)
     },
