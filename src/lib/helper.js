@@ -9,13 +9,13 @@ module.exports = {
     var len = data.length
     return data.slice(0, 5) + '...' + data.slice(len - 5, len)
   },
-  createNonClashingName (path, fileProvider) {
+  createNonClashingName (path, fileProvider, ext = '.sol') {
     var counter = ''
-    if (path.endsWith('.sol')) path = path.substring(0, path.lastIndexOf('.sol'))
-    while (fileProvider.exists(path + counter + '.sol')) {
+    if (path.endsWith(ext)) path = path.substring(0, path.lastIndexOf(ext))
+    while (fileProvider.exists(path + counter + ext)) {
       counter = (counter | 0) + 1
     }
-    return path + counter + '.sol'
+    return path + counter + ext
   },
   checkSpecialChars (name) {
     return name.match(/[/:*?"<>\\'|]/) != null
