@@ -87,7 +87,7 @@ var css = csjs`
   .subcontainer {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
   }
   .buttons {
     display: flex;
@@ -155,15 +155,23 @@ var css = csjs`
   .errorIcon {
     color: ${styles.colors.red};
     margin-left: 15px;
-  }
-  .errorIcon {
-    color: ${styles.colors.red};
-    margin-left: 15px;
+    vertical-align: bottom;
+    margin-left: 10px;
   }
   .failDesc {
     color: ${styles.colors.red};
     padding-left: 10px;
     display: inline;
+  }
+  .errorSymb {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-position: 2px center;
+    height: 20px;
+    width: 20px;
+  }
+  .errorBorder {
+    '2px solid red'
   }
 `
 
@@ -246,13 +254,17 @@ function updateAccountBalances (container, appAPI) {
 
 function contractDropdown (appAPI, appEvents, instanceContainer) {
   instanceContainer.appendChild(noInstancesText)
-  var compFails = yo`<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-thumbs-down ${css.errorIcon}" ></i>`
+  var compFails = yo`<span title='Contract compilation failed. Please check the compile tab for more information' class="${css.errorSymb}"></span>`
   appEvents.compiler.register('compilationFinished', function (success, data, source) {
     getContractNames(success, data)
     if (success) {
       compFails.style.display = 'none'
+      // probably this should take out a class if it is there
+      document.querySelector(`.${css.contractNames}`).style.border = '1px solid hsla(0, 0%, 40%, .2)'
     } else {
+      // probably this should inject a class
       compFails.style.display = 'block'
+      document.querySelector(`.${css.contractNames}`).style.border = `2px solid ${styles.colors.red}`
     }
   })
 
