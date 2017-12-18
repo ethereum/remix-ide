@@ -34,9 +34,9 @@ module.exports = {
   sortAbiFunction: function (contractabi) {
     return contractabi.sort(function (a, b) {
       if (a.constant === true && b.constant !== true) {
-        return 1;
+        return 1
       } else if (b.constant === true && a.constant !== true) {
-        return -1;
+        return -1
       }
       // If we reach here, either a and b are both constant or both not; sort by name then
       // special case for fallback and constructor
@@ -46,7 +46,6 @@ module.exports = {
         return 1
       }
     })
-    return abi
   },
 
   getConstructorInterface: function (abi) {
