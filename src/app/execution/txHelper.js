@@ -32,16 +32,17 @@ module.exports = {
   },
 
   sortAbiFunction: function (contractabi) {
-    var abi = contractabi.sort(function (a, b) {
-      if (a.name > b.name) {
-        return -1
-      } else {
-        return 1
+    return contractabi.sort(function (a, b) {
+      if (a.constant === true && b.constant !== true) {
+        return 1;
+      } else if (b.constant === true && a.constant !== true) {
+        return -1;
       }
-    }).sort(function (a, b) {
-      if (a.constant === true) {
-        return -1
-      } else {
+      // If we reach here, either a and b are both constant or both not; sort by name then
+      // special case for fallback and constructor
+      if (a.type === 'function' && typeof a.name !== 'undefined') {
+        return a.name.localeCompare(b.name)
+      } else if (a.type === 'constructor' || a.type === 'fallback') {
         return 1
       }
     })
