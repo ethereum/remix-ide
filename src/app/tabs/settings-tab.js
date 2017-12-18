@@ -9,6 +9,7 @@ var remixLib = require('remix-lib')
 var styleGuide = remixLib.ui.styleGuide
 var styles = styleGuide()
 var helper = require('../../lib/helper')
+var modal = require('../ui/modal-dialog-custom')
 
 var css = csjs`
   .settingsTabView {
@@ -65,8 +66,24 @@ function SettingsTab (container, appAPI, appEvents, opts) {
         <div><input class="${css.col1}" id="optimize" type="checkbox"></div>
         <span class="${css.checkboxText}">Enable Optimization</span>
       </div>
+      <div class="${css.crow}">
+        <div>Load Plugin</div>
+        <input class="${css.col1}" id="plugininput" type="text">
+        <input class="${css.col1}" onclick=${loadPlugin} type="button" value="Load">
+      </div>
     </div>
   `
+
+  function loadPlugin () {
+    var json = el.querySelector('#plugininput').value
+    try {
+      json = JSON.parse(json)
+    } catch (e) {
+      modal.alert('cannot parse the plugin definition to JSON')
+      return
+    }
+    appEvents.rhp.trigger('plugin-loadRequest', [json])
+  }
 
   appEvents.compiler.register('compilerLoaded', (version) => {
     setVersionText(version, el)
@@ -137,6 +154,7 @@ function SettingsTab (container, appAPI, appEvents, opts) {
   })
 
   container.appendChild(el)
+  return el
 }
 
 function setVersionText (text, el) {
