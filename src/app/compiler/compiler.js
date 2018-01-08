@@ -19,6 +19,7 @@ function Compiler (opts = {}) {
   var self = this
   this.event = new EventManager()
   var handleImportCall = opts.api.handleImportCall
+  var resolveExternal = opts.api.resolveExternal
   var compileJSON
 
   var worker = null
@@ -324,10 +325,9 @@ function Compiler (opts = {}) {
         continue
       }
       var resolvedPath = m
-      if (!m.startsWith('localhost') && !m.startsWith('browser') && opts.api.sharedFolder.exists('localhost/node_modules/' + m)) {
-        // localhost and browser are targeting an explorer scope
-        // ./ is a relative path
-        // in the other case if `node_modules folder` is here (shared folder) we try to resolve there.
+      var externalImport = resolveExternal(m)
+      if (externalImport) {
+        // try to resolve `installed_contracts` and `node_modules`
         // ^ that's useful when using Truffle https://truffle.readthedocs.io/en/beta/getting_started/packages
         // https://github.com/ethereum/remixd/issues/5
         resolvedPath = 'localhost/node_modules/' + m

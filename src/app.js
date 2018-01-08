@@ -212,10 +212,28 @@ function run () {
     })
   }
 
+  var resolveExternal = (path) => {
+    function importFromExternalProject (external, path) {
+      if (filesProviders['localhost'].exists('localhost/' + external + '/' + path)) {
+        // localhost and browser are targeting an explorer scope
+        // ./ is a relative path
+        // in the other case if `node_modules folder` is here (shared folder) we try to resolve there.
+        // ^ that's useful when using Truffle https://truffle.readthedocs.io/en/beta/getting_started/packages
+        // https://github.com/ethereum/remixd/issues/5
+        return 'localhost/' + external + '/' + path
+      }
+    }
+
+    var externalImport = importFromExternalProject('installed_contracts', path)
+    if (!externalImport) {
+      externalImport = importFromExternalProject('node_modules', path)
+    }
+  }
+
   var compiler = new Compiler({ api:
   {
     handleImportCall: handleImportCall,
-    sharedFolder: self._api.filesProviders['localhost']
+    resolveExternal: resolveExternal
   } })
 
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(compiler.event)
