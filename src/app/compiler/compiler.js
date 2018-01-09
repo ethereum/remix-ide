@@ -15,10 +15,11 @@ var txHelper = require('../execution/txHelper')
 /*
   trigger compilationFinished, compilerLoaded, compilationStarted, compilationDuration
 */
-function Compiler (handleImportCall) {
+function Compiler (opts = {}) {
   var self = this
   this.event = new EventManager()
-
+  var handleImportCall = opts.api.handleImportCall
+  var resolveExternal = opts.api.resolveExternal
   var compileJSON
 
   var worker = null
@@ -323,8 +324,13 @@ function Compiler (handleImportCall) {
       if (m in files) {
         continue
       }
+      var resolvedPath = m
+      var externalImport = resolveExternal(m)
+      if (externalImport) {
+        resolvedPath = externalImport
+      }
 
-      handleImportCall(m, function (err, content) {
+      handleImportCall(resolvedPath, function (err, content) {
         if (err) {
           cb(err)
         } else {

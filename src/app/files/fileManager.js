@@ -161,6 +161,9 @@ class FileManager {
         }
       }
     }
+    if (this.opt.filesProviders['localhost'].tryResolve(file)) {
+      return this.opt.filesProviders['localhost']
+    }
     return null
   }
 
