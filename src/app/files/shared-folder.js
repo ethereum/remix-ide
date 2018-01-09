@@ -59,6 +59,7 @@ module.exports = class SharedFolder {
     this._isReady = false
     this.filesContent = {}
     this.folderMappings = { node_modules: 'node_modules', installed_contracts: 'installed_contracts' }
+    this.virtualFolders = {}
     remixd.event.register('notified', (data) => {
       if (data.scope === 'sharedfolder') {
         if (data.name === 'created') {
@@ -120,9 +121,11 @@ module.exports = class SharedFolder {
 
   get (path, cb) {
     var unprefixedpath = path
-    if (!path.match(/^(installed_contracts|node_modules)\//)) {
-      unprefixedpath = this.removePrefix(path)
+    // check if the current path could be a 'virtual' path
+    if (this.virtualFolders[path]) {
+      unprefixedpath = this.virtualFolders[path]
     }
+    unprefixedpath = this.removePrefix(unprefixedpath)
     this._remixd.call('sharedfolder', 'get', {path: unprefixedpath}, (error, file) => {
       if (!error) {
         this.filesContent[path] = file.content
@@ -220,7 +223,8 @@ module.exports = class SharedFolder {
       // in the other case if `node_modules folder` is here (shared folder) we try to resolve there.
       // ^ that's useful when using Truffle https://truffle.readthedocs.io/en/beta/getting_started/packages
       // https://github.com/ethereum/remixd/issues/5
-      return 'localhost/' + external + '/' + path
+      this.virtualFolders[path] = 'localhost/' + external + '/' + path
+      return this.virtualFolders[path]
     }
   }
 
