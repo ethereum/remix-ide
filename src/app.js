@@ -213,7 +213,7 @@ function run () {
   }
 
   var resolveExternal = (path) => {
-    return self._api.filesProviders['localhost'].tryResolveExternal(path)
+    return self._api.filesProviders['localhost'].tryResolve(path)
   }
 
   var compiler = new Compiler({ api:

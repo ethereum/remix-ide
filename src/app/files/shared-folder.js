@@ -224,7 +224,7 @@ module.exports = class SharedFolder {
     }
   }
 
-  tryResolveExternal (path) {
+  tryResolve (path) {
     var externalImport = this.importFromExternalProject(this.folderMappings.installed_contracts, path)
     if (!externalImport) {
       externalImport = this.importFromExternalProject(this.folderMappings.node_modules, path)
