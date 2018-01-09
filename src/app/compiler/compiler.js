@@ -327,10 +327,7 @@ function Compiler (opts = {}) {
       var resolvedPath = m
       var externalImport = resolveExternal(m)
       if (externalImport) {
-        // try to resolve `installed_contracts` and `node_modules`
-        // ^ that's useful when using Truffle https://truffle.readthedocs.io/en/beta/getting_started/packages
-        // https://github.com/ethereum/remixd/issues/5
-        resolvedPath = 'localhost/node_modules/' + m
+        resolvedPath = externalImport
       }
 
       handleImportCall(resolvedPath, function (err, content) {
