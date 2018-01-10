@@ -32,6 +32,9 @@ module.exports = {
   },
 
   sortAbiFunction: function (contractabi) {
+    // Sorts the list of ABI entries. Constant functions will appear first,
+    // followed by non-constant functions. Within those t wo groupings, functions
+    // will be sorted by their names.
     return contractabi.sort(function (a, b) {
       if (a.constant === true && b.constant !== true) {
         return 1
