@@ -1,6 +1,4 @@
 'use strict'
-
-var $ = require('jquery')
 var yo = require('yo-yo')
 
 // -------------- styling ----------------------
@@ -109,22 +107,26 @@ Renderer.prototype.error = function (message, container, opt) {
     })
   }
 
-  var $pre = $(opt.useSpan ? yo`<span />` : yo`<pre />`).html(message)
+  var spanEl = yo`<span />`
+  var preEl = yo`<pre />`
+  var pre = opt.useSpan ? spanEl.innerHTML = message : preEl.innerHTML = message
+  var closeEl = yo`<div class="close"><i class="fa fa-close"></i></div>`
+  var error = yo`<div class="sol ${opt.type}"></div>`
+  error.appendChild(pre)
+  error.appendChild(closeEl)
 
-  var $error = $(yo`<div class="sol ${opt.type}"><div class="close"><i class="fa fa-close"></i></div></div>`).prepend($pre)
-  container.append($error)
+  container.appendChild(error)
 
-  $error.click((ev) => {
+  error.addEventListener('click', function (ev) {
     if (opt.errFile && opt.errLine) {
       this.appAPI.errorClick(opt.errFile, opt.errLine, opt.errCol)
     } else if (opt.click) {
       opt.click(message)
     }
   })
-
-  $error.find('.close').click(function (ev) {
+  closeEl.addEventListener('click', function (ev) {
     ev.preventDefault()
-    $error.remove()
+    error.parentElement.removeChild(error)
     return false
   })
 }

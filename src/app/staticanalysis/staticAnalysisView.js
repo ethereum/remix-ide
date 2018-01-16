@@ -98,8 +98,8 @@ staticAnalysisView.prototype.run = function () {
     return
   }
   var selected = this.selectedModules()
-  var warningContainer = $('#staticanalysisresult')
-  warningContainer.empty()
+  var warningContainer = document.querySelector('#staticanalysisresult')
+  warningContainer.innerHTML = ''
   if (this.lastCompilationResult) {
     var self = this
     var warningCount = 0
@@ -118,20 +118,26 @@ staticAnalysisView.prototype.run = function () {
             location = Object.keys(self.lastCompilationResult.contracts)[file] + ':' + (location.start.line + 1) + ':' + (location.start.column + 1) + ':'
           }
           warningCount++
-          var msg = yo`<span>${location} ${item.warning} ${item.more ? yo`<span><br><a href="${item.more}" target="blank">more</a></span>` : yo`<span></span>`}</span>`
+          var msg = yo`
+            <span>
+              ${location}
+              ${item.warning} ${item.more ? yo`<span><br><a href="${item.more}" target="blank">more</a></span>` : yo`<span></span>`}
+            </span>`
           self.appAPI.renderWarning(msg, warningContainer, {type: 'warning', useSpan: true})
         })
       })
-      if (warningContainer.html() === '') {
+      if (warningContainer.innerHTML === '') {
         $('#righthand-panel #menu .staticanalysisView').css('color', '')
-        warningContainer.html('No warning to report')
+        // warningContainer.html('No warning to report')
+        warningContainer.innerHTML = 'No warning to report'
       } else {
         $('#righthand-panel #menu .staticanalysisView').css('color', styles.colors.red)
       }
       self.event.trigger('staticAnaysisWarning', [warningCount])
     })
   } else {
-    warningContainer.html('No compiled AST available')
+    // warningContainer.html('No compiled AST available')
+    warningContainer.innerHTML = 'No compiled AST available'
   }
 }
 
