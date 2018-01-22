@@ -2,7 +2,7 @@
 
 # Remix
 
-Remix (aka. Browser-Solidity) is a browser-based Solidity compiler and IDE.
+Remix-ide (aka. Browser-Solidity) is a browser-based Solidity compiler and IDE.
 
 Visit [https://remix.ethereum.org](https://remix.ethereum.org) to use;
 it will always deliver the latest version.
@@ -18,8 +18,8 @@ Note: it contains the latest release of Solidity available at the time of the pa
 
 Install npm and node.js (see https://docs.npmjs.com/getting-started/installing-node), then do:
 
-* `git clone https://github.com/ethereum/browser-solidity`
-* `cd browser-solidity`
+* `git clone https://github.com/ethereum/remix-ide`
+* `cd remix-ide`
 * `npm install` - fetch dependencies & executes `npm run prepublish` to build the application
 
 ## DEVELOPING:
@@ -33,7 +33,7 @@ The browser will automatically refresh when files are saved
 
 Here are some things to consider if you have trouble building the package.
 
-- Make sure that you have the correct version of `node`, `npm` and `nvm`. You can find the version that is tested on Travis CI by looking at the log in the [build results](https://travis-ci.org/ethereum/browser-solidity).
+- Make sure that you have the correct version of `node`, `npm` and `nvm`. You can find the version that is tested on Travis CI by looking at the log in the [build results](https://travis-ci.org/ethereum/remix-ide).
 
 Run:
 
@@ -77,4 +77,4 @@ After that, follow these steps:
 - Browse to `chrome://extensions/`
 - Make sure 'Developer mode' has been checked
 - Click 'Load unpacked extension...' to pop up a file-selection dialog
-- Select your `browser-solidity` folder
+- Select your `remix-ide` folder
