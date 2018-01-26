@@ -134,6 +134,7 @@ var css = csjs`
   .contractProperty.hasArgs input {
     width: 75%;
     padding: .36em;
+    border-radius: 5px;
   }
   .contractProperty button {
     ${styles.rightPanel.runTab.button_Create}
@@ -194,6 +195,7 @@ var css = csjs`
       float: left;
       margin-right: 6px;
       font-size: 10px;
+      width: 20%;
   }
   .multiArg button {
     border-radius: 3px;
@@ -497,24 +499,19 @@ UniversalDApp.prototype.getCallButton = function (args) {
   }
 
   function createMultiFields () {
-    var contractProps = ''
     if (args.funABI.inputs) {
-      $.each(args.funABI.inputs, function (i, inp) {
-        contractProps += yo`<div class="${css.multiArg}">
-          <label for="${inp.name}"> ${inp.name}: </label>
-          <input placeholder="${inp.type}" id="${inp.name}" title="${inp.name}">
-        </div>`
-      })
+      return yo`<div>
+        ${args.funABI.inputs.map(function (inp) {
+          // return yo`<div>the name: ${inp.name}</div>`
+          return yo`<div class="${css.multiArg}"><label for="${inp.name}"> ${inp.name}: </label><input placeholder="${inp.type}" id="${inp.name}" title="${inp.name}"></div>`
+        })}
+      </div>`
     }
-    return contractProps
   }
 
   contractProperty.appendChild(contractActions)
 
   if (inputs.length) {
-    // loop through the inputs array and load up a var containing the properties
-    // var contractProperties
-
     var contractActionsContainerMulti = yo`<div class="${css.contractActionsContainerMulti}" ></div>`
     var contractActionsContainerMultiInner = yo`<div class="${css.contractActionsContainerMultiInner}" ></div>`
     var contractActionsMultiInnerTitle = yo`<div onclick=${switchMethodViewOff} class="${css.multiHeader}"><i class='fa fa-caret-down ${css.methCaret}'></i> ${title}</div>`
@@ -527,11 +524,13 @@ UniversalDApp.prototype.getCallButton = function (args) {
     contractActionsContainerMultiInner.appendChild(contractActionsMultiInnerTitle)
 
     var contractMethodFields = createMultiFields()
-    console.log('lala ' + JSON.parse(JSON.stringify(contractMethodFields[0])))
 
-    // contractActionsContainerMultiInner.appendChild(contractMethodFields)
+    contractActionsContainerMultiInner.appendChild(contractMethodFields)
 
-    // is this caretBite info in the right place?
+    var contractMethodFieldsSubmit = yo`<div class="${css.group} ${css.multiArg}" ></div>`
+    contractActionsContainerMultiInner.appendChild(contractMethodFieldsSubmit)
+    contractMethodFieldsSubmit.appendChild(button)
+
     var caretBite = yo`<i class="fa fa-caret-right ${css.methCaret}" onclick=${switchMethodViewOn}></i>`
     contractActionsContainer.insertBefore(caretBite, contractActionsContainer.childNodes[0])
   } else {
