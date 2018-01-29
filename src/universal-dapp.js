@@ -76,14 +76,14 @@ var css = csjs`
   }
 
   // here down
-  .contractActions.methList:before {
-    content: "\\25BE";
-    margin-right: 5%;
-  }
-  .contractActions.methList.hidesub:before {
-    content: "\\25B8";
-    margin-right: 5%;
-  }
+  // .contractActions.methList:before {
+  //   content: "\\25BE";
+  //   margin-right: 5%;
+  // }
+  // .contractActions.methList.hidesub:before {
+  //   content: "\\25B8";
+  //   margin-right: 5%;
+  // }
 
   .methCaret {
     margin-right: 5%;
@@ -439,6 +439,9 @@ UniversalDApp.prototype.getCallButton = function (args) {
   function clickButton () {
     call(true)
   }
+  function clickMultiButton () {
+    call(true)
+  }
 
   function call (isUserAction) {
     var logMsg
@@ -515,10 +518,16 @@ UniversalDApp.prototype.getCallButton = function (args) {
     var contractActionsContainerMulti = yo`<div class="${css.contractActionsContainerMulti}" ></div>`
     var contractActionsContainerMultiInner = yo`<div class="${css.contractActionsContainerMultiInner}" ></div>`
     var contractActionsMultiInnerTitle = yo`<div onclick=${switchMethodViewOff} class="${css.multiHeader}"><i class='fa fa-caret-down ${css.methCaret}'></i> ${title}</div>`
+    var buttonMulti = yo`<button onclick=${clickMultiButton} class="${css.instanceButton}"></button>`
+    buttonMulti.classList.add(css.call)
+    buttonMulti.setAttribute('title', title)
+    buttonMulti.innerHTML = title
+
     // attach containing div
     contractActions.appendChild(contractActionsContainer)
     contractActionsContainer.appendChild(button)
     contractActionsContainer.appendChild(inputField)
+
     contractActions.appendChild(contractActionsContainerMulti)
     contractActionsContainerMulti.appendChild(contractActionsContainerMultiInner)
     contractActionsContainerMultiInner.appendChild(contractActionsMultiInnerTitle)
@@ -529,7 +538,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
     var contractMethodFieldsSubmit = yo`<div class="${css.group} ${css.multiArg}" ></div>`
     contractActionsContainerMultiInner.appendChild(contractMethodFieldsSubmit)
-    contractMethodFieldsSubmit.appendChild(button)
+    contractMethodFieldsSubmit.appendChild(buttonMulti)
 
     var caretBite = yo`<i class="fa fa-caret-right ${css.methCaret}" onclick=${switchMethodViewOn}></i>`
     contractActionsContainer.insertBefore(caretBite, contractActionsContainer.childNodes[0])
