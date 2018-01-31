@@ -175,7 +175,7 @@ TxRunner.prototype.execute = function (args, callback) {
         executionContext.vm().stateManager.checkpoint()
       }
 
-      executionContext.vm().runTx({block: block, tx: tx, skipBalance: true, skipNonce: true}, function (err, result) {
+      executionContext.vm().runTx({block: block, tx: tx, skipBalance: false, skipNonce: false}, function (err, result) {
         if (args.useCall) {
           executionContext.vm().stateManager.revert(function () {})
         }
