@@ -74,13 +74,49 @@ var css = csjs`
   .instance.hidesub .udappClose {
       display: flex;
   }
+
+  // here down
+  // .contractActions.methList:before {
+  //   content: "\\25BE";
+  //   margin-right: 5%;
+  // }
+  // .contractActions.methList.hidesub:before {
+  //   content: "\\25B8";
+  //   margin-right: 5%;
+  // }
+
+  .methCaret {
+    margin-right: 5%;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  // .instance.hidesub .title:before {
+  //   content: "\\25B8";
+  //   margin-right: 5%;
+  // }
+  // .instance.hidesub > * {
+  //     display: none;
+  // }
+  // .instance.hidesub .title {
+  //     display: flex;
+  // }
+  // .instance.hidesub .udappClose {
+  //     display: flex;
+  // }
+  // here up
   .buttonsContainer {
     margin-top: 2%;
     display: flex;
     overflow: hidden;
   }
   .contractActions {
-    display: flex;
+    // display: flex;
   }
   .instanceButton {}
   .closeIcon {
@@ -93,11 +129,12 @@ var css = csjs`
   }
   .contractProperty {
     overflow: auto;
-    margin-bottom: 0.4em;
+    margin-top: 0.4em;
   }
   .contractProperty.hasArgs input {
     width: 75%;
     padding: .36em;
+    border-radius: 5px;
   }
   .contractProperty button {
     ${styles.rightPanel.runTab.button_Create}
@@ -131,6 +168,42 @@ var css = csjs`
     align-self: center;
     color: ${styles.appProperties.mainText_Color};
     margin-left: 4px;
+  }
+  .contractActionsContainer {
+    display: flex;
+    width: 98%;
+  }
+  .contractActionsContainerMulti {
+    display:none;
+  }
+  .contractActionsContainerMultiInner {
+    border: 1px solid lightgray;
+    padding: 5px 5px 5px 10px;
+  }
+  .multiHeader {
+    text-align: left;
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .multiArg {
+    margin-bottom: 8px;
+  }
+
+  .multiArg label {
+      float: left;
+      margin-right: 6px;
+      font-size: 10px;
+      width: 20%;
+  }
+  .multiArg button {
+    border-radius: 3px;
+    float: right;
+    margin-right: 5%;
+  }
+  .hasArgs .multiArg input {
+    border-left: 1px solid #dddddd;
   }
   .hasArgs input {
     display: block;
@@ -348,6 +421,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
   var inputs = ''
   if (args.funABI.inputs) {
     inputs = txHelper.inputParametersDeclarationToString(args.funABI.inputs)
+    console.log(args.funABI.inputs)
   }
   var inputField = yo`<input></input>`
   inputField.setAttribute('placeholder', inputs)
@@ -366,8 +440,10 @@ UniversalDApp.prototype.getCallButton = function (args) {
   button.classList.add(css.call)
   button.setAttribute('title', title)
   button.innerHTML = title
-
   function clickButton () {
+    call(true)
+  }
+  function clickMultiButton () {
     call(true)
   }
 
@@ -418,11 +494,61 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
   var contractProperty = yo`<div class="${css.contractProperty} ${css.buttonsContainer}"></div>`
   var contractActions = yo`<div class="${css.contractActions}" ></div>`
+  var contractActionsContainer = yo`<div class="${css.contractActionsContainer}" ></div>`
+
+  function switchMethodViewOn () {
+    this.parentNode.style.display = 'none'
+    this.parentNode.nextSibling.style.display = 'block'
+  }
+  function switchMethodViewOff () {
+    this.parentNode.parentNode.style.display = 'none'
+    this.parentNode.parentNode.previousSibling.style.display = 'flex'
+  }
+
+  function createMultiFields () {
+    if (args.funABI.inputs) {
+      return yo`<div>
+        ${args.funABI.inputs.map(function (inp) {
+          // return yo`<div>the name: ${inp.name}</div>`
+          return yo`<div class="${css.multiArg}"><label for="${inp.name}"> ${inp.name}: </label><input placeholder="${inp.type}" id="${inp.name}" title="${inp.name}"></div>`
+        })}
+      </div>`
+    }
+  }
 
   contractProperty.appendChild(contractActions)
-  contractActions.appendChild(button)
+
   if (inputs.length) {
-    contractActions.appendChild(inputField)
+    var contractActionsContainerMulti = yo`<div class="${css.contractActionsContainerMulti}" ></div>`
+    var contractActionsContainerMultiInner = yo`<div class="${css.contractActionsContainerMultiInner}" ></div>`
+    var contractActionsMultiInnerTitle = yo`<div onclick=${switchMethodViewOff} class="${css.multiHeader}"><i class='fa fa-caret-down ${css.methCaret}'></i> ${title}</div>`
+    var buttonMulti = yo`<button onclick=${clickMultiButton} class="${css.instanceButton}"></button>`
+    buttonMulti.classList.add(css.call)
+    buttonMulti.setAttribute('title', title)
+    buttonMulti.innerHTML = title
+
+    // attach containing div
+    contractActions.appendChild(contractActionsContainer)
+    contractActionsContainer.appendChild(button)
+    contractActionsContainer.appendChild(inputField)
+
+    contractActions.appendChild(contractActionsContainerMulti)
+    contractActionsContainerMulti.appendChild(contractActionsContainerMultiInner)
+    contractActionsContainerMultiInner.appendChild(contractActionsMultiInnerTitle)
+
+    var contractMethodFields = createMultiFields()
+
+    contractActionsContainerMultiInner.appendChild(contractMethodFields)
+
+    var contractMethodFieldsSubmit = yo`<div class="${css.group} ${css.multiArg}" ></div>`
+    contractActionsContainerMultiInner.appendChild(contractMethodFieldsSubmit)
+    contractMethodFieldsSubmit.appendChild(buttonMulti)
+
+    var caretBite = yo`<i class="fa fa-caret-right ${css.methCaret}" onclick=${switchMethodViewOn}></i>`
+    contractActionsContainer.insertBefore(caretBite, contractActionsContainer.childNodes[0])
+  } else {
+    // no containing div
+    contractActions.appendChild(button)
   }
   if (lookupOnly) {
     contractProperty.appendChild(outputOverride)
@@ -435,6 +561,7 @@ UniversalDApp.prototype.getCallButton = function (args) {
 
   if (args.funABI.inputs && args.funABI.inputs.length > 0) {
     contractProperty.classList.add(css.hasArgs)
+    // add stuff here to bulk up the div
   }
 
   if (args.funABI.payable === true) {
