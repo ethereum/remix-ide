@@ -6,7 +6,6 @@ var helper = require('../../lib/helper.js')
 var txExecution = remixLib.execution.txExecution
 var txFormat = require('../execution/txFormat')
 var txHelper = remixLib.execution.txHelper
-var modalDialogCustom = require('../ui/modal-dialog-custom')
 var executionContext = require('../../execution-context')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
 var copyToClipboard = require('../ui/copy-to-clipboard')

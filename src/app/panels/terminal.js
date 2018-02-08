@@ -8,7 +8,7 @@ var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
 var Web3 = require('web3')
 
-var executionContext = require('../../execution-context')
+var executionContext = remixLib.execution.executionContext
 var Dropdown = require('../ui/dropdown')
 
 var csjs = require('csjs-inject')
