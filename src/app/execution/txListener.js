@@ -6,7 +6,7 @@ var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
 var codeUtil = remixLib.util
 var executionContext = remixLib.execution.executionContext
-var txFormat = require('./txFormat')
+var txFormat = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
 
 /**
