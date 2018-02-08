@@ -7,7 +7,7 @@ var EventManager = remixLib.EventManager
 var codeUtil = remixLib.util
 var executionContext = require('../../execution-context')
 var txFormat = require('./txFormat')
-var txHelper = require('./txHelper')
+var txHelper = remixLib.execution.txHelper
 
 /**
   * poll web3 each 2s if web3
