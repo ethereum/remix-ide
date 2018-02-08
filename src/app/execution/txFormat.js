@@ -3,7 +3,7 @@ var ethJSABI = require('ethereumjs-abi')
 var ethJSUtil = require('ethereumjs-util')
 var BN = ethJSUtil.BN
 var remixLib = require('remix-lib')
-var txHelper = remixLib.execution.txHelper
+var helper = remixLib.execution.txHelper
 var TreeView = require('remix-debugger').ui.TreeView
 var executionContext = require('../../execution-context')
 
