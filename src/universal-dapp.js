@@ -56,6 +56,8 @@ var css = csjs`
     ${styles.rightPanel.runTab.box_Instance};
     margin-bottom: 10px;
     padding: 10px 15px 15px 15px;
+    position: relative;
+    overflow: visible;
   }
   .instance .title:before {
     content: "\\25BE";
@@ -173,12 +175,24 @@ var css = csjs`
     display: flex;
     width: 98%;
   }
+  .contractActionsContainerSingle {
+    display: flex;
+    width: 100%;
+  }
   .contractActionsContainerMulti {
     display:none;
+    position: absolute;
+    top: 58px;
+    z-index: 1000;
+    width: 90%;
   }
   .contractActionsContainerMultiInner {
-    border: 1px solid lightgray;
+    border: 2px solid ${styles.appProperties.warning_BorderColor};
     padding: 5px 5px 5px 10px;
+    -webkit-box-shadow: 5px 5px 9px 0px rgba(61,61,61,1);
+    -moz-box-shadow: 5px 5px 9px 0px rgba(61,61,61,1);
+    box-shadow: 5px 5px 9px 0px rgba(61,61,61,1);
+    background-color: ${styles.appProperties.primary_BackgroundColor};
   }
   .multiHeader {
     text-align: left;
@@ -493,10 +507,26 @@ UniversalDApp.prototype.getCallButton = function (args) {
   var contractActionsContainer = yo`<div class="${css.contractActionsContainer}" ></div>`
 
   function switchMethodViewOn () {
+    // don't use sibling
+    // it is complaining that it is instantiated but never used...
+
     this.parentNode.style.display = 'none'
-    this.parentNode.nextSibling.style.display = 'block'
+    // this.parentNode.nextSibling.style.display = 'block'
+    var singleCont = this.parentNode.parentNode
+    // console.log('name is ' + singleCont.nodeName)
+    singleCont.querySelector(`.${css.contractActionsContainerMulti}`).style.display = 'block'
+    // console.log(`div.${css.contractActionsContainerMulti}`)
+    // inputsCont = this.parentNode.querySelector('div')
+    // inputsCont.style.display = 'block'
+    // console.log(' it is ' + inputsCont.nodeName)
+    // inputsCont = this.parentNode.querySelector(`${css.contractActionsContainerMulti}`)
+    // $(this).find(".foo");
+    // console.log(`${css.contractActionsContainerMulti}`)
+    // console.log('yesyes ' + inputsCont.nodeName)
+    // inputsCont.style.display = 'block'
   }
   function switchMethodViewOff () {
+    // don't use sibling
     this.parentNode.parentNode.style.display = 'none'
     this.parentNode.parentNode.previousSibling.style.display = 'flex'
   }
@@ -515,20 +545,34 @@ UniversalDApp.prototype.getCallButton = function (args) {
   contractProperty.appendChild(contractActions)
 
   if (inputs.length) {
+    var contractActionsContainerSingle = yo`<div class="${css.contractActionsContainerSingle}" ><i class="fa fa-expand ${css.methCaret}" onclick=${switchMethodViewOn}></i></div>`
+    // This onclick needs to know to which instance it belongs
+    // var caretBite = yo`<i class="fa fa-expand ${css.methCaret}" onclick=${switchMethodViewOn}></i>`
+
+    // make this so that it doesn't use insertBefore
+    // contractActionsContainer.insertBefore(caretBite, contractActionsContainer.childNodes[0])
+
     var contractActionsContainerMulti = yo`<div class="${css.contractActionsContainerMulti}" ></div>`
     var contractActionsContainerMultiInner = yo`<div class="${css.contractActionsContainerMultiInner}" ></div>`
-    var contractActionsMultiInnerTitle = yo`<div onclick=${switchMethodViewOff} class="${css.multiHeader}"><i class='fa fa-caret-down ${css.methCaret}'></i> ${title}</div>`
+    var contractActionsMultiInnerTitle = yo`<div onclick=${switchMethodViewOff} class="${css.multiHeader}"><i class='fa fa-compress ${css.methCaret}'></i> ${title}</div>`
     var buttonMulti = yo`<button onclick=${clickMultiButton} class="${css.instanceButton}"></button>`
+
+    // var instance = document.querySelector(".instance");
+
     buttonMulti.classList.add(css.call)
     buttonMulti.setAttribute('title', title)
     buttonMulti.innerHTML = title
 
     // attach containing div
     contractActions.appendChild(contractActionsContainer)
-    contractActionsContainer.appendChild(button)
-    contractActionsContainer.appendChild(inputField)
 
-    contractActions.appendChild(contractActionsContainerMulti)
+    contractActionsContainer.appendChild(contractActionsContainerSingle)
+    // put in expand button and field
+    contractActionsContainerSingle.appendChild(button)
+    contractActionsContainerSingle.appendChild(button)
+    contractActionsContainerSingle.appendChild(inputField)
+
+    contractActionsContainer.appendChild(contractActionsContainerMulti)
     contractActionsContainerMulti.appendChild(contractActionsContainerMultiInner)
     contractActionsContainerMultiInner.appendChild(contractActionsMultiInnerTitle)
 
@@ -539,9 +583,6 @@ UniversalDApp.prototype.getCallButton = function (args) {
     var contractMethodFieldsSubmit = yo`<div class="${css.group} ${css.multiArg}" ></div>`
     contractActionsContainerMultiInner.appendChild(contractMethodFieldsSubmit)
     contractMethodFieldsSubmit.appendChild(buttonMulti)
-
-    var caretBite = yo`<i class="fa fa-caret-right ${css.methCaret}" onclick=${switchMethodViewOn}></i>`
-    contractActionsContainer.insertBefore(caretBite, contractActionsContainer.childNodes[0])
   } else {
     // no containing div
     contractActions.appendChild(button)
