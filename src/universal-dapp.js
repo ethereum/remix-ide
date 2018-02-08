@@ -454,7 +454,15 @@ UniversalDApp.prototype.getCallButton = function (args) {
     call(true)
   }
   function clickMultiButton () {
-    call(true)
+    // assemble the assoc array of the inputs and put them
+    var argArr = []
+    var num = 1
+    args.funABI.inputs.map(function (inp) {
+      console.log('arg ' + num + ' is ' + inp.name + ' and ' + document.getElementById(inp.name).value)
+      argArr.push(document.getElementById(inp.name).value)
+    })
+    console.log(argArr)
+    // call(true)
   }
 
   function call (isUserAction) {
@@ -507,23 +515,9 @@ UniversalDApp.prototype.getCallButton = function (args) {
   var contractActionsContainer = yo`<div class="${css.contractActionsContainer}" ></div>`
 
   function switchMethodViewOn () {
-    // don't use sibling
-    // it is complaining that it is instantiated but never used...
-
     this.parentNode.style.display = 'none'
-    // this.parentNode.nextSibling.style.display = 'block'
     var singleCont = this.parentNode.parentNode
-    // console.log('name is ' + singleCont.nodeName)
     singleCont.querySelector(`.${css.contractActionsContainerMulti}`).style.display = 'block'
-    // console.log(`div.${css.contractActionsContainerMulti}`)
-    // inputsCont = this.parentNode.querySelector('div')
-    // inputsCont.style.display = 'block'
-    // console.log(' it is ' + inputsCont.nodeName)
-    // inputsCont = this.parentNode.querySelector(`${css.contractActionsContainerMulti}`)
-    // $(this).find(".foo");
-    // console.log(`${css.contractActionsContainerMulti}`)
-    // console.log('yesyes ' + inputsCont.nodeName)
-    // inputsCont.style.display = 'block'
   }
   function switchMethodViewOff () {
     // don't use sibling
@@ -535,7 +529,6 @@ UniversalDApp.prototype.getCallButton = function (args) {
     if (args.funABI.inputs) {
       return yo`<div>
         ${args.funABI.inputs.map(function (inp) {
-          // return yo`<div>the name: ${inp.name}</div>`
           return yo`<div class="${css.multiArg}"><label for="${inp.name}"> ${inp.name}: </label><input placeholder="${inp.type}" id="${inp.name}" title="${inp.name}"></div>`
         })}
       </div>`

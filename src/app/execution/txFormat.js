@@ -32,6 +32,22 @@ module.exports = {
     }
   },
 
+  buildDataMultiParams: function (contractName, contract, contracts, isConstructor, funAbi, params, udapp, callback, callbackStep) {
+    // params is already an array
+    this.internalBuildData(contractName, contract, contracts, isConstructor, funAbi, params, udapp, callback, callbackStep)
+  },
+
+  buildData: function (contractName, contract, contracts, isConstructor, funAbi, params, udapp, callback, callbackStep) {
+    var funArgs = ''
+    try {
+      funArgs = $.parseJSON('[' + params + ']')
+    } catch (e) {
+      callback('Error encoding arguments: ' + e)
+      return
+    }
+    this.internalBuildData(contractName, contract, contracts, isConstructor, funAbi, funArgs, udapp, callback, callbackStep)
+  },
+
   /**
     * build the transaction data
     *
@@ -45,14 +61,8 @@ module.exports = {
     * @param {Function} callback    - callback
     * @param {Function} callbackStep  - callbackStep
     */
-  buildData: function (contractName, contract, contracts, isConstructor, funAbi, params, udapp, callback, callbackStep) {
-    var funArgs = ''
-    try {
-      funArgs = $.parseJSON('[' + params + ']')
-    } catch (e) {
-      callback('Error encoding arguments: ' + e)
-      return
-    }
+
+  internalBuildData: function (contractName, contract, contracts, isConstructor, funAbi, funArgs, udapp, callback, callbackStep) {
     var data = ''
     var dataHex = ''
     if (!isConstructor || funArgs.length > 0) {
