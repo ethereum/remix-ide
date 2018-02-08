@@ -12,6 +12,7 @@ var txHelper = remixLib.execution.txHelper
 var txExecution = remixLib.execution.txExecution
 var executionContext = remixLib.execution.executionContext
 var modalCustom = require('./app/ui/modal-dialog-custom')
+var TreeView = require('remix-debugger').ui.TreeView
 
 /*
   trigger debugRequested
@@ -167,7 +168,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
             }
           }
           if (lookupOnly) {
-            var decoded = txFormat.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
+            var decoded = self.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
             outputCb(decoded)
           }
         } else {
@@ -180,6 +181,22 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
   }, (msg) => {
     self._api.logMessage(msg)
   })
+}
+
+UniversalDApp.prototype.decodeResponseToTreeView = function (response, fnabi) {
+  var treeView = new TreeView({
+    extractData: (item, parent, key) => {
+      var ret = {}
+      if (BN.isBN(item)) {
+        ret.self = item.toString(10)
+        ret.children = []
+      } else {
+        ret = treeView.extractDataDefault(item, parent, key)
+      }
+      return ret
+    }
+  })
+  return treeView.render(this.decodeResponse(response, fnabi))
 }
 
 UniversalDApp.prototype.context = function () {
