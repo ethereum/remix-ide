@@ -109,7 +109,7 @@ var css = csjs`
     margin-top: 0.4em;
   }
   .contractProperty.hasArgs input {
-    width: 75%;
+    width: 200px;
     padding: .36em;
     border-radius: 5px;
   }
@@ -426,19 +426,26 @@ UniversalDApp.prototype.getCallButton = function (args) {
   button.setAttribute('title', title)
   button.innerHTML = title
   function clickButton () {
-    call(true)
+    var funArgs = ''
+    try {
+      funArgs = $.parseJSON('[' + inputField.value + ']')
+    } catch (e) {
+      // alert error
+      return
+    }
+    internalCall(true, funArgs)
   }
   function clickMultiButton () {
-    // assemble the assoc array of the inputs and put them
     var argArr = []
     args.funABI.inputs.map(function (inp) {
       argArr.push(document.getElementById(inp.name).value)
     })
-    // console.log(argArr)
-    call(true, argArr)
+    internalCall(true, argArr)
+    this.parentNode.parentNode.parentNode.style.display = 'none'
+    this.parentNode.parentNode.parentNode.parentNode.firstChild.style.display = 'flex'
   }
 
-  function call (isUserAction, vals) {
+  function internalCall (isUserAction, parameters) {
     var logMsg
     if (isUserAction) {
       if (!args.funABI.constant) {
@@ -447,77 +454,40 @@ UniversalDApp.prototype.getCallButton = function (args) {
         logMsg = `call to ${args.contractName}.${(args.funABI.name) ? args.funABI.name : '(fallback)'}`
       }
     }
-    if (!vals) {
-      txFormat.buildData(args.contractName, args.contractAbi, self.contracts, false, args.funABI, inputField.value, self, (error, data) => {
-        if (!error) {
-          if (isUserAction) {
-            if (!args.funABI.constant) {
-              self._api.logMessage(`${logMsg} pending ... `)
-            } else {
-              self._api.logMessage(`${logMsg}`)
-            }
+    txFormat.internalBuildData(args.contractName, args.contractAbi, self.contracts, false, args.funABI, parameters, self, (error, data) => {
+      if (!error) {
+        if (isUserAction) {
+          if (!args.funABI.constant) {
+            self._api.logMessage(`${logMsg} pending ... `)
+          } else {
+            self._api.logMessage(`${logMsg}`)
           }
-          txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {
-            if (!error) {
-              var isVM = executionContext.isVM()
-              if (isVM) {
-                var vmError = txExecution.checkVMError(txResult)
-                if (vmError.error) {
-                  self._api.logMessage(`${logMsg} errored: ${vmError.message} `)
-                  return
-                }
-              }
-              if (lookupOnly) {
-                var decoded = txFormat.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
-                outputOverride.innerHTML = ''
-                outputOverride.appendChild(decoded)
-              }
-            } else {
-              self._api.logMessage(`${logMsg} errored: ${error} `)
-            }
-          })
-        } else {
-          self._api.logMessage(`${logMsg} errored: ${error} `)
         }
-      }, (msg) => {
-        self._api.logMessage(msg)
-      })
-    } else {
-      txFormat.buildDataMultiParams(args.contractName, args.contractAbi, self.contracts, false, args.funABI, vals, self, (error, data) => {
-        if (!error) {
-          if (isUserAction) {
-            if (!args.funABI.constant) {
-              self._api.logMessage(`${logMsg} pending ... `)
-            } else {
-              self._api.logMessage(`${logMsg}`)
+        txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {
+          if (!error) {
+            var isVM = executionContext.isVM()
+            if (isVM) {
+              var vmError = txExecution.checkVMError(txResult)
+              if (vmError.error) {
+                self._api.logMessage(`${logMsg} errored: ${vmError.message} `)
+                return
+              }
             }
+            if (lookupOnly) {
+              var decoded = txFormat.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
+              outputOverride.innerHTML = ''
+              outputOverride.appendChild(decoded)
+            }
+          } else {
+            self._api.logMessage(`${logMsg} errored: ${error} `)
           }
-          txExecution.callFunction(args.address, data, args.funABI, self, (error, txResult) => {
-            if (!error) {
-              var isVM = executionContext.isVM()
-              if (isVM) {
-                var vmError = txExecution.checkVMError(txResult)
-                if (vmError.error) {
-                  self._api.logMessage(`${logMsg} errored: ${vmError.message} `)
-                  return
-                }
-              }
-              if (lookupOnly) {
-                var decoded = txFormat.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
-                outputOverride.innerHTML = ''
-                outputOverride.appendChild(decoded)
-              }
-            } else {
-              self._api.logMessage(`${logMsg} errored: ${error} `)
-            }
-          })
-        } else {
-          self._api.logMessage(`${logMsg} errored: ${error} `)
-        }
-      }, (msg) => {
-        self._api.logMessage(msg)
-      })
-    }
+        })
+      } else {
+        self._api.logMessage(`${logMsg} errored: ${error} `)
+      }
+    }, (msg) => {
+      self._api.logMessage(msg)
+    })
   }
 
   var contractProperty = yo`<div class="${css.contractProperty} ${css.buttonsContainer}"></div>`
