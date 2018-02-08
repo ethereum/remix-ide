@@ -77,41 +77,16 @@ var css = csjs`
       display: flex;
   }
 
-  // here down
-  // .contractActions.methList:before {
-  //   content: "\\25BE";
-  //   margin-right: 5%;
-  // }
-  // .contractActions.methList.hidesub:before {
-  //   content: "\\25B8";
-  //   margin-right: 5%;
-  // }
-
   .methCaret {
     margin-right: 5%;
     cursor: pointer;
     font-size: 12px;
   }
-
   .group:after {
     content: "";
     display: table;
     clear: both;
   }
-  // .instance.hidesub .title:before {
-  //   content: "\\25B8";
-  //   margin-right: 5%;
-  // }
-  // .instance.hidesub > * {
-  //     display: none;
-  // }
-  // .instance.hidesub .title {
-  //     display: flex;
-  // }
-  // .instance.hidesub .udappClose {
-  //     display: flex;
-  // }
-  // here up
   .buttonsContainer {
     margin-top: 2%;
     display: flex;
