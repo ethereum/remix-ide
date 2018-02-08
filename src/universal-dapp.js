@@ -10,7 +10,7 @@ var TxRunner = require('./app/execution/txRunner')
 var txFormat = require('./app/execution/txFormat')
 var txHelper = remixLib.execution.txHelper
 var txExecution = remixLib.execution.txExecution
-var executionContext = require('./execution-context')
+var executionContext = remixLib.execution.executionContext
 var modalCustom = require('./app/ui/modal-dialog-custom')
 
 /*

@@ -5,7 +5,7 @@ var ethJSUtil = require('ethereumjs-util')
 var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
 var codeUtil = remixLib.util
-var executionContext = require('../../execution-context')
+var executionContext = remixLib.execution.executionContext
 var txFormat = require('./txFormat')
 var txHelper = remixLib.execution.txHelper
 
