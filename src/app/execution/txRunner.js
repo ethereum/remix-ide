@@ -5,6 +5,7 @@ var ethJSUtil = require('ethereumjs-util')
 var BN = ethJSUtil.BN
 var remixLib = require('remix-lib')
 var executionContext = remixLib.execution.executionContext
+var typeConversion = require('../../lib/typeConversion')
 var modalDialog = require('../ui/modaldialog')
 var modal = require('../ui/modal-dialog-custom')
 
@@ -95,10 +96,10 @@ TxRunner.prototype.runInVm = function (from, to, data, value, gasLimit, useCall,
   })
 }
 
-function executeTx (tx, gasPrice, callback) {
+function executeTx (tx, gasPrice, api, callback) {
   if (gasPrice) tx.gasPrice = executionContext.web3().toHex(gasPrice)
 
-  if (self._api.personalMode()) {
+  if (api.personalMode()) {
     modal.promptPassphrase(null, 'Personal mode is enabled. Please provide passphrase of account ' + tx.from, '', (value) => {
       sendTransaction(executionContext.web3().personal.sendTransaction, tx, value, callback)
     }, () => {
@@ -141,7 +142,7 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
     tx.gas = gasEstimation
 
     if (self._api.config.getUnpersistedProperty('doNotShowTransactionConfirmationAgain')) {
-      return executeTx(tx, null, callback)
+      return executeTx(tx, null, self._api, callback)
     }
 
     self._api.detectNetwork((err, network) => {
@@ -150,18 +151,48 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
         return
       }
       if (network.name !== 'Main') {
-        return executeTx(tx, null, callback)
+        return executeTx(tx, null, self._api, callback)
       }
-      var content = confirmDialog(tx, gasEstimation, self)
+      var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
+      var content = confirmDialog(tx, amount, gasEstimation, self,
+        (gasPrice, cb) => {
+          let txFeeText, priceStatus
+          // TODO: this try catch feels like an anti pattern, can/should be
+          // removed, but for now keeping the original logic
+          try {
+            var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
+            txFeeText = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
+            priceStatus = true
+          } catch (e) {
+            txFeeText = ' Please fix this issue before sending any transaction. ' + e.message
+            priceStatus = false
+          }
+          cb(txFeeText, priceStatus)
+        },
+        (cb) => {
+          executionContext.web3().eth.getGasPrice((error, gasPrice) => {
+            var warnMessage = ' Please fix this issue before sending any transaction. '
+            if (error) {
+              return cb('Unable to retrieve the current network gas price.' + warnMessage + error)
+            }
+            try {
+              var gasPriceValue = executionContext.web3().fromWei(gasPrice.toString(10), 'gwei')
+              cb(null, gasPriceValue)
+            } catch (e) {
+              cb(warnMessage + e.message, null, false)
+            }
+          })
+        }
+      )
       modalDialog('Confirm transaction', content,
         { label: 'Confirm',
           fn: () => {
             self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
             if (!content.gasPriceStatus) {
-              callback('Given gas grice is not correct')
+              callback('Given gas price is not correct')
             } else {
               var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
-              executeTx(tx, gasPrice, callback)
+              executeTx(tx, gasPrice, self._api, callback)
             }
           }}, {
             label: 'Cancel',
