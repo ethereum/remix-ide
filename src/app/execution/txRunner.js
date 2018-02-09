@@ -146,29 +146,28 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
     self._api.detectNetwork((err, network) => {
       if (err) {
         console.log(err)
-      } else {
-        if (network.name === 'Main') {
-          var content = confirmDialog(tx, gasEstimation, self)
-          modalDialog('Confirm transaction', content,
-            { label: 'Confirm',
-              fn: () => {
-                self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
-                if (!content.gasPriceStatus) {
-                  callback('Given gas grice is not correct')
-                } else {
-                  var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
-                  execute(gasPrice)
-                }
-              }}, {
-                label: 'Cancel',
-                fn: () => {
-                  return callback('Transaction canceled by user.')
-                }
-              })
-        } else {
-          execute()
-        }
+        return
       }
+      if (network.name !== 'Main') {
+        return execute()
+      }
+      var content = confirmDialog(tx, gasEstimation, self)
+      modalDialog('Confirm transaction', content,
+        { label: 'Confirm',
+          fn: () => {
+            self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+            if (!content.gasPriceStatus) {
+              callback('Given gas grice is not correct')
+            } else {
+              var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
+              execute(gasPrice)
+            }
+          }}, {
+            label: 'Cancel',
+            fn: () => {
+              return callback('Transaction canceled by user.')
+            }
+          })
     })
   })
 }
