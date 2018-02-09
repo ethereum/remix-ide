@@ -38,79 +38,79 @@ TxRunner.prototype.execute = function (args, callback) {
   if (!executionContext.isVM()) {
     self.runInNode(args.from, args.to, data, args.value, args.gasLimit, args.useCall, callback)
   } else {
-    self.runInVm(args.from, args.to, data, args.value, args.gasLimit, args.useCall, callback)
+    try {
+      self.runInVm(args.from, args.to, data, args.value, args.gasLimit, args.useCall, callback)
+    } catch (e) {
+      callback(e, null)
+    }
   }
 }
 
 TxRunner.prototype.runInVm = function (from, to, data, value, gasLimit, useCall, callback) {
   const self = this
-  try {
-    var account = self.vmaccounts[from]
-    if (!account) {
-      return callback('Invalid account selected')
-    }
-    var tx = new EthJSTX({
-      nonce: new BN(account.nonce++),
-      gasPrice: new BN(1),
-      gasLimit: new BN(gasLimit, 10),
-      to: to,
-      value: new BN(value, 10),
-      data: new Buffer(data.slice(2), 'hex')
-    })
-    tx.sign(account.privateKey)
+  var account = self.vmaccounts[from]
+  if (!account) {
+    return callback('Invalid account selected')
+  }
+  var tx = new EthJSTX({
+    nonce: new BN(account.nonce++),
+    gasPrice: new BN(1),
+    gasLimit: new BN(gasLimit, 10),
+    to: to,
+    value: new BN(value, 10),
+    data: new Buffer(data.slice(2), 'hex')
+  })
+  tx.sign(account.privateKey)
 
-    const coinbases = [ '0x0e9281e9c6a0808672eaba6bd1220e144c9bb07a', '0x8945a1288dc78a6d8952a92c77aee6730b414778', '0x94d76e24f818426ae84aa404140e8d5f60e10e7e' ]
-    const difficulties = [ new BN('69762765929000', 10), new BN('70762765929000', 10), new BN('71762765929000', 10) ]
-    var block = new EthJSBlock({
-      header: {
-        timestamp: new Date().getTime() / 1000 | 0,
-        number: self.blockNumber,
-        coinbase: coinbases[self.blockNumber % coinbases.length],
-        difficulty: difficulties[self.blockNumber % difficulties.length],
-        gasLimit: new BN(gasLimit, 10).imuln(2)
-      },
-      transactions: [],
-      uncleHeaders: []
-    })
-    if (!useCall) {
-      ++self.blockNumber
-    } else {
-      executionContext.vm().stateManager.checkpoint()
-    }
+  const coinbases = [ '0x0e9281e9c6a0808672eaba6bd1220e144c9bb07a', '0x8945a1288dc78a6d8952a92c77aee6730b414778', '0x94d76e24f818426ae84aa404140e8d5f60e10e7e' ]
+  const difficulties = [ new BN('69762765929000', 10), new BN('70762765929000', 10), new BN('71762765929000', 10) ]
+  var block = new EthJSBlock({
+    header: {
+      timestamp: new Date().getTime() / 1000 | 0,
+      number: self.blockNumber,
+      coinbase: coinbases[self.blockNumber % coinbases.length],
+      difficulty: difficulties[self.blockNumber % difficulties.length],
+      gasLimit: new BN(gasLimit, 10).imuln(2)
+    },
+    transactions: [],
+    uncleHeaders: []
+  })
+  if (!useCall) {
+    ++self.blockNumber
+  } else {
+    executionContext.vm().stateManager.checkpoint()
+  }
 
-    executionContext.vm().runTx({block: block, tx: tx, skipBalance: true, skipNonce: true}, function (err, result) {
-      if (useCall) {
-        executionContext.vm().stateManager.revert(function () {})
-      }
-      err = err ? err.message : err
-      result.status = '0x' + result.vm.exception.toString(16)
-      callback(err, {
-        result: result,
-        transactionHash: ethJSUtil.bufferToHex(new Buffer(tx.hash()))
-      })
+  executionContext.vm().runTx({block: block, tx: tx, skipBalance: true, skipNonce: true}, function (err, result) {
+    if (useCall) {
+      executionContext.vm().stateManager.revert(function () {})
+    }
+    err = err ? err.message : err
+    result.status = '0x' + result.vm.exception.toString(16)
+    callback(err, {
+      result: result,
+      transactionHash: ethJSUtil.bufferToHex(new Buffer(tx.hash()))
     })
-  } catch (e) {
-    callback(e, null)
+  })
+}
+
+function executeTx (tx, gasPrice, callback) {
+  if (gasPrice) tx.gasPrice = executionContext.web3().toHex(gasPrice)
+
+  if (self._api.personalMode()) {
+    modal.promptPassphrase(null, 'Personal mode is enabled. Please provide passphrase of account ' + tx.from, '', (value) => {
+      sendTransaction(executionContext.web3().personal.sendTransaction, tx, value, callback)
+    }, () => {
+      return callback('Canceled by user.')
+    })
+  } else {
+    sendTransaction(executionContext.web3().eth.sendTransaction, tx, null, callback)
   }
 }
 
 TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCall, callback) {
   const self = this
   var tx = { from: from, to: to, data: data, value: value }
-
-  function execute (gasPrice) {
-    if (gasPrice) tx.gasPrice = executionContext.web3().toHex(gasPrice)
-
-    if (self._api.personalMode()) {
-      modal.promptPassphrase(null, 'Personal mode is enabled. Please provide passphrase of account ' + tx.from, '', (value) => {
-        sendTransaction(executionContext.web3().personal.sendTransaction, tx, value, callback)
-      }, () => {
-        return callback('Canceled by user.')
-      })
-    } else {
-      sendTransaction(executionContext.web3().eth.sendTransaction, tx, null, callback)
-    }
-  }
 
   if (useCall) {
     tx.gas = gasLimit
@@ -140,7 +140,7 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
     tx.gas = gasEstimation
 
     if (self._api.config.getUnpersistedProperty('doNotShowTransactionConfirmationAgain')) {
-      return execute()
+      return executeTx(tx, null, callback)
     }
 
     self._api.detectNetwork((err, network) => {
@@ -149,7 +149,7 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
         return
       }
       if (network.name !== 'Main') {
-        return execute()
+        return executeTx(tx, null, callback)
       }
       var content = confirmDialog(tx, gasEstimation, self)
       modalDialog('Confirm transaction', content,
@@ -160,7 +160,7 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
               callback('Given gas grice is not correct')
             } else {
               var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
-              execute(gasPrice)
+              executeTx(tx, gasPrice, callback)
             }
           }}, {
             label: 'Cancel',
