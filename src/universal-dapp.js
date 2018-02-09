@@ -14,6 +14,11 @@ var executionContext = remixLib.execution.executionContext
 var modalCustom = require('./app/ui/modal-dialog-custom')
 var TreeView = require('remix-debugger').ui.TreeView
 
+// TODO: move confirmDialog to ui/
+var confirmDialog = require('./app/execution/confirmDialog')
+var typeConversion = require('./lib/typeConversion')
+var modalDialog = require('./app/ui/modaldialog')
+
 /*
   trigger debugRequested
 */
@@ -294,23 +299,77 @@ function runTransaction (env, next) {
   var { self, tx, payLoad } = env
   var timestamp = Date.now()
   self.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
-  self.txRunner.rawRun(tx, function (error, result) {
-    if (!tx.useCall) {
-      self.event.trigger('transactionExecuted', [error, tx.from, tx.to, tx.data, false, result, timestamp, payLoad])
-    } else {
-      self.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, true, result, timestamp, payLoad])
-    }
-    if (error) {
-      if (typeof (error) !== 'string') {
-        if (error.message) error = error.message
-        else {
-          try { error = 'error: ' + JSON.stringify(error) } catch (e) {}
+  self.txRunner.rawRun(tx,
+    (network, tx, continueTxExecution, gasEstimation, cancelCb) => {
+      if (network.name !== 'Main') {
+        return continueTxExecution(null)
+      }
+      var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
+      var content = confirmDialog(tx, amount, gasEstimation, self,
+        (gasPrice, cb) => {
+          let txFeeText, priceStatus
+          // TODO: this try catch feels like an anti pattern, can/should be
+          // removed, but for now keeping the original logic
+          try {
+            var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
+            txFeeText = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
+            priceStatus = true
+          } catch (e) {
+            txFeeText = ' Please fix this issue before sending any transaction. ' + e.message
+            priceStatus = false
+          }
+          cb(txFeeText, priceStatus)
+        },
+        (cb) => {
+          executionContext.web3().eth.getGasPrice((error, gasPrice) => {
+            var warnMessage = ' Please fix this issue before sending any transaction. '
+            if (error) {
+              return cb('Unable to retrieve the current network gas price.' + warnMessage + error)
+            }
+            try {
+              var gasPriceValue = executionContext.web3().fromWei(gasPrice.toString(10), 'gwei')
+              cb(null, gasPriceValue)
+            } catch (e) {
+              cb(warnMessage + e.message, null, false)
+            }
+          })
+        }
+      )
+      modalDialog('Confirm transaction', content,
+        { label: 'Confirm',
+          fn: () => {
+            self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+            // TODO: check if this is check is still valid given the refactor
+            if (!content.gasPriceStatus) {
+              cancelCb('Given gas price is not correct')
+            } else {
+              var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
+              continueTxExecution(gasPrice)
+            }
+          }}, {
+            label: 'Cancel',
+            fn: () => {
+              return cancelCb('Transaction canceled by user.')
+            }
+          })
+    },
+    function (error, result) {
+      if (!tx.useCall) {
+        self.event.trigger('transactionExecuted', [error, tx.from, tx.to, tx.data, false, result, timestamp, payLoad])
+      } else {
+        self.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, true, result, timestamp, payLoad])
+      }
+      if (error) {
+        if (typeof (error) !== 'string') {
+          if (error.message) error = error.message
+          else {
+            try { error = 'error: ' + JSON.stringify(error) } catch (e) {}
+          }
         }
       }
-    }
-    env.result = result
-    next(error, env)
-  })
+      env.result = result
+      next(error, env)
+    })
 }
 
 module.exports = UniversalDApp
