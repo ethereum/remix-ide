@@ -36,7 +36,7 @@ function gasPriceChanged () {
 
 function confirmDialog (tx, gasEstimation, self) {
   var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
-  var input = yo`<input id='confirmsetting' type="checkbox">`
+
   var el = yo`
   <div>
     <div>You are creating a transaction on the main network. Click confirm if you are sure to continue.</div>
@@ -52,7 +52,7 @@ function confirmDialog (tx, gasEstimation, self) {
       <pre class=${css.wrapword}>${tx.data}</pre>
     </div>
     <div class=${css.checkbox}>
-      ${input}
+      <input id='confirmsetting' type="checkbox">
       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Do not ask for confirmation again. (the setting will not be persisted for the next page reload)
     </div>
   </div>
