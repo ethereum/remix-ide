@@ -52,6 +52,7 @@ TxRunner.prototype.runInVm = function (from, to, data, value, gasLimit, useCall,
   if (!account) {
     return callback('Invalid account selected')
   }
+
   var tx = new EthJSTX({
     nonce: new BN(account.nonce++),
     gasPrice: new BN(1),
