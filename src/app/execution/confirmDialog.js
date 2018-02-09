@@ -1,9 +1,7 @@
-var remixLib = require('remix-lib')
-var executionContext = remixLib.execution.executionContext
-var typeConversion = require('../../lib/typeConversion')
 var yo = require('yo-yo')
 
 var csjs = require('csjs-inject')
+var remixLib = require('remix-lib')
 var styleGuide = remixLib.ui.styleGuide
 var styles = styleGuide()
 
@@ -20,21 +18,15 @@ var css = csjs`
   }
 `
 
-var warnMessage = ' Please fix this issue before sending any transaction. '
-
-function gasPriceChanged () {
-  try {
+function confirmDialog (tx, amount, gasEstimation, self, newGasPriceCb, initialParamsCb) {
+  var onGasPriceChange = function () {
     var gasPrice = el.querySelector('#gasprice').value
-    var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
-    el.querySelector('#txfee').innerHTML = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
-    el.gasPriceStatus = true
-  } catch (e) {
-    el.querySelector('#txfee').innerHTML = warnMessage + e.message
-    el.gasPriceStatus = false
+    newGasPriceCb(gasPrice, (priceStatus, txFeeText) => {
+      el.querySelector('#txfee').innerHTML = txFeeText
+      el.gasPriceStatus = priceStatus
+    })
   }
-}
 
-function confirmDialog (tx, amount, gasEstimation, self) {
   var el = yo`
   <div>
     <div>You are creating a transaction on the main network. Click confirm if you are sure to continue.</div>
@@ -44,7 +36,7 @@ function confirmDialog (tx, amount, gasEstimation, self) {
       <div>Amount: ${amount} Ether</div>
       <div>Gas estimation: ${gasEstimation}</div>
       <div>Gas limit: ${tx.gas}</div>
-      <div>Gas price: <input id='gasprice' oninput=${gasPriceChanged} /> Gwei <span> (visit <a target='_blank' href='https://ethgasstation.info'>ethgasstation.info</a> to get more info about gas price)</span></div>
+      <div>Gas price: <input id='gasprice' oninput=${onGasPriceChange} /> Gwei <span> (visit <a target='_blank' href='https://ethgasstation.info'>ethgasstation.info</a> to get more info about gas price)</span></div>
       <div>Max transaction fee:<span id='txfee'></span></div>
       <div>Data:</div>
       <pre class=${css.wrapword}>${tx.data}</pre>
@@ -56,19 +48,19 @@ function confirmDialog (tx, amount, gasEstimation, self) {
   </div>
   `
 
-  executionContext.web3().eth.getGasPrice((error, gasPrice) => {
-    if (error) {
-      el.querySelector('#txfee').innerHTML = 'Unable to retrieve the current network gas price.' + warnMessage + error
-    } else {
-      try {
-        el.querySelector('#gasprice').value = executionContext.web3().fromWei(gasPrice.toString(10), 'gwei')
-        gasPriceChanged()
-      } catch (e) {
-        el.querySelector('#txfee').innerHTML = warnMessage + e.message
-        el.gasPriceStatus = false
-      }
+  initialParamsCb((txFeeText, gasPriceValue, gasPriceStatus) => {
+    if (txFeeText) {
+      el.querySelector('#txfee').innerHTML = txFeeText
+    }
+    if (gasPriceValue) {
+      el.querySelector('#gasprice').value = gasPriceValue
+      onGasPriceChange()
+    }
+    if (gasPriceStatus !== undefined) {
+      el.gasPriceStatus = gasPriceStatus
     }
   })
+
   return el
 }
 
