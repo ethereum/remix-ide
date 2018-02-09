@@ -34,9 +34,7 @@ function gasPriceChanged () {
   }
 }
 
-function confirmDialog (tx, gasEstimation, self) {
-  var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
-
+function confirmDialog (tx, amount, gasEstimation, self) {
   var el = yo`
   <div>
     <div>You are creating a transaction on the main network. Click confirm if you are sure to continue.</div>
