@@ -20,6 +20,20 @@ var css = csjs`
   }
 `
 
+var warnMessage = ' Please fix this issue before sending any transaction. '
+
+function gasPriceChanged () {
+  try {
+    var gasPrice = el.querySelector('#gasprice').value
+    var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
+    el.querySelector('#txfee').innerHTML = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
+    el.gasPriceStatus = true
+  } catch (e) {
+    el.querySelector('#txfee').innerHTML = warnMessage + e.message
+    el.gasPriceStatus = false
+  }
+}
+
 function confirmDialog (tx, gasEstimation, self) {
   var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
   var input = yo`<input id='confirmsetting' type="checkbox">`
@@ -43,19 +57,6 @@ function confirmDialog (tx, gasEstimation, self) {
     </div>
   </div>
   `
-
-  var warnMessage = ' Please fix this issue before sending any transaction. '
-  function gasPriceChanged () {
-    try {
-      var gasPrice = el.querySelector('#gasprice').value
-      var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
-      el.querySelector('#txfee').innerHTML = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
-      el.gasPriceStatus = true
-    } catch (e) {
-      el.querySelector('#txfee').innerHTML = warnMessage + e.message
-      el.gasPriceStatus = false
-    }
-  }
 
   executionContext.web3().eth.getGasPrice((error, gasPrice) => {
     if (error) {
