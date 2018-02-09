@@ -96,12 +96,7 @@ TxRunner.prototype.runInVm = function (from, to, data, value, gasLimit, useCall,
 
 TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCall, callback) {
   const self = this
-  var tx = {
-    from: from,
-    to: to,
-    data: data,
-    value: value
-  }
+  var tx = { from: from, to: to, data: data, value: value }
 
   function execute (gasPrice) {
     if (gasPrice) tx.gasPrice = executionContext.web3().toHex(gasPrice)
@@ -119,64 +114,63 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
 
   if (useCall) {
     tx.gas = gasLimit
-    executionContext.web3().eth.call(tx, function (error, result) {
+    return executionContext.web3().eth.call(tx, function (error, result) {
       callback(error, {
         result: result,
         transactionHash: result.transactionHash
       })
     })
-  } else {
-    executionContext.web3().eth.estimateGas(tx, function (err, gasEstimation) {
+  }
+  executionContext.web3().eth.estimateGas(tx, function (err, gasEstimation) {
+    if (err) {
+      return callback(err, gasEstimation)
+    }
+    var blockGasLimit = executionContext.currentblockGasLimit()
+    // NOTE: estimateGas very likely will return a large limit if execution of the code failed
+    //       we want to be able to run the code in order to debug and find the cause for the failure
+
+    var warnEstimation = " An important gas estimation might also be the sign of a problem in the contract code. Please check loops and be sure you did not sent value to a non payable function (that's also the reason of strong gas estimation)."
+    if (gasEstimation > gasLimit) {
+      return callback('Gas required exceeds limit: ' + gasLimit + '. ' + warnEstimation)
+    }
+    if (gasEstimation > blockGasLimit) {
+      return callback('Gas required exceeds block gas limit: ' + gasLimit + '. ' + warnEstimation)
+    }
+
+    tx.gas = gasEstimation
+
+    if (self._api.config.getUnpersistedProperty('doNotShowTransactionConfirmationAgain')) {
+      return execute()
+    }
+
+    self._api.detectNetwork((err, network) => {
       if (err) {
-        return callback(err, gasEstimation)
-      }
-      var blockGasLimit = executionContext.currentblockGasLimit()
-      // NOTE: estimateGas very likely will return a large limit if execution of the code failed
-      //       we want to be able to run the code in order to debug and find the cause for the failure
-
-      var warnEstimation = " An important gas estimation might also be the sign of a problem in the contract code. Please check loops and be sure you did not sent value to a non payable function (that's also the reason of strong gas estimation)."
-      if (gasEstimation > gasLimit) {
-        return callback('Gas required exceeds limit: ' + gasLimit + '. ' + warnEstimation)
-      }
-      if (gasEstimation > blockGasLimit) {
-        return callback('Gas required exceeds block gas limit: ' + gasLimit + '. ' + warnEstimation)
-      }
-
-      tx.gas = gasEstimation
-
-      if (!self._api.config.getUnpersistedProperty('doNotShowTransactionConfirmationAgain')) {
-        self._api.detectNetwork((err, network) => {
-          if (err) {
-            console.log(err)
-          } else {
-            if (network.name === 'Main') {
-              var content = confirmDialog(tx, gasEstimation, self)
-              modalDialog('Confirm transaction', content,
-                { label: 'Confirm',
-                  fn: () => {
-                    self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
-                    if (!content.gasPriceStatus) {
-                      callback('Given gas grice is not correct')
-                    } else {
-                      var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
-                      execute(gasPrice)
-                    }
-                  }}, {
-                    label: 'Cancel',
-                    fn: () => {
-                      return callback('Transaction canceled by user.')
-                    }
-                  })
-            } else {
-              execute()
-            }
-          }
-        })
+        console.log(err)
       } else {
-        execute()
+        if (network.name === 'Main') {
+          var content = confirmDialog(tx, gasEstimation, self)
+          modalDialog('Confirm transaction', content,
+            { label: 'Confirm',
+              fn: () => {
+                self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+                if (!content.gasPriceStatus) {
+                  callback('Given gas grice is not correct')
+                } else {
+                  var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
+                  execute(gasPrice)
+                }
+              }}, {
+                label: 'Cancel',
+                fn: () => {
+                  return callback('Transaction canceled by user.')
+                }
+              })
+        } else {
+          execute()
+        }
       }
     })
-  }
+  })
 }
 
 function tryTillResponse (txhash, done) {
