@@ -74,6 +74,10 @@ var css = csjs`
     color: ${styles.remix.modalDialog_Header_Footer_Color};
     cursor: pointer;
   }
+  .modalBackground {
+    width: 100%;
+    height: 70%;
+  }
   @-webkit-keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
@@ -122,6 +126,16 @@ module.exports = (title, content, ok, cancel) => {
     if (cancel && cancel.fn) cancel.fn()
   }
 
+  function modalKeyEvent (e) {
+    if (e.keyCode === 27) {
+      cancelListener()
+    } else if (e.keyCode === 13) {
+      okListener()
+    } else {
+      // Do nothing
+    }
+  }
+
   function hide () {
     container.style.display = 'none'
   }
@@ -134,10 +148,14 @@ module.exports = (title, content, ok, cancel) => {
     okDiv.removeEventListener('click', okListener)
     cancelDiv.removeEventListener('click', cancelListener)
     closeDiv.removeEventListener('click', cancelListener)
+    document.removeEventListener('keydown', modalKeyEvent)
+    document.getElementById('modal-background').removeEventListener('click', cancelListener)
   }
   okDiv.addEventListener('click', okListener)
   cancelDiv.addEventListener('click', cancelListener)
   closeDiv.addEventListener('click', cancelListener)
+  document.addEventListener('keydown', modalKeyEvent)
+  document.getElementById('modal-background').addEventListener('click', cancelListener)
 }
 
 function html () {
@@ -153,6 +171,6 @@ function html () {
     <span id="modal-footer-ok" class=${css['modalFooterOk']}>OK</span><span id="modal-footer-cancel"  class=${css['modalFooterCancel']}>Cancel</span>
         </div>
   </div>
-  </div>
+  <div id="modal-background" class="${css['modalBackground']}"> </div>
   </div>`
 }
