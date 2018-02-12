@@ -1,15 +1,16 @@
 'use strict'
 var $ = require('jquery')
 var yo = require('yo-yo')
+var remixLib = require('remix-lib')
 var helper = require('../../lib/helper.js')
-var txExecution = require('../execution/txExecution')
-var txFormat = require('../execution/txFormat')
-var txHelper = require('../execution/txHelper')
+var txExecution = remixLib.execution.txExecution
+var txFormat = remixLib.execution.txFormat
+var txHelper = remixLib.execution.txHelper
 var modalDialogCustom = require('../ui/modal-dialog-custom')
-var executionContext = require('../../execution-context')
+var executionContext = remixLib.execution.executionContext
 var copyToClipboard = require('../ui/copy-to-clipboard')
 var Recorder = require('../../recorder')
-var EventManager = require('remix-lib').EventManager
+var EventManager = remixLib.EventManager
 var addTooltip = require('../ui/tooltip')
 
 var csjs = require('csjs-inject')
