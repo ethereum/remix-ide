@@ -17,16 +17,38 @@ var typeConversion = require('../../lib/typeConversion')
 var css = csjs`
   .log {
     display: flex;
-    align-items: end;
-    justify-content: space-between;
+    cursor: pointer;
+  }
+  .log:hover {
+    opacity: 0.8;
+  }
+  .caret {
+    color: ${styles.terminal.icon_Color};
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    left: 7px;
+  }
+  .caret:hover {
+    color: ${styles.terminal.icon_HoverColor};
   }
   .txLog {
     width: 75%;
   }
+  .txItem {
+    color: ${styles.terminal.text_Primary};
+    margin-right: 5px;
+    float: left;
+  }
+  .txItemTitle {
+    font-weight: bold;
+  }
   .tx {
     color: ${styles.terminal.text_Title_TransactionLog};
     font-weight: bold;
-    width: 45%;
+    float: left;
+    margin: 0 10px;
   }
   .txTable, .tr, .td {
     border-collapse: collapse;
@@ -38,10 +60,17 @@ var css = csjs`
     margin-top: 1%;
     margin-bottom: 5%;
     align-self: center;
+    width: 85%;
   }
   .tr, .td {
     padding: 4px;
     vertical-align: baseline;
+  }
+  .td:first-child {
+    min-width: 30%;
+    width: 30%;
+    align-items: baseline;
+    font-weight: bold;
   }
   .tableTitle {
     width: 25%;
@@ -49,14 +78,19 @@ var css = csjs`
   .buttons {
     display: flex;
   }
-  .debug, .details {
-    ${styles.terminal.button_Log_Debug}
+  .debug {
+    color: ${styles.terminal.text_Title_TransactionLog};
+    font-weight: bold;
+    cursor: pointer;
+    text-weight: bold;
     margin-left: 5px;
     width: 55px;
     min-width: 55px;
     min-height: 20px;
     max-height: 20px;
-    font-size: 11px;
+  }
+  .debug:hover {
+    text-decoration: underline;
   }
   `
 /**
@@ -154,11 +188,11 @@ function renderKnownTransaction (self, data) {
   }
   var tx = yo`
     <span id="tx${data.tx.hash}">
-      <div class="${css.log}">
+      <div class="${css.log}" onclick=${txDetails}>
+        <i class="${css.caret} fa fa-caret-right"></i>
         ${context(self, {from, to, data})}
         <div class=${css.buttons}>
-        <button class=${css.details} onclick=${txDetails}>Details</button>
-        <button class=${css.debug} onclick=${debug}>Debug</button>
+        <div class=${css.debug} onclick=${debug}>[debug]</div>
         </div>
       </div>
     </span>
@@ -166,9 +200,17 @@ function renderKnownTransaction (self, data) {
 
   var table
   function txDetails () {
+    var log = document.querySelector("[class^='log']")
+    var caret = document.querySelector("[class^='caret']")
+    var caretDown = yo`<i class="${css.caret} fa fa-caret-down"></i>`
+    var caretRight = yo`<i class="${css.caret} fa fa-caret-right"></i>`
     if (table && table.parentNode) {
       tx.removeChild(table)
+      log.removeChild(caret)
+      log.appendChild(caretRight)
     } else {
+      log.removeChild(caret)
+      log.appendChild(caretDown)
       table = createTable({
         contractAddress: data.tx.contractAddress,
         data: data.tx,
@@ -205,11 +247,17 @@ function renderCall (self, data) {
   var input = data.tx.input ? helper.shortenHexData(data.tx.input) : ''
   var tx = yo`
     <span id="tx${data.tx.hash}">
-      <div class="${css.log}">
-        <span class=${css.txLog}><span class=${css.tx}>[call]</span> from:${from}, to:${to}, data:${input}, return: </span>
+      <div class="${css.log}" onclick=${txDetails}>
+        <i class="${css.caret} fa fa-caret-right"></i>
+        <span class=${css.txLog}>
+          <span class=${css.tx}>[call]</span>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>from:</span> ${from}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>to:</span> ${to}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>data:</span> ${input}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>return:</span>
+        </span>
         <div class=${css.buttons}>
-          <button class=${css.details} onclick=${txDetails}>Details</button>
-          <button class=${css.debug} onclick=${debug}>Debug</button>
+          <div class=${css.debug} onclick=${debug}>[debug]</div>
         </div>
       </div>
       <div> ${JSON.stringify(typeConversion.stringify(data.resolvedData.decodedReturnValue), null, '\t')}</div>
@@ -218,9 +266,17 @@ function renderCall (self, data) {
 
   var table
   function txDetails () {
+    var log = document.querySelector("[class^='log']")
+    var caret = document.querySelector("[class^='caret']")
+    var caretDown = yo`<i class="${css.caret} fa fa-caret-down"></i>`
+    var caretRight = yo`<i class="${css.caret} fa fa-caret-right"></i>`
     if (table && table.parentNode) {
       tx.removeChild(table)
+      log.removeChild(caret)
+      log.appendChild(caretRight)
     } else {
+      log.removeChild(caret)
+      log.appendChild(caretDown)
       table = createTable({
         isCall: data.tx.isCall,
         contractAddress: data.tx.contractAddress,
@@ -250,20 +306,28 @@ function renderUnknownTransaction (self, data) {
   }
   var tx = yo`
     <span id="tx${data.tx.hash}">
-      <div class="${css.log}">
+      <i class="${css.caret} fa fa-caret-right"></i>
+      <div class="${css.log}" onclick=${txDetails}>
         ${context(self, {from, to, data})}
         <div class=${css.buttons}>
-          <button class=${css.details} onclick=${txDetails}>Details</button>
-          <button class=${css.debug} onclick=${debug}>Debug</button>
+          <div class=${css.debug} onclick=${debug}>[debug]</div>
         </div>
       </div>
     </span>
   `
   var table
   function txDetails () {
+    var log = document.querySelector("[class^='log']")
+    var caret = document.querySelector("[class^='caret']")
+    var caretDown = yo`<i class="${css.caret} fa fa-caret-down"></i>`
+    var caretRight = yo`<i class="${css.caret} fa fa-caret-right"></i>`
     if (table && table.parentNode) {
       tx.removeChild(table)
+      log.removeChild(caret)
+      log.appendChild(caretRight)
     } else {
+      log.removeChild(caret)
+      log.appendChild(caretDown)
       table = createTable({
         data: data.tx,
         from,
@@ -284,7 +348,10 @@ function renderUnknownTransaction (self, data) {
 }
 
 function renderEmptyBlock (self, data) {
-  return yo`<span class=${css.txLog}><span class='${css.tx}'>[block:${data.block.number} - 0 transactions]</span></span>`
+  return yo`
+    <span class=${css.txLog}>
+      <span class='${css.tx}'><div class=${css.txItem}>[<span class=${css.txItemTitle}>block:${data.block.number} - </span> 0 transactions]</span></span>
+    </span>`
 }
 
 function context (self, opts) {
@@ -300,13 +367,44 @@ function context (self, opts) {
   var i = data.tx.transactionIndex
   var value = val ? typeConversion.toInt(val) : 0
   if (executionContext.getProvider() === 'vm') {
-    return yo`<span class=${css.txLog}><span class=${css.tx}>[vm]</span> from:${from}, to:${to}, value:${value} wei, data:${input}, ${logs} logs, hash:${hash}</span>`
+    return yo`
+      <div>
+        <span class=${css.txLog}>
+          <span class=${css.tx}>[vm]</span>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>from:</span> ${from}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>to:</span> ${to}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>value:</span> ${value} wei</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>data:</span> ${input}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>logs:</span> ${logs}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>hash:</span> ${hash}</div>
+        </span>
+      </div>`
   } else if (executionContext.getProvider() !== 'vm' && data.resolvedData) {
-    return yo`<span class=${css.txLog}><span class='${css.tx}'>[block:${block} txIndex:${i}]</span> from:${from}, to:${to}, value:${value} wei, ${logs} logs, data:${input}, hash:${hash}</span>`
+    return yo`
+      <div>
+        <span class=${css.txLog}>
+          <span class='${css.tx}'>[block:${block} txIndex:${i}]</span>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>from:</span> ${from}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>to:</span> ${to}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>value:</span> ${value} wei</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>data:</span> ${input}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>logs:</span> ${logs}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>hash:</span> ${hash}</div>
+        </span>
+      </div>`
   } else {
     to = helper.shortenHexData(to)
     hash = helper.shortenHexData(data.tx.blockHash)
-    return yo`<span class=${css.txLog}><span class='${css.tx}'>[block:${block} txIndex:${i}]</span> from:${from}, to:${to}, value:${value} wei</span>`
+    return yo`
+      <div>
+        <i class="${css.caret} fa fa-caret-right"></i>
+        <span class=${css.txLog}>
+          <span class='${css.tx}'>[block:${block} txIndex:${i}]</span>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>from:</span> ${from}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>to:</span> ${to}</div>
+          <div class=${css.txItem}><span class=${css.txItemTitle}>value:</span> ${value} wei</div>
+        </span>
+      </div>`
   }
 }
 
