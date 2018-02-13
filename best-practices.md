@@ -1,27 +1,68 @@
 # Current "Best Practice" Conventions
 
-- `ES6 class` rather than ES5 to create class.
-- CSS declaration using `csjs-inject`.
-- HTML declaration using `yo-yo`.
-- `opt` is an input parameter, it contains the `api` and `event` object.
-- `self._api = opts.api` `opts.api` is an object which contains functions/features that the module needs.
-- `opts.events` contains events manager the module will listen on.
+*Please read through and **pay special attention to the code examples** to really understand them.  
+If something is not clear, please comment and help improve the situation :-)*
+
+## Project Structure
+To have modular imports like for example:  
+**`require('ui/dropdown')`**, we could structure our repository like:
+* `src/`
+    * `ui/`
+        * `package.json`: `{ "name": "ui", "version": "1.0.0", "main": "./index.js" }`
+        * `index.js`: `module.exports = { dropdown: require('./dropdown'), button: require('./button') }`
+        * `button.js`: `module.exports = function button (opts = {}) { /* .... */ }`
+        * `dropdown.js`: `module.exports = function dropdown (opts = {}) { /* .... */ }`
+
+This would allow us to run `npm install ./src/ui --save-dev` and then use it like external modules:
+```js
+// example
+var button = require('ui/button')
+var dropdown = require('ui/dropdown')
+// OR 
+var ui = require('ui')
+var button = ui.button
+var dropdown = ui.dropdown
+
+// use the modules...
+```
+
+## Module Definition (example)
+
+
+<details>
+**Description about `best practice` code snippet as seen below**  
+
+- `ES6 class` rather than ES5 to create class. 
+ 
+- CSS declaration using `csjs-inject`.  
+
+- HTML declaration using `yo-yo`.  
+
+- `opt` is an input parameter, it contains the `api` and `event` object.  
+
+- `self._api = opts.api` `opts.api` is an object which contains functions/features that the module needs.  
+
+- `opts.events` contains events manager the module will listen on.  
+
 - A module trigger events using `event` property:
   `self.event = new EventManager()`. 
   Events can then be triggered:
-  `self.event.trigger('eventName', [param1, param2])`
-- `self._view` is the HTML view renderered by `yo-yo` in the `render` function.
-- `render()` this function should be called:
+  `self.event.trigger('eventName', [param1, param2])`  
+ 
+- `self._view` is the HTML view renderered by `yo-yo` in the `render` function.  
 
+- `render()` this function should be called:
   * At the first rendering (make sure that the returned node element is put on the DOM).
-   
   * When some property has changed in order to update the view.
-- `self.state` contains state properties of the module. These properties are either given from the parent through `òpts` or     computed during the life of the object.
-- `update(state)` allow the parent to easily update some of the state properties.
-- for all functions / properties, prefixing by underscore (`_`) means the scope is private.
-- look them up, discuss them, update them.
-    
-## Module Definition (example)
+
+- `self.state` contains state properties of the module. These properties are either given from the parent through `òpts` or     computed during the life of the object.  
+
+- `update(state)` allow the parent to easily update some of the state properties.  
+
+- for all functions / properties, prefixing by underscore (`_`) means the scope is private.  
+
+</details>
+
 ```js
 // user-card.js
 var yo = require('yo-yo')
@@ -43,7 +84,7 @@ var css = csjs`
 `
 
 class UserCard {
-  constructor (opts = {}) {
+  constructor (opts = { api: {}, events: {} }) {
     var self = this
 
     self.event = new EventManager()
