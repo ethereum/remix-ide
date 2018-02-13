@@ -4,43 +4,39 @@ var helper = require('./lib/helper')
 var copyToClipboard = require('./app/ui/copy-to-clipboard')
 var styles = require('remix-lib').ui.themeChooser.chooser()
 
-module.exports = UniversalDAppUI
-
-function UniversalDAppUI (udapp, opts = {}) {
-  this.udapp = udapp
-  this.el = yo`<div class=${css.udapp}></div>`
-}
-UniversalDAppUI.prototype.reset = function () {
-  this.el.innerHTML = ''
-}
-UniversalDAppUI.prototype.renderInstance = function (contract, address, contractName) {
-  var abi = this.udapp.getABI(contract)
-  return this.renderInstanceFromABI(abi, address, contractName)
-}
-UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address, contractName) {
-  address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
-  var shortAddress = helper.shortenAddress(address)
-  var context = this.udapp.context()
-
-  if (this.udapp.removable_instances) {
-    var close = yo`
-      <div class="${css.udappClose}" onclick=${remove}>
-        <i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i>
+module.exports = class UniversalDAppUI {
+  constructor (udapp, opts = {}) {
+    this.udapp = udapp
+    this.el = yo`<div class=${css.udapp}></div>`
+  }
+  reset () { this.el.innerHTML = '' }
+  renderInstance (contract, address, contractName) {
+    var abi = this.udapp.getABI(contract)
+    return this.renderInstanceFromABI(abi, address, contractName)
+  }
+  renderInstanceFromABI (contractABI, address, contractName) {
+    address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
+    var shortAddress = helper.shortenAddress(address)
+    var context = this.udapp.context()
+    if (this.udapp.removable_instances) {
+      var close = yo`
+        <div class="${css.udappClose}" onclick=${remove}>
+          <i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i>
+        </div>`
+      function remove () { instance.remove() } // eslint-disable-line
+    }
+    var title = yo`
+      <div class="${css.title}" onclick=${toggleClass}>
+        <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
+        ${copyToClipboard(() => address)}
       </div>`
-    function remove () { instance.remove() } // eslint-disable-line
-  }
-  var title = yo`
-    <div class="${css.title}" onclick=${toggleClass}>
-      <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
-      ${copyToClipboard(() => address)}
-    </div>`
-  function toggleClass () { instance.classList.toggle(`${css.hidesub}`) }
-  var fallback = this.udapp.getFallbackInterface(contractABI)
-  if (fallback) {
-    var opts = { funABI: fallback, address, contractAbi: contractABI, contractName }
-    var fallbackEL = this.getCallButton(opts)
-  }
-  var functions = contractABI
+    function toggleClass () { instance.classList.toggle(`${css.hidesub}`) }
+    var fallback = this.udapp.getFallbackInterface(contractABI)
+    if (fallback) {
+      var opts = { funABI: fallback, address, contractAbi: contractABI, contractName }
+      var fallbackEL = this.getCallButton(opts)
+    }
+    var functions = contractABI
     .filter(funABI => funABI.type === 'function')
     .map(funABI => this.getCallButton({
       funABI: funABI,
@@ -48,55 +44,51 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
       contractAbi: contractABI,
       contractName: contractName
     }))
-  var instance = yo`
-    <div class="instance ${css.instance}" id="instance${address}">
-      ${close || ''}
-      ${title}
-      ${fallbackEL || ''}
-      ${functions}
-    </div>`
-  return instance
-}
-UniversalDAppUI.prototype.getCallButton = function (args) {
-  var self = this
-  var lookupOnly = args.funABI.constant
-  var title = args.funABI.name || '(fallback)'
-
-  var buttonTitle = title
-  if (lookupOnly) buttonTitle = `${title} - call`
-  if (args.funABI.payable) buttonTitle = `${title} - transact (payable)`
-  if (!lookupOnly && !args.funABI.payable) buttonTitle = `${title} - transact (not payable)`
-
-  var inputs = self.udapp.getInputs(args.funABI)
-  if (inputs.length) var inputField = yo`<input placeholder="${inputs}" title="${inputs}"></input>`
-  if (lookupOnly) var outputOverride = yo`<div class=${css.value}></div>`
-  var button = yo`
-    <button onclick=${clickButton} class="${css.instanceButton} ${css.call}" title="${buttonTitle}">
-      ${title}
-    </button>`
-  function clickButton () {
-    self.udapp.call(true, args, ((inputField || {}).value || []), lookupOnly, (decoded) => {
-      outputOverride.innerHTML = ''
-      outputOverride.appendChild(decoded)
-    })
+    var instance = yo`
+      <div class="instance ${css.instance}" id="instance${address}">
+        ${close || ''}
+        ${title}
+        ${fallbackEL || ''}
+        ${functions}
+      </div>`
+    return instance
   }
-
-  var contractClasses = `${css.contractProperty} ${css.buttonsContainer}`
-  if (args.funABI.inputs && args.funABI.inputs.length > 0) contractClasses += ` ${css.hasArgs}`
-  if (lookupOnly) contractClasses += ` ${css.constant}`
-  if (args.funABI.payable) contractClasses += ` ${css.payable}`
-  var contractProperty = yo`
-    <div class="${contractClasses}">
-      <div class="${css.contractActions}">
-        ${button}
-        ${inputField || ''}
-      </div>
-      ${outputOverride || ''}
-    </div>`
-
-  return contractProperty
+  getCallButton (args) {
+    var self = this
+    var lookupOnly = args.funABI.constant
+    var title = args.funABI.name || '(fallback)'
+    var buttonTitle = title
+    if (lookupOnly) buttonTitle = `${title} - call`
+    if (args.funABI.payable) buttonTitle = `${title} - transact (payable)`
+    if (!lookupOnly && !args.funABI.payable) buttonTitle = `${title} - transact (not payable)`
+    var inputs = self.udapp.getInputs(args.funABI)
+    if (inputs.length) var inputField = yo`<input placeholder="${inputs}" title="${inputs}"></input>`
+    if (lookupOnly) var outputOverride = yo`<div class=${css.value}></div>`
+    var button = yo`
+      <button onclick=${clickButton} class="${css.instanceButton} ${css.call}" title="${buttonTitle}">
+        ${title}
+      </button>`
+    function clickButton () {
+      self.udapp.call(true, args, ((inputField || {}).value || []), lookupOnly, (decoded) => {
+        outputOverride.innerHTML = ''
+        outputOverride.appendChild(decoded)
+      })
+    }
+    var contractClasses = `${css.contractProperty} ${css.buttonsContainer}`
+    if (args.funABI.inputs && args.funABI.inputs.length > 0) contractClasses += ` ${css.hasArgs}`
+    if (lookupOnly) contractClasses += ` ${css.constant}`
+    if (args.funABI.payable) contractClasses += ` ${css.payable}`
+    var contractProperty = yo`
+      <div class="${contractClasses}">
+        <div class="${css.contractActions}">
+          ${button}
+          ${inputField || ''}
+        </div>
+        ${outputOverride || ''}
+      </div>`
+    return contractProperty
+  }
 }
-
 var css = csjs`
   .title {
     ${styles.rightPanel.runTab.titlebox_RunTab}
