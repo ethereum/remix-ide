@@ -80,9 +80,9 @@ class TxLogger {
       var data = args[0]
       var el
       if (data.tx.isCall) {
-        el = renderCall(this, data)
+        el = renderCall(this, data, opts)
       } else {
-        el = renderKnownTransaction(this, data)
+        el = renderKnownTransaction(this, data, opts)
       }
       this.seen[data.tx.hash] = el
       append(el)
@@ -90,13 +90,13 @@ class TxLogger {
 
     this.logUnknownTX = opts.api.editorpanel.registerCommand('unknownTransaction', (args, cmds, append) => {
       var data = args[0]
-      var el = renderUnknownTransaction(this, data)
+      var el = renderUnknownTransaction(this, data, opts)
       append(el)
     }, { activate: false, filterFn: filterTx })
 
     this.logEmptyBlock = opts.api.editorpanel.registerCommand('emptyBlock', (args, cmds, append) => {
       var data = args[0]
-      var el = renderEmptyBlock(this, data)
+      var el = renderEmptyBlock(this, data, opts)
       append(el)
     }, { activate: true })
 
@@ -146,7 +146,7 @@ function log (self, tx, api) {
   }
 }
 
-function renderKnownTransaction (self, data) {
+function renderKnownTransaction (self, data, api) {
   var from = data.tx.from
   var to = data.resolvedData.contractName + '.' + data.resolvedData.fn
   function debug () {
@@ -166,10 +166,14 @@ function renderKnownTransaction (self, data) {
 
   var table
   function txDetails () {
+    function addTable (newOpts) {
+      table = createTable(newOpts)
+      tx.appendChild(table)
+    }
     if (table && table.parentNode) {
       tx.removeChild(table)
     } else {
-      table = createTable({
+      var opts = {
         contractAddress: data.tx.contractAddress,
         data: data.tx,
         from,
@@ -184,15 +188,15 @@ function renderKnownTransaction (self, data) {
         transactionCost: data.tx.transactionCost,
         executionCost: data.tx.executionCost,
         status: data.tx.status
-      })
-      tx.appendChild(table)
+      }
+      addEtherScanLinks(opts, data, api, addTable)
     }
   }
 
   return tx
 }
 
-function renderCall (self, data) {
+function renderCall (self, data, api) {
   function debug () {
     if (data.tx.envMode === 'vm') {
       self.event.trigger('debugRequested', [data.tx.hash])
@@ -218,10 +222,14 @@ function renderCall (self, data) {
 
   var table
   function txDetails () {
+    function addTable (newOpts) {
+      table = createTable(newOpts)
+      tx.appendChild(table)
+    }
     if (table && table.parentNode) {
       tx.removeChild(table)
     } else {
-      table = createTable({
+      var opts = {
         isCall: data.tx.isCall,
         contractAddress: data.tx.contractAddress,
         data: data.tx,
@@ -235,14 +243,14 @@ function renderCall (self, data) {
         val: data.tx.value,
         transactionCost: data.tx.transactionCost,
         executionCost: data.tx.executionCost
-      })
-      tx.appendChild(table)
+      }
+      addEtherScanLinks(opts, data, api, addTable)
     }
   }
   return tx
 }
 
-function renderUnknownTransaction (self, data) {
+function renderUnknownTransaction (self, data, api) {
   var from = data.tx.from
   var to = data.tx.to
   function debug () {
@@ -261,10 +269,14 @@ function renderUnknownTransaction (self, data) {
   `
   var table
   function txDetails () {
+    function addTable (newOpts) {
+      table = createTable(newOpts)
+      tx.appendChild(table)
+    }
     if (table && table.parentNode) {
       tx.removeChild(table)
     } else {
-      table = createTable({
+      var opts = {
         data: data.tx,
         from,
         to,
@@ -276,8 +288,8 @@ function renderUnknownTransaction (self, data) {
         transactionCost: data.tx.transactionCost,
         executionCost: data.tx.executionCost,
         status: data.tx.status
-      })
-      tx.appendChild(table)
+      }
+      addEtherScanLinks(opts, data, api, addTable)
     }
   }
   return tx
@@ -314,9 +326,21 @@ module.exports = TxLogger
 
 // helpers
 
+function addEtherScanLinks (opts, data, appAPI, callback) {
+  appAPI.api.detectNetwork((err, network) => {
+    if (err) return console.log(err)
+    if (~'Main Ropsten Rinkeby Kovan'.indexOf(network.name)) {
+      var transactionHash = data.tx.hash
+      var contractAddress = data.resolvedData.contractAddress
+      opts.etherscanTxHashURL = 'https://etherscan.io/tx/' + transactionHash
+      opts.etherscanTxAddressURL = 'https://etherscan.io/address/' + contractAddress
+    }
+    callback(opts)
+  })
+}
+
 function createTable (opts) {
   var table = yo`<table class="${css.txTable}" id="txTable"></table>`
-
   if (opts.status) {
     var msg = ''
     if (opts.status === '0x0') {
@@ -468,6 +492,24 @@ function createTable (opts) {
     </tr>
   `
   if (opts.val) table.appendChild(val)
+
+  if (opts.etherscanTxHashURL) {
+    var hashURL = yo`
+    <tr class="${css.tr}">
+      <td class="${css.td}"> tx on Etherscan </td>
+      <td class="${css.td}">${opts.etherscanTxHashURL} </td>
+    </tr>`
+    table.appendChild(hashURL)
+  }
+
+  if (opts.etherscanTxAddressURL) {
+    var addressURL = yo`
+    <tr class="${css.tr}">
+      <td class="${css.td}"> address on Etherscan </td>
+      <td class="${css.td}">${opts.etherscanTxAddressURL} </td>
+    </tr>`
+    table.appendChild(addressURL)
+  }
 
   return table
 }

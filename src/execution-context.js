@@ -118,7 +118,6 @@ function ExecutionContext () {
         else if (id === '4') name = 'Rinkeby'
         else if (id === '42') name = 'Kovan'
         else name = 'Custom'
-
         if (id === '1') {
           this.web3().eth.getBlock(0, (error, block) => {
             if (error) console.log('cant query first block')
