@@ -43,6 +43,9 @@ var css = csjs`
     padding: 4px;
     vertical-align: baseline;
   }
+  .td a {
+    cursor: pointer;
+  }
   .tableTitle {
     width: 25%;
   }
@@ -330,9 +333,9 @@ function addEtherScanLinks (opts, data, appAPI, callback) {
   appAPI.api.detectNetwork((err, network) => {
     if (err) return console.log(err)
     if (~'Main Ropsten Rinkeby Kovan'.indexOf(network.name)) {
-      var transactionHash = data.tx.hash
+      var transactionHashURL = data.tx.hash
       var contractAddress = data.resolvedData.contractAddress
-      opts.etherscanTxHashURL = 'https://etherscan.io/tx/' + transactionHash
+      opts.etherscanTxHashURL = 'https://etherscan.io/tx/' + transactionHashURL
       opts.etherscanTxAddressURL = 'https://etherscan.io/address/' + contractAddress
     }
     callback(opts)
@@ -497,7 +500,7 @@ function createTable (opts) {
     var hashURL = yo`
     <tr class="${css.tr}">
       <td class="${css.td}"> tx on Etherscan </td>
-      <td class="${css.td}">${opts.etherscanTxHashURL} </td>
+      <td class="${css.td}"><a href=${opts.etherscanTxHashURL} target="_blank">${opts.etherscanTxHashURL}</a></td>
     </tr>`
     table.appendChild(hashURL)
   }
@@ -506,7 +509,7 @@ function createTable (opts) {
     var addressURL = yo`
     <tr class="${css.tr}">
       <td class="${css.td}"> address on Etherscan </td>
-      <td class="${css.td}">${opts.etherscanTxAddressURL} </td>
+      <td class="${css.td}"><a href=${opts.etherscanTxAddressURL} target="_blank">${opts.etherscanTxAddressURL}</a></td>
     </tr>`
     table.appendChild(addressURL)
   }
