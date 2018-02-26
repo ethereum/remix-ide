@@ -6,6 +6,7 @@ var remixLib = require('remix-lib')
 var helper = remixLib.execution.txHelper
 var TreeView = require('remix-debugger').ui.TreeView
 var executionContext = require('../../execution-context')
+var solcLinker = require('solc/linker')
 
 module.exports = {
 
@@ -190,14 +191,7 @@ module.exports = {
   },
 
   linkLibrary: function (libraryName, address, bytecodeToLink) {
-    var libLabel = '__' + libraryName + Array(39 - libraryName.length).join('_')
-    if (bytecodeToLink.indexOf(libLabel) === -1) return bytecodeToLink
-
-    address = Array(40 - address.length + 1).join('0') + address
-    while (bytecodeToLink.indexOf(libLabel) >= 0) {
-      bytecodeToLink = bytecodeToLink.replace(libLabel, address)
-    }
-    return bytecodeToLink
+    return solcLinker.linkBytecode(bytecodeToLink, { [libraryName]: ethJSUtil.addHexPrefix(address) })
   },
 
   decodeResponseToTreeView: function (response, fnabi) {
