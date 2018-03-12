@@ -27,13 +27,6 @@ cd remix-ide
 npm install
 ```
 
-## DEVELOPING:
-
-Run `npm start` and open `http://127.0.0.1:8080` in your browser.
-
-Then open your `text editor` and start developing.
-The browser will automatically refresh when files are saved.
-
 Most of the the time working with other modules (like debugger etc.) hosted in the [Remix repository](https://github.com/ethereum/remix) is not needed.
 But in case changes have to be made in that repository too, the following command will help you link Remix with your local Browser-solidity repository:
 
@@ -50,6 +43,13 @@ npm run linkremixsolidity
 
 npm run linkremixdebugger
 ```
+
+## DEVELOPING:
+
+Run `npm start` and open `http://127.0.0.1:8080` in your browser.
+
+Then open your `text editor` and start developing.
+The browser will automatically refresh when files are saved.
 
 ### Troubleshooting building
 
