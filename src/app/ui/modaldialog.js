@@ -12,9 +12,11 @@ module.exports = (title, content, ok, cancel) => {
 
   var okDiv = document.getElementById('modal-footer-ok')
   okDiv.innerHTML = (ok && ok.label !== undefined) ? ok.label : 'OK'
+  ok && ok.hide && okDiv.parentNode.removeChild(okDiv)
 
   var cancelDiv = document.getElementById('modal-footer-cancel')
   cancelDiv.innerHTML = (cancel && cancel.label !== undefined) ? cancel.label : 'Cancel'
+  cancel && cancel.hide && cancelDiv.parentNode.removeChild(cancelDiv)
 
   var modal = document.querySelector(`.${css.modalBody}`)
   var modalTitle = document.querySelector(`.${css.modalHeader} h2`)
