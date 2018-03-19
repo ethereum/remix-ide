@@ -1,9 +1,11 @@
 'use strict'
+var yo = require('yo-yo')
 var EthJSTX = require('ethereumjs-tx')
 var EthJSBlock = require('ethereumjs-block')
 var ethJSUtil = require('ethereumjs-util')
 var BN = ethJSUtil.BN
 var executionContext = require('../../execution-context')
+var modalDialog = require('../ui/modaldialog')
 
 function TxRunner (vmaccounts, api) {
   this._api = api
@@ -158,11 +160,19 @@ TxRunner.prototype.runInNode = function (from, to, data, value, gasLimit, useCal
   })
 }
 
-function tryTillResponse (txhash, done) {
+const TX_RETRY_TIMEOUT = 500
+const TX_ALERT_TIMEOUT = 10000
+
+function tryTillResponse (txhash, done, attempts = 0) {
+  // Show pending modal after 10 seconds
+  if (attempts * TX_RETRY_TIMEOUT === TX_ALERT_TIMEOUT) {
+    modalDialog('Transaction pending', yo`<div>${txhash} is still pending...</div>`, null, { hide: true })
+  }
+
   executionContext.web3().eth.getTransactionReceipt(txhash, function (err, result) {
     if (err || !result) {
       // Try again with a bit of delay if error or if result still null
-      setTimeout(function () { tryTillResponse(txhash, done) }, 500)
+      setTimeout(() => { tryTillResponse(txhash, done, attempts + 1) }, TX_RETRY_TIMEOUT)
     } else {
       done(err, {
         result: result,
