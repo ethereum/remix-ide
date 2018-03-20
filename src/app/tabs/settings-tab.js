@@ -185,7 +185,7 @@ function SettingsTab (appAPI = {}, appEvents = {}, opts = {}) {
   header.selected = true
   versionSelector.appendChild(header)
 
-  $.getJSON('https://solc-bin.ethereum.org/bin/list.json').done(function (data) {
+  $.getJSON('http://solc-bin.ethereum.org/bin/list.json').done(function (data) {
     // populate version dropdown with all available compiler versions (descending order)
     $.each(data.builds.slice().reverse(), function (i, build) {
       versionSelector.appendChild(new Option(build.longVersion, build.path))
@@ -239,7 +239,7 @@ function loadVersion (version, queryParams, appAPI, el) {
       console.log('loading ' + version + ' not allowed')
       return
     }
-    url = 'https://solc-bin.ethereum.org/bin/' + version
+    url = 'http://solc-bin.ethereum.org/bin/' + version
   }
   var isFirefox = typeof InstallTrigger !== 'undefined'
   if (document.location.protocol !== 'file:' && Worker !== undefined && isFirefox) {
