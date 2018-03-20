@@ -53,18 +53,15 @@ UniversalDApp.prototype.reset = function (contracts, transactionContextAPI) {
   this.txRunner = new TxRunner(this.accounts, this._api)
 }
 
-UniversalDApp.prototype.newAccount = function (password, cb) {
+UniversalDApp.prototype.newAccount = function (password, passPhraseCb, cb) {
   if (!executionContext.isVM()) {
     if (!this._api.personalMode()) {
       return cb('Not running in personal mode')
     }
-    modalCustom.promptPassphraseCreation((error, passphrase) => {
-      if (error) {
-        modalCustom.alert(error)
-      } else {
-        executionContext.web3().personal.newAccount(passphrase, cb)
-      }
-    }, () => {})
+
+    passPhraseCb((passphrase) => {
+      executionContext.web3().personal.newAccount(passphrase, cb)
+    })
   } else {
     var privateKey
     do {
