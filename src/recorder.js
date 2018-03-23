@@ -1,11 +1,16 @@
+var async = require('async')
 var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
 var ethutil = require('ethereumjs-util')
 var executionContext = require('./execution-context')
 var format = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
-var async = require('async')
 var modal = require('./app/ui/modal-dialog-custom')
+var modalCustom = require('./app/ui/modal-dialog-custom')
+var yo = require('yo-yo')
+var modalDialog = require('./app/ui/modaldialog')
+var typeConversion = remixLib.execution.typeConversion
+var confirmDialog = require('./app/execution/confirmDialog')
 
 /**
   * Record transaction as long as the user create them.
@@ -242,7 +247,7 @@ class Recorder {
         self._api.logMessage(`(${index}) data: ${data.data}`)
         record.data = { dataHex: data.data, funArgs: tx.record.parameters, funAbi: fnABI, contractBytecode: tx.record.bytecode, contractName: tx.record.contractName }
       }
-      self._api.udapp().runTx(record, function (err, txResult) {
+      runTx(self._api.udapp(), record, function (err, txResult) {
         if (err) {
           console.error(err)
           self._api.logMessage(err + '. Execution failed at ' + index)
@@ -260,6 +265,148 @@ class Recorder {
       })
     }, () => { self.setListen(true); self.clearAll() })
   }
+}
+
+function runTx (udapp, args, cb) {
+  const self = udapp
+  async.waterfall([
+    function getGasLimit (next) {
+      if (self.transactionContextAPI.getGasLimit) {
+        return self.transactionContextAPI.getGasLimit(next)
+      }
+      next(null, 3000000)
+    },
+    function queryValue (gasLimit, next) {
+      if (args.value) {
+        return next(null, args.value, gasLimit)
+      }
+      if (args.useCall || !self.transactionContextAPI.getValue) {
+        return next(null, 0, gasLimit)
+      }
+      self.transactionContextAPI.getValue(function (err, value) {
+        next(err, value, gasLimit)
+      })
+    },
+    function getAccount (value, gasLimit, next) {
+      if (args.from) {
+        return next(null, args.from, value, gasLimit)
+      }
+      if (self.transactionContextAPI.getAddress) {
+        return self.transactionContextAPI.getAddress(function (err, address) {
+          next(err, address, value, gasLimit)
+        })
+      }
+      self.getAccounts(function (err, accounts) {
+        let address = accounts[0]
+
+        if (err) return next(err)
+        if (!address) return next('No accounts available')
+        if (executionContext.isVM() && !self.accounts[address]) {
+          return next('Invalid account selected')
+        }
+        next(null, address, value, gasLimit)
+      })
+    },
+    function runTransaction (fromAddress, value, gasLimit, next) {
+      var tx = { to: args.to, data: args.data.dataHex, useCall: args.useCall, from: fromAddress, value: value, gasLimit: gasLimit }
+      var payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName }
+      var timestamp = Date.now()
+
+      self.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
+      self.txRunner.rawRun(tx,
+
+        (network, tx, gasEstimation, continueTxExecution, cancelCb) => {
+          if (network.name !== 'Main') {
+            return continueTxExecution(null)
+          }
+          var amount = executionContext.web3().fromWei(typeConversion.toInt(tx.value), 'ether')
+          var content = confirmDialog(tx, amount, gasEstimation, self,
+            (gasPrice, cb) => {
+              let txFeeText, priceStatus
+              // TODO: this try catch feels like an anti pattern, can/should be
+              // removed, but for now keeping the original logic
+              try {
+                var fee = executionContext.web3().toBigNumber(tx.gas).mul(executionContext.web3().toBigNumber(executionContext.web3().toWei(gasPrice.toString(10), 'gwei')))
+                txFeeText = ' ' + executionContext.web3().fromWei(fee.toString(10), 'ether') + ' Ether'
+                priceStatus = true
+              } catch (e) {
+                txFeeText = ' Please fix this issue before sending any transaction. ' + e.message
+                priceStatus = false
+              }
+              cb(txFeeText, priceStatus)
+            },
+            (cb) => {
+              executionContext.web3().eth.getGasPrice((error, gasPrice) => {
+                var warnMessage = ' Please fix this issue before sending any transaction. '
+                if (error) {
+                  return cb('Unable to retrieve the current network gas price.' + warnMessage + error)
+                }
+                try {
+                  var gasPriceValue = executionContext.web3().fromWei(gasPrice.toString(10), 'gwei')
+                  cb(null, gasPriceValue)
+                } catch (e) {
+                  cb(warnMessage + e.message, null, false)
+                }
+              })
+            }
+          )
+          modalDialog('Confirm transaction', content,
+            { label: 'Confirm',
+              fn: () => {
+                self._api.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+                // TODO: check if this is check is still valid given the refactor
+                if (!content.gasPriceStatus) {
+                  cancelCb('Given gas price is not correct')
+                } else {
+                  var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
+                  continueTxExecution(gasPrice)
+                }
+              }}, {
+                label: 'Cancel',
+                fn: () => {
+                  return cancelCb('Transaction canceled by user.')
+                }
+              })
+        },
+        (error, continueTxExecution, cancelCb) => {
+          if (error) {
+            var msg = typeof error !== 'string' ? error.message : error
+            modalDialog('Gas estimation failed', yo`<div>Gas estimation errored with the following message (see below).
+            The transaction execution will likely fail. Do you want to force sending? <br>
+            ${msg}
+            </div>`,
+              {
+                label: 'Send Transaction',
+                fn: () => {
+                  continueTxExecution()
+                }}, {
+                  label: 'Cancel Transaction',
+                  fn: () => {
+                    cancelCb()
+                  }
+                })
+          } else {
+            continueTxExecution()
+          }
+        },
+        function (okCb, cancelCb) {
+          modalCustom.promptPassphrase(null, 'Personal mode is enabled. Please provide passphrase of account ' + tx.from, '', okCb, cancelCb)
+        },
+        function (error, result) {
+          let eventName = (tx.useCall ? 'callExecuted' : 'transactionExecuted')
+          self.event.trigger(eventName, [error, tx.from, tx.to, tx.data, tx.useCall, result, timestamp, payLoad])
+
+          if (error && (typeof (error) !== 'string')) {
+            if (error.message) error = error.message
+            else {
+              try { error = 'error: ' + JSON.stringify(error) } catch (e) {}
+            }
+          }
+          next(error, result)
+        }
+      )
+    }
+  ], cb)
 }
 
 function addressToString (address) {
