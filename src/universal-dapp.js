@@ -11,7 +11,6 @@ var txExecution = remixLib.execution.txExecution
 var txFormat = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
 var executionContext = require('./execution-context')
-var uiUtil = require('./app/ui/util')
 
 /*
   trigger debugRequested
@@ -164,8 +163,8 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
             }
           }
           if (lookupOnly) {
-            var decoded = uiUtil.decodeResponseToTreeView(executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result), args.funABI)
-            outputCb(decoded)
+            var result = (executionContext.isVM() ? txResult.result.vm.return : ethJSUtil.toBuffer(txResult.result))
+            outputCb(result, args.funABI)
           }
         } else {
           self._api.logMessage(`${logMsg} errored: ${error} `)
