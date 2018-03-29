@@ -6,6 +6,7 @@ var yo = require('yo-yo')
 var helper = require('./lib/helper')
 var copyToClipboard = require('./app/ui/copy-to-clipboard')
 var css = require('./universal-dapp-styles')
+var uiUtil = require('./app/ui/util')
 
 /*
   trigger debugRequested
@@ -111,7 +112,9 @@ UniversalDAppUI.prototype.getCallButton = function (args) {
   button.innerHTML = title
 
   function clickButton () {
-    self.udapp.call(true, args, inputField.value, lookupOnly, (decoded) => {
+    self.udapp.call(true, args, inputField.value, lookupOnly, (result, funABI) => {
+      var decoded = uiUtil.decodeResponseToTreeView(result, funABI)
+
       outputOverride.innerHTML = ''
       outputOverride.appendChild(decoded)
     })

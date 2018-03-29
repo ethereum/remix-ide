@@ -779,7 +779,15 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
       return compiler.lastCompilationResult
     },
     newAccount: (pass, cb) => {
-      udapp.newAccount(pass, cb)
+      udapp.newAccount(pass, (resCb) => {
+        modalDialogCustom.promptPassphraseCreation((error, passphrase) => {
+          if (error) {
+            modalDialogCustom.alert(error)
+          } else {
+            resCb(passphrase)
+          }
+        }, () => {})
+      }, cb)
     },
     setConfig: (mod, path, content, cb) => {
       self._api.filesProviders['config'].set(mod + '/' + path, content)
