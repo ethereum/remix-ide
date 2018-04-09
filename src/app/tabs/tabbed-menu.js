@@ -6,45 +6,44 @@ var css = require('./styles/tabbed-menu-styles')
 class TabbedMenu {
   constructor (api = {}, events = {}, opts = {}) {
     var self = this
-    var tabView = document.createElement('ul')
-    this.tabView = tabView
-    this.events = events
-    this.tabs = {}
-    this.contents = {}
-
-    events.app.register('debuggingRequested', () => {
-      self.selectTab(tabView.querySelector('li.debugView'))
-    })
-
-    events.rhp.register('switchTab', tabName => {
-      self.selectTab(tabView.querySelector(`li.${tabName}`))
-    })
+    self.events = events
+    self._api = api
+    self._view = { element: document.createElement('ul') }
+    self.tabs = {}
+    self.contents = {}
+    events.app.register('debuggingRequested', () => self.selectTabByTitle('debugView'))
+    // @TODO: 'switchTab' is a message sent only to "TabbedMenu" and should be a method instead
+    events.rhp.register('switchTab', title => self.selectTabByTitle(title))
   }
-  render () { return this.tabView }
+  render () {
+    var self = this
+    return self._view.element
+  }
   selectTabByTitle (title) {
-    this.selectTab(this.tabs[title])
+    var self = this
+    self.selectTab(self.tabs[title])
   }
-
   selectTab (el) {
-    if (!el.classList.contains(css.active)) {
-      var nodes = el.parentNode.querySelectorAll('li')
-      for (var i = 0; i < nodes.length; ++i) {
-        nodes[i].classList.remove(css.active)
-        this.contents[nodes[i].getAttribute('title')].style.display = 'none'
-      }
-    }
+    var self = this
     var title = el.getAttribute('title')
-    this.contents[el.getAttribute('title')].style.display = 'block'
-    el.classList.add(css.active)
-    this.events.app.trigger('tabChanged', [title])
+    if (!el.classList.contains(css.active)) Object.keys(self.tabs).forEach(tabname => {
+      if (title === tabname) {
+        el.classList.add(css.active)
+        self.contents[tabname].style.display = 'block'
+      } else {
+        self.tabs[tabname].classList.remove(css.active)
+        self.contents[tabname].style.display = 'none'
+      }
+    })
+    // @TODO: components should NEVER trigger other components events, so TabbedMenu needs an EventManager instead
+    self._events.app.trigger('tabChanged', [title])
   }
-
   addTab (title, cssClass, content) {
     var self = this
     if (!helper.checkSpecialChars(title)) {
-      this.contents[title] = content
-      this.tabs[title] = yo`<li class="${css.opts_li} ${css.options} ${cssClass}" onclick=${function (ev) { self.selectTab(this) }} title=${title}>${title}</li>`
-      this.tabView.appendChild(this.tabs[title])
+      self.contents[title] = content
+      self.tabs[title] = yo`<li class="${css.opts_li} ${css.options} ${cssClass}" onclick=${event => self.selectTabByTitle(title)} title=${title}>${title}</li>`
+      self._view.element.appendChild(self.tabs[title])
     }
   }
 }
