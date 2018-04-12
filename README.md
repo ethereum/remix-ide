@@ -52,6 +52,8 @@ But in case changes have to be made in that repository too, the following comman
 After `npm install` run also:
 
 ```bash
+git clone https://github.com/ethereum/remix.git
+
 npm run pullremix
 
 npm run linkremixcore
