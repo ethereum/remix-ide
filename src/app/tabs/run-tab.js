@@ -1,36 +1,43 @@
-'use strict'
-var $ = require('jquery')
 var yo = require('yo-yo')
-var helper = require('../../lib/helper.js')
+var csjs = require('csjs-inject')
 var remixLib = require('remix-lib')
+var ethJSUtil = require('ethereumjs-util')
+
+var styleGuide = require('../ui/styles-guide/theme-chooser')
+var modalDialogCustom = require('../ui/modal-dialog-custom')
+var executionContext = require('../../execution-context')
+var copyToClipboard = require('../ui/copy-to-clipboard')
+var helper = require('../../lib/helper.js')
+var addTooltip = require('../ui/tooltip')
+var Recorder = require('../../recorder')
+
 var txExecution = remixLib.execution.txExecution
 var txFormat = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
-var executionContext = require('../../execution-context')
-var modalDialogCustom = require('../ui/modal-dialog-custom')
-var copyToClipboard = require('../ui/copy-to-clipboard')
-var Recorder = require('../../recorder')
 var EventManager = remixLib.EventManager
-var addTooltip = require('../ui/tooltip')
-var ethJSUtil = require('ethereumjs-util')
+var styles = styleGuide.chooser()
 
-var csjs = require('csjs-inject')
-var css = require('./styles/run-tab-styles')
+var instanceContainer
+var noInstancesText
+var pendingTxsText
 
-var instanceContainer = yo`<div class="${css.instanceContainer}"></div>`
-var noInstancesText = yo`<div class="${css.noInstancesText}">0 contract Instances</div>`
+module.exports = function runTab (api = {}, events = {}, opts = {}) {
+  var self = this
+  self.event = new EventManager()
+  self._opts = opts
+  self._api = api
+  self._events = events
+  self._view = { el: document.createElement('div') } // previously"  yo`<div class="${css.runTabView}" id="runTabView" ></div>`
 
-var pendingTxsText = yo`<span>0 pending transactions</span>`
-
-function runTab (appAPI = {}, appEvents = {}, opts = {}) {
-  var container = yo`<div class="${css.runTabView}" id="runTabView" ></div>`
-  var event = new EventManager()
+  instanceContainer = yo`<div class="${css.instanceContainer}"></div>`
+  noInstancesText = yo`<div class="${css.noInstancesText}">0 contract Instances</div>`
+  pendingTxsText = yo`<span>0 pending transactions</span>`
 
   var clearInstanceElement = yo`<i class="${css.clearinstance} ${css.icon} fa fa-trash" title="Clear Instances List" aria-hidden="true"></i>`
   clearInstanceElement.addEventListener('click', () => {
-    event.trigger('clearInstance', [])
+    self.event.trigger('clearInstance', [])
   })
-  var recorderInterface = makeRecorder(event, appAPI, appEvents, opts)
+  var recorderInterface = makeRecorder(self.event, self._api, self._events, self._opts)
   var pendingTxsContainer = yo`
   <div class="${css.pendingTxsContainer}">
     <div class="${css.pendingTxsText}">
@@ -45,17 +52,17 @@ function runTab (appAPI = {}, appEvents = {}, opts = {}) {
 
   var el = yo`
   <div>
-    ${settings(container, appAPI, appEvents, opts)}
-    ${contractDropdown(event, appAPI, appEvents, opts, instanceContainer)}
+    ${settings(self._view.el, self._api, self._events, self._opts)}
+    ${contractDropdown(self.event, self._api, self._events, self._opts, instanceContainer)}
     ${pendingTxsContainer}
     ${instanceContainer}
   </div>
   `
-  container.appendChild(el)
+  self._view.el.appendChild(el)
 
   // PENDING transactions
-  function updatePendingTxs (container, appAPI) {
-    var pendingCount = Object.keys(opts.udapp.pendingTransactions()).length
+  function updatePendingTxs (container, _api) {
+    var pendingCount = Object.keys(_api.udapp().pendingTransactions()).length
     pendingTxsText.innerText = pendingCount + ' pending transactions'
   }
 
@@ -65,8 +72,8 @@ function runTab (appAPI = {}, appEvents = {}, opts = {}) {
   function setFinalContext () {
     // set the final context. Cause it is possible that this is not the one we've originaly selected
     selectExEnv.value = executionContext.getProvider()
-    fillAccountsList(appAPI, el)
-    event.trigger('clearInstance', [])
+    fillAccountsList(self._api, el)
+    self.event.trigger('clearInstance', [])
   }
 
   selectExEnv.addEventListener('change', function (event) {
@@ -90,42 +97,40 @@ function runTab (appAPI = {}, appEvents = {}, opts = {}) {
   executionContext.event.register('contextChanged', (context, silent) => {
     setFinalContext()
   })
-  fillAccountsList(appAPI, opts, el)
+  fillAccountsList(sel._api, self._opts, el)
   setInterval(() => {
-    updateAccountBalances(container, appAPI)
-    updatePendingTxs(container, appAPI)
+    updateAccountBalances(self._view.el, self._api)
+    updatePendingTxs(self._view.el, self._api)
   }, 10000)
 
-  event.register('clearInstance', () => {
+  self.event.register('clearInstance', () => {
     instanceContainer.innerHTML = '' // clear the instances list
     noInstancesText.style.display = 'block'
     instanceContainer.appendChild(noInstancesText)
   })
-  return { render () { return container } }
+  return { render () { return self._view.el.children[0] } }
 }
 
-function fillAccountsList (appAPI, opts, container) {
-  var $txOrigin = $(container.querySelector('#txorigin'))
-  $txOrigin.empty()
-  opts.udapp.getAccounts((err, accounts) => {
+function fillAccountsList (_api, opts, container) {
+  var txOrigin = container.querySelector('#txorigin')
+  txOrigin.innerHTML = ''
+  _api.udapp().getAccounts((err, accounts) => {
     if (err) { addTooltip(`Cannot get account list: ${err}`) }
     if (accounts && accounts[0]) {
-      for (var a in accounts) { $txOrigin.append($('<option />').val(accounts[a]).text(accounts[a])) }
-      $txOrigin.val(accounts[0])
+      for (var a in accounts) { txOrigin.appendChild(yo`<option value=${accounts[a]}>${accounts[a]}</option>`) }
+      txOrigin.setAttribute('value', accounts[0])
     } else {
-      $txOrigin.val('unknown')
+      txOrigin.setAttribute('value', 'unknown')
     }
   })
 }
 
-function updateAccountBalances (container, appAPI) {
-  var accounts = $(container.querySelector('#txorigin')).children('option')
-  accounts.each(function (index, value) {
+function updateAccountBalances (container, _api) {
+  var accounts = [...container.querySelectorAll('#txorigin option')]
+  accounts.forEach(function (value, index) {
     (function (acc) {
-      appAPI.getBalance(accounts[acc].value, function (err, res) {
-        if (!err) {
-          accounts[acc].innerText = helper.shortenAddress(accounts[acc].value, res)
-        }
+      _api.getBalance(accounts[acc].value, function (err, res) {
+        if (!err) accounts[acc].innerText = helper.shortenAddress(accounts[acc].value, res)
       })
     })(index)
   })
@@ -134,14 +139,14 @@ function updateAccountBalances (container, appAPI) {
 /* ------------------------------------------------
     RECORDER
 ------------------------------------------------ */
-function makeRecorder (events, appAPI, appEvents, opts) {
-  var recorder = new Recorder(opts.compiler, {
+function makeRecorder (events, _api, _events, _opts) {
+  var recorder = new Recorder({
     events: {
-      udapp: appEvents.udapp,
+      udapp: _events.udapp,
       executioncontext: executionContext.event,
       runtab: events
     },
-    api: appAPI
+    api: _api
   })
   var css2 = csjs`
     .container,
@@ -155,9 +160,9 @@ function makeRecorder (events, appAPI, appEvents, opts) {
 
   recordButton.onclick = () => {
     var txJSON = JSON.stringify(recorder.getAll(), null, 2)
-    var path = appAPI.currentPath()
+    var path = _api.currentPath()
     modalDialogCustom.prompt(null, 'save ran transactions to file (e.g. `scenario.json`). The file is going to be saved under ' + path, 'scenario.json', input => {
-      var fileProvider = appAPI.fileProviderOf(path)
+      var fileProvider = _api.fileProviderOf(path)
       if (fileProvider) {
         var newFile = path + input
         helper.createNonClashingName(newFile, fileProvider, (error, newFile) => {
@@ -165,15 +170,15 @@ function makeRecorder (events, appAPI, appEvents, opts) {
           if (!fileProvider.set(newFile, txJSON)) {
             modalDialogCustom.alert('Failed to create file ' + newFile)
           } else {
-            appAPI.switchFile(newFile)
+            _api.switchFile(newFile)
           }
         })
       }
     })
   }
   runButton.onclick = () => {
-    var currentFile = appAPI.config.get('currentFile')
-    appAPI.fileProviderOf(currentFile).get(currentFile, (error, json) => {
+    var currentFile = _api.config.get('currentFile')
+    _api.fileProviderOf(currentFile).get(currentFile, (error, json) => {
       if (error) {
         modalDialogCustom.alert('Invalid Scenario File ' + error)
       } else {
@@ -190,8 +195,8 @@ function makeRecorder (events, appAPI, appEvents, opts) {
           }
           if (txArray.length) {
             noInstancesText.style.display = 'none'
-            recorder.run(txArray, accounts, options, abis, linkReferences, opts.udapp, (abi, address, contractName) => {
-              instanceContainer.appendChild(opts.udappUI.renderInstanceFromABI(abi, address, contractName))
+            recorder.run(txArray, accounts, options, abis, linkReferences, _opts.udapp, (abi, address, contractName) => {
+              instanceContainer.appendChild(_api.udappUI().renderInstanceFromABI(abi, address, contractName))
             })
           }
         } else {
@@ -206,10 +211,10 @@ function makeRecorder (events, appAPI, appEvents, opts) {
     section CONTRACT DROPDOWN and BUTTONS
 ------------------------------------------------ */
 
-function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
+function contractDropdown (events, _api, _events, _opts, instanceContainer) {
   instanceContainer.appendChild(noInstancesText)
   var compFails = yo`<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-times-circle ${css.errorIcon}" ></i>`
-  appEvents.compiler.register('compilationFinished', function (success, data, source) {
+  _events.compiler.register('compilationFinished', function (success, data, source) {
     getContractNames(success, data)
     if (success) {
       compFails.style.display = 'none'
@@ -229,12 +234,12 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
     if (contractName) {
       return {
         name: contractName,
-        contract: opts.compiler.getContract(contractName)
+        contract: _api.getContract(contractName)
       }
     }
     return null
   }
-  appAPI.getSelectedContract = getSelectedContract
+  _api.getSelectedContract = getSelectedContract
 
   var el = yo`
     <div class="${css.container}">
@@ -248,7 +253,7 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
         </div>
         <div class="${css.button}">
           ${atAddressButtonInput}
-          <div class="${css.atAddress}" onclick=${function () { loadFromAddress(appAPI) }}>At Address</div>
+          <div class="${css.atAddress}" onclick=${function () { loadFromAddress(_api) }}>At Address</div>
         </div>
       </div>
     </div>
@@ -256,7 +261,7 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
 
   function setInputParamsPlaceHolder () {
     createButtonInput.value = ''
-    if (opts.compiler.getContract && selectContractNames.selectedIndex >= 0 && selectContractNames.children.length > 0) {
+    if (_api.getContract && selectContractNames.selectedIndex >= 0 && selectContractNames.children.length > 0) {
       var ctrabi = txHelper.getConstructorInterface(getSelectedContract().contract.object.abi)
       if (ctrabi.inputs.length) {
         createButtonInput.setAttribute('placeholder', txHelper.inputParametersDeclarationToString(ctrabi.inputs))
@@ -281,38 +286,38 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
 
     var constructor = txHelper.getConstructorInterface(selectedContract.contract.object.abi)
     var args = createButtonInput.value
-    txFormat.buildData(selectedContract.name, selectedContract.contract.object, opts.compiler.getContracts(), true, constructor, args, (error, data) => {
+    txFormat.buildData(selectedContract.name, selectedContract.contract.object, _api.getContracts(), true, constructor, args, (error, data) => {
       if (!error) {
-        appAPI.logMessage(`creation of ${selectedContract.name} pending...`)
-        opts.udapp.createContract(data, (error, txResult) => {
+        _api.logMessage(`creation of ${selectedContract.name} pending...`)
+        _api.udapp().createContract(data, (error, txResult) => {
           if (!error) {
             var isVM = executionContext.isVM()
             if (isVM) {
               var vmError = txExecution.checkVMError(txResult)
               if (vmError.error) {
-                appAPI.logMessage(vmError.message)
+                _api.logMessage(vmError.message)
                 return
               }
             }
             noInstancesText.style.display = 'none'
             var address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
-            instanceContainer.appendChild(opts.udappUI.renderInstance(selectedContract.contract.object, address, selectContractNames.value))
+            instanceContainer.appendChild(_api.udappUI().renderInstance(selectedContract.contract.object, address, selectContractNames.value))
           } else {
-            appAPI.logMessage(`creation of ${selectedContract.name} errored: ` + error)
+            _api.logMessage(`creation of ${selectedContract.name} errored: ` + error)
           }
         })
       } else {
-        appAPI.logMessage(`creation of ${selectedContract.name} errored: ` + error)
+        _api.logMessage(`creation of ${selectedContract.name} errored: ` + error)
       }
     }, (msg) => {
-      appAPI.logMessage(msg)
+      _api.logMessage(msg)
     }, (data, runTxCallback) => {
       // called for libraries deployment
-      opts.udapp.runTx(data, runTxCallback)
+      _api.udapp().runTx(data, runTxCallback)
     })
   }
 
-  function loadFromAddress (appAPI) {
+  function loadFromAddress (_api) {
     noInstancesText.style.display = 'none'
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     var address = atAddressButtonInput.value
@@ -322,19 +327,19 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
     if (/[a-f]/.test(address) && /[A-F]/.test(address) && !ethJSUtil.isValidChecksumAddress(address)) {
       return modalDialogCustom.alert('Invalid checksum address.')
     }
-    if (/.(.abi)$/.exec(appAPI.currentFile())) {
+    if (/.(.abi)$/.exec(_api.currentFile())) {
       modalDialogCustom.confirm(null, 'Do you really want to interact with ' + address + ' using the current ABI definition ?', () => {
         var abi
         try {
-          abi = JSON.parse(appAPI.editorContent())
+          abi = JSON.parse(_api.editorContent())
         } catch (e) {
           return modalDialogCustom.alert('Failed to parse the current file as JSON ABI.')
         }
-        instanceContainer.appendChild(opts.udappUI.renderInstanceFromABI(abi, address, address))
+        instanceContainer.appendChild(_api.udappUI().renderInstanceFromABI(abi, address, address))
       })
     } else {
-      var contract = opts.compiler.getContract(contractNames.children[contractNames.selectedIndex].innerHTML)
-      instanceContainer.appendChild(opts.udappUI.renderInstance(contract.object, address, selectContractNames.value))
+      var contract = _api.getContract(contractNames.children[contractNames.selectedIndex].innerHTML)
+      instanceContainer.appendChild(_api.udappUI().renderInstance(contract.object, address, selectContractNames.value))
     }
   }
 
@@ -344,7 +349,7 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
     contractNames.innerHTML = ''
     if (success) {
       selectContractNames.removeAttribute('disabled')
-      appAPI.visitContracts((contract) => {
+      _api.visitContracts((contract) => {
         contractNames.appendChild(yo`<option>${contract.name}</option>`)
       })
     } else {
@@ -359,7 +364,7 @@ function contractDropdown (events, appAPI, appEvents, opts, instanceContainer) {
 /* ------------------------------------------------
     section SETTINGS: Environment, Account, Gas, Value
 ------------------------------------------------ */
-function settings (container, appAPI, appEvents, opts) {
+function settings (container, _api, _events, _opts) {
   // SETTINGS HTML
   var net = yo`<span class=${css.network}></span>`
   const updateNetwork = () => {
@@ -374,7 +379,7 @@ function settings (container, appAPI, appEvents, opts) {
   }
   setInterval(updateNetwork, 5000)
   function newAccount () {
-    opts.udapp.newAccount('', (error, address) => {
+    _api.newAccount('', (error, address) => {
       if (!error) {
         container.querySelector('#txorigin').appendChild(yo`<option value=${address}>${address}</option>`)
         addTooltip(`account ${address} created`)
@@ -442,13 +447,196 @@ function settings (container, appAPI, appEvents, opts) {
     </div>
   `
   // EVENTS
-  appEvents.udapp.register('transactionExecuted', (error, from, to, data, lookupOnly, txResult) => {
+  _events.udapp.register('transactionExecuted', (error, from, to, data, lookupOnly, txResult) => {
     if (error) return
     if (!lookupOnly) el.querySelector('#value').value = '0'
-    updateAccountBalances(container, appAPI)
+    updateAccountBalances(container, _api)
   })
 
   return el
 }
 
-module.exports = runTab
+const css = csjs`
+  .runTabView {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  .settings {
+    ${styles.rightPanel.runTab.box_RunTab}
+    margin-bottom: 2%;
+    padding: 10px 15px 15px 15px;
+  }
+  .crow {
+    margin-top: .5em;
+    display: flex;
+    align-items: center;
+  }
+  .col1 {
+    width: 30%;
+    float: left;
+    align-self: center;
+  }
+  .col1_1 {
+    font-size: 12px;
+    width: 25%;
+    min-width: 75px;
+    float: left;
+    align-self: center;
+  }
+  .environment {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .col2 {
+    ${styles.rightPanel.runTab.input_RunTab}
+  }
+  .col2_1 {
+    ${styles.rightPanel.runTab.input_RunTab}
+    width: 165px;
+    min-width: 165px;
+  }
+  .col2_2 {
+    ${styles.rightPanel.runTab.dropdown_RunTab}
+    width: 82px;
+    min-width: 82px;
+  }
+  .select {
+    ${styles.rightPanel.runTab.dropdown_RunTab}
+    font-weight: normal;
+    width: 250px;
+  }
+  .instanceContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    border: none;
+    text-align: center;
+  }
+  .pendingTxsContainer  {
+    ${styles.rightPanel.runTab.box_Instance}
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    border: none;
+    text-align: center;
+  }
+  .container {
+    ${styles.rightPanel.runTab.box_RunTab}
+    margin-top: 2%;
+  }
+  .contractNames {
+    ${styles.rightPanel.runTab.dropdown_RunTab}
+    width: 100%;
+    border: 1px solid
+  }
+  .contractNamesError {
+    border: 1px solid ${styles.appProperties.errorText_Color}
+  }
+  .subcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .transaction {
+    ${styles.rightPanel.runTab.button_transaction}
+  }
+  .atAddress {
+    ${styles.rightPanel.runTab.button_atAddress}
+  }
+  .create {
+    ${styles.rightPanel.runTab.button_Create}
+  }
+  .input {
+    ${styles.rightPanel.runTab.input_RunTab}
+  }
+  .noInstancesText {
+    ${styles.rightPanel.runTab.box_Instance}
+    font-style: italic;
+  }
+  .pendingTxsText {
+    ${styles.rightPanel.runTab.borderBox_Instance}
+    font-style: italic;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .item {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .transact {
+    color: ${styles.colors.lightRed};
+    margin-right: .3em;
+  }
+  .payable {
+    color: ${styles.colors.red};
+    margin-right: .3em;
+  }
+  .call {
+    color: ${styles.colors.lightBlue};
+    margin-right: .3em;
+  }
+  .pendingContainer {
+    display: flex;
+    align-items: baseline;
+  }
+  .pending {
+    height: 25px;
+    text-align: center;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+  .icon {
+    cursor: pointer;
+    font-size: 12px;
+    cursor: pointer;
+    color: ${styles.rightPanel.runTab.icon_Color};
+    margin-left: 5px;
+  }
+  .icon:hover {
+    font-size: 12px;
+    color: ${styles.rightPanel.runTab.icon_HoverColor};
+  }
+  .errorIcon {
+    color: ${styles.appProperties.errorText_Color};
+    margin-left: 15px;
+  }
+  .failDesc {
+    color: ${styles.appProperties.errorText_Color};
+    padding-left: 10px;
+    display: inline;
+  }
+  .network {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    color: grey;
+    width: 100%;
+    height: 100%;
+    padding-right: 28px;
+    pointer-events: none;
+  }
+  .networkItem {
+    margin-right: 5px;
+  }
+  .clearinstance {}
+  .transactionActions {
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    border: 1px solid ${styles.rightPanel.runTab.additionalText_Color};
+    padding: 5px;
+    border-radius: 3px;
+}
+`
