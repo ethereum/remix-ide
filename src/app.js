@@ -1,30 +1,24 @@
-'use strict'
-
-var $ = require('jquery')
 var csjs = require('csjs-inject')
 var yo = require('yo-yo')
 var async = require('async')
 var request = require('request')
 var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var remixSolidity = require('remix-solidity')
 
 var UniversalDApp = require('./universal-dapp.js')
 var UniversalDAppUI = require('./universal-dapp-ui.js')
 var Remixd = require('./lib/remixd')
 var OffsetToLineColumnConverter = require('./lib/offsetToLineColumnConverter')
-
 var QueryParams = require('./lib/query-params')
 var GistHandler = require('./lib/gist-handler')
 var helper = require('./lib/helper')
-var Storage = remixLib.Storage
 var Browserfiles = require('./app/files/browser-files')
 var BrowserfilesTree = require('./app/files/browser-files-tree')
 var chromeCloudStorageSync = require('./app/files/chromeCloudStorageSync')
 var SharedFolder = require('./app/files/shared-folder')
-var Config = require('./config')
 var Editor = require('./app/editor/editor')
 var Renderer = require('./app/ui/renderer')
-var Compiler = require('remix-solidity').Compiler
+var Config = require('./config')
 var executionContext = require('./execution-context')
 var Debugger = require('./app/debugger/debugger')
 var StaticAnalysis = require('./app/staticanalysis/staticAnalysisView')
@@ -34,8 +28,6 @@ var RighthandPanel = require('./app/panels/righthand-panel')
 var examples = require('./app/editor/example-contracts')
 var modalDialogCustom = require('./app/ui/modal-dialog-custom')
 var TxLogger = require('./app/execution/txLogger')
-var Txlistener = remixLib.execution.txListener
-var EventsDecoder = remixLib.execution.EventsDecoder
 var handleImports = require('./app/compiler/compiler-imports')
 var FileManager = require('./app/files/fileManager')
 var ContextualListener = require('./app/editor/contextualListener')
@@ -45,71 +37,14 @@ var NotPersistedExplorer = require('./app/files/NotPersistedExplorer')
 var toolTip = require('./app/ui/tooltip')
 var CommandInterpreter = require('./lib/cmdInterpreter')
 var PluginAPI = require('./app/plugin/pluginAPI')
-
 var styleGuide = require('./app/ui/styles-guide/theme-chooser')
-var styles = styleGuide.chooser()
 
-var css = csjs`
-  html { box-sizing: border-box; }
-  *, *:before, *:after { box-sizing: inherit; }
-  body                 {
-    font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin             : 0;
-    padding            : 0;
-    font-size          : 12px;
-    color              : ${styles.leftPanel.text_Primary};
-    font-weight        : normal;
-  }
-  pre {
-    overflow-x: auto;
-  }
-  .browsersolidity     {
-    position           : relative;
-    width              : 100vw;
-    height             : 100vh;
-    overflow           : hidden;
-  }
-  .centerpanel         {
-    background-color  : ${styles.colors.transparent};
-    display            : flex;
-    flex-direction     : column;
-    position           : absolute;
-    top                : 0;
-    bottom             : 0;
-    overflow           : hidden;
-  }
-  .leftpanel           {
-    background-color  : ${styles.leftPanel.backgroundColor_Panel};
-    display            : flex;
-    flex-direction     : column;
-    position           : absolute;
-    top                : 0;
-    bottom             : 0;
-    left               : 0;
-    overflow           : hidden;
-  }
-  .rightpanel          {
-    background-color  : ${styles.rightPanel.backgroundColor_Panel};
-    display            : flex;
-    flex-direction     : column;
-    position           : absolute;
-    top                : 0;
-    right              : 0;
-    bottom             : 0;
-    overflow           : hidden;
-  }
-  .highlightcode {
-    position:absolute;
-    z-index:20;
-    background-color: ${styles.editor.backgroundColor_DebuggerMode};
-  }
-  .highlightcode_fullLine {
-    position:absolute;
-    z-index:20;
-    background-color: ${styles.editor.backgroundColor_DebuggerMode};
-    opacity: 0.5;
-  }
-`
+var Compiler = remixSolidity.Compiler
+var EventManager = remixLib.EventManager
+var Storage = remixLib.Storage
+var Txlistener = remixLib.execution.txListener
+var EventsDecoder = remixLib.execution.EventsDecoder
+var styles = styleGuide.chooser()
 
 class App {
   constructor (api = {}, events = {}, opts = {}) {
@@ -270,7 +205,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   // ----------------- UniversalDApp -----------------
   var transactionContextAPI = {
     getAddress: (cb) => {
-      cb(null, $('#txorigin').val())
+      cb(null, document.querySelector('#txorigin'))
     },
     getValue: (cb) => {
       try {
@@ -294,7 +229,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
       }
     },
     getGasLimit: (cb) => {
-      cb(null, $('#gasLimit').val())
+      cb(null, document.querySelector('#gasLimit'))
     }
   }
 
@@ -696,7 +631,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   var rhpAPI = {
     config: config,
     setEditorSize (delta) {
-      $('#righthand-panel').css('width', delta)
+      document.querySelector('#righthand-panel').style.width = delta + 'px'
       self._view.centerpanel.style.right = delta + 'px'
       document.querySelector(`.${css.dragbar2}`).style.right = delta + 'px'
       onResize()
@@ -958,3 +893,65 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     transactionDebugger.debug(txHash)
   }
 }
+
+const css = csjs`
+  html { box-sizing: border-box; }
+  *, *:before, *:after { box-sizing: inherit; }
+  body                 {
+    font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin             : 0;
+    padding            : 0;
+    font-size          : 12px;
+    color              : ${styles.leftPanel.text_Primary};
+    font-weight        : normal;
+  }
+  pre {
+    overflow-x: auto;
+  }
+  .browsersolidity     {
+    position           : relative;
+    width              : 100vw;
+    height             : 100vh;
+    overflow           : hidden;
+  }
+  .centerpanel         {
+    background-color  : ${styles.colors.transparent};
+    display            : flex;
+    flex-direction     : column;
+    position           : absolute;
+    top                : 0;
+    bottom             : 0;
+    overflow           : hidden;
+  }
+  .leftpanel           {
+    background-color  : ${styles.leftPanel.backgroundColor_Panel};
+    display            : flex;
+    flex-direction     : column;
+    position           : absolute;
+    top                : 0;
+    bottom             : 0;
+    left               : 0;
+    overflow           : hidden;
+  }
+  .rightpanel          {
+    background-color  : ${styles.rightPanel.backgroundColor_Panel};
+    display            : flex;
+    flex-direction     : column;
+    position           : absolute;
+    top                : 0;
+    right              : 0;
+    bottom             : 0;
+    overflow           : hidden;
+  }
+  .highlightcode {
+    position:absolute;
+    z-index:20;
+    background-color: ${styles.editor.backgroundColor_DebuggerMode};
+  }
+  .highlightcode_fullLine {
+    position:absolute;
+    z-index:20;
+    background-color: ${styles.editor.backgroundColor_DebuggerMode};
+    opacity: 0.5;
+  }
+`
