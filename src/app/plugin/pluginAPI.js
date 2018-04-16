@@ -1,9 +1,16 @@
 'use strict'
+var executionContext = require('../../execution-context')
+
 /*
   Defines available API. `key` / `type`
 */
 module.exports = (app, compiler) => {
   return {
+    app: {
+      getExecutionContextProvider: () => {
+        return executionContext.getProvider()
+      }
+    },
     config: {
       setConfig: (mod, path, content, cb) => {
         app._api.filesProviders['config'].set(mod + '/' + path, content)
