@@ -793,7 +793,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     staticAnalysis: staticanalysis.event
   }
   var rhpOpts = {
-    pluginAPI: new PluginAPI(self, compiler),
+    pluginAPI: new PluginAPI(self, compiler, udapp),
     udapp: udapp,
     udappUI: udappUI,
     compiler: compiler,

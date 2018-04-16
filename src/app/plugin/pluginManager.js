@@ -138,12 +138,12 @@ module.exports = class PluginManager {
       if (event.type === 'message' && self.inFocus && self.plugins[self.inFocus] && self.plugins[self.inFocus].origin === event.origin) {
         var data = JSON.parse(event.data)
         data.value.unshift(self.inFocus)
-        if (self.allowedapi[data.type]) {
-          data.value.push((error, result) => {
-            response(data.key, data.type, data.id, error, result)
-          })
-          api[data.key][data.type].apply({}, data.value)
-        }
+        // if (self.allowedapi[data.type]) {
+        data.value.push((error, result) => {
+          response(data.key, data.type, data.id, error, result)
+        })
+        api[data.key][data.type].apply({}, data.value)
+        // }
       }
     }, false)
   }
