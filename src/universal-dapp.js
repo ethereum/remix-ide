@@ -61,6 +61,11 @@ UniversalDApp.prototype.reset = function (contracts, transactionContextAPI) {
   })
 }
 
+UniversalDApp.prototype.createVMAccount = function (privateKey, balance, cb) {
+  this._addAccount(privateKey, balance)
+  cb(null, '0x' + ethJSUtil.privateToAddress(privateKey).toString('hex'))
+}
+
 UniversalDApp.prototype.newAccount = function (password, cb) {
   if (!executionContext.isVM()) {
     if (!this._api.personalMode()) {

@@ -36,5 +36,6 @@ plugin api
 ### udapp (only VM)
  - runTx `@param {Object} tx`
  - getAccounts `@return {Array} acccounts`
+ - createVMAccount `@param {String} privateKey, @param {String} balance (hex)`
  
 
