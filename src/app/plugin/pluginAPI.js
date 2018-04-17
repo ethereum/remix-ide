@@ -7,8 +7,8 @@ var executionContext = require('../../execution-context')
 module.exports = (app, compiler, udapp) => {
   return {
     app: {
-      getExecutionContextProvider: (mod) => {
-        return executionContext.getProvider()
+      getExecutionContextProvider: (mod, cb) => {
+        cb(null, executionContext.getProvider())
       }
     },
     config: {
@@ -25,8 +25,8 @@ module.exports = (app, compiler, udapp) => {
       }
     },
     compiler: {
-      getCompilationResult: (mod) => {
-        return compiler.lastCompilationResult
+      getCompilationResult: (mod, cb) => {
+        cb(null, compiler.lastCompilationResult)
       }
     },
     udapp: {
