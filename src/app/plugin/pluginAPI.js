@@ -7,7 +7,7 @@ var executionContext = require('../../execution-context')
 module.exports = (app, compiler, udapp) => {
   return {
     app: {
-      getExecutionContextProvider: () => {
+      getExecutionContextProvider: (mod) => {
         return executionContext.getProvider()
       }
     },
@@ -25,20 +25,20 @@ module.exports = (app, compiler, udapp) => {
       }
     },
     compiler: {
-      getCompilationResult: () => {
+      getCompilationResult: (mod) => {
         return compiler.lastCompilationResult
       }
     },
     udapp: {
-      runTx: (tx, cb) => {
+      runTx: (mod, tx, cb) => {
         if (executionContext.getProvider() !== 'vm') return cb('plugin API does not allow sending a transaction through a web3 connection. Only vm mode is allowed')
         udapp.runTx(tx, cb)
       },
-      getAccounts: (cb) => {
+      getAccounts: (mod, cb) => {
         if (executionContext.getProvider() !== 'vm') return cb('plugin API does not allow retrieving accounts through a web3 connection. Only vm mode is allowed')
         udapp.getAccounts(cb)
       },
-      createVMAccount: (privateKey, balance, cb) => {
+      createVMAccount: (mod, privateKey, balance, cb) => {
         if (executionContext.getProvider() !== 'vm') return cb('plugin API does not allow creating a new account through web3 connection. Only vm mode is allowed')
         udapp.createVMAccount(privateKey, balance, (error, address) => {
           cb(error, address)
