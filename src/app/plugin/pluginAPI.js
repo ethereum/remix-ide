@@ -32,7 +32,7 @@ module.exports = (app, compiler, udapp) => {
     udapp: {
       runTx: (mod, tx, cb) => {
         if (executionContext.getProvider() !== 'vm') return cb('plugin API does not allow sending a transaction through a web3 connection. Only vm mode is allowed')
-        udapp.runTx(tx, cb)
+        udapp.silentRunTx(tx, cb)
       },
       getAccounts: (mod, cb) => {
         if (executionContext.getProvider() !== 'vm') return cb('plugin API does not allow retrieving accounts through a web3 connection. Only vm mode is allowed')

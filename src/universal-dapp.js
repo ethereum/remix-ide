@@ -252,6 +252,23 @@ UniversalDApp.prototype.getInputs = function (funABI) {
   return txHelper.inputParametersDeclarationToString(funABI.inputs)
 }
 
+/**
+  * This function send a tx without alerting the user (if mainnet or if gas estimation too high).
+  * SHOULD BE TAKEN CAREFULLY!
+  *
+  * @param {Object} tx    - transaction.
+  * @param {Function} callback    - callback.
+  */
+UniversalDApp.prototype.silentRunTx = function (tx, cb) {
+  if (!executionContext.isVM()) return cb('Cannot silently send transaction through a web3 provider')
+  this.txRunner.rawRun(
+  tx,
+  (network, tx, gasEstimation, continueTxExecution, cancelCb) => { continueTxExecution() },
+  (error, continueTxExecution, cancelCb) => { if (error) { cb(error) } else { continueTxExecution() } },
+  (okCb, cancelCb) => { okCb() },
+  cb)
+}
+
 UniversalDApp.prototype.runTx = function (args, cb) {
   const self = this
   async.waterfall([
