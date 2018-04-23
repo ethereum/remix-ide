@@ -39,6 +39,7 @@ module.exports = (app, compiler, udapp) => {
             status: result.result.status,
             gasUsed: '0x' + result.result.gasUsed.toString('hex'),
             error: result.result.vm.exceptionError,
+            return: result.result.vm.return ? '0x' + result.result.vm.return.toString('hex') : '0x',
             createdAddress: result.result.createdAddress ? '0x' + result.result.createdAddress.toString('hex') : undefined
           })
         })
