@@ -83,6 +83,7 @@ module.exports = class PluginManager {
     self._api = api
     self._events = events
     self.plugins = {}
+    self.origins = {}
     self.inFocus
     self.allowedapi = {'setConfig': 1, 'getConfig': 1, 'removeConfig': 1}
     self._events.compiler.register('compilationFinished', (success, data, source) => {
@@ -99,7 +100,7 @@ module.exports = class PluginManager {
 
     self._events.txlistener.register('newTransaction', (tx) => {
       if (executionContext.getProvider() !== 'vm') return
-      this.post(this.inFocus, JSON.stringify({
+      self.broadcast(JSON.stringify({
         action: 'notification',
         key: 'txlistener',
         type: 'newTransaction',
@@ -139,8 +140,10 @@ module.exports = class PluginManager {
     })
 
     window.addEventListener('message', (event) => {
+      if (!this.origins[event.origin]) return
+
       function response (key, type, callid, error, result) {
-        self.post(self.inFocus, JSON.stringify({
+        self.postToOrigin(event.origin, JSON.stringify({
           id: callid,
           action: 'response',
           key: key,
@@ -164,6 +167,17 @@ module.exports = class PluginManager {
   register (desc, content) {
     const self = this
     self.plugins[desc.title] = {content, origin: desc.url}
+    self.origins[desc.url] = desc.title
+  }
+  broadcast (value) {
+    for (var plugin in this.plugins) {
+      this.post(plugin, value)
+    }
+  }
+  postToOrigin (origin, value) {
+    if (this.origins[origin]) {
+      this.post(this.origins[origin], value)
+    }
   }
   post (name, value) {
     const self = this
