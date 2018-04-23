@@ -126,12 +126,15 @@ module.exports = class PluginManager {
           value: []
         }))
         self.inFocus = tabName
-        self.post(tabName, JSON.stringify({
-          action: 'notification',
-          key: 'compiler',
-          type: 'compilationData',
-          value: [api.compiler.getCompilationResult()]
-        }))
+        api.compiler.getCompilationResult(tabName, (error, data) => {
+          if (!error) return
+          self.post(tabName, JSON.stringify({
+            action: 'notification',
+            key: 'compiler',
+            type: 'compilationData',
+            value: [data]
+          }))
+        })
       }
     })
 
