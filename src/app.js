@@ -710,6 +710,10 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     getSource: (fileName) => {
       return compiler.getSource(fileName)
     },
+    getAllSources: () => {
+      window.compiler = compiler
+      return compiler.getSources()
+    },
     editorContent: () => {
       return editor.get(editor.current())
     },
