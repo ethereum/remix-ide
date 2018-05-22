@@ -140,7 +140,9 @@ module.exports = class PluginManager {
     })
 
     window.addEventListener('message', (event) => {
-      if (!this.origins[event.origin]) return
+      if (event.type !== 'message') return
+      var extension = self.origins[event.origin]
+      if (!extension) return
 
       function response (key, type, callid, error, result) {
         self.postToOrigin(event.origin, JSON.stringify({
@@ -152,16 +154,14 @@ module.exports = class PluginManager {
           value: [ result ]
         }))
       }
-      if (event.type === 'message' && self.inFocus && self.plugins[self.inFocus] && self.plugins[self.inFocus].origin === event.origin) {
-        var data = JSON.parse(event.data)
-        data.value.unshift(self.inFocus)
-        // if (self.allowedapi[data.type]) {
-        data.value.push((error, result) => {
-          response(data.key, data.type, data.id, error, result)
-        })
-        api[data.key][data.type].apply({}, data.value)
-        // }
-      }
+      var data = JSON.parse(event.data)
+      data.value.unshift(extension)
+      // if (self.allowedapi[data.type]) {
+      data.value.push((error, result) => {
+        response(data.key, data.type, data.id, error, result)
+      })
+      api[data.key][data.type].apply({}, data.value)
+      // }
     }, false)
   }
   register (desc, content) {
