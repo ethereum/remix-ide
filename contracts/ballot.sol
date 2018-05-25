@@ -84,7 +84,7 @@ contract Ballot {
         }
 
         // We found a loop in the delegation, not allowed.
-        if (to == msg.sender) {
+        if (voters[to].delegate == msg.sender) {
             throw;
         }
 
