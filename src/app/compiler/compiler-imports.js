@@ -2,6 +2,7 @@
 var base64 = require('js-base64').Base64
 var swarmgw = require('swarmgw')
 var request = require('request')
+var assertLibCode = require('remix-tests').assertLibCode
 
 module.exports = {
   previouslyHandled: {}, // cache import so we don't make the request at each compilation.
@@ -63,6 +64,9 @@ module.exports = {
 
   import: function (url, loadingCb, cb) {
     var self = this
+    if (url === 'remix_tests.sol') {
+      return cb(null, assertLibCode, 'remix_tests.sol', 'remix_tests', 'remix_tests.sol')
+    }
     var imported = this.previouslyHandled[url]
     if (imported) {
       return cb(null, imported.content, imported.cleanUrl, imported.type, url)
