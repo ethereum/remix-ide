@@ -23,13 +23,13 @@ contract Ballot {
     address public chairperson;
 
     // This declares a state variable that
-    // stores a `Voter` struct for each possible address.
+    // stores a "Voter" struct for each possible address.
     mapping(address => Voter) public voters;
 
-    // A dynamically-sized array of `Proposal` structs.
+    // A dynamically-sized array of "Proposal" structs.
     Proposal[] public proposals;
 
-    /// Create a new ballot to choose one of `proposalNames`.
+    /// Create a new ballot to choose one of "proposalNames".
     constructor(bytes32[] proposalNames) public {
         chairperson = msg.sender;
         voters[chairperson].weight = 1;
@@ -38,9 +38,9 @@ contract Ballot {
         // create a new proposal object and add it
         // to the end of the array.
         for (uint i = 0; i < proposalNames.length; i++) {
-            // `Proposal({...})` creates a temporary
-            // Proposal object and `proposals.push(...)`
-            // appends it to the end of `proposals`.
+            // "Proposal({...})" creates a temporary
+            // Proposal object and "proposals.push(...)"
+            // appends it to the end of "proposals".
             proposals.push(Proposal({
                 name: proposalNames[i],
                 voteCount: 0
@@ -48,16 +48,16 @@ contract Ballot {
         }
     }
 
-    // Give `voter` the right to vote on this ballot.
-    // May only be called by `chairperson`.
+    // Give "voter" the right to vote on this ballot.
+    // May only be called by "chairperson".
     function giveRightToVote(address voter) public {
-        // If the first argument of `require` evaluates
+        // If the first argument of "require" evaluates
         // to `false`, execution terminates and all
         // changes to the state and to Ether balances
         // are reverted.
         // This used to consume all gas in old EVM versions, but
         // not anymore.
-        // It is often a good idea to use `require` to check if
+        // It is often a good idea to use "require" to check if
         // functions are called correctly.
         // As a second argument, you can also provide an
         // explanation about what went wrong.
@@ -73,7 +73,7 @@ contract Ballot {
         voters[voter].weight = 1;
     }
 
-    /// Delegate your vote to the voter `to`.
+    /// Delegate your vote to the voter "to".
     function delegate(address to) public {
         // assigns reference
         Voter storage sender = voters[msg.sender];
@@ -82,7 +82,7 @@ contract Ballot {
         require(to != msg.sender, "Self-delegation is disallowed.");
 
         // Forward the delegation as long as
-        // `to` also delegated.
+        // "to" also delegated.
         // In general, such loops are very dangerous,
         // because if they run too long, they might
         // need more gas than is available in a block.
@@ -96,8 +96,8 @@ contract Ballot {
             require(to != msg.sender, "Found loop in delegation.");
         }
 
-        // Since `sender` is a reference, this
-        // modifies `voters[msg.sender].voted`
+        // Since "sender" is a reference, this
+        // modifies "voters[msg.sender].voted"
         sender.voted = true;
         sender.delegate = to;
         Voter storage delegate_ = voters[to];
@@ -113,14 +113,14 @@ contract Ballot {
     }
 
     /// Give your vote (including votes delegated to you)
-    /// to proposal `proposals[proposal].name`.
+    /// to proposal "proposals[proposal].name".
     function vote(uint proposal) public {
         Voter storage sender = voters[msg.sender];
         require(!sender.voted, "Already voted.");
         sender.voted = true;
         sender.vote = proposal;
 
-        // If `proposal` is out of the range of the array,
+        // If "proposal" is out of the range of the array,
         // this will throw automatically and revert all
         // changes.
         proposals[proposal].voteCount += sender.weight;
