@@ -52,7 +52,7 @@ contract Ballot {
     // May only be called by "chairperson".
     function giveRightToVote(address voter) public {
         // If the first argument of "require" evaluates
-        // to `false`, execution terminates and all
+        // to "false", execution terminates and all
         // changes to the state and to Ether balances
         // are reverted.
         // This used to consume all gas in old EVM versions, but
