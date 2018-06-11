@@ -980,6 +980,14 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     if (queryParams.get().debugtx) {
       startdebugging(queryParams.get().debugtx)
     }
+
+    if (queryParams.get().pluginurl) {
+      var title = queryParams.get().plugintitle
+      var url = queryParams.get().pluginurl
+      modalDialogCustom.confirm(null, `Remix is going to load the plugin "${title}" located at ${queryParams.get().pluginurl}. Are you sure to load this external extension?`, () => {
+        self._components.righthandpanel.loadPlugin({title, url})
+      })
+    }
   })
 
   function startdebugging (txHash) {
