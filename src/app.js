@@ -45,7 +45,6 @@ var BasicReadOnlyExplorer = require('./app/files/basicReadOnlyExplorer')
 var NotPersistedExplorer = require('./app/files/NotPersistedExplorer')
 var toolTip = require('./app/ui/tooltip')
 var CommandInterpreter = require('./lib/cmdInterpreter')
-var PluginAPI = require('./app/plugin/pluginAPI')
 
 var styleGuide = require('./app/ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
@@ -790,10 +789,10 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     app: self.event,
     udapp: udapp.event,
     editor: editor.event,
-    staticAnalysis: staticanalysis.event
+    staticAnalysis: staticanalysis.event,
+    txlistener: txlistener.event
   }
   var rhpOpts = {
-    pluginAPI: new PluginAPI(self, compiler),
     udapp: udapp,
     udappUI: udappUI,
     compiler: compiler,
@@ -980,6 +979,14 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
     if (queryParams.get().debugtx) {
       startdebugging(queryParams.get().debugtx)
+    }
+
+    if (queryParams.get().pluginurl) {
+      var title = queryParams.get().plugintitle
+      var url = queryParams.get().pluginurl
+      modalDialogCustom.confirm(null, `Remix is going to load the plugin "${title}" located at ${queryParams.get().pluginurl}. Are you sure to load this external extension?`, () => {
+        self._components.righthandpanel.loadPlugin({title, url})
+      })
     }
   })
 
