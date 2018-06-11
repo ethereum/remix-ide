@@ -11,6 +11,7 @@ var SupportTab = require('../tabs/support-tab')
 var PluginTab = require('../tabs/plugin-tab')
 var TestTab = require('../tabs/test-tab')
 var PluginManager = require('../plugin/pluginManager')
+var PluginAPI = require('../plugin/pluginAPI')
 
 var css = require('./styles/righthand-panel-styles')
 
@@ -66,12 +67,13 @@ function RighthandPanel (appAPI = {}, events = {}, opts = {}) {
   this._view.tabbedMenu.addTab('Test', 'testView', optionViews.querySelector('#testView'))
   this._view.tabbedMenu.selectTabByTitle('Compile')
 
-  self.pluginManager = new PluginManager(opts.pluginAPI, events)
+  var pluginAPI = new PluginAPI(self, opts, self._view.tabbedMenu)
+  self.pluginManager = new PluginManager(pluginAPI, events)
   events.rhp.register('plugin-loadRequest', (json) => {
     var tab = new PluginTab({}, events, json)
     var content = tab.render()
     optionViews.appendChild(content)
-    this._view.tabbedMenu.addTab(json.title, 'plugin', content)
+    this._view.tabbedMenu.addTab(json.title, json.title + ' plugin', content)
     self.pluginManager.register(json, content)
   })
 

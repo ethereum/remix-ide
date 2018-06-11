@@ -23,6 +23,7 @@ plugin api
 ### app
 
  - getExecutionContextProvider `@return {String} provider (injected | web3 | vm)`
+ - updateTitle `@param {String} title`
  
 ### config
 

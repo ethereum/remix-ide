@@ -68,4 +68,14 @@ window.onload = function () {
       id: 38
     }), '*')
   })
+  var k = 0
+  document.querySelector('input#testchangetitle').addEventListener('click', function () {
+    window.parent.postMessage(JSON.stringify({
+      action: 'request',
+      key: 'app',
+      type: 'updateTitle',
+      value: ['changed title ' + k++],
+      id: 39
+    }), '*')
+  })
 }

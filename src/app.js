@@ -45,7 +45,6 @@ var BasicReadOnlyExplorer = require('./app/files/basicReadOnlyExplorer')
 var NotPersistedExplorer = require('./app/files/NotPersistedExplorer')
 var toolTip = require('./app/ui/tooltip')
 var CommandInterpreter = require('./lib/cmdInterpreter')
-var PluginAPI = require('./app/plugin/pluginAPI')
 
 var styleGuide = require('./app/ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
@@ -794,7 +793,6 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     txlistener: txlistener.event
   }
   var rhpOpts = {
-    pluginAPI: new PluginAPI(self, compiler, udapp),
     udapp: udapp,
     udappUI: udappUI,
     compiler: compiler,
