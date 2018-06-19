@@ -15,6 +15,7 @@ const parseContracts = require('../contract/contractParser')
 const publishOnSwarm = require('../contract/publishOnSwarm')
 const addTooltip = require('../ui/tooltip')
 var helper = require('../../lib/helper')
+var request = require('xhr-request')
 
 const styles = styleGuide.chooser()
 
@@ -126,10 +127,28 @@ module.exports = class CompileTab {
           self.data.contractsDetails[contract.name] = parseContracts(contract.name, contract.object, self._deps.compiler.getSource(contract.file))
           var contractName = yo`<option>${contract.name}</option>`
           self._view.contractNames.appendChild(contractName)
+          for (let func in contract.object.evm.methodIdentifiers) {
+            var signature = contract.object.evm.methodIdentifiers[func]
+            var url = 'https://raw.githubusercontent.com/ethereum-lists/4bytes/master/signatures/' + signature
+            request(url, function (err, data, response) {
+              if (err) {
+                console.log(err)
+              } else {
+                if (response.statusCode === 200) {
+                  self._opts.renderer.error(
+                    func,
+                    self._view.errorContainer,
+                    {type: 'warning'}
+                  )
+                }
+              }
+            })
+          }
         })
       } else {
         self._view.contractNames.setAttribute('disabled', true)
       }
+
       // hightlight the tab if error
       if (success) document.querySelector('.compileView').style.color = '' // @TODO: compileView tab
       else document.querySelector('.compileView').style.color = styles.colors.red // @TODO: compileView tab
