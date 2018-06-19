@@ -135,11 +135,14 @@ module.exports = class CompileTab {
                 console.log(err)
               } else {
                 if (response.statusCode === 200) {
-                  self._opts.renderer.error(
-                    func,
-                    self._view.errorContainer,
-                    {type: 'warning'}
-                  )
+                  if (data !== func) {
+                    var msg = 'There is a hash collision in function ' + func + ' signature'
+                    self._opts.renderer.error(
+                      msg,
+                      self._view.errorContainer,
+                      {type: 'warning'}
+                    )
+                  }
                 }
               }
             })
