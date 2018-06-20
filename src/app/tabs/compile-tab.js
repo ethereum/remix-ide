@@ -136,7 +136,10 @@ module.exports = class CompileTab {
               } else {
                 if (response.statusCode === 200) {
                   if (data !== func) {
-                    var msg = 'There is a hash collision in function ' + func + ' signature'
+                    var msg = '4bytes has recorded a hash collision in the function signature: ' + func +
+                    '.\nThis means that services using 4bytes will not be able to'+
+                    '\nresolve to a single function signature and thus displaying correct information.' +
+                    '\nYou may want to update the function name in order to avoid this collision.'
                     self._opts.renderer.error(
                       msg,
                       self._view.errorContainer,
