@@ -128,13 +128,13 @@ module.exports = class CompileTab {
           var contractName = yo`<option>${contract.name}</option>`
           self._view.contractNames.appendChild(contractName)
           for (let func in contract.object.evm.methodIdentifiers) {
-            var displayWarn = false
             var signature = contract.object.evm.methodIdentifiers[func]
             var url = 'https://raw.githubusercontent.com/ethereum-lists/4bytes/master/signatures/' + signature
             request(url, function (err, data, response) {
               if (err) {
                 console.log(err)
               } else {
+                var displayWarn = false
                 if (response.statusCode === 200) {
                   if (data.split(';').length > 1) {
                     displayWarn = true
