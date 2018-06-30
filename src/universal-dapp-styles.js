@@ -201,6 +201,9 @@ var css = csjs`
   .multiArg input{
     padding: 5px;
   }
+  .oops {
+    border-color: red !important;
+  }
 
   .multiArg label {
       float: left;
