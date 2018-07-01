@@ -6,7 +6,7 @@ var yo = require('yo-yo')
 var async = require('async')
 var request = require('request')
 var remixLib = require('remix-lib')
-var remixTests = {} // require('remix-tests')
+var remixTests = require('remix-tests')
 var EventManager = remixLib.EventManager
 
 var UniversalDApp = require('./universal-dapp.js')
