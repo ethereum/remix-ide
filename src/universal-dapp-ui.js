@@ -107,7 +107,7 @@ UniversalDAppUI.prototype.getCallButton = function (args) {
     })
   }
 
-  var multiParamManager = new MultiParamManager(lookupOnly, args.funABI, (valArray, inputsValues, domEl) => {
+  var multiParamManager = new MultiParamManager(args.address, lookupOnly, args.funABI, (valArray, inputsValues, domEl) => {
     clickButton(valArray, inputsValues, domEl)
   }, self.udapp.getInputs(args.funABI))
 

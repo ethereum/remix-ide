@@ -7,7 +7,7 @@ var remixLib = require('remix-lib')
 var txFormat = remixLib.execution.txFormat
 var $ = require('jquery')
 
-function doValidation(that) {
+function doValidation (that, id) {
   var multiString = that.getMultiValsString()
   var multiJSON = JSON.parse('[' + multiString + ']')
   var encodeObj
@@ -17,18 +17,10 @@ function doValidation(that) {
     encodeObj = txFormat.encodeData(that.funABI, multiJSON)
   }
   if (encodeObj.error) {
-    console.error("MAKE IT RED")
     $(`#${id}`).addClass(css.oops.className)
   } else {
-    console.error("MAKE IT GRAY")
     $(`#${id}`).removeClass(css.oops.className)
   }
-}
-
-function checkValid(comp, id, that) {
-  console.log("are you valid", id, that)
-  doValidation(that)
-  //$(`#${id}`).addClass(css.oops.className)
 }
 
 class MultiParamManager {
@@ -43,7 +35,8 @@ class MultiParamManager {
     * @param {string} evmBC
     *
     */
-  constructor (lookupOnly, funABI, clickCallBack, inputs, title, evmBC) {
+  constructor (uniqueId, lookupOnly, funABI, clickCallBack, inputs, title, evmBC) {
+    this.uniqueId = uniqueId
     this.lookupOnly = lookupOnly
     this.funABI = funABI
     this.clickCallBack = clickCallBack
@@ -121,20 +114,16 @@ class MultiParamManager {
     }
   }
 
-  createMultiFields (oops) {
+  createMultiFields (uniqueId) {
     if (this.funABI.inputs) {
       var that = this
       return yo`<div>
         ${this.funABI.inputs.map(function (inp, idx) {
-          function setUpValidator(id) {
-            console.log("doing this now")
-            //document.getElementById("#${id}").removeEventListener("focusout", (comp) => checkValid(comp, id), true)
-            //document.getElementById("#${id}").addEventListener("focusout", (comp) => checkValid(comp, id), checkValid)
+          function setUpValidator (id) {
             $(`#${id}`).off('blur')
-            $(`#${id}`).blur((comp) => checkValid(comp, id, that))
+            $(`#${id}`).blur(() => doValidation(that, id))
           }
-          console.error("HEH", inp, this, oops)
-          var id = `${inp.type}${inp.name}${idx}`
+          var id = `${uniqueId}${inp.type}${inp.name}${idx}`
           return yo`<div class="${css.multiArg}"><label for="${inp.name}"> ${inp.name}: </label><input id="${id}" onclick=${() => { setUpValidator(id) }} placeholder="${inp.type}" title="${inp.name}"></div>`
         })}
       </div>`
@@ -164,7 +153,7 @@ class MultiParamManager {
       <button onclick=${() => { onClick() }} class="${css.instanceButton}">${title}</button>${this.basicInputField}<i class="fa fa-angle-down ${css.methCaret}" onclick=${() => { this.switchMethodViewOn() }} title=${title} ></i>
       </div>`
 
-    this.multiFields = this.createMultiFields(this.multiBad)
+    this.multiFields = this.createMultiFields(this.uniqueId)
 
     var multiOnClick = () => {
       var valsString = this.getMultiValsString()
@@ -198,8 +187,6 @@ class MultiParamManager {
                 encodeObj = txFormat.encodeData(this.funABI, multiJSON)
               }
               if (encodeObj.error) {
-                this.multiBad = true
-                console.error('HERE', this, multiJSON)
                 throw new Error(encodeObj.error)
               } else {
                 return encodeObj.data
