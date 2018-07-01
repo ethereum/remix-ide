@@ -2,7 +2,6 @@ var yo = require('yo-yo')
 var async = require('async')
 var css = require('./styles/test-tab-styles')
 var remixTests = require('remix-tests')
-var remixTests = null
 
 module.exports = class TestTab {
   constructor (api = {}, events = {}, opts = {}) {
