@@ -45,6 +45,29 @@ var getDetails = function (contractName, contract, source) {
     detail['Assembly'] = formatAssemblyText(contract.evm.legacyAssembly, '', source.content)
   }
 
+  detail.collisions = []
+  for (let func in contract.evm.methodIdentifiers) {
+    var signature = contract.evm.methodIdentifiers[func]
+    var url = 'https://raw.githubusercontent.com/ethereum-lists/4bytes/master/signatures/' + signature
+    request(url, function (err, data, response) {
+      if (err) {
+        console.log(err)
+      } else {
+        var displayWarn = false
+        if (response.statusCode === 200) {
+          if (data.split(';').length > 1) {
+            displayWarn = true
+          } else if (data !== func) {
+            displayWarn = true
+          }
+        }
+        if (displayWarn) {
+          detail.collisions.push(func)
+        }
+      }
+    })
+  }
+
   return detail
 }
 
