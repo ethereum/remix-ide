@@ -2,6 +2,7 @@
 
 var remixLib = require('remix-lib')
 var txHelper = remixLib.execution.txHelper
+var request = require('xhr-request')
 
 module.exports = (contractName, contract, compiledSource) => {
   return getDetails(contractName, contract, compiledSource)

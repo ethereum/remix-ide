@@ -13,9 +13,9 @@ const modalDialogCustom = require('../ui/modal-dialog-custom')
 const styleGuide = require('../ui/styles-guide/theme-chooser')
 const parseContracts = require('../contract/contractParser')
 const publishOnSwarm = require('../contract/publishOnSwarm')
+<<<<<<< HEAD
 const addTooltip = require('../ui/tooltip')
 var helper = require('../../lib/helper')
-var request = require('xhr-request')
 
 const styles = styleGuide.chooser()
 
