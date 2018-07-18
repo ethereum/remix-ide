@@ -10,8 +10,8 @@ var StepDetail = require('./StepDetail')
 var DropdownPanel = require('./DropdownPanel')
 var SolidityState = require('./SolidityState')
 var SolidityLocals = require('./SolidityLocals')
-var remixCore = require('remix-core')
-var StorageResolver = remixCore.storage.StorageResolver
+var remixLib = require('remix-lib')
+var StorageResolver = remixLib.storage.StorageResolver
 var yo = require('yo-yo')
 
 function VmDebugger (_parent, _traceManager, _codeManager, _solidityProxy, _callTree) {
