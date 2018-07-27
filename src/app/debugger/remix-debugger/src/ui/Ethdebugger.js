@@ -4,7 +4,7 @@ var StepManager = require('./StepManager')
 var remixLib = require('remix-lib')
 var TraceManager = remixLib.trace.TraceManager
 var VmDebugger = require('./VmDebugger')
-var global = remixLib.global
+// var global = remixLib.global
 var init = remixLib.init
 var executionContext = remixLib.execution.executionContext
 var EventManager = remixLib.EventManager
@@ -42,7 +42,7 @@ function Ethdebugger (opts) {
   this.web3Providers = new Web3Providers()
   this.addProvider('DUMMYWEB3', new DummyProvider())
   this.switchProvider('DUMMYWEB3')
-  this.traceManager = new TraceManager()
+  this.traceManager = new TraceManager({web3: this.web3})
   this.codeManager = new CodeManager(this.traceManager)
   this.solidityProxy = new SolidityProxy(this.traceManager, this.codeManager)
 
@@ -78,12 +78,21 @@ function Ethdebugger (opts) {
   })
 }
 
+Ethdebugger.prototype.setManagers = function () {
+  this.traceManager = new TraceManager({web3: this.web3})
+  this.codeManager = new CodeManager(this.traceManager)
+  this.solidityProxy = new SolidityProxy(this.traceManager, this.codeManager)
+  this.storageResolver = null
+
+  this.callTree = new InternalCallTree(this.event, this.traceManager, this.solidityProxy, this.codeManager, { includeLocalVariables: true })
+}
+
 Ethdebugger.prototype.setBreakpointManager = function (breakpointManager) {
   this.breakpointManager = breakpointManager
 }
 
 Ethdebugger.prototype.web3 = function () {
-  return global.web3
+  return this.web3
 }
 
 Ethdebugger.prototype.addProvider = function (type, obj) {
@@ -97,13 +106,16 @@ Ethdebugger.prototype.switchProvider = function (type) {
     if (error) {
       console.log('provider ' + type + ' not defined')
     } else {
-      global.web3 = obj
+      self.web3 = obj
+      self.setManagers()
       executionContext.detectNetwork((error, network) => {
         if (error || !network) {
-          global.web3Debug = obj
+          self.web3Debug = obj
+          self.web3 = obj
         } else {
           var webDebugNode = init.web3DebugNode(network.name)
-          global.web3Debug = !webDebugNode ? obj : webDebugNode
+          self.web3Debug = !webDebugNode ? obj : webDebugNode
+          self.web3 = !webDebugNode ? obj : webDebugNode
         }
       })
       self.event.trigger('providerChanged', [type])
