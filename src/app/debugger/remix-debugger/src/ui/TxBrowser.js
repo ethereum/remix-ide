@@ -1,5 +1,4 @@
 var remixLib = require('remix-lib')
-var global = remixLib.global
 var EventManager = remixLib.EventManager
 var traceHelper = remixLib.helpers.trace
 var yo = require('yo-yo')
@@ -56,6 +55,7 @@ function TxBrowser (_parent) {
   this.displayConnectionSetting = true
   this.basicPanel = new DropdownPanel('Transaction', {json: true})
   this.basicPanel.data = {}
+  this.web3 = _parent.web3
   var self = this
   _parent.event.register('providerChanged', this, function (provider) {
     self.displayConnectionSetting = provider === 'INTERNAL'
@@ -89,11 +89,11 @@ TxBrowser.prototype.submit = function () {
   try {
     var self = this
     if (this.txNumber.indexOf('0x') !== -1) {
-      global.web3.eth.getTransaction(this.txNumber, function (error, result) {
+      self.web3.eth.getTransaction(this.txNumber, function (error, result) {
         self.update(error, result)
       })
     } else {
-      global.web3.eth.getTransactionFromBlock(this.blockNumber, this.txNumber, function (error, result) {
+      self.web3.eth.getTransactionFromBlock(this.blockNumber, this.txNumber, function (error, result) {
         self.update(error, result)
       })
     }
@@ -128,13 +128,13 @@ TxBrowser.prototype.update = function (error, tx) {
 }
 
 TxBrowser.prototype.updateWeb3Url = function (newhost) {
-  init.setProvider(global.web3, newhost)
+  init.setProvider(this.web3, newhost)
   var self = this
   this.checkWeb3(function (error, block) {
     if (!error) {
-      self.connectInfo = 'Connected to ' + global.web3.currentProvider.host + '. Current block number: ' + block
+      self.connectInfo = 'Connected to ' + self.web3.currentProvider.host + '. Current block number: ' + block
     } else {
-      self.connectInfo = 'Unable to connect to ' + global.web3.currentProvider.host + '. ' + error.message
+      self.connectInfo = 'Unable to connect to ' + self.web3.currentProvider.host + '. ' + error.message
     }
     yo.update(self.view, self.render())
   })
@@ -142,7 +142,7 @@ TxBrowser.prototype.updateWeb3Url = function (newhost) {
 
 TxBrowser.prototype.checkWeb3 = function (callback) {
   try {
-    global.web3.eth.getBlockNumber(function (error, block) {
+    this.web3.eth.getBlockNumber(function (error, block) {
       callback(error, block)
     })
   } catch (e) {
@@ -176,7 +176,7 @@ TxBrowser.prototype.init = function (ev) {
 TxBrowser.prototype.connectionSetting = function () {
   if (this.displayConnectionSetting) {
     var self = this
-    return yo`<div class="${css.vmargin}"><span>Node URL: </span><input onkeyup=${function () { self.updateWeb3Url(arguments[0].target.value) }} value=${global.web3.currentProvider ? global.web3.currentProvider.host : ' - none - '} type='text' />
+    return yo`<div class="${css.vmargin}"><span>Node URL: </span><input onkeyup=${function () { self.updateWeb3Url(arguments[0].target.value) }} value=${self.web3.currentProvider ? self.web3.currentProvider.host : ' - none - '} type='text' />
               <span>${this.connectInfo}</span></div>`
   } else {
     return ''

@@ -1,11 +1,9 @@
 'use strict'
 var TxBrowser = require('./TxBrowser')
 var StepManager = require('./StepManager')
-var remixCore = require('remix-core')
-var TraceManager = remixCore.trace.TraceManager
-var VmDebugger = require('./VmDebugger')
 var remixLib = require('remix-lib')
-var global = remixLib.global
+var TraceManager = remixLib.trace.TraceManager
+var VmDebugger = require('./VmDebugger')
 var init = remixLib.init
 var executionContext = remixLib.execution.executionContext
 var EventManager = remixLib.EventManager
@@ -13,10 +11,10 @@ var yo = require('yo-yo')
 var csjs = require('csjs-inject')
 var Web3Providers = remixLib.vm.Web3Providers
 var DummyProvider = remixLib.vm.DummyProvider
-var CodeManager = remixCore.code.CodeManager
-var remixSolidity = require('remix-solidity')
-var SolidityProxy = remixSolidity.SolidityProxy
-var InternalCallTree = remixSolidity.InternalCallTree
+var CodeManager = remixLib.code.CodeManager
+var remixDebug = require('remix-debug')
+var SolidityProxy = remixDebug.SolidityDecoder.SolidityProxy
+var InternalCallTree = remixDebug.SolidityDecoder.InternalCallTree
 
 var css = csjs`
   .statusMessage {
@@ -43,7 +41,7 @@ function Ethdebugger (opts) {
   this.web3Providers = new Web3Providers()
   this.addProvider('DUMMYWEB3', new DummyProvider())
   this.switchProvider('DUMMYWEB3')
-  this.traceManager = new TraceManager()
+  this.traceManager = new TraceManager({web3: this.web3})
   this.codeManager = new CodeManager(this.traceManager)
   this.solidityProxy = new SolidityProxy(this.traceManager, this.codeManager)
 
@@ -79,12 +77,21 @@ function Ethdebugger (opts) {
   })
 }
 
+Ethdebugger.prototype.setManagers = function () {
+  this.traceManager = new TraceManager({web3: this.web3})
+  this.codeManager = new CodeManager(this.traceManager)
+  this.solidityProxy = new SolidityProxy(this.traceManager, this.codeManager)
+  this.storageResolver = null
+
+  this.callTree = new InternalCallTree(this.event, this.traceManager, this.solidityProxy, this.codeManager, { includeLocalVariables: true })
+}
+
 Ethdebugger.prototype.setBreakpointManager = function (breakpointManager) {
   this.breakpointManager = breakpointManager
 }
 
 Ethdebugger.prototype.web3 = function () {
-  return global.web3
+  return this.web3
 }
 
 Ethdebugger.prototype.addProvider = function (type, obj) {
@@ -98,13 +105,16 @@ Ethdebugger.prototype.switchProvider = function (type) {
     if (error) {
       console.log('provider ' + type + ' not defined')
     } else {
-      global.web3 = obj
+      self.web3 = obj
+      self.setManagers()
       executionContext.detectNetwork((error, network) => {
         if (error || !network) {
-          global.web3Debug = obj
+          self.web3Debug = obj
+          self.web3 = obj
         } else {
           var webDebugNode = init.web3DebugNode(network.name)
-          global.web3Debug = !webDebugNode ? obj : webDebugNode
+          self.web3Debug = !webDebugNode ? obj : webDebugNode
+          self.web3 = !webDebugNode ? obj : webDebugNode
         }
       })
       self.event.trigger('providerChanged', [type])
