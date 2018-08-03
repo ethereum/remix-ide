@@ -68,7 +68,10 @@ var JavaScriptHighlightRules = function(options) {
             "contract|library|constant|event|modifier|" +
             "struct|mapping|enum|break|continue|delete|else|for|function|" +
             "if|new|return|returns|var|while|using|" +
-            "private|public|external|internal|storage|memory|payable|view|pure|",
+            "private|public|external|internal|storage|memory|payable|view|pure|" +
+            "alias|apply|auto|const|copy|copyof|define|fallback|immutable|" + // new 0.5.0 (reserved) keywords
+            "implements|macro|mutable|override|partial|promise|reference|" + // new 0.5.0 (reserved) keywords
+            "sealed|sizeof|supports|topic|typedef|typeof|unchecked|", // new 0.5.0 (reserved) keywords
         "storage.type":
             "constant|var|function",
         "constant.language.boolean": "true|false"
