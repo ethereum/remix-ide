@@ -585,25 +585,25 @@ function settings (container, self) {
   }
   function signMessage (event) {
     self._deps.udapp.getAccounts((err, accounts) => {
-        if (err) { addTooltip(`Cannot get account list: ${err}`) }
-        var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
-        modalDialogCustom.promptMulti(signMessageDialog, (message) => {
-            const personalMsg = ethJSUtil.hashPersonalMessage(Buffer.from(message))
-            var $txOrigin = container.querySelector('#txorigin')
-             
-            var account = $txOrigin.selectedOptions[0].value
-            var privKey = self._deps.udapp.accounts[account].privateKey
+      if (err) { addTooltip(`Cannot get account list: ${err}`) }
+      var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
+      modalDialogCustom.promptMulti(signMessageDialog, (message) => {
+        const personalMsg = ethJSUtil.hashPersonalMessage(Buffer.from(message))
+        var $txOrigin = container.querySelector('#txorigin')
 
-          try {
-            var rsv = ethJSUtil.ecsign(personalMsg, privKey)
-          } catch (e) {
-            addTooltip(e.message)
-            return
-          }
-          var rsvJson = () => { return JSON.stringify(rsv, null, '\t') }
-          copyToClipboard(rsvJson).onclick(event)
-          addTooltip('r, s, v JSON output copied to clipboard')
-        }, false)
+        var account = $txOrigin.selectedOptions[0].value
+        var privKey = self._deps.udapp.accounts[account].privateKey
+
+        try {
+          var rsv = ethJSUtil.ecsign(personalMsg, privKey)
+        } catch (e) {
+          addTooltip(e.message)
+          return
+        }
+        var rsvJson = () => { return JSON.stringify(rsv, null, '\t') }
+        copyToClipboard(rsvJson).onclick(event)
+        addTooltip('r, s, v JSON output copied to clipboard')
+      }, false)
     })
   }
 
