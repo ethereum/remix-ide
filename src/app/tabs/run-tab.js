@@ -13,6 +13,7 @@ var helper = require('../../lib/helper.js')
 var executionContext = require('../../execution-context')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
 var copyToClipboard = require('../ui/copy-to-clipboard')
+const Buffer = require('safe-buffer').Buffer
 var Card = require('../ui/card')
 var Recorder = require('../../recorder')
 var addTooltip = require('../ui/tooltip')
@@ -534,6 +535,7 @@ function settings (container, self) {
       <select name="txorigin" class="${css.select}" id="txorigin"></select>
         ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
         <i class="fa fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${newAccount} title="Create a new account"></i>
+        <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
     </div>
   `
   var gasPriceEl = yo`
@@ -579,6 +581,29 @@ function settings (container, self) {
       } else {
         addTooltip('Cannot create an account: ' + error)
       }
+    })
+  }
+  function signMessage (event) {
+    self._deps.udapp.getAccounts((err, accounts) => {
+        if (err) { addTooltip(`Cannot get account list: ${err}`) }
+        var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
+        modalDialogCustom.promptMulti(signMessageDialog, (message) => {
+            const personalMsg = ethJSUtil.hashPersonalMessage(Buffer.from(message))
+            var $txOrigin = container.querySelector('#txorigin')
+             
+            var account = $txOrigin.selectedOptions[0].value
+            var privKey = self._deps.udapp.accounts[account].privateKey
+
+          try {
+            var rsv = ethJSUtil.ecsign(personalMsg, privKey)
+          } catch (e) {
+            addTooltip(e.message)
+            return
+          }
+          var rsvJson = () => { return JSON.stringify(rsv, null, '\t') }
+          copyToClipboard(rsvJson).onclick(event)
+          addTooltip('r, s, v JSON output copied to clipboard')
+        }, false)
     })
   }
 
