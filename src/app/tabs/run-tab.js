@@ -19,6 +19,7 @@ var Recorder = require('../../recorder')
 var addTooltip = require('../ui/tooltip')
 var css = require('./styles/run-tab-styles')
 var MultiParamManager = require('../../multiParamManager')
+var Personal = require('web3-eth-personal')
 
 function runTab (opts, localRegistry) {
   /* -------------------------
@@ -586,24 +587,48 @@ function settings (container, self) {
   function signMessage (event) {
     self._deps.udapp.getAccounts((err, accounts) => {
       if (err) { addTooltip(`Cannot get account list: ${err}`) }
-      var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
-      modalDialogCustom.promptMulti(signMessageDialog, (message) => {
-        const personalMsg = ethJSUtil.hashPersonalMessage(Buffer.from(message))
-        var $txOrigin = container.querySelector('#txorigin')
-
-        var account = $txOrigin.selectedOptions[0].value
-        var privKey = self._deps.udapp.accounts[account].privateKey
-
-        try {
-          var rsv = ethJSUtil.ecsign(personalMsg, privKey)
-        } catch (e) {
-          addTooltip(e.message)
-          return
-        }
-        var rsvJson = () => { return JSON.stringify(rsv, null, '\t') }
+      var stringifyRSV = (rsv) => {
+        var rsvJson = () => { return JSON.stringify(rsv, null, '\t') } 
         copyToClipboard(rsvJson).onclick(event)
         addTooltip('r, s, v JSON output copied to clipboard')
-      }, false)
+      }
+      var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
+      var $txOrigin = container.querySelector('#txorigin')
+      var account = $txOrigin.selectedOptions[0].value
+      var isVM = executionContext.isVM()
+      if (isVM) {
+        modalDialogCustom.promptMulti(signMessageDialog, (message) => {
+          const personalMsg = ethJSUtil.hashPersonalMessage(Buffer.from(message))
+          var privKey = self._deps.udapp.accounts[account].privateKey
+          try {
+            var rsv = ethJSUtil.ecsign(personalMsg, privKey)
+            stringifyRSV(rsv)
+          } catch (e) {
+            addTooltip(e.message)
+            return
+          }
+        }, false)
+      } else {
+        modalDialogCustom.promptPassphrase('Passphrase to sign a mesasge', 'Enter your passphrase for this account to sign the message', 'Passphrase', (passphrase) => {
+          modalDialogCustom.promptMulti(signMessageDialog, (message) => {
+            console.log(executionContext.web3())
+            const hashedMsg = executionContext.web3().sha3(message)
+            try {
+              var personal = new Personal(executionContext.web3().currentProvider)
+              personal.sign('0x' + Buffer.from(message).toString('hex'), account, passphrase, (error, signedData) => {
+                console.log(error)
+                var rsv = ethJSUtil.fromRpcSig(signedData)
+                stringifyRSV(signedData)
+              })
+            } catch (e) {
+              addTooltip(e.message)
+              comsole.log(e)
+              return
+            }
+          }) 
+        }, false)
+      }
+      
     })
   }
 
