@@ -618,7 +618,7 @@ function settings (container, self) {
               personal.sign('0x' + Buffer.from(message).toString('hex'), account, passphrase, (error, signedData) => {
                 console.log(error)
                 var rsv = ethJSUtil.fromRpcSig(signedData)
-                stringifyRSV(signedData)
+                stringifyRSV(rsv)
               })
             } catch (e) {
               addTooltip(e.message)
