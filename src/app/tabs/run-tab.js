@@ -587,11 +587,6 @@ function settings (container, self) {
   function signMessage (event) {
     self._deps.udapp.getAccounts((err, accounts) => {
       if (err) { addTooltip(`Cannot get account list: ${err}`) }
-      var stringifyRSV = (rsv) => {
-        var rsvJson = () => { return JSON.stringify(rsv, null, '\t') } 
-        copyToClipboard(rsvJson).onclick(event)
-        addTooltip('r, s, v JSON output copied to clipboard')
-      }
       var signMessageDialog = {'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
       var $txOrigin = container.querySelector('#txorigin')
       var account = $txOrigin.selectedOptions[0].value
@@ -602,7 +597,9 @@ function settings (container, self) {
           var privKey = self._deps.udapp.accounts[account].privateKey
           try {
             var rsv = ethJSUtil.ecsign(personalMsg, privKey)
-            stringifyRSV(rsv)
+            var rsvJson = JSON.stringify(rsv, null, '\t')
+            var signedData = ethJSUtil.toRpcSig(rsv.v, rsv.r, rsv.s)
+            modalDialogCustom.alert(rsvJson + '\n' + signedData)
           } catch (e) {
             addTooltip(e.message)
             return
@@ -616,9 +613,11 @@ function settings (container, self) {
             try {
               var personal = new Personal(executionContext.web3().currentProvider)
               personal.sign('0x' + Buffer.from(message).toString('hex'), account, passphrase, (error, signedData) => {
-                console.log(error)
-                var rsv = ethJSUtil.fromRpcSig(signedData)
-                stringifyRSV(rsv)
+                if(error && erorr.message !== '') {
+                  console.log(error)    
+                  addTooltip(error.message)
+                }
+                modalDialogCustom.alert(signedData)
               })
             } catch (e) {
               addTooltip(e.message)
