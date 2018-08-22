@@ -19,6 +19,7 @@ var Recorder = require('../../recorder')
 var addTooltip = require('../ui/tooltip')
 var css = require('./styles/run-tab-styles')
 var MultiParamManager = require('../../multiParamManager')
+var modalDialog = require('../ui/modaldialog')
 var Personal = require('web3-eth-personal')
 
 function runTab (opts, localRegistry) {
@@ -532,10 +533,11 @@ function settings (container, self) {
   `
   var accountEl = yo`
     <div class="${css.crow}">
-      <div class="${css.col1_1}">Account</div>
+      <div class="${css.col1_1}">Account
+        <i class="fa fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${newAccount} title="Create a new account"></i>
+    </div>
       <select name="txorigin" class="${css.select}" id="txorigin"></select>
         ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
-        <i class="fa fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${newAccount} title="Create a new account"></i>
         <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
     </div>
   `
@@ -613,7 +615,7 @@ function settings (container, self) {
             try {
               var personal = new Personal(executionContext.web3().currentProvider)
               personal.sign('0x' + Buffer.from(message).toString('hex'), account, passphrase, (error, signedData) => {
-                if(error && error.message !== '') {
+                if (error && error.message !== '') {
                   console.log(error)    
                   addTooltip(error.message)
                 } else {
