@@ -539,8 +539,8 @@ function settings (container, self) {
       </div>
       <div class=${css.account}>
         <select name="txorigin" class="${css.select}" id="txorigin"></select>
-          ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
-          <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
+        ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
+        <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
       </div>
     </div>
   `
