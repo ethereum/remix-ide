@@ -14,13 +14,13 @@ var executionContext = require('../../execution-context')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
 var copyToClipboard = require('../ui/copy-to-clipboard')
 const Buffer = require('safe-buffer').Buffer
+var Personal = require('web3-eth-personal')
 var Card = require('../ui/card')
 var Recorder = require('../../recorder')
 var addTooltip = require('../ui/tooltip')
 var css = require('./styles/run-tab-styles')
 var MultiParamManager = require('../../multiParamManager')
 var modalDialog = require('../ui/modaldialog')
-var Personal = require('web3-eth-personal')
 
 function runTab (opts, localRegistry) {
   /* -------------------------
