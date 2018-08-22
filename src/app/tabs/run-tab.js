@@ -613,11 +613,12 @@ function settings (container, self) {
             try {
               var personal = new Personal(executionContext.web3().currentProvider)
               personal.sign('0x' + Buffer.from(message).toString('hex'), account, passphrase, (error, signedData) => {
-                if(error && erorr.message !== '') {
+                if(error && error.message !== '') {
                   console.log(error)    
                   addTooltip(error.message)
+                } else {
+                  modalDialogCustom.alert(signedData)
                 }
-                modalDialogCustom.alert(signedData)
               })
             } catch (e) {
               addTooltip(e.message)
