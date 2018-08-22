@@ -533,12 +533,15 @@ function settings (container, self) {
   `
   var accountEl = yo`
     <div class="${css.crow}">
-      <div class="${css.col1_1}">Account
+      <div class="${css.col1_1}">
+        Account
         <i class="fa fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${newAccount} title="Create a new account"></i>
-    </div>
-      <select name="txorigin" class="${css.select}" id="txorigin"></select>
-        ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
-        <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
+      </div>
+      <div class=${css.account}>
+        <select name="txorigin" class="${css.select}" id="txorigin"></select>
+          ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
+          <i class="fa fa-pencil-square-o ${css.icon}" aria-hiden="true" onclick=${signMessage} title="Sign a message using this account key"></i>
+      </div>
     </div>
   `
   var gasPriceEl = yo`
