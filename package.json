@@ -3,6 +3,7 @@
   "version": "v0.6.4",
   "description": "Minimalistic browser-based Solidity IDE",
   "devDependencies": {
+    "ace-mode-solidity": "^0.1.0",
     "async": "^2.1.2",
     "babel-eslint": "^7.1.1",
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -45,12 +46,12 @@
     "rimraf": "^2.6.1",
     "selenium-standalone": "^6.0.1",
     "standard": "^8.5.0",
-    "swarmgw": "^0.2.0",
+    "swarmgw": "^0.3.1",
     "tape": "^4.5.1",
     "uglify-js": "^2.8.16",
     "vm-browserify": "0.0.4",
     "watchify": "^3.9.0",
-    "web3": "^0.18.0",
+    "web3": "1.0.0-beta.27",
     "webworkify": "^1.2.1",
     "yo-yo": "^1.2.2",
     "yo-yoify": "^3.7.3"
@@ -147,7 +148,7 @@
     "linkremixcore": "cd node_modules && rm -rf remix-core && ln -s ../remix/remix-core remix-core && cd ..",
     "linkremixlib": "cd node_modules && rm -rf remix-lib && ln -s ../remix/remix-lib remix-lib && cd ..",
     "linkremixsolidity": "cd node_modules && rm -rf remix-solidity && ln -s ../remix/remix-solidity remix-solidity && cd ..",
-    "build": "browserify src/index.js -o build/app.js",
+    "build": "browserify src/index.js -o build/app.js --exclude solc",
     "build_debugger": "browserify src/app/debugger/remix-debugger/index.js -o src/app/debugger/remix-debugger/build/app.js",
     "browsertest": "sleep 5 && npm run nightwatch_local",
     "csslint": "csslint --ignore=order-alphabetical --errors='errors,duplicate-properties,empty-rules' --exclude-list='assets/css/font-awesome.min.css' assets/css/",
@@ -174,6 +175,6 @@
     "start": "npm-run-all -lpr serve watch onchange remixd",
     "test": "npm run csslint; standard && node test/index.js",
     "test-browser": "npm-run-all -lpr selenium downloadsolc_root make-mock-compiler serve browsertest",
-    "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js"
+    "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc"
   }
 }

@@ -455,6 +455,7 @@ function styleGuide () {
       text_RegularLog: appProperties.mainText_Color,
       text_InfoLog: appProperties.supportText_Color,
       text_ErrorLog: appProperties.errorText_Color,
+      text_WarnLog: appProperties.warningText_Color,
       text_Title_TransactionLog: appProperties.infoText_Color,
       text_Regular_TransactionLog: appProperties.supportText_Color,
       text_Button: appProperties.oppositeText_Color,
@@ -665,6 +666,12 @@ function styleGuide () {
         }),
 
         button_runTests: appProperties.uiElements.button({
+          BackgroundColor: appProperties.primaryButton_BackgroundColor,
+          BorderColor: appProperties.primaryButton_BorderColor,
+          Color: appProperties.primaryButton_TextColor
+        }),
+
+        button_generateTestFile: appProperties.uiElements.button({
           BackgroundColor: appProperties.primaryButton_BackgroundColor,
           BorderColor: appProperties.primaryButton_BorderColor,
           Color: appProperties.primaryButton_TextColor
