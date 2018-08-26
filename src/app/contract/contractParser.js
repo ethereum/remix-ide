@@ -2,13 +2,13 @@
 
 var remixLib = require('remix-lib')
 var txHelper = remixLib.execution.txHelper
-var request = require('xhr-request')
+var verifySignatureCollisions = require('./verifySignatureCollisions')
 
 module.exports = (contractName, contract, compiledSource) => {
   return getDetails(contractName, contract, compiledSource)
 }
 
-var getDetails = function (contractName, contract, source) {
+async function getDetails (contractName, contract, source) {
   var detail = {}
   detail.name = contractName
   detail.metadata = contract.metadata
@@ -46,30 +46,10 @@ var getDetails = function (contractName, contract, source) {
     detail['Assembly'] = formatAssemblyText(contract.evm.legacyAssembly, '', source.content)
   }
 
-  detail.collisions = []
-  for (let func in contract.evm.methodIdentifiers) {
-    var signature = contract.evm.methodIdentifiers[func]
-    var url = 'https://raw.githubusercontent.com/ethereum-lists/4bytes/master/signatures/' + signature
-    request(url, function (err, data, response) {
-      if (err) {
-        console.log(err)
-      } else {
-        var displayWarn = false
-        if (response.statusCode === 200) {
-          if (data.split(';').length > 1) {
-            displayWarn = true
-          } else if (data !== func) {
-            displayWarn = true
-          }
-        }
-        if (displayWarn) {
-          detail.collisions.push(func)
-        }
-      }
-    })
-  }
-
-  return detail
+  return verifySignatureCollisions(contract.evm.methodIdentifiers).then((collisions) => {
+    detail.collisions = collisions
+    return detail
+  })
 }
 
 var retrieveMetadataHash = function (bytecode) {

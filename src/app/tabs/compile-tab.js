@@ -124,20 +124,21 @@ module.exports = class CompileTab {
       if (success) {
         self._view.contractNames.removeAttribute('disabled')
         self._deps.compiler.visitContracts(contract => {
-          self.data.contractsDetails[contract.name] = parseContracts(contract.name, contract.object, self._deps.compiler.getSource(contract.file))
-          var contractName = yo`<option>${contract.name}</option>`
-          self._view.contractNames.appendChild(contractName)
-          for (let func in self.data.contractsDetails[contract.name].collisions) {
-            var msg = '4bytes has recorded a hash collision in the function signature: ' + func +
-            '.\nThis means that services using 4bytes will not be able to' +
-            '\nresolve to a single function signature and thus displaying correct information.' +
-            '\nYou may want to update the function name in order to avoid this collision.'
-            self._opts.renderer.error(
-              msg,
-              self._view.errorContainer,
-              {type: 'warning'}
-            )
-          }
+          parseContracts(contract.name, contract.object, self._deps.compiler.getSource(contract.file)).then(contractDetails => {
+            self.data.contractsDetails[contract.name] = contractDetails
+            for (let func in contractDetails.collisions) {
+              var msg = '4bytes has recorded a hash collision in the function signature: ' +
+              contractDetails.collisions[func] +
+              '.\nThis means that services using 4bytes will not be able to' +
+              '\nresolve to a single function signature and thus displaying correct information.' +
+              '\nYou may want to update the function name in order to avoid this collision.'
+              self._deps.renderer.error(
+                msg,
+                self._view.errorContainer,
+                {type: 'warning'}
+              )
+            }
+          })
         })
       } else {
         self._view.contractNames.setAttribute('disabled', true)
