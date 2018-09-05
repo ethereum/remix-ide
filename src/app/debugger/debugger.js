@@ -84,6 +84,8 @@ function Debugger (container, sourceHighlighter, localRegistry) {
     }
   })
 
+  // ====================
+  // listen to events
   this.debugger.event.register('newTraceLoaded', this, function () {
     self.event.trigger('debuggerStatus', [true])
   })
@@ -92,6 +94,13 @@ function Debugger (container, sourceHighlighter, localRegistry) {
     self._components.sourceHighlighter.currentSourceLocation(null)
     self.event.trigger('debuggerStatus', [false])
   })
+
+  // ====================
+  // add providers
+  this.debugger.addProvider('vm', executionContext.vm())
+  this.debugger.addProvider('injected', executionContext.internalWeb3())
+  this.debugger.addProvider('web3', executionContext.internalWeb3())
+  this.debugger.switchProvider(executionContext.getProvider())
 }
 
 /**
@@ -109,24 +118,24 @@ Debugger.prototype.debug = function (txHash) {
   })
 }
 
-/**
- * add a new web3 provider to remix
- *
- * @param {String} type - type/name of the provider to add
- * @param {Object} obj  - provider
- */
-Debugger.prototype.addProvider = function (type, obj) {
-  this.debugger.addProvider(type, obj)
-}
+//  /**
+//   * add a new web3 provider to remix
+//   *
+//   * @param {String} type - type/name of the provider to add
+//   * @param {Object} obj  - provider
+//   */
+//  Debugger.prototype.addProvider = function (type, obj) {
+//    this.debugger.addProvider(type, obj)
+//  }
 
-/**
- * switch the provider
- *
- * @param {String} type - type/name of the provider to use
- */
-Debugger.prototype.switchProvider = function (type) {
-  this.debugger.switchProvider(type)
-}
+//  /**
+//   * switch the provider
+//   *
+//   * @param {String} type - type/name of the provider to use
+//   */
+//  Debugger.prototype.switchProvider = function (type) {
+//    this.debugger.switchProvider(type)
+//  }
 
 /**
  * get the current provider
