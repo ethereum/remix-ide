@@ -76,7 +76,8 @@ function runTab (opts, localRegistry) {
     fileManager: self._components.registry.get('filemanager').api,
     editor: self._components.registry.get('editor').api,
     logCallback: self._components.registry.get('logCallback').api,
-    filePanel: self._components.registry.get('filepanel').api
+    filePanel: self._components.registry.get('filepanel').api,
+    pluginManager: self._components.registry.get('pluginmanager').api
   }
   self._deps.udapp.resetAPI(self._components.transactionContextAPI)
   self._view.recorderCount = yo`<span>0</span>`
@@ -292,7 +293,8 @@ function contractDropdown (events, self) {
   instanceContainer.appendChild(instanceContainerTitle)
   instanceContainer.appendChild(self._view.noInstancesText)
   var compFails = yo`<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-times-circle ${css.errorIcon}" ></i>`
-  self._deps.compiler.event.register('compilationFinished', function (success, data, source) {
+
+  var newlyCompiled = (success, data, source) => {
     getContractNames(success, data)
     if (success) {
       compFails.style.display = 'none'
@@ -301,7 +303,14 @@ function contractDropdown (events, self) {
       compFails.style.display = 'block'
       document.querySelector(`.${css.contractNames}`).classList.add(css.contractNamesError)
     }
+  }
+
+  self._deps.pluginManager.event.register('sendCompilationResult', (mod, file, source, languageVersion, data) => {
+    // TODO check whether the tab is configured
+    newlyCompiled(true, data, source)
   })
+
+  self._deps.compiler.event.register('compilationFinished', newlyCompiled)
 
   var atAddressButtonInput = yo`<input class="${css.input} ataddressinput" placeholder="Load contract from Address" title="atAddress" />`
   var selectContractNames = yo`<select class="${css.contractNames}" disabled></select>`
