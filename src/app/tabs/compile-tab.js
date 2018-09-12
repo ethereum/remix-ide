@@ -123,21 +123,28 @@ module.exports = class CompileTab {
       if (success) {
         self._view.contractNames.removeAttribute('disabled')
         self._deps.compiler.visitContracts(contract => {
-          parseContracts(contract.name, contract.object, self._deps.compiler.getSource(contract.file)).then(contractDetails => {
-            self.data.contractsDetails[contract.name] = contractDetails
-            for (let func in contractDetails.collisions) {
-              var msg = '4bytes has recorded a hash collision in the function signature: ' +
-              contractDetails.collisions[func] +
-              '.\nThis means that services using 4bytes will not be able to' +
-              '\nresolve to a single function signature and thus displaying correct information.' +
-              '\nYou may want to update the function name in order to avoid this collision.'
-              self._deps.renderer.error(
-                msg,
-                self._view.errorContainer,
-                {type: 'warning'}
-              )
-            }
-          })
+          parseContracts(contract.name, contract.object, self._deps.compiler.getSource(contract.file))
+            .then(contractDetails => {
+              console.log('iddddddddddkkkkkkkkkkkkkk')
+              console.log(contractDetails.collisions)
+              self.data.contractsDetails[contract.name] = contractDetails
+              for (let func in contractDetails.collisions) {
+                var msg = '4bytes has recorded a hash collision in the function signature: ' +
+                contractDetails.collisions[func] +
+                '.\nThis means that services using 4bytes will not be able to' +
+                '\n resolve to a single function signature and thus displaying correct information.' +
+                '\nYou may want to update the function name in order to avoid this collision.'
+                self._deps.renderer.error(
+                  msg,
+                  self._view.errorContainer,
+                  {type: 'warning'}
+                )
+              }
+            })
+            .catch(err => {
+              console.log('erro no ultimo pqp')
+              console.log(err)
+            })
         })
       } else {
         self._view.contractNames.setAttribute('disabled', true)

@@ -46,10 +46,14 @@ async function getDetails (contractName, contract, source) {
     detail['Assembly'] = formatAssemblyText(contract.evm.legacyAssembly, '', source.content)
   }
 
-  return verifySignatureCollisions(contract.evm.methodIdentifiers).then((collisions) => {
-    detail.collisions = collisions
-    return detail
-  })
+  return verifySignatureCollisions(contract.evm.methodIdentifiers)
+    .then((collisions) => {
+      detail.collisions = collisions
+      return detail
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 }
 
 var retrieveMetadataHash = function (bytecode) {
