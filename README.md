@@ -114,6 +114,9 @@ After that, follow these steps:
 4. Test the app
 	open `http://127.0.0.1:8080` in your browser.
 
+Sample Docker Image:
+https://hub.docker.com/r/pigpiggcp/remix-ide/
+
 
 ## Documentation
 
