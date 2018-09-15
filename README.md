@@ -106,10 +106,14 @@ After that, follow these steps:
 - Select your `remix-ide` folder
 
 ## Run Remix-IDE as docker container image
-1. Build the container image
+1. Build the package in linux e.g. ubuntu 16.04
+2. Build the container image
 	- Run: `docker build  --tag remix-ide .`
-2. Run the docker image
+3. Run the docker image
 	- Run: `docker run -it --rm -p 8080:8080 remix-ide`
+4. Test the app
+	open `http://127.0.0.1:8080` in your browser.
+
 
 ## Documentation
 
