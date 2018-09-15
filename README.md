@@ -104,6 +104,10 @@ After that, follow these steps:
 - Click 'Load unpacked extension...' to pop up a file-selection dialog
 - Select your `remix-ide` folder
 
+## Run Remix-IDE as docker container image
+Build the container image
+
+
 ## Documentation
 
 To see details about how to use Remix for developing and/or debugging Solidity contracts, please see [our documentation page](https://remix.readthedocs.io)
