@@ -137,7 +137,7 @@ class App {
     registry.put({api: self._components.filesProviders['browser'], name: 'fileproviders/browser'})
     registry.put({api: self._components.filesProviders['config'], name: 'fileproviders/config'})
 
-    var remixd = new Remixd()
+    var remixd = new Remixd(65520)
     registry.put({api: remixd, name: 'remixd'})
     remixd.event.register('system', (message) => {
       if (message.error) toolTip(message.error)
@@ -339,9 +339,9 @@ class App {
       var splitted = /([^/]+)\/(.*)$/g.exec(url)
       async.tryEach([
         (cb) => { self.importFileCb('localhost/installed_contracts/' + url, cb) },
-        (cb) => { if (!splitted) { cb('url not parseable' + url) } else { self.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
+        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
         (cb) => { self.importFileCb('localhost/node_modules/' + url, cb) },
-        (cb) => { if (!splitted) { cb('url not parseable' + url) } else { self.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
+        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
         (error, result) => { filecb(error, result) }
       )
     } else {
