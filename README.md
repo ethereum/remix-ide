@@ -106,8 +106,10 @@ After that, follow these steps:
 - Select your `remix-ide` folder
 
 ## Run Remix-IDE as docker container image
-Build the container image
-
+1. Build the container image
+	- Run: `docker build  --tag remix-ide .`
+2. Run the docker image
+	- Run: `docker run -it --rm -p 8080:8080 remix-ide`
 
 ## Documentation
 
