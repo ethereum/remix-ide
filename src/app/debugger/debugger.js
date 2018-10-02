@@ -12,21 +12,17 @@ function Debugger (sourceHighlighter) {
   var self = this
   this.event = new EventManager()
 
-  this._components = {
-    sourceHighlighter: sourceHighlighter
-  }
-  this._components.registry = globalRegistry
-  // dependencies
-  this._deps = {
-    offsetToLineColumnConverter: this._components.registry.get('offsettolinecolumnconverter').api,
-    editor: this._components.registry.get('editor').api,
-    compiler: this._components.registry.get('compiler').api
-  }
+  this.sourceHighlighter = sourceHighlighter
+  this.registry = globalRegistry
+  this.offsetToLineColumnConverter = this.registry.get('offsettolinecolumnconverter').api,
+  this.editor = this.registry.get('editor').api,
+  this.compiler = this.registry.get('compiler').api
+
   this.debugger = new Ethdebugger(
     {
       executionContext: executionContext,
       compilationResult: () => {
-        var compilationResult = this._deps.compiler.lastCompilationResult
+        var compilationResult = this.compiler.lastCompilationResult
         if (compilationResult) {
           return compilationResult.data
         }
@@ -35,18 +31,18 @@ function Debugger (sourceHighlighter) {
     })
 
   this.breakPointManager = new remixLib.code.BreakpointManager(this.debugger, (sourceLocation) => {
-    return self._deps.offsetToLineColumnConverter.offsetToLineColumn(sourceLocation, sourceLocation.file, this._deps.compiler.lastCompilationResult.source.sources, this._deps.compiler.lastCompilationResult.data.sources)
+    return self.offsetToLineColumnConverter.offsetToLineColumn(sourceLocation, sourceLocation.file, this.compiler.lastCompilationResult.source.sources, this.compiler.lastCompilationResult.data.sources)
   }, (step) => {
     self.event.trigger('breakpointStep', [step])
   })
 
   this.debugger.setBreakpointManager(this.breakPointManager)
 
-  self._deps.editor.event.register('breakpointCleared', (fileName, row) => {
+  self.editor.event.register('breakpointCleared', (fileName, row) => {
     this.breakPointManager.remove({fileName: fileName, row: row})
   })
 
-  self._deps.editor.event.register('breakpointAdded', (fileName, row) => {
+  self.editor.event.register('breakpointAdded', (fileName, row) => {
     this.breakPointManager.add({fileName: fileName, row: row})
   })
 
@@ -55,7 +51,7 @@ function Debugger (sourceHighlighter) {
   })
 
   // unload if a file has changed (but not if tabs were switched)
-  self._deps.editor.event.register('contentChanged', function () {
+  self.editor.event.register('contentChanged', function () {
     self.debugger.unLoad()
   })
 
@@ -67,7 +63,7 @@ function Debugger (sourceHighlighter) {
   })
 
   this.debugger.event.register('traceUnloaded', this, function () {
-    self._components.sourceHighlighter.currentSourceLocation(null)
+    self.sourceHighlighter.currentSourceLocation(null)
     self.event.trigger('debuggerStatus', [false])
   })
 
@@ -82,15 +78,15 @@ function Debugger (sourceHighlighter) {
 Debugger.prototype.registerAndHighlightCodeItem = function (index) {
   const self = this
   // register selected code item, highlight the corresponding source location
-  if (self._deps.compiler.lastCompilationResult) {
+  if (self.compiler.lastCompilationResult) {
     self.debugger.traceManager.getCurrentCalledAddressAt(index, (error, address) => {
       if (error) return console.log(error)
-      self.debugger.callTree.sourceLocationTracker.getSourceLocationFromVMTraceIndex(address, index, self._deps.compiler.lastCompilationResult.data.contracts, function (error, rawLocation) {
-        if (!error && self._deps.compiler.lastCompilationResult && self._deps.compiler.lastCompilationResult.data) {
-          var lineColumnPos = self._deps.offsetToLineColumnConverter.offsetToLineColumn(rawLocation, rawLocation.file, self._deps.compiler.lastCompilationResult.source.sources)
-          self._components.sourceHighlighter.currentSourceLocation(lineColumnPos, rawLocation)
+      self.debugger.callTree.sourceLocationTracker.getSourceLocationFromVMTraceIndex(address, index, self.compiler.lastCompilationResult.data.contracts, function (error, rawLocation) {
+        if (!error && self.compiler.lastCompilationResult && self.compiler.lastCompilationResult.data) {
+          var lineColumnPos = self.offsetToLineColumnConverter.offsetToLineColumn(rawLocation, rawLocation.file, self.compiler.lastCompilationResult.source.sources)
+          self.sourceHighlighter.currentSourceLocation(lineColumnPos, rawLocation)
         } else {
-          self._components.sourceHighlighter.currentSourceLocation(null)
+          self.sourceHighlighter.currentSourceLocation(null)
         }
       })
     })
