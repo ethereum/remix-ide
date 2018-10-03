@@ -70,7 +70,7 @@ Debugger.prototype.registerAndHighlightCodeItem = function (index) {
   })
 }
 
-Debugger.prototype.debug = function (parent) {
+Debugger.prototype.debug = function (parent, tx, loadingCb) {
   const self = this
   this.step_manager = new StepManager(this.debugger, this.debugger.traceManager)
   parent.event.register('indexChanged', this, (index) => {
@@ -86,6 +86,9 @@ Debugger.prototype.debug = function (parent) {
   })
 
   this.vmDebuggerLogic = new VmDebuggerLogic(parent, this.debugger.traceManager, this.debugger.codeManager, this.debugger.solidityProxy, this.debugger.callTree)
+
+  loadingCb()
+  this.debugger.debug(tx)
 }
 
 module.exports = Debugger
