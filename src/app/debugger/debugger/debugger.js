@@ -133,4 +133,9 @@ Debugger.prototype.debugTx = function (tx, loadingCb) {
   this.debugger.debug(tx)
 }
 
+Debugger.prototype.unload = function () {
+  this.debugger.unLoad()
+  this.event.trigger('debuggerUnloaded')
+}
+
 module.exports = Debugger
