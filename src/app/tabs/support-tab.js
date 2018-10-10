@@ -92,7 +92,7 @@ const css = csjs`
   }
   .chat {
     ${styles.rightPanel.supportTab.box_IframeContainer}
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     height: 85%;
