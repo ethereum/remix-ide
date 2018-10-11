@@ -45,7 +45,7 @@ var TransactionReceiptResolver = require('./transactionReceiptResolver')
 var styleGuide = require('./app/ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 
-var css = csjs`
+var css = csjs `
   html { box-sizing: border-box; }
   *, *:before, *:after { box-sizing: inherit; }
   body                 {
@@ -108,37 +108,61 @@ var css = csjs`
 `
 
 class App {
-  constructor (api = {}, events = {}, opts = {}) {
+  constructor(api = {}, events = {}, opts = {}) {
     var self = this
     this.event = new EventManager()
     self._components = {}
-    registry.put({api: self, name: 'app'})
+    registry.put({
+      api: self,
+      name: 'app'
+    })
 
     var fileStorage = new Storage('sol:')
-    registry.put({api: fileStorage, name: 'fileStorage'})
+    registry.put({
+      api: fileStorage,
+      name: 'fileStorage'
+    })
 
     var configStorage = new Storage('config:')
-    registry.put({api: configStorage, name: 'configStorage'})
+    registry.put({
+      api: configStorage,
+      name: 'configStorage'
+    })
 
     self._components.config = new Config(fileStorage)
-    registry.put({api: self._components.config, name: 'config'})
+    registry.put({
+      api: self._components.config,
+      name: 'config'
+    })
 
     executionContext.init(self._components.config)
     executionContext.listenOnLastBlock()
 
     self._components.compilerImport = new CompilerImport()
-    registry.put({api: self._components.compilerImport, name: 'compilerimport'})
+    registry.put({
+      api: self._components.compilerImport,
+      name: 'compilerimport'
+    })
     self._components.gistHandler = new GistHandler()
 
     self._components.filesProviders = {}
     self._components.filesProviders['browser'] = new Browserfiles(fileStorage)
     self._components.filesProviders['config'] = new BrowserfilesTree('config', configStorage)
     self._components.filesProviders['config'].init()
-    registry.put({api: self._components.filesProviders['browser'], name: 'fileproviders/browser'})
-    registry.put({api: self._components.filesProviders['config'], name: 'fileproviders/config'})
+    registry.put({
+      api: self._components.filesProviders['browser'],
+      name: 'fileproviders/browser'
+    })
+    registry.put({
+      api: self._components.filesProviders['config'],
+      name: 'fileproviders/config'
+    })
 
     var remixd = new Remixd(65520)
-    registry.put({api: remixd, name: 'remixd'})
+    registry.put({
+      api: remixd,
+      name: 'remixd'
+    })
     remixd.event.register('system', (message) => {
       if (message.error) toolTip(message.error)
     })
@@ -150,12 +174,30 @@ class App {
     self._components.filesProviders['ipfs'] = new BasicReadOnlyExplorer('ipfs')
     self._components.filesProviders['https'] = new BasicReadOnlyExplorer('https')
     self._components.filesProviders['http'] = new BasicReadOnlyExplorer('http')
-    registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
-    registry.put({api: self._components.filesProviders['swarm'], name: 'fileproviders/swarm'})
-    registry.put({api: self._components.filesProviders['github'], name: 'fileproviders/github'})
-    registry.put({api: self._components.filesProviders['gist'], name: 'fileproviders/gist'})
-    registry.put({api: self._components.filesProviders['ipfs'], name: 'fileproviders/ipfs'})
-    registry.put({api: self._components.filesProviders, name: 'fileproviders'})
+    registry.put({
+      api: self._components.filesProviders['localhost'],
+      name: 'fileproviders/localhost'
+    })
+    registry.put({
+      api: self._components.filesProviders['swarm'],
+      name: 'fileproviders/swarm'
+    })
+    registry.put({
+      api: self._components.filesProviders['github'],
+      name: 'fileproviders/github'
+    })
+    registry.put({
+      api: self._components.filesProviders['gist'],
+      name: 'fileproviders/gist'
+    })
+    registry.put({
+      api: self._components.filesProviders['ipfs'],
+      name: 'fileproviders/ipfs'
+    })
+    registry.put({
+      api: self._components.filesProviders,
+      name: 'fileproviders'
+    })
 
     self._view = {}
 
@@ -172,7 +214,7 @@ class App {
       }
     }
   }
-  _adjustLayout (direction, delta) {
+  _adjustLayout(direction, delta) {
     var self = this
     var layout = self.data._layout[direction]
     if (layout) {
@@ -194,29 +236,29 @@ class App {
       self._view.centerpanel.style.right = delta + 'px'
     }
   }
-  init () {
+  init() {
     var self = this
     run.apply(self)
   }
-  render () {
+  render() {
     var self = this
     if (self._view.el) return self._view.el
-    self._view.leftpanel = yo`
+    self._view.leftpanel = yo `
       <div id="filepanel" class=${css.leftpanel}>
         ${''}
       </div>
     `
-    self._view.centerpanel = yo`
+    self._view.centerpanel = yo `
       <div id="editor-container" class=${css.centerpanel}>
         ${''}
       </div>
     `
-    self._view.rightpanel = yo`
+    self._view.rightpanel = yo `
       <div class=${css.rightpanel}>
         ${''}
       </div>
     `
-    self._view.el = yo`
+    self._view.el = yo `
       <div class=${css.browsersolidity}>
         ${self._view.leftpanel}
         ${self._view.centerpanel}
@@ -228,7 +270,7 @@ class App {
     self._adjustLayout('right', self.data._layout.right.offset)
     return self._view.el
   }
-  runCompiler () {
+  runCompiler() {
     const self = this
     if (self._components.righthandpanel.debugger().isActive) return
 
@@ -246,7 +288,9 @@ class App {
             if (error) {
               console.log(error)
             } else {
-              sources[target] = { content }
+              sources[target] = {
+                content
+              }
               self._components.compiler.compile(sources, target)
             }
           })
@@ -256,12 +300,12 @@ class App {
       }
     }
   }
-  startdebugging (txHash) {
+  startdebugging(txHash) {
     const self = this
     self.event.trigger('debuggingRequested', [])
     self._components.righthandpanel.debugger().debug(txHash)
   }
-  loadFromGist (params) {
+  loadFromGist(params) {
     const self = this
     return self._components.gistHandler.handleLoad(params, function (gistId) {
       request.get({
@@ -278,28 +322,28 @@ class App {
       })
     })
   }
-  loadFiles (filesSet, fileProvider, callback) {
+  loadFiles(filesSet, fileProvider, callback) {
     const self = this
     if (!fileProvider) fileProvider = 'browser'
 
     async.each(Object.keys(filesSet), (file, callback) => {
       helper.createNonClashingName(file, self._components.filesProviders[fileProvider],
-      (error, name) => {
-        if (error) {
-          modalDialogCustom.alert('Unexpected error loading the file ' + error)
-        } else if (helper.checkSpecialChars(name)) {
-          modalDialogCustom.alert('Special characters are not allowed')
-        } else {
-          self._components.filesProviders[fileProvider].set(name, filesSet[file].content)
-        }
-        callback()
-      })
+        (error, name) => {
+          if (error) {
+            modalDialogCustom.alert('Unexpected error loading the file ' + error)
+          } else if (helper.checkSpecialChars(name)) {
+            modalDialogCustom.alert('Special characters are not allowed')
+          } else {
+            self._components.filesProviders[fileProvider].set(name, filesSet[file].content)
+          }
+          callback()
+        })
     }, (error) => {
       if (!error) self._components.fileManager.switchFile()
       if (callback) callback(error)
     })
   }
-  importExternal (url, cb) {
+  importExternal(url, cb) {
     const self = this
     self._components.compilerImport.import(url,
       (loadingMsg) => {
@@ -316,7 +360,7 @@ class App {
         }
       })
   }
-  importFileCb (url, filecb) {
+  importFileCb(url, filecb) {
     const self = this
     if (url.indexOf('/remix_tests.sol') !== -1) {
       return filecb(null, remixTests.assertLibCode)
@@ -338,11 +382,30 @@ class App {
       // try to resolve localhost modules (aka truffle imports)
       var splitted = /([^/]+)\/(.*)$/g.exec(url)
       async.tryEach([
-        (cb) => { self.importFileCb('localhost/installed_contracts/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
-        (cb) => { self.importFileCb('localhost/node_modules/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
-        (error, result) => { filecb(error, result) }
+          (cb) => {
+            self.importFileCb('localhost/installed_contracts/' + url, cb)
+          },
+          (cb) => {
+            if (!splitted) {
+              cb('URL not parseable: ' + url)
+            } else {
+              self.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb)
+            }
+          },
+          (cb) => {
+            self.importFileCb('localhost/node_modules/' + url, cb)
+          },
+          (cb) => {
+            if (!splitted) {
+              cb('URL not parseable: ' + url)
+            } else {
+              self.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb)
+            }
+          }
+        ],
+        (error, result) => {
+          filecb(error, result)
+        }
       )
     } else {
       self.importExternal(url, filecb)
@@ -352,19 +415,19 @@ class App {
 
 module.exports = App
 
-function run () {
+function run() {
   var self = this
 
   if (window.location.hostname === 'yann300.github.io') {
     modalDialogCustom.alert('This UNSTABLE ALPHA branch of Remix has been moved to http://ethereum.github.io/remix-live-alpha.')
   } else if (window.location.hostname === 'remix-alpha.ethereum.org' ||
-  (window.location.hostname === 'ethereum.github.io' && window.location.pathname.indexOf('/remix-live-alpha') === 0)) {
+    (window.location.hostname === 'ethereum.github.io' && window.location.pathname.indexOf('/remix-live-alpha') === 0)) {
     modalDialogCustom.alert(`This instance of the Remix IDE is an UNSTABLE ALPHA branch.\n
 Please only use it if you know what you are doing, otherwise visit the stable version at http://remix.ethereum.org.`)
   } else if (window.location.protocol.indexOf('http') === 0 &&
-  window.location.hostname !== 'remix.ethereum.org' &&
-  window.location.hostname !== 'localhost' &&
-  window.location.hostname !== '127.0.0.1') {
+    window.location.hostname !== 'remix.ethereum.org' &&
+    window.location.hostname !== 'localhost' &&
+    window.location.hostname !== '127.0.0.1') {
     modalDialogCustom.alert(`The Remix IDE has moved to http://remix.ethereum.org.\n
 This instance of Remix you are visiting WILL NOT BE UPDATED.\n
 Please make a backup of your contracts and start using http://remix.ethereum.org`)
@@ -387,24 +450,40 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     }
   })
 
-  registry.put({api: msg => self._components.editorpanel.logHtmlMessage(msg), name: 'logCallback'})
+  registry.put({
+    api: msg => self._components.editorpanel.logHtmlMessage(msg),
+    name: 'logCallback'
+  })
 
   // ----------------- Compiler -----------------
   self._components.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
-  registry.put({api: self._components.compiler, name: 'compiler'})
+  registry.put({
+    api: self._components.compiler,
+    name: 'compiler'
+  })
 
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter(self._components.compiler.event)
-  registry.put({api: offsetToLineColumnConverter, name: 'offsettolinecolumnconverter'})
+  registry.put({
+    api: offsetToLineColumnConverter,
+    name: 'offsettolinecolumnconverter'
+  })
 
   // ----------------- UniversalDApp -----------------
   var udapp = new UniversalDApp({
     removable: false,
     removable_instances: true
   })
-  registry.put({api: udapp, name: 'udapp'})
+  window.udapp = udapp
+  registry.put({
+    api: udapp,
+    name: 'udapp'
+  })
 
   var udappUI = new UniversalDAppUI(udapp)
-  registry.put({api: udappUI, name: 'udappUI'})
+  registry.put({
+    api: udappUI,
+    name: 'udappUI'
+  })
 
   // ----------------- Tx listener -----------------
   var transactionReceiptResolver = new TransactionReceiptResolver()
@@ -423,8 +502,12 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     },
     event: {
       udapp: udapp.event
-    }})
-  registry.put({api: txlistener, name: 'txlistener'})
+    }
+  })
+  registry.put({
+    api: txlistener,
+    name: 'txlistener'
+  })
 
   var eventsDecoder = new EventsDecoder({
     api: {
@@ -433,7 +516,10 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
       }
     }
   })
-  registry.put({api: eventsDecoder, name: 'eventsdecoder'})
+  registry.put({
+    api: eventsDecoder,
+    name: 'eventsdecoder'
+  })
 
   txlistener.startListening()
 
@@ -441,12 +527,18 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
   // ----------------- editor panel ----------------------
   self._components.editorpanel = new EditorPanel()
-  registry.put({ api: self._components.editorpanel, name: 'editorpanel' })
+  registry.put({
+    api: self._components.editorpanel,
+    name: 'editorpanel'
+  })
 
   // ----------------- file manager ----------------------------
   self._components.fileManager = new FileManager()
   var fileManager = self._components.fileManager
-  registry.put({api: fileManager, name: 'filemanager'})
+  registry.put({
+    api: fileManager,
+    name: 'filemanager'
+  })
 
   self._components.editorpanel.init()
   self._components.fileManager.init()
@@ -457,7 +549,9 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   // The event listener needs to be registered as early as possible, because the
   // parent will send the message upon the "load" event.
   var filesToLoad = null
-  var loadFilesCallback = function (files) { filesToLoad = files } // will be replaced later
+  var loadFilesCallback = function (files) {
+    filesToLoad = files
+  } // will be replaced later
 
   window.addEventListener('message', function (ev) {
     if (typeof ev.data === typeof [] && ev.data[0] === 'loadFiles') {
@@ -479,11 +573,17 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   self._components.filePanel = new FilePanel()
   self._view.leftpanel.appendChild(self._components.filePanel.render())
   self._components.filePanel.event.register('resize', delta => self._adjustLayout('left', delta))
-  registry.put({api: self._components.filePanel, name: 'filepanel'})
+  registry.put({
+    api: self._components.filePanel,
+    name: 'filepanel'
+  })
 
   // ----------------- Renderer -----------------
   var renderer = new Renderer()
-  registry.put({api: renderer, name: 'renderer'})
+  registry.put({
+    api: renderer,
+    name: 'renderer'
+  })
 
   // ---------------- Righthand-panel --------------------
   self._components.righthandpanel = new RighthandPanel()
@@ -512,19 +612,19 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
       let context = queryParams.get().context
       let endPointUrl = queryParams.get().endPointUrl
       executionContext.setContext(context, endPointUrl,
-      () => {
-        modalDialogCustom.confirm(null, 'Are you sure you want to connect to an ethereum node?', () => {
-          if (!endPointUrl) {
-            endPointUrl = 'http://localhost:8545'
-          }
-          modalDialogCustom.prompt(null, 'Web3 Provider Endpoint', endPointUrl, (target) => {
-            executionContext.setProviderFromEndpoint(target, context)
+        () => {
+          modalDialogCustom.confirm(null, 'Are you sure you want to connect to an ethereum node?', () => {
+            if (!endPointUrl) {
+              endPointUrl = 'http://localhost:8545'
+            }
+            modalDialogCustom.prompt(null, 'Web3 Provider Endpoint', endPointUrl, (target) => {
+              executionContext.setProviderFromEndpoint(target, context)
+            }, () => {})
           }, () => {})
-        }, () => {})
-      },
-      (alertMsg) => {
-        modalDialogCustom.alert(alertMsg)
-      })
+        },
+        (alertMsg) => {
+          modalDialogCustom.alert(alertMsg)
+        })
     }
 
     if (queryParams.get().debugtx) {
@@ -535,7 +635,10 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
       var title = queryParams.get().plugintitle
       var url = queryParams.get().pluginurl
       modalDialogCustom.confirm(null, `Remix is going to load the extension "${title}" located at ${queryParams.get().pluginurl}. Are you sure to load this external extension?`, () => {
-        self._components.righthandpanel.loadPlugin({title, url})
+        self._components.righthandpanel.loadPlugin({
+          title,
+          url
+        })
       })
     }
   })

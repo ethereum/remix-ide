@@ -37,8 +37,8 @@
     "npm-link-local": "^1.1.0",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
-    "remix-debug": "latest",
     "remix-analyzer": "latest",
+    "remix-debug": "latest",
     "remix-lib": "latest",
     "remix-solidity": "latest",
     "remix-tests": "latest",
@@ -58,6 +58,7 @@
     "yo-yoify": "^3.7.3"
   },
   "dependencies": {
+    "@nervos/chain": "^0.18.0",
     "http-server": "0.9.0",
     "remixd": "git+https://github.com/ethereum/remixd.git"
   },
@@ -164,7 +165,7 @@
     "nightwatch_remote_parallel": "nightwatch --config nightwatch.js --env safari,chrome,default",
     "nightwatch_remote_safari": "nightwatch --config nightwatch.js --env safari",
     "nightwatch_remote_debugger_parallel": "nightwatch --config nightwatch_debugger.js --env safari,chrome,default",
-    "onchange": "onchange build/app.js -- npm-run-all lint",
+    "onchange": "onchange build/app.js -- npm-run-all",
     "prepublish": "mkdirp build; npm-run-all -ls downloadsolc_root build",
     "remixd": "./node_modules/remixd/bin/remixd -s ./contracts --remix-ide https://microscope.cryptape.com:8888",
     "selenium": "execr --silent selenium-standalone start",
