@@ -8,7 +8,7 @@ var copyToClipboard = require('./app/ui/copy-to-clipboard')
 var css = require('./universal-dapp-styles')
 var MultiParamManager = require('./multiParamManager')
 
-function UniversalDAppUI (udapp, opts = {}) {
+function UniversalDAppUI(udapp, opts = {}) {
   this.udapp = udapp
 }
 
@@ -18,6 +18,8 @@ UniversalDAppUI.prototype.renderInstance = function (contract, address, contract
     noInstances.parentNode.removeChild(noInstances)
   }
   var abi = this.udapp.getABI(contract)
+  // AppChain Modification
+  // Get ABI
   return this.renderInstanceFromABI(abi, address, contractName)
 }
 
@@ -28,27 +30,27 @@ UniversalDAppUI.prototype.renderInstance = function (contract, address, contract
 UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address, contractName) {
   var self = this
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
-  var instance = yo`<div class="instance ${css.instance} ${css.hidesub}" id="instance${address}"></div>`
+  var instance = yo `<div class="instance ${css.instance} ${css.hidesub}" id="instance${address}"></div>`
   var context = self.udapp.context()
 
   var shortAddress = helper.shortenAddress(address)
-  var title = yo`
+  var title = yo `
     <div class="${css.title}" onclick=${toggleClass}>
     <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) </div>
     ${copyToClipboard(() => address)}
   </div>`
 
   if (self.udapp.removable_instances) {
-    var close = yo`<div class="${css.udappClose}" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
+    var close = yo `<div class="${css.udappClose}" onclick=${remove}><i class="${css.closeIcon} fa fa-close" aria-hidden="true"></i></div>`
     title.appendChild(close)
   }
 
-  function remove () {
+  function remove() {
     instance.remove()
     // @TODO perhaps add a callack here to warn the caller that the instance has been removed
   }
 
-  function toggleClass () {
+  function toggleClass() {
     $(instance).toggleClass(`${css.hidesub}`)
   }
 
@@ -89,9 +91,9 @@ UniversalDAppUI.prototype.getCallButton = function (args) {
   // args.contractName [constr only]
   var lookupOnly = args.funABI.constant
 
-  var outputOverride = yo`<div class=${css.value}></div>` // show return value
+  var outputOverride = yo `<div class=${css.value}></div>` // show return value
 
-  function clickButton (valArr, inputsValues) {
+  function clickButton(valArr, inputsValues) {
     self.udapp.call(true, args, inputsValues, lookupOnly, (decoded) => {
       outputOverride.innerHTML = ''
       outputOverride.appendChild(decoded)
@@ -102,7 +104,7 @@ UniversalDAppUI.prototype.getCallButton = function (args) {
     clickButton(valArray, inputsValues, domEl)
   }, self.udapp.getInputs(args.funABI))
 
-  var contractActionsContainer = yo`<div class="${css.contractActionsContainer}" >${multiParamManager.render()}</div>`
+  var contractActionsContainer = yo `<div class="${css.contractActionsContainer}" >${multiParamManager.render()}</div>`
   contractActionsContainer.appendChild(outputOverride)
 
   return contractActionsContainer

@@ -21,7 +21,7 @@ var modalDialog = require('./app/ui/modaldialog')
 var typeConversion = remixLib.execution.typeConversion
 var confirmDialog = require('./app/execution/confirmDialog')
 
-function UniversalDApp (opts, localRegistry) {
+function UniversalDApp(opts, localRegistry) {
   this.event = new EventManager()
   var self = this
   self.data = {}
@@ -70,7 +70,7 @@ UniversalDApp.prototype.resetEnvironment = function () {
     executionContext.detectNetwork((error, network) => {
       if (!error && network) {
         var txLink = executionContext.txDetailsLink(network.name, txhash)
-        if (txLink) this._deps.logCallback(yo`<a href="${txLink}" target="_blank">${txLink}</a>`)
+        if (txLink) this._deps.logCallback(yo `<a href="${txLink}" target="_blank">${txLink}</a>`)
       }
     })
   })
@@ -122,8 +122,11 @@ UniversalDApp.prototype._addAccount = function (privateKey, balance) {
     var address = ethJSUtil.privateToAddress(privateKey)
 
     // FIXME: we don't care about the callback, but we should still make this proper
-    executionContext.vm().stateManager.putAccountBalance(address, balance || '0xf00000000000000001', function cb () {})
-    self.accounts['0x' + address.toString('hex')] = { privateKey: privateKey, nonce: 0 }
+    executionContext.vm().stateManager.putAccountBalance(address, balance || '0xf00000000000000001', function cb() {})
+    self.accounts['0x' + address.toString('hex')] = {
+      privateKey: privateKey,
+      nonce: 0
+    }
   }
 }
 
@@ -244,28 +247,35 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
 }
 
 /**
-  * deploy the given contract
-  *
-  * @param {String} data    - data to send with the transaction ( return of txFormat.buildData(...) ).
-  * @param {Function} callback    - callback.
-  */
+ * deploy the given contract
+ *
+ * @param {String} data    - data to send with the transaction ( return of txFormat.buildData(...) ).
+ * @param {Function} callback    - callback.
+ */
 UniversalDApp.prototype.createContract = function (data, callback) {
-  this.runTx({data: data, useCall: false}, (error, txResult) => {
+  this.runTx({
+    data: data,
+    useCall: false
+  }, (error, txResult) => {
     // see universaldapp.js line 660 => 700 to check possible values of txResult (error case)
     callback(error, txResult)
   })
 }
 
 /**
-  * call the current given contract
-  *
-  * @param {String} to    - address of the contract to call.
-  * @param {String} data    - data to send with the transaction ( return of txFormat.buildData(...) ).
-  * @param {Object} funAbi    - abi definition of the function to call.
-  * @param {Function} callback    - callback.
-  */
+ * call the current given contract
+ *
+ * @param {String} to    - address of the contract to call.
+ * @param {String} data    - data to send with the transaction ( return of txFormat.buildData(...) ).
+ * @param {Object} funAbi    - abi definition of the function to call.
+ * @param {Function} callback    - callback.
+ */
 UniversalDApp.prototype.callFunction = function (to, data, funAbi, callback) {
-  this.runTx({to: to, data: data, useCall: funAbi.constant}, (error, txResult) => {
+  this.runTx({
+    to: to,
+    data: data,
+    useCall: funAbi.constant
+  }, (error, txResult) => {
     // see universaldapp.js line 660 => 700 to check possible values of txResult (error case)
     callback(error, txResult)
   })
@@ -300,23 +310,33 @@ UniversalDApp.prototype.getInputs = function (funABI) {
 UniversalDApp.prototype.silentRunTx = function (tx, cb) {
   if (!executionContext.isVM()) return cb('Cannot silently send transaction through a web3 provider')
   this.txRunner.rawRun(
-  tx,
-  (network, tx, gasEstimation, continueTxExecution, cancelCb) => { continueTxExecution() },
-  (error, continueTxExecution, cancelCb) => { if (error) { cb(error) } else { continueTxExecution() } },
-  (okCb, cancelCb) => { okCb() },
-  cb)
+    tx,
+    (network, tx, gasEstimation, continueTxExecution, cancelCb) => {
+      continueTxExecution()
+    },
+    (error, continueTxExecution, cancelCb) => {
+      if (error) {
+        cb(error)
+      } else {
+        continueTxExecution()
+      }
+    },
+    (okCb, cancelCb) => {
+      okCb()
+    },
+    cb)
 }
 
 UniversalDApp.prototype.runTx = function (args, cb) {
   const self = this
   async.waterfall([
-    function getGasLimit (next) {
+    function getGasLimit(next) {
       if (self.transactionContextAPI.getGasLimit) {
         return self.transactionContextAPI.getGasLimit(next)
       }
       next(null, 3000000)
     },
-    function queryValue (gasLimit, next) {
+    function queryValue(gasLimit, next) {
       if (args.value) {
         return next(null, args.value, gasLimit)
       }
@@ -327,7 +347,7 @@ UniversalDApp.prototype.runTx = function (args, cb) {
         next(err, value, gasLimit)
       })
     },
-    function getAccount (value, gasLimit, next) {
+    function getAccount(value, gasLimit, next) {
       if (args.from) {
         return next(null, args.from, value, gasLimit)
       }
@@ -347,9 +367,23 @@ UniversalDApp.prototype.runTx = function (args, cb) {
         next(null, address, value, gasLimit)
       })
     },
-    function runTransaction (fromAddress, value, gasLimit, next) {
-      var tx = { to: args.to, data: args.data.dataHex, useCall: args.useCall, from: fromAddress, value: value, gasLimit: gasLimit }
-      var payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName }
+    function runTransaction(fromAddress, value, gasLimit, next) {
+      // AppChain Modification
+      // TODO:
+      var tx = {
+        to: args.to,
+        data: args.data.dataHex,
+        useCall: args.useCall,
+        from: fromAddress,
+        value: value,
+        gasLimit: gasLimit
+      }
+      var payLoad = {
+        funAbi: args.data.funAbi,
+        funArgs: args.data.funArgs,
+        contractBytecode: args.data.contractBytecode,
+        contractName: args.data.contractName
+      }
       var timestamp = Date.now()
 
       self.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
@@ -390,41 +424,42 @@ UniversalDApp.prototype.runTx = function (args, cb) {
               })
             }
           )
-          modalDialog('Confirm transaction', content,
-            { label: 'Confirm',
-              fn: () => {
-                self._deps.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
-                // TODO: check if this is check is still valid given the refactor
-                if (!content.gasPriceStatus) {
-                  cancelCb('Given gas price is not correct')
-                } else {
-                  var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
-                  continueTxExecution(gasPrice)
-                }
-              }}, {
-                label: 'Cancel',
-                fn: () => {
-                  return cancelCb('Transaction canceled by user.')
-                }
-              })
+          modalDialog('Confirm transaction', content, {
+            label: 'Confirm',
+            fn: () => {
+              self._deps.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+              // TODO: check if this is check is still valid given the refactor
+              if (!content.gasPriceStatus) {
+                cancelCb('Given gas price is not correct')
+              } else {
+                var gasPrice = executionContext.web3().toWei(content.querySelector('#gasprice').value, 'gwei')
+                continueTxExecution(gasPrice)
+              }
+            }
+          }, {
+            label: 'Cancel',
+            fn: () => {
+              return cancelCb('Transaction canceled by user.')
+            }
+          })
         },
         (error, continueTxExecution, cancelCb) => {
           if (error) {
             var msg = typeof error !== 'string' ? error.message : error
-            modalDialog('Gas estimation failed', yo`<div>Gas estimation errored with the following message (see below).
+            modalDialog('Gas estimation failed', yo `<div>Gas estimation errored with the following message (see below).
             The transaction execution will likely fail. Do you want to force sending? <br>
             ${msg}
-            </div>`,
-              {
-                label: 'Send Transaction',
-                fn: () => {
-                  continueTxExecution()
-                }}, {
-                  label: 'Cancel Transaction',
-                  fn: () => {
-                    cancelCb()
-                  }
-                })
+            </div>`, {
+              label: 'Send Transaction',
+              fn: () => {
+                continueTxExecution()
+              }
+            }, {
+              label: 'Cancel Transaction',
+              fn: () => {
+                cancelCb()
+              }
+            })
           } else {
             continueTxExecution()
           }
@@ -439,7 +474,9 @@ UniversalDApp.prototype.runTx = function (args, cb) {
           if (error && (typeof (error) !== 'string')) {
             if (error.message) error = error.message
             else {
-              try { error = 'error: ' + JSON.stringify(error) } catch (e) {}
+              try {
+                error = 'error: ' + JSON.stringify(error)
+              } catch (e) {}
             }
           }
           next(error, result)
