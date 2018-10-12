@@ -11,6 +11,51 @@ const nervos = Nervos(defaultSets.chain)
 
 const css = require('./styles/run-tab-styles')
 
+window.onload = () => {
+  const logPanel = document.querySelector("[class^=journal]")
+  const log = {
+    el: (el) => {
+      logPanel.appendChild(el)
+    },
+    table: (target) => {
+      let el = document.createElement('div')
+      el.setAttribute('class', css.block)
+      if (typeof target === 'string') {
+        el.innerText = target
+      } else {
+        let header = ''
+        let data = ''
+        if (Array.isArray(target)) {
+          header = `<th>Index</t><th>Value</th>`
+          data = target.map((elm, idx) => `<tr><td>${idx}</td><td>${elm.toString()}</td></tr>`).join('')
+        } else {
+          header = `<th>Key</th><th>Value</th>`
+          data = Object.keys(target).map((key, idx) => {
+            return `<tr style="background-color: ${idx % 2 ? '#dedbdb' :'#e8e8e8'}"><td>${key}:</td><td>${target[key]}</td></tr>`
+          }).join('')
+        }
+        el.innerHTML = `
+          <table style="text-align: left; border-collapse: collapse;">
+            <thead style="text-align: left">
+              <tr style="font-weight: 900; color: #000;">
+                ${header}
+              </tr>
+            </thead>
+            <tbody>
+              ${data}
+            </tbody>
+          </table>
+          <hr />
+        `
+      }
+      el.style = "margin-top: 2ch; padding: 1ch"
+      logPanel.appendChild(el)
+    }
+  }
+  window.logPanel = logPanel
+  window.log = log
+}
+
 const ids = {
   chainAddress: 'chainAddress',
   chainId: 'chainId',
@@ -76,6 +121,11 @@ window.sendToAppChain = () => {
   // get constructor params
   const _arguments = useCtrConstructorWith(readConstructorInputs)
 
+  log.table('Els')
+  log.table(els)
+  log.table('Arguments')
+  log.table(_arguments)
+
   console.log('Els')
   console.table(els)
   console.log('arguments')
@@ -110,21 +160,38 @@ window.sendToAppChain = () => {
   if (document.getElementById("auto-valid-until-block").checked) {
     nervos.appchain.getBlockNumber().then(blockNumber => {
       tx.validUntilBlock = +blockNumber + 88
+      log.table('Block Height')
+      log.table({
+        currentNumber: blockNumber,
+        validUntilBlock: +blockNumber + 88,
+      })
       myContract.deploy({
         data: selected.props.evm.bytecode.object,
         arguments: _arguments,
-      }).send(tx).then(console.log)
+      }).send(tx).then(res => {
+        log.table('Deploy Result')
+        log.table(res)
+        console.log('Deploy Result')
+        console.log(res)
+      })
       document.getElementById(ids.validUntilBlock).value = tx.validUntilBlock
     })
   } else {
     myContract.deploy({
       data: selected.props.evm.bytecode.object,
       arguments: _arguments,
-    }).send(tx).then(console.log)
+    }).send(tx).then(res => {
+      log.table('Deploy Result')
+      log.table(res)
+      console.log('Deploy Result')
+      console.log(res)
+    })
   }
-  console.log('transactions')
+  delete tx.privateKey
+  log.table('Transaction')
+  log.table(tx)
+  console.log('Transactions')
   console.table(tx)
-  console.log(nervos.currentProvider)
 }
 
 
@@ -265,15 +332,29 @@ const validUntilBlockEl = yo `
         placeholder="Enter the validUntilBlock"
       >
       <div>
-        <input type="checkbox" id="auto-valid-until-block" /> Auto
+        <input type="checkbox" id="auto-valid-until-block" checked /> Auto
       </div>
     </div>
   `
 
+const btnStyle = `
+  background: hsla(0, 82%, 82%, .5);
+  border: 1px solid hsla(0, 82%, 82%, .5);
+  color: #000;
+  font-size: 10px;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  text-decoration: none;
+  min-height: 25px;
+  margin: 8px 0;
+`
 const submitBtn = yo `
     <a
       href="javascript:window.sendToAppChain()"
-      style="background: hsla(0, 82%, 82%, .5); border: 1px solid hsla(0, 82%, 82%, .5)"
+      style="${btnStyle}"
     >
       Deploy To AppChain
     </a>
@@ -282,23 +363,25 @@ const submitBtn = yo `
 const loadContractBtn = yo `
   <a
     href="javascript:window.loadContracts()"
-    style="background: hsla(0, 82%, 82%, .5); border: 1px solid hsla(0, 82%, 82%, .5)"
+    style="${btnStyle}"
   >Load Contracts</a>
 `
 const appchainEl = yo `
-  <div class="${css.settings}">
-    ${chainAddressEl}
-    ${chainIdEl}
-    ${privateKeyEl}
-    ${quotaLimitEl}
-    ${appchainValueEl}
-    ${validUntilBlockEl}
-    <div>
-    ${loadContractBtn}
+  <div>
+    <div class="${css.settings}">
+      ${chainAddressEl}
+      ${chainIdEl}
+      ${privateKeyEl}
+      ${quotaLimitEl}
+      ${appchainValueEl}
+      ${validUntilBlockEl}
+      <div>
+      ${loadContractBtn}
+      </div>
+      <div id=${contractsPanelId}></div>
+      <div id=${contractInterfaceId}></div>
+      ${submitBtn}
     </div>
-    <div id=${contractsPanelId}></div>
-    <div id=${contractInterfaceId}></div>
-    ${submitBtn}
   </div>
 `
 export const appendAppChainSettings = function (container) {
