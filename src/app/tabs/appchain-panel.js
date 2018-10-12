@@ -21,13 +21,15 @@ window.onload = () => {
       let el = document.createElement('div')
       el.setAttribute('class', css.block)
       if (typeof target === 'string') {
+        console.log(target)
         el.innerText = target
       } else {
         let header = ''
         let data = ''
+        console.table(target)
         if (Array.isArray(target)) {
           header = `<th>Index</t><th>Value</th>`
-          data = target.map((elm, idx) => `<tr><td>${idx}</td><td>${elm.toString()}</td></tr>`).join('')
+          data = target.map((elm, idx) => `<tr style="background-color: ${idx % 2 ? '#dedbdb' :'#e8e8e8'}"><td>${idx}</td><td>${elm.toString()}</td></tr>`).join('')
         } else {
           header = `<th>Key</th><th>Value</th>`
           data = Object.keys(target).map((key, idx) => {
@@ -35,7 +37,7 @@ window.onload = () => {
           }).join('')
         }
         el.innerHTML = `
-          <table style="text-align: left; border-collapse: collapse;">
+          <table style="width: 100%; text-align: left; border-collapse: collapse;">
             <thead style="text-align: left">
               <tr style="font-weight: 900; color: #000;">
                 ${header}
@@ -126,11 +128,6 @@ window.sendToAppChain = () => {
   log.table('Arguments')
   log.table(_arguments)
 
-  console.log('Els')
-  console.table(els)
-  console.log('arguments')
-  console.table(_arguments)
-
   if (!els.chainAddress) {
     throw new Error("Chain Address Required")
   }
@@ -165,33 +162,28 @@ window.sendToAppChain = () => {
         currentNumber: blockNumber,
         validUntilBlock: +blockNumber + 88,
       })
+      log.table('Transaction')
+      log.table(tx)
       myContract.deploy({
         data: selected.props.evm.bytecode.object,
         arguments: _arguments,
       }).send(tx).then(res => {
         log.table('Deploy Result')
         log.table(res)
-        console.log('Deploy Result')
-        console.log(res)
       })
       document.getElementById(ids.validUntilBlock).value = tx.validUntilBlock
     })
   } else {
+    log.table('Transaction')
+    log.table(tx)
     myContract.deploy({
       data: selected.props.evm.bytecode.object,
       arguments: _arguments,
     }).send(tx).then(res => {
       log.table('Deploy Result')
       log.table(res)
-      console.log('Deploy Result')
-      console.log(res)
     })
   }
-  delete tx.privateKey
-  log.table('Transaction')
-  log.table(tx)
-  console.log('Transactions')
-  console.table(tx)
 }
 
 
@@ -212,7 +204,6 @@ const setSelectedContract = (name) => {
     name,
     props: window.remix.appchain.contracts.loaded[name]
   }
-  // console.log(window.remix.appchain.contracts.selected.props.abi)
   loadConstructParams()
 }
 
@@ -356,7 +347,7 @@ const submitBtn = yo `
       href="javascript:window.sendToAppChain()"
       style="${btnStyle}"
     >
-      Deploy To AppChain
+      Deploy to AppChain
     </a>
   `
 
