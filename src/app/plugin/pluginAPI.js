@@ -26,6 +26,14 @@ module.exports = (pluginManager, fileProviders, fileManager, compiler, udapp) =>
         executionContext.detectNetwork((error, network) => {
           cb(error, network)
         })
+      },
+      addProvider: (mod, name, url, cb) => {
+        executionContext.addProvider({ name, url })
+        cb()
+      },
+      removeProvider: (mod, name, cb) => {
+        executionContext.removeProvider(name)
+        cb()
       }
     },
     config: {
@@ -44,6 +52,9 @@ module.exports = (pluginManager, fileProviders, fileManager, compiler, udapp) =>
     compiler: {
       getCompilationResult: (mod, cb) => {
         cb(null, compiler.lastCompilationResult)
+      },
+      sendCompilationResult: (mod, file, source, languageVersion, data, cb) => {
+        pluginManager.receivedDataFrom('sendCompilationResult', mod, [file, source, languageVersion, data])
       }
     },
     udapp: {
