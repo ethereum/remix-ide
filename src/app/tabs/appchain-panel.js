@@ -3,7 +3,7 @@ const Nervos = require('@nervos/chain').default
 const defaultSets = {
   chain: 'http://121.196.200.225:1337',
   chainId: 1,
-  privateKey: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  privateKey: '',
   quotaLimit: 53000,
   value: 0
 }
@@ -54,7 +54,11 @@ window.onload = () => {
       logPanel.appendChild(el)
     },
     error: (error) => {
-      console.error(JSON.stringify(error))
+      const el = document.createElement('div')
+      el.setAttribute('class', css.block)
+      el.style = 'margin-top: 2ch; padding: 1ch; color: red;'
+      el.innerHTML = error.toString()
+      logPanel.appendChild(el)
     }
   }
   window.logPanel = logPanel
@@ -125,7 +129,8 @@ const handleTxResult = (txRes) => {
  */
 window.sendToAppChain = () => {
   if (!window.remix.appchain.contracts.selected) {
-    throw new Error("Load and select contract first")
+    log.error("Load and select contract first")
+    return new Error("Load and select contract first")
   }
   const els = {}
   // get transaction fields
@@ -148,6 +153,7 @@ window.sendToAppChain = () => {
   }
   log.table(`Chain Address: ${nervos.currentProvider.host}`)
   if (!els.privateKey) {
+    log.error("Private Key Required")
     return new Error("Private Key Required")
   }
 
@@ -182,7 +188,7 @@ window.sendToAppChain = () => {
       return myContract.deploy({
         data: selected.props.evm.bytecode.object,
         arguments: _arguments,
-      }).send(tx).then(handleTxResult)
+      }).send(tx).then(handleTxResult).catch(log.error)
     })
   } else {
     log.table('Transaction')
@@ -190,7 +196,7 @@ window.sendToAppChain = () => {
     return myContract.deploy({
       data: selected.props.evm.bytecode.object,
       arguments: _arguments,
-    }).send(tx).then(handleTxResult)
+    }).send(tx).then(handleTxResult).catch(log.error)
   }
 }
 

@@ -208,7 +208,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
     }
   }
   // contractsDetails is used to resolve libraries
-  txFormat.buildData(args.contractName, args.contractAbi, self.data.contractsDetails, false, args.funABI, value, (error, data) => {
+  txFormat.buildData(args.contractName, args.contractAbi, self.data.contractsDetails, false, args.funABI, args.funABI.type !== 'fallback' ? value : '', (error, data) => {
     if (!error) {
       if (isUserAction) {
         if (!args.funABI.constant) {
@@ -217,6 +217,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
           self._deps.logCallback(`${logMsg}`)
         }
       }
+      if (args.funABI.type === 'fallback') data.dataHex = value
       self.callFunction(args.address, data, args.funABI, (error, txResult) => {
         if (!error) {
           var isVM = executionContext.isVM()
@@ -368,8 +369,6 @@ UniversalDApp.prototype.runTx = function (args, cb) {
       })
     },
     function runTransaction(fromAddress, value, gasLimit, next) {
-      // AppChain Modification
-      // TODO:
       var tx = {
         to: args.to,
         data: args.data.dataHex,
@@ -382,7 +381,9 @@ UniversalDApp.prototype.runTx = function (args, cb) {
         funAbi: args.data.funAbi,
         funArgs: args.data.funArgs,
         contractBytecode: args.data.contractBytecode,
-        contractName: args.data.contractName
+        contractName: args.data.contractName,
+        contractABI: args.data.contractABI,
+        linkReferences: args.data.linkReferences
       }
       var timestamp = Date.now()
 
