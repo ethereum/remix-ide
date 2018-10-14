@@ -3,7 +3,7 @@ const Nervos = require('@nervos/chain').default
 const defaultSets = {
   chain: 'http://121.196.200.225:1337',
   chainId: 1,
-  privateKey: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  privateKey: '',
   quotaLimit: 53000,
   value: 0
 }
@@ -51,6 +51,13 @@ window.onload = () => {
         `
       }
       el.style = "margin-top: 2ch; padding: 1ch"
+      logPanel.appendChild(el)
+    },
+    error: (error) => {
+      const el = document.createElement('div')
+      el.setAttribute('class', css.block)
+      el.style = 'margin-top: 2ch; padding: 1ch; color: red;'
+      el.innerHTML = error.toString()
       logPanel.appendChild(el)
     }
   }
@@ -105,7 +112,16 @@ const readConstructorInputs = (constructor) => constructor.inputs.map(input => {
   return document.getElementById(`appchain-constructor-${input.name}`).value
 })
 
-
+const handleTxResult = (txRes) => {
+  log.table('Transaction Result')
+  log.table(txRes)
+  if (txRes.hash) {
+    nervos.listeners.listenToTransactionReceipt(txRes.hash).then(receipt => {
+      log.table('Transaction Receipt')
+      log.table(receipt)
+    })
+  }
+}
 
 /**
  * @function sendToAppChain
@@ -113,7 +129,8 @@ const readConstructorInputs = (constructor) => constructor.inputs.map(input => {
  */
 window.sendToAppChain = () => {
   if (!window.remix.appchain.contracts.selected) {
-    throw new Error("Load and select contract first")
+    log.error("Load and select contract first")
+    return new Error("Load and select contract first")
   }
   const els = {}
   // get transaction fields
@@ -129,12 +146,15 @@ window.sendToAppChain = () => {
   log.table(_arguments)
 
   if (!els.chainAddress) {
-    throw new Error("Chain Address Required")
+    log.error('Chain Address Required')
+    return new Error("Chain Address Required")
+  } else {
+    nervos.setProvider(els.chainAddress)
   }
-  nervos.setProvider(els.chainAddress)
-  window.nervos = nervos
+  log.table(`Chain Address: ${nervos.currentProvider.host}`)
   if (!els.privateKey) {
-    throw new Error("Private Key Required")
+    log.error("Private Key Required")
+    return new Error("Private Key Required")
   }
 
   const account = nervos.appchain.accounts.privateKeyToAccount(els.privateKey)
@@ -157,6 +177,7 @@ window.sendToAppChain = () => {
   if (document.getElementById("auto-valid-until-block").checked) {
     nervos.appchain.getBlockNumber().then(blockNumber => {
       tx.validUntilBlock = +blockNumber + 88
+      document.getElementById(ids.validUntilBlock).value = tx.validUntilBlock
       log.table('Block Height')
       log.table({
         currentNumber: blockNumber,
@@ -164,25 +185,18 @@ window.sendToAppChain = () => {
       })
       log.table('Transaction')
       log.table(tx)
-      myContract.deploy({
+      return myContract.deploy({
         data: selected.props.evm.bytecode.object,
         arguments: _arguments,
-      }).send(tx).then(res => {
-        log.table('Deploy Result')
-        log.table(res)
-      })
-      document.getElementById(ids.validUntilBlock).value = tx.validUntilBlock
+      }).send(tx).then(handleTxResult).catch(log.error)
     })
   } else {
     log.table('Transaction')
     log.table(tx)
-    myContract.deploy({
+    return myContract.deploy({
       data: selected.props.evm.bytecode.object,
       arguments: _arguments,
-    }).send(tx).then(res => {
-      log.table('Deploy Result')
-      log.table(res)
-    })
+    }).send(tx).then(handleTxResult).catch(log.error)
   }
 }
 
@@ -360,6 +374,7 @@ const loadContractBtn = yo `
 const appchainEl = yo `
   <div>
     <div class="${css.settings}">
+      <h5>Nervos AppChain</h5>
       ${chainAddressEl}
       ${chainIdEl}
       ${privateKeyEl}
