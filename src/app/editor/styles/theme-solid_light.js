@@ -29,7 +29,10 @@ var aceThemeSolidLightCssText = `
   color: rgb(191, 191, 191);
 }
 
-.ace-solid-light .ace_storage,
+.ace-solid-light .ace_storage {
+  color: rgb(49, 132, 149);
+}
+
 .ace-solid-light .ace_keyword {
   color: blue;
 }
