@@ -90,7 +90,7 @@ function styleGuideDark () {
                           ACE THEME
     ------------------------------------------------------ */
 
-    aceTheme: 'tomorrow_night_blue',
+    aceTheme: 'solid_blue',
 
     /* ------------------------------------------------------
                           BACKGROUND COLORS

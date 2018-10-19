@@ -76,7 +76,7 @@ function styleGuide () {
                           ACE THEME
     ------------------------------------------------------ */
 
-    aceTheme: '',
+    aceTheme: 'solid_light',
 
     /* ------------------------------------------------------
                           BACKGROUND COLORS

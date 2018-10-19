@@ -5,7 +5,7 @@ var yo = require('yo-yo')
 var csjs = require('csjs-inject')
 var ace = require('brace')
 
-require('brace/theme/tomorrow_night_blue')
+// require('brace/theme/tomorrow_night_blue')
 
 var globalRegistry = require('../../global/registry')
 
@@ -17,18 +17,20 @@ require('ace-mode-solidity/build/remix-ide/mode-solidity')
 require('brace/mode/javascript')
 require('brace/mode/python')
 require('brace/mode/json')
+require('./styles/theme-solid_blue')
+require('./styles/theme-solid_light')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 
-function setTheme (cb) {
-  if (styles.appProperties.aceTheme) {
-    cb('brace/theme/', styles.appProperties.aceTheme)
-  }
-}
-
-setTheme((path, theme) => {
-  require('brace/theme/tomorrow_night_blue')
-})
+// function setTheme (cb) {
+//   if (styles.appProperties.aceTheme) {
+//     cb('brace/theme/', styles.appProperties.aceTheme)
+//   }
+// }
+//
+// setTheme((path, theme) => {
+//   require('brace/theme/tomorrow_night_blue')
+// })
 
 var css = csjs`
   .ace-editor {

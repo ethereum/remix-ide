@@ -79,7 +79,8 @@
   "standard": {
     "ignore": [
       "build/",
-      "src/app/editor/mode-solidity.js",
+      "src/app/editor/styles/theme-solid_blue.js",
+      "src/app/editor/styles/theme-solid_light.js",
       "soljson.js"
     ],
     "parser": "babel-eslint"
