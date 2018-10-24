@@ -200,7 +200,7 @@ import "remix_tests.sol"; // this import is automatically injected by Remix.
 contract test_1 {
     
     function beforeAll () {
-      // here should instanciate tested contract
+      // here should instantiate tested contract
     }
     
     function check1 () public {
@@ -218,7 +218,7 @@ contract test_1 {
 contract test_2 {
    
     function beforeAll () {
-      // here should instanciate tested contract
+      // here should instantiate tested contract
     }
     
     function check1 () public {
