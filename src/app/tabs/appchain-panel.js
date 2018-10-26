@@ -85,12 +85,14 @@ const useCtrConstructorWith = (cb) => {
   if (constructor) {
     return cb(constructor)
   } else {
-    throw new Error("No Constructor Found")
+    window.console.warn("No Constructor Found")
+    return cb(null)
   }
 }
 
 // append constructor params fieds on panel
 const appendParamInputs = (constructor) => {
+  if (!constructor) return
   const inputs = constructor.inputs.map(input => {
     return `
         <div style="display:flex; margin: 8px 0;">
@@ -108,9 +110,9 @@ const appendParamInputs = (constructor) => {
 }
 
 // return constructor fields value
-const readConstructorInputs = (constructor) => constructor.inputs.map(input => {
+const readConstructorInputs = (constructor) => constructor ? constructor.inputs.map(input => {
   return document.getElementById(`appchain-constructor-${input.name}`).value
-})
+}) : []
 
 const handleTxResult = (txRes) => {
   log.table('Transaction Result')
