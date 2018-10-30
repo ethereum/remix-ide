@@ -93,7 +93,7 @@ class Terminal {
     self.registerFilter('script', basicFilter)
 
     self._jsSandboxContext = {}
-    self._jsSandbox = vm.createContext(self._jsSandboxContext)
+    self._jsSandboxRegistered = {}
     if (opts.shell) self._shell = opts.shell
     register(self)
   }
@@ -378,9 +378,11 @@ class Terminal {
                         <li><a target="_blank" href="https://web3js.readthedocs.io/en/1.0/">web3 version 1.0.0</a></li>
                         <li><a target="_blank" href="https://docs.ethers.io/ethers.js/html/">ethers.js</a> </li>
                         <li><a target="_blank" href="https://www.npmjs.com/package/swarmgw">swarmgw</a> </li>
+                        <li>compilers - contains currently loaded compiler</li>
                       </ul>
                     </li>
                     <li>Executing common command to interact with the Remix interface (see list of commands above). Note that these commands can also be included and run from a JavaScript script.</li>
+                    <li>Use exports/.register(key, obj)/.remove(key)/.clear() to register and reuse object across script executions.</li>
                   </ul>
                   </div>`
 
@@ -601,7 +603,7 @@ class Terminal {
     var self = this
     var context = domTerminalFeatures(self, scopedCommands)
     try {
-      var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context))
+      var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context, self._jsSandboxRegistered))
       var result = vm.runInContext(script, cmds)
       self._jsSandboxContext = Object.assign(cmds, context)
       done(null, result)
@@ -613,6 +615,7 @@ class Terminal {
 
 function domTerminalFeatures (self, scopedCommands) {
   return {
+    compilers: self._opts.compilers,
     swarmgw,
     ethers,
     remix: self._components.cmdInterpreter,
@@ -630,7 +633,12 @@ function domTerminalFeatures (self, scopedCommands) {
       return setInterval(() => { self._shell('(' + fn.toString() + ')()', scopedCommands, () => {}) }, time)
     },
     clearTimeout: clearTimeout,
-    clearInterval: clearInterval
+    clearInterval: clearInterval,
+    exports: {
+      register: (key, obj) => { self._jsSandboxRegistered[key] = obj },
+      remove: (key) => { delete self._jsSandboxRegistered[key] },
+      clear: () => { self._jsSandboxRegistered = {} }
+    }
   }
 }
 
