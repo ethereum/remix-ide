@@ -209,7 +209,11 @@ function updateAccountBalances(container, self) {
 /* ------------------------------------------------
            RECORDER
 ------------------------------------------------ */
+<<<<<<< HEAD
 function makeRecorder(registry, runTabEvent, self) {
+=======
+function makeRecorder (registry, runTabEvent, self) {
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
   var recorder = new Recorder(self._deps.udapp, self._deps.logCallback)
 
   recorder.event.register('newTxRecorded', (count) => {
@@ -313,8 +317,13 @@ function contractDropdown(events, self) {
   var instanceContainerTitle = self._view.instanceContainerTitle
   instanceContainer.appendChild(instanceContainerTitle)
   instanceContainer.appendChild(self._view.noInstancesText)
+<<<<<<< HEAD
   var compFails = yo `<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-times-circle ${css.errorIcon}" ></i>`
   var info = yo `<i class="fa fa-info ${css.infoDeployAction}" aria-hidden="true" title="*.sol files allows deploying and accessing contracts. *.abi files only allows accessing contracts."></i>`
+=======
+  var compFails = yo`<i title="Contract compilation failed. Please check the compile tab for more information." class="fa fa-times-circle ${css.errorIcon}" ></i>`
+  var info = yo`<i class="fa fa-info ${css.infoDeployAction}" aria-hidden="true" title="*.sol files allows deploying and accessing contracts. *.abi files only allows accessing contracts."></i>`
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
 
   var newlyCompiled = (success, data, source, compiler, compilerFullName) => {
     getContractNames(success, data, compiler, compilerFullName)
@@ -372,6 +381,15 @@ function contractDropdown(events, self) {
     var compiler = self._deps.compilersArtefacts[contract.getAttribute('compiler')]
     if (!compiler) return null
 
+<<<<<<< HEAD
+=======
+  function getSelectedContract () {
+    var contract = selectContractNames.children[selectContractNames.selectedIndex]
+    var contractName = contract.innerHTML
+    var compiler = self._deps.compilersArtefacts[contract.getAttribute('compiler')]
+    if (!compiler) return null
+
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     if (contractName) {
       return {
         name: contractName,
@@ -418,11 +436,19 @@ function contractDropdown(events, self) {
 
   selectContractNames.addEventListener('change', setInputParamsPlaceHolder)
 
+<<<<<<< HEAD
   function createInstanceCallback(selectedContract, data) {
+=======
+  function createInstanceCallback (selectedContract, data) {
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     self._deps.logCallback(`creation of ${selectedContract.name} pending...`)
     if (data) {
       data.contractName = selectedContract.name
       data.linkReferences = selectedContract.contract.object.evm.bytecode.linkReferences
+<<<<<<< HEAD
+=======
+      data.contractABI = selectedContract.contract.object.abi
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     }
     self._deps.udapp.createContract(data, (error, txResult) => {
       if (!error) {
@@ -451,7 +477,11 @@ function contractDropdown(events, self) {
   }
 
   // DEPLOY INSTANCE
+<<<<<<< HEAD
   function createInstance(args, compiler) {
+=======
+  function createInstance (args, compiler) {
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     var selectedContract = getSelectedContract()
 
     if (selectedContract.contract.object.evm.bytecode.object.length === 0) {
@@ -461,7 +491,7 @@ function contractDropdown(events, self) {
 
     var forceSend = () => {
       var constructor = txHelper.getConstructorInterface(selectedContract.contract.object.abi)
-      self._deps.filePanel.compilerMetadata().metadataOf(selectedContract.name, (error, contractMetadata) => {
+      self._deps.filePanel.compilerMetadata().deployMetadataOf(selectedContract.name, (error, contractMetadata) => {
         if (error) return self._deps.logCallback(`creation of ${selectedContract.name} errored: ` + error)
         if (!contractMetadata || (contractMetadata && contractMetadata.autoDeployLib)) {
           txFormat.buildData(selectedContract.name, selectedContract.contract.object, compiler.getContracts(), true, constructor, args, (error, data) => {
@@ -484,7 +514,11 @@ function contractDropdown(events, self) {
     }
 
     if (selectedContract.contract.object.evm.deployedBytecode && selectedContract.contract.object.evm.deployedBytecode.object.length / 2 > 24576) {
+<<<<<<< HEAD
       modalDialog('Contract code size over limit', yo `<div>Contract creation initialization returns data with length of more than 24576 bytes. The deployment will likely fails. <br>
+=======
+      modalDialog('Contract code size over limit', yo`<div>Contract creation initialization returns data with length of more than 24576 bytes. The deployment will likely fails. <br>
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
       More info: <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md" target="_blank">eip-170</a>
       </div>`, {
         label: 'Force Send',
@@ -505,9 +539,13 @@ function contractDropdown(events, self) {
   // ACCESS DEPLOYED INSTANCE
   function loadFromAddress() {
     var noInstancesText = self._view.noInstancesText
+<<<<<<< HEAD
     if (noInstancesText.parentNode) {
       noInstancesText.parentNode.removeChild(noInstancesText)
     }
+=======
+    if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     var address = atAddressButtonInput.value
     if (!ethJSUtil.isValidAddress(address)) {
       return modalDialogCustom.alert('Invalid address.')
@@ -532,13 +570,21 @@ function contractDropdown(events, self) {
   }
 
   // GET NAMES OF ALL THE CONTRACTS
+<<<<<<< HEAD
   function getContractNames(success, data, compiler, compilerFullName) {
+=======
+  function getContractNames (success, data, compiler, compilerFullName) {
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
     var contractNames = document.querySelector(`.${css.contractNames.classNames[0]}`)
     contractNames.innerHTML = ''
     if (success) {
       selectContractNames.removeAttribute('disabled')
       compiler.visitContracts((contract) => {
+<<<<<<< HEAD
         contractNames.appendChild(yo `<option compiler="${compilerFullName}">${contract.name}</option>`)
+=======
+        contractNames.appendChild(yo`<option compiler="${compilerFullName}">${contract.name}</option>`)
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
       })
     } else {
       selectContractNames.setAttribute('disabled', true)
@@ -674,7 +720,11 @@ function settings(container, self) {
   })
 
   executionContext.event.register('addProvider', (network) => {
+<<<<<<< HEAD
     selectExEnv.appendChild(yo `<option
+=======
+    selectExEnv.appendChild(yo`<option
+>>>>>>> 21c28e64efd4faad74a95464ff9a302ae250e0ee
             title="Manually added environment: ${network.url}"
             value="${network.name}" name="executionContext"> ${network.name}
           </option>`)

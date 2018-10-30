@@ -84,8 +84,6 @@ module.exports = class CompileTab {
     })
     self._deps.editor.event.register('contentChanged', function changedFile () {
       if (!self._view.compileIcon) return
-      const compileTab = document.querySelector('.compileView') // @TODO: compileView tab
-      compileTab.style.color = styles.colors.red // @TODO: compileView tab
       self._view.compileIcon.classList.add(`${css.bouncingIcon}`) // @TODO: compileView tab
     })
     self._deps.compiler.event.register('loadingCompiler', function start () {
@@ -139,11 +137,13 @@ module.exports = class CompileTab {
         error = true
         self._deps.renderer.error(data['error'].formattedMessage, self._view.errorContainer, {type: data['error'].severity || 'error'})
         if (data['error'].mode === 'panic') {
+          /*
           return modalDialogCustom.alert(yo`<div><i class="fa fa-exclamation-circle ${css.panicError}" aria-hidden="true"></i>
-                                            The compiler returned with the following internal error: <br> <b>${data['error'].formattedMessage}.<br> 
-                                            The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet. 
+                                            The compiler returned with the following internal error: <br> <b>${data['error'].formattedMessage}.<br>
+                                            The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet.
                                             It is heavily recommended to use another browser not affected by this issue (Firefox is known to not be affected).</b><br>
                                             Please join <a href="https://gitter.im/ethereum/remix" target="blank" >remix gitter channel</a> for more information.</div>`)
+          */
         }
       }
       if (data.errors && data.errors.length) {
@@ -204,7 +204,7 @@ module.exports = class CompileTab {
 
     self._view.warnCompilationSlow = yo`<i title="Compilation Slow" style="visibility:hidden" class="${css.warnCompilationSlow} fa fa-exclamation-triangle" aria-hidden="true"></i>`
     self._view.compileIcon = yo`<i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>`
-    self._view.compileButton = yo`<div class="${css.compileButton}" onclick=${compile} id="compile" title="Compile source code">${self._view.compileIcon} Start to compile</div>`
+    self._view.compileButton = yo`<div class="${css.compileButton}" onclick=${compile} id="compile" title="Compile source code">${self._view.compileIcon} Start to compile (Ctrl-S)</div>`
     self._view.autoCompile = yo`<input class="${css.autocompile}" onchange=${updateAutoCompile} id="autoCompile" type="checkbox" title="Auto compile">`
     self._view.hideWarningsBox = yo`<input class="${css.autocompile}" onchange=${hideWarnings} id="hideWarningsBox" type="checkbox" title="Hide warnings">`
     if (self.data.autoCompile) self._view.autoCompile.setAttribute('checked', '')
@@ -454,6 +454,11 @@ module.exports = class CompileTab {
 }
 
 const css = csjs`
+  .title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
   .panicError {
     color: red;
     font-size: 20px;
@@ -568,7 +573,7 @@ const css = csjs`
     margin: 15px 15px 10px 0;
   }
   .copyButton {
-    ${styles.rightPanel.compileTab.button_Details};
+    ${styles.rightPanel.compileTab.button_Publish};
     padding: 0 7px;
     min-width: 50px;
     width: auto;
