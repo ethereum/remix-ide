@@ -427,9 +427,9 @@ function run() {
     window.location.hostname !== 'remix.ethereum.org' &&
     window.location.hostname !== 'localhost' &&
     window.location.hostname !== '127.0.0.1') {
-    modalDialogCustom.alert(`The Remix IDE has moved to http://remix.ethereum.org.\n
-This instance of Remix you are visiting WILL NOT BE UPDATED.\n
-Please make a backup of your contracts and start using http://remix.ethereum.org`)
+//     modalDialogCustom.alert(`The Remix IDE has moved to http://remix.ethereum.org.\n
+// This instance of Remix you are visiting WILL NOT BE UPDATED.\n
+// Please make a backup of your contracts and start using http://remix.ethereum.org`)
   }
 
   if (window.location.protocol.indexOf('https') === 0) {
