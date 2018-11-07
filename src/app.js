@@ -1,3 +1,4 @@
+/* global chrome */
 'use strict'
 
 var $ = require('jquery')
@@ -23,6 +24,7 @@ var Browserfiles = require('./app/files/browser-files')
 var BrowserfilesTree = require('./app/files/browser-files-tree')
 var chromeCloudStorageSync = require('./app/files/chromeCloudStorageSync')
 var SharedFolder = require('./app/files/shared-folder')
+var Muon = require('./app/files/Muon')
 var Config = require('./config')
 var Renderer = require('./app/ui/renderer')
 var Compiler = require('remix-solidity').Compiler
@@ -143,6 +145,10 @@ class App {
       if (message.error) toolTip(message.error)
     })
 
+    if (chrome && chrome.ipcRenderer) {
+      self._components.filesProviders['home'] = new Muon('home')
+      registry.put({api: self._components.filesProviders['home'], name: 'fileproviders/home'})
+    }
     self._components.filesProviders['localhost'] = new SharedFolder(remixd)
     self._components.filesProviders['swarm'] = new BasicReadOnlyExplorer('swarm')
     self._components.filesProviders['github'] = new BasicReadOnlyExplorer('github')
@@ -150,6 +156,7 @@ class App {
     self._components.filesProviders['ipfs'] = new BasicReadOnlyExplorer('ipfs')
     self._components.filesProviders['https'] = new BasicReadOnlyExplorer('https')
     self._components.filesProviders['http'] = new BasicReadOnlyExplorer('http')
+
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders['swarm'], name: 'fileproviders/swarm'})
     registry.put({api: self._components.filesProviders['github'], name: 'fileproviders/github'})
@@ -439,14 +446,20 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
   // TODO: There are still a lot of dep between editorpanel and filemanager
 
-  // ----------------- editor panel ----------------------
-  self._components.editorpanel = new EditorPanel()
-  registry.put({ api: self._components.editorpanel, name: 'editorpanel' })
-
   // ----------------- file manager ----------------------------
   self._components.fileManager = new FileManager()
   var fileManager = self._components.fileManager
   registry.put({api: fileManager, name: 'filemanager'})
+
+  // ---------------- FilePanel --------------------
+  self._components.filePanel = new FilePanel()
+  self._view.leftpanel.appendChild(self._components.filePanel.render())
+  self._components.filePanel.event.register('resize', delta => self._adjustLayout('left', delta))
+  registry.put({api: self._components.filePanel, name: 'filepanel'})
+
+  // ----------------- editor panel ----------------------
+  self._components.editorpanel = new EditorPanel()
+  registry.put({ api: self._components.editorpanel, name: 'editorpanel' })
 
   self._components.editorpanel.init()
   self._components.fileManager.init()
@@ -474,12 +487,6 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   if (filesToLoad !== null) {
     self.loadFiles(filesToLoad)
   }
-
-  // ---------------- FilePanel --------------------
-  self._components.filePanel = new FilePanel()
-  self._view.leftpanel.appendChild(self._components.filePanel.render())
-  self._components.filePanel.event.register('resize', delta => self._adjustLayout('left', delta))
-  registry.put({api: self._components.filePanel, name: 'filepanel'})
 
   // ----------------- Renderer -----------------
   var renderer = new Renderer()

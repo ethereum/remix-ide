@@ -1,0 +1,24 @@
+{
+    "name": "remix-desktop",
+    "version": "0.0.1",
+    "description": "Ethereum IDE",
+    "main": "main.js",
+    "scripts": {
+      "start": "node setup.js"
+    },
+    "repository": "https://github.com/ethereum/remix-ide",
+    "keywords": [
+      "IDE",
+      "Ethereum",
+      "Smart contract"
+    ],
+    "author": "Remix team",
+    "license": "MIT",
+    "devDependencies": {
+      "chokidar": "^2.0.4",
+      "electron-prebuilt": "brave/electron-prebuilt",
+      "fs-extra": "^7.0.1",
+      "isbinaryfile": "^3.0.3"
+    }
+  }
+  

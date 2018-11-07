@@ -3,6 +3,7 @@
   "version": "v0.7.5",
   "description": "Minimalistic browser-based Solidity IDE",
   "devDependencies": {
+    "electron-prebuilt": "brave/electron-prebuilt",
     "ace-mode-solidity": "^0.1.0",
     "async": "^2.1.2",
     "babel-eslint": "^7.1.1",

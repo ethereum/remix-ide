@@ -1,6 +1,6 @@
 var yo = require('yo-yo')
 var Treeview = require('../ui/TreeView')
-var modalDialog = require('../ui/modaldialog')
+// var modalDialog = require('../ui/modaldialog')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
 var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
@@ -28,15 +28,18 @@ function fileExplorer (localRegistry, files) {
   self._components.registry = localRegistry || globalRegistry
   self._deps = {
     config: self._components.registry.get('config').api,
-    editor: self._components.registry.get('editor').api,
+    // editor: self._components.registry.get('editor').api,
     fileManager: self._components.registry.get('filemanager').api
   }
 
   // warn if file changed outside of Remix
+  /*
   function remixdDialog () {
     return yo`<div>This file has been changed outside of Remix IDE.</div>`
   }
+  */
 
+  /*
   this.files.event.register('fileExternallyChanged', (path, file) => {
     if (self._deps.config.get('currentFile') === path && self._deps.editor.currentContent() && self._deps.editor.currentContent() !== file.content) {
       if (this.files.isReadOnly(path)) return self._deps.editor.setText(file.content)
@@ -55,6 +58,7 @@ function fileExplorer (localRegistry, files) {
       )
     }
   })
+  */
 
   // register to event of the file provider
   files.event.register('fileRemoved', fileRemoved)
@@ -274,6 +278,12 @@ fileExplorer.prototype.show = function () {
 fileExplorer.prototype.init = function () {
   this.container = yo`<div></div>`
   return this.container
+}
+
+fileExplorer.prototype.destroy = function () {
+  if (this.container && this.container.parentElement) {
+    this.container.parentElement.removeChild(this.container)
+  }
 }
 
 fileExplorer.prototype.ensureRoot = function (cb) {

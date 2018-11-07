@@ -1,3 +1,4 @@
+/* global chrome */
 'use strict'
 var yo = require('yo-yo')
 var async = require('async')
@@ -23,6 +24,7 @@ class CmdInterpreterAPI {
     self._deps = {
       app: self._components.registry.get('app').api,
       fileManager: self._components.registry.get('filemanager').api,
+      filePanel: self._components.registry.get('filepanel').api,
       editor: self._components.registry.get('editor').api,
       compiler: self._components.registry.get('compiler').api,
       offsetToLineColumnConverter: self._components.registry.get('offsettolinecolumnconverter').api
@@ -36,6 +38,8 @@ class CmdInterpreterAPI {
       'remix.setproviderurl(url)': 'Change the current provider to Web3 provider and set the url endpoint.',
       'remix.execute(filepath)': 'Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed.',
       'remix.exeCurrent()': 'Run the script currently displayed in the editor',
+      'remix.attachFolder(name, path)': 'Use local folder in the file explorer (only Remix Desktop)',
+      'remix.deattachFolder(name, path)': 'Remove local folder from the file explorer (only Remix Desktop)',
       'remix.help()': 'Display this help message',
       'remix.debugHelp()': 'Display help message for debugging'
     }
@@ -264,6 +268,28 @@ class CmdInterpreterAPI {
     self._components.terminal.commands.html(help)
     if (cb) cb()
     return ''
+  }
+  attachFolder (name, path, cb) {
+    if (chrome && chrome.ipcRenderer) {
+      const self = this
+      chrome.ipcRenderer.send('attachFolder', { path })
+      let provider = self._deps.fileManager.createMuonProvider(name, path)
+      self._deps.fileManager.registerFileProvider(provider)
+      self._deps.filePanel.registerExplorer(provider)
+      if (cb) cb()
+    } else {
+      if (cb) cb('no electron context')
+    }
+  }
+  deattachFolder (name, path, cb) {
+    if (chrome && chrome.ipcRenderer) {
+      const self = this
+      chrome.ipcRenderer.send('deattachFolder', { path })
+      self._deps.filePanel.unRegisterExplorer(name)
+      if (cb) cb()
+    } else {
+      if (cb) cb('no electron context')
+    }
   }
 }
 

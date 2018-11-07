@@ -1,4 +1,4 @@
-/* global FileReader */
+/* global FileReader chrome */
 var async = require('async')
 var $ = require('jquery')
 var yo = require('yo-yo')
@@ -60,6 +60,9 @@ function filepanel (localRegistry) {
   var configExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['config'])
   var httpExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['http'])
   var httpsExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['https'])
+  if (chrome && chrome.ipcRenderer && self._deps.fileProviders['home']) {
+    var homeExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['home'])
+  }
 
   // ----------------- editor panel ----------------------
   self._compilerMetadata = new CompilerMetadata(
@@ -93,7 +96,7 @@ function filepanel (localRegistry) {
     `
   }
 
-  function template () {
+  function template (explorers) {
     return yo`
       <div class=${css.container}>
         <div class=${css.fileexplorer}>
@@ -121,16 +124,7 @@ function filepanel (localRegistry) {
               <i class="websocketconn fa fa-link" title="Connect to Localhost"></i>
             </span>
           </div>
-          <div class=${css.treeviews}>
-            <div class=${css.treeview}>${fileExplorer.init()}</div>
-            <div class="configexplorer ${css.treeview}">${configExplorer.init()}</div>
-            <div class="filesystemexplorer ${css.treeview}">${fileSystemExplorer.init()}</div>
-            <div class="swarmexplorer ${css.treeview}">${swarmExplorer.init()}</div>
-            <div class="githubexplorer ${css.treeview}">${githubExplorer.init()}</div>
-            <div class="gistexplorer ${css.treeview}">${gistExplorer.init()}</div>
-            <div class="httpexplorer ${css.treeview}">${httpExplorer.init()}</div>
-            <div class="httpsexplorer ${css.treeview}">${httpsExplorer.init()}</div>
-          </div>
+          ${explorers}
         </div>
         ${dragbar}
       </div>
@@ -139,10 +133,22 @@ function filepanel (localRegistry) {
 
   var event = new EventManager()
   self.event = event
-  var element = template()
+  self.explorers = yo`<div class=${css.treeviews}>
+    <div class=${css.treeview}>${fileExplorer.init()}</div>
+    <div class="configexplorer ${css.treeview}">${configExplorer.init()}</div>
+    <div class="filesystemexplorer ${css.treeview}">${fileSystemExplorer.init()}</div>
+    <div class="homeexplorer ${css.treeview}">${homeExplorer ? homeExplorer.init() : ''}</div>
+    <div class="swarmexplorer ${css.treeview}">${swarmExplorer.init()}</div>
+    <div class="githubexplorer ${css.treeview}">${githubExplorer.init()}</div>
+    <div class="gistexplorer ${css.treeview}">${gistExplorer.init()}</div>
+    <div class="httpexplorer ${css.treeview}">${httpExplorer.init()}</div>
+    <div class="httpsexplorer ${css.treeview}">${httpsExplorer.init()}</div>
+  </div>`
+  var element = template(self.explorers)
   fileExplorer.ensureRoot()
   configExplorer.ensureRoot()
   var websocketconn = element.querySelector('.websocketconn')
+  if (homeExplorer) homeExplorer.ensureRoot()
   self._deps.fileProviders['localhost'].event.register('connecting', (event) => {
     websocketconn.style.color = styles.colors.yellow
     websocketconn.setAttribute('title', 'Connecting to localhost. ' + JSON.stringify(event))
@@ -197,6 +203,28 @@ function filepanel (localRegistry) {
   httpsExplorer.events.register('focus', function (path) {
     self._deps.fileManager.switchFile(path)
   })
+
+  if (homeExplorer) {
+    homeExplorer.events.register('focus', function (path) {
+      self._deps.fileManager.switchFile(path)
+    })
+  }
+
+  var explorers = {}
+  self.registerExplorer = (provider) => {
+    this.unRegisterExplorer(provider.type)
+    var explorer = new FileExplorer(self._components.registry, provider)
+    self.explorers.appendChild(explorer.init())
+    explorer.ensureRoot()
+    explorers[provider.type] = explorer
+    explorer.events.register('focus', function (path) {
+      self._deps.fileManager.switchFile(path)
+    })
+  }
+
+  self.unRegisterExplorer = (type) => {
+    if (explorers[type]) explorers[type].destroy()
+  }
 
   self.render = function render () { return element }
 

@@ -1,3 +1,4 @@
+/* global chrome */
 'use strict'
 
 var $ = require('jquery')
@@ -5,6 +6,7 @@ var remixLib = require('remix-lib')
 var yo = require('yo-yo')
 var EventManager = remixLib.EventManager
 var globalRegistry = require('../../global/registry')
+var Muon = require('./Muon')
 
 /*
   attach to files event (removed renamed)
@@ -31,6 +33,9 @@ class FileManager {
       gistExplorer: self._components.registry.get('fileproviders/gist').api,
       filesProviders: self._components.registry.get('fileproviders').api
     }
+    if (chrome && chrome.ipcRenderer) {
+      self._deps.homeExplorer = self._components.registry.get('fileproviders/home').api
+    }
 
     self._deps.browserExplorer.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
     self._deps.localhostExplorer.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
@@ -42,6 +47,19 @@ class FileManager {
     self._deps.gistExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
     self._deps.localhostExplorer.event.register('errored', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
     self._deps.localhostExplorer.event.register('closed', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
+    if (self._deps.homeExplorer) {
+      self._deps.homeExplorer.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
+      self._deps.homeExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
+    }
+  }
+
+  createMuonProvider (type, path) {
+    return new Muon(type, path)
+  }
+
+  registerFileProvider (fileProvider) {
+    fileProvider.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
+    fileProvider.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
   }
 
   fileRenamedEvent (oldName, newName, isFolder) {
