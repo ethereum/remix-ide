@@ -8,11 +8,17 @@ const styles = require('../ui/styles-guide/theme-chooser').chooser()
 const EventManager = remixLib.EventManager
 
 module.exports = class SupportTab {
-  constructor (localRegistry) {
+  constructor(localRegistry) {
     const self = this
     self.event = new EventManager()
-    self._view = { el: null, gitterIframe: '', config: {} }
-    self.data = { gitterIsLoaded: false }
+    self._view = {
+      el: null,
+      gitterIframe: '',
+      config: {}
+    }
+    self.data = {
+      gitterIsLoaded: false
+    }
     self._components = {}
     self._components.registry = localRegistry || globalRegistry
 
@@ -22,18 +28,18 @@ module.exports = class SupportTab {
 
     self._deps.app.event.register('tabChanged', (tabName) => {
       if (tabName !== 'Support' || self.data.gitterIsLoaded) return
-      const iframe = yo`<iframe class="${css.chatIframe}" src='https://gitter.im/ethereum/remix/~embed'>`
+      const iframe = yo `<iframe class="${css.chatIframe}" src='https://gitter.im/ethereum/remix/~embed'>`
       self._view.gitterIframe.parentNode.replaceChild(iframe, self._view.gitterIframe)
       self._view.gitterIframe = iframe
       self._view.el.style.display = 'block'
       self.data.gitterIsLoaded = true
     })
   }
-  render () {
+  render() {
     const self = this
     if (self._view.el) return self._view.el
-    self._view.gitterIframe = yo`<div></div>`
-    self._view.config.remixd = yo`
+    self._view.gitterIframe = yo `<div></div>`
+    self._view.config.remixd = yo `
       <div class="${css.info}">
         <div class=${css.title}>Accessing local files</div>
         <div class="${css.crow}">
@@ -45,7 +51,7 @@ module.exports = class SupportTab {
         <div class="${css.crow}"><a target="_blank" href="https://remix.readthedocs.io/en/latest/tutorial_remixd_filesystem">http://remix.readthedocs.io/en/latest/tutorial_remixd_filesystem.html</a></div>
         <div class="${css.crow}">Installation: <pre class=${css.remixdinstallation}>npm install remixd -g</pre></div>
       </div>`
-    self._view.config.faucet = yo`
+    self._view.config.faucet = yo `
       <div class="${css.info}">
         <div class=${css.title}>Faucet</div>
         <div class="${css.crow}">
@@ -56,7 +62,7 @@ module.exports = class SupportTab {
         <div class="${css.crow}">More infos:</div>
         <div class="${css.crow}"><a target="_blank" href="https://github.com/cryptape/appchain-testnet-faucet">https://github.com/cryptape/appchain-testnet-faucet</a></div>
       </div>`
-    self._view.config.localremixd = yo`
+    self._view.config.localremixd = yo `
       <div class="${css.info}">
         <div class=${css.title}>Running Remix locally</div>
         <div class="${css.crow}">
@@ -69,7 +75,7 @@ module.exports = class SupportTab {
         </div>
         <a target="_blank" href="https://github.com/horizon-games/remix-app">https://github.com/horizon-games/remix-app</a>
       </div>`
-    self._view.el = yo`
+    self._view.el = yo `
       <div class="${css.supportTabView}" id="supportView">
         <div class="${css.infoBox}">
           Have a question, found a bug or want to propose a feature? Have a look at the
@@ -88,11 +94,14 @@ module.exports = class SupportTab {
         ${self._view.config.localremixd}
       </div>`
     return self._view.el
-    function openLink () { window.open('https://gitter.im/ethereum/remix') }
+
+    function openLink() {
+      window.open('https://gitter.im/ethereum/remix')
+    }
   }
 }
 
-const css = csjs`
+const css = csjs `
   .supportTabView {
     height: 100%;
     padding: 2%;
