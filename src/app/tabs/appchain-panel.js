@@ -1,7 +1,7 @@
 const yo = require('yo-yo')
 const Nervos = require('@nervos/chain').default
 const defaultSets = {
-  chain: 'http://121.196.200.225:1337',
+  chain: 'https://node.cryptape.com',
   chainId: 1,
   privateKey: '',
   quotaLimit: 53000,
