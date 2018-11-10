@@ -24,6 +24,7 @@ var modalDialog = require('../ui/modaldialog')
 var CompilerAbstract = require('../compiler/compiler-abstract')
 var tootip = require('../ui/tooltip')
 
+
 // AppChain Modification
 var {
   appendAppChainSettings,

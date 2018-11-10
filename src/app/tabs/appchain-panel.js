@@ -5,12 +5,32 @@ const defaultSets = {
   chainId: 1,
   privateKey: '',
   quotaLimit: 53000,
-  value: 0
+  value: 0,
+  version: 0,
 }
+
+let tx = {}
+const els = {}
+
+const storeAbiElId = 'store-abi-on-chain'
+const autoBlockNumberElId = 'auto-valid-until-block'
 const nervos = Nervos(defaultSets.chain)
+const microscope = `://microscope.cryptape.com`
 
 const css = require('./styles/run-tab-styles')
 
+const ids = {
+  chainAddress: 'chainAddress',
+  chainId: 'chainId',
+  privateKey: 'privateKey',
+  quotaLimit: 'quotaLimit',
+  appchainValue: 'appchainValue',
+  validUntilBlock: 'validUntilBlock',
+  appchainVersion: 'appchainVersion'
+}
+
+const contractsPanelId = 'appchain-contracts'
+const contractInterfaceId = 'contract-interface'
 window.onload = () => {
   const logPanel = document.querySelector("[class^=journal]")
   const log = {
@@ -65,17 +85,6 @@ window.onload = () => {
   window.log = log
 }
 
-const ids = {
-  chainAddress: 'chainAddress',
-  chainId: 'chainId',
-  privateKey: 'privateKey',
-  quotaLimit: 'quotaLimit',
-  appchainValue: 'appchainValue',
-  validUntilBlock: 'validUntilBlock',
-}
-
-const contractsPanelId = 'appchain-contracts'
-const contractInterfaceId = 'contract-interface'
 
 /**
  * @function useCtrConstructorWith
@@ -121,6 +130,34 @@ const handleTxResult = (txRes) => {
     nervos.listeners.listenToTransactionReceipt(txRes.hash).then(receipt => {
       log.table('Transaction Receipt')
       log.table(receipt)
+      if (!receipt.contractAddress) return
+      const microscopeLinks = {
+        transaction: `<a target="_blank" href="${els.chainAddress.split(':')[0]}${microscope}?chain=${els.chainAddress}/#/transaction/${receipt.transactionHash}">${receipt.transactionHash}</a>`,
+        contract: `<a target="_blank" href="${els.chainAddress.split(':')[0]}${microscope}?chain=${els.chainAddress}/#/account/${receipt.contractAddress}">${receipt.contractAddress}</a>`
+      }
+      if (document.getElementById(storeAbiElId).checked) {
+        log.table("Storing ABI")
+        // store abi
+        return nervos.appchain.storeAbi(receipt.contractAddress, window.remix.appchain.contracts.selected.props.abi,
+          Object.assign({}, tx, {
+            value: '0',
+            data: '',
+            privateKey: nervos.appchain.accounts.wallet[0].privateKey
+          })
+        ).then(receipt => {
+          if (receipt.errorMessage) {
+            throw new Error(receipt.errorMessage)
+          } else {
+            log.table('Get more detail at Microscope')
+            log.table("ABI stored")
+          }
+        }).catch(err => log.error(err.toString())).then(() => {
+          log.table(microscopeLinks)
+        })
+      } else {
+        log.table('Get more detail at Microscope')
+        log.table(microscopeLinks)
+      }
     })
   }
 }
@@ -134,7 +171,6 @@ window.sendToAppChain = () => {
     log.error("Load and select contract first")
     return new Error("Load and select contract first")
   }
-  const els = {}
   // get transaction fields
   Object.keys(ids).map(id => {
     els[id] = document.getElementById(id).value
@@ -151,7 +187,8 @@ window.sendToAppChain = () => {
     log.error('Chain Address Required')
     return new Error("Chain Address Required")
   } else {
-    nervos.setProvider(els.chainAddress)
+    // nervos.setProvider(els.chainAddress)
+    nervos.currentProvider.host = els.chainAddress
   }
   log.table(`Chain Address: ${nervos.currentProvider.host}`)
   if (!els.privateKey) {
@@ -160,14 +197,14 @@ window.sendToAppChain = () => {
   }
 
   const account = nervos.appchain.accounts.privateKeyToAccount(els.privateKey)
+  nervos.appchain.accounts.wallet.add(account)
 
-  const tx = {
+  tx = {
     from: account.address.toLowerCase(),
-    privateKey: els.privateKey,
     nonce: Math.random().toString(),
     quota: +els.quotaLimit,
     chainId: +els.chainId,
-    version: 0,
+    version: +els.appchainVersion,
     validUntilBlock: +els.validUntilBlock,
     value: els.appchainValue,
   }
@@ -293,6 +330,15 @@ const chainIdEl = yo `
       value=${defaultSets.chainId} >
     </div>
   `
+const versionEl = yo `
+  <div class="${css.crow}">
+    <div class="${css.col1_1}">Version</div>
+    <input type="text"
+    class="${css.col2}"
+    id=${ids.appchainVersion}
+    value=${defaultSets.version} >
+  </div>
+`
 const privateKeyEl = yo `
     <div class="${css.crow}">
       <div class="${css.col1_1}">Private Key</div>
@@ -339,10 +385,16 @@ const validUntilBlockEl = yo `
         placeholder="Enter the validUntilBlock"
       >
       <div>
-        <input type="checkbox" id="auto-valid-until-block" checked /> Auto
+        <input type="checkbox" id=${autoBlockNumberElId} checked /> Auto
       </div>
     </div>
   `
+
+const storeAbiEl = yo `
+  <div>
+    <input type="checkbox" id=${storeAbiElId} checked /> Store ABI on chain
+  </div>
+`
 
 const btnStyle = `
   background: hsla(0, 82%, 82%, .5);
@@ -379,10 +431,12 @@ const appchainEl = yo `
       <h5>Nervos AppChain</h5>
       ${chainAddressEl}
       ${chainIdEl}
+      ${versionEl}
       ${privateKeyEl}
       ${quotaLimitEl}
       ${appchainValueEl}
       ${validUntilBlockEl}
+      ${storeAbiEl}
       <div>
       ${loadContractBtn}
       </div>
