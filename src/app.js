@@ -272,7 +272,7 @@ class App {
   }
   runCompiler() {
     const self = this
-    if (self._components.righthandpanel.debugger().isActive) return
+    if (self._components.righthandpanel.debugger().isDebuggerActive()) return
 
     self._components.fileManager.saveCurrentFile()
     self._components.editorpanel.getEditor().clearAnnotations()
