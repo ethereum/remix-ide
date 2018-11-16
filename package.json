@@ -58,6 +58,7 @@
     "yo-yoify": "^3.7.3"
   },
   "dependencies": {
+    "@appchain/base": "^0.20.1",
     "@nervos/chain": "^0.18.0",
     "http-server": "0.9.0",
     "remixd": "git+https://github.com/ethereum/remixd.git"
