@@ -34,5 +34,8 @@ module.exports = [
   'introspection/ERC165',
   'introspection/ERC165Checker',
   'introspection/IERC165',
-  'lifecycle/Pausable'
+  'lifecycle/Pausable',
+  'utils/Address',
+  'utils/Arrays',
+  'utils/ReentrancyGuard'
 ]
