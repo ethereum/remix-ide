@@ -2,18 +2,18 @@
 # yarn lockfile v1
 
 
-"@appchain/base@^0.20.1":
-  version "0.20.1"
-  resolved "https://registry.npmjs.org/@appchain/base/-/base-0.20.1.tgz#302637d87b8226f5c8659dc8520a59336f2156f1"
-  integrity sha512-/gqZ0WCEyAuvHyOGcPjkl3FRu4SKYd5bewvi6ygeBaR7Rtct/BaYv5ibwLHZYFlOJM+VQWdNGURq7796S3596A==
+"@appchain/base@^0.20.2":
+  version "0.20.2"
+  resolved "https://registry.npmjs.org/@appchain/base/-/base-0.20.2.tgz#23f7dc8427d97df078421de9d52f2944fc02b8e4"
+  integrity sha512-Es+R3v/ULJL5pLV45vIdk0w/ymePoNJMsslEkOjR1cDFSbJXnK4jwkLzDJu8tYrypGmmkgLGbeoSV5Q/WeaD2A==
   dependencies:
-    "@appchain/signer" "^2.0.2"
+    "@appchain/signer" "^2.0.3"
     web3 "^1.0.0-beta.34"
 
-"@appchain/signer@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/@appchain/signer/-/signer-2.0.2.tgz#9683a9f60bb2bef24cf7106508fb41817b61c490"
-  integrity sha512-KaWzrB1uLw28vMjG6jf+slZFG3+uELWg0jXPxjTIBErZWmkbvdYBI7eyGk0uObW5h/WAHzpeE0qOqAfjuY2h5w==
+"@appchain/signer@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@appchain/signer/-/signer-2.0.3.tgz#146b5966a4e5e5b297abca508e7ab45ce1e7ad44"
+  integrity sha512-sAd40d0WGkdv2OMspS4ZWD8gnei1QLO5uOz1pnHw95WqGdRq8Y0H+eSN0y2tJuOSlg1GePELdCFwp078Bxi1ig==
   dependencies:
     ec "^0.0.1"
     elliptic "^6.4.0"
@@ -58,24 +58,6 @@
   version "1.0.1"
   resolved "https://registry.npmjs.org/@f/svg-namespace/-/svg-namespace-1.0.1.tgz#f6f1a5ce5d3971a4ade91a11d22d4c459acd375f"
   integrity sha1-9vGlzl05caSt6RoR0i1MRZrNN18=
-
-"@nervos/chain@^0.18.0":
-  version "0.18.0"
-  resolved "https://registry.npmjs.org/@nervos/chain/-/chain-0.18.0.tgz#c0e4cacd894f8bef30b9428e7c644209c4e1ee8d"
-  integrity sha512-+AQv/lAMI2Yx0/tp2xCDnGdAUF4bYR8M0tXUOfFuNxVap/IGQrPCWyuy3T9hNwO5WpABlHpxNn/glwtvHsz36g==
-  dependencies:
-    "@nervos/signer" "^1.0.37"
-    web3 "^1.0.0-beta.34"
-
-"@nervos/signer@^1.0.37":
-  version "1.0.37"
-  resolved "https://registry.npmjs.org/@nervos/signer/-/signer-1.0.37.tgz#41bb9ddada54f54dd6cd33bb6dc3b31c91ac07d5"
-  integrity sha512-fqZcvM/lj99Sq/MiSj0g0Idqed1ZdydQehXKW+sRSGJTyjy2Cr6uFAaqV78q/NFQtdHhtMBanzQurffpBTzsOw==
-  dependencies:
-    ec "^0.0.1"
-    elliptic "^6.4.0"
-    google-protobuf "^3.5.0"
-    web3 "^1.0.0-beta.34"
 
 "@types/node@^10.3.2":
   version "10.11.6"
@@ -7120,6 +7102,11 @@ opener@~1.4.0:
   version "1.4.3"
   resolved "https://registry.npmjs.org/opener/-/opener-1.4.3.tgz#5c6da2c5d7e5831e8ffa3964950f8d6674ac90b8"
   integrity sha1-XG2ixdflgx6P+jlklQ+NZnSskLg=
+
+openzeppelin-solidity@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/openzeppelin-solidity/-/openzeppelin-solidity-2.0.0.tgz#b45dddbdae090f89577598c1a7e7518df61b7ba2"
+  integrity sha512-SolpxQFArtiYnlSNg3dZ9sz0WVlKtPqSOcJkXRllaZp4+Lpfqz3vxF0yoh7g75TszKPyadqoJmU7+GM/vwh9SA==
 
 optimist@0.6.1, optimist@0.6.x, optimist@^0.6.1:
   version "0.6.1"

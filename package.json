@@ -37,6 +37,7 @@
     "npm-link-local": "^1.1.0",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
+    "openzeppelin-solidity": "^2.0.0",
     "remix-analyzer": "latest",
     "remix-debug": "latest",
     "remix-lib": "latest",
@@ -58,8 +59,7 @@
     "yo-yoify": "^3.7.3"
   },
   "dependencies": {
-    "@appchain/base": "^0.20.1",
-    "@nervos/chain": "^0.18.0",
+    "@appchain/base": "^0.20.2",
     "http-server": "0.9.0",
     "remixd": "git+https://github.com/ethereum/remixd.git"
   },
@@ -179,6 +179,7 @@
     "start": "npm-run-all -lpr serve watch onchange remixd",
     "test": "npm run csslint; standard && node test/index.js",
     "test-browser": "npm-run-all -lpr selenium downloadsolc_root make-mock-compiler serve browsertest",
-    "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc"
+    "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc",
+    "updateContractSamples": "node src/contractSamples/load.js"
   }
 }

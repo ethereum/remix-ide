@@ -1,12 +1,12 @@
 const yo = require('yo-yo')
-const Nervos = require('@nervos/chain').default
+const AppChain = require('@appchain/base').default
 const defaultSets = {
   chain: 'https://node.cryptape.com',
   chainId: 1,
   privateKey: '',
   quotaLimit: 53000,
   value: 0,
-  version: 0,
+  version: 1,
 }
 
 let tx = {}
@@ -14,7 +14,7 @@ const els = {}
 
 const storeAbiElId = 'store-abi-on-chain'
 const autoBlockNumberElId = 'auto-valid-until-block'
-const nervos = Nervos(defaultSets.chain)
+const appchain = AppChain(defaultSets.chain)
 const microscope = `://microscope.cryptape.com`
 
 const css = require('./styles/run-tab-styles')
@@ -127,7 +127,7 @@ const handleTxResult = (txRes) => {
   log.table('Transaction Result')
   log.table(txRes)
   if (txRes.hash) {
-    nervos.listeners.listenToTransactionReceipt(txRes.hash).then(receipt => {
+    appchain.listeners.listenToTransactionReceipt(txRes.hash).then(receipt => {
       log.table('Transaction Receipt')
       log.table(receipt)
       if (!receipt.contractAddress) return
@@ -138,11 +138,11 @@ const handleTxResult = (txRes) => {
       if (document.getElementById(storeAbiElId).checked) {
         log.table("Storing ABI")
         // store abi
-        return nervos.appchain.storeAbi(receipt.contractAddress, window.remix.appchain.contracts.selected.props.abi,
+        return appchain.base.storeAbi(receipt.contractAddress, window.remix.appchain.contracts.selected.props.abi,
           Object.assign({}, tx, {
             value: '0',
             data: '',
-            privateKey: nervos.appchain.accounts.wallet[0].privateKey
+            privateKey: appchain.base.accounts.wallet[0].privateKey
           })
         ).then(receipt => {
           if (receipt.errorMessage) {
@@ -187,17 +187,16 @@ window.sendToAppChain = () => {
     log.error('Chain Address Required')
     return new Error("Chain Address Required")
   } else {
-    // nervos.setProvider(els.chainAddress)
-    nervos.currentProvider.host = els.chainAddress
+    appchain.currentProvider.host = els.chainAddress
   }
-  log.table(`Chain Address: ${nervos.currentProvider.host}`)
+  log.table(`Chain Address: ${appchain.currentProvider.host}`)
   if (!els.privateKey) {
     log.error("Private Key Required")
     return new Error("Private Key Required")
   }
 
-  const account = nervos.appchain.accounts.privateKeyToAccount(els.privateKey)
-  nervos.appchain.accounts.wallet.add(account)
+  const account = appchain.base.accounts.privateKeyToAccount(els.privateKey)
+  appchain.base.accounts.wallet.add(account)
 
   tx = {
     from: account.address.toLowerCase(),
@@ -208,13 +207,13 @@ window.sendToAppChain = () => {
     validUntilBlock: +els.validUntilBlock,
     value: els.appchainValue,
   }
-  const myContract = new nervos.appchain.Contract(window.remix.appchain.contracts.selected.props.abi)
+  const myContract = new appchain.base.Contract(window.remix.appchain.contracts.selected.props.abi)
   const {
     selected
   } = window.remix.appchain.contracts
 
   if (document.getElementById("auto-valid-until-block").checked) {
-    nervos.appchain.getBlockNumber().then(blockNumber => {
+    appchain.base.getBlockNumber().then(blockNumber => {
       tx.validUntilBlock = +blockNumber + 88
       document.getElementById(ids.validUntilBlock).value = tx.validUntilBlock
       log.table('Block Height')
