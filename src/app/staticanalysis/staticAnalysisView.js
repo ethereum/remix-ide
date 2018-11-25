@@ -61,8 +61,8 @@ staticAnalysisView.prototype.render = function () {
           >
           Auto run
         </label>
-        <label class="${css.label}" for="checkAllTests">
-          <input id="checkAllTests"
+        <label class="${css.label}" for="checkAllEntries">
+          <input id="checkAllEntries"
             type="checkbox"
             onclick="${function (event) { self.checkAll(event) }}"
             style="vertical-align:bottom"
@@ -136,7 +136,7 @@ staticAnalysisView.prototype.run = function () {
 
 staticAnalysisView.prototype.checkModule = function (event) {
   let selected = document.querySelectorAll('[name="staticanalysismodule"]:checked')
-  let checkAll = document.querySelector('[id="checkAllTests"]')
+  let checkAll = document.querySelector('[id="checkAllEntries"]')
   if (event.target.checked) {
     checkAll.checked = true
   } else if (!selected.length) {
