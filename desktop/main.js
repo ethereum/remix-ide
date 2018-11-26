@@ -1,3 +1,5 @@
+const latestVersion = require('latest-version')
+const semver = require('semver')
 const electron = require('electron')
 const Folder = require('./folder')
 const ipc = require('electron').ipcMain
@@ -12,8 +14,9 @@ const BrowserWindow = electron.BrowserWindow
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+async function createWindow () {
+  warnLatestVersion().catch((e) => {})
 
-function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     title: 'Remix IDE',
@@ -83,3 +86,14 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+async function warnLatestVersion () {
+  let latest = await latestVersion('remix-desktop')
+  var pjson = require('./package.json')
+  if (semver.eq(latest, pjson.version)) {
+    console.log('\x1b[32m%s\x1b[0m', `[INFO] you are using the latest update ${latest}`)
+  } else if (semver.gt(latest, pjson.version)) {
+    console.log('\x1b[33m%s\x1b[0m', `[WARN] latest update is ${latest}, you are using ${pjson.version} please update:`)
+    console.log('\x1b[33m%s\x1b[0m', `[WARN] npm install remixd -g`)
+  }
+}

@@ -14,7 +14,7 @@ module.exports = class Muon {
     this.filesContent = {}
     this.files = {}
     this.callbacksMap = {}
-    if (chrome && chrome.ipcRenderer) {
+    if (typeof chrome !== 'undefined' && chrome.ipcRenderer) {
       chrome.ipcRenderer.on(this.key, (event, args) => {
         this.callbacksMap[args.id](args.error, args.result)
         delete this.callbacksMap[args.id]

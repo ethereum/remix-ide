@@ -145,7 +145,7 @@ class App {
       if (message.error) toolTip(message.error)
     })
 
-    if (chrome && chrome.ipcRenderer) {
+    if (typeof chrome !== 'undefined' && chrome.ipcRenderer) {
       self._components.filesProviders['home'] = new Muon('home')
       registry.put({api: self._components.filesProviders['home'], name: 'fileproviders/home'})
     }

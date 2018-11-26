@@ -270,7 +270,7 @@ class CmdInterpreterAPI {
     return ''
   }
   attachFolder (name, path, cb) {
-    if (chrome && chrome.ipcRenderer) {
+    if (typeof chrome !== 'undefined' && chrome.ipcRenderer) {
       const self = this
       chrome.ipcRenderer.send('attachFolder', { path })
       let provider = self._deps.fileManager.createMuonProvider(name, path)
@@ -282,7 +282,7 @@ class CmdInterpreterAPI {
     }
   }
   deattachFolder (name, path, cb) {
-    if (chrome && chrome.ipcRenderer) {
+    if (typeof chrome !== 'undefined' && chrome.ipcRenderer) {
       const self = this
       chrome.ipcRenderer.send('deattachFolder', { path })
       self._deps.filePanel.unRegisterExplorer(name)

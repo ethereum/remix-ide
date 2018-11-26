@@ -33,7 +33,7 @@ class FileManager {
       gistExplorer: self._components.registry.get('fileproviders/gist').api,
       filesProviders: self._components.registry.get('fileproviders').api
     }
-    if (chrome && chrome.ipcRenderer) {
+    if (typeof chrome !== 'undefined' && chrome.ipcRenderer) {
       self._deps.homeExplorer = self._components.registry.get('fileproviders/home').api
     }
 

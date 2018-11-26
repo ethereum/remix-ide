@@ -60,7 +60,7 @@ function filepanel (localRegistry) {
   var configExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['config'])
   var httpExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['http'])
   var httpsExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['https'])
-  if (chrome && chrome.ipcRenderer && self._deps.fileProviders['home']) {
+  if (typeof chrome !== 'undefined' && chrome.ipcRenderer && self._deps.fileProviders['home']) {
     var homeExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['home'])
   }
 
