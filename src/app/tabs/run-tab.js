@@ -274,7 +274,9 @@ function makeRecorder (registry, runTabEvent, self) {
             var noInstancesText = self._view.noInstancesText
             if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
             recorder.run(txArray, accounts, options, abis, linkReferences, self._deps.udapp, (abi, address, contractName) => {
-              self._view.instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, contractName))
+              var balance = self._deps.udapp.getBalanceInEther(address, (error2, balance) => {
+                self._view.instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, balance, contractName))
+              })
             })
           }
         } else {
@@ -423,7 +425,10 @@ function contractDropdown (events, self) {
         var noInstancesText = self._view.noInstancesText
         if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
         var address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
-        instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, selectContractNames.value))
+        self._deps.udapp.getBalanceInEther(address, (balErr, balance) => {
+          balance = balance ? balance : 0
+          instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, balance, selectContractNames.value))
+        })
       } else {
         self._deps.logCallback(`creation of ${selectedContract.name} errored: ${error}`)
       }
@@ -493,20 +498,24 @@ function contractDropdown (events, self) {
     if (/[a-f]/.test(address) && /[A-F]/.test(address) && !ethJSUtil.isValidChecksumAddress(address)) {
       return modalDialogCustom.alert('Invalid checksum address.')
     }
-    if (/.(.abi)$/.exec(self._deps.config.get('currentFile'))) {
-      modalDialogCustom.confirm(null, 'Do you really want to interact with ' + address + ' using the current ABI definition ?', () => {
-        var abi
-        try {
-          abi = JSON.parse(self._deps.editor.currentContent())
-        } catch (e) {
-          return modalDialogCustom.alert('Failed to parse the current file as JSON ABI.')
-        }
-        instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, address))
-      })
-    } else {
-      var selectedContract = getSelectedContract()
-      instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, selectContractNames.value))
-    }
+
+    self._deps.udapp.getBalanceInEther(address, (ballErr, balance) => {
+      balance = balance ? balance : 0
+      if (/.(.abi)$/.exec(self._deps.config.get('currentFile'))) {
+        modalDialogCustom.confirm(null, 'Do you really want to interact with ' + address + ' using the current ABI definition ?', () => {
+          var abi
+          try {
+            abi = JSON.parse(self._deps.editor.currentContent())
+          } catch (e) {
+            return modalDialogCustom.alert('Failed to parse the current file as JSON ABI.')
+          }
+          instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, balance, address))
+        })
+      } else {
+        var selectedContract = getSelectedContract()
+        instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, balance, selectContractNames.value))
+      }
+    })
   }
 
   // GET NAMES OF ALL THE CONTRACTS
