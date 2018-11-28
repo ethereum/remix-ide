@@ -28,13 +28,17 @@ UniversalDAppUI.prototype.renderInstance = function (contract, address, balance,
 UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address, balance, contractName) {
   var self = this
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
-  var instance = yo`<div class="instance ${css.instance} ${css.hidesub}" id="instance${address}"></div>`
   var context = self.udapp.context()
 
   var shortAddress = helper.shortenAddress(address)
+  var instance = yo`
+    <div class="instance ${css.instance} ${css.hidesub}" id="instance${address}"
+      address="${address}" shortAddress="${shortAddress}" context="${context}"
+      contractName="${contractName}">
+    </div>`
   var title = yo`
-    <div class="${css.title}" onclick=${toggleClass}>
-    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (${balance} eth) </div>
+    <div class="instanceTitle ${css.title}" onclick=${toggleClass}>
+    <div class="instanceTitleText ${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (${balance} eth) </div>
     ${copyToClipboard(() => address)}
   </div>`
 

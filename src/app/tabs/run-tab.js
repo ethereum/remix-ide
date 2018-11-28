@@ -193,6 +193,23 @@ function updateAccountBalances (container, self) {
   })
 }
 
+function updateDeployedContractBalances (container, self) {
+  var contracts = $(container)
+  contracts.each(function (index, contract) {
+    var attr = contract.attributes
+    var shortAddress = attr.shortAddress.nodeValue
+    var address = attr.address.nodeValue
+    var context = attr.context.nodeValue
+    var contractName = attr.contractName.nodeValue
+    self._deps.udapp.getBalanceInEther(address, function (balErr, balance) {
+      balance = balance || 0
+      contract.querySelector('.instanceTitleText').innerHTML = `
+        ${contractName} at ${shortAddress} (${context}) (${balance} eth)
+      `
+    })
+  })
+}
+
 /* ------------------------------------------------
            RECORDER
 ------------------------------------------------ */
@@ -274,7 +291,7 @@ function makeRecorder (registry, runTabEvent, self) {
             var noInstancesText = self._view.noInstancesText
             if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
             recorder.run(txArray, accounts, options, abis, linkReferences, self._deps.udapp, (abi, address, contractName) => {
-              var balance = self._deps.udapp.getBalanceInEther(address, (error2, balance) => {
+              self._deps.udapp.getBalanceInEther(address, (ballErr, balance) => {
                 self._view.instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, balance, contractName))
               })
             })
@@ -426,7 +443,7 @@ function contractDropdown (events, self) {
         if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
         var address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
         self._deps.udapp.getBalanceInEther(address, (balErr, balance) => {
-          balance = balance ? balance : 0
+          balance = balance || 0
           instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, balance, selectContractNames.value))
         })
       } else {
@@ -500,7 +517,6 @@ function contractDropdown (events, self) {
     }
 
     self._deps.udapp.getBalanceInEther(address, (ballErr, balance) => {
-      balance = balance ? balance : 0
       if (/.(.abi)$/.exec(self._deps.config.get('currentFile'))) {
         modalDialogCustom.confirm(null, 'Do you really want to interact with ' + address + ' using the current ABI definition ?', () => {
           var abi
@@ -509,10 +525,12 @@ function contractDropdown (events, self) {
           } catch (e) {
             return modalDialogCustom.alert('Failed to parse the current file as JSON ABI.')
           }
+          balance = balance || 0
           instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, balance, address))
         })
       } else {
         var selectedContract = getSelectedContract()
+        balance = balance || 0
         instanceContainer.appendChild(self._deps.udappUI.renderInstance(selectedContract.contract.object, address, balance, selectContractNames.value))
       }
     })
@@ -629,6 +647,7 @@ function settings (container, self) {
     if (error) return
     if (!lookupOnly) el.querySelector('#value').value = '0'
     updateAccountBalances(container, self)
+    updateDeployedContractBalances('.instance', self)
   })
 
   // DROPDOWN
@@ -696,6 +715,10 @@ function settings (container, self) {
 
   setInterval(() => {
     updateAccountBalances(container, self)
+  }, 10000)
+
+  setInterval(() => {
+    updateDeployedContractBalances('.instance', self)
   }, 10000)
 
   function newAccount () {
