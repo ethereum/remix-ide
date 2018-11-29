@@ -1,20 +1,40 @@
 #!/usr/bin/env node
+var latestVersion = require('latest-version')
+var semver = require('semver')
 var httpServer = require('http-server')
 var remixd = require('remixd')
 
-var server = httpServer.createServer({
-    root: __dirname + '/../'
-})
+start()
 
-var folder = process.argv.length > 2 ? process.argv[2] : process.cwd()
+async function start () {
+  await warnLatestVersion()
 
-server.listen(8080, '127.0.0.1', function () {})
-var router = new remixd.Router(65520, remixd.services.sharedFolder, (webSocket) => {
-    remixd.services.sharedFolder.setWebSocket(webSocket)
-    remixd.services.sharedFolder.setupNotifications(folder)
-    remixd.services.sharedFolder.sharedFolder(folder)
+  var server = httpServer.createServer({
+      root: __dirname + '/../'
   })
 
-router.start()
+  var folder = process.argv.length > 2 ? process.argv[2] : process.cwd()
 
-console.log('\x1b[33m%s\x1b[0m', 'Starting Remix IDE at http://localhost:8080 and sharing ' + folder)
+  server.listen(8080, '127.0.0.1', function () {})
+  var router = new remixd.Router(65520, remixd.services.sharedFolder, (webSocket) => {
+      remixd.services.sharedFolder.setWebSocket(webSocket)
+      remixd.services.sharedFolder.setupNotifications(folder)
+      remixd.services.sharedFolder.sharedFolder(folder)
+    })
+
+  router.start()
+
+  console.log('\x1b[33m%s\x1b[0m', 'Starting Remix IDE at http://localhost:8080 and sharing ' + folder)
+}
+
+async function warnLatestVersion () {
+  let latest = await latestVersion('remix-ide')
+  var pjson = require('../package.json');
+  if (semver.eq(latest, pjson.version)) {
+    console.log('\x1b[32m%s\x1b[0m', `[INFO] you are using the latest update ${latest}`)
+  } else if (semver.gt(latest, pjson.version)) { 
+    console.log('\x1b[33m%s\x1b[0m', `[WARN] latest update is ${latest}, you are using ${pjson.version} please update:`)
+    console.log('\x1b[33m%s\x1b[0m', `[WARN] npm install remixd -g`)
+  }
+}
+
