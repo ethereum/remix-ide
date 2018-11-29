@@ -203,9 +203,7 @@ function updateDeployedContractBalances (container, self) {
     var contractName = attr.contractName.nodeValue
     self._deps.udapp.getBalanceInEther(address, function (balErr, balance) {
       balance = balance || 0
-      contract.querySelector('.instanceTitleText').innerHTML = `
-        ${contractName} at ${shortAddress} (${context}) (${balance} eth)
-      `
+      contract.querySelector('div[class^="titleText"]').innerHTML = `${contractName} at ${shortAddress} (${context}) (${balance} eth)`
     })
   })
 }
@@ -292,6 +290,7 @@ function makeRecorder (registry, runTabEvent, self) {
             if (noInstancesText.parentNode) { noInstancesText.parentNode.removeChild(noInstancesText) }
             recorder.run(txArray, accounts, options, abis, linkReferences, self._deps.udapp, (abi, address, contractName) => {
               self._deps.udapp.getBalanceInEther(address, (ballErr, balance) => {
+                balance = balance || 0
                 self._view.instanceContainer.appendChild(self._deps.udappUI.renderInstanceFromABI(abi, address, balance, contractName))
               })
             })
@@ -718,7 +717,7 @@ function settings (container, self) {
   }, 10000)
 
   setInterval(() => {
-    updateDeployedContractBalances('.instance', self)
+    updateDeployedContractBalances('#runTabView .instance', self)
   }, 10000)
 
   function newAccount () {

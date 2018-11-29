@@ -37,8 +37,8 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
       contractName="${contractName}">
     </div>`
   var title = yo`
-    <div class="instanceTitle ${css.title}" onclick=${toggleClass}>
-    <div class="instanceTitleText ${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (${balance} eth) </div>
+    <div class="${css.title}" onclick=${toggleClass}>
+    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (${balance} eth) </div>
     ${copyToClipboard(() => address)}
   </div>`
 
