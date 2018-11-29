@@ -60,7 +60,9 @@
   },
   "dependencies": {
     "http-server": "0.9.0",
-    "remixd": "git+https://github.com/ethereum/remixd.git"
+    "latest-version": "^4.0.0",
+    "remixd": "git+https://github.com/ethereum/remixd.git",
+    "semver": "^5.6.0"
   },
   "repository": {
     "type": "git",
