@@ -12,20 +12,20 @@ function UniversalDAppUI (udapp, opts = {}) {
   this.udapp = udapp
 }
 
-UniversalDAppUI.prototype.renderInstance = function (contract, address, balance, contractName) {
+UniversalDAppUI.prototype.renderInstance = function (contract, address, contractName) {
   var noInstances = document.querySelector('[class^="noInstancesText"]')
   if (noInstances) {
     noInstances.parentNode.removeChild(noInstances)
   }
   var abi = this.udapp.getABI(contract)
-  return this.renderInstanceFromABI(abi, address, balance, contractName)
+  return this.renderInstanceFromABI(abi, address, contractName)
 }
 
 // TODO this function was named before "appendChild".
 // this will render an instance: contract name, contract address, and all the public functions
 // basically this has to be called for the "atAddress" (line 393) and when a contract creation succeed
 // this returns a DOM element
-UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address, balance, contractName) {
+UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address, contractName) {
   var self = this
   address = (address.slice(0, 2) === '0x' ? '' : '0x') + address.toString('hex')
   var context = self.udapp.context()
@@ -38,7 +38,7 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
     </div>`
   var title = yo`
     <div class="${css.title}" onclick=${toggleClass}>
-    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (${balance} eth) </div>
+    <div class="${css.titleText}"> ${contractName} at ${shortAddress} (${context}) (0 eth) </div>
     ${copyToClipboard(() => address)}
   </div>`
 
@@ -57,6 +57,15 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
   }
 
   instance.appendChild(title)
+  self.udapp.getBalanceInEther(address, (ballErr, balance) => {
+    $(instance.querySelector('div[class^="titleText"]')).innerHTML = `${contractName} at ${shortAddress} (${context}) (${balance} eth)`
+  })
+
+  setInterval(function () {
+    self.udapp.getBalanceInEther(address, (ballErr, balance) => {
+      $(instance.querySelector('div[class^="titleText"]')).innerHTML = `${contractName} at ${shortAddress} (${context}) (${balance} eth)`
+    })
+  }, 10000)
 
   // Add the fallback function
   var fallback = self.udapp.getFallbackInterface(contractABI)
@@ -65,8 +74,7 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
       funABI: fallback,
       address: address,
       contractAbi: contractABI,
-      contractName: contractName,
-      balance: balance
+      contractName: contractName
     }))
   }
 
@@ -79,8 +87,7 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
       funABI: funABI,
       address: address,
       contractAbi: contractABI,
-      contractName: contractName,
-      balance: balance
+      contractName: contractName
     }))
   })
 
