@@ -1,144 +1,65 @@
-pragma solidity ^0.4.0;
-
-/// @title Voting with delegation.
+pragma solidity >=0.4.22 <0.6.0;
 contract Ballot {
-    // This declares a new complex type which will
-    // be used for variables later.
-    // It will represent a single voter.
+
     struct Voter {
-        uint weight; // weight is accumulated by delegation
-        bool voted;  // if true, that person already voted
-        address delegate; // person delegated to
-        uint vote;   // index of the voted proposal
+        uint weight;
+        bool voted;
+        uint8 vote;
+        address delegate;
+    }
+    struct Proposal {
+        uint voteCount;
     }
 
-    // This is a type for a single proposal.
-    struct Proposal
-    {
-        bytes32 name;   // short name (up to 32 bytes)
-        uint voteCount; // number of accumulated votes
-    }
+    address chairperson;
+    mapping(address => Voter) voters;
+    Proposal[] proposals;
 
-    address public chairperson;
-
-    // This declares a state variable that
-    // stores a \`Voter\` struct for each possible address.
-    mapping(address => Voter) public voters;
-
-    // A dynamically-sized array of \`Proposal\` structs.
-    Proposal[] public proposals;
-
-    /// Create a new ballot to choose one of \`proposalNames\`.
-    function Ballot(bytes32[] proposalNames) {
+    /// Create a new ballot with $(_numProposals) different proposals.
+    constructor(uint8 _numProposals) public {
         chairperson = msg.sender;
         voters[chairperson].weight = 1;
-
-        // For each of the provided proposal names,
-        // create a new proposal object and add it
-        // to the end of the array.
-        for (uint i = 0; i < proposalNames.length; i++) {
-            // \`Proposal({...})\` creates a temporary
-            // Proposal object and \`proposals.push(...)\`
-            // appends it to the end of \`proposals\`.
-            proposals.push(Proposal({
-                name: proposalNames[i],
-                voteCount: 0
-            }));
-        }
+        proposals.length = _numProposals;
     }
 
-    // Give \`voter\` the right to vote on this ballot.
-    // May only be called by \`chairperson\`.
-    function giveRightToVote(address voter) {
-        if (msg.sender != chairperson || voters[voter].voted) {
-            // \`throw\` terminates and reverts all changes to
-            // the state and to Ether balances. It is often
-            // a good idea to use this if functions are
-            // called incorrectly. But watch out, this
-            // will also consume all provided gas.
-            throw;
-        }
-        voters[voter].weight = 1;
+    /// Give $(toVoter) the right to vote on this ballot.
+    /// May only be called by $(chairperson).
+    function giveRightToVote(address toVoter) public {
+        if (msg.sender != chairperson || voters[toVoter].voted) return;
+        voters[toVoter].weight = 1;
     }
 
-    /// Delegate your vote to the voter \`to\`.
-    function delegate(address to) {
-        // assigns reference
-        Voter sender = voters[msg.sender];
-        if (sender.voted)
-            throw;
-
-        // Forward the delegation as long as
-        // \`to\` also delegated.
-        // In general, such loops are very dangerous,
-        // because if they run too long, they might
-        // need more gas than is available in a block.
-        // In this case, the delegation will not be executed,
-        // but in other situations, such loops might
-        // cause a contract to get "stuck" completely.
-        while (
-            voters[to].delegate != address(0) &&
-            voters[to].delegate != msg.sender
-        ) {
+    /// Delegate your vote to the voter $(to).
+    function delegate(address to) public {
+        Voter storage sender = voters[msg.sender]; // assigns reference
+        if (sender.voted) return;
+        while (voters[to].delegate != address(0) && voters[to].delegate != msg.sender)
             to = voters[to].delegate;
-        }
-
-        // We found a loop in the delegation, not allowed.
-        if (to == msg.sender) {
-            throw;
-        }
-
-        // Since \`sender\` is a reference, this
-        // modifies \`voters[msg.sender].voted\`
+        if (to == msg.sender) return;
         sender.voted = true;
         sender.delegate = to;
-        Voter delegate = voters[to];
-        if (delegate.voted) {
-            // If the delegate already voted,
-            // directly add to the number of votes
-            proposals[delegate.vote].voteCount += sender.weight;
-        } else {
-            // If the delegate did not vote yet,
-            // add to her weight.
-            delegate.weight += sender.weight;
-        }
+        Voter storage delegateTo = voters[to];
+        if (delegateTo.voted)
+            proposals[delegateTo.vote].voteCount += sender.weight;
+        else
+            delegateTo.weight += sender.weight;
     }
 
-    /// Give your vote (including votes delegated to you)
-    /// to proposal \`proposals[proposal].name\`.
-    function vote(uint proposal) {
-        Voter sender = voters[msg.sender];
-        if (sender.voted)
-            throw;
+    /// Give a single vote to proposal $(toProposal).
+    function vote(uint8 toProposal) public {
+        Voter storage sender = voters[msg.sender];
+        if (sender.voted || toProposal >= proposals.length) return;
         sender.voted = true;
-        sender.vote = proposal;
-
-        // If \`proposal\` is out of the range of the array,
-        // this will throw automatically and revert all
-        // changes.
-        proposals[proposal].voteCount += sender.weight;
+        sender.vote = toProposal;
+        proposals[toProposal].voteCount += sender.weight;
     }
 
-    /// @dev Computes the winning proposal taking all
-    /// previous votes into account.
-    function winningProposal() constant
-            returns (uint winningProposal)
-    {
-        uint winningVoteCount = 0;
-        for (uint p = 0; p < proposals.length; p++) {
-            if (proposals[p].voteCount > winningVoteCount) {
-                winningVoteCount = proposals[p].voteCount;
-                winningProposal = p;
+    function winningProposal() public view returns (uint8 _winningProposal) {
+        uint256 winningVoteCount = 0;
+        for (uint8 prop = 0; prop < proposals.length; prop++)
+            if (proposals[prop].voteCount > winningVoteCount) {
+                winningVoteCount = proposals[prop].voteCount;
+                _winningProposal = prop;
             }
-        }
-    }
-    
-    // Calls winningProposal() function to get the index
-    // of the winner contained in the proposals array and then
-    // returns the name of the winner
-    function winnerName() constant
-            returns (bytes32 winnerName)
-    {
-        winnerName = proposals[winningProposal()].name;
     }
 }
