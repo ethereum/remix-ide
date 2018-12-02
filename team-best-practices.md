@@ -1,6 +1,8 @@
 
 # Team best practices
 
+test
+
 This document aims to address contibutors best practices of the following repositories:
  - remix-ide https://github.com/ethereum/remix-ide
  - remix https://github.com/ethereum/remix
