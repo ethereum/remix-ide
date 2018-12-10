@@ -156,10 +156,9 @@ module.exports = class TestTab {
       const selectionsCount = document.querySelectorAll('.singleTest:checked').length
       // checks/unchecks all
       for (let i = 0; i < checkBoxes.length; i++) {
-        checkBoxes[i].checked = !selectionsCount
-        toggleCheckbox(!selectionsCount, checkboxesLabels[i].innerText)
+        checkBoxes[i].checked = event.target.checked
+        toggleCheckbox(event.target.checked, checkboxesLabels[i].innerText)
       }
-      event.target.checked = !selectionsCount
     }
 
     var runTests = function () {
