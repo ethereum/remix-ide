@@ -1,5 +1,6 @@
 'use strict'
-var executionContext = require('../../execution-context')
+var remixLib = require('remix-lib')
+var EventManager = remixLib.EventManager
 const PluginAPI = require('./pluginAPI')
 /**
  * Register and Manage plugin:
@@ -80,6 +81,7 @@ const PluginAPI = require('./pluginAPI')
 module.exports = class PluginManager {
   constructor (app, compiler, txlistener, fileProviders, fileManager, udapp) {
     const self = this
+    self.event = new EventManager()
     var pluginAPI = new PluginAPI(
       this,
       fileProviders,
@@ -87,9 +89,18 @@ module.exports = class PluginManager {
       compiler,
       udapp
     )
+    self._components = { pluginAPI }
     self.plugins = {}
     self.origins = {}
     self.inFocus
+    fileManager.event.register('currentFileChanged', (file, provider) => {
+      self.broadcast(JSON.stringify({
+        action: 'notification',
+        key: 'editor',
+        type: 'currentFileChanged',
+        value: [ file ]
+      }))
+    })
     compiler.event.register('compilationFinished', (success, data, source) => {
       self.broadcast(JSON.stringify({
         action: 'notification',
@@ -100,7 +111,6 @@ module.exports = class PluginManager {
     })
 
     txlistener.event.register('newTransaction', (tx) => {
-      if (executionContext.getProvider() !== 'vm') return
       self.broadcast(JSON.stringify({
         action: 'notification',
         key: 'txlistener',
@@ -161,11 +171,16 @@ module.exports = class PluginManager {
       data.value.push((error, result) => {
         response(data.key, data.type, data.id, error, result)
       })
-      pluginAPI[data.key][data.type].apply({}, data.value)
+      if (pluginAPI[data.key] && pluginAPI[data.key][data.type]) {
+        pluginAPI[data.key][data.type].apply({}, data.value)
+      } else {
+        response(data.key, data.type, data.id, `Endpoint ${data.key}/${data.type} not present`, null)
+      }
     }, false)
   }
   unregister (desc) {
     const self = this
+    self._components.pluginAPI.editor.discardHighlight(desc.title, () => {})
     delete self.plugins[desc.title]
     delete self.origins[desc.url]
   }
@@ -183,6 +198,11 @@ module.exports = class PluginManager {
     if (this.origins[origin]) {
       this.post(this.origins[origin], value)
     }
+  }
+  receivedDataFrom (methodName, mod, argumentsArray) {
+    // TODO check whether 'mod' as right to do that
+    console.log(argumentsArray)
+    this.event.trigger(methodName, argumentsArray)
   }
   post (name, value) {
     const self = this

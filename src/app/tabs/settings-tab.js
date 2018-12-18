@@ -9,7 +9,7 @@ var copyToClipboard = require('../ui/copy-to-clipboard')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 var Storage = remixLib.Storage
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 
 module.exports = class SettingsTab {
   constructor (localRegistry) {
@@ -75,7 +75,7 @@ module.exports = class SettingsTab {
           <div class=${css.title}>General settings</div>
           <div class="${css.crow}">
             <div>${self._view.generateContractMetadata}</div>
-            <span class="${css.checkboxText}">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploy libraries automatically.</span>
+            <span class="${css.checkboxText}">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploys libraries automatically.</span>
           </div>
           <div class="${css.crow}">
             <div>${self._view.optionVM}</div>
@@ -118,7 +118,7 @@ module.exports = class SettingsTab {
     self._view.config.plugins = yo`<div></div>`
     self._view.config.plugin = yo`
       <div class="${css.info}">
-        <div class=${css.title}>Plugin</div>
+        <div class=${css.title}>Plugin <i title="This section is still under heavy development, please use it carefully" class="${css.icon} fa fa-exclamation-triangle" aria-hidden="true"></i> </div>
         <div class="${css.crowNoFlex}">
           <div>Load plugin from JSON description: </div>
           ${self._view.pluginInput}
@@ -136,14 +136,15 @@ module.exports = class SettingsTab {
 
     function loadPlugins (plugins, opt) {
       for (var k in plugins) {
-        var plugin = plugins[k]
-        if (!self._view.plugins[plugin.title]) self._view.plugins[plugin.title] = {}
-        self._view.plugins[plugin.title].json = plugin
-        self._view.plugins[plugin.title].el = yo`<div title=${plugin.title} class="${css.pluginLoad}">
-        <div class="${css.aPlugin}" onclick=${() => { onLoadPlugin(plugin.title) }}>${plugin.title}</div>
-        ${opt.removable ? yo`<span class="${css.removePlugin}" onclick=${() => { onRemovePlugin(plugin.title) }}><i class="fa fa-close"></i></span>` : yo`<span></span>`}
-        </div>`
-        self._view.config.plugins.appendChild(self._view.plugins[plugin.title].el)
+        (function (plugin) {
+          if (!self._view.plugins[plugin.title]) self._view.plugins[plugin.title] = {}
+          self._view.plugins[plugin.title].json = plugin
+          self._view.plugins[plugin.title].el = yo`<div title=${plugin.title} class="${css.pluginLoad}">
+          <div class="${css.aPlugin}" onclick=${() => { onLoadPlugin(plugin.title) }}>${plugin.title}</div>
+          ${opt.removable ? yo`<span class="${css.removePlugin}" onclick=${() => { onRemovePlugin(plugin.title) }}><i class="fa fa-close"></i></span>` : yo`<span></span>`}
+          </div>`
+          self._view.config.plugins.appendChild(self._view.plugins[plugin.title].el)
+        })(plugins[k])
       }
     }
 

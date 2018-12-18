@@ -2,7 +2,7 @@
 var yo = require('yo-yo')
 var async = require('async')
 var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('../lib/events')
 
 var executionContext = require('../execution-context')
 var toolTip = require('../app/ui/tooltip')
@@ -10,7 +10,7 @@ var globalRegistry = require('../global/registry')
 var SourceHighlighter = require('../app/editor/sourceHighlighter')
 var RemixDebug = require('remix-debug').EthDebugger
 var TreeView = require('../app/ui/TreeView') // TODO setup a direct reference to the UI components
-var solidityTypeFormatter = require('../app/debugger/remix-debugger/src/ui/SolidityTypeFormatter')
+var solidityTypeFormatter = require('../app/debugger/debuggerUI/vmDebugger/utils/SolidityTypeFormatter')
 
 class CmdInterpreterAPI {
   constructor (terminal, localRegistry) {
@@ -28,6 +28,8 @@ class CmdInterpreterAPI {
       offsetToLineColumnConverter: self._components.registry.get('offsettolinecolumnconverter').api
     }
     self.commandHelp = {
+      'remix.getFile(path)': 'Returns the content of the file located at the given path',
+      'remix.setFile(path, content)': 'set the content of the file located at the given path',
       'remix.debug(hash)': 'Start debugging a transaction.',
       'remix.loadgist(id)': 'Load a gist in the file explorer.',
       'remix.loadurl(url)': 'Load the given url in the file explorer. The url can be of type github, swarm, ipfs or raw http',
@@ -45,7 +47,7 @@ class CmdInterpreterAPI {
       self._components.sourceHighlighter.currentSourceLocation(null)
       return
     }
-    var lineColumnPos = self._deps.offsetToLineColumnConverter.offsetToLineColumn(rawLocation, rawLocation.file, self._deps.compiler.lastCompilationResult.source.sources)
+    var lineColumnPos = self._deps.offsetToLineColumnConverter.offsetToLineColumn(rawLocation, rawLocation.file, self._deps.compiler.lastCompilationResult.source.sources, self._deps.compiler.lastCompilationResult.data.sources)
     self._components.sourceHighlighter.currentSourceLocation(lineColumnPos, rawLocation)
   }
   debug (hash, cb) {
@@ -106,7 +108,7 @@ class CmdInterpreterAPI {
       self.d.goTo = (row) => {
         if (self._deps.editor.current()) {
           var breakPoint = new remixLib.code.BreakpointManager(self.d, (sourceLocation) => {
-            return self._deps.offsetToLineColumnConverter.offsetToLineColumn(sourceLocation, sourceLocation.file, self._deps.compiler.lastCompilationResult.source.sources)
+            return self._deps.offsetToLineColumnConverter.offsetToLineColumn(sourceLocation, sourceLocation.file, self._deps.compiler.lastCompilationResult.source.sources, self._deps.compiler.lastCompilationResult.data.sources)
           })
           breakPoint.event.register('breakpointHit', (sourceLocation, currentStep) => {
             self.log(null, 'step index ' + currentStep)
@@ -162,6 +164,27 @@ class CmdInterpreterAPI {
   }
   exeCurrent (cb) {
     return this.execute(undefined, cb)
+  }
+  getFile (path, cb) {
+    var provider = this._deps.fileManager.fileProviderOf(path)
+    if (provider) {
+      provider.get(path, cb)
+    } else {
+      cb('file not found')
+    }
+  }
+  setFile (path, content, cb) {
+    cb = cb || function () {}
+    var provider = this._deps.fileManager.fileProviderOf(path)
+    if (provider) {
+      provider.set(path, content, (error) => {
+        if (error) return cb(error)
+        this._deps.fileManager.syncEditor(path)
+        cb()
+      })
+    } else {
+      cb('file not found')
+    }
   }
   execute (file, cb) {
     const self = this

@@ -8,27 +8,29 @@ var css = csjs`
   .containerDraggableModal {
     position: absolute;
     z-index: 1000;
-    background-color: ${styles.appProperties.quaternary_BackgroundColor};
+    background-color: ${styles.appProperties.light_BackgroundColor};
     text-align: center;
     width: 500px;
     height: 500px;
-    border: 2px solid ${styles.appProperties.solidBorderBox_BorderColor};
+    border: 1px solid ${styles.appProperties.solidBorderBox_BorderColor};
+    overflow-y: hidden;
   }
 
   .headerDraggableModal {
     cursor: move;
     z-index: 10;
     color: ${styles.appProperties.mainText_Color};
-    background-color: ${styles.appProperties.quaternary_BackgroundColor};
-    border-bottom: 2px solid ${styles.appProperties.solidBorderBox_BorderColor};
+    background-color: ${styles.appProperties.primary_BackgroundColor};
+    border-bottom: 1px solid ${styles.appProperties.solidBorderBox_BorderColor};
     text-overflow: ellipsis;
     overflow-x: hidden;
   }
   
   .modalActions {
     float: right;
+    color: ${styles.appProperties.solidBorderBox_BorderColor};
   }
-  
+
   .modalAction {
     padding-right: 1px;
     padding-left: 1px;
@@ -41,18 +43,19 @@ module.exports =
   class DraggableContent {
     constructor (closeCb) {
       this.closeCb = closeCb
+      this.isMaximised = false
     }
 
-    render (title, content) {
+    render (title, url, content) {
       this.content = content
       var el = yo`
     <div class=${css.containerDraggableModal}>
       <div>
-          <div class="${css.headerDraggableModal} title" title=${title}><span>${title}</span>
+          <div class="${css.headerDraggableModal} title" title=${title}><span title="${title}" >${title}</span><span title="${url}" > - ${url}</span>
             <div class=${css.modalActions}>
               <i onclick=${() => { this.minimize() }} class="fa fa-window-minimize ${css.modalAction}"></i>
               <i onclick=${() => { this.maximise() }} class="fa fa-window-maximize ${css.modalAction}"></i>
-              <i onclick=${() => { this.close() }} class="fa fa-window-close ${css.modalAction}"></i>
+              <i onclick=${() => { this.close() }} class="fa fa-window-close-o ${css.modalAction}"></i>
             </div>
           </div>
         </div>
@@ -68,6 +71,7 @@ module.exports =
       this.el.querySelector('.title span').innerHTML = title
     }
     minimize () {
+      this.isMaximised = false
       this.content.style.display = 'none'
       this.el.style.height = 'inherit'
       this.el.style.width = '150px'
@@ -75,8 +79,12 @@ module.exports =
     }
     maximise () {
       this.content.style.display = 'block'
-      this.el.style.height = '500px'
-      this.el.style.width = '500px'
+      var body = document.querySelector('body')
+      this.el.style.height = this.isMaximised ? '500px' : body.offsetHeight + 'px'
+      this.el.style.width = this.isMaximised ? '500px' : body.offsetWidth + 'px'
+      this.isMaximised = !this.isMaximised
+      this.el.style.top = this.isMaximised ? '0%' : '20%'
+      this.el.style.left = this.isMaximised ? '0%' : '50%'
       this.el.querySelector('.title').style.width = 'inherit'
     }
     close () {
@@ -97,6 +105,7 @@ function dragElement (elmnt) {
 
   function dragMouseDown (e) {
     e = e || window.event
+    if (e.button !== 0) return
     e.preventDefault()
     // get the mouse cursor position at startup:
     pos3 = e.clientX

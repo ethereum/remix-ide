@@ -1,9 +1,8 @@
 var yo = require('yo-yo')
 var csjs = require('csjs-inject')
-var remixLib = require('remix-lib')
 
 var globalRegistry = require('../../global/registry')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 
 module.exports = class plugintab {
   constructor (json, localRegistry) {
@@ -26,7 +25,7 @@ module.exports = class plugintab {
 }
 const css = csjs`
   .pluginTabView {
-    height: 456px;
+    height: 100%;
     width: 100%;
   }
   .iframe {

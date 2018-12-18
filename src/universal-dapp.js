@@ -6,7 +6,7 @@ var async = require('async')
 var ethJSUtil = require('ethereumjs-util')
 var BN = ethJSUtil.BN
 var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('./lib/events')
 var crypto = require('crypto')
 var TxRunner = remixLib.execution.txRunner
 var txExecution = remixLib.execution.txExecution
@@ -83,7 +83,7 @@ UniversalDApp.prototype.resetAPI = function (transactionContextAPI) {
 UniversalDApp.prototype.createVMAccount = function (privateKey, balance, cb) {
   this._addAccount(privateKey, balance)
   executionContext.vm().stateManager.cache.flush(function () {})
-  privateKey = new Buffer(privateKey, 'hex')
+  privateKey = Buffer.from(privateKey, 'hex')
   cb(null, '0x' + ethJSUtil.privateToAddress(privateKey).toString('hex'))
 }
 
@@ -118,7 +118,7 @@ UniversalDApp.prototype._addAccount = function (privateKey, balance) {
   }
 
   if (self.accounts) {
-    privateKey = new Buffer(privateKey, 'hex')
+    privateKey = Buffer.from(privateKey, 'hex')
     var address = ethJSUtil.privateToAddress(privateKey)
 
     // FIXME: we don't care about the callback, but we should still make this proper
@@ -165,7 +165,7 @@ UniversalDApp.prototype.getBalance = function (address, cb) {
       return cb('No accounts?')
     }
 
-    executionContext.vm().stateManager.getAccountBalance(new Buffer(address, 'hex'), function (err, res) {
+    executionContext.vm().stateManager.getAccountBalance(Buffer.from(address, 'hex'), function (err, res) {
       if (err) {
         cb('Account not found')
       } else {
@@ -205,7 +205,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
     }
   }
   // contractsDetails is used to resolve libraries
-  txFormat.buildData(args.contractName, args.contractAbi, self.data.contractsDetails, false, args.funABI, value, (error, data) => {
+  txFormat.buildData(args.contractName, args.contractAbi, self.data.contractsDetails, false, args.funABI, args.funABI.type !== 'fallback' ? value : '', (error, data) => {
     if (!error) {
       if (isUserAction) {
         if (!args.funABI.constant) {
@@ -214,6 +214,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
           self._deps.logCallback(`${logMsg}`)
         }
       }
+      if (args.funABI.type === 'fallback') data.dataHex = value
       self.callFunction(args.address, data, args.funABI, (error, txResult) => {
         if (!error) {
           var isVM = executionContext.isVM()
@@ -349,7 +350,7 @@ UniversalDApp.prototype.runTx = function (args, cb) {
     },
     function runTransaction (fromAddress, value, gasLimit, next) {
       var tx = { to: args.to, data: args.data.dataHex, useCall: args.useCall, from: fromAddress, value: value, gasLimit: gasLimit }
-      var payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName }
+      var payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName, contractABI: args.data.contractABI, linkReferences: args.data.linkReferences }
       var timestamp = Date.now()
 
       self.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])

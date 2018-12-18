@@ -61,7 +61,8 @@ module.exports = class CompileTab {
       selectedVersion: null,
       baseurl: 'https://solc-bin.ethereum.org/bin'
     }
-    self.data.optimize = !!self._components.queryParams.get().optimize
+    self.data.optimize = self._components.queryParams.get().optimize
+    self.data.optimize = self.data.optimize === 'true'
     self._components.queryParams.update({ optimize: self.data.optimize })
     self._deps.compiler.setOptimize(self.data.optimize)
 
@@ -84,8 +85,6 @@ module.exports = class CompileTab {
     })
     self._deps.editor.event.register('contentChanged', function changedFile () {
       if (!self._view.compileIcon) return
-      const compileTab = document.querySelector('.compileView') // @TODO: compileView tab
-      compileTab.style.color = styles.colors.red // @TODO: compileView tab
       self._view.compileIcon.classList.add(`${css.bouncingIcon}`) // @TODO: compileView tab
     })
     self._deps.compiler.event.register('loadingCompiler', function start () {
@@ -138,6 +137,15 @@ module.exports = class CompileTab {
       if (data['error']) {
         error = true
         self._deps.renderer.error(data['error'].formattedMessage, self._view.errorContainer, {type: data['error'].severity || 'error'})
+        if (data['error'].mode === 'panic') {
+          /*
+          return modalDialogCustom.alert(yo`<div><i class="fa fa-exclamation-circle ${css.panicError}" aria-hidden="true"></i>
+                                            The compiler returned with the following internal error: <br> <b>${data['error'].formattedMessage}.<br>
+                                            The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet.
+                                            It is heavily recommended to use another browser not affected by this issue (Firefox is known to not be affected).</b><br>
+                                            Please join <a href="https://gitter.im/ethereum/remix" target="blank" >remix gitter channel</a> for more information.</div>`)
+          */
+        }
       }
       if (data.errors && data.errors.length) {
         error = true
@@ -197,7 +205,7 @@ module.exports = class CompileTab {
 
     self._view.warnCompilationSlow = yo`<i title="Compilation Slow" style="visibility:hidden" class="${css.warnCompilationSlow} fa fa-exclamation-triangle" aria-hidden="true"></i>`
     self._view.compileIcon = yo`<i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>`
-    self._view.compileButton = yo`<div class="${css.compileButton}" onclick=${compile} id="compile" title="Compile source code">${self._view.compileIcon} Start to compile</div>`
+    self._view.compileButton = yo`<div class="${css.compileButton}" onclick=${compile} id="compile" title="Compile source code">${self._view.compileIcon} Start to compile (Ctrl-S)</div>`
     self._view.autoCompile = yo`<input class="${css.autocompile}" onchange=${updateAutoCompile} id="autoCompile" type="checkbox" title="Auto compile">`
     self._view.hideWarningsBox = yo`<input class="${css.autocompile}" onchange=${hideWarnings} id="hideWarningsBox" type="checkbox" title="Hide warnings">`
     if (self.data.autoCompile) self._view.autoCompile.setAttribute('checked', '')
@@ -213,15 +221,15 @@ module.exports = class CompileTab {
             <div class=${css.checkboxes}>
               <div class="${css.autocompileContainer}">
                 ${self._view.autoCompile}
-                <span class="${css.autocompileText}">Auto compile</span>
+                <label for="autoCompile" class="${css.autocompileText}">Auto compile</label>
               </div>
               <div class="${css.optimizeContainer}">
                 <div>${self._view.optimize}</div>
-                <span class="${css.checkboxText}">Enable Optimization</span>
+                <label for="optimize" class="${css.checkboxText}">Enable Optimization</label>
               </div>
               <div class=${css.hideWarningsContainer}>
                 ${self._view.hideWarningsBox}
-                <span class="${css.autocompileText}">Hide warnings</span>
+                <label for="hideWarningsBox" class="${css.autocompileText}">Hide warnings</label>
               </div>
             </div>
             ${self._view.compileButton}
@@ -363,7 +371,7 @@ module.exports = class CompileTab {
       if (selectContractNames.children.length > 0 && selectContractNames.selectedIndex >= 0) {
         var contract = self.data.contractsDetails[selectContractNames.children[selectContractNames.selectedIndex].innerHTML]
         if (contract.metadata === undefined || contract.metadata.length === 0) {
-          modalDialogCustom.alert('This contract does not implement all functions and thus cannot be published.')
+          modalDialogCustom.alert('This contract may be abstract, may not implement an abstract parent\'s methods completely or not invoke an inherited contract\'s constructor correctly.')
         } else {
           publishOnSwarm(contract, self._deps.fileManager, function (err, uploaded) {
             if (err) {
@@ -447,6 +455,15 @@ module.exports = class CompileTab {
 }
 
 const css = csjs`
+  .title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  .panicError {
+    color: red;
+    font-size: 20px;
+  }
   .crow {
     display: flex;
     overflow: auto;
@@ -557,7 +574,7 @@ const css = csjs`
     margin: 15px 15px 10px 0;
   }
   .copyButton {
-    ${styles.rightPanel.compileTab.button_Details};
+    ${styles.rightPanel.compileTab.button_Publish};
     padding: 0 7px;
     min-width: 50px;
     width: auto;
@@ -615,7 +632,7 @@ const css = csjs`
     color: ${styles.rightPanel.modalDialog_text_Secondary};
   }
   .icon {
-    margin-right: 3%;
+    margin-right: 0.3em;
   }
   .spinningIcon {
     margin-right: .3em;

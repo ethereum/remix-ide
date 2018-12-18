@@ -1,6 +1,6 @@
 const yo = require('yo-yo')
 const csjs = require('csjs-inject')
-const remixLib = require('remix-lib')
+const EventManager = require('../../lib/events')
 
 var globalRegistry = require('../../global/registry')
 
@@ -17,7 +17,6 @@ const TestTab = require('../tabs/test-tab')
 const RunTab = require('../tabs/run-tab')
 const DraggableContent = require('../ui/draggableContent')
 
-const EventManager = remixLib.EventManager
 const styles = styleguide.chooser()
 
 module.exports = class RighthandPanel {
@@ -52,7 +51,9 @@ module.exports = class RighthandPanel {
       self._deps.fileProviders,
       self._deps.fileManager,
       self._deps.udapp
-   )
+    )
+
+    self._components.registry.put({api: pluginManager, name: 'pluginmanager'})
 
     var analysisTab = new AnalysisTab(self._components.registry)
     analysisTab.event.register('newStaticAnaysisWarningMessage', (msg, settings) => { self._components.compile.addWarning(msg, settings) })
@@ -81,7 +82,7 @@ module.exports = class RighthandPanel {
       })
       var tab = new PluginTab(json)
       var content = tab.render()
-      document.querySelector('body').appendChild(modal.render(json.title, content))
+      document.querySelector('body').appendChild(modal.render(json.title, json.url, content))
       self._components.pluginManager.register(json, modal, content)
     }
 

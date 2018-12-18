@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/ethereum/remix-ide.svg?branch=master)](https://travis-ci.org/ethereum/remix-ide)
 [![CircleCI](https://circleci.com/gh/ethereum/remix-ide.svg?style=svg)](https://circleci.com/gh/ethereum/remix-ide)
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=MTc5WVBoNnhOTGhaUng3ZFI3MDZvNWkraHIrd1FNanZIZk80SG9uMkFIND0tLUoyUjd1YVhWRnRrcUJMMnFlbmN3Y0E9PQ==--4085377897aef217e507c8fc46d463eb699838b8)](https://www.browserstack.com/automate/public-build/MTc5WVBoNnhOTGhaUng3ZFI3MDZvNWkraHIrd1FNanZIZk80SG9uMkFIND0tLUoyUjd1YVhWRnRrcUJMMnFlbmN3Y0E9PQ==--4085377897aef217e507c8fc46d463eb699838b8)
 
@@ -37,9 +36,10 @@ Or if you want to clone the github repository (`wget` need to be installed first
 
 ```bash
 git clone https://github.com/ethereum/remix-ide.git
+git clone https://github.com/ethereum/remix.git # only if you plan to link remix and remix-ide repositories and develop on it.
 cd remix-ide
 npm install
-npm run setupremix  # this will clone https://github.com/ethereum/remix for you and link it to remix-ide. Only execute this step if you want to contribute on Remix development
+npm run setupremix  # only if you plan to link remix and remix-ide repositories and develop on it.
 npm start
 ```
 

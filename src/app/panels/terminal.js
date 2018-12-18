@@ -5,14 +5,15 @@ var jsbeautify = require('js-beautify')
 var ethers = require('ethers')
 var type = require('component-type')
 var vm = require('vm')
-var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var Web3 = require('web3')
 var swarmgw = require('swarmgw')()
 
 var CommandInterpreterAPI = require('../../lib/cmdInterpreterAPI')
 var executionContext = require('../../execution-context')
 var Dropdown = require('../ui/dropdown')
+var AutoCompletePopup = require('../ui/auto-complete-popup')
+var Commands = require('../constants/commands')
 
 var csjs = require('csjs-inject')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
@@ -62,6 +63,20 @@ class Terminal {
         self.updateJournal({ type: 'select', value: label })
       }
     })
+    self._components.autoCompletePopup = new AutoCompletePopup()
+    self._components.autoCompletePopup.event.register('handleSelect', function (input) {
+      self._components.autoCompletePopup.data._options = []
+      self._components.autoCompletePopup._startingElement = 0
+      let textList = self._view.input.innerText.split(' ')
+      textList.pop()
+      textList.push(input)
+      self._view.input.innerText = `${textList}`.replace(/,/g, ' ')
+      self._view.input.focus()
+      yo.update(self._view.autoCompletePopup, self._components.autoCompletePopup.render())
+    })
+    self._components.autoCompletePopup.event.register('updateList', function () {
+      yo.update(self._view.autoCompletePopup, self._components.autoCompletePopup.render())
+    })
     self._commands = {}
     self.commands = {}
     self._JOURNAL = []
@@ -93,7 +108,7 @@ class Terminal {
     self.registerFilter('script', basicFilter)
 
     self._jsSandboxContext = {}
-    self._jsSandbox = vm.createContext(self._jsSandboxContext)
+    self._jsSandboxRegistered = {}
     if (opts.shell) self._shell = opts.shell
     register(self)
   }
@@ -102,7 +117,7 @@ class Terminal {
     if (self._view.el) return self._view.el
     self._view.journal = yo`<div class=${css.journal}></div>`
     self._view.input = yo`
-      <span class=${css.input} contenteditable="true" onkeydown=${change}></span>
+      <span class=${css.input} contenteditable="true" onpaste=${paste} onkeydown=${change}></span>
     `
     self._view.input.innerText = '\n'
     self._view.cli = yo`
@@ -141,14 +156,6 @@ class Terminal {
         </div>
       </div>
     `
-    setInterval(() => {
-      self._view.pendingTxCount.innerHTML = self._opts.udapp.pendingTransactionsCount()
-    }, 1000)
-
-    function listenOnNetwork (ev) {
-      self.event.trigger('listenOnNetWork', [ev.currentTarget.checked])
-    }
-
     self._view.term = yo`
       <div class=${css.terminal_container} onscroll=${throttle(reattach, 10)} onclick=${focusinput}>
         <div class=${css.terminal}>
@@ -157,13 +164,45 @@ class Terminal {
         </div>
       </div>
     `
+    self._view.autoCompletePopup = self._components.autoCompletePopup.render()
     self._view.el = yo`
       <div class=${css.panel}>
         ${self._view.bar}
         ${self._view.term}
       </div>
     `
+    setInterval(() => {
+      self._view.pendingTxCount.innerHTML = self._opts.udapp.pendingTransactionsCount()
+    }, 1000)
 
+    function listenOnNetwork (ev) {
+      self.event.trigger('listenOnNetWork', [ev.currentTarget.checked])
+    }
+    function paste (event) {
+      const selection = window.getSelection()
+      if (!selection.rangeCount) return false
+      event.preventDefault()
+      event.stopPropagation()
+      var clipboard = (event.clipboardData || window.clipboardData)
+      var text = clipboard.getData('text/plain')
+      text = text.replace(/[^\x20-\xFF]/gi, '') // remove non-UTF-8 characters
+      var temp = document.createElement('div')
+      temp.innerHTML = text
+      var textnode = document.createTextNode(temp.textContent)
+      selection.getRangeAt(0).insertNode(textnode)
+      selection.empty()
+      self.scroll2bottom()
+      placeCaretAtEnd(event.currentTarget)
+    }
+    function placeCaretAtEnd (el) {
+      el.focus()
+      var range = document.createRange()
+      range.selectNodeContents(el)
+      range.collapse(false)
+      var sel = window.getSelection()
+      sel.removeAllRanges()
+      sel.addRange(range)
+    }
     function throttle (fn, wait) {
       var time = Date.now()
       return function debounce () {
@@ -346,7 +385,7 @@ class Terminal {
     self._cmdIndex = -1
     self._cmdTemp = ''
 
-    var intro = yo`<div><div> - Welcome to Remix v0.7.2 - </div><br>
+    var intro = yo`<div><div> - Welcome to Remix v0.7.5 - </div><br>
                   <div>You can use this terminal for: </div>
                   <ul class=${css2.ul}>
                     <li>Checking transactions details and start debugging.</li>
@@ -355,9 +394,11 @@ class Terminal {
                         <li><a target="_blank" href="https://web3js.readthedocs.io/en/1.0/">web3 version 1.0.0</a></li>
                         <li><a target="_blank" href="https://docs.ethers.io/ethers.js/html/">ethers.js</a> </li>
                         <li><a target="_blank" href="https://www.npmjs.com/package/swarmgw">swarmgw</a> </li>
+                        <li>compilers - contains currently loaded compiler</li>
                       </ul>
                     </li>
                     <li>Executing common command to interact with the Remix interface (see list of commands above). Note that these commands can also be included and run from a JavaScript script.</li>
+                    <li>Use exports/.register(key, obj)/.remove(key)/.clear() to register and reuse object across script executions.</li>
                   </ul>
                   </div>`
 
@@ -366,12 +407,14 @@ class Terminal {
     return self._view.el
 
     function change (event) {
+      handleAutoComplete(event)
       if (self._view.input.innerText.length === 0) self._view.input.innerText += '\n'
       if (event.which === 13) {
         if (event.ctrlKey) { // <ctrl+enter>
           self._view.input.innerText += '\n'
           putCursor2End(self._view.input)
           self.scroll2bottom()
+          removeAutoComplete()
         } else { // <enter>
           self._cmdIndex = -1
           self._cmdTemp = ''
@@ -382,23 +425,32 @@ class Terminal {
             self._cmdHistory.unshift(script)
             self.commands.script(script)
           }
+          removeAutoComplete()
         }
       } else if (event.which === 38) { // <arrowUp>
-        var len = self._cmdHistory.length
-        if (len === 0) return event.preventDefault()
-        if (self._cmdHistory.length - 1 > self._cmdIndex) {
-          self._cmdIndex++
+        if (self._components.autoCompletePopup.data._options.length > self._components.autoCompletePopup._elementsToShow) {
+          self._components.autoCompletePopup._view.autoComplete.children[1].children[0].onclick(event)
+        } else {
+          var len = self._cmdHistory.length
+          if (len === 0) return event.preventDefault()
+          if (self._cmdHistory.length - 1 > self._cmdIndex) {
+            self._cmdIndex++
+          }
+          self._view.input.innerText = self._cmdHistory[self._cmdIndex]
+          putCursor2End(self._view.input)
+          self.scroll2bottom()
         }
-        self._view.input.innerText = self._cmdHistory[self._cmdIndex]
-        putCursor2End(self._view.input)
-        self.scroll2bottom()
       } else if (event.which === 40) { // <arrowDown>
-        if (self._cmdIndex > -1) {
-          self._cmdIndex--
+        if (self._components.autoCompletePopup.data._options.length > self._components.autoCompletePopup._elementsToShow) {
+          self._components.autoCompletePopup._view.autoComplete.children[1].children[1].onclick(event)
+        } else {
+          if (self._cmdIndex > -1) {
+            self._cmdIndex--
+          }
+          self._view.input.innerText = self._cmdIndex >= 0 ? self._cmdHistory[self._cmdIndex] : self._cmdTemp
+          putCursor2End(self._view.input)
+          self.scroll2bottom()
         }
-        self._view.input.innerText = self._cmdIndex >= 0 ? self._cmdHistory[self._cmdIndex] : self._cmdTemp
-        putCursor2End(self._view.input)
-        self.scroll2bottom()
       } else {
         self._cmdTemp = self._view.input.innerText
       }
@@ -429,6 +481,45 @@ class Terminal {
       sel.addRange(range)
 
       editable.focus()
+    }
+    function handleAutoComplete (event) {
+      if (event.which === 9) {
+        event.preventDefault()
+        let textList = self._view.input.innerText.split(' ')
+        let autoCompleteInput = textList.length > 1 ? textList[textList.length - 1] : textList[0]
+        if (self._view.input.innerText.length >= 2) {
+          self._components.autoCompletePopup.data._options = []
+          Commands.allPrograms.forEach(item => {
+            if (Object.keys(item)[0].substring(0, Object.keys(item)[0].length - 1).includes(autoCompleteInput.trim())) {
+              self._components.autoCompletePopup.data._options.push(item)
+            } else if (autoCompleteInput.trim().includes(Object.keys(item)[0]) || (Object.keys(item)[0] === autoCompleteInput.trim())) {
+              Commands.allCommands.forEach(item => {
+                if (Object.keys(item)[0].includes(autoCompleteInput.trim())) {
+                  self._components.autoCompletePopup.data._options.push(item)
+                }
+              })
+            }
+          })
+        }
+        if (self._components.autoCompletePopup.data._options.length === 1) {
+          textList.pop()
+          textList.push(Object.keys(self._components.autoCompletePopup.data._options[0])[0])
+          self._view.input.innerText = `${textList}`.replace(/,/g, ' ')
+          self._components.autoCompletePopup.data._options = []
+          putCursor2End(self._view.input)
+        }
+      }
+      if (event.which === 27 || event.which === 8 || event.which === 46) {
+        self._components.autoCompletePopup.data._options = []
+        self._components.autoCompletePopup._startingElement = 0
+      }
+      yo.update(self._view.autoCompletePopup, self._components.autoCompletePopup.render())
+    }
+    function removeAutoComplete () {
+      self._components.autoCompletePopup.data._options = []
+      self._components.autoCompletePopup._startingElement = 0
+      self._components.autoCompletePopup._removePopUp()
+      yo.update(self._view.autoCompletePopup, self._components.autoCompletePopup.render())
     }
   }
   updateJournal (filterEvent) {
@@ -578,7 +669,7 @@ class Terminal {
     var self = this
     var context = domTerminalFeatures(self, scopedCommands)
     try {
-      var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context))
+      var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context, self._jsSandboxRegistered))
       var result = vm.runInContext(script, cmds)
       self._jsSandboxContext = Object.assign(cmds, context)
       done(null, result)
@@ -590,6 +681,7 @@ class Terminal {
 
 function domTerminalFeatures (self, scopedCommands) {
   return {
+    compilers: self._opts.compilers,
     swarmgw,
     ethers,
     remix: self._components.cmdInterpreter,
@@ -607,7 +699,12 @@ function domTerminalFeatures (self, scopedCommands) {
       return setInterval(() => { self._shell('(' + fn.toString() + ')()', scopedCommands, () => {}) }, time)
     },
     clearTimeout: clearTimeout,
-    clearInterval: clearInterval
+    clearInterval: clearInterval,
+    exports: {
+      register: (key, obj) => { self._jsSandboxRegistered[key] = obj },
+      remove: (key) => { delete self._jsSandboxRegistered[key] },
+      clear: () => { self._jsSandboxRegistered = {} }
+    }
   }
 }
 

@@ -1,9 +1,8 @@
 'use strict'
 
 var $ = require('jquery')
-var remixLib = require('remix-lib')
 var yo = require('yo-yo')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var globalRegistry = require('../../global/registry')
 
 /*
@@ -40,6 +39,8 @@ class FileManager {
     self._deps.localhostExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
     self._deps.configExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
     self._deps.gistExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
+    self._deps.localhostExplorer.event.register('errored', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
+    self._deps.localhostExplorer.event.register('closed', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
   }
 
   fileRenamedEvent (oldName, newName, isFolder) {
@@ -92,12 +93,21 @@ class FileManager {
     return path ? path[1] : null
   }
 
+  removeTabsOf (provider) {
+    for (var tab in this.tabbedFiles) {
+      if (this.fileProviderOf(tab).type === provider.type) {
+        this.fileRemovedEvent(tab)
+      }
+    }
+  }
+
   fileRemovedEvent (path) {
     var self = this
+    if (!this.tabbedFiles[path]) return
     if (path === self._deps.config.get('currentFile')) {
       self._deps.config.set('currentFile', '')
     }
-    self._deps.editor.discardCurrentSession()
+    self._deps.editor.discard(path)
     delete this.tabbedFiles[path]
     this.refreshTabs()
     this.switchFile()

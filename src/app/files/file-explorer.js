@@ -2,8 +2,7 @@ var yo = require('yo-yo')
 var Treeview = require('../ui/TreeView')
 var modalDialog = require('../ui/modaldialog')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
-var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var contextMenu = require('../ui/contextMenu')
 var addTooltip = require('../ui/tooltip')
 var helper = require('../../lib/helper')
@@ -39,6 +38,8 @@ function fileExplorer (localRegistry, files) {
 
   this.files.event.register('fileExternallyChanged', (path, file) => {
     if (self._deps.config.get('currentFile') === path && self._deps.editor.currentContent() && self._deps.editor.currentContent() !== file.content) {
+      if (this.files.isReadOnly(path)) return self._deps.editor.setText(file.content)
+
       modalDialog(path + ' changed', remixdDialog(),
         {
           label: 'Keep the content displayed in Remix',
