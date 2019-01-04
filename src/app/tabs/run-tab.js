@@ -7,7 +7,7 @@ var csjs = require('csjs-inject')
 var txExecution = remixLib.execution.txExecution
 var txFormat = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var globlalRegistry = require('../../global/registry')
 var helper = require('../../lib/helper.js')
 var executionContext = require('../../execution-context')
@@ -78,7 +78,6 @@ function runTab (opts, localRegistry) {
   }
   // dependencies
   self._deps = {
-    compiler: self._components.registry.get('compiler').api,
     udapp: self._components.registry.get('udapp').api,
     udappUI: self._components.registry.get('udappUI').api,
     config: self._components.registry.get('config').api,
@@ -317,19 +316,8 @@ function contractDropdown (events, self) {
   }
 
   self._deps.pluginManager.event.register('sendCompilationResult', (file, source, languageVersion, data) => {
-    // TODO check whether the tab is configured
-    let compiler = new CompilerAbstract(languageVersion, data)
-    self._deps.compilersArtefacts[languageVersion] = compiler
-    self._deps.compilersArtefacts['__last'] = compiler
+    let compiler = new CompilerAbstract(languageVersion, data, source)
     newlyCompiled(true, data, source, compiler, languageVersion)
-  })
-
-  self._deps.compiler.event.register('compilationFinished', (success, data, source) => {
-    var name = 'solidity'
-    let compiler = new CompilerAbstract(name, data)
-    self._deps.compilersArtefacts[name] = compiler
-    self._deps.compilersArtefacts['__last'] = compiler
-    newlyCompiled(success, data, source, self._deps.compiler, name)
   })
 
   var deployAction = (value) => {
@@ -357,7 +345,7 @@ function contractDropdown (events, self) {
   function getSelectedContract () {
     var contract = selectContractNames.children[selectContractNames.selectedIndex]
     var contractName = contract.innerHTML
-    var compiler = self._deps.compilersArtefacts[contract.getAttribute('compiler')]
+    var compiler = self._deps.compilersArtefacts['__last']
     if (!compiler) return null
 
     if (contractName) {
@@ -442,7 +430,7 @@ function contractDropdown (events, self) {
     var selectedContract = getSelectedContract()
 
     if (selectedContract.contract.object.evm.bytecode.object.length === 0) {
-      modalDialogCustom.alert('This contract does not implement all functions and thus cannot be created.')
+      modalDialogCustom.alert('This contract may be abstract, not implement an abstract parent\'s methods completely or not invoke an inherited contract\'s constructor correctly.')
       return
     }
 

@@ -8,7 +8,7 @@ var remixLib = require('remix-lib')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var helper = require('../../lib/helper')
 var executionContext = require('../../execution-context')
 var modalDialog = require('../ui/modal-dialog-custom')
@@ -142,7 +142,7 @@ class TxLogger {
       editorPanel: this._components.registry.get('editorpanel').api,
       txListener: this._components.registry.get('txlistener').api,
       eventsDecoder: this._components.registry.get('eventsdecoder').api,
-      compiler: this._components.registry.get('compiler').api,
+      compilersArtefacts: this._components.registry.get('compilersartefacts').api,
       app: this._components.registry.get('app').api
     }
 
@@ -216,8 +216,8 @@ function log (self, tx, receipt) {
   var resolvedTransaction = self._deps.txListener.resolvedTransaction(tx.hash)
   if (resolvedTransaction) {
     var compiledContracts = null
-    if (self._deps.compiler.lastCompilationResult && self._deps.compiler.lastCompilationResult.data) {
-      compiledContracts = self._deps.compiler.lastCompilationResult.data.contracts
+    if (self._deps.compilersArtefacts['__last']) {
+      compiledContracts = self._deps.compilersArtefacts['__last'].getContracts()
     }
     self._deps.eventsDecoder.parseLogs(tx, resolvedTransaction.contractName, compiledContracts, (error, logs) => {
       if (!error) {

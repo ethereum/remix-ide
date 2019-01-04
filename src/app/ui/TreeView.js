@@ -21,6 +21,7 @@ var css = csjs`
   }
   .caret_tv {
     width: 10px;
+    flex-shrink: 0;
   }
   .label_tv {
     display: flex;
@@ -28,8 +29,7 @@ var css = csjs`
   }
 `
 
-var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 
 /**
  * TreeView

@@ -9,7 +9,7 @@ var copyToClipboard = require('../ui/copy-to-clipboard')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 var Storage = remixLib.Storage
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 
 module.exports = class SettingsTab {
   constructor (localRegistry) {
@@ -18,11 +18,9 @@ module.exports = class SettingsTab {
     self._components.registry = localRegistry || globalRegistry
     // dependencies
     self._deps = {
-      compiler: self._components.registry.get('compiler').api,
       config: self._components.registry.get('config').api,
       editorPanel: self._components.registry.get('editorpanel').api,
-      editor: self._components.registry.get('editor').api,
-      righthandpanel: self._components.registry.get('righthandpanel').api
+      editor: self._components.registry.get('editor').api
     }
     self._view = { /* eslint-disable */
       el: null,
@@ -75,7 +73,7 @@ module.exports = class SettingsTab {
           <div class=${css.title}>General settings</div>
           <div class="${css.crow}">
             <div>${self._view.generateContractMetadata}</div>
-            <span class="${css.checkboxText}">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploy libraries automatically.</span>
+            <span class="${css.checkboxText}">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploys libraries automatically.</span>
           </div>
           <div class="${css.crow}">
             <div>${self._view.optionVM}</div>
