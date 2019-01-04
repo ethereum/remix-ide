@@ -6,7 +6,7 @@ var async = require('async')
 var ethJSUtil = require('ethereumjs-util')
 var BN = ethJSUtil.BN
 var remixLib = require('remix-lib')
-var EventManager = remixLib.EventManager
+var EventManager = require('./lib/events')
 var crypto = require('crypto')
 var TxRunner = remixLib.execution.txRunner
 var txExecution = remixLib.execution.txExecution
@@ -31,7 +31,7 @@ function UniversalDApp(opts, localRegistry) {
   self.removable_instances = opts.removable_instances
   self._deps = {
     config: self._components.registry.get('config').api,
-    compiler: self._components.registry.get('compiler').api,
+    compilersartefacts: self._components.registry.get('compilersartefacts').api,
     logCallback: self._components.registry.get('logCallback').api
   }
   executionContext.event.register('contextChanged', this, function (context) {
@@ -47,10 +47,6 @@ function UniversalDApp(opts, localRegistry) {
     }
   }
   self.txRunner = new TxRunner({}, self._txRunnerAPI)
-  self.data.contractsDetails = {}
-  self._deps.compiler.event.register('compilationFinished', (success, data, source) => {
-    self.data.contractsDetails = success && data ? data.contracts : {}
-  })
   self.accounts = {}
   self.resetEnvironment()
 }
@@ -207,8 +203,7 @@ UniversalDApp.prototype.call = function (isUserAction, args, value, lookupOnly, 
       logMsg = `call to ${args.contractName}.${(args.funABI.name) ? args.funABI.name : '(fallback)'}`
     }
   }
-  // contractsDetails is used to resolve libraries
-  txFormat.buildData(args.contractName, args.contractAbi, self.data.contractsDetails, false, args.funABI, args.funABI.type !== 'fallback' ? value : '', (error, data) => {
+  txFormat.buildData(args.contractName, args.contractAbi, self._deps.compilersartefacts['__last'].getData().contracts, false, args.funABI, args.funABI.type !== 'fallback' ? value : '', (error, data) => {
     if (!error) {
       if (isUserAction) {
         if (!args.funABI.constant) {

@@ -2,6 +2,7 @@
 
 require('babel-polyfill')
 var App = require('./app.js')
+const loadContractSamples = require('./loadContractSamples')
 
 var app = new App({})
 
@@ -14,3 +15,4 @@ if (window.remix) {
 }
 
 app.init() // @TODO: refactor to remove
+loadContractSamples()

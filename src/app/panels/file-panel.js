@@ -3,9 +3,8 @@ var async = require('async')
 var $ = require('jquery')
 var yo = require('yo-yo')
 var CompilerMetadata = require('../files/compiler-metadata')
-var remixLib = require('remix-lib')
+var EventManager = require('../../lib/events')
 var Gists = require('gists')
-var EventManager = remixLib.EventManager
 var FileExplorer = require('../files/file-explorer')
 var modalDialog = require('../ui/modaldialog')
 var modalDialogCustom = require('../ui/modal-dialog-custom')
@@ -50,7 +49,7 @@ function filepanel (localRegistry) {
     fileProviders: self._components.registry.get('fileproviders').api,
     fileManager: self._components.registry.get('filemanager').api,
     config: self._components.registry.get('config').api,
-    compiler: self._components.registry.get('compiler').api
+    pluginManager: self._components.registry.get('pluginmanager').api
   }
   var fileExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['browser'])
   var fileSystemExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['localhost'])
@@ -64,11 +63,8 @@ function filepanel (localRegistry) {
   // ----------------- editor panel ----------------------
   self._compilerMetadata = new CompilerMetadata(
     {
-      compiler: self._deps.compiler.event
-    },
-    {
       fileManager: self._deps.fileManager,
-      compiler: self._deps.compiler,
+      pluginManager: self._deps.pluginManager,
       config: self._deps.config
     }
   )

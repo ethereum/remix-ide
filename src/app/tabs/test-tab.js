@@ -8,15 +8,16 @@ var css = require('./styles/test-tab-styles')
 var remixTests = require('remix-tests')
 
 module.exports = class TestTab {
-  constructor (localRegistry) {
+  constructor (localRegistry, compileTab) {
+    // TODO here is a direct reference to compile tab, should be removed
     const self = this
+    self.compileTab = compileTab
     self._view = { el: null }
     self._components = {}
     self._components.registry = localRegistry || globalRegistry
     // dependencies
     self._deps = {
       fileManager: self._components.registry.get('filemanager').api,
-      app: self._components.registry.get('app').api,
       filePanel: self._components.registry.get('filepanel').api
     }
     self.data = {}
@@ -76,7 +77,7 @@ module.exports = class TestTab {
           remixTests.runTestSources(runningTest, testCallback, resultsCallback, (error, result) => {
             updateFinalResult(error, result, testFilePath)
             callback(error)
-          }, (url, cb) => { self._deps.app.importFileCb(url, cb) })
+          }, (url, cb) => { self.compileTab.importFileCb(url, cb) })
         }
       })
     }
@@ -193,42 +194,44 @@ module.exports = class TestTab {
   }
 }
 
-var testContractSample = `pragma solidity ^0.4.0;
+var testContractSample = `pragma solidity >=0.4.0 <0.6.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix.
 
 // file name has to end with '_test.sol'
 contract test_1 {
-    
-    function beforeAll() public {
-      // here should instantiate tested contract
-    }
-    
-    function check1() public {
-      // this function is not constant, use 'Assert' to test the contract
-      Assert.equal(uint(2), uint(1), "error message");
-      Assert.equal(uint(2), uint(2), "error message");
-    }
-    
-    function check2() public constant returns (bool) {
-      // this function is constant, use the return value (true or false) to test the contract
-      return true;
-    }
+
+  function beforeAll() public {
+    // here should instantiate tested contract
+    Assert.equal(uint(4), uint(3), "error in before all function");
+  }
+
+  function check1() public {
+    // use 'Assert' to test the contract
+    Assert.equal(uint(2), uint(1), "error message");
+    Assert.equal(uint(2), uint(2), "error message");
+  }
+
+  function check2() public view returns (bool) {
+    // use the return value (true or false) to test the contract
+    return true;
+  }
 }
 
 contract test_2 {
-   
-    function beforeAll() public {
-      // here should instantiate tested contract
-    }
-    
-    function check1() public {
-      // this function is not constant, use 'Assert' to test the contract
-      Assert.equal(uint(2), uint(1), "error message");
-      Assert.equal(uint(2), uint(2), "error message");
-    }
-    
-    function check2() public constant returns (bool) {
-      // this function is constant, use the return value (true or false) to test the contract
-      return true;
-    }
+ 
+  function beforeAll() public {
+    // here should instantiate tested contract
+    Assert.equal(uint(4), uint(3), "error in before all function");
+  }
+
+  function check1() public {
+    // use 'Assert' to test the contract
+    Assert.equal(uint(2), uint(1), "error message");
+    Assert.equal(uint(2), uint(2), "error message");
+  }
+
+  function check2() public view returns (bool) {
+    // use the return value (true or false) to test the contract
+    return true;
+  }
 }`

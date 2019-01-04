@@ -1,10 +1,10 @@
 'use strict'
 
 var $ = require('jquery')
-var remixLib = require('remix-lib')
 var yo = require('yo-yo')
-var EventManager = remixLib.EventManager
+var EventManager = require('../../lib/events')
 var globalRegistry = require('../../global/registry')
+var CompilerImport = require('../compiler/compiler-imports')
 
 /*
   attach to files event (removed renamed)
@@ -16,13 +16,13 @@ class FileManager {
     this.tabbedFiles = {}
     this.event = new EventManager()
     this._components = {}
+    this._components.compilerImport = new CompilerImport()
     this._components.registry = localRegistry || globalRegistry
   }
 
   init () {
     var self = this
     self._deps = {
-      compilerImport: self._components.registry.get('compilerimport').api,
       editor: self._components.registry.get('editor').api,
       config: self._components.registry.get('config').api,
       browserExplorer: self._components.registry.get('fileproviders/browser').api,
@@ -183,7 +183,7 @@ class FileManager {
     if (provider !== null && this._deps.filesProviders[provider[0]]) {
       return this._deps.filesProviders[provider[0]]
     } else {
-      for (var handler of this._deps.compilerImport.handlers()) {
+      for (var handler of this._components.compilerImport.handlers()) {
         if (handler.match.exec(file)) {
           return this._deps.filesProviders[handler.type]
         }
