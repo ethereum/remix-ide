@@ -133,11 +133,6 @@ class CompileTab {
     })
   }
 
-  addWarning (msg, settings) {
-    const self = this
-    self._deps.renderer.error(msg, self._view.errorContainerHead, settings)
-  }
-
   render () {
     const self = this
     if (self._view.el) return self._view.el
