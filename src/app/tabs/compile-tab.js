@@ -1,10 +1,6 @@
-const async = require('async')
 const $ = require('jquery')
 const yo = require('yo-yo')
 const copy = require('clipboard-copy')
-var remixTests = require('remix-tests')
-var Compiler = require('remix-solidity').Compiler
-var CompilerImport = require('../compiler/compiler-imports')
 var QueryParams = require('../../lib/query-params')
 const TreeView = require('../ui/TreeView')
 const modalDialog = require('../ui/modaldialog')
@@ -34,8 +30,6 @@ class CompileTab {
       contractEl: null
     }
     self.queryParams = new QueryParams()
-    self.compilerImport = new CompilerImport()
-    self.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
 
     // dependencies
     self._deps = {
@@ -51,7 +45,8 @@ class CompileTab {
       contractsDetails: {}
     }
 
-    this.compileTabLogic = new CompileTabLogic(self.queryParams, self.compiler, self._deps.fileManager, self._deps.editor, self._deps.config)
+    this.compileTabLogic = new CompileTabLogic(self.queryParams, self._deps.fileManager, self._deps.editor, self._deps.config, self._deps.fileProviders)
+    this.compiler = this.compileTabLogic.compiler
     this.compileTabLogic.init()
 
     this.compilerContainer = new CompilerContainer(self.compileTabLogic, self._deps.editor, self._deps.config, self.queryParams)
@@ -288,49 +283,6 @@ class CompileTab {
       }
     }
     return self._view.el
-  }
-
-  importExternal (url, cb) {
-    this.compilerImport.import(url,
-      (loadingMsg) => { addTooltip(loadingMsg) },
-      (error, content, cleanUrl, type, url) => {
-        if (error) return cb(error)
-
-        if (this._deps.filesProviders[type]) {
-          this._deps.filesProviders[type].addReadOnly(cleanUrl, content, url)
-        }
-        cb(null, content)
-      })
-  }
-
-  importFileCb (url, filecb) {
-    if (url.indexOf('/remix_tests.sol') !== -1) return filecb(null, remixTests.assertLibCode)
-
-    var provider = this._deps.fileManager.fileProviderOf(url)
-    if (provider) {
-      if (provider.type === 'localhost' && !provider.isConnected()) {
-        return filecb(`file provider ${provider.type} not available while trying to resolve ${url}`)
-      }
-      return provider.exists(url, (error, exist) => {
-        if (error) return filecb(error)
-        if (exist) {
-          return provider.get(url, filecb)
-        }
-        this.importExternal(url, filecb)
-      })
-    }
-    if (this.compilerImport.isRelativeImport(url)) {
-      // try to resolve localhost modules (aka truffle imports)
-      var splitted = /([^/]+)\/(.*)$/g.exec(url)
-      return async.tryEach([
-        (cb) => { this.importFileCb('localhost/installed_contracts/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { this.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
-        (cb) => { this.importFileCb('localhost/node_modules/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { this.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
-        (error, result) => { filecb(error, result) }
-      )
-    }
-    this.importExternal(url, filecb)
   }
 
 }
