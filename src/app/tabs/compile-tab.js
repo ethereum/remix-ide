@@ -43,9 +43,7 @@ class CompileTab {
       },
       optimize: null
     }
-    self._components = {}
-    self._components.queryParams = new QueryParams()
-
+    self.queryParams = new QueryParams()
     self.compilerImport = new CompilerImport()
     self.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
 
@@ -73,9 +71,9 @@ class CompileTab {
       defaultVersion: 'soljson-v0.5.1+commit.c8a2cb62.js', // this default version is defined: in makeMockCompiler (for browser test) and in package.json (downloadsolc_root) for the builtin compiler
       baseurl: 'https://solc-bin.ethereum.org/bin'
     }
-    self.data.optimize = self._components.queryParams.get().optimize
+    self.data.optimize = self.queryParams.get().optimize
     self.data.optimize = self.data.optimize === 'true'
-    self._components.queryParams.update({ optimize: self.data.optimize })
+    self.queryParams.update({ optimize: self.data.optimize })
     self.compiler.setOptimize(self.data.optimize)
 
     this.listenToEvents()
@@ -207,7 +205,7 @@ class CompileTab {
 
     function onchangeOptimize (event) {
       self.data.optimize = !!self._view.optimize.checked
-      self._components.queryParams.update({ optimize: self.data.optimize })
+      self.queryParams.update({ optimize: self.data.optimize })
       self.compiler.setOptimize(self.data.optimize)
       self.runCompiler()
     }
@@ -431,7 +429,7 @@ class CompileTab {
     this._view.versionSelector.appendChild(yo`<option disabled selected>Select new compiler version</option>`)
     this.data.allversions.forEach(build => this._view.versionSelector.appendChild(yo`<option value=${build.path}>${build.longVersion}</option>`))
     this._view.versionSelector.removeAttribute('disabled')
-    this._components.queryParams.update({ version: this.data.selectedVersion })
+    this.queryParams.update({ version: this.data.selectedVersion })
     var url
     if (this.data.selectedVersion === 'builtin') {
       var location = window.document.location
@@ -468,7 +466,7 @@ class CompileTab {
           const data = JSON.parse(json)
           allversions = data.builds.slice().reverse()
           selectedVersion = self.data.defaultVersion
-          if (self._components.queryParams.get().version) selectedVersion = self._components.queryParams.get().version
+          if (self.queryParams.get().version) selectedVersion = self.queryParams.get().version
         } catch (e) {
           addTooltip('Cannot load compiler version list. It might have been blocked by an advertisement blocker. Please try deactivating any of them from this page and reload.')
         }
