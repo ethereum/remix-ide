@@ -47,8 +47,6 @@ class CompileTab {
     self.compilerImport = new CompilerImport()
     self.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
 
-    this.compileTabLogic = new CompileTabLogic()
-
     // dependencies
     self._deps = {
       editor: registry.get('editor').api,
@@ -71,10 +69,9 @@ class CompileTab {
       defaultVersion: 'soljson-v0.5.1+commit.c8a2cb62.js', // this default version is defined: in makeMockCompiler (for browser test) and in package.json (downloadsolc_root) for the builtin compiler
       baseurl: 'https://solc-bin.ethereum.org/bin'
     }
-    self.data.optimize = self.queryParams.get().optimize
-    self.data.optimize = self.data.optimize === 'true'
-    self.queryParams.update({ optimize: self.data.optimize })
-    self.compiler.setOptimize(self.data.optimize)
+
+    this.compileTabLogic = new CompileTabLogic(self.queryParams, self.compiler)
+    this.compileTabLogic.init()
 
     this.listenToEvents()
   }
@@ -194,6 +191,11 @@ class CompileTab {
     self._deps.renderer.error(msg, self._view.errorContainerHead, settings)
   }
 
+  onchangeOptimize () {
+    this.compileTabLogic.setOptimize(!!this._view.optimize.checked)
+    this.runCompiler()
+  }
+
   render () {
     const self = this
     if (self._view.el) return self._view.el
@@ -203,13 +205,6 @@ class CompileTab {
       self._updateVersionSelector()
     }
 
-    function onchangeOptimize (event) {
-      self.data.optimize = !!self._view.optimize.checked
-      self.queryParams.update({ optimize: self.data.optimize })
-      self.compiler.setOptimize(self.data.optimize)
-      self.runCompiler()
-    }
-
     self.compiler.event.register('compilerLoaded', (version) => self.setVersionText(version))
     self.fetchAllVersion((allversions, selectedVersion) => {
       self.data.allversions = allversions
@@ -217,8 +212,8 @@ class CompileTab {
       if (self._view.versionSelector) self._updateVersionSelector()
     })
 
-    self._view.optimize = yo`<input onchange=${onchangeOptimize} id="optimize" type="checkbox">`
-    if (self.data.optimize) self._view.optimize.setAttribute('checked', '')
+    self._view.optimize = yo`<input onchange=${this.onchangeOptimize.bind(this)} id="optimize" type="checkbox">`
+    if (self.compileTabLogic.optimize) self._view.optimize.setAttribute('checked', '')
 
     self._view.versionSelector = yo`
       <select onchange=${onchangeLoadVersion} class="${css.select}" id="versionSelector" disabled>
