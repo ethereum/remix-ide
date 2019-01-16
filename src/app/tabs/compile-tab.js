@@ -1,9 +1,7 @@
-/* global Worker */
 const async = require('async')
 const $ = require('jquery')
 const yo = require('yo-yo')
 const copy = require('clipboard-copy')
-var minixhr = require('minixhr')
 var remixTests = require('remix-tests')
 var Compiler = require('remix-solidity').Compiler
 var CompilerImport = require('../compiler/compiler-imports')
@@ -15,13 +13,13 @@ const modalDialogCustom = require('../ui/modal-dialog-custom')
 const parseContracts = require('../contract/contractParser')
 const publishOnSwarm = require('../contract/publishOnSwarm')
 const addTooltip = require('../ui/tooltip')
-var helper = require('../../lib/helper')
 
 const styleGuide = require('../ui/styles-guide/theme-chooser')
 const styles = styleGuide.chooser()
 var css = require('./styles/compile-tab-styles')
 
 const CompileTabLogic = require('./compileTab/compileTab.js')
+const CompilerContainer = require('./compileTab/compilerContainer.js')
 
 class CompileTab {
 
@@ -29,19 +27,11 @@ class CompileTab {
     const self = this
     self._view = {
       el: null,
-      autoCompile: null,
-      compileButton: null,
       warnCompilationSlow: null,
-      compileIcon: null,
-      compileContainer: null,
       errorContainer: null,
       errorContainerHead: null,
       contractNames: null,
-      contractEl: null,
-      config: {
-        solidity: null
-      },
-      optimize: null
+      contractEl: null
     }
     self.queryParams = new QueryParams()
     self.compilerImport = new CompilerImport()
@@ -58,78 +48,35 @@ class CompileTab {
       pluginManager: registry.get('pluginmanager').api
     }
     self.data = {
-      hideWarnings: self._deps.config.get('hideWarnings') || false,
-      autoCompile: self._deps.config.get('autoCompile'),
-      compileTimeout: null,
-      contractsDetails: {},
-      maxTime: 1000,
-      timeout: 300,
-      allversions: null,
-      selectedVersion: null,
-      defaultVersion: 'soljson-v0.5.1+commit.c8a2cb62.js', // this default version is defined: in makeMockCompiler (for browser test) and in package.json (downloadsolc_root) for the builtin compiler
-      baseurl: 'https://solc-bin.ethereum.org/bin'
+      contractsDetails: {}
     }
 
-    this.compileTabLogic = new CompileTabLogic(self.queryParams, self.compiler)
+    this.compileTabLogic = new CompileTabLogic(self.queryParams, self.compiler, self._deps.fileManager, self._deps.editor, self._deps.config)
     this.compileTabLogic.init()
+
+    this.compilerContainer = new CompilerContainer(self.compileTabLogic, self._deps.editor, self._deps.config, self.queryParams)
 
     this.listenToEvents()
   }
 
   listenToEvents () {
     const self = this
-    self._deps.editor.event.register('contentChanged', this.scheduleCompilation.bind(this))
-    self._deps.editor.event.register('sessionSwitched', this.scheduleCompilation.bind(this))
 
-    self.compiler.event.register('compilationDuration', (speed) => {
-      if (!self._view.warnCompilationSlow) return
-      if (speed > self.data.maxTime) {
-        const msg = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
-        self._view.warnCompilationSlow.setAttribute('title', msg)
-        self._view.warnCompilationSlow.style.visibility = 'visible'
-      } else {
-        self._view.warnCompilationSlow.style.visibility = 'hidden'
-      }
-    })
-    self._deps.editor.event.register('contentChanged', () => {
-      if (!self._view.compileIcon) return
-      self._view.compileIcon.classList.add(`${css.bouncingIcon}`) // @TODO: compileView tab
-    })
-    self.compiler.event.register('loadingCompiler', () => {
-      if (!self._view.compileIcon) return
-      self._view.compileIcon.classList.add(`${css.spinningIcon}`)
-      self._view.warnCompilationSlow.style.visibility = 'hidden'
-      self._view.compileIcon.setAttribute('title', 'compiler is loading, please wait a few moments.')
-    })
     self.compiler.event.register('compilationStarted', () => {
-      if (!self._view.compileIcon) return
       self._view.errorContainer.innerHTML = ''
       self._view.errorContainerHead.innerHTML = ''
-      self._view.compileIcon.classList.remove(`${css.bouncingIcon}`)
-      self._view.compileIcon.classList.add(`${css.spinningIcon}`)
-      self._view.compileIcon.setAttribute('title', 'compiling...')
     })
-    self.compiler.event.register('compilerLoaded', () => {
-      if (!self._view.compileIcon) return
-      self._view.compileIcon.classList.remove(`${css.spinningIcon}`)
-      self._view.compileIcon.setAttribute('title', '')
-    })
+
     self.compiler.event.register('compilationFinished', (success, data, source) => {
-      if (self._view.compileIcon) {
-        const compileTab = document.querySelector('.compileView')
-        compileTab.style.color = styles.colors.black
-        self._view.compileIcon.style.color = styles.colors.black
-        self._view.compileIcon.classList.remove(`${css.spinningIcon}`)
-        self._view.compileIcon.classList.remove(`${css.bouncingIcon}`)
-        self._view.compileIcon.setAttribute('title', 'idle')
-      }
+      const compileTab = document.querySelector('.compileView')
+      compileTab.style.color = styles.colors.black
       // reset the contractMetadata list (used by the publish action)
       self.data.contractsDetails = {}
       // refill the dropdown list
       self._view.contractNames.innerHTML = ''
       if (success) {
         // TODO consider using compile tab as a proper module instead of just forwarding event
-        self._deps.pluginManager.receivedDataFrom('sendCompilationResult', 'solidity-compiler', [data.target, source, self.data.selectedVersion, data])
+        self._deps.pluginManager.receivedDataFrom('sendCompilationResult', 'solidity-compiler', [data.target, source, self.compilerContainer.data.selectedVersion, data])
         self._view.contractNames.removeAttribute('disabled')
         self.compiler.visitContracts(contract => {
           self.data.contractsDetails[contract.name] = parseContracts(contract.name, contract.object, self.compiler.getSource(contract.file))
@@ -181,7 +128,7 @@ class CompileTab {
       // ctrl+s or command+s
       if ((e.metaKey || e.ctrlKey) && e.keyCode === 83) {
         e.preventDefault()
-        self.runCompiler()
+        self.compileTabLogic.runCompiler()
       }
     })
   }
@@ -191,69 +138,10 @@ class CompileTab {
     self._deps.renderer.error(msg, self._view.errorContainerHead, settings)
   }
 
-  onchangeOptimize () {
-    this.compileTabLogic.setOptimize(!!this._view.optimize.checked)
-    this.runCompiler()
-  }
-
   render () {
     const self = this
     if (self._view.el) return self._view.el
 
-    function onchangeLoadVersion (event) {
-      self.data.selectedVersion = self._view.versionSelector.value
-      self._updateVersionSelector()
-    }
-
-    self.compiler.event.register('compilerLoaded', (version) => self.setVersionText(version))
-    self.fetchAllVersion((allversions, selectedVersion) => {
-      self.data.allversions = allversions
-      self.data.selectedVersion = selectedVersion
-      if (self._view.versionSelector) self._updateVersionSelector()
-    })
-
-    self._view.optimize = yo`<input onchange=${this.onchangeOptimize.bind(this)} id="optimize" type="checkbox">`
-    if (self.compileTabLogic.optimize) self._view.optimize.setAttribute('checked', '')
-
-    self._view.versionSelector = yo`
-      <select onchange=${onchangeLoadVersion} class="${css.select}" id="versionSelector" disabled>
-        <option disabled selected>Select new compiler version</option>
-      </select>`
-    self._view.version = yo`<span id="version"></span>`
-
-    self._view.warnCompilationSlow = yo`<i title="Compilation Slow" style="visibility:hidden" class="${css.warnCompilationSlow} fa fa-exclamation-triangle" aria-hidden="true"></i>`
-    self._view.compileIcon = yo`<i class="fa fa-refresh ${css.icon}" aria-hidden="true"></i>`
-    self._view.compileButton = yo`<div class="${css.compileButton}" onclick=${compile} id="compile" title="Compile source code">${self._view.compileIcon} Start to compile (Ctrl-S)</div>`
-    self._view.autoCompile = yo`<input class="${css.autocompile}" onchange=${updateAutoCompile} id="autoCompile" type="checkbox" title="Auto compile">`
-    self._view.hideWarningsBox = yo`<input class="${css.autocompile}" onchange=${hideWarnings} id="hideWarningsBox" type="checkbox" title="Hide warnings">`
-    if (self.data.autoCompile) self._view.autoCompile.setAttribute('checked', '')
-    if (self.data.hideWarnings) self._view.hideWarningsBox.setAttribute('checked', '')
-    self._view.compileContainer = yo`
-      <div class="${css.compileContainer}">
-        <div class="${css.info}">
-          <span>Current version:</span> ${self._view.version}
-          <div class="${css.crow}">
-            ${self._view.versionSelector}
-          </div>
-          <div class="${css.compileButtons}">
-            <div class=${css.checkboxes}>
-              <div class="${css.autocompileContainer}">
-                ${self._view.autoCompile}
-                <label for="autoCompile" class="${css.autocompileText}">Auto compile</label>
-              </div>
-              <div class="${css.optimizeContainer}">
-                <div>${self._view.optimize}</div>
-                <label for="optimize" class="${css.checkboxText}">Enable Optimization</label>
-              </div>
-              <div class=${css.hideWarningsContainer}>
-                ${self._view.hideWarningsBox}
-                <label for="hideWarningsBox" class="${css.autocompileText}">Hide warnings</label>
-              </div>
-            </div>
-            ${self._view.compileButton}
-          </div>
-        </div>
-      </div>`
     self._view.errorContainer = yo`<div class='error'></div>`
     self._view.errorContainerHead = yo`<div class='error'></div>`
     self._view.contractNames = yo`<select class="${css.contractNames}" disabled></select>`
@@ -277,7 +165,7 @@ class CompileTab {
       </div>`
     self._view.el = yo`
       <div class="${css.compileTabView}" id="compileTabView">
-        ${self._view.compileContainer}
+        ${this.compilerContainer.render()}
         ${self._view.contractEl}
         ${self._view.errorContainerHead}
         ${self._view.errorContainer}
@@ -295,12 +183,6 @@ class CompileTab {
       'name': 'Name of the compiled contract',
       'swarmLocation': 'Swarm url where all metadata information can be found (contract needs to be published first)',
       'web3Deploy': 'Copy/paste this code to any JavaScript/Web3 console to deploy this contract'
-    }
-    function updateAutoCompile (event) { self._deps.config.set('autoCompile', self._view.autoCompile.checked) }
-    function compile (event) { self.runCompiler() }
-    function hideWarnings (event) {
-      self._deps.config.set('hideWarnings', self._view.hideWarningsBox.checked)
-      compile()
     }
     function getContractProperty (property) {
       const select = self._view.contractNames
@@ -413,84 +295,6 @@ class CompileTab {
     return self._view.el
   }
 
-  setVersionText (text) {
-    const self = this
-    self.data.version = text
-    if (self._view.version) self._view.version.innerText = text
-  }
-
-  _updateVersionSelector () {
-    this._view.versionSelector.innerHTML = ''
-    this._view.versionSelector.appendChild(yo`<option disabled selected>Select new compiler version</option>`)
-    this.data.allversions.forEach(build => this._view.versionSelector.appendChild(yo`<option value=${build.path}>${build.longVersion}</option>`))
-    this._view.versionSelector.removeAttribute('disabled')
-    this.queryParams.update({ version: this.data.selectedVersion })
-    var url
-    if (this.data.selectedVersion === 'builtin') {
-      var location = window.document.location
-      location = location.protocol + '//' + location.host + '/' + location.pathname
-      if (location.endsWith('index.html')) location = location.substring(0, location.length - 10)
-      if (!location.endsWith('/')) location += '/'
-      url = location + 'soljson.js'
-    } else {
-      if (this.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(this.data.selectedVersion)) {
-        return console.log('loading ' + this.data.selectedVersion + ' not allowed')
-      }
-      url = `${this.data.baseurl}/${this.data.selectedVersion}`
-    }
-    var isFirefox = typeof InstallTrigger !== 'undefined'
-    if (document.location.protocol !== 'file:' && Worker !== undefined && isFirefox) {
-      // Workers cannot load js on "file:"-URLs and we get a
-      // "Uncaught RangeError: Maximum call stack size exceeded" error on Chromium,
-      // resort to non-worker version in that case.
-      this.compiler.loadVersion(true, url)
-      this.setVersionText('(loading using worker)')
-    } else {
-      this.compiler.loadVersion(false, url)
-      this.setVersionText('(loading)')
-    }
-  }
-
-  fetchAllVersion (callback) {
-    var self = this
-    minixhr(`${self.data.baseurl}/list.json`, function (json, event) {
-      // @TODO: optimise and cache results to improve app loading times
-      var allversions, selectedVersion
-      if (event.type !== 'error') {
-        try {
-          const data = JSON.parse(json)
-          allversions = data.builds.slice().reverse()
-          selectedVersion = self.data.defaultVersion
-          if (self.queryParams.get().version) selectedVersion = self.queryParams.get().version
-        } catch (e) {
-          addTooltip('Cannot load compiler version list. It might have been blocked by an advertisement blocker. Please try deactivating any of them from this page and reload.')
-        }
-      } else {
-        allversions = [{ path: 'builtin', longVersion: 'latest local version' }]
-        selectedVersion = 'builtin'
-      }
-      callback(allversions, selectedVersion)
-    })
-  }
-
-  runCompiler () {
-    const self = this
-    self._deps.fileManager.saveCurrentFile()
-    self._deps.editor.clearAnnotations()
-    var currentFile = self._deps.config.get('currentFile')
-    if (!currentFile && !/.(.sol)$/.exec(currentFile)) return
-    // only compile *.sol file.
-    var target = currentFile
-    var sources = {}
-    var provider = self._deps.fileManager.fileProviderOf(currentFile)
-    if (!provider) return console.log('cannot compile ' + currentFile + '. Does not belong to any explorer')
-    provider.get(target, (error, content) => {
-      if (error) return console.log(error)
-      sources[target] = { content }
-      self.compiler.compile(sources, target)
-    })
-  }
-
   importExternal (url, cb) {
     this.compilerImport.import(url,
       (loadingMsg) => { addTooltip(loadingMsg) },
@@ -532,12 +336,6 @@ class CompileTab {
       )
     }
     this.importExternal(url, filecb)
-  }
-
-  scheduleCompilation () {
-    if (!this._deps.config.get('autoCompile')) return
-    if (this.data.compileTimeout) window.clearTimeout(this.data.compileTimeout)
-    this.data.compileTimeout = window.setTimeout(() => this.runCompiler(), this.data.timeout)
   }
 
 }
