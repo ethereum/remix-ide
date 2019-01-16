@@ -75,6 +75,11 @@ class CompileTab {
     self._components.queryParams.update({ optimize: self.data.optimize })
     self._components.compiler.setOptimize(self.data.optimize)
 
+    this.listenToEvents()
+  }
+
+  listenToEvents () {
+    const self = this
     self._deps.editor.event.register('contentChanged', this.scheduleCompilation.bind(this))
     self._deps.editor.event.register('sessionSwitched', this.scheduleCompilation.bind(this))
 
