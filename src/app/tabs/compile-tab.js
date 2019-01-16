@@ -23,6 +23,7 @@ const styles = styleGuide.chooser()
 var css = require('./styles/compile-tab-styles')
 
 class CompileTab {
+
   constructor (localRegistry) {
     const self = this
     self._view = {
@@ -74,14 +75,10 @@ class CompileTab {
     self._components.queryParams.update({ optimize: self.data.optimize })
     self._components.compiler.setOptimize(self.data.optimize)
 
-    self._deps.editor.event.register('contentChanged', scheduleCompilation)
-    self._deps.editor.event.register('sessionSwitched', scheduleCompilation)
-    function scheduleCompilation () {
-      if (!self._deps.config.get('autoCompile')) return
-      if (self.data.compileTimeout) window.clearTimeout(self.data.compileTimeout)
-      self.data.compileTimeout = window.setTimeout(() => self.runCompiler(), self.data.timeout)
-    }
-    self._components.compiler.event.register('compilationDuration', function tabHighlighting (speed) {
+    self._deps.editor.event.register('contentChanged', this.scheduleCompilation.bind(this))
+    self._deps.editor.event.register('sessionSwitched', this.scheduleCompilation.bind(this))
+
+    self._components.compiler.event.register('compilationDuration', (speed) => {
       if (!self._view.warnCompilationSlow) return
       if (speed > self.data.maxTime) {
         const msg = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
@@ -91,17 +88,17 @@ class CompileTab {
         self._view.warnCompilationSlow.style.visibility = 'hidden'
       }
     })
-    self._deps.editor.event.register('contentChanged', function changedFile () {
+    self._deps.editor.event.register('contentChanged', () => {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.add(`${css.bouncingIcon}`) // @TODO: compileView tab
     })
-    self._components.compiler.event.register('loadingCompiler', function start () {
+    self._components.compiler.event.register('loadingCompiler', () => {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.add(`${css.spinningIcon}`)
       self._view.warnCompilationSlow.style.visibility = 'hidden'
       self._view.compileIcon.setAttribute('title', 'compiler is loading, please wait a few moments.')
     })
-    self._components.compiler.event.register('compilationStarted', function start () {
+    self._components.compiler.event.register('compilationStarted', () => {
       if (!self._view.compileIcon) return
       self._view.errorContainer.innerHTML = ''
       self._view.errorContainerHead.innerHTML = ''
@@ -109,12 +106,12 @@ class CompileTab {
       self._view.compileIcon.classList.add(`${css.spinningIcon}`)
       self._view.compileIcon.setAttribute('title', 'compiling...')
     })
-    self._components.compiler.event.register('compilerLoaded', function loaded () {
+    self._components.compiler.event.register('compilerLoaded', () => {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.remove(`${css.spinningIcon}`)
       self._view.compileIcon.setAttribute('title', '')
     })
-    self._components.compiler.event.register('compilationFinished', function finish (success, data, source) {
+    self._components.compiler.event.register('compilationFinished', (success, data, source) => {
       if (self._view.compileIcon) {
         const compileTab = document.querySelector('.compileView')
         compileTab.style.color = styles.colors.black
@@ -159,7 +156,7 @@ class CompileTab {
       }
       if (data.errors && data.errors.length) {
         error = true
-        data.errors.forEach(function (err) {
+        data.errors.forEach((err) => {
           if (self._deps.config.get('hideWarnings')) {
             if (err.severity !== 'warning') {
               self._deps.renderer.error(err.formattedMessage, self._view.errorContainer, {type: err.severity})
@@ -177,7 +174,7 @@ class CompileTab {
     })
 
     // Run the compiler instead of trying to save the website
-    $(window).keydown(function (e) {
+    $(window).keydown((e) => {
       // ctrl+s or command+s
       if ((e.metaKey || e.ctrlKey) && e.keyCode === 83) {
         e.preventDefault()
@@ -185,10 +182,12 @@ class CompileTab {
       }
     })
   }
+
   addWarning (msg, settings) {
     const self = this
     self._deps.renderer.error(msg, self._view.errorContainerHead, settings)
   }
+
   render () {
     const self = this
     if (self._view.el) return self._view.el
@@ -412,43 +411,45 @@ class CompileTab {
     }
     return self._view.el
   }
+
   setVersionText (text) {
     const self = this
     self.data.version = text
     if (self._view.version) self._view.version.innerText = text
   }
+
   _updateVersionSelector () {
-    const self = this
-    self._view.versionSelector.innerHTML = ''
-    self._view.versionSelector.appendChild(yo`<option disabled selected>Select new compiler version</option>`)
-    self.data.allversions.forEach(build => self._view.versionSelector.appendChild(yo`<option value=${build.path}>${build.longVersion}</option>`))
-    self._view.versionSelector.removeAttribute('disabled')
-    self._components.queryParams.update({ version: self.data.selectedVersion })
+    this._view.versionSelector.innerHTML = ''
+    this._view.versionSelector.appendChild(yo`<option disabled selected>Select new compiler version</option>`)
+    this.data.allversions.forEach(build => this._view.versionSelector.appendChild(yo`<option value=${build.path}>${build.longVersion}</option>`))
+    this._view.versionSelector.removeAttribute('disabled')
+    this._components.queryParams.update({ version: this.data.selectedVersion })
     var url
-    if (self.data.selectedVersion === 'builtin') {
+    if (this.data.selectedVersion === 'builtin') {
       var location = window.document.location
       location = location.protocol + '//' + location.host + '/' + location.pathname
       if (location.endsWith('index.html')) location = location.substring(0, location.length - 10)
       if (!location.endsWith('/')) location += '/'
       url = location + 'soljson.js'
     } else {
-      if (self.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(self.data.selectedVersion)) {
-        return console.log('loading ' + self.data.selectedVersion + ' not allowed')
+      if (this.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(this.data.selectedVersion)) {
+        return console.log('loading ' + this.data.selectedVersion + ' not allowed')
       }
-      url = `${self.data.baseurl}/${self.data.selectedVersion}`
+      url = `${this.data.baseurl}/${this.data.selectedVersion}`
     }
     var isFirefox = typeof InstallTrigger !== 'undefined'
     if (document.location.protocol !== 'file:' && Worker !== undefined && isFirefox) {
       // Workers cannot load js on "file:"-URLs and we get a
       // "Uncaught RangeError: Maximum call stack size exceeded" error on Chromium,
       // resort to non-worker version in that case.
-      self._components.compiler.loadVersion(true, url)
-      self.setVersionText('(loading using worker)')
+      this._components.compiler.loadVersion(true, url)
+      this.setVersionText('(loading using worker)')
     } else {
-      self._components.compiler.loadVersion(false, url)
-      self.setVersionText('(loading)')
+      this._components.compiler.loadVersion(false, url)
+      this.setVersionText('(loading)')
     }
   }
+
   fetchAllVersion (callback) {
     var self = this
     minixhr(`${self.data.baseurl}/list.json`, function (json, event) {
@@ -470,81 +471,74 @@ class CompileTab {
       callback(allversions, selectedVersion)
     })
   }
+
   runCompiler () {
     const self = this
     self._deps.fileManager.saveCurrentFile()
     self._deps.editor.clearAnnotations()
     var currentFile = self._deps.config.get('currentFile')
-    if (currentFile) {
-      if (/.(.sol)$/.exec(currentFile)) {
-        // only compile *.sol file.
-        var target = currentFile
-        var sources = {}
-        var provider = self._deps.fileManager.fileProviderOf(currentFile)
-        if (provider) {
-          provider.get(target, (error, content) => {
-            if (error) {
-              console.log(error)
-            } else {
-              sources[target] = { content }
-              self._components.compiler.compile(sources, target)
-            }
-          })
-        } else {
-          console.log('cannot compile ' + currentFile + '. Does not belong to any explorer')
-        }
-      }
-    }
+    if (!currentFile && !/.(.sol)$/.exec(currentFile)) return
+    // only compile *.sol file.
+    var target = currentFile
+    var sources = {}
+    var provider = self._deps.fileManager.fileProviderOf(currentFile)
+    if (!provider) return console.log('cannot compile ' + currentFile + '. Does not belong to any explorer')
+    provider.get(target, (error, content) => {
+      if (error) return console.log(error)
+      sources[target] = { content }
+      self._components.compiler.compile(sources, target)
+    })
   }
+
   importExternal (url, cb) {
-    const self = this
-    self._components.compilerImport.import(url,
-      (loadingMsg) => {
-        addTooltip(loadingMsg)
-      },
+    this._components.compilerImport.import(url,
+      (loadingMsg) => { addTooltip(loadingMsg) },
       (error, content, cleanUrl, type, url) => {
-        if (!error) {
-          if (self._deps.filesProviders[type]) {
-            self._deps.filesProviders[type].addReadOnly(cleanUrl, content, url)
-          }
-          cb(null, content)
-        } else {
-          cb(error)
+        if (error) return cb(error)
+
+        if (this._deps.filesProviders[type]) {
+          this._deps.filesProviders[type].addReadOnly(cleanUrl, content, url)
         }
+        cb(null, content)
       })
   }
+
   importFileCb (url, filecb) {
-    const self = this
-    if (url.indexOf('/remix_tests.sol') !== -1) {
-      return filecb(null, remixTests.assertLibCode)
-    }
-    var provider = self._deps.fileManager.fileProviderOf(url)
+    if (url.indexOf('/remix_tests.sol') !== -1) return filecb(null, remixTests.assertLibCode)
+
+    var provider = this._deps.fileManager.fileProviderOf(url)
     if (provider) {
       if (provider.type === 'localhost' && !provider.isConnected()) {
         return filecb(`file provider ${provider.type} not available while trying to resolve ${url}`)
       }
-      provider.exists(url, (error, exist) => {
+      return provider.exists(url, (error, exist) => {
         if (error) return filecb(error)
         if (exist) {
           return provider.get(url, filecb)
-        } else {
-          self.importExternal(url, filecb)
         }
+        this.importExternal(url, filecb)
       })
-    } else if (self._components.compilerImport.isRelativeImport(url)) {
+    }
+    if (this._components.compilerImport.isRelativeImport(url)) {
       // try to resolve localhost modules (aka truffle imports)
       var splitted = /([^/]+)\/(.*)$/g.exec(url)
-      async.tryEach([
-        (cb) => { self.importFileCb('localhost/installed_contracts/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
-        (cb) => { self.importFileCb('localhost/node_modules/' + url, cb) },
-        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { self.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
+      return async.tryEach([
+        (cb) => { this.importFileCb('localhost/installed_contracts/' + url, cb) },
+        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { this.importFileCb('localhost/installed_contracts/' + splitted[1] + '/contracts/' + splitted[2], cb) } },
+        (cb) => { this.importFileCb('localhost/node_modules/' + url, cb) },
+        (cb) => { if (!splitted) { cb('URL not parseable: ' + url) } else { this.importFileCb('localhost/node_modules/' + splitted[1] + '/contracts/' + splitted[2], cb) } }],
         (error, result) => { filecb(error, result) }
       )
-    } else {
-      self.importExternal(url, filecb)
     }
+    this.importExternal(url, filecb)
   }
+
+  scheduleCompilation () {
+    if (!this._deps.config.get('autoCompile')) return
+    if (this.data.compileTimeout) window.clearTimeout(this.data.compileTimeout)
+    this.data.compileTimeout = window.setTimeout(() => this.runCompiler(), this.data.timeout)
+  }
+
 }
 
 module.exports = CompileTab
