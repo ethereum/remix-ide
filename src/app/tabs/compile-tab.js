@@ -45,8 +45,9 @@ class CompileTab {
     self._components = {}
     self._components.registry = localRegistry || globalRegistry
     self._components.queryParams = new QueryParams()
-    self._components.compilerImport = new CompilerImport()
-    self._components.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
+
+    self.compilerImport = new CompilerImport()
+    self.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
 
     // dependencies
     self._deps = {
@@ -73,7 +74,7 @@ class CompileTab {
     self.data.optimize = self._components.queryParams.get().optimize
     self.data.optimize = self.data.optimize === 'true'
     self._components.queryParams.update({ optimize: self.data.optimize })
-    self._components.compiler.setOptimize(self.data.optimize)
+    self.compiler.setOptimize(self.data.optimize)
 
     this.listenToEvents()
   }
@@ -83,7 +84,7 @@ class CompileTab {
     self._deps.editor.event.register('contentChanged', this.scheduleCompilation.bind(this))
     self._deps.editor.event.register('sessionSwitched', this.scheduleCompilation.bind(this))
 
-    self._components.compiler.event.register('compilationDuration', (speed) => {
+    self.compiler.event.register('compilationDuration', (speed) => {
       if (!self._view.warnCompilationSlow) return
       if (speed > self.data.maxTime) {
         const msg = `Last compilation took ${speed}ms. We suggest to turn off autocompilation.`
@@ -97,13 +98,13 @@ class CompileTab {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.add(`${css.bouncingIcon}`) // @TODO: compileView tab
     })
-    self._components.compiler.event.register('loadingCompiler', () => {
+    self.compiler.event.register('loadingCompiler', () => {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.add(`${css.spinningIcon}`)
       self._view.warnCompilationSlow.style.visibility = 'hidden'
       self._view.compileIcon.setAttribute('title', 'compiler is loading, please wait a few moments.')
     })
-    self._components.compiler.event.register('compilationStarted', () => {
+    self.compiler.event.register('compilationStarted', () => {
       if (!self._view.compileIcon) return
       self._view.errorContainer.innerHTML = ''
       self._view.errorContainerHead.innerHTML = ''
@@ -111,12 +112,12 @@ class CompileTab {
       self._view.compileIcon.classList.add(`${css.spinningIcon}`)
       self._view.compileIcon.setAttribute('title', 'compiling...')
     })
-    self._components.compiler.event.register('compilerLoaded', () => {
+    self.compiler.event.register('compilerLoaded', () => {
       if (!self._view.compileIcon) return
       self._view.compileIcon.classList.remove(`${css.spinningIcon}`)
       self._view.compileIcon.setAttribute('title', '')
     })
-    self._components.compiler.event.register('compilationFinished', (success, data, source) => {
+    self.compiler.event.register('compilationFinished', (success, data, source) => {
       if (self._view.compileIcon) {
         const compileTab = document.querySelector('.compileView')
         compileTab.style.color = styles.colors.black
@@ -133,8 +134,8 @@ class CompileTab {
         // TODO consider using compile tab as a proper module instead of just forwarding event
         self._deps.pluginManager.receivedDataFrom('sendCompilationResult', 'solidity-compiler', [data.target, source, self.data.selectedVersion, data])
         self._view.contractNames.removeAttribute('disabled')
-        self._components.compiler.visitContracts(contract => {
-          self.data.contractsDetails[contract.name] = parseContracts(contract.name, contract.object, self._components.compiler.getSource(contract.file))
+        self.compiler.visitContracts(contract => {
+          self.data.contractsDetails[contract.name] = parseContracts(contract.name, contract.object, self.compiler.getSource(contract.file))
           var contractName = yo`<option>${contract.name}</option>`
           self._view.contractNames.appendChild(contractName)
         })
@@ -172,7 +173,7 @@ class CompileTab {
         })
       }
       if (!error && data.contracts) {
-        self._components.compiler.visitContracts((contract) => {
+        self.compiler.visitContracts((contract) => {
           self._deps.renderer.error(contract.name, self._view.errorContainer, {type: 'success'})
         })
       }
@@ -205,11 +206,11 @@ class CompileTab {
     function onchangeOptimize (event) {
       self.data.optimize = !!self._view.optimize.checked
       self._components.queryParams.update({ optimize: self.data.optimize })
-      self._components.compiler.setOptimize(self.data.optimize)
+      self.compiler.setOptimize(self.data.optimize)
       self.runCompiler()
     }
 
-    self._components.compiler.event.register('compilerLoaded', (version) => self.setVersionText(version))
+    self.compiler.event.register('compilerLoaded', (version) => self.setVersionText(version))
     self.fetchAllVersion((allversions, selectedVersion) => {
       self.data.allversions = allversions
       self.data.selectedVersion = selectedVersion
@@ -447,10 +448,10 @@ class CompileTab {
       // Workers cannot load js on "file:"-URLs and we get a
       // "Uncaught RangeError: Maximum call stack size exceeded" error on Chromium,
       // resort to non-worker version in that case.
-      this._components.compiler.loadVersion(true, url)
+      this.compiler.loadVersion(true, url)
       this.setVersionText('(loading using worker)')
     } else {
-      this._components.compiler.loadVersion(false, url)
+      this.compiler.loadVersion(false, url)
       this.setVersionText('(loading)')
     }
   }
@@ -491,12 +492,12 @@ class CompileTab {
     provider.get(target, (error, content) => {
       if (error) return console.log(error)
       sources[target] = { content }
-      self._components.compiler.compile(sources, target)
+      self.compiler.compile(sources, target)
     })
   }
 
   importExternal (url, cb) {
-    this._components.compilerImport.import(url,
+    this.compilerImport.import(url,
       (loadingMsg) => { addTooltip(loadingMsg) },
       (error, content, cleanUrl, type, url) => {
         if (error) return cb(error)
@@ -524,7 +525,7 @@ class CompileTab {
         this.importExternal(url, filecb)
       })
     }
-    if (this._components.compilerImport.isRelativeImport(url)) {
+    if (this.compilerImport.isRelativeImport(url)) {
       // try to resolve localhost modules (aka truffle imports)
       var splitted = /([^/]+)\/(.*)$/g.exec(url)
       return async.tryEach([
