@@ -421,7 +421,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   registry.put({api: renderer, name: 'renderer'})
 
   // ---------------- Tabs -------------------------------
-  let compileTab = new CompileTab(self._components.registry)
+  let compileTab = new CompileTab(registry)
   let tabs = {
     compile: compileTab,
     run: new RunTab(

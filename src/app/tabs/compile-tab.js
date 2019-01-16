@@ -8,7 +8,6 @@ var remixTests = require('remix-tests')
 var Compiler = require('remix-solidity').Compiler
 var CompilerImport = require('../compiler/compiler-imports')
 var QueryParams = require('../../lib/query-params')
-var globalRegistry = require('../../global/registry')
 const TreeView = require('../ui/TreeView')
 const modalDialog = require('../ui/modaldialog')
 const copyToClipboard = require('../ui/copy-to-clipboard')
@@ -22,9 +21,11 @@ const styleGuide = require('../ui/styles-guide/theme-chooser')
 const styles = styleGuide.chooser()
 var css = require('./styles/compile-tab-styles')
 
+const CompileTabLogic = require('./compileTab/compileTab.js')
+
 class CompileTab {
 
-  constructor (localRegistry) {
+  constructor (registry) {
     const self = this
     self._view = {
       el: null,
@@ -43,21 +44,22 @@ class CompileTab {
       optimize: null
     }
     self._components = {}
-    self._components.registry = localRegistry || globalRegistry
     self._components.queryParams = new QueryParams()
 
     self.compilerImport = new CompilerImport()
     self.compiler = new Compiler((url, cb) => self.importFileCb(url, cb))
 
+    this.compileTabLogic = new CompileTabLogic()
+
     // dependencies
     self._deps = {
-      editor: self._components.registry.get('editor').api,
-      config: self._components.registry.get('config').api,
-      renderer: self._components.registry.get('renderer').api,
-      swarmfileProvider: self._components.registry.get('fileproviders/swarm').api,
-      fileManager: self._components.registry.get('filemanager').api,
-      fileProviders: self._components.registry.get('fileproviders').api,
-      pluginManager: self._components.registry.get('pluginmanager').api
+      editor: registry.get('editor').api,
+      config: registry.get('config').api,
+      renderer: registry.get('renderer').api,
+      swarmfileProvider: registry.get('fileproviders/swarm').api,
+      fileManager: registry.get('filemanager').api,
+      fileProviders: registry.get('fileproviders').api,
+      pluginManager: registry.get('pluginmanager').api
     }
     self.data = {
       hideWarnings: self._deps.config.get('hideWarnings') || false,
