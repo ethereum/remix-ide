@@ -1,3 +1,5 @@
+var Section = require('../ui/landing Page/section.js')
+var LandingPage = require('../ui/landing Page/landing-page.js')
 var yo = require('yo-yo')
 var EventManager = require('../../lib/events')
 var $ = require('jquery')
@@ -132,14 +134,43 @@ class EditorPanel {
     if (self._view.el) return self._view.el
     self._view.editor = self._components.editor.render()
     self._view.terminal = self._components.terminal.render()
+      
+    var actions1 = [
+                  {label: "New File", type: `callback`, payload: () => { alert(`new file`) }}, 
+                  {label: "Remixd", type: `callback`, payload: () => { alert(`remixd`) }}, 
+                  {label: "Import from GitHub", type: `link`, payload: `https://github.com/`}, 
+                  {label: "Import a gist", type: `link`, payload: `https://gist.github.com/`}, 
+                  {label: "Load a Script", type: `callback`, payload: () => { alert(`load a script`) }}
+    ]
+    
+    var actions2 = [
+                  {label: "New File", type: `callback`, payload: () => { alert(`new file`) }}, 
+                  {label: "Remixd", type: `callback`, payload: () => { alert(`remixd`) }}, 
+                  {label: "Import from GitHub", type: `link`, payload: `https://github.com/`}, 
+                  {label: "Import a gist", type: `link`, payload: `https://gist.github.com/`}, 
+                  {label: "Load a Script", type: `callback`, payload: () => { alert(`load a script`) }}
+    ]
+    
+    var title1 = "Start"
+    
+    var title2 = "About"
+    
+    var section1 = new Section (title1, actions1)
+    var section2 = new Section (title2, actions2)
+    
+    var sections = [section1, section2]
+    
+    self._view.landingPage = new LandingPage(sections)
+      
+    //self._view.landingPage.createTotalLook()
+    
     self._view.content = yo`
       <div class=${css.content}>
         ${self._renderTabsbar()}
         <div class=${css.contextviewcontainer}>
           ${self._components.contextView.render()}
         </div>
-        ${self._view.editor}
-        ${self._view.terminal}
+        ${self._view.landingPage.createTotalLook()}
       </div>
     `
     self._view.el = yo`
