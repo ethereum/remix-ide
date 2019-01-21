@@ -52,6 +52,7 @@ function runTests (browser, testData) {
   browser.modalFooterOKClick = contractHelper.modalFooterOKClick
   browser.getEditorValue = contractHelper.getEditorValue
   browser.testEditorValue = contractHelper.testEditorValue
+  browser.clickLaunchIcon = contractHelper.clickLaunchIcon
   var browserName = browser.options.desiredCapabilities.browserName
   if (browserName === 'safari' || browserName === 'internet explorer') {
     console.log('do not run remixd test for ' + browserName + ': sauce labs doesn\'t seems to handle websocket')
@@ -64,6 +65,7 @@ function runTests (browser, testData) {
     return
   }
   browser
+    .clickLaunchIcon('file explorers')
     .waitForElementVisible('.newFile', 10000)
     .click('.websocketconn')
     .waitForElementVisible('#modal-footer-ok', 10000)

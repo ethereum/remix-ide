@@ -20,9 +20,10 @@ module.exports = {
 function runTests (browser) {
   browser.setEditorValue = contractHelper.setEditorValue
   browser.getEditorValue = contractHelper.getEditorValue
+  browser.clickLaunchIcon = contractHelper.clickLaunchIcon
   browser
     .waitForElementVisible('.newFile', 10000)
-    .click('.compileView')
+    .clickLaunchIcon('solidity')
     .click('#filepanel label[data-path="browser"]')
     .perform(() => {
       // the first fn is used to pass browser to the other ones.

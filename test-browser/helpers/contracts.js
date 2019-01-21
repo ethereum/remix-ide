@@ -23,7 +23,12 @@ module.exports = {
   testEditorValue,
   renameFile,
   removeFile,
-  getAddressAtPosition
+  clickLaunchIcon
+}
+
+function clickLaunchIcon (icon) {
+  this.click('#icon-panel div[title="' + icon + '"]')
+  return this
 }
 
 function getCompiledContracts (browser, compiled, callback) {
