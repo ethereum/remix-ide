@@ -1,15 +1,12 @@
 var yo = require('yo-yo')
 var csjs = require('csjs-inject')
 var EventManager = require('remix-lib').EventManager
-var i;
+
 var css = csjs`
   .item      {
-    position        : static;
-    box-sizing      : border-box;
     display         : flex;
     flex-direction  : column;
-    align-items     : left;
-    border          : 2px solid black;
+    align-items     : center;
     width           : 400px;
     padding         : 50px;
     background-color: #bfbfbf;
@@ -40,8 +37,8 @@ class Section {
         <br>
       </div>
     `
-    alert("1")
-    for (i = 0; i < this.actions.length; i++) {
+    alert(JSON.stringify(this.actions))
+    for (var i = 0; i < this.actions.length; i++) {
           if (this.actions[i].type === `callback`) {
               sectionLook.appendChild (yo`
                 <div>
@@ -59,11 +56,11 @@ class Section {
           }    
     }
 
-    if (!self._view) {
-      self._view = sectionLook
+    if (!this._view) {
+      this._view = sectionLook
     }
     
-    return self._view
+    return this._view
       
   }
 

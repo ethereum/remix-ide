@@ -1,7 +1,6 @@
 var yo = require('yo-yo')
 var csjs = require('csjs-inject')
 var EventManager = require('remix-lib').EventManager
-var i;
 var css = csjs`
   .container        {
     position        : static;
@@ -9,17 +8,22 @@ var css = csjs`
     box-sizing      : border-box;
 
     display         : flex;
-    flex-direction  : column;
+    flex-direction  : row;
     flex-wrap       : wrap;
-    justify-content : space-between;
+    justify-content : space-evenly;
     align-items     : center;
     align-content   : space-around;
     
     border          : 2px solid black;
-    width           : 400px;
+    width           : 100%;
     padding         : 50px;
     background-color: #bfbfbf;
     font-family     : "Lucida Console", Monaco, monospace
+}
+
+  .section          {
+
+    border          : 2px solid black;
 }
 
 `
@@ -35,25 +39,21 @@ class LandingPage {
       
     var totalLook = yo`
       <div class=${css.container}>
-        <h1> Remix </h1>
-        <br>
-        <br>
-        <br>
       </div>
     `
     alert("2")
-    for (i = 0; i < this.sections.length; i++) {
+    for (var i = 0; i < this.sections.length; i++) {
               totalLook.appendChild (yo`
-                <div> 
+                <div class=${css.section}> 
                     ${this.sections[i].createSectionLook()}
                 </div>
               `)    
     }
 
-    if (!self._view) {
-      self._view = totalLook
+    if (!this._view) {
+      this._view = totalLook
     }
-    return self._view
+    return this._view
   }
 
   update () {

@@ -136,29 +136,57 @@ class EditorPanel {
     self._view.terminal = self._components.terminal.render()
       
     var actions1 = [
-                  {label: "New File", type: `callback`, payload: () => { alert(`new file`) }}, 
-                  {label: "Remixd", type: `callback`, payload: () => { alert(`remixd`) }}, 
-                  {label: "Import from GitHub", type: `link`, payload: `https://github.com/`}, 
-                  {label: "Import a gist", type: `link`, payload: `https://gist.github.com/`}, 
-                  {label: "Load a Script", type: `callback`, payload: () => { alert(`load a script`) }}
+                  {label: "new file", type: `callback`, payload: () => { alert(`-new file created-`) }}, 
+                  {label: "import from GitHub", type: `callback`, payload: () => { alert(`-imported from GitHub-`) }}, 
+                  {label: "import from gist", type: `callback`, payload: () => { alert(`-imported from gist-`) }}
     ]
     
     var actions2 = [
-                  {label: "New File", type: `callback`, payload: () => { alert(`new file`) }}, 
-                  {label: "Remixd", type: `callback`, payload: () => { alert(`remixd`) }}, 
-                  {label: "Import from GitHub", type: `link`, payload: `https://github.com/`}, 
-                  {label: "Import a gist", type: `link`, payload: `https://gist.github.com/`}, 
-                  {label: "Load a Script", type: `callback`, payload: () => { alert(`load a script`) }}
+                  {label: "...", type: `callback`, payload: () => { alert(`-...-`) }}
+    ]
+    
+    var actions3 = [
+                  {label: "Remix documentation", type: `link`, payload: `https://remix.readthedocs.io/en/latest/#`}, 
+                  {label: "GitHub repository", type: `link`, payload: `https://github.com/ethereum/remix-ide`},
+                  {label: "acces local file system (remixd)", type: `link`, payload: `https://remix.readthedocs.io/en/latest/tutorial_remixd_filesystem.html`}, 
+                  {label: "npm module for remixd", type: `link`, payload: `https://www.npmjs.com/package/remixd`},
+                  {label: "medium posts", type: `link`, payload: `https://medium.com/remix-ide`}, 
+                  {label: "tutorials", type: `link`, payload: `https://github.com/ethereum/remix-workshops`}
+                  
+    ]
+    
+    var actions4 = [
+                  {label: "Remix plugins & modules", type: `link`, payload: `https://github.com/ethereum/remix-plugin/blob/master/readme.md`}, 
+                  {label: "repository on GitHub", type: `link`, payload: `https://github.com/ethereum/remix-plugin`},
+                  {label: "examples", type: `link`, payload: `https://github.com/ethereum/remix-plugin/tree/master/examples`},
+                  {label: "build plugin for Remix", type: `link`, payload: `https://medium.com/remix-ide/build-a-plugin-for-remix-90d43b209c5a`}
+                  
+    ]
+    
+    var actions5 = [
+                  {label: "Gitter channel", type: `link`, payload: `https://gitter.im/ethereum/remix`}, 
+                  {label: "Stack Overflow", type: `link`, payload: `https://stackoverflow.com/questions/tagged/remix`},
+                  {label: "Reddit", type: `link`, payload: `https://www.reddit.com/r/ethdev/search?q=remix&restrict_sr=1`}
+                  
     ]
     
     var title1 = "Start"
     
-    var title2 = "About"
+    var title2 = "Recent"
+    
+    var title3 = "Learn"
+    
+    var title4 = "Plugins"
+    
+    var title5 = "Help"
     
     var section1 = new Section (title1, actions1)
     var section2 = new Section (title2, actions2)
+    var section3 = new Section (title3, actions3)
+    var section4 = new Section (title4, actions4)
+    var section5 = new Section (title5, actions5)
     
-    var sections = [section1, section2]
+    var sections = [section1, section2, section3, section4, section5]
     
     self._view.landingPage = new LandingPage(sections)
       
@@ -170,6 +198,7 @@ class EditorPanel {
         <div class=${css.contextviewcontainer}>
           ${self._components.contextView.render()}
         </div>
+        <h1> Remix </h1>
         ${self._view.landingPage.createTotalLook()}
       </div>
     `
