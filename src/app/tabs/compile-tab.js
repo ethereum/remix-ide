@@ -483,9 +483,10 @@ module.exports = class CompileTab {
         if (provider) {
           provider.get(target, (error, content) => {
             if (error) {
-              console.log(error)
+              console.log('runCompiler', error)
             } else {
               sources[target] = { content }
+              console.log('sources', sources)
               self._components.compiler.compile(sources, target)
             }
           })
@@ -501,10 +502,10 @@ module.exports = class CompileTab {
       (loadingMsg) => {
         addTooltip(loadingMsg)
       },
-      (error, content, cleanUrl, type, url) => {
+      (error, content, cleanUrl, type, url) => { // these two lines
         if (!error) {
           if (self._deps.fileProviders[type]) {
-            self._deps.fileProviders[type].addReadOnly(cleanUrl, content, url)
+            self._deps.fileProviders[type].addReadOnly(cleanUrl, content, url, type) // for eventual changes
           }
           cb(null, content)
         } else {
@@ -514,7 +515,7 @@ module.exports = class CompileTab {
   }
   importFileCb (url, filecb) {
     const self = this
-    if (url.indexOf('/remix_tests.sol') !== -1) {
+    if (url.indexOf('remix_tests.sol') !== -1) {
       return filecb(null, remixTests.assertLibCode)
     }
     var provider = self._deps.fileManager.fileProviderOf(url)

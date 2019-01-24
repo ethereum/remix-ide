@@ -1,7 +1,7 @@
 'use strict'
 var base64 = require('js-base64').Base64
-var swarmgw = require('swarmgw')()
 var request = require('request')
+var resolver = require('@resolver-engine/imports').ImportsEngine()
 
 module.exports = class CompilerImports {
   constructor (githubAccessToken) {
@@ -30,95 +30,44 @@ module.exports = class CompilerImports {
       })
   }
 
-  handleSwarmImport (url, cleanUrl, cb) {
-    swarmgw.get(url, function (err, content) {
-      cb(err, content, cleanUrl)
-    })
-  }
-
-  handleIPFS (url, cb) {
-    // replace ipfs:// with /ipfs/
-    url = url.replace(/^ipfs:\/\/?/, 'ipfs/')
-
-    return request.get(
-      {
-        url: 'https://gateway.ipfs.io/' + url
-      },
-      (err, r, data) => {
-        if (err) {
-          return cb(err || 'Unknown transport error')
-        }
-        cb(null, data, url)
-      })
-  }
-
-  handleHttpCall (url, cleanUrl, cb) {
-    return request.get(
-      {
-        url
-      },
-    (err, r, data) => {
-      if (err) {
-        return cb(err || 'Unknown transport error')
-      }
-      cb(null, data, cleanUrl)
-    })
-  }
-
-  handlers () {
-    return [
-      { type: 'github', match: /^(https?:\/\/)?(www.)?github.com\/([^/]*\/[^/]*)\/(.*)/, handler: (match, cb) => { this.handleGithubCall(match[3], match[4], cb) } },
-      { type: 'http', match: /^(http?:\/\/?(.*))$/, handler: (match, cb) => { this.handleHttpCall(match[1], match[2], cb) } },
-      { type: 'https', match: /^(https?:\/\/?(.*))$/, handler: (match, cb) => { this.handleHttpCall(match[1], match[2], cb) } },
-      { type: 'swarm', match: /^(bzz-raw?:\/\/?(.*))$/, handler: (match, cb) => { this.handleSwarmImport(match[1], match[2], cb) } },
-      { type: 'ipfs', match: /^(ipfs:\/\/?.+)/, handler: (match, cb) => { this.handleIPFS(match[1], cb) } }
-    ]
-  }
-
   isRelativeImport (url) {
     return /^([^/]+)/.exec(url)
   }
 
-  import (url, loadingCb, cb) {
-    var self = this
-    var imported = this.previouslyHandled[url]
+  import (uri, loadingCb, cb) {
+    var imported = this.previouslyHandled[uri]
     if (imported) {
-      return cb(null, imported.content, imported.cleanUrl, imported.type, url)
+      return cb(null, imported.content, imported.cleanUrl, imported.type, uri)
     }
-    var handlers = this.handlers()
 
-    var found = false
-    handlers.forEach(function (handler) {
-      if (found) {
-        return
-      }
+    var self = this
+    resolver
+     .resolve(uri)
+     .then(result => {
+       if (!result) {
+         cb('Unable to import "' + uri + '"')
+         return Promise.reject('Just no.')
+       } else {
+         loadingCb('Loading ' + uri + ' ...')
+         console.log(`Resolved to ${result}`)
+         return resolver.require(uri)
+       }
+     })
+     .then(result => {
+       if (!result) {
+         return
+       }
 
-      var match = handler.match.exec(url)
-      if (match) {
-        found = true
-
-        loadingCb('Loading ' + url + ' ...')
-        handler.handler(match, function (err, content, cleanUrl) {
-          if (err) {
-            cb('Unable to import "' + cleanUrl + '": ' + err)
-            return
-          }
-          self.previouslyHandled[url] = {
-            content: content,
-            cleanUrl: cleanUrl,
-            type: handler.type
-          }
-          cb(null, content, cleanUrl, handler.type, url)
-        })
-      }
-    })
-
-    if (found) {
-      return
-    } else if (/^[^:]*:\/\//.exec(url)) {
-      cb('Unable to import "' + url + '": Unsupported URL schema')
-    } else {
-      cb('Unable to import "' + url + '": File not found')
-    }
+       var cleanUrl = result.url
+       var content = result.source
+       var type = result.provider
+       self.previouslyHandled[uri] = {
+         content,
+         cleanUrl,
+         type
+       }
+       cb(null, content, cleanUrl, type, uri)
+     })
+     .catch(cb)
   }
 }

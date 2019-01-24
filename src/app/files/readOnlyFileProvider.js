@@ -1,15 +1,18 @@
 'use strict'
 var EventManager = require('../../lib/events')
 
-class BasicReadOnlyExplorer {
-  constructor (type) {
+var URL = URL || window.URL
+const readOnlyFileProviderType = 'external'
+class ReadOnlyFileProvider {
+  constructor () {
     this.event = new EventManager()
     this.files = {}
     this.paths = {}
     this.normalizedNames = {} // contains the raw url associated with the displayed path
-    this.paths[type] = {}
-    this.type = type
+    this.type = readOnlyFileProviderType
     this.readonly = true
+
+    window['ext'] = this
   }
 
   close (cb) {
@@ -28,11 +31,11 @@ class BasicReadOnlyExplorer {
   }
 
   get (path, cb) {
+    path = this.removePrefix(path)
     if (this.normalizedNames[path]) path = this.normalizedNames[path] // ensure we actually use the normalized path from here
-    var unprefixedPath = this.removePrefix(path)
-    var content = this.files[unprefixedPath]
+    var content = this.files[path]
     if (!content) {
-      content = this.files[this.type + '/' + this.normalizedNames[path]]
+      content = this.files[this.normalizedNames[path]]
     }
     if (cb) {
       cb(null, content)
@@ -41,19 +44,27 @@ class BasicReadOnlyExplorer {
   }
 
   set (path, content, cb) {
-    var unprefixedPath = this.removePrefix(path)
-    this.addReadOnly(unprefixedPath, content)
+    path = this.removePrefix(path)
+    this.addReadOnly(path, content)
     if (cb) cb()
     return true
   }
 
-  addReadOnly (path, content, rawPath) {
+  addReadOnly (path, content, rawPath, provider) {
+    provider = provider || 'http'
+
+    // we really care about slashes for internal consistency
+    // so we gather as much as we can from the raw url we got
+    var recoveredSlashesPath = path.replace(/%2F/gi, '/') // global, ignore case
+    var schemalessPath = this.removeHTTPScheme(recoveredSlashesPath)
+    var procuredPath = provider + '/' + schemalessPath
+
     try { // lazy try to format JSON
       content = JSON.stringify(JSON.parse(content), null, '\t')
     } catch (e) {}
     if (!rawPath) rawPath = path
     // splitting off the path in a tree structure, the json tree is used in `resolveDirectory`
-    var split = path
+    var split = procuredPath
     var folder = false
     while (split.lastIndexOf('/') !== -1) {
       var subitem = split.substring(split.lastIndexOf('/'))
@@ -64,10 +75,12 @@ class BasicReadOnlyExplorer {
       this.paths[this.type + '/' + split][split + subitem] = { isDirectory: folder }
       folder = true
     }
+    if (!this.paths[this.type]) this.paths[this.type] = {} // ensure this exists, because other functions determine root by checking for this.type
     this.paths[this.type][split] = { isDirectory: folder }
-    this.files[path] = content
-    this.normalizedNames[rawPath] = path
-    this.event.trigger('fileAdded', [path, true])
+    this.files[procuredPath] = content
+    this.normalizedNames[rawPath] = procuredPath
+    console.log('Added', path)
+    this.event.trigger('fileAdded', [procuredPath, true])
     return true
   }
 
@@ -97,6 +110,11 @@ class BasicReadOnlyExplorer {
   removePrefix (path) {
     return path.indexOf(this.type + '/') === 0 ? path.replace(this.type + '/', '') : path
   }
+
+  removeHTTPScheme (path) {
+    const httpScheme = /https?:\/\//
+    return httpScheme.exec(path) ? path.replace(httpScheme, '') : path
+  }
 }
 
-module.exports = BasicReadOnlyExplorer
+module.exports = ReadOnlyFileProvider

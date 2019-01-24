@@ -46,6 +46,7 @@ function filepanel (localRegistry) {
   self._components = {}
   self._components.registry = localRegistry || globalRegistry
   self._deps = {
+    readOnly: self._components.registry.get('fileproviders/readonly').api,
     fileProviders: self._components.registry.get('fileproviders').api,
     fileManager: self._components.registry.get('filemanager').api,
     config: self._components.registry.get('config').api,
@@ -53,12 +54,10 @@ function filepanel (localRegistry) {
   }
   var fileExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['browser'])
   var fileSystemExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['localhost'])
-  var swarmExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['swarm'])
-  var githubExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['github'])
-  var gistExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['gist'])
   var configExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['config'])
-  var httpExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['http'])
-  var httpsExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['https'])
+  var gistExplorer = new FileExplorer(self._components.registry, self._deps.fileProviders['gist'])
+
+  var readonlyExplorer = new FileExplorer(self._components.registry, self._deps.readOnly)
 
   // ----------------- editor panel ----------------------
   self._compilerMetadata = new CompilerMetadata(
@@ -121,11 +120,9 @@ function filepanel (localRegistry) {
             <div class=${css.treeview}>${fileExplorer.init()}</div>
             <div class="configexplorer ${css.treeview}">${configExplorer.init()}</div>
             <div class="filesystemexplorer ${css.treeview}">${fileSystemExplorer.init()}</div>
-            <div class="swarmexplorer ${css.treeview}">${swarmExplorer.init()}</div>
-            <div class="githubexplorer ${css.treeview}">${githubExplorer.init()}</div>
             <div class="gistexplorer ${css.treeview}">${gistExplorer.init()}</div>
-            <div class="httpexplorer ${css.treeview}">${httpExplorer.init()}</div>
-            <div class="httpsexplorer ${css.treeview}">${httpsExplorer.init()}</div>
+
+            <div class="readonlyexplorer ${css.treeview}">${readonlyExplorer.init()}</div>
           </div>
         </div>
         ${dragbar}
@@ -174,23 +171,11 @@ function filepanel (localRegistry) {
     self._deps.fileManager.switchFile(path)
   })
 
-  swarmExplorer.events.register('focus', function (path) {
-    self._deps.fileManager.switchFile(path)
-  })
-
-  githubExplorer.events.register('focus', function (path) {
+  readonlyExplorer.events.register('focus', function (path) {
     self._deps.fileManager.switchFile(path)
   })
 
   gistExplorer.events.register('focus', function (path) {
-    self._deps.fileManager.switchFile(path)
-  })
-
-  httpExplorer.events.register('focus', function (path) {
-    self._deps.fileManager.switchFile(path)
-  })
-
-  httpsExplorer.events.register('focus', function (path) {
     self._deps.fileManager.switchFile(path)
   })
 

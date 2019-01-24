@@ -20,6 +20,7 @@ var Storage = remixLib.Storage
 var Browserfiles = require('./app/files/browser-files')
 var BrowserfilesTree = require('./app/files/browser-files-tree')
 var SharedFolder = require('./app/files/shared-folder')
+var ReadOnlyFileProvider = require('./app/files/readOnlyFileProvider')
 var Config = require('./config')
 var Renderer = require('./app/ui/renderer')
 var executionContext = require('./execution-context')
@@ -32,7 +33,6 @@ var TxLogger = require('./app/execution/txLogger')
 var Txlistener = remixLib.execution.txListener
 var EventsDecoder = remixLib.execution.EventsDecoder
 var FileManager = require('./app/files/fileManager')
-var BasicReadOnlyExplorer = require('./app/files/basicReadOnlyExplorer')
 var NotPersistedExplorer = require('./app/files/NotPersistedExplorer')
 var toolTip = require('./app/ui/tooltip')
 var TransactionReceiptResolver = require('./transactionReceiptResolver')
@@ -147,18 +147,21 @@ class App {
     })
 
     self._components.filesProviders['localhost'] = new SharedFolder(remixd)
-    self._components.filesProviders['swarm'] = new BasicReadOnlyExplorer('swarm')
-    self._components.filesProviders['github'] = new BasicReadOnlyExplorer('github')
     self._components.filesProviders['gist'] = new NotPersistedExplorer('gist')
-    self._components.filesProviders['ipfs'] = new BasicReadOnlyExplorer('ipfs')
-    self._components.filesProviders['https'] = new BasicReadOnlyExplorer('https')
-    self._components.filesProviders['http'] = new BasicReadOnlyExplorer('http')
+    self._components.readOnly = new ReadOnlyFileProvider()
+    self._components.filesProviders['swarm'] = self._components.readOnly // new BasicReadOnlyExplorer('swarm')
+    self._components.filesProviders['github'] = self._components.readOnly // new BasicReadOnlyExplorer('github')
+    self._components.filesProviders['ipfs'] = self._components.readOnly // new BasicReadOnlyExplorer('ipfs')
+    self._components.filesProviders['https'] = self._components.readOnly // new BasicReadOnlyExplorer('https')
+    self._components.filesProviders['http'] = self._components.readOnly // new BasicReadOnlyExplorer('http')
+    self._components.filesProviders['external'] = self._components.readOnly // hack
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders['swarm'], name: 'fileproviders/swarm'})
     registry.put({api: self._components.filesProviders['github'], name: 'fileproviders/github'})
     registry.put({api: self._components.filesProviders['gist'], name: 'fileproviders/gist'})
     registry.put({api: self._components.filesProviders['ipfs'], name: 'fileproviders/ipfs'})
     registry.put({api: self._components.filesProviders, name: 'fileproviders'})
+    registry.put({api: self._components.readOnly, name: 'fileproviders/readonly'})
 
     self._view = {}
 

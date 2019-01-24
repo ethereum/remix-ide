@@ -29,7 +29,8 @@ class FileManager {
       localhostExplorer: self._components.registry.get('fileproviders/localhost').api,
       configExplorer: self._components.registry.get('fileproviders/config').api,
       gistExplorer: self._components.registry.get('fileproviders/gist').api,
-      filesProviders: self._components.registry.get('fileproviders').api
+      filesProviders: self._components.registry.get('fileproviders').api,
+      readOnly: self._components.registry.get('fileproviders/readonly').api
     }
 
     self._deps.browserExplorer.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
@@ -42,6 +43,9 @@ class FileManager {
     self._deps.gistExplorer.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
     self._deps.localhostExplorer.event.register('errored', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
     self._deps.localhostExplorer.event.register('closed', (event) => { this.removeTabsOf(self._deps.localhostExplorer) })
+
+    self._deps.readOnly.event.register('fileRenamed', (oldName, newName, isFolder) => { this.fileRenamedEvent(oldName, newName, isFolder) })
+    self._deps.readOnly.event.register('fileRemoved', (path) => { this.fileRemovedEvent(path) })
   }
 
   fileRenamedEvent (oldName, newName, isFolder) {
@@ -151,10 +155,16 @@ class FileManager {
       })
     }
     function _switchFile (file) {
+      var provider = self.fileProviderOf(file)
+      if (!provider) {
+        console.error(`Provider for ${file} does not exist`)
+        return
+      }
       self.saveCurrentFile()
       self._deps.config.set('currentFile', file)
       self.refreshTabs(file)
-      self.fileProviderOf(file).get(file, (error, content) => {
+
+      provider.get(file, (error, content) => {
         if (error) {
           console.log(error)
         } else {
@@ -177,19 +187,25 @@ class FileManager {
     cb(`provider for path ${path} not found`)
   }
 
+  // fileProviderOf (file) {
+  //   var provider = this._fileProviderOf(file)
+  //   console.log(`Provider of ${file} is ${provider && provider.type ? provider.type : 'unknown'}`)
+  //   return provider
+  // }
+
   fileProviderOf (file) {
     if (!file) return null
     var provider = file.match(/[^/]*/)
     if (provider !== null && this._deps.filesProviders[provider[0]]) {
       return this._deps.filesProviders[provider[0]]
     } else {
-      for (var handler of this._components.compilerImport.handlers()) {
-        if (handler.match.exec(file)) {
-          return this._deps.filesProviders[handler.type]
-        }
-      }
+      // for (var handler of this._components.compilerImport.handlers()) {
+      //   if (handler.match.exec(file)) {
+      //     return this._deps.filesProviders[handler.type]
+      //   }
+      // }
+      return this._deps.readOnly
     }
-    return null
   }
 
   saveCurrentFile () {

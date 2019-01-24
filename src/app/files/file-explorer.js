@@ -84,6 +84,22 @@ function fileExplorer (localRegistry, files) {
           }
         })
       }
+
+      // after adding the file, immediately show it in the tree view
+      try {
+        var allPaths = Object.keys(self.files.paths)
+        allPaths = allPaths.sort((a, b) => a.length - b.length)
+        allPaths.forEach(path => {
+          self.files.resolveDirectory(path, (error, fileTree) => {
+            if (error) console.error(error)
+            if (!fileTree) return
+            var newTree = normalize(path, fileTree)
+            self.treeView.updateNodeFromJSON(path, newTree, true)
+          })
+        })
+      } catch (err) {
+        console.log('Jumping to ', filepath)
+      }
     })
   }
 
