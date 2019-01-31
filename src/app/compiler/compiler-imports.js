@@ -45,11 +45,11 @@ module.exports = class CompilerImports {
      .resolve(uri)
      .then(result => {
        if (!result) {
-         cb('Unable to import "' + uri + '"')
-         return Promise.reject('Just no.')
+         var errMsg = 'Unable to import "' + uri + '"'
+         cb(errMsg)
+         return Promise.reject(errMsg)
        } else {
          loadingCb('Loading ' + uri + ' ...')
-         console.log(`Resolved to ${result}`)
          return resolver.require(uri)
        }
      })

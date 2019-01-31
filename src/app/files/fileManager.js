@@ -187,23 +187,12 @@ class FileManager {
     cb(`provider for path ${path} not found`)
   }
 
-  // fileProviderOf (file) {
-  //   var provider = this._fileProviderOf(file)
-  //   console.log(`Provider of ${file} is ${provider && provider.type ? provider.type : 'unknown'}`)
-  //   return provider
-  // }
-
   fileProviderOf (file) {
     if (!file) return null
     var provider = file.match(/[^/]*/)
     if (provider !== null && this._deps.filesProviders[provider[0]]) {
       return this._deps.filesProviders[provider[0]]
     } else {
-      // for (var handler of this._components.compilerImport.handlers()) {
-      //   if (handler.match.exec(file)) {
-      //     return this._deps.filesProviders[handler.type]
-      //   }
-      // }
       return this._deps.readOnly
     }
   }

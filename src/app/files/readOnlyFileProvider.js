@@ -11,8 +11,6 @@ class ReadOnlyFileProvider {
     this.normalizedNames = {} // contains the raw url associated with the displayed path
     this.type = readOnlyFileProviderType
     this.readonly = true
-
-    window['ext'] = this
   }
 
   close (cb) {
@@ -79,7 +77,6 @@ class ReadOnlyFileProvider {
     this.paths[this.type][split] = { isDirectory: folder }
     this.files[procuredPath] = content
     this.normalizedNames[rawPath] = procuredPath
-    console.log('Added', path)
     this.event.trigger('fileAdded', [procuredPath, true])
     return true
   }

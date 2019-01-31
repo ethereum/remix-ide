@@ -149,12 +149,12 @@ class App {
     self._components.filesProviders['localhost'] = new SharedFolder(remixd)
     self._components.filesProviders['gist'] = new NotPersistedExplorer('gist')
     self._components.readOnly = new ReadOnlyFileProvider()
-    self._components.filesProviders['swarm'] = self._components.readOnly // new BasicReadOnlyExplorer('swarm')
-    self._components.filesProviders['github'] = self._components.readOnly // new BasicReadOnlyExplorer('github')
-    self._components.filesProviders['ipfs'] = self._components.readOnly // new BasicReadOnlyExplorer('ipfs')
-    self._components.filesProviders['https'] = self._components.readOnly // new BasicReadOnlyExplorer('https')
-    self._components.filesProviders['http'] = self._components.readOnly // new BasicReadOnlyExplorer('http')
-    self._components.filesProviders['external'] = self._components.readOnly // hack
+    self._components.filesProviders['swarm'] = self._components.readOnly // proof of concept, awaiting acceptance before digging deeper
+    self._components.filesProviders['github'] = self._components.readOnly
+    self._components.filesProviders['ipfs'] = self._components.readOnly
+    self._components.filesProviders['https'] = self._components.readOnly
+    self._components.filesProviders['http'] = self._components.readOnly
+    self._components.filesProviders['external'] = self._components.readOnly
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders['swarm'], name: 'fileproviders/swarm'})
     registry.put({api: self._components.filesProviders['github'], name: 'fileproviders/github'})

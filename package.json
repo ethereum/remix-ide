@@ -158,7 +158,7 @@
     "browsertest": "sleep 5 && npm run nightwatch_local",
     "csslint": "csslint --ignore=order-alphabetical --errors='errors,duplicate-properties,empty-rules' --exclude-list='assets/css/font-awesome.min.css' assets/css/",
     "downloadsolc_root": "wget --no-check-certificate https://solc-bin.ethereum.org/bin/soljson-v0.5.1+commit.c8a2cb62.js -O soljson.js",
-    "lint": "standard --fix | notify-error",
+    "lint": "standard | notify-error",
     "make-mock-compiler": "node ci/makeMockCompiler.js",
     "minify": "uglifyjs --in-source-map inline --source-map-inline -c warnings=false",
     "nightwatch_local": "nightwatch --config nightwatch.js --env local",

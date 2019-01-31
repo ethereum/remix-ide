@@ -483,10 +483,9 @@ module.exports = class CompileTab {
         if (provider) {
           provider.get(target, (error, content) => {
             if (error) {
-              console.log('runCompiler', error)
+              console.log(error)
             } else {
               sources[target] = { content }
-              console.log('sources', sources)
               self._components.compiler.compile(sources, target)
             }
           })
@@ -502,10 +501,10 @@ module.exports = class CompileTab {
       (loadingMsg) => {
         addTooltip(loadingMsg)
       },
-      (error, content, cleanUrl, type, url) => { // these two lines
+      (error, content, cleanUrl, type, url) => {
         if (!error) {
           if (self._deps.fileProviders[type]) {
-            self._deps.fileProviders[type].addReadOnly(cleanUrl, content, url, type) // for eventual changes
+            self._deps.fileProviders[type].addReadOnly(cleanUrl, content, url, type)
           }
           cb(null, content)
         } else {
