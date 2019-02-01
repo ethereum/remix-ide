@@ -8,15 +8,16 @@ var css = require('./styles/test-tab-styles')
 var remixTests = require('remix-tests')
 
 module.exports = class TestTab {
-  constructor (localRegistry) {
+  constructor (localRegistry, compileTab) {
+    // TODO here is a direct reference to compile tab, should be removed
     const self = this
+    self.compileTab = compileTab
     self._view = { el: null }
     self._components = {}
     self._components.registry = localRegistry || globalRegistry
     // dependencies
     self._deps = {
       fileManager: self._components.registry.get('filemanager').api,
-      app: self._components.registry.get('app').api,
       filePanel: self._components.registry.get('filepanel').api
     }
     self.data = {}
@@ -76,7 +77,7 @@ module.exports = class TestTab {
           remixTests.runTestSources(runningTest, testCallback, resultsCallback, (error, result) => {
             updateFinalResult(error, result, testFilePath)
             callback(error)
-          }, (url, cb) => { self._deps.app.importFileCb(url, cb) })
+          }, (url, cb) => { self.compileTab.importFileCb(url, cb) })
         }
       })
     }
@@ -99,8 +100,8 @@ module.exports = class TestTab {
     }
 
     self._deps.filePanel.event.register('newTestFileCreated', file => {
-      var testList = document.querySelector("[class^='testList']")
-      var test = yo`<label><input onchange=${(e) => toggleCheckbox(e, file)} type="checkbox" checked="true">${file}</label>`
+      var testList = self.view.querySelector("[class^='testList']")
+      var test = yo`<label class="singleTestLabel"><input class="singleTest" onchange=${(e) => toggleCheckbox(e.target.checked, file)} type="checkbox" checked="true">${file}</label>`
       testList.appendChild(test)
       self.data.allTests.push(file)
       self.data.selectedTests.push(file)
@@ -132,13 +133,32 @@ module.exports = class TestTab {
 
     function listTests () {
       var tests = self.data.allTests
-      return tests.map(test => yo`<label><input onchange =${(e) => toggleCheckbox(e, test)} type="checkbox" checked="true">${test} </label>`)
+      return tests.map(test => yo`<label class="singleTestLabel"><input class="singleTest" onchange =${(e) => toggleCheckbox(e.target.checked, test)} type="checkbox" checked="true">${test} </label>`)
     }
 
-    function toggleCheckbox (e, test) {
-      var selectedTests = self.data.selectedTests
-      selectedTests = e.target.checked ? [...selectedTests, test] : selectedTests.filter(el => el !== test)
+    function toggleCheckbox (eChecked, test) {
+      if (!self.data.selectedTests) {
+        self.data.selectedTests = self._view.el.querySelectorAll('.singleTest:checked')
+      }
+      let selectedTests = self.data.selectedTests
+      selectedTests = eChecked ? [...selectedTests, test] : selectedTests.filter(el => el !== test)
       self.data.selectedTests = selectedTests
+      let checkAll = self._view.el.querySelector('[id="checkAllTests"]')
+      if (eChecked) {
+        checkAll.checked = true
+      } else if (!selectedTests.length) {
+        checkAll.checked = false
+      }
+    }
+
+    function checkAll (event) {
+      let checkBoxes = self._view.el.querySelectorAll('.singleTest')
+      const checkboxesLabels = self._view.el.querySelectorAll('.singleTestLabel')
+      // checks/unchecks all
+      for (let i = 0; i < checkBoxes.length; i++) {
+        checkBoxes[i].checked = event.target.checked
+        toggleCheckbox(event.target.checked, checkboxesLabels[i].innerText)
+      }
     }
 
     var runTests = function () {
@@ -176,12 +196,20 @@ module.exports = class TestTab {
           <br/>
           For more details, see
           How to test smart contracts guide in our documentation.
-          <div class=${css.generateTestFile} onclick=${generateTestFile}>Generate test file</div>
+          <div class="${css.generateTestFile}" onclick="${generateTestFile}">Generate test file</div>
         </div>
         <div class="${css.tests}">
           ${self.testList}
-          <div class=${css.buttons}>
-            <div class=${css.runButton} onclick=${runTests}>Run Tests</div>
+          <div class="${css.buttons}">
+            <div class="${css.runButton}"  onclick="${runTests}">Run Tests</div>
+            <label class="${css.label}" for="checkAllTests">
+              <input id="checkAllTests"
+                type="checkbox"
+                onclick="${function (event) { checkAll(event) }}"
+                checked="true"
+              >
+              Check/Uncheck all
+            </label>
           </div>
           ${testsOutput}
           ${testsSummary}

@@ -25,21 +25,19 @@ function staticAnalysisView (localRegistry) {
   self._components.registry = localRegistry || globlalRegistry
   // dependencies
   self._deps = {
-    compiler: self._components.registry.get('compiler').api,
+    pluginManager: self._components.registry.get('pluginmanager').api,
     renderer: self._components.registry.get('renderer').api,
     offsetToLineColumnConverter: self._components.registry.get('offsettolinecolumnconverter').api
   }
 
-  self._deps.compiler.event.register('compilationFinished', function (success, data, source) {
+  self._deps.pluginManager.event.register('sendCompilationResult', (file, source, languageVersion, data) => {
     self.lastCompilationResult = null
     self.lastCompilationSource = null
     $('#staticanalysisresult').empty()
-    if (success) {
-      self.lastCompilationResult = data
-      self.lastCompilationSource = source
-      if (self.view.querySelector('#autorunstaticanalysis').checked) {
-        self.run()
-      }
+    self.lastCompilationResult = data
+    self.lastCompilationSource = source
+    if (self.view.querySelector('#autorunstaticanalysis').checked) {
+      self.run()
     }
   })
 }
@@ -52,7 +50,7 @@ staticAnalysisView.prototype.render = function () {
         ${this.modulesView}
       </div>
       <div class="${css.buttons}">
-        <button class=${css.buttonRun} onclick=${function () { self.run() }} >Run</button>
+        <button class="${css.buttonRun}" onclick="${function () { self.run() }}" >Run</button>
         <label class="${css.label}" for="autorunstaticanalysis">
           <input id="autorunstaticanalysis"
             type="checkbox"
@@ -61,8 +59,8 @@ staticAnalysisView.prototype.render = function () {
           >
           Auto run
         </label>
-        <label class="${css.label}" for="checkallstaticanalysis">
-          <input id="checkallstaticanalysis"
+        <label class="${css.label}" for="checkAllEntries">
+          <input id="checkAllEntries"
             type="checkbox"
             onclick="${function (event) { self.checkAll(event) }}"
             style="vertical-align:bottom"
@@ -113,7 +111,10 @@ staticAnalysisView.prototype.run = function () {
               start: parseInt(split[0]),
               length: parseInt(split[1])
             }
-            location = self._deps.offsetToLineColumnConverter.offsetToLineColumn(location, parseInt(file), self._deps.compiler.lastCompilationResult.source.sources, self._deps.compiler.lastCompilationResult.data.sources)
+            location = self._deps.offsetToLineColumnConverter.offsetToLineColumn(location,
+              parseInt(file),
+              self.lastCompilationSource.sources,
+              self.lastCompilationResult.sources)
             location = Object.keys(self.lastCompilationResult.contracts)[file] + ':' + (location.start.line + 1) + ':' + (location.start.column + 1) + ':'
           }
           warningCount++
@@ -134,29 +135,23 @@ staticAnalysisView.prototype.run = function () {
   }
 }
 
+staticAnalysisView.prototype.checkModule = function (event) {
+  let selected = this.view.querySelectorAll('[name="staticanalysismodule"]:checked')
+  let checkAll = this.view.querySelector('[id="checkAllEntries"]')
+  if (event.target.checked) {
+    checkAll.checked = true
+  } else if (!selected.length) {
+    checkAll.checked = false
+  }
+}
+
 staticAnalysisView.prototype.checkAll = function (event) {
   if (!this.view) {
     return
   }
-  var all = this.view.querySelectorAll('[name="staticanalysismodule"]')
-  var isAnySelected = false
-  for (var i = 0; i < all.length; i++) {
-    if (all[i].checked === true) {
-      isAnySelected = true
-      break
-    }
-  }
-  for (var j = 0; j < all.length; j++) {
-    all[j].checked = !isAnySelected
-  }
-  event.target.checked = !isAnySelected
-}
-
-staticAnalysisView.prototype.checkModule = function (event) {
-  var selectAll = this.view.querySelector('[id="checkallstaticanalysis" ]')
-  if (event.target.checked) {
-    selectAll.checked = true
-  }
+  // checks/unchecks all
+  var checkBoxes = this.view.querySelectorAll('[name="staticanalysismodule"]')
+  checkBoxes.forEach((checkbox) => { checkbox.checked = event.target.checked })
 }
 
 staticAnalysisView.prototype.renderModules = function () {
@@ -169,6 +164,7 @@ staticAnalysisView.prototype.renderModules = function () {
         <label class="${css.label}">
           <input id="staticanalysismodule_${categoryId}_${i}"
             type="checkbox"
+            class="staticAnalysisItem"
             name="staticanalysismodule"
             index=${item._index}
             checked="true"
