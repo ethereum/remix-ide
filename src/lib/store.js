@@ -41,7 +41,7 @@ export class Store {
    * Update one field of the state
    * @param {Partial<T>} state The part of the state updated
    */
-  update(state) {
+  update (state) {
     this.state = { ...this.state, ...state }
     this.dispatch()
   }
@@ -147,7 +147,7 @@ export class EntityStore extends Store {
    */
   addEntities (entities) {
     entities.forEach((entity) => {
-      if (!entity[this.keyId]) throw `Key ${this.keyId} doesn't exist in ${entity}`
+      if (!entity[this.keyId]) throw new Error(`Key ${this.keyId} doesn't exist in ${entity}`)
       this.add(entity[this.keyId], entity)
     })
     this.event.emit('add', entities)
@@ -158,13 +158,13 @@ export class EntityStore extends Store {
    * @param {(string|number)} id The id of the entity to remove
    */
   remove (id) {
-    if (!this.state.entities[id]) throw `No entity with key ${id} found in store ${this.name}`
+    if (!this.state.entities[id]) throw new Error(`No entity with key ${id} found in store ${this.name}`)
     delete this.state.entities[id]
     this.state.ids.splice(this.state.ids.indexOf(id), 1)
     this.state.actives.splice(this.state.ids.indexOf(id), 1)
     this.event.emit('remove', id)
   }
-  
+
   /** Remove all entity from the state and reset actives and ids to empty */
   clear () {
     this.state = {
@@ -179,8 +179,8 @@ export class EntityStore extends Store {
    * @param {(string|number)} id The id of the entity to update
    * @param {Object} update The fields to update in the entity
    */
-  updateOne(id, update) {
-    if (!this.state.entities[id]) throw `No entity with key ${id} found in store ${this.name}`
+  updateOne (id, update) {
+    if (!this.state.entities[id]) throw new Error(`No entity with key ${id} found in store ${this.name}`)
     this.state.entities[id] = {
       ...this.state.entities[id],
       ...update
