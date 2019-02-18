@@ -44,22 +44,23 @@ module.exports = class CompilerImports {
     resolver
      .resolve(uri)
      .then(result => {
-        loadingCb('Loading ' + uri + ' ...')
-        return resolver.require(uri)
+       loadingCb('Loading ' + uri + ' ...')
+       return resolver.require(uri)
      })
      .then(result => {
-        var cleanUrl = result.url
-        var content = result.source
-        var type = result.provider
-        self.previouslyHandled[uri] = {
-          content,
-          cleanUrl,
-          type
-        }
-        cb(null, content, cleanUrl, type, uri)
+       var cleanUrl = result.url
+       var content = result.source
+       var type = result.provider
+       self.previouslyHandled[uri] = {
+         content,
+         cleanUrl,
+         type
+       }
+       cb(null, content, cleanUrl, type, uri)
      })
      .catch(err => {
-        cb('Unable to import "' + uri + '"')
+       console.log('import', err)
+       cb('Unable to import "' + uri + '"')
      })
   }
 }
