@@ -60,7 +60,7 @@ module.exports = class CompilerImports {
      })
      .catch(err => {
        console.log('import', err)
-       cb('Unable to import "' + uri + '"')
+       cb('Unable to import "' + uri + '": File not found')
      })
   }
 }
