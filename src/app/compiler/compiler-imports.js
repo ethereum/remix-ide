@@ -59,7 +59,7 @@ module.exports = class CompilerImports {
        cb(null, content, cleanUrl, type, uri)
      })
      .catch(err => {
-       console.log('import', err)
+       console.log('import', err) // TODO remove this and all my other console logs
        cb('Unable to import "' + uri + '": File not found')
      })
   }
