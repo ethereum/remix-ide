@@ -101,7 +101,7 @@ export class TabProxy {
     })
 
     function increase () { self.editor.editorFontSize(1) }
-    function decrease () { self.editor.editorFontSize(-1) }    
+    function decrease () { self.editor.editorFontSize(-1) }
     return tabsbar
   }
 }
