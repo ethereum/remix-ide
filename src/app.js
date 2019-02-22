@@ -58,9 +58,6 @@ import { RemixAppManager } from './remixAppManager'
 import { generateHomePage, homepageProfile } from './app/ui/landing-page/generate'
 import framingService from './framingService'
 
-var styleGuide = require('./app/ui/styles-guide/theme-chooser')
-var styles = styleGuide.chooser()
-
 var css = csjs`
   html { box-sizing: border-box; }
   *, *:before, *:after { box-sizing: inherit; }
@@ -78,7 +75,6 @@ var css = csjs`
     overflow           : hidden;
   }
   .mainpanel         {
-    background-color  : ${styles.colors.transparent};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -87,7 +83,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .iconpanel           {
-    background-color  : ${styles.leftPanel.backgroundColor_Panel};
+    background-color   : #fafafa;
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -109,12 +105,12 @@ var css = csjs`
   .highlightcode {
     position:absolute;
     z-index:20;
-    background-color: ${styles.editor.backgroundColor_DebuggerMode};
+    background-color: var(--info);
   }
   .highlightcode_fullLine {
     position:absolute;
     z-index:20;
-    background-color: ${styles.editor.backgroundColor_DebuggerMode};
+    background-color: var(--info);
     opacity: 0.5;
   }
 `
