@@ -104,7 +104,7 @@ module.exports = class TestTab {
           }
           cb(null, tests)
         })
-        .catch(err => cb(error))
+        .catch(err => cb(err))
     }
 
     self._deps.filePanel.event.register('newTestFileCreated', file => {
