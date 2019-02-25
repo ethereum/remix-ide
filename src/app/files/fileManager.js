@@ -50,7 +50,7 @@ class FileManager {
 
   profile () {
     return {
-      name: 'file manager',
+      name: 'fileManager',
       methods: ['getFilesFromPath', 'getCurrentFile', 'getFile', 'setFile'],
       events: ['currentFileChanged'],
       description: 'service - read/write to any files or folders, require giving permissions'
@@ -120,7 +120,8 @@ class FileManager {
 
   async getCurrentFile () {
     const path = this.currentFile()
-    if (!path) throw 'no file selected'
+    if (!path) throw new Error('no file selected')
+    console.log('Get current File', path)
     return path
   }
 
@@ -205,12 +206,16 @@ class FileManager {
     }
   }
 
-  filesFromPath (path, cb) {
-    var provider = this.fileProviderOf(path)
-    if (provider) {
-      return provider.resolveDirectory(path, (error, filesTree) => { cb(error, filesTree) })
-    }
-    cb(`provider for path ${path} not found`)
+  getFilesFromPath (path) {
+    const provider = this.fileProviderOf(path)
+    if (!provider) throw new Error(`provider for path ${path} not found`)
+    // TODO : Change provider with promise
+    return new Promise((resolve, reject) => {
+      provider.resolveDirectory(path, (error, filesTree) => {
+        if(error) reject(error)
+        resolve(filesTree)
+      })
+    })
   }
 
   fileProviderOf (file) {
