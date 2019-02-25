@@ -15,9 +15,6 @@ var helper = require('../../lib/helper')
 
 var globalRegistry = require('../../global/registry')
 
-var styleGuide = require('../ui/styles-guide/theme-chooser')
-var styles = styleGuide.chooser()
-
 var css = require('./styles/file-panel-styles')
 
 var canUpload = window.File || window.FileReader || window.FileList || window.Blob
@@ -136,24 +133,20 @@ function filepanel (localRegistry) {
   configExplorer.ensureRoot()
   var websocketconn = element.querySelector('.websocketconn')
   self._deps.fileProviders['localhost'].event.register('connecting', (event) => {
-    websocketconn.style.color = styles.colors.yellow
     websocketconn.setAttribute('title', 'Connecting to localhost. ' + JSON.stringify(event))
   })
 
   self._deps.fileProviders['localhost'].event.register('connected', (event) => {
-    websocketconn.style.color = styles.colors.green
     websocketconn.setAttribute('title', 'Connected to localhost. ' + JSON.stringify(event))
     fileSystemExplorer.show()
   })
 
   self._deps.fileProviders['localhost'].event.register('errored', (event) => {
-    websocketconn.style.color = styles.colors.red
     websocketconn.setAttribute('title', 'localhost connection errored. ' + JSON.stringify(event))
     fileSystemExplorer.hide()
   })
 
   self._deps.fileProviders['localhost'].event.register('closed', (event) => {
-    websocketconn.style.color = styles.colors.black
     websocketconn.setAttribute('title', 'localhost connection closed. ' + JSON.stringify(event))
     fileSystemExplorer.hide()
   })
