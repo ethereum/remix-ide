@@ -24,7 +24,7 @@ class AnalysisTab {
     this.registry.put({api: staticanalysis, name: 'staticanalysis'})
 
     if (this.el) return this.el
-    this.el = yo`<div class="${css.analysisTabView} "id="staticanalysisView">${staticanalysis.render()}</div>`
+    this.el = yo`<div class="${css.analysisTabView}" id="staticanalysisView">${staticanalysis.render()}</div>`
     return this.el
   }
 }
