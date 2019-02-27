@@ -6,6 +6,7 @@ var globalRegistry = require('../../../global/registry')
 
 export function homepageProfile () {
   return {
+    displayName: 'home page',
     name: 'homepage',
     methods: [],
     events: [],
@@ -15,7 +16,7 @@ export function homepageProfile () {
   }
 }
 
-export function generateHomePage (appManager) {
+export function generateHomePage (appManager, appStore) {
 //  let fileManager = globalRegistry.get('filemanager').api
   var actions1 = [
     {label: 'New file', type: `callback`, payload: () => { fileManager.setFile("./browser", "", ()=>{}) }},
@@ -51,6 +52,14 @@ export function generateHomePage (appManager) {
   var sectionHelp = new Section('Help', actions5)
 
   var sectionsWorkspaces = []
+  sectionsWorkspaces.push({
+    label: 'Close All Modules',
+    type: 'callback',
+    payload: () => {
+      appStore.getActives()
+      .filter(({profile}) => !profile.required)
+      .forEach((profile) => { appManager.deactivateOne(profile.name) })
+    }})
   defaultWorkspaces(appManager).forEach((workspace) => {
     sectionsWorkspaces.push({
       label: workspace.title,
