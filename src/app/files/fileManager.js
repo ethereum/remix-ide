@@ -50,7 +50,7 @@ class FileManager {
 
   profile () {
     return {
-      name: 'file manager',
+      name: 'fileManager',
       methods: ['getFilesFromPath', 'getCurrentFile', 'getFile', 'setFile'],
       events: ['currentFileChanged'],
       description: 'service - read/write to any files or folders, require giving permissions'
@@ -95,8 +95,7 @@ class FileManager {
   }
 
   currentFile () {
-    var self = this
-    return self._deps.config.get('currentFile')
+    return this._deps.config.get('currentFile')
   }
 
   closeFile (name) {
@@ -118,39 +117,37 @@ class FileManager {
     return path ? path[1] : null
   }
 
-  getCurrentFile (cb) {
-    var path = this.currentFile()
-    if (!path) {
-      cb('no file selected')
-    } else {
-      cb(null, path)
-    }
+  async getCurrentFile () {
+    const path = this.currentFile()
+    if (!path) throw new Error('no file selected')
+    console.log('Get current File', path)
+    return path
   }
 
-  getFile (path, cb) {
-    var provider = this.fileProviderOf(path)
-    if (provider) {
-      // TODO add approval to user for external plugin to get the content of the given `path`
-      provider.get(path, (error, content) => {
-        cb(error, content)
+  getFile (path) {
+    const provider = this.fileProviderOf(path)
+    if (!provider) throw new Error(`${path} not available`)
+    // TODO: change provider to Promise
+    return new Promise((resolve, reject) => {
+      provider.get(path, (err, content) => {
+        if (err) reject(err)
+        resolve(content)
       })
-    } else {
-      cb(path + ' not available')
-    }
+    })
   }
 
-  setFile (path, content, cb) {
-    var provider = this.fileProviderOf(path)
-    if (provider) {
-      // TODO add approval to user for external plugin to set the content of the given `path`
+  setFile (path, content) {
+    const provider = this.fileProviderOf(path)
+    if (!provider) throw new Error(`${path} not availble`)
+    // TODO : Add permission
+    // TODO : Change Provider to Promise
+    return new Promise((resolve, reject) => {
       provider.set(path, content, (error) => {
-        if (error) return cb(error)
+        if (error) reject(error)
         this.syncEditor(path)
-        cb()
+        resolve(true)
       })
-    } else {
-      cb(path + ' not available')
-    }
+    })
   }
 
   removeTabsOf (provider) {
@@ -208,12 +205,16 @@ class FileManager {
     }
   }
 
-  filesFromPath (path, cb) {
-    var provider = this.fileProviderOf(path)
-    if (provider) {
-      return provider.resolveDirectory(path, (error, filesTree) => { cb(error, filesTree) })
-    }
-    cb(`provider for path ${path} not found`)
+  getFilesFromPath (path) {
+    const provider = this.fileProviderOf(path)
+    if (!provider) throw new Error(`provider for path ${path} not found`)
+    // TODO : Change provider with promise
+    return new Promise((resolve, reject) => {
+      provider.resolveDirectory(path, (error, filesTree) => {
+        if (error) reject(error)
+        resolve(filesTree)
+      })
+    })
   }
 
   fileProviderOf (file) {
