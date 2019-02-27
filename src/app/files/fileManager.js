@@ -95,8 +95,7 @@ class FileManager {
   }
 
   currentFile () {
-    var self = this
-    return self._deps.config.get('currentFile')
+    return this._deps.config.get('currentFile')
   }
 
   closeFile (name) {
