@@ -6,7 +6,7 @@ var globalRegistry = require('../../../global/registry')
 
 export function homepageProfile () {
   return {
-    displayName: 'home',
+    displayName: 'Home',
     name: 'home',
     methods: [],
     events: [],

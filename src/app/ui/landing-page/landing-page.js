@@ -14,7 +14,7 @@ var css = csjs`
     border          : 2px solid black;
     width           : 400px;
     padding         : 20px;
-    background-color: #919292;
+    background-color: var(--primary);
     font-family     : "Lucida Console", Monaco, monospace;
     font-size       : 16px;
   }
@@ -41,7 +41,7 @@ var css = csjs`
     width           : 100%;
     height          : 100%;
     padding         : 20px;
-    background-color: #919292;
+    background-color: var(--primary);
   }
 }
 `

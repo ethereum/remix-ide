@@ -2,26 +2,27 @@ let yo = require('yo-yo')
 let csjs = require('csjs-inject')
 
 var css = csjs`
-  .item      {
+  .item {
     display         : flex;
     flex-direction  : column;
     align-items     : center;
     width           : 400px;
     height          : 160px;
     padding         : 20px;
-    background-color: #919292;
+    background-color: var(--primary);
     font-family     : "Lucida Console", Monaco, monospace;
     font-size       : 12px;
     }
   span {
     font-size       : 12px;
     cursor          : pointer;
+    color           : var(--secondary);
   }
   span:hover {
-    color           : #dddddd;
+    color           : var(--secondary);
   }
   a:link              {
-    color           : black;
+    color           : var(--secondary);
     text-decoration : none;
     font-size       : 12px;
   }
@@ -29,7 +30,7 @@ var css = csjs`
     color           : black;
   }
   a:hover {
-    color           : #dddddd;
+    color           : var(--bg-info);
   }
 
 `
@@ -50,13 +51,17 @@ class Section {
       if (this.actions[i].type === `callback`) {
         sectionLook.appendChild(yo`
           <div>
-            <span class='text-warning h6' style="cursor:pointer;" onclick= ${this.actions[i].payload} > ${this.actions[i].label} </span>
+            <span class='text-warning h7' style="cursor:pointer;" onclick= ${this.actions[i].payload} >
+              ${this.actions[i].label}
+            </span>
           </div>
         `)
       } else if (this.actions[i].type === `link`) {
         sectionLook.appendChild(yo`
           <div>
-              <a class='text-warning h6' href= ${this.actions[i].payload} target="_blank" > ${this.actions[i].label} </a> 
+            <a class='text-warning h7' href= ${this.actions[i].payload} target="_blank" >
+              ${this.actions[i].label}
+            </a>
           </div>
         `)
       }
