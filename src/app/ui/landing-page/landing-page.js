@@ -18,8 +18,18 @@ var css = csjs`
     font-family     : "Lucida Console", Monaco, monospace;
     font-size       : 16px;
   }
+<<<<<<< HEAD
   .h2 {
     font-family     : "Lucida Console", Monaco, monospace;
+=======
+  .logo             {
+    position        : absolute;
+    opacity         : 0.3;
+    z-index         : 0;
+  }
+  .section          {
+    z-index         : 10;
+>>>>>>> 14a19561... fix landing page
   }
   .span {
     font-size       : 16px;
@@ -50,7 +60,7 @@ class LandingPage {
     `
     for (let i = 0; i < this.sections.length; i++) {
       totalLook.appendChild(yo`
-        <div> 
+        <div class="${css.section}" > 
             ${this.sections[i].render()}
         </div>
       `)
