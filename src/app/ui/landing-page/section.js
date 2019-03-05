@@ -12,27 +12,21 @@ var css = csjs`
     background-color: var(--primary);
     font-family     : "Lucida Console", Monaco, monospace;
     font-size       : 12px;
-    }
+  }
   span {
-    font-size       : 12px;
-    cursor          : pointer;
-    color           : var(--secondary);
+    cursor: pointer;
+    font-size: 12px;
   }
   span:hover {
-    color           : var(--secondary);
+    font-size: 14px;
   }
-  a:link              {
-    color           : var(--secondary);
+  a:link {
     text-decoration : none;
-    font-size       : 12px;
-  }
-  a:visited {
-    color           : black;
+    font-size: 12px;
   }
   a:hover {
-    color           : var(--bg-info);
+    font-size: 14px;
   }
-
 `
 
 class Section {
@@ -42,7 +36,7 @@ class Section {
   }
 
   render () {
-    var sectionLook = yo`
+    let sectionLook = yo`
       <div class="${css.item}">
         <h2> ${this.title} </h2>
       </div>
@@ -51,7 +45,7 @@ class Section {
       if (this.actions[i].type === `callback`) {
         sectionLook.appendChild(yo`
           <div>
-            <span class='text-warning h7' style="cursor:pointer;" onclick= ${this.actions[i].payload} >
+            <span class='text-warning h7 span' " onclick= ${this.actions[i].payload} >
               ${this.actions[i].label}
             </span>
           </div>

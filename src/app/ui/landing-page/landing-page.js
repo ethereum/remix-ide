@@ -15,24 +15,13 @@ var css = csjs`
     width           : 400px;
     padding         : 20px;
     background-color: var(--primary);
+    color           : var(--info);
     font-family     : "Lucida Console", Monaco, monospace;
     font-size       : 16px;
   }
-<<<<<<< HEAD
-  .h2 {
-    font-family     : "Lucida Console", Monaco, monospace;
-=======
-  .logo             {
-    position        : absolute;
-    opacity         : 0.3;
-    z-index         : 0;
-  }
+
   .section          {
     z-index         : 10;
->>>>>>> 14a19561... fix landing page
-  }
-  .span {
-    font-size       : 16px;
   }
   .im {
     display         : inline-block;
