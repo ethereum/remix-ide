@@ -59,22 +59,17 @@ function runTests (browser, testData) {
     browser.end()
     return
   }
-  if (browserName === 'chrome') {
-    console.log('do not run remixd test for ' + browserName + ': TODO to reenable later')
-    browser.end()
-    return
-  }
-  if (browserName === 'firefox') {
-    console.log('do not run remixd test for ' + browserName + ': TODO to reenable later')
-    browser.end()
-    return
-  }
   browser
     .waitForElementVisible('#icon-panel', 10000)
-    .clickLaunchIcon('fileExplorers')
-    .click('.websocketconn')
+    .perform((done) => {
+      contractHelper.prepareInitModules(browser, () => {
+        browser.click('#pluginManager article[title="remixd"] button')
+        .perform(() => { done() })
+      })
+    })
     .waitForElementVisible('#modal-footer-ok', 10000)
     .click('#modal-footer-ok')
+    .clickLaunchIcon('fileExplorers')
     .waitForElementVisible('[data-path="localhost"]', 100000)
     .click('[data-path="localhost"]')
     .waitForElementVisible('[data-path="localhost/folder1"]')
@@ -142,7 +137,12 @@ function runTests (browser, testData) {
         .waitForElementNotPresent('[data-path="localhost/folder1/contract_' + browserName + '.sol"]') // check if renamed (old) file is not present
         .waitForElementNotPresent('[data-path="localhost/folder1/contract_' + browserName + '_toremove.sol"]') // check if removed (old) file is not present
         .click('[data-path="localhost/folder1/renamed_contract_' + browserName + '.sol"]')
-        .click('.websocketconn')
+        .perform(function (done) {
+          contractHelper.prepareInitModules(browser, () => {
+            browser.click('#pluginManager article[title="remixd"] button') // close remixd connnection
+            .perform(() => { done() })
+          })
+        })
         .end()
     })
 }

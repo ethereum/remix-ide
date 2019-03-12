@@ -46,7 +46,7 @@
     "remix-solidity": "0.3.1",
     "remix-tabs": "^1.0.0",
     "remix-tests": "0.1.1",
-    "remixd": "0.1.8-alpha.6",
+    "remixd": "github:ethereum/remixd#b3992d37197857b05a2b3e1cee039bf34f58b810",
     "request": "^2.83.0",
     "rimraf": "^2.6.1",
     "selenium-standalone": "^6.0.1",
@@ -65,7 +65,7 @@
   "dependencies": {
     "http-server": "0.9.0",
     "remix-plugin": "0.0.1-alpha.33",
-    "remixd": "0.1.8-alpha.6"
+    "remixd": "github:ethereum/remixd#b3992d37197857b05a2b3e1cee039bf34f58b810"
   },
   "repository": {
     "type": "git",

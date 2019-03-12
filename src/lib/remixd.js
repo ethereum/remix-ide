@@ -34,12 +34,14 @@ class Remixd {
     this.socket = new WebSocket('ws://localhost:' + this.port, 'echo-protocol') // eslint-disable-line
 
     this.socket.addEventListener('open', (event) => {
+      console.warn('open', event)
       this.connected = true
       this.event.trigger('connected', [event])
       cb()
     })
 
     this.socket.addEventListener('message', (event) => {
+      console.warn('message', event)
       var data = JSON.parse(event.data)
       if (data.type === 'reply') {
         if (this.callbacks[data.id]) {
@@ -59,11 +61,13 @@ class Remixd {
     })
 
     this.socket.addEventListener('error', (event) => {
+      console.warn('error', event)
       this.errored(event)
       cb(event)
     })
 
     this.socket.addEventListener('close', (event) => {
+      console.warn('close', event)
       if (event.wasClean) {
         this.connected = false
         this.event.trigger('closed', [event])

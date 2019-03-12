@@ -5,6 +5,7 @@ var sauce = require('./sauce')
 var async = require('async')
 
 module.exports = {
+  '@disabled': true,
   before: function (browser, done) {
     init(browser, done)
   },

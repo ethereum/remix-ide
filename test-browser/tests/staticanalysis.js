@@ -20,6 +20,7 @@ contract TooMuchGas {
 ]
 
 module.exports = {
+  '@disabled': true,
   before: function (browser, done) {
     init(browser, done)
   },

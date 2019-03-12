@@ -24,7 +24,17 @@ module.exports = {
   renameFile,
   removeFile,
   getAddressAtPosition,
-  clickLaunchIcon
+  clickLaunchIcon,
+  prepareInitModules
+}
+
+function prepareInitModules (browser, initCallback) {
+  browser.click('#icon-panel div[title="pluginManager"]')
+  .execute(function () {
+    document.querySelector('div[title="pluginManager"]').scrollTop = document.querySelector('div[title="pluginManager"]').scrollHeight
+  }, [], function () {
+    initCallback()
+  })
 }
 
 function clickLaunchIcon (icon) {

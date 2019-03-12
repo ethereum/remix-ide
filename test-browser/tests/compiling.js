@@ -6,6 +6,7 @@ var async = require('async')
 var testRecorder = require('./units/testRecorder')
 
 module.exports = {
+  '@disabled': true,
   before: function (browser, done) {
     init(browser, done)
   },
