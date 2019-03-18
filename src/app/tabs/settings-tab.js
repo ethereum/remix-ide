@@ -1,10 +1,7 @@
 var yo = require('yo-yo')
-var remixLib = require('remix-lib')
-
 var tooltip = require('../ui/tooltip')
 var copyToClipboard = require('../ui/copy-to-clipboard')
 var styleGuide = require('../ui/styles-guide/theme-chooser')
-var Storage = remixLib.Storage
 var EventManager = require('../../lib/events')
 var css = require('./styles/settings-tab-styles')
 import { ApiFactory } from 'remix-plugin'
@@ -25,12 +22,7 @@ module.exports = class SettingsTab extends ApiFactory {
       }
     } /* eslint-enable */
     this.event = new EventManager()
-    this.initTheme()
-  }
-
-  initTheme () {
-    const themeStorage = new Storage('style:')
-    this.currentTheme = themeStorage.get('theme') || 'light'
+    this.currentTheme = styleGuide.currentTheme()
   }
 
   get profile () {
@@ -43,6 +35,24 @@ module.exports = class SettingsTab extends ApiFactory {
       description: ' - ',
       kind: 'settings',
       location: 'swapPanel'
+    }
+  }
+  createThemeCheckies () {
+    let themes = styleGuide.getThemes()
+    function onswitchTheme (event, name) {
+      styleGuide.switchTheme(name)
+    }
+    if (themes) {
+      return yo`<div class="card-text themes-container">
+        ${themes.map((aTheme) => {
+          let el = yo`<div class="${css.frow} form-check ${css.crow}">
+          <input type="radio" onchange=${(event) => { onswitchTheme(event, aTheme.name) }} class="align-middle form-check-input" name="theme" id="${aTheme.name}"   >
+          <label class="form-check-label" for="${aTheme.name}">${aTheme.name} (${aTheme.quality})</label>
+        </div>`
+          if (this.currentTheme.name === aTheme.name) el.querySelector('input').setAttribute('checked', 'checked')
+          return el
+        })}
+      </div>`
     }
   }
 
@@ -74,12 +84,10 @@ module.exports = class SettingsTab extends ApiFactory {
 
     this._view.pluginInput = yo`<textarea rows="4" cols="70" id="plugininput" type="text" class="${css.pluginTextArea}" ></textarea>`
 
-    this._view.theme.light = yo`<input onchange=${onswitch2lightTheme} class="align-middle form-check-input" name="theme" id="themeLight" type="radio">`
-    this._view.theme.dark = yo`<input onchange=${onswitch2darkTheme} class="align-middle form-check-input" name="theme" id="themeDark" type="radio">`
-    this._view.theme.clean = yo`<input onchange=${onswitch2cleanTheme} class="align-middle form-check-input" name="theme" id="themeClean" type="radio">`
-    this._view.theme[this.currentTheme].setAttribute('checked', 'checked')
-
+    this._view.themes = styleGuide.getThemes()
+    this._view.themesCheckBoxes = this.createThemeCheckies()
     this._view.config.homePage = yo`
+
     <div class="${css.info} card">
       <div class="card-body">
       <h6 class="${css.title} card-title">Home</h6>
@@ -126,20 +134,7 @@ module.exports = class SettingsTab extends ApiFactory {
       <div class="${css.info} card">
         <div class="card-body">
           <h6 class="${css.title} card-title">Themes</h6>
-          <div class="card-text">
-            <div class="${css.frow} form-check ${css.crow}">
-              ${this._view.theme.light}
-              <label class="form-check-label" for="themeLight">Light Theme</label>
-            </div>
-            <div class="${css.frow} form-check ${css.crow}">
-              ${this._view.theme.dark}
-              <label class="form-check-label" for="themeDark">Dark Theme</label>
-            </div>
-            <div class="${css.frow} form-check ${css.crow}">
-              ${this._view.theme.clean}
-              <label class="form-check-label" for="themeClean">Clean Theme</label>
-            </div>
-          </div>
+            ${this._view.themesCheckBoxes}
         </div>
       </div>`
     this._view.el = yo`
@@ -155,15 +150,6 @@ module.exports = class SettingsTab extends ApiFactory {
     }
     function onchangeOption (event) {
       self.config.set('settings/always-use-vm', !self.config.get('settings/always-use-vm'))
-    }
-    function onswitch2darkTheme (event) {
-      styleGuide.switchTheme('dark')
-    }
-    function onswitch2lightTheme (event) {
-      styleGuide.switchTheme('light')
-    }
-    function onswitch2cleanTheme (event) {
-      styleGuide.switchTheme('clean')
     }
     function onchangePersonal (event) {
       self.config.set('settings/personal-mode', !self.config.get('settings/personal-mode'))
