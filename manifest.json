@@ -27,5 +27,5 @@
     "<all_urls>"
   ],
 
-  "content_security_policy": "script-src 'self' https://solc-bin.ethereum.org/; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://ethereum.github.io/solc-bin/; object-src 'self'"
 }
