@@ -14,7 +14,7 @@ var TRIAL_CREDS = {
 }
 
 module.exports = class SettingsTab {
-  constructor(localRegistry) {
+  constructor (localRegistry) {
     const self = this
     self._components = {}
     self._components.registry = localRegistry || globalRegistry
