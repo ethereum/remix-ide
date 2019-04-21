@@ -92,13 +92,14 @@ class RighthandPanel {
         </div>
       </div>`
 
-    const { compile, run, settings, analysis, debug, support, test } = tabs
+    const { compile, run, settings, analysis, debug, support, test, security } = tabs
     self._components.tabbedMenu.addTab('Compile', 'compileView', compile.render())
     self._components.tabbedMenu.addTab('Run', 'runView', run.render())
     self._components.tabbedMenu.addTab('Analysis', 'staticanalysisView', analysis.render())
     self._components.tabbedMenu.addTab('Testing', 'testView', test.render())
     self._components.tabbedMenu.addTab('Debugger', 'debugView', debug.render())
     self._components.tabbedMenu.addTab('Settings', 'settingsView', settings.render())
+    self._components.tabbedMenu.addTab('Security', 'securityView', security.render())
     self._components.tabbedMenu.addTab('Support', 'supportView', support.render())
     self._components.tabbedMenu.selectTabByTitle('Compile')
   }

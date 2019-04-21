@@ -46,6 +46,7 @@ const DebuggerTab = require('./app/tabs/debugger-tab')
 const SupportTab = require('./app/tabs/support-tab')
 const TestTab = require('./app/tabs/test-tab')
 const RunTab = require('./app/tabs/run-tab')
+const SecurityTab = require('./app/tabs/security-tab')
 
 var styleGuide = require('./app/ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
@@ -439,7 +440,8 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     analysis: new AnalysisTab(registry),
     debug: new DebuggerTab(),
     support: new SupportTab(),
-    test: new TestTab(self._components.registry, compileTab)
+    test: new TestTab(self._components.registry, compileTab),
+    security: new SecurityTab(self._components.registry)
   }
 
   registry.get('app').api.event.register('tabChanged', (tabName) => {
