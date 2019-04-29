@@ -57,8 +57,12 @@ module.exports = class SettingsTab {
         ethAddress: this._deps.config.get('security/mythx-address') || TRIAL_CREDS.address,
         password: this._deps.config.get('security/mythx-pwd') || TRIAL_CREDS.pwd,
       })
+    var bytecode = this.contracts[this.target][contract].evm.bytecode
     const data = {
-      "bytecode": this.contracts[this.target][contract].evm.bytecode.object,
+      "contractName": contract,
+      "bytecode": bytecode.object,
+      "sourceMap": bytecode.sourceMap,
+      "analysisMode": "quick"
     };
 
     // set loading
@@ -95,16 +99,19 @@ module.exports = class SettingsTab {
       return "You need to compile your contract first!"
     }
 
-    var analyzebtn = yo`<input onclick=${() => { this.sendRequest() }} value="Analyze" type="button">`
+    var analyzeBtn = yo`<input onclick=${() => { this.sendRequest() }} value="Analyze" type="button">`
+    var loaderIcon = yo`<i class="fa fa-refresh ${css.loader}" aria-hidden="true" style="visibility:hidden"></i>`
     if (this.isLoading) {
-      analyzebtn.setAttribute('disabled', true)
+      analyzeBtn.setAttribute('disabled', true)
+      loaderIcon.style.visibility = 'visible'
     }
     var html = yo`
       <div>
         <div>
           <select id="mythx-contract-selector">${contracts.map(x => yo`<option>${x}</option>`)}</select>
         </div>
-        ${analyzebtn}
+        ${analyzeBtn}
+        ${loaderIcon}
       </div>`
 
     $('#mythx-action-bar').html(html)
@@ -126,31 +133,39 @@ module.exports = class SettingsTab {
     }
 
     var contract = $('#mythx-contract-selector option:selected').text()
-    var issues = this.result.issues.map(x => {
-      return x.issues.map(y => {
-        return yo`
+    var { issues } = this.result
+    var issuesReport = yo`<div></div>`
+    if (issues && issues.length && issues[0].issues && issues[0].issues.length) {
+      issuesReport.appendChild(yo`
+        <table class=${css.report_table}>
           <tr>
-            <td class="${css.report_issue_severity}">${y.severity}</td>
-            <td class="${css.report_issue_content}">
-              <div class="${css.report_issue_head}">${y.description.head}</div>
-              <div>${y.description.tail}</div>
-            </td>
-          </tr>`
-      })
-    })
+            <th class="${css.report_header}">Severity</th>
+            <th class="${css.report_header}">Issue</th>
+          </tr>
+          ${issues.map(x => {
+            return x.issues.map(y => {
+              return yo`
+                <tr>
+                  <td class="${css.report_issue_severity}">${y.severity}</td>
+                  <td class="${css.report_issue_content}">
+                    <div class="${css.report_issue_head}">${y.description.head}</div>
+                    <div>${y.description.tail}</div>
+                  </td>
+                </tr>`
+            })
+          })}
+        </table>`)
+    } else {
+      issuesReport.appendChild(yo`<span>No issues</span>`);
+    } 
+
     var html = yo`
       <div class="${css.block} ${css.mt1}">
         <div>
           <b>${contract}</b>
           <span class=${css.report_elapsed}>${this.result.elapsed} ms</span>
         </div>
-        <table class=${css.report_table}>
-          <tr>
-            <th class="${css.report_header}">Severity</th>
-            <th class="${css.report_header}">Issue</th>
-          </tr>
-          ${issues}
-        </table>
+        ${issuesReport}
       </div`
     $('#mythx-report').html(html)
   }
@@ -262,5 +277,9 @@ const css = csjs`
   }
   .report_issue_head {
     font-weight: bold;
+  }
+  .loader {
+    margin-right: .3em;
+    animation: fa-spin 2s linear infinite;
   }
 `
