@@ -65,8 +65,8 @@ var css = csjs`
   .col2_2 {
     width: 100px;
     min-width: 82px;
-    position: absolute;
-    margin-left: 100px;
+    /* position: absolute; */
+    /* margin-left: 100px; */
   }
   .select {
     font-weight: normal;
