@@ -54,7 +54,7 @@ module.exports = class SettingsTab extends BaseApi {
           <input type="radio" onchange=${event => { onswitchTheme(event, aTheme.name) }} class="align-middle form-check-input" name="theme" id="${aTheme.name}"   >
           <label class="form-check-label" for="${aTheme.name}">${aTheme.name} (${aTheme.quality})</label>
         </div>`
-          if (this.currentTheme === aTheme.name) el.querySelector('input').setAttribute('checked', 'checked')
+          if (this.currentTheme.name === aTheme.name) el.querySelector('input').setAttribute('checked', 'checked')
           return el
         })}
       </div>`
