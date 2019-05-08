@@ -279,7 +279,7 @@ fileExplorer.prototype.init = function () {
 
 fileExplorer.prototype.publishToGist = function () {
   modalDialogCustom.confirm(
-    'Publish to Github',
+    'Create a public gist',
     'Are you sure you want to publish all your files anonymously as a public gist on github.com?',
     () => { this.toGist() }
   )
