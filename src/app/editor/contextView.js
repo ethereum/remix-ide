@@ -38,11 +38,12 @@ class ContextView {
   }
 
   render () {
-    var view = yo`<div class=${css.contextview}>
-      <div class=${css.container}>
-        ${this._renderTarget()}
-      </div>
-    </div>`
+    const view = yo`
+      <div class="${css.contextview} ${css.contextviewcontainer} bg-light text-dark border-0">
+        <div class=${css.container}>
+          ${this._renderTarget()}
+        </div>
+      </div>`
     if (!this._view) {
       this._view = view
       this.hide()
@@ -166,16 +167,29 @@ class ContextView {
 
     function showGasEstimation () {
       if (node.name === 'FunctionDefinition') {
-        var result = self.contextualListener.gasEstimation(node)
-        var executionCost = 'Execution cost: ' + result.executionCost + ' gas'
-        var codeDepositCost = 'Code deposit cost: ' + result.codeDepositCost + ' gas'
-        var estimatedGas = result.codeDepositCost ? `${codeDepositCost}, ${executionCost}` : `${executionCost}`
-        return yo`<div class=${css.gasEstimation}>
-        <img class=${css.gasStationIcon} title='Gas estimation' src='assets/img/gasStation_50.png'>
-        ${estimatedGas}
-        </div>`
+        const result = this.contextualListener.gasEstimation(node)
+        const executionCost = ' Execution cost: ' + result.executionCost + ' gas'
+        const codeDepositCost = 'Code deposit cost: ' + result.codeDepositCost + ' gas'
+        const estimatedGas = result.codeDepositCost ? `${codeDepositCost}, ${executionCost}` : `${executionCost}`
+        return yo`
+          <div class=${css.gasEstimation}>
+            <i class="fas fa-gas-pump ${css.gasStationIcon}" title='Gas estimation'></i>
+            <span>${estimatedGas}</span>
+          </div>
+        `
       }
     }
+
+    return yo`
+      <div class=${css.line}>${showGasEstimation()}
+        <div title=${type} class=${css.type}>${type}</div>
+        <div title=${node.attributes.name} class=${css.name}>${node.attributes.name}</div>
+        <i class="fas fa-share ${css.jump}" aria-hidden="true" onclick=${jumpTo}></i>
+        <span class=${css.referencesnb}>${references}</span>
+        <i data-action='previous' class="fas fa-chevron-up ${css.jump}" aria-hidden="true" onclick=${jump}></i>
+        <i data-action='next' class="fas fa-chevron-down ${css.jump}" aria-hidden="true" onclick=${jump}></i>
+      </div>
+    `
   }
 }
 

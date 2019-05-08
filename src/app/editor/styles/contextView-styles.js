@@ -3,13 +3,15 @@ var styleGuide = require('../../ui/styles-guide/theme-chooser')
 var styles = styleGuide.chooser()
 
 var css = csjs`
-  .contextview            {
-      opacity           : 0.8;
-    }
-  .container              {
+  .contextview {
+    opacity             : 1;
+    position            : relative;
+    height              : 25px;
+  }
+  .container {
     padding             : 1px 15px;
   }
-  .line                   {
+  .line {
     display             : flex;
     justify-content     : flex-end;
     align-items         : center;
@@ -19,14 +21,14 @@ var css = csjs`
     color               : ${styles.editor.text_Primary};
     font-size           : 11px;
   }
-  .type                   {
+  .type {
     font-style        : italic;
     margin-right      : 5px;
   }
-  .name                   {
+  .name  {
     font-weight       : bold;
   }
-  .jump                   {
+  .jump {
     cursor            : pointer;
     margin            : 0 5px;
     color             : ${styles.editor.icon_Color_Editor};
@@ -34,18 +36,22 @@ var css = csjs`
   .jump:hover              {
     color             : ${styles.editor.icon_HoverColor_Editor};
   }
-  .referencesnb           {
+  .referencesnb {
     float             : right;
     margin-left       : 15px;
   }
   .gasEstimation {
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
+    margin-right      : 15px;
+    display           : flex;
+    align-items       : center;
   }
   .gasStationIcon {
-    height: 13px;
-    margin-right: 5px;
+    margin-right      : 5px;
+  }
+  .contextviewcontainer {
+    z-index           : 50;
+    border-radius     : 1px;
+    border            : 2px solid var(--secondary);
   }
 `
 
