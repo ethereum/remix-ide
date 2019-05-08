@@ -60,6 +60,11 @@ var css = csjs`
     animation-name: animatetop;
     animation-duration: 0.4s
   }
+  .modalBody {
+    word-break: break-word;
+    overflow-y: auto;
+    max-height: 600px;
+  }
   .modalFooterOk {
     cursor: pointer;
     color: ${styles.remix.modalDialog_Header_Footer_Color};
