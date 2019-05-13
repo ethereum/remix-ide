@@ -41,6 +41,10 @@ class Settings {
     return executionContext.getProvider()
   }
 
+  getVM () {
+    return executionContext.vmDescription()
+  }
+
   getAccountBalanceForAddress (address, cb) {
     return this.udapp.getBalanceInEther(address, cb)
   }

@@ -250,7 +250,8 @@ class SettingsUI {
         return
       }
       let network = this._deps.networkModule.getNetworkProvider
-      this.netUI.innerHTML = (network() !== 'vm') ? `${name} (${id || '-'}) network` : ''
+      const provider = network()
+      this.netUI.innerHTML = (provider !== 'vm') ? `${name} (${id || '-'}) network` : `fork: ${this.settings.getVM().hardfork}`
     })
   }
 
