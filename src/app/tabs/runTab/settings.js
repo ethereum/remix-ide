@@ -74,6 +74,22 @@ class SettingsUI {
         </div>
       </div>
     `
+
+    this.vmFork = yo`<div class="${css.crow}">
+    <div class="${css.col1_1}">
+      Fork
+    </div>
+    <div>
+      <select onchange=${(event) => { this.settings.updateForkForVM(event.target.value) }} class="form-control ${css.select}">
+        <option value="petersburg" selected> petersburg
+        </option>
+        <option value="byzantium"> byzantium
+        </option>
+      </select>
+    </div>
+  </div>`
+    this.vmFork.hidden = this.settings.getProvider() !== 'vm'
+
     const networkEl = yo`
     <div class="${css.crow}">
         <div class="${css.col1_1}">
@@ -122,6 +138,7 @@ class SettingsUI {
     const el = yo`
       <div class="${css.settings}">
         ${environmentEl}
+        ${this.vmFork}
         ${networkEl}
         ${accountEl}
         ${gasPriceEl}
@@ -190,10 +207,12 @@ class SettingsUI {
 
   setFinalContext () {
     // set the final context. Cause it is possible that this is not the one we've originaly selected
-    this.selectExEnv.value = this.settings.getProvider()
+    const provider = this.settings.getProvider()
+    this.selectExEnv.value = provider
     this.event.trigger('clearInstance', [])
     this.updateNetwork()
     this.fillAccountsList()
+    this.vmFork.hidden = provider !== 'vm'
   }
 
   newAccount () {

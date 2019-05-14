@@ -49,6 +49,10 @@ class Settings {
     return this.udapp.getBalanceInEther(address, cb)
   }
 
+  updateForkForVM (fork) {
+    executionContext.reloadVMWithFork(fork)
+  }
+
   updateNetwork (cb) {
     this.networkcallid++
     ((callid) => {
