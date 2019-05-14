@@ -135,16 +135,23 @@ class CompilerContainer {
     this._view.version = yo`<span id="version"></span>`
 
     this._view.compilationButton = this.compilationButton()
-
+    this._view.compilerDefaultEvmVersion = yo`
+    <select onchange="${this.onchangeEvmVersion.bind(this)}" class="custom-select" ><option value="petersburg">petersburg</option>
+      <option value="byzantium">byzantium</option>
+      <option value="homestead">homestead</option>
+      <option value="(default)">(default)</option>
+    </select>`
+    this._view.compilerDefaultEvmVersion.add
     this._view.compileContainer = yo`
       <section>
         <!-- Select Compiler Version -->
         <article>
           <header class="navbar navbar-light bg-light input-group mb-3">
-            <div class="input-group-prepend">
+            <div class="input-group-prepend flex-column">
               <label class="input-group-text border-0" for="versionSelector">Compiler</label>
             </div>
             ${this._view.versionSelector}
+            ${this._view.compilerDefaultEvmVersion}
           </header>
           ${this._view.compilationButton}
         </article>
@@ -194,6 +201,14 @@ class CompilerContainer {
     this._updateVersionSelector()
   }
 
+  onchangeEvmVersion (event) {
+    if (event.target.value === '(default)') {
+      this.compileTabLogic.compiler.setToUseDefaultEvmVersion()
+    } else {
+      this.compileTabLogic.compiler.setEvmVersion(event.target.value)
+    }
+  }
+
   _updateVersionSelector () {
     this._view.versionSelector.innerHTML = ''
     this.data.allversions.forEach(build => {
@@ -233,6 +248,12 @@ class CompilerContainer {
   setVersionText (text) {
     this.data.version = text
     if (this._view.version) this._view.version.innerText = text
+    try {
+      const evmVersion = this.compileTabLogic.compiler.defaultEvmVersion() // can throw if no compiler loaded
+      this._view.compilerDefaultEvmVersion.value = evmVersion
+    } catch (e) {
+      this._view.compilerDefaultEvmVersion.value = '(default)'
+    }
   }
 
   fetchAllVersion (callback) {
