@@ -5,6 +5,8 @@ const EventEmitter = require('events')
 var globalRegistry = require('../../global/registry')
 var CompilerImport = require('../compiler/compiler-imports')
 var toaster = require('../ui/tooltip')
+var helper = require('../../lib/helper.js')
+
 import { FileSystemApi } from 'remix-plugin'
 import * as packageJson from '../../../package.json'
 
@@ -136,30 +138,57 @@ class FileManager extends FileSystemApi {
   async setFile (path, content) {
     if (this.currentRequest) {
       let reject = false
-      let savedAsAnotherFile = false
+      let savedAsCopy = false
+      let accept = false
       let actions = (toaster) => {
-        return yo`<div class="container ml-1">
-        <button class="btn btn-primary btn-sm m-1" onclick=${(e) => { reject = true; e.target.innerHTML = 'Canceled'; toaster.hide() }}>Cancel</button>
-        <button class="btn btn-primary btn-sm m-1" onclick=${(e) => {
-          if (savedAsAnotherFile) return
-          savedAsAnotherFile = true
-          const newPath = path + '.' + this.currentRequest.from
-          this._setFileInternal(newPath, content)
-          this.switchFile(newPath)
-          e.target.innerHTML = 'Saved'
-          toaster.hide()
-        }}>Save As Copy</button>
-        </div>`
+        return yo`
+        <div class="container ml-1">
+          <button class="btn btn-primary btn-sm m-1" onclick=${(e) => {
+            accept = true; e.target.innerHTML = 'Accepted'; toaster.hide()
+            const fileProvider = this.fileProviderOf(path)
+            if (!fileProvider) return
+            if (!fileProvider.set(path, content)) { // autosave rewrites the file
+              return modalDialogCustom.alert('Failed to create a file ' + path)
+            }
+            this.switchFile(path)
+            e.target.innerHTML = 'Saved'
+            toaster.hide()
+          }}>
+            Accept
+          </button>
+          <button class="btn btn-primary btn-sm m-1" onclick=${(e) => {
+            reject = true; e.target.innerHTML = 'Canceled'; toaster.hide()}}
+          >
+            Cancel
+          </button>
+          <button class="btn btn-primary btn-sm m-1" onclick=${(e) => {
+            if (savedAsCopy) return
+            savedAsCopy = true
+            const fileProvider = this.fileProviderOf(path)
+            if (!fileProvider) return
+            helper.createNonClashingNameWithPrefix(path, fileProvider, '', (error, newFile) => {
+              if (error) return modalDialogCustom.alert('Failed to create file. ' + newFile + ' ' + error)
+              if (!fileProvider.set(newFile, content)) return modalDialogCustom.alert('Failed to create a file ' + newFile)
+              this.switchFile(newFile)
+            })
+            e.target.innerHTML = 'Saved'
+            toaster.hide()
+          }}>
+            Save As Copy
+          </button>
+        </div>
+        `
       }
       await toaster(yo`
         <div>
           <i class="fas fa-exclamation-triangle text-danger mr-1"></i>
           <span>
-            ${this.currentRequest.from}<span class="text-danger"> is modyfing </span>${path}
+            ${this.currentRequest.from}<span class="text-danger"> is trying to modify </span>${path}
           </span>
         </div>`, actions, { time: 4000 })
+
       if (reject) throw new Error(`set file operation on ${path} aborted by user.`)
-      if (savedAsAnotherFile) return
+      if (accept || savedAsCopy) return
     }
     this._setFileInternal(path, content)
   }
