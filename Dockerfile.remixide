@@ -1,0 +1,50 @@
+FROM ubuntu:18.10 as builder
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+ENV NVM_DIR /usr/local/nvm
+ENV NVM_VERSION 0.34.0
+ENV NODE_VERSION 10.16.0
+
+USER root
+RUN apt-get update && apt-get install -yqq curl git python build-essential wget
+RUN yes | adduser --disabled-password remix && mkdir /app
+
+# Install base dependencies
+RUN apt-get update && apt-get install -y -q --no-install-recommends \
+        apt-transport-https \
+        build-essential \
+        ca-certificates \
+        curl \
+        git \
+        libssl-dev \
+        wget
+
+#Install NVM, NODE, NPM
+WORKDIR $NVM_DIR
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash \
+    && . $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default
+
+ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules
+ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
+#Now do remix stuff
+USER remix
+WORKDIR /home/remix
+
+RUN git clone https://github.com/ethereum/remix.git
+RUN cd remix && npm ci
+RUN npm run bootstrap
+
+RUN git clone https://github.com/ethereum/remix-ide.git
+RUN 
+RUN cd remix-ide && npm ci
+RUN cd remix-ide && npm run setupremix
+RUN npm start
+
+EXPOSE 8080
+EXPOSE 65520
+
+CMD ["echo", "42"]
