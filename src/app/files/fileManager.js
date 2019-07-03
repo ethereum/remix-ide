@@ -2,9 +2,10 @@
 
 import yo from 'yo-yo'
 const EventEmitter = require('events')
-var globalRegistry = require('../../global/registry')
-var CompilerImport = require('../compiler/compiler-imports')
-var toaster = require('../ui/tooltip')
+const globalRegistry = require('../../global/registry')
+const CompilerImport = require('../compiler/compiler-imports')
+const toaster = require('../ui/tooltip')
+const helper = require('../../lib/helper.js')
 import { FileSystemApi } from 'remix-plugin'
 import * as packageJson from '../../../package.json'
 
@@ -134,32 +135,54 @@ class FileManager extends FileSystemApi {
   }
 
   async setFile (path, content) {
+    let reject = false
+    let saveAsCopy = false
+
+    function acceptFileRewriting (e, toaster) {
+      reject = false
+      e.target.innerHTML = 'Accepted'
+      toaster.hide()
+      toaster.forceResolve()
+    }
+    function cancelFileRewriting (e, toaster) {
+      reject = true
+      e.target.innerHTML = 'Canceled'
+      toaster.hide()
+    }
+    const saveFileAsCopy = (e, toaster) => {
+      if (saveAsCopy) return
+      this._saveAsCopy(path, content)
+
+      saveAsCopy = true
+      e.target.innerHTML = 'Saved'
+      toaster.hide()
+    }
     if (this.currentRequest) {
-      let reject = false
-      let savedAsAnotherFile = false
       let actions = (toaster) => {
-        return yo`<div class="container ml-1">
-        <button class="btn btn-primary btn-sm m-1" onclick=${(e) => { reject = true; e.target.innerHTML = 'Canceled'; toaster.hide() }}>Cancel</button>
-        <button class="btn btn-primary btn-sm m-1" onclick=${(e) => {
-          if (savedAsAnotherFile) return
-          savedAsAnotherFile = true
-          const newPath = path + '.' + this.currentRequest.from
-          this._setFileInternal(newPath, content)
-          this.switchFile(newPath)
-          e.target.innerHTML = 'Saved'
-          toaster.hide()
-        }}>Save As Copy</button>
-        </div>`
+        return yo`
+          <div class="container ml-1">
+            <button class="btn btn-primary btn-sm m-1" onclick=${(e) => acceptFileRewriting(e, toaster)}>
+              Accept
+            </button>
+            <button class="btn btn-primary btn-sm m-1" onclick=${(e) => cancelFileRewriting(e, toaster)}>
+              Cancel
+            </button>
+            <button class="btn btn-primary btn-sm m-1" onclick="${(e) => saveFileAsCopy(e, toaster)}">
+              Save As Copy
+            </button>
+          </div>
+        `
       }
       await toaster(yo`
         <div>
           <i class="fas fa-exclamation-triangle text-danger mr-1"></i>
           <span>
-            ${this.currentRequest.from}<span class="text-danger"> is modyfing </span>${path}
+            ${this.currentRequest.from}<span class="text-danger font-weight-bold"> is trying to modify </span>${path}
           </span>
-        </div>`, actions, { time: 4000 })
+        </div>
+      `, actions, { time: 5000 })
       if (reject) throw new Error(`set file operation on ${path} aborted by user.`)
-      if (savedAsAnotherFile) return
+      if (saveAsCopy) return
     }
     this._setFileInternal(path, content)
   }
@@ -176,6 +199,20 @@ class FileManager extends FileSystemApi {
         resolve(true)
       })
     })
+  }
+
+  _saveAsCopy (path, content) {
+    const fileProvider = this.fileProviderOf(path)
+    if (fileProvider) {
+      helper.createNonClashingNameWithPrefix(path, fileProvider, '', (error, copyName) => {
+        if (error) {
+          console.log('createNonClashingNameWithPrefix', error)
+          copyName = path + '.' + this.currentRequest.from
+        }
+        this._setFileInternal(copyName, content)
+        this.switchFile(copyName)
+      })
+    }
   }
 
   removeTabsOf (provider) {

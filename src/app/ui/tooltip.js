@@ -23,6 +23,16 @@ class Toaster {
     }, 2000)
     animation(this.tooltip, css.animateTop.className)
   }
+
+ /**
+  * Force resolve the promise to close
+  * the toaster ignoring timeout
+  */
+  forceResolve () {
+    if (this.id) clearTimeout(this.id)
+    if (this.resolveFn) this.resolveFn()
+  }
+
   render (tooltipText, actionElement, opts) {
     opts = defaultOptions(opts)
     let canShorten = true
@@ -43,9 +53,19 @@ class Toaster {
 
     return new Promise((resolve, reject) => {
       const shortTooltipText = (canShorten && tooltipText.length > 201) ? tooltipText.substring(0, 200) + '...' : tooltipText
+      this.resolveFn = resolve
 
+      function showFullMessage () {
+        modal.alert(tooltipText)
+      }
+
+      function closeTheToaster (self) {
+        self.hide()
+        over()
+        resolve()
+      }
       let button = tooltipText.length > 201 ? yo`
-      <button class="btn btn-secondary btn-sm mx-3" style="white-space: nowrap;" onclick=${() => { modal.alert(tooltipText) }}>Show full message</button>
+      <button class="btn btn-secondary btn-sm mx-3" style="white-space: nowrap;" onclick=${() => showFullMessage()}>Show full message</button>
       ` : ``
 
       this.tooltip = yo`
@@ -56,11 +76,7 @@ class Toaster {
             ${actionElement}
           </span>
           <span style="align-self: baseline;">
-            <button class="fas fa-times btn-info mx-1 p-0" onclick=${() => {
-              this.hide()
-              over()
-              resolve()
-            }}></button>
+            <button class="fas fa-times btn-info mx-1 p-0" onclick=${() => closeTheToaster(this)}></button>
           </span>
         </div>`
       let timeOut = () => {

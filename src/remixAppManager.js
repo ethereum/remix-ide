@@ -1,3 +1,4 @@
+/* global localStorage */
 import { AppManagerApi, Plugin } from 'remix-plugin'
 import { EventEmitter } from 'events'
 import PluginManagerProxy from './app/components/plugin-manager-proxy'
@@ -41,6 +42,7 @@ export class RemixAppManager extends AppManagerApi {
     if (!isActive) {
       this.removeHiddenServices(api)
     }
+    localStorage.setItem('workspace', JSON.stringify(this.store.actives))
   }
 
   getEntity (apiName) {
