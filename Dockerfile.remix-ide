@@ -35,16 +35,17 @@ USER remix
 WORKDIR /home/remix
 
 RUN git clone https://github.com/ethereum/remix.git
-RUN cd remix && npm ci
+RUN git clone https://github.com/ethereum/remix-ide.git
+
+WORKDIR /home/remix/remix
+RUN npm install # RUN cd remix && npm ci -> Update to this when package-lock.json files are added
 RUN npm run bootstrap
 
-RUN git clone https://github.com/ethereum/remix-ide.git
-RUN 
-RUN cd remix-ide && npm ci
-RUN cd remix-ide && npm run setupremix
-RUN npm start
-
+WORKDIR /home/remix/remix-ide
+RUN npm install # update to npm ci when package-lock.json are added
+RUN npm run setupremix
 EXPOSE 8080
 EXPOSE 65520
 
-CMD ["echo", "42"]
+WORKDIR /home/remix/remix-ide
+CMD ["npm", "start"]
