@@ -8,6 +8,7 @@ var vm = require('vm')
 var EventManager = require('../../lib/events')
 var Web3 = require('web3')
 var swarmgw = require('swarmgw')()
+var babel = require('@babel/core')
 
 var CommandInterpreterAPI = require('../../lib/cmdInterpreterAPI')
 var executionContext = require('../../execution-context')
@@ -671,7 +672,8 @@ class Terminal extends Plugin {
     var context = domTerminalFeatures(self, scopedCommands)
     try {
       var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context, self._jsSandboxRegistered))
-      var result = vm.runInContext(script, cmds)
+      const babelized = babel.transform(script)
+      var result = vm.runInContext(babelized.code, cmds)
       self._jsSandboxContext = Object.assign(cmds, context)
       done(null, result)
     } catch (error) {

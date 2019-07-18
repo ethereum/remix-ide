@@ -16,9 +16,9 @@ export const profile = {
 export class NetworkModule extends Plugin {
   constructor () {
     super(profile)
-    // TODO: See with remix-lib to make sementic coherent
+    // TODO: See with remix-lib to make semantic coherent
     executionContext.event.register('contextChanged', (provider) => {
-      this.events.emit('providerChanged', provider)
+      this.emit('providerChanged', provider)
     })
     /*
     // Events that could be implemented later

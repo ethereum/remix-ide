@@ -3,7 +3,7 @@ var Personal = require('web3-eth-personal')
 var remixLib = require('remix-lib')
 const addTooltip = require('../../../ui/tooltip')
 var EventManager = remixLib.EventManager
-var executionContext = remixLib.execution.executionContext
+var executionContext = require('../../../../execution-context')
 
 class Settings {
 
