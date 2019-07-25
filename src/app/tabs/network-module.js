@@ -5,7 +5,7 @@ import * as packageJson from '../../../package.json'
 export const profile = {
   name: 'network',
   description: 'Manage the network (mainnet, ropsten, goerli...) and the provider (web3, vm, injected)',
-  methods: ['getNetworkProvider', 'getEndpoint', 'detectNetwork', 'addNetwork', 'removeNetwork'],
+  methods: ['getNetworkProvider', 'getEndpoint', 'detectNetwork', 'addNetwork', 'removeNetwork', 'sendAsync'],
   version: packageJson.version
 }
 
@@ -32,6 +32,19 @@ export class NetworkModule extends Plugin {
       this.events.emit('web3EndpointChanged', provider)
     })
     */
+  }
+
+  /*
+    that is used by plugins to call the current ethereum provider.
+    Should be taken carefully and probably not be release as it is now
+  */
+  sendAsync (payload) {
+    return new Promise((resolve, reject) => {
+      executionContext.web3().currentProvider.sendAsync(payload, (error, message) => {
+        if (error) return reject(error)
+        resolve(message)
+      })
+    })
   }
 
   /** Return the current network provider (web3, vm, injected) */
