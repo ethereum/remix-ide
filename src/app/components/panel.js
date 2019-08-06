@@ -22,6 +22,7 @@ const css = csjs`
   .pluginsContainer {
     height: 100%;
     overflow-y: hidden;
+    padding-bottom: 4px;
   }
 `
 
