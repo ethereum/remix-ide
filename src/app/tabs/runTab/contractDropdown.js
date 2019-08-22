@@ -24,7 +24,7 @@ class ContractDropdownUI {
       if (success) {
         this.selectContractNames.removeAttribute('disabled')
         this.dropdownLogic.getCompiledContracts(compiler, compilerFullName).forEach((contract) => {
-          contractNames.appendChild(yo`<option compiler="${compilerFullName}">${contract.name} - ${file}</option>`)
+          contractNames.appendChild(yo`<option value="${contract.name}" compiler="${compilerFullName}">${contract.name} - ${file}</option>`)
         })
       } else {
         this.selectContractNames.setAttribute('disabled', true)
