@@ -364,12 +364,8 @@ export class VerticalIcons extends Plugin {
 
 const css = csjs`
   .homeIcon {
-      display: block;
-      width: 42px;
-      height: 42px;
-      margin-bottom: 20px;
-      margin-left: -5px;
-      cursor: pointer;
+    margin-bottom: 50px;
+    cursor: pointer;
   }
   .homeIcon svg path {
     fill: var(--primary);
@@ -378,22 +374,19 @@ const css = csjs`
     fill: var(--primary);
   }
   .icons {
-    margin-left: 10px;
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
   }
   .icon {
     cursor: pointer;
-    margin-bottom: 12px;
-    width: 36px;
-    height: 36px;
-    padding: 3px;
+    margin-bottom: 24px;
     position: relative;
-    border-radius: 8px;
   }
   .icon img {
-    width: 28px;
-    height: 28px;
-    padding: 4px;
+    width: 20px;
+    height: 20px;
     filter: invert(0.5);
   }
   .image {
@@ -405,7 +398,8 @@ const css = csjs`
   }
   .icon[title='Settings'] {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
+    margin: 0;
   }
   .status {
     position: absolute;

@@ -161,12 +161,12 @@ export class TabProxy {
     this._view.filetabs.canAdd = false
 
     this._view.tabs = yo`
-      <div style="width: 100%; height: 100%;">
+      <div style="width: 100%; height: 100%; max-height: 32px">
         ${this._view.filetabs}
       </div>
     `
     let tabsbar = yo`
-      <div class="d-flex align-items-center" style="max-height: 35px; height: 100%">
+      <div class="d-flex align-items-end" style="min-height: 36px;">
         ${this._view.tabs}
       </div>
     `

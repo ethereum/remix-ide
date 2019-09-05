@@ -52,9 +52,9 @@ module.exports = class SettingsTab extends ViewPlugin {
     if (themes) {
       return yo`<div class="card-text themes-container">
         ${themes.map((aTheme) => {
-          let el = yo`<div class="${css.frow} form-check ${css.crow}">
-          <input type="radio" onchange=${event => { onswitchTheme(event, aTheme.name) }} class="align-middle form-check-input" name="theme" id="${aTheme.name}"   >
-          <label class="form-check-label" for="${aTheme.name}">${aTheme.name} (${aTheme.quality})</label>
+          let el = yo`<div class="${css.frow} custom-control custom-radio">
+          <input type="radio" onchange=${event => { onswitchTheme(event, aTheme.name) }} class="custom-control-input" name="theme" id="${aTheme.name}"   >
+          <label class="custom-control-label" for="${aTheme.name}">${aTheme.name} (${aTheme.quality})</label>
         </div>`
           if (this._deps.themeModule.active === aTheme.name) el.querySelector('input').setAttribute('checked', 'checked')
           return el
@@ -68,13 +68,26 @@ module.exports = class SettingsTab extends ViewPlugin {
     if (self._view.el) return self._view.el
 
     // Gist settings
-    var gistAccessToken = yo`<input id="gistaccesstoken" type="password" class="form-control mb-2 ${css.inline}" placeholder="Token">`
+    var gistAccessToken = yo`
+    <div>
+      <label class="form-control-label" for="gistaccesstoken">Token:</label>
+      <input id="gistaccesstoken" type="password" class="form-control mb-2">
+    </div>
+    `
     var token = this.config.get('settings/gist-access-token')
     if (token) gistAccessToken.value = token
-    var gistAddToken = yo`<input class="${css.savegisttoken} btn btn-sm btn-primary" id="savegisttoken" onclick=${() => { this.config.set('settings/gist-access-token', gistAccessToken.value); tooltip('Access token saved') }} value="Save" type="button">`
-    var gistRemoveToken = yo`<input class="btn btn-sm btn-primary" id="removegisttoken" onclick=${() => { gistAccessToken.value = ''; this.config.set('settings/gist-access-token', ''); tooltip('Access token removed') }} value="Remove" type="button">`
-    this._view.gistToken = yo`<div class="${css.checkboxText}">${gistAccessToken}${copyToClipboard(() => this.config.get('settings/gist-access-token'))}${gistAddToken}${gistRemoveToken}</div>`
-    this._view.optionVM = yo`<input onchange=${onchangeOption} class="align-middle form-check-input" id="alwaysUseVM" type="checkbox">`
+    var gistAddToken = yo`<input class="ml-3 mr-2 btn btn-sm btn-primary" id="savegisttoken" onclick=${() => { this.config.set('settings/gist-access-token', gistAccessToken.value); tooltip('Access token saved') }} value="Save" type="button">`
+    var gistRemoveToken = yo`<input class="btn btn-sm btn-secondary m-0" id="removegisttoken" onclick=${() => { gistAccessToken.value = ''; this.config.set('settings/gist-access-token', ''); tooltip('Access token removed') }} value="Remove" type="button">`
+    this._view.gistToken = yo`
+      <div>
+        ${gistAccessToken}
+        <div class="row justify-content-end align-items-center">
+          ${copyToClipboard(() => this.config.get('settings/gist-access-token'))}
+          ${gistAddToken}
+          ${gistRemoveToken}
+        </div>
+      </div>`
+    this._view.optionVM = yo`<input onchange=${onchangeOption} class="custom-control-input" id="alwaysUseVM" type="checkbox">`
     if (this.config.get('settings/always-use-vm') === undefined) this.config.set('settings/always-use-vm', true)
     if (this.config.get('settings/always-use-vm')) this._view.optionVM.setAttribute('checked', '')
     this._view.personal = yo`<input onchange=${onchangePersonal} id="personal" type="checkbox" class="align-middle form-check-input">`
@@ -89,7 +102,7 @@ module.exports = class SettingsTab extends ViewPlugin {
     this._view.themesCheckBoxes = this.createThemeCheckies()
     this._view.config.homePage = yo`
 
-    <div class="${css.info} card">
+    <div class="${css.info} card border-secondary">
       <div class="card-body">
       <h6 class="${css.title} card-title">Have a question?</h6>
       <button class="btn btn-primary sm-1" onclick="${() => { window.open('https://gitter.im/ethereum/remix') }}">Gitter Channel</button>
@@ -103,7 +116,7 @@ module.exports = class SettingsTab extends ViewPlugin {
     this._view.warnPersonalMode = yo`<i class="${css.icon} fas fa-exclamation-triangle text-warning" aria-hidden="true"></i>`
 
     this._view.config.general = yo`
-      <div class="${css.info} card">
+      <div class="${css.info} card border-secondary">
         <div class="card-body">
           <h6 class="${css.title} card-title">General settings</h6>
           <div class="form-check ${css.frow}">
@@ -126,17 +139,19 @@ module.exports = class SettingsTab extends ViewPlugin {
       </div>
       `
     this._view.gistToken = yo`
-      <div class="${css.info} card">
+      <div class="${css.info} border-secondary card">
         <div class="card-body">
           <h6 class="${css.title} card-title">Github Access Token</h6>
           <p class="">Manage the access token used to publish to Gist and retrieve Github contents.</p>
           <p class="">Go to github token page (link below) to create a new token and save it in Remix. Make sure this token has only 'create gist' permission.</p>
-          <p class="${css.crowNoFlex}"><a target="_blank" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
-          <div class="${css.crowNoFlex}">${this._view.gistToken}</div>
+          <p>
+            <a target="_blank" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
+          </p>
+          <div>${this._view.gistToken}</div>
         </div>
       </div>`
     this._view.config.themes = yo`
-      <div class="${css.info} card">
+      <div class="${css.info} border-0 card">
         <div class="card-body">
           <h6 class="${css.title} card-title">Themes</h6>
             ${this._view.themesCheckBoxes}

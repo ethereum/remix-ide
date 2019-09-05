@@ -69,21 +69,18 @@ var css = csjs`
     display            : flex;
   }
   .mainpanel         {
+    position           : relative;
     display            : flex;
     flex-direction     : column;
     overflow           : hidden;
     flex               : 1;
   }
   .iconpanel           {
-    display            : flex;
-    flex-direction     : column;
     overflow           : hidden;
-    width              : 50px;
+    width              : 60px;
     user-select        : none;
   }
   .sidepanel           {
-    display            : flex;
-    flex-direction     : row-reverse;
     width              : 320px;
   }
   .highlightcode {
@@ -149,32 +146,30 @@ class App {
     if (self._view.el) return self._view.el
     // not resizable
     self._view.iconpanel = yo`
-      <div id="icon-panel" class="${css.iconpanel} bg-light">
+      <div id="icon-panel" class="${css.iconpanel} border-right bg-light border-light">
       ${''}
       </div>
     `
 
     // center panel, resizable
     self._view.sidepanel = yo`
-      <div id="side-panel" style="min-width: 320px;" class=${css.sidepanel}>
+      <div id="side-panel" style="min-width: 320px;" class="${css.sidepanel} bg-dark border-right">
         ${''}
       </div>
     `
+    self._components.resizeFeature = new PanelsResize(self._view.sidepanel)
 
     // handle the editor + terminal
     self._view.mainpanel = yo`
       <div id="main-panel" class=${css.mainpanel}>
+        ${self._components.resizeFeature.render()}
         ${''}
       </div>
     `
-
-    self._components.resizeFeature = new PanelsResize(self._view.sidepanel)
-
     self._view.el = yo`
       <div class=${css.browsersolidity}>
         ${self._view.iconpanel}
         ${self._view.sidepanel}
-        ${self._components.resizeFeature.render()}
         ${self._view.mainpanel}
       </div>
     `

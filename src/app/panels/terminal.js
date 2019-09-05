@@ -130,7 +130,7 @@ class Terminal extends Plugin {
     `
     self._view.icon = yo`
       <i onmouseenter=${hover} onmouseleave=${hover} onmousedown=${minimize}
-      class="btn btn-secondary btn-sm align-items-center ${css.toggleTerminal} fas fa-angle-double-down"></i>`
+      class="${css.toggleTerminal} fas fa-angle-double-down"></i>`
     self._view.dragbar = yo`
       <div onmousedown=${mousedown} class=${css.dragbarHorizontal}></div>`
 
@@ -146,7 +146,7 @@ class Terminal extends Plugin {
     self._view.bar = yo`
       <div class="${css.bar}">
         ${self._view.dragbar}
-        <div class="${css.menu} border-top border-dark bg-light">
+        <div class="${css.menu} border-top bg-light">
           ${self._view.icon}
           <div class=${css.clear} onclick=${clear}>
             <i class="fas fa-ban" aria-hidden="true" title="Clear console"
@@ -154,23 +154,23 @@ class Terminal extends Plugin {
           </div>
           ${self._view.pendingTxCount}
           <div class=${css.verticalLine}></div>
-          <div class="form-check">
+          <div class="custom-control custom-checkbox">
             <input
               id="listenNetworkCheck"
               onchange=${listenOnNetwork}
-              type="checkbox" class="form-check-input "
+              type="checkbox" class="custom-control-input "
               title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created by you"
             >
             <label
-              class="${css.listenOnNetworkLabel} form-check-label"
+              class="${css.listenOnNetworkLabel} custom-control-label"
               title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created by you"
               for="listenNetworkCheck"
             >
-              listen on network
+              Listen on network
             </label>
           </div>
           <div class=${css.search}>
-            <i class="fas fa-search ${css.searchIcon} bg-light" aria-hidden="true"></i>
+            <i class="fas fa-search ${css.searchIcon}" aria-hidden="true"></i>
             ${self._view.inputSearch}
           </div>
         </div>

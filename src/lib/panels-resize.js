@@ -3,6 +3,9 @@ const csjs = require('csjs-inject')
 
 const css = csjs`
   .dragbar            {
+    position          : absolute; 
+    top               : 0;
+    left              : 0;
     width             : 2px;
     height            : 100%;
     cursor            : col-resize;

@@ -12,8 +12,8 @@ const css = csjs`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--light);
-    padding: 10px;
+    background-color: var(--dark);
+    padding: 0 24px;
     position: sticky;
     top: 0;
     z-index: 2;

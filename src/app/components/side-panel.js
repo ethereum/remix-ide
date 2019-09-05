@@ -13,19 +13,23 @@ const css = csjs`
   }
   .swapitTitle {
     margin: 0;
-    text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
   }
   .swapitTitle i{
     padding-left: 6px;
     font-size: 14px;
   }
   .swapitHeader {
-    height: 35px;
+    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
   }
   .icons i {
     height: 80%;
@@ -131,8 +135,8 @@ export class SidePanel extends AbstractPanel {
     }
 
     return yo`
-      <header class="${css.swapitHeader} px-3">
-        <h6 class="${css.swapitTitle}">${name}</h6>
+      <header class="${css.swapitHeader}">
+        <h2 class="${css.swapitTitle}">${name}</h2>
         ${docLink}
         ${versionWarning}
       </header>
@@ -143,7 +147,7 @@ export class SidePanel extends AbstractPanel {
     return yo`
       <section class="${css.panel}">
         ${this.header}
-        <div class="${css.pluginsContainer} py-1">
+        <div class="${css.pluginsContainer}">
           ${this.view}
         </div>
       </section>`

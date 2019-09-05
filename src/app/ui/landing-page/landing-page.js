@@ -11,46 +11,41 @@ import { ViewPlugin } from '@remixproject/engine'
 
 let css = csjs`
   .text {
+    display:block;
     cursor: pointer;
-    font-weight: normal;
-    max-width: 300px;
-    user-select: none;
-    color: var(--primary);
-  }
-  .text:hover {
-    text-decoration: underline;
+    border: none;
+    background: none;
+    padding: 0;
   }
   .homeContainer {
     user-select:none;
   }
   .thisJumboton {
-    padding: 2.5rem 0rem;
-    margin-bottom: 4rem;
+    padding: 32px;
+    border-bottom: 1px solid;
   }
   .hpLogoContainer {
     margin:30px;
     padding-right: 90px;
   }
   .jumboBtnContainer {
-    float: left;
-    padding-top: 15px;
     display: flex;
+    align-items: center;
     white-space: nowrap;
   }
-  .headlineContainer {
-    float: left;
-    padding-top: 17px;
-    margin: 0 50px 0 70px;
+  .thisJumbotonTitle {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
   .hpSections {
-    min-width: 640px;
-    margin: 0 60px;
+    padding: 32px;
   }
   .labelIt {
     margin-bottom: 0;
   }
   .seeAll {
-    margin-top: 7px;
+    height: 32px;
+    margin-left: 55px;
     white-space: nowrap;
   }
   .importFrom p {
@@ -184,16 +179,18 @@ export class LandingPage extends ViewPlugin {
     }
     let container = yo`<div class="${css.homeContainer} bg-light">
       <div>
-        <div class="alert alert-info clearfix ${css.thisJumboton}">
+        <div class="${css.thisJumboton} border-light border-bottom">
           <div class="${css.headlineContainer}">
-            <h2 class="">The new layout has arrived</h2>
+            <h2 class="${css.thisJumbotonTitle}">The new layout has arrived</h2>
           </div>
-          <div class="${css.jumboBtnContainer} px-5">
-            <button class="btn btn-primary btn-lg mx-3" href="#" onclick=${() => learnMore()} role="button">Learn more</button>
+          <div class="${css.jumboBtnContainer}">
+            <button class="btn btn-primary btn-lg mr-3" href="#" onclick=${() => learnMore()} role="button">Learn more</button>
             <button class="btn btn-secondary btn-lg" onclick=${() => switchToPreviousVersion()}>Use previous version</button>
           </div>
-        </div><!-- end of jumbotron -->
-      </div><!-- end of jumbotron container -->
+        </div>
+        <!-- end of jumbotron -->
+      </div>
+      <!-- end of jumbotron container -->
       <div class="row ${css.hpSections}">
         <div id="col1" class="col-sm-7">
           <div class="mb-5">
@@ -201,54 +198,52 @@ export class LandingPage extends ViewPlugin {
             <div class="${css.enviroments} pt-2">
               <button class="btn btn-lg btn-secondary mr-3" onclick=${() => startSolidity()}>Solidity</button>
               <button class="btn btn-lg btn-secondary mr-3" onclick=${() => startVyper()}>Vyper</button>
-              <button class="btn btn-lg btn-secondary mr-3" onclick=${() => startWorkshop()}>Workshops</button>
+              <button class="btn btn-lg btn-secondary" onclick=${() => startWorkshop()}>Workshops</button>
             </div>
           </div>
           <div class="file">
             <h4>File</h4>
-            <p class="mb-1 ${css.text}" onclick=${() => createNewFile()}>New File</p>
-            <p class="mb-1">
-              <label class="${css.labelIt} ${css.text}">
-                Open Files
-                <input title="open file" type="file" onchange="${
-                  (event) => {
-                    event.stopPropagation()
-                    let fileExplorer = globalRegistry.get('fileexplorer/browser').api
-                    fileExplorer.uploadFile(event)
-                  }
-                }" multiple />
-              </label>
-            </p>
-            <p class="mb-1 ${css.text}" onclick=${() => connectToLocalhost()}>Connect to Localhost</p>
-            <p class="mb-1">Import From:</p>
-            <div class="btn-group">
+            <button class="${css.text} mb-2 btn-link" onclick=${() => createNewFile()}>New File</button>
+            <label class="${css.text} mb-2 btn-link">
+              Open Files
+              <input title="open file" type="file" onchange="${
+                (event) => {
+                  event.stopPropagation()
+                  let fileExplorer = globalRegistry.get('fileexplorer/browser').api
+                  fileExplorer.uploadFile(event)
+                }
+              }" multiple />
+            </label>
+            <button class="${css.text} mb-3 btn-link" onclick=${() => connectToLocalhost()}>Connect to Localhost</button>
+            <h4>Import From:</h4>
+            <div>
               <button class="btn btn-sm btn-secondary" onclick="${() => importFromGist()}">Gist</button>
-              <button class="btn btn-sm btn-secondary" onclick="${() => load('Github', 'github URL', ['https://github.com/0xcert/ethereum-erc721/src/contracts/tokens/nf-token-metadata.sol', 'https://github.com/OpenZeppelin/openzeppelin-solidity/blob/67bca857eedf99bf44a4b6a0fc5b5ed553135316/contracts/access/Roles.sol', 'github:OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol#v2.1.2'])}">GitHub</button>
-              <button class="btn btn-sm btn-secondary" onclick="${() => load('Swarm', 'bzz-raw URL', ['bzz-raw://<swarm-hash>'])}">Swarm</button>
-              <button class="btn btn-sm btn-secondary" onclick="${() => load('Ipfs', 'ipfs URL', ['ipfs://<ipfs-hash>'])}">Ipfs</button>
-              <button class="btn btn-sm btn-secondary" onclick="${() => load('Https', 'http/https raw content', ['https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-solidity/master/contracts/crowdsale/validation/IndividuallyCappedCrowdsale.sol'])}">https</button>
-              <button class="btn btn-sm btn-secondary" onclick="${() => load('@resolver-engine', 'resolver-engine URL', ['github:OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol#v2.1.2'], yo`<span>please checkout <a class='text-primary' href="https://github.com/Crypto-Punkers/resolver-engine" target='_blank'>https://github.com/Crypto-Punkers/resolver-engine</a> for more information</span>`)}">Resolver-engine</button>
+              <button class="btn btn-sm ml-2 btn-secondary" onclick="${() => load('Github', 'github URL', ['https://github.com/0xcert/ethereum-erc721/src/contracts/tokens/nf-token-metadata.sol', 'https://github.com/OpenZeppelin/openzeppelin-solidity/blob/67bca857eedf99bf44a4b6a0fc5b5ed553135316/contracts/access/Roles.sol', 'github:OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol#v2.1.2'])}">GitHub</button>
+              <button class="btn btn-sm ml-2 btn-secondary" onclick="${() => load('Swarm', 'bzz-raw URL', ['bzz-raw://<swarm-hash>'])}">Swarm</button>
+              <button class="btn btn-sm ml-2 btn-secondary" onclick="${() => load('Ipfs', 'ipfs URL', ['ipfs://<ipfs-hash>'])}">Ipfs</button>
+              <button class="btn btn-sm ml-2 btn-secondary" onclick="${() => load('Https', 'http/https raw content', ['https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-solidity/master/contracts/crowdsale/validation/IndividuallyCappedCrowdsale.sol'])}">https</button>
+              <button class="btn btn-sm ml-2 btn-secondary" onclick="${() => load('@resolver-engine', 'resolver-engine URL', ['github:OpenZeppelin/openzeppelin-solidity/contracts/ownership/Ownable.sol#v2.1.2'], yo`<span>please checkout <a class='text-primary' href="https://github.com/Crypto-Punkers/resolver-engine" target='_blank'>https://github.com/Crypto-Punkers/resolver-engine</a> for more information</span>`)}">Resolver-engine</button>
             </div><!-- end of btn-group -->
           </div><!-- end of div.file -->
         </div><!-- end of #col1 -->
         <div id="col2" class="col-sm-5">
-          <div class="plugins mb-5">
-            <h4>Featured Plugins</h4>
-            <p class="mb-1 ${css.text}" onclick=${() => { startPipeline() }}>Pipeline</p>
-            <p class="mb-1 ${css.text}" onclick=${() => { startDebugger() }}>Debugger</p>
-            <p class="mb-1">
-              <button onclick=${() => { startPluginManager() }} class="btn btn-sm btn-secondary ${css.seeAll}">
-                See all Plugins
-                <i class="fas fa-plug p-1" ></i>
-              </button>
-            </p>
+          <div class="plugins row align-items-baseline mx-0 mb-5">
+            <div>
+              <h4>Featured Plugins</h4>
+              <p class="mb-1 ${css.text}" onclick=${() => { startPipeline() }}>Pipeline</p>
+              <p class="mb-1 ${css.text}" onclick=${() => { startDebugger() }}>Debugger</p>
+            </div>
+            <button onclick=${() => { startPluginManager() }} class="btn btn-sm btn-primary ${css.seeAll}">
+              See all Plugins
+              <i class="fas fa-plug p-1" ></i>
+            </button>
           </div>
           <div class="resources">
             <h4>Resources</h4>
-            <p class="mb-1"><a class="${css.text}" target="__blank" href="https://remix-ide.readthedocs.io/en/latest/#">Documentation</a></p>
-            <p class="mb-1"><a class="${css.text}" target="__blank" href="https://gitter.im/ethereum/remix">Gitter channel</a></p>
-            <p class="mb-1"><a class="${css.text}" target="__blank" href="https://medium.com/remix-ide">Medium Posts</a></p>
-            <p class="mb-1"><a class="${css.text}" target="__blank" href="https://remix-ide.readthedocs.io/en/latest/">Tutorials</a></p>
+            <a class="${css.text} mb-2 btn-link" target="__blank" href="https://remix-ide.readthedocs.io/en/latest/#">Documentation</a>
+            <a class="${css.text} mb-2 btn-link" target="__blank" href="https://gitter.im/ethereum/remix">Gitter channel</a>
+            <a class="${css.text} mb-2 btn-link" target="__blank" href="https://medium.com/remix-ide">Medium Posts</a>
+            <a class="${css.text} btn-link" target="__blank" href="https://remix-ide.readthedocs.io/en/latest/">Tutorials</a>
           </div>
         </div><!-- end of #col2 -->
       </div><!-- end of hpSections -->

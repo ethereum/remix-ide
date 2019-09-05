@@ -1,30 +1,32 @@
 var csjs = require('csjs-inject')
 
 const css = csjs`
-  .settingsTabView {
-    padding: 2%;
-  }
   .info {
     margin-bottom: .6rem;
     word-break: break-word;
     font-size: .8rem;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid;
   }
   .info h7 {
     margin-bottom: .5rem;
   }
   .title {
-    // font-size: 1.1em;
-    // font-weight: bold;
-    // margin-bottom: 1em;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .settingsButton {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 700;
   }
   .frow {
     margin-bottom: .5rem;
-  }
-  .crow {
-    // display: flex;
-    // overflow: auto;
-    // clear: both;
-    // padding: .2em;
   }
   .checkboxText {
     font-weight: normal;
@@ -64,10 +66,8 @@ const css = csjs`
     cursor: pointer;
   }
   .icon {
+    color: #C97539;
     margin-right: .5em;
-  }
-  .savegisttoken {
-    margin-left: 5px;
   }
   .aPlugin {
     display: inline-block;
@@ -84,10 +84,6 @@ const css = csjs`
     padding-left: 7px;
     padding-right: 7px;
     margin-left: 10px;
-  }
-  .inline {
-    display: inline;
-    width: 50%;
   }
 `
 

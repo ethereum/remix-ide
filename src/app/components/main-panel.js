@@ -26,7 +26,7 @@ export class MainPanel extends AbstractPanel {
 
   render () {
     return yo`
-      <div class=${css.pluginsContainer}>
+      <div class="${css.pluginsContainer} border-light border-top">
         ${this.view}
       </div>`
   }

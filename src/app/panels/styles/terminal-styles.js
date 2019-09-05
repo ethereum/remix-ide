@@ -6,7 +6,7 @@ var css = csjs`
     display           : flex;
     flex-direction    : column;
     font-size         : 12px;
-    min-height        : 3em;
+    min-height        : 3.7em;
   }
   .bar                {
     display           : flex;
@@ -17,8 +17,9 @@ var css = csjs`
     display              : flex;
     align-items          : center;
     width                : 100%;
-    max-height           : 35px;
-    min-height           : 35px;
+    max-height           : 48px;
+    min-height           : 48px;
+    padding              : 5px 16px;
   }
   .clear           {
     margin-right      : 20px;
@@ -30,8 +31,7 @@ var css = csjs`
     color             : var(--secondary);
   }
   .toggleTerminal              {
-    margin-right      : 20px;
-    margin-left       : 2px;
+    margin-right      : 16px;
     font-size         : 14px;
     font-weight       : bold;
     cursor            : pointer;
@@ -87,31 +87,21 @@ var css = csjs`
     font-family       : monospace;
   }
   .search {
-    display           : flex;
-    align-items       : center;
-    width             : 330px;
-    padding-left      : 20px;
-    height            : 100%;
-    padding-top       : 1px;
-    padding-bottom    : 1px;
+    position          : relative;
+    width             : 345px;
+    margin-left       : 16px;
   }
   .filter                       {
     padding-right               : 0px;
-    margin-right                : 0px;
-    height                      : 100%;
+    padding-left                : 36px;
     white-space                 : nowrap;
     overflow                    : hidden;
     text-overflow               : ellipsis;
   }
   .searchIcon                   {
-    height                      : 100%;
-    width                       : 25px;
-    border-top-left-radius      : 3px;
-    border-bottom-left-radius   : 3px;
-    display                     : flex;
-    align-items                 : center;
-    justify-content             : center;
-    margin-right                : 5px;
+    position                    : absolute;
+    top                         : 13px;
+    left                        : 16px;
   }
   .listen         {
     margin-right  : 30px;
@@ -132,7 +122,7 @@ var css = csjs`
   }
   .pendingTx {
     border-radius     : 50%;
-    margin-right      : 30px;
+    margin-right      : 32px;
     min-width         : 13px;
     height            : 13px;
     display           : flex;
