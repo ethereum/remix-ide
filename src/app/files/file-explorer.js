@@ -405,6 +405,7 @@ fileExplorer.prototype.toGist = function (id) {
         modalDialogCustom.alert(
           'Remix requires an access token (which includes gists creation permission). Please go to the settings tab to create one.'
         )
+        return cb()
       } else {
         var description = 'Created using remix-ide: Realtime Ethereum Contract Compiler and Runtime. \n Load this file by pasting this gists URL or ID at https://remix.ethereum.org/#version=' +
           queryParams.get().version +
