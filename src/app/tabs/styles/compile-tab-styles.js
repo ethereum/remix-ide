@@ -2,7 +2,10 @@ const csjs = require('csjs-inject')
 
 const css = csjs`
   .compilerArticle {
-    padding: 10px;
+    padding: 0 24px;
+  }
+  .compilerSm {
+    display: block;
   }
   .title {
     font-size: 1.1em;
@@ -37,13 +40,6 @@ const css = csjs`
     display: block;
     margin: 3% 0;
   }
-  .nightlyBuilds {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
-  }
   .autocompileContainer {
     display: flex;
     align-items: center;
@@ -73,12 +69,6 @@ const css = csjs`
   }
   .compilerConfig label {
     margin: 0;
-  }
-  .compilerSm {
-    padding-left: 1.25rem;
-  }
-  .compilerLabel {
-    direction: rtl;
   }
   .name {
     display: flex;

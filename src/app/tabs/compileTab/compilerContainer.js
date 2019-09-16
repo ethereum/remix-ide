@@ -102,11 +102,10 @@ class CompilerContainer {
     if (!name) name = ''
     var displayed = name === '' ? '<no file selected>' : name
     var el = yo`
-    <div class="${css.compilerArticle}">
-      <button class="btn btn-primary btn-block ${name === '' ? 'disabled' : ''}" title="Compile" onclick="${this.compile.bind(this)}">
+      <button class="btn btn-primary btn-block ${name === '' ? 'disabled' : ''} btn-lg mt-3" title="Compile" onclick="${this.compile.bind(this)}" disabled="${name === ''}">
         <span>${this._view.compileIcon} Compile ${displayed}</span>
       </button>
-    </div>`
+    `
     if (name === '') {
       el.setAttribute('disabled', 'true')
     }
@@ -137,11 +136,11 @@ class CompilerContainer {
     if (this.compileTabLogic.optimize) this._view.optimize.setAttribute('checked', '')
 
     this._view.versionSelector = yo`
-      <select onchange="${this.onchangeLoadVersion.bind(this)}" class="custom-select" id="versionSelector" disabled>
+      <select onchange="${this.onchangeLoadVersion.bind(this)}" class="custom-select mb-2" id="versionSelector" disabled>
         <option disabled selected>${this.data.defaultVersion}</option>
       </select>`
     this._view.languageSelector = yo`
-      <select onchange="${this.onchangeLanguage.bind(this)}" class="custom-select" id="compilierLanguageSelector" title="Available since v0.5.7">
+      <select onchange="${this.onchangeLanguage.bind(this)}" class="custom-select mb-2" id="compilierLanguageSelector" title="Available since v0.5.7">
         <option>Solidity</option>
         <option>Yul</option>
       </select>`
@@ -176,62 +175,43 @@ class CompilerContainer {
     this._view.compilationButton = this.compilationButton()
 
     this._view.includeNightlies = yo`
-      <input class="mr-0 ml-1" id="nightlies" type="checkbox" onchange=${this._updateVersionSelector.bind(this)}>
+      <input class="custom-control-input" id="nightlies" type="checkbox" onchange=${this._updateVersionSelector.bind(this)}>
     `
     this._view.compileContainer = yo`
       <section>
         <!-- Select Compiler Version -->
-        <article>
-          <header class="navbar navbar-light p-2 bg-light">
-            <div class="row w-100 no-gutters mb-2">
-              <div class="col-sm-4">
-                <label class="${css.compilerLabel} input-group-text pl-0 border-0" for="versionSelector">Compiler</label>
-              </div>
-              <div class="col-sm-8">
-                ${this._view.versionSelector}
-                <div class="pt-0 ${css.nightlyBuilds}">
-                  <label for="nightlies" class="text-dark p-0 m-0">Include nightly builds</label>
-                  ${this._view.includeNightlies}
-                </div>
-              </div>
-            </div>
-            <div class="row w-100 no-gutters mb-2">
-              <div class="col-sm-4">
-                <label class="${css.compilerLabel} input-group-text pl-0 border-0" for="compilierLanguageSelector">Language</label>
-              </div>
-              <div class="col-sm-8">
-                ${this._view.languageSelector}
-              </div>
-            </div>
-            <div class="row w-100 no-gutters">
-              <div class="col-sm-4">
-                <label class="${css.compilerLabel} input-group-text pl-0 border-0" for="evmVersionSelector">EVM Version</label>
-              </div>
-              <div class="col-sm-8">
-                ${this._view.evmVersionSelector}
-              </div>
-            </div>
-          </header>
+        <div class="py-3 px-4">
+          <label class="form-control-label mb-1" for="versionSelector">Compiler</label>  
+          ${this._view.versionSelector}
+          <div class="mb-2">
+            ${this._view.includeNightlies}
+            <label for="nightlies">Include nightly builds</label>
+          </div>
+          <label class="d-block form-control-label mb-1" for="compilierLanguageSelector">Language</label>
+          ${this._view.languageSelector}
+
+          <label class="d-block form-control-label mb-1" for="evmVersionSelector">EVM Version</label>
+          ${this._view.evmVersionSelector}
           ${this._view.compilationButton}
-        </article>
+        </div>
         <!-- Config -->
-        <article>
-          <small class="${css.compilerSm}">Compiler Configuration</small>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item form-group ${css.compilerConfig}">
+        <div class="py-3 px-4">
+          <small class="${css.compilerSm} form-control-label mb-2">Compiler Configuration</small>
+          <ul>
+            <li class="${css.compilerConfig} mb-2">
               ${this._view.autoCompile}
               <label for="autoCompile">Auto compile</label>
             </li>
-            <li class="list-group-item form-group ${css.compilerConfig}">
+            <li class="${css.compilerConfig} mb-2">
               ${this._view.optimize}
               <label for="optimize">Enable optimization</label>
             </li>
-            <li class="list-group-item form-group ${css.compilerConfig}">
+            <li class="${css.compilerConfig} mb-2">
               ${this._view.hideWarningsBox}
               <label for="hideWarningsBox">Hide warnings</label>
             </li>
           </ul>
-        </article>
+        </div>
       </section>`
 
     return this._view.compileContainer
