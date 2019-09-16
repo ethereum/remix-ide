@@ -16,11 +16,11 @@ module.exports = function (browser, callback) {
 function initModules (browser, callback) {
   browser.pause(3000)
     .click('#icon-panel div[plugin="pluginManager"]')
-    .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_solidity"] button')
+    .scrollAndClick('#pluginManager li[id="remixPluginManagerListItem_solidity"] button')
     .pause(5000)
-    .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_udapp"] button')
-    .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_solidityStaticAnalysis"] button')
-    .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_debugger"] button')
+    .scrollAndClick('#pluginManager li[id="remixPluginManagerListItem_udapp"] button')
+    .scrollAndClick('#pluginManager li[id="remixPluginManagerListItem_solidityStaticAnalysis"] button')
+    .scrollAndClick('#pluginManager li[id="remixPluginManagerListItem_debugger"] button')
     .scrollAndClick('#icon-panel div[plugin="fileExplorers"]')
     .perform(() => { callback() })
 }

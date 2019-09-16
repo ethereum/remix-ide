@@ -9,10 +9,14 @@ const css = csjs`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 5px 20px;
+  padding: 9px 22px;
 }
-.permissions button {
-  padding: 2px 5px;
+.permissionsButton {
+  height: 32px;
+  padding: 0 12px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
   cursor: pointer;
 }
 .permissionForm h4 {
@@ -126,8 +130,8 @@ export class PluginManagerSettings {
 
   render () {
     return yo`
-    <footer class="navbar navbar-light bg-light ${css.permissions}">
-      <button onclick="${() => this.openDialog()}" class="btn btn-info">Settings</button>
+    <footer class="bg-light ${css.permissions} remix-bg-opacity">
+      <button onclick="${() => this.openDialog()}" class="btn btn-primary btn-sm ${css.permissionsButton}">Settings</button>
     </footer>`
   }
 

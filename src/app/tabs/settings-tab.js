@@ -102,11 +102,9 @@ module.exports = class SettingsTab extends ViewPlugin {
     this._view.themesCheckBoxes = this.createThemeCheckies()
     this._view.config.homePage = yo`
 
-    <div class="${css.info} card border-secondary">
-      <div class="card-body">
+    <div class="${css.info} border-secondary">
       <h6 class="${css.title} card-title">Have a question?</h6>
       <button class="btn btn-primary sm-1" onclick="${() => { window.open('https://gitter.im/ethereum/remix') }}">Gitter Channel</button>
-      </div>
     </div>`
 
     var warnText = `Transaction sent over Web3 will use the web3.personal API - be sure the endpoint is opened before enabling it.
@@ -116,46 +114,40 @@ module.exports = class SettingsTab extends ViewPlugin {
     this._view.warnPersonalMode = yo`<i class="${css.icon} fas fa-exclamation-triangle text-warning" aria-hidden="true"></i>`
 
     this._view.config.general = yo`
-      <div class="${css.info} card border-secondary">
-        <div class="card-body">
-          <h6 class="${css.title} card-title">General settings</h6>
-          <div class="form-check ${css.frow}">
-            <div>${this._view.generateContractMetadata}</div>
-            <label class="form-check-label align-middle" for="generatecontractmetadata">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploys libraries automatically.</label>
-          </div>
-          <div class="form-check ${css.frow}">
-            <div>${this._view.optionVM}</div>
-            <label class="form-check-label align-middle" for="alwaysUseVM">Always use Ethereum VM at Load</label>
-          </div>
-          <div class="form-check ${css.frow}">
-            <div><input id="editorWrap" class="form-check-input align-middle" type="checkbox" onchange=${function () { this.editor.resize(this.checked) }}></div>
-            <label class="form-check-label align-middle" for="editorWrap">Text Wrap</label>
-          </div>
-          <div class="form-check ${css.frow}">
-            <div>${this._view.personal}></div>
-            <label class="form-check-label align-middle" for="personal"> ${this._view.warnPersonalMode} Enable Personal Mode for web3 provider. ${warnText}></label>
-          </div>
+      <div class="${css.info} border-secondary">
+        <h6 class="${css.title} card-title">General settings</h6>
+        <div class="form-check ${css.frow}">
+          <div>${this._view.generateContractMetadata}</div>
+          <label class="form-check-label align-middle" for="generatecontractmetadata">Generate contract metadata. Generate a JSON file in the contract folder. Allows to specify library addresses the contract depends on. If nothing is specified, Remix deploys libraries automatically.</label>
+        </div>
+        <div class="form-check ${css.frow}">
+          <div>${this._view.optionVM}</div>
+          <label class="form-check-label align-middle" for="alwaysUseVM">Always use Ethereum VM at Load</label>
+        </div>
+        <div class="form-check ${css.frow}">
+          <div><input id="editorWrap" class="form-check-input align-middle" type="checkbox" onchange=${function () { this.editor.resize(this.checked) }}></div>
+          <label class="form-check-label align-middle" for="editorWrap">Text Wrap</label>
+        </div>
+        <div class="form-check ${css.frow}">
+          <div>${this._view.personal}></div>
+          <label class="form-check-label align-middle" for="personal"> ${this._view.warnPersonalMode} Enable Personal Mode for web3 provider. ${warnText}></label>
         </div>
       </div>
       `
     this._view.gistToken = yo`
-      <div class="${css.info} border-secondary card">
-        <div class="card-body">
-          <h6 class="${css.title} card-title">Github Access Token</h6>
-          <p class="">Manage the access token used to publish to Gist and retrieve Github contents.</p>
-          <p class="">Go to github token page (link below) to create a new token and save it in Remix. Make sure this token has only 'create gist' permission.</p>
-          <p>
-            <a target="_blank" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
-          </p>
-          <div>${this._view.gistToken}</div>
-        </div>
+      <div class="${css.info} border-secondary">
+        <h6 class="${css.title} card-title">Github Access Token</h6>
+        <p class="">Manage the access token used to publish to Gist and retrieve Github contents.</p>
+        <p class="">Go to github token page (link below) to create a new token and save it in Remix. Make sure this token has only 'create gist' permission.</p>
+        <p>
+          <a target="_blank" href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>
+        </p>
+        <div>${this._view.gistToken}</div>
       </div>`
     this._view.config.themes = yo`
-      <div class="${css.info} border-0 card">
-        <div class="card-body">
-          <h6 class="${css.title} card-title">Themes</h6>
-            ${this._view.themesCheckBoxes}
-        </div>
+      <div class="${css.info} border-0">
+        <h6 class="${css.title} card-title">Themes</h6>
+        ${this._view.themesCheckBoxes}
       </div>`
     this._view.el = yo`
       <div class="${css.settingsTabView}" id="settingsView">

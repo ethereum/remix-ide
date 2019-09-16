@@ -12,21 +12,31 @@ const css = csjs`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--dark);
-    padding: 0 24px;
+    padding: 16px 24px;
     position: sticky;
     top: 0;
     z-index: 2;
     margin-bottom: 0px;
   }
+  .connectPlugin {
+    background: none;
+  }
+  .activeItemsList:empty {
+    display: none;
+  }
   .displayName {
-    text-transform: capitalize;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 11px;
+    line-height: 12px;
+    text-transform: uppercase;
   }
   .description {
-    text-transform: capitalize;
+    font-size: 13px;
+    line-height: 18px;
   }
   .row {
     display: flex;
@@ -37,12 +47,15 @@ const css = csjs`
     color: 
   }
   .versionWarning {
-    background-color: var(--light);
-    padding: 0 7px;
-    font-weight: bolder;
-    margin-top: 5px;
-    text-transform: lowercase;
+    padding: 4px;
+    margin: 0 8px;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 12px;
+    text-transform: uppercase;
     cursor: default;
+    border: 1px solid;
+    border-radius: 2px;
   }
 `
 
@@ -104,16 +117,16 @@ class PluginManagerComponent extends ViewPlugin {
       </button>`
 
     return yo`
-      <article id="remixPluginManagerListItem_${name}" class="list-group-item py-1" title="${displayName}" >
-        <div class="${css.row} justify-content-between align-items-center">
-          <h6 class="${css.displayName}">
+      <li id="remixPluginManagerListItem_${name}" class="list-group-item px-2 pt-2 pb-0" title="${displayName}" >
+        <div class="${css.row} justify-content-between align-items-center mb-2">
+          <h6 class="${css.displayName} form-control-label">
             ${displayName}
             ${versionWarning}
           </h6>
           ${activationButton}
         </div>
-        <p class="${css.description}">${api.profile.description}</p>
-      </article>
+        <p class="${css.description} text-body">${api.profile.description}</p>
+      </li>
     `
   }
 
@@ -164,38 +177,38 @@ class PluginManagerComponent extends ViewPlugin {
 
     const activeTile = actives.length !== 0
       ? yo`
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between align-items-center">
-        <span class="navbar-brand">Active Modules</span>
-        <span class="badge badge-pill badge-primary">${actives.length}</span>
-      </nav>`
+      <div class="row align-items-center px-4 pt-3">
+        <h3 class="mb-0 mr-2">Active Modules</h3>
+        <span class="badge badge-pill badge-warning">${actives.length}</span>
+      </div>`
       : ''
     const inactiveTile = inactives.length !== 0
       ? yo`
-      <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between align-items-center">
-        <span class="navbar-brand">Inactive Modules</span>
-        <span class="badge badge-pill badge-primary" style = "cursor: default;">${inactives.length}</span>
-      </nav>`
+      <div class="row align-items-center px-4 pt-3">
+        <h3 class="mb-0 mr-2">Inactive Modules</h3>
+        <span class="badge badge-pill badge-warning" style = "cursor: default;">${inactives.length}</span>
+      </div>`
       : ''
 
     const settings = new PluginManagerSettings().render()
 
     const rootView = yo`
       <div id='pluginManager'>
-        <header class="form-group ${css.pluginSearch}">
+        <header class="form-group ${css.pluginSearch} border-bottom border-secondary bg-dark">
           <input onkeyup="${e => this.filterPlugins(e)}" class="form-control" placeholder="Search">
-          <button onclick="${_ => this.openLocalPlugin()}" class="btn btn-sm text-dark border-0 font-weight-bold mt-2">
+          <button onclick="${_ => this.openLocalPlugin()}" class="${css.connectPlugin} btn-link mt-2 border-0 font-weight-bold">
             Connect to a Local Plugin
           </button>
         </header>
         <section>
           ${activeTile}
-          <div class="list-group list-group-flush">
+          <ul class="${css.activeItemsList} list-group p-3">
             ${actives.map(name => this.renderItem(name))}
-          </div>
+          </ul>
           ${inactiveTile}
-          <div class="list-group list-group-flush">
+          <ul class="list-group p-3">
             ${inactives.map(name => this.renderItem(name))}
-          </div>
+          </ul>
         </section>
         ${settings}
       </div>

@@ -2,17 +2,12 @@ var csjs = require('csjs-inject')
 
 const css = csjs`
   .info {
-    margin-bottom: .6rem;
     word-break: break-word;
     font-size: .8rem;
-    padding: 0;
+    padding: 20px;
     margin: 0;
-    border-radius: 0;
     border: 0;
     border-bottom: 1px solid;
-  }
-  .info h7 {
-    margin-bottom: .5rem;
   }
   .title {
     font-size: 14px;
