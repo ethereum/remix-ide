@@ -28,6 +28,10 @@ const css = csjs`
 `
 document.head.appendChild(yo`
   <style>
+    .ace_editor,
+    .ace_gutter-layer {
+      background: var(--light) !important;
+    }
     .ace-tm .ace_gutter,
     .ace-tm .ace_gutter-active-line,
     .ace-tm .ace_marker-layer .ace_active-line {
