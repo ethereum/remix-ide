@@ -227,22 +227,22 @@ class CompileTab extends ViewPlugin {
 
     let result = contractList.length
       ? yo`
-        <section class="${css.container} clearfix">
+        <section class="py-3 px-4">
           <!-- Select Compiler Version -->
-          <div class="navbar navbar-light bg-light input-group mb-3">
-            <label class="border-0 input-group-text" for="compiledContracts">Contract</label>
+          <div class="mb-3">
+            <label class="form-control-label" for="compiledContracts">Contract</label>
             ${selectEl}
           </div>
-          <article class="${css.compilerArticle}">
-            <button class="btn btn-secondary btn-block" title="Publish on Swarm" onclick="${() => { this.publish('swarm') }}">
+          <article>
+            <button class="btn btn-secondary btn-lg btn-block" title="Publish on Swarm" onclick="${() => { this.publish('swarm') }}">
               <span>Publish on Swarm</span>
               <img id="swarmLogo" class="${css.storageLogo} ml-2" src="${swarmImg}">
             </button>
-            <button class="btn btn-secondary btn-block" title="Publish on Ipfs" onclick="${() => { this.publish('ipfs') }}">
+            <button class="btn btn-secondary btn-lg btn-block" title="Publish on Ipfs" onclick="${() => { this.publish('ipfs') }}">
             <span>Publish on Ipfs</span>
             <img id="ipfsLogo" class="${css.storageLogo} ml-2" src="${ipfsImg}">
           </button>
-            <button class="btn btn-secondary btn-block" title="Display Contract Details" onclick="${() => { this.details() }}">
+            <button class="btn btn-secondary btn-lg btn-block" title="Display Contract Details" onclick="${() => { this.details() }}">
               Compilation Details
             </button>
             <!-- Copy to Clipboard -->
@@ -250,11 +250,11 @@ class CompileTab extends ViewPlugin {
               <div class="input-group">
                 <div class="btn-group" role="group" aria-label="Copy to Clipboard">
                   <button class="btn" title="Copy ABI to clipboard" onclick="${() => { this.copyABI() }}">
-                    <i class="${css.copyIcon} far fa-clipboard" aria-hidden="true"></i>
+                    <i class="${css.copyIcon} far fa-copy" aria-hidden="true"></i>
                     <span>ABI</span>
                   </button>
-                  <button class="btn" title="Copy Bytecode to clipboard" onclick="${() => { this.copyBytecode() }}">
-                    <i class="${css.copyIcon} far fa-clipboard" aria-hidden="true"></i>
+                  <button class="btn p-0" title="Copy Bytecode to clipboard" onclick="${() => { this.copyBytecode() }}">
+                    <i class="${css.copyIcon} far fa-copy" aria-hidden="true"></i>
                     <span>Bytecode</span>
                   </button>
                 </div>
@@ -263,8 +263,8 @@ class CompileTab extends ViewPlugin {
           </article>
         </section>`
       : yo`
-        <section class="${css.container} clearfix">
-          <article class="${css.compilerArticle}">
+        <section class="pt-3 px-4">
+          <article>
             <span class="alert alert-warning" role="alert">No Contract Compiled Yet</span>
           </article>
         </section>`

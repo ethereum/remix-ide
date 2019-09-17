@@ -195,7 +195,7 @@ class CompilerContainer {
           ${this._view.compilationButton}
         </div>
         <!-- Config -->
-        <div class="py-3 px-4">
+        <div class="py-3 px-4 border-bottom border-secondary">
           <small class="${css.compilerSm} form-control-label mb-2">Compiler Configuration</small>
           <ul>
             <li class="${css.compilerConfig} mb-2">

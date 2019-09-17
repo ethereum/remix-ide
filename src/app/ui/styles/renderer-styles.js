@@ -10,9 +10,8 @@ var css = yo`<style>
     cursor: pointer;
     position: relative;
     margin: 0.5em 0 1em 0;
-    border-radius: 5px;
-    line-height: 20px;
-    padding: 8px 15px;
+    border-radius: 2px;
+    padding: 8px;
 }
 
 .sol.success pre,
@@ -20,13 +19,9 @@ var css = yo`<style>
 .sol.staticAnalysisWarning pre,
 .sol.warning pre {
     white-space: pre-line;
-    overflow-y: hidden;
     background-color: transparent;
-    margin: 0;
-    font-size: 12px;
-    border: 0 none;
-    padding: 0;
-    border-radius: 0;
+    font-size: 11px;
+    line-height: 20px;
 }
 
 .sol.success .close,
@@ -36,7 +31,7 @@ var css = yo`<style>
     white-space: pre-line;
     font-weight: bold;
     position: absolute;
-    color: hsl(0, 0%, 0%); /* black in style-guide.js */
+    color: #fff;
     top: 0;
     right: 0;
     padding: 0.5em;

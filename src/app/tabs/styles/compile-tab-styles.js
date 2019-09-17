@@ -1,9 +1,6 @@
 const csjs = require('csjs-inject')
 
 const css = csjs`
-  .compilerArticle {
-    padding: 0 24px;
-  }
   .compilerSm {
     display: block;
   }
@@ -100,7 +97,7 @@ const css = csjs`
     align-items: center;
   }
   .contractHelperButtons {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
