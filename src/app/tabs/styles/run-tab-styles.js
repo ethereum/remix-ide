@@ -15,8 +15,7 @@ var css = csjs`
     height: 0px;
   }
   .settings {
-    margin-bottom: 2%;
-    padding: 10px 0px 15px 15px;
+    padding: 16px 24px;
   }
   .recorderCount {
     /* margin-right: 30px; */
@@ -48,12 +47,14 @@ var css = csjs`
     align-items: center;
     position: relative;
     width: 100%;
-    padding-right: 25px;
   }
   .account {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 100%;
+  }
+  .account i {
+    margin: 0 12px;
   }
   .col2 {
     border-radius: 3px;
@@ -97,7 +98,6 @@ var css = csjs`
    }
   .contractNames {
     width: 100%;
-    border: 1px solid
   }
   .contractNamesError {
   }
@@ -219,18 +219,12 @@ var css = csjs`
     display: flex;
   }
   .gasNval {
-    /* transform: scale(0.7); */
-    /* transform-origin: left; */
-    margin-right: 10px;
-    width: 100px;
-    font-size: 0.8rem;
+    width: 140px;
+    margin: 0;
   }
   .gasNvalUnit {
-    /* transform: scale(0.7); */
-    /* transform-origin: left; */
-    margin-right: 10px;
-    font-size: 0.8rem;
-    width: 70px;
+    margin-left: 4px;
+    width: 105px;
   }
 `
 

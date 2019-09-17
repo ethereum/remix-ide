@@ -55,10 +55,8 @@ class SettingsUI {
     this.netUI = yo`<span class="${css.network} badge badge-secondary"></span>`
 
     var environmentEl = yo`
-      <div class="${css.crow}">
-        <div id="selectExEnv" class="${css.col1_1}">
-          Environment
-        </div>
+      <div>
+        <label id="selectExEnv" for="selectExEnvOptions" class="d-block form-control-label">Environment</label>
         <div class=${css.environment}>
           <select id="selectExEnvOptions" onchange=${() => { this.updateNetwork() }} class="form-control ${css.select}">
             <option id="vm-mode"
@@ -89,31 +87,31 @@ class SettingsUI {
       </div>
     `
     const accountEl = yo`
-      <div class="${css.crow}">
-        <div class="${css.col1_1}">
+      <div class="my-2">
+        <label for="txorigin" class="form-control-label row">
           Account
           <span id="remixRunPlusWraper" title="Create a new account" onload=${this.updatePlusButton.bind(this)}>
             <i id="remixRunPlus" class="fas fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${this.newAccount.bind(this)}"></i>
           </span>
-        </div>
+        </label>
         <div class=${css.account}>
           <select name="txorigin" class="form-control ${css.select}" id="txorigin"></select>
           ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
-          <i id="remixRunSignMsg" class="fas fa-edit ${css.icon}" aria-hidden="true" onclick=${this.signMessage.bind(this)} title="Sign a message using this account key"></i>
+          <i id="remixRunSignMsg" class="fas fa-edit ${css.icon} m-0" aria-hidden="true" onclick=${this.signMessage.bind(this)} title="Sign a message using this account key"></i>
         </div>
       </div>
     `
 
     const gasPriceEl = yo`
-      <div class="${css.crow}">
-        <div class="${css.col1_1}">Gas limit</div>
+      <div class="mb-2">
+        <label for="gasLimit" class="form-control-label">Gas limit</label>
         <input type="number" class="form-control ${css.gasNval} ${css.col2}" id="gasLimit" value="3000000">
       </div>
     `
 
     const valueEl = yo`
-      <div class="${css.crow}">
-        <div class="${css.col1_1}">Value</div>
+      <div>
+        <label class="form-control-label">Value</label>
         <div class="${css.gasValueContainer}">
           <input type="text" class="form-control ${css.gasNval} ${css.col2}" id="value" value="0" title="Enter the value and choose the unit">
           <select name="unit" class="form-control p-1 ${css.gasNvalUnit} ${css.col2_2}" id="unit">
@@ -127,7 +125,7 @@ class SettingsUI {
     `
 
     const el = yo`
-      <div class="${css.settings}">
+      <div class="${css.settings} border-bottom border-secondary">
         ${environmentEl}
         ${networkEl}
         ${accountEl}

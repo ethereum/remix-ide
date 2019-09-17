@@ -2505,8 +2505,7 @@ input[type='button'].btn-block {
   background-image: none;
 }
 .custom-select:disabled {
-  color: #868e96;
-  background-color: #4e5d6c;
+  opacity: 0.3;
 }
 .custom-select::-ms-expand {
   display: none;

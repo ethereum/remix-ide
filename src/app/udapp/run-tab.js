@@ -79,10 +79,10 @@ export class RunTab extends LibraryPlugin {
   }
 
   renderContainer () {
-    this.container = yo`<div class="${css.runTabView} py-0 px-2" id="runTabView" ></div>`
+    this.container = yo`<div class="${css.runTabView}" id="runTabView" ></div>`
 
     var el = yo`
-    <div class="list-group list-group-flush">
+    <div>
       ${this.settingsUI.render()}
       ${this.contractDropdownUI.render()}
       ${this.recorderCard.render()}
