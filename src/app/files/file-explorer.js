@@ -525,7 +525,7 @@ fileExplorer.prototype.updateGist = function () {
 
 fileExplorer.prototype.createNewFile = function () {
   let self = this
-  modalDialogCustom.prompt('Create new file', 'File Name', 'Untitled.sol', (input) => {
+  modalDialogCustom.prompt('Create new file', 'File Path (Untitled.sol, Folder1/Untitled.sol1)', 'Untitled.sol', (input) => {
     helper.createNonClashingName(input, self.files, (error, newName) => {
       if (error) return modalDialogCustom.alert('Failed to create file ' + newName + ' ' + error)
       if (!self.files.set(newName, '')) {
@@ -568,18 +568,16 @@ fileExplorer.prototype.ensureRoot = function (cb) {
   cb = cb || (() => {})
   var self = this
   if (self.element) return cb()
-
-  self.files.resolveDirectory('/', (error, files) => {
-    if (error) console.error(error)
-    var element = self.treeView.render(files, false)
-    element.classList.add(css.fileexplorer)
-    element.events = self.events
-    element.api = self.api
-    self.container.appendChild(element)
-    self.element = element
-    if (cb) cb()
-    self.treeView.expand(self.files.type)
-  })
+  const root = {}
+  root[this.files.type] = {}
+  var element = self.treeView.render(root, false)
+  element.classList.add(css.fileexplorer)
+  element.events = self.events
+  element.api = self.api
+  self.container.appendChild(element)
+  self.element = element
+  if (cb) cb()
+  self.treeView.expand(self.files.type)
 }
 
 function normalize (path, filesList) {
