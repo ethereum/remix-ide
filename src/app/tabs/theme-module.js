@@ -3,6 +3,7 @@ import { EventEmitter } from 'events'
 import * as packageJson from '../../../package.json'
 
 const themes = [
+  {name: 'EthWork', quality: 'dark', url: './assets/css/remix-theme-dark.css'},
   {name: 'Cerulean', quality: 'light', url: 'https://bootswatch.com/4/cerulean/bootstrap.min.css'},
   {name: 'Flatly', quality: 'light', url: 'https://bootswatch.com/4/flatly/bootstrap.min.css'},
   {name: 'Lumen', quality: 'light', url: 'https://bootswatch.com/4/lumen/bootstrap.min.css'},
