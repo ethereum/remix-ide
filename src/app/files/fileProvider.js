@@ -24,6 +24,8 @@ class FileProvider {
   get (path, cb) {
     cb = cb || function () {}
     var unprefixedpath = this.removePrefix(path)
+    var exists = window.remixFileSystem.existsSync(unprefixedpath)
+    if (!exists) return cb(null, null)
     window.remixFileSystem.readFile(unprefixedpath, 'utf8', (err, content) => {
       cb(err, content)
     })
@@ -36,21 +38,29 @@ class FileProvider {
     if (!exists && unprefixedpath.indexOf('/') !== -1) {
       const paths = unprefixedpath.split('/')
       paths.pop() // last element should the filename
+      if (paths.length && paths[0] === '') paths.shift()
       let currentCheck = ''
       paths.forEach((value) => {
         currentCheck = currentCheck + '/' + value
-        window.remixFileSystem.mkdirSync(currentCheck)
+        if (!window.remixFileSystem.existsSync(currentCheck)) {
+          window.remixFileSystem.mkdirSync(currentCheck)
+          this.event.trigger('folderAdded', [this._normalizePath(currentCheck)])
+        }
       })
     }
-    window.remixFileSystem.writeFile(unprefixedpath, content, (err) => {
-      if (err) return cb(err)
-      if (!exists) {
-        this.event.trigger('fileAdded', [this.type + unprefixedpath, false])
-      } else {
-        this.event.trigger('fileChanged', [this.type + unprefixedpath])
-      }
-      cb()
-    })
+    try {
+      window.remixFileSystem.writeFileSync(unprefixedpath, content)
+    } catch (e) {
+      cb(e)
+      return false
+    }
+    if (!exists) {
+      this.event.trigger('fileAdded', [this._normalizePath(unprefixedpath), false])
+    } else {
+      this.event.trigger('fileChanged', [this._normalizePath(unprefixedpath)])
+    }
+    cb()
+    return true
   }
 
   addReadOnly (path, content) {
@@ -73,7 +83,7 @@ class FileProvider {
       } else {
         window.remixFileSystem.unlinkSync(unprefixedpath, console.log)
       }
-      this.event.trigger('fileRemoved', [this.type + unprefixedpath])
+      this.event.trigger('fileRemoved', [this._normalizePath(unprefixedpath)])
       return true
     } catch (e) {
       console.log(e)
@@ -87,8 +97,8 @@ class FileProvider {
     if (this._exists(unprefixedoldPath)) {
       window.remixFileSystem.renameSync(unprefixedoldPath, unprefixednewPath)
       this.event.trigger('fileRenamed', [
-        this.type + unprefixedoldPath,
-        this.type + unprefixednewPath,
+        this._normalizePath(unprefixedoldPath),
+        this._normalizePath(unprefixednewPath),
         isFolder
       ])
       return true
@@ -117,6 +127,11 @@ class FileProvider {
   removePrefix (path) {
     path = path.indexOf(this.type) === 0 ? path.replace(this.type, '') : path
     return path
+  }
+
+  _normalizePath (path) {
+    if (path.indexOf('/') !== 0) path = '/' + path
+    return this.type + path
   }
 }
 

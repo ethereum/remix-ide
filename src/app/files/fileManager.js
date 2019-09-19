@@ -306,6 +306,9 @@ class FileManager extends Plugin {
   }
 
   fileProviderOf (file) {
+    if (file.indexOf('localhost') === 0) {
+      return this._deps.filesProviders['localhost']
+    }
     return this._deps.filesProviders['browser']
   }
 
