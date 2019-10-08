@@ -289,10 +289,17 @@ class CompilerContainer {
            (version.includes('nightly') && this._view.includeNightlies.checked)
   }
 
-  _updateVersionSelector () {
+  _updateVersionSelector (pragmaVersion = null) {
     // update selectedversion of previous one got filtered out
     if (!this._shouldBeAdded(this.data.selectedVersion)) {
       this.data.selectedVersion = this.data.defaultVersion
+    }
+    if (pragmaVersion) {
+      this.data.allversions.forEach(build => {
+        if (build.path.includes('v' + pragmaVersion + '+')) {
+          this.data.selectedVersion = build.path
+        }
+      })
     }
     this._view.versionSelector.innerHTML = ''
     this.data.allversions.forEach(build => {

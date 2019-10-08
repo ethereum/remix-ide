@@ -103,7 +103,21 @@ class CompileTab extends ViewPlugin {
     })
 
     this.fileManager.events.on('currentFileChanged', (name) => {
-      this.compilerContainer.currentFile = name
+      this.fileManager.events.on('currentFileChanged', (name) => {
+        this.fileManager.getFile(name).then(data => {
+          let pragmaArr = data.match(/(pragma solidity (.+?);)/g)
+          if (pragmaArr && pragmaArr.length === 1) {
+            let pragma = pragmaArr[0].replace('pragma solidity', '').trim()
+            if (pragma.charAt(0) !== '>') {
+              if (pragma.charAt(0) === '^') {
+                pragma = pragma.substring(1, pragma.length - 1)
+              }
+              this.compilerContainer._updateVersionSelector(pragma)
+            }
+          }
+          this.compilerContainer.currentFile = name
+        })
+      })
     })
 
     this.fileManager.events.on('noFileSelected', () => {
