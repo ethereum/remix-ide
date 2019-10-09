@@ -111,6 +111,7 @@ class CompileTab extends ViewPlugin {
             if (pragma.charAt(0) === '^') {
               pragma = pragma.substring(1, pragma.length - 1)
             }
+            pragma = pragma.substring(0, pragma.length - 1)
             if (!this.compilerContainer._retrieveVersion().includes(pragma + '+commit')) {
               this.compilerContainer._updateVersionSelector(pragma)
             }
