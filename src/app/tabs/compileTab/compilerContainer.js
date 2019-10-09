@@ -295,11 +295,12 @@ class CompilerContainer {
       this.data.selectedVersion = this.data.defaultVersion
     }
     if (pragmaVersion) {
-      this.data.allversions.forEach(build => {
-        if (build.path.includes('v' + pragmaVersion + '+')) {
+      for (let build of this.data.allversions) {
+        if (build.version === pragmaVersion) {
           this.data.selectedVersion = build.path
+          break
         }
-      })
+      }
     }
     this._view.versionSelector.innerHTML = ''
     this.data.allversions.forEach(build => {
