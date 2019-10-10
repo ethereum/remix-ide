@@ -106,16 +106,31 @@ class CompileTab extends ViewPlugin {
       this.fileManager.getFile(name).then(data => {
         let pragmaArr = data.match(/(pragma solidity (.+?);)/g)
         if (pragmaArr && pragmaArr.length === 1) {
-          let pragma = pragmaArr[0].replace('pragma solidity', '').trim()
-          if (pragma.charAt(0) !== '>') {
-            if (pragma.charAt(0) === '^') {
-              pragma = pragma.substring(1, pragma.length - 1)
+          let pragmaStr = pragmaArr[0].replace('pragma solidity', '').trim()
+          let pragma = {}
+          if (pragmaStr.charAt(0) === '^') {
+            pragma.start = pragmaStr.substring(1, pragmaStr.length - 1)
+            pragma.isFixed = true
+          } else if (pragmaStr.charAt(0) === '>') {
+            if (pragmaStr.indexOf('<') > -1) {
+              pragma.start = pragmaStr.substring(pragmaStr.indexOf('>') + 1, pragmaStr.indexOf('<')).trim()
+              pragma.end = pragmaStr.substring(pragmaStr.indexOf('<') + 1, pragmaStr.indexOf(';')).trim()
+              if (pragma.end.charAt(0) === '=') {
+                pragma.end = pragma.end.substring(1)
+                pragma.endInclusive = true
+              }
+            } else {
+              pragma.start = pragmaStr.substring(pragmaStr.indexOf('>') + 1, pragmaStr.indexOf(';')).trim()
             }
-            pragma = pragma.substring(0, pragma.length - 1)
-            if (!this.compilerContainer._retrieveVersion().includes(pragma + '+commit')) {
-              this.compilerContainer._updateVersionSelector(pragma)
+            if (pragma.start.charAt(0) === '=') {
+              pragma.start = pragma.start.substring(1)
+              pragma.startInclusive = true
             }
+          } else {
+            pragma.start = pragmaStr.substring(0, pragmaStr.length - 1)
+            pragma.isFixed = true
           }
+          this.compilerContainer._updateVersionSelector(pragma)
         }
         this.compilerContainer.currentFile = name
       })

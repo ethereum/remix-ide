@@ -289,16 +289,34 @@ class CompilerContainer {
            (version.includes('nightly') && this._view.includeNightlies.checked)
   }
 
-  _updateVersionSelector (pragmaVersion = null) {
+  _updateVersionSelector (pragma = null) {
     // update selectedversion of previous one got filtered out
     if (!this._shouldBeAdded(this.data.selectedVersion)) {
       this.data.selectedVersion = this.data.defaultVersion
     }
-    if (pragmaVersion) {
-      for (let build of this.data.allversions) {
-        if (build.version === pragmaVersion) {
-          this.data.selectedVersion = build.path
-          break
+    if (pragma && pragma.start) {
+      let allversions = this.data.allversions.filter(build => (!build.prerelease))
+      let startIndex = allversions.findIndex(build => build.version === pragma.start)
+      if (startIndex > -1) {
+        if (pragma.isFixed) {
+          this.data.selectedVersion = allversions[startIndex].path
+        } else {
+          let maxIndex = 0
+          if (pragma.end) {
+            let endIndex = allversions.findIndex(build => build.version === pragma.end)
+            if (endIndex > -1) {
+              if (!pragma.endInclusive) {
+                endIndex += 1
+              }
+              if (startIndex === endIndex && !pragma.startInclusive) {
+                endIndex = -1
+              }
+              maxIndex = endIndex
+            }
+          }
+          if (maxIndex > -1) {
+            this.data.selectedVersion = allversions[maxIndex].path
+          }
         }
       }
     }
