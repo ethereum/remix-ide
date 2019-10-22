@@ -289,14 +289,23 @@ class CompilerContainer {
            (version.includes('nightly') && this._view.includeNightlies.checked)
   }
 
+  /**
+   * Update & load compiler 
+   * @param {Object} pragma - Pragma version information
+   * @param {string} pragma.start - Version of pragma, Start in case of range
+   * @param {boolean} [pragma.startInclusive] - true, if start version is inclusive in range
+   * @param {string} [pragma.end] - End version of pragma in case of range
+   * @param {boolean} [pragma.endInclusive] - true, if end version is inclusive in range
+   * @param {boolean} [pragma.isFixed] - true, if pragma is not a range
+   */
   _updateVersionSelector (pragma = null) {
     // update selectedversion of previous one got filtered out
     if (!this._shouldBeAdded(this.data.selectedVersion)) {
       this.data.selectedVersion = this.data.defaultVersion
     }
     if (pragma && pragma.start) {
-      let allversions = this.data.allversions.filter(build => (!build.prerelease))
-      let startIndex = allversions.findIndex(build => build.version === pragma.start)
+      const allversions = this.data.allversions.filter(build => (!build.prerelease))
+      const startIndex = allversions.findIndex(build => build.version === pragma.start)
       if (startIndex > -1) {
         if (pragma.isFixed) {
           this.data.selectedVersion = allversions[startIndex].path
