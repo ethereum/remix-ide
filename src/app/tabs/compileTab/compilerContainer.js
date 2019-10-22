@@ -290,7 +290,7 @@ class CompilerContainer {
   }
 
   /**
-   * Update & load compiler 
+   * Update & load compiler
    * @param {Object} pragma - Pragma version information
    * @param {string} pragma.start - Version of pragma, Start in case of range
    * @param {boolean} [pragma.startInclusive] - true, if start version is inclusive in range
