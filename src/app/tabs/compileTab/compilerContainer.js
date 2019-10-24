@@ -336,7 +336,6 @@ class CompilerContainer {
    * @param {boolean} [pragma.isFixed] - true, if pragma is not a range
    */
   _updateVersionSelector (pragma = null) {
-    let shouldBeUpdated = true
     // update selectedversion of previous one got filtered out
     if (!this._shouldBeAdded(this.data.selectedVersion)) {
       this.data.selectedVersion = this.data.defaultVersion
@@ -367,13 +366,13 @@ class CompilerContainer {
           }
         }
         if (this.data.selectedVersion === selectedVersion) {
-          shouldBeUpdated = false
+          // No need to reload same compiler
+          return
         } else {
           this.data.selectedVersion = selectedVersion
         }
       }
     }
-    if (pragma && !shouldBeUpdated) return
 
     this._view.versionSelector.innerHTML = ''
     this.data.allversions.forEach(build => {
