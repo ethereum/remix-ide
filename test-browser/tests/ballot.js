@@ -16,7 +16,7 @@ module.exports = {
   },
   'Deploy Ballot': function (browser) {
     browser
-    .waitForElementVisible('#icon-panel', 30000)
+    .waitForElementVisible('#icon-panel', 15000)
     .clickLaunchIcon('solidity')
     .testContracts('Untitled.sol', sources[0]['browser/Untitled.sol'], ['Ballot'])
     .clickLaunchIcon('udapp')
