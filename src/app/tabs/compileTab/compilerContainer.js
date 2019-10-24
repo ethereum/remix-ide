@@ -32,6 +32,9 @@ class CompilerContainer {
    * Update the compilation button with the name of the current file
    */
   set currentFile (name = '') {
+    if (name && name !== '') {
+      this._setCompilerVersionFromPragma(name)
+    }
     if (!this._view.compilationButton) return
     const button = this.compilationButton(name.split('/').pop())
     yo.update(this._view.compilationButton, button)
@@ -111,6 +114,39 @@ class CompilerContainer {
       el.setAttribute('disabled', 'true')
     }
     return el
+  }
+
+  _setCompilerVersionFromPragma (filename) {
+    this.compileTabLogic.fileManager.getFile(filename).then(data => {
+      let pragmaArr = data.match(/(pragma solidity (.+?);)/g)
+      if (pragmaArr && pragmaArr.length === 1) {
+        let pragmaStr = pragmaArr[0].replace('pragma solidity', '').trim()
+        let pragma = {}
+        if (pragmaStr.charAt(0) === '^') {
+          pragma.start = pragmaStr.substring(1, pragmaStr.length - 1)
+          pragma.isFixed = true
+        } else if (pragmaStr.charAt(0) === '>') {
+          if (pragmaStr.indexOf('<') > -1) {
+            pragma.start = pragmaStr.substring(pragmaStr.indexOf('>') + 1, pragmaStr.indexOf('<')).trim()
+            pragma.end = pragmaStr.substring(pragmaStr.indexOf('<') + 1, pragmaStr.indexOf(';')).trim()
+            if (pragma.end.charAt(0) === '=') {
+              pragma.end = pragma.end.substring(1)
+              pragma.endInclusive = true
+            }
+          } else {
+            pragma.start = pragmaStr.substring(pragmaStr.indexOf('>') + 1, pragmaStr.indexOf(';')).trim()
+          }
+          if (pragma.start.charAt(0) === '=') {
+            pragma.start = pragma.start.substring(1)
+            pragma.startInclusive = true
+          }
+        } else {
+          pragma.start = pragmaStr.substring(0, pragmaStr.length - 1)
+          pragma.isFixed = true
+        }
+        this._updateVersionSelector(pragma)
+      }
+    })
   }
 
   _retrieveVersion () {
@@ -243,6 +279,7 @@ class CompilerContainer {
 
   compile (event) {
     if (this.config.get('currentFile')) {
+      this._setCompilerVersionFromPragma(this.config.get('currentFile'))
       this.compileTabLogic.runCompiler()
     }
   }
@@ -299,6 +336,7 @@ class CompilerContainer {
    * @param {boolean} [pragma.isFixed] - true, if pragma is not a range
    */
   _updateVersionSelector (pragma = null) {
+    let shouldBeUpdated = true
     // update selectedversion of previous one got filtered out
     if (!this._shouldBeAdded(this.data.selectedVersion)) {
       this.data.selectedVersion = this.data.defaultVersion
@@ -307,8 +345,9 @@ class CompilerContainer {
       const allversions = this.data.allversions.filter(build => (!build.prerelease))
       const startIndex = allversions.findIndex(build => build.version === pragma.start)
       if (startIndex > -1) {
+        let selectedVersion
         if (pragma.isFixed) {
-          this.data.selectedVersion = allversions[startIndex].path
+          selectedVersion = allversions[startIndex].path
         } else {
           let maxIndex = 0
           if (pragma.end) {
@@ -324,11 +363,18 @@ class CompilerContainer {
             }
           }
           if (maxIndex > -1) {
-            this.data.selectedVersion = allversions[maxIndex].path
+            selectedVersion = allversions[maxIndex].path
           }
+        }
+        if (this.data.selectedVersion === selectedVersion) {
+          shouldBeUpdated = false
+        } else {
+          this.data.selectedVersion = selectedVersion
         }
       }
     }
+    if (pragma && !shouldBeUpdated) return
+
     this._view.versionSelector.innerHTML = ''
     this.data.allversions.forEach(build => {
       const option = build.path === this.data.selectedVersion
