@@ -202,6 +202,18 @@ export class RemixAppManager extends PluginEngine {
       icon: 'https://zokrates.blockchain-it.hr/zokrates.svg',
       location: 'sidePanel'
     }
+    const quorum = {
+      name: 'quorum',
+      displayName: 'Quorum Network',
+      description: 'Deploy and interact with private contracts on a Quorum network.',
+      events: [],
+      methods: [],
+      url: 'https://jpmorganchase.github.io/qr/',
+      icon: 'https://jpmorganchase.github.io/qr/tab_icon.png',
+      documentation: 'https://docs.goquorum.com/',
+      version: '0.1.0-beta',
+      location: 'sidePanel'
+    }
     const res = await fetch(this.pluginsDirectory)
     const plugins = await res.json()
     return [
@@ -215,6 +227,7 @@ export class RemixAppManager extends PluginEngine {
       new IframePlugin(flattener),
       new IframePlugin(ethpm),
       new IframePlugin(zokrates),
+      new IframePlugin(quorum),
       ...plugins.map(plugin => new IframePlugin(plugin))
     ]
   }
