@@ -214,14 +214,14 @@ export class RemixAppManager extends PluginEngine {
       version: '0.1.0-beta',
       location: 'sidePanel'
     }
-    const remixdgit = {
-      name: 'Remixd.git',
+    const remixdGit = {
+      name: 'RemixdGit',
       displayName: 'Remixd git interface',
       description: 'All git related stuff',
       events: [],
       methods: [],
       url: 'remixd-git.surge.sh',
-      icon: 'https://git-scm.com/images/logos/1color-lightbg@2x.png',
+      icon: 'https://git-scm.com/images/logos/downloads/Git-Icon-Black.png',
       documentation: 'https://github.com/ethereum/remixd',
       version: '0.1.0',
       location: 'sidePanel'
@@ -240,7 +240,7 @@ export class RemixAppManager extends PluginEngine {
       new IframePlugin(ethpm),
       new IframePlugin(zokrates),
       new IframePlugin(quorum),
-      new WebsocketPlugin(remixdgit)
+      new WebsocketPlugin(remixdGit)
       ...plugins.map(plugin => new IframePlugin(plugin))
     ]
   }
