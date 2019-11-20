@@ -240,7 +240,7 @@ export class RemixAppManager extends PluginEngine {
       new IframePlugin(ethpm),
       new IframePlugin(zokrates),
       new IframePlugin(quorum),
-      new WebsocketPlugin(remixdGit)
+      new WebsocketPlugin(remixdGit),
       ...plugins.map(plugin => new IframePlugin(plugin))
     ]
   }
