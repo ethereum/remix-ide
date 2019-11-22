@@ -402,7 +402,7 @@ class CompilerContainer {
   }
 
   browserSupportWorker () {
-    return document.location.protocol !== 'file:' && Worker !== undefined
+    return false // document.location.protocol !== 'file:' && Worker !== undefined
   }
 
 }
