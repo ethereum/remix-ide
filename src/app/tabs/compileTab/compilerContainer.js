@@ -1,4 +1,3 @@
-/* global Worker */
 const yo = require('yo-yo')
 var minixhr = require('minixhr')
 var helper = require('../../../lib/helper')
