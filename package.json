@@ -59,7 +59,6 @@
     "remix-solidity": "0.3.20",
     "remix-tabs": "1.0.48",
     "remix-tests": "0.1.23",
-    "remixd": "0.1.8-alpha.10",
     "request": "^2.83.0",
     "rimraf": "^2.6.1",
     "selenium-standalone": "^6.0.1",
