@@ -2,7 +2,6 @@ var async = require('async')
 var ethutil = require('ethereumjs-util')
 var remixLib = require('remix-lib')
 var EventManager = remixLib.EventManager
-var executionContext = remixLib.execution.executionContext
 var format = remixLib.execution.txFormat
 var txHelper = remixLib.execution.txHelper
 var typeConversion = remixLib.execution.typeConversion
@@ -15,9 +14,10 @@ var Web3 = require('web3')
   *
   */
 class Recorder {
-  constructor (udapp, fileManager, config) {
+  constructor (executionContext, udapp, fileManager, config) {
     var self = this
     self.event = new EventManager()
+    self.executionContext = executionContext
     self.data = { _listen: true, _replay: false, journal: [], _createdContracts: {}, _createdContractsReverse: {}, _usedAccounts: {}, _abis: {}, _contractABIReferences: {}, _linkReferences: {} }
     this.udapp = udapp
     this.fileManager = fileManager
@@ -74,14 +74,14 @@ class Recorder {
       if (error) return console.log(error)
       if (call) return
 
-      var address = executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+      var address = this.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
       if (!address) return // not a contract creation
       address = this.addressToString(address)
       // save back created addresses for the convertion from tokens to real adresses
       this.data._createdContracts[address] = timestamp
       this.data._createdContractsReverse[timestamp] = address
     })
-    executionContext.event.register('contextChanged', this.clearAll.bind(this))
+    this.executionContext.event.register('contextChanged', this.clearAll.bind(this))
     this.event.register('newTxRecorded', (count) => {
       this.event.trigger('recorderCountChange', [count])
     })
@@ -260,7 +260,7 @@ class Recorder {
             console.error(err)
             logCallBack(err + '. Execution failed at ' + index)
           } else {
-            var address = executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+            var address = self.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
             if (address) {
               address = self.addressToString(address)
               // save back created addresses for the convertion from tokens to real adresses
@@ -333,7 +333,7 @@ class Recorder {
             cb(txFeeText, priceStatus)
           },
           (cb) => {
-            executionContext.web3().eth.getGasPrice((error, gasPrice) => {
+            this.executionContext.web3().eth.getGasPrice((error, gasPrice) => {
               var warnMessage = ' Please fix this issue before sending any transaction. '
               if (error) {
                 return cb('Unable to retrieve the current network gas price.' + warnMessage + error)
