@@ -205,7 +205,7 @@ export class RemixAppManager extends PluginEngine {
     const ink = {
       name: 'Ink',
       displayName: 'Ink',
-      description: '',
+      description: 'ink! is smart contracts tool using the Rust programming language.',
       documentation: 'https://staging.ink-remix.blockchain-it.hr/',
       methods: [],
       events: [],
@@ -240,6 +240,7 @@ export class RemixAppManager extends PluginEngine {
       new IframePlugin(ethpm),
       new IframePlugin(zokrates),
       new IframePlugin(quorum),
+      new IframePlugin(ink),
       ...plugins.map(plugin => new IframePlugin(plugin))
     ]
   }
