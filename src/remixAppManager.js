@@ -202,6 +202,18 @@ export class RemixAppManager extends PluginEngine {
       icon: 'https://zokrates.blockchain-it.hr/zokrates.svg',
       location: 'sidePanel'
     }
+    const ink = {
+      name: 'Ink',
+      displayName: 'Ink',
+      description: '',
+      documentation: 'https://staging.ink-remix.blockchain-it.hr/',
+      methods: [],
+      events: [],
+      version: '0.1.0-alpha',
+      url: 'https://staging.ink-remix.blockchain-it.hr/',
+      icon: 'https://staging.ink-remix.blockchain-it.hr/ink.svg',
+      location: 'sidePanel'
+    }
     const quorum = {
       name: 'quorum',
       displayName: 'Quorum Network',
