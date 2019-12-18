@@ -16,6 +16,7 @@ const langTools = ace.acequire('ace/ext/language_tools')
 require('ace-mode-solidity/build/remix-ide/mode-solidity')
 require('ace-mode-move/build/remix-ide/mode-move')
 require('ace-mode-zokrates')
+require('ace-mode-rust')
 require('brace/mode/javascript')
 require('brace/mode/python')
 require('brace/mode/json')
@@ -86,6 +87,7 @@ class Editor extends Plugin {
       txt: 'ace/mode/text',
       json: 'ace/mode/json',
       abi: 'ace/mode/json'
+      rss: 'ace/mode/rust'
     }
 
     // Editor Setup
