@@ -86,7 +86,7 @@ class Editor extends Plugin {
       zok: 'ace/mode/zokrates',
       txt: 'ace/mode/text',
       json: 'ace/mode/json',
-      abi: 'ace/mode/json'
+      abi: 'ace/mode/json',
       rss: 'ace/mode/rust'
     }
 
