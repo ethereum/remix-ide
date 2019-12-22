@@ -73,10 +73,10 @@ class Recorder {
     this.udapp.event.register('transactionExecuted', (error, from, to, data, call, txResult, timestamp) => {
       if (error) return console.log(error)
       if (call) return
-
-      var address = this.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
-      if (!address) return // not a contract creation
-      address = this.addressToString(address)
+      const rawAddress = this.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+      if (!rawAddress) return // not a contract creation
+      const stringAddress = this.addressToString(rawAddress)
+      const address = ethutil.toChecksumAddress(stringAddress)
       // save back created addresses for the convertion from tokens to real adresses
       this.data._createdContracts[address] = timestamp
       this.data._createdContractsReverse[timestamp] = address
@@ -260,9 +260,10 @@ class Recorder {
             console.error(err)
             logCallBack(err + '. Execution failed at ' + index)
           } else {
-            var address = self.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
-            if (address) {
-              address = self.addressToString(address)
+            const rawAddress = self.executionContext.isVM() ? txResult.result.createdAddress : txResult.result.contractAddress
+            if (rawAddress) {
+              const stringAddress = self.addressToString(rawAddress)
+              const address = ethutil.toChecksumAddress(stringAddress)
               // save back created addresses for the convertion from tokens to real adresses
               self.data._createdContracts[address] = tx.timestamp
               self.data._createdContractsReverse[tx.timestamp] = address
