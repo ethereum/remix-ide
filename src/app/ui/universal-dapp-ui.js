@@ -272,7 +272,7 @@ UniversalDAppUI.prototype.getCallButton = function (args) {
             }
             if (lookupOnly) {
               const decoded = decodeResponseToTreeView(self.executionContext.isVM() ? txResult.result.execResult.returnValue : ethJSUtil.toBuffer(txResult.result), args.funABI)
-              utputCb(decoded)
+              outputCb(decoded)
             }
           } else {
             self.logCallback(`${logMsg} errored: ${error} `)

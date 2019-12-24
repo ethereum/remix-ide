@@ -150,7 +150,7 @@ class DropdownLogic {
           // removed, but for now keeping the original logic
           try {
             const fee = Web3.utils.toBN(tx.gas).mul(Web3.utils.toBN(Web3.utils.toWei(gasPrice.toString(10), 'gwei')))
-            txFeeText = ' ' + Web3.utils.fromWei(fee.toString(10), 'ether') + ' Ether
+            txFeeText = ' ' + Web3.utils.fromWei(fee.toString(10), 'ether') + ' Ether'
             priceStatus = true
           } catch (e) {
             txFeeText = ' Please fix this issue before sending any transaction. ' + e.message
