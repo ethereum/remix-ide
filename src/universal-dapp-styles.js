@@ -150,7 +150,6 @@ var css = csjs`
     text-overflow: ellipsis;
   }
   .contractProperty input {
-    /* width: 75% */
   }
   .contractProperty > .value {
     box-sizing: border-box;
