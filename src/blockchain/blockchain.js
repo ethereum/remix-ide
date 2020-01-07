@@ -345,7 +345,7 @@ class Blockchain {
     },
     (data, runTxCallback) => {
       // called for libraries deployment
-      this.udapp.runTx(data, confirmationCb, runTxCallback)
+      this.runTx(data, confirmationCb, runTxCallback, promptCb, () => {})
     })
   }
 
