@@ -10,8 +10,6 @@ const Personal = require('web3-eth-personal')
 const Web3 = require('web3')
 
 const async = require('async')
-const { BN, privateToAddress, isValidPrivate, stripHexPrefix } = require('ethereumjs-util')
-const crypto = require('crypto')
 const { EventEmitter } = require('events')
 
 const { resultToRemixTx } = require('./txResultHelper')
@@ -405,7 +403,7 @@ class Blockchain {
    * Create a VM Account
    * @param {{privateKey: string, balance: string}} newAccount The new account to create
    */
-  createVMAccount(newAccount) {
+  createVMAccount (newAccount) {
     if (this.executionContext.getProvider() !== 'vm') {
       throw new Error('plugin API does not allow creating a new account through web3 connection. Only vm mode is allowed')
     }
