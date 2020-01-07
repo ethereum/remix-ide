@@ -438,28 +438,7 @@ class Blockchain {
 
   /** Get the balance of an address, and convert wei to ether */
   getBalanceInEther (address, cb) {
-    address = stripHexPrefix(address)
-
-    if (!this.executionContext.isVM()) {
-      this.executionContext.web3().eth.getBalance(address, (err, res) => {
-        if (err) {
-          cb(err)
-        } else {
-          cb(null, res.toString(10))
-        }
-        cb(null, Web3.utils.fromWei(res.toString(10), 'ether'))
-      })
-    }
-    if (!this.providers.vm.accounts) {
-      return cb('No accounts?')
-    }
-
-    this.executionContext.vm().stateManager.getAccount(Buffer.from(address, 'hex'), (err, res) => {
-      if (err) {
-        return cb('Account not found')
-      }
-      cb(null, Web3.utils.fromWei(new BN(res.balance).toString(10), 'ether'))
-    })
+    this.getCurrentProvider().getBalanceInEther(address, cb)
   }
 
   pendingTransactionsCount () {
