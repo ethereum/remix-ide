@@ -33,7 +33,7 @@ class Blockchain {
         this.executionContext.detectNetwork(cb)
       },
       personalMode: () => {
-        return this.executionContext.getProvider() === 'web3' ? this.config.get('settings/personal-mode') : false
+        return this.getProvider() === 'web3' ? this.config.get('settings/personal-mode') : false
       }
     }, this.executionContext)
     this.executionContext.event.register('contextChanged', this.resetEnvironment.bind(this))
@@ -77,7 +77,7 @@ class Blockchain {
   }
 
   getCurrentProvider () {
-    const provider = this.executionContext.getProvider()
+    const provider = this.getProvider()
     return this.providers[provider]
   }
 
@@ -210,10 +210,6 @@ class Blockchain {
     return this.executionContext.setProviderFromEndpoint(target, context, cb)
   }
 
-  getProvider () {
-    return this.executionContext.getProvider()
-  }
-
   updateNetwork (cb) {
     this.networkcallid++
     ((callid) => {
@@ -232,22 +228,18 @@ class Blockchain {
     return this.executionContext.detectNetwork(cb)
   }
 
-  newAccount (passphraseCb, cb) {
-    return this.udapp.newAccount('', passphraseCb, cb)
-  }
-
-  getAccounts (cb) {
-    return this.udapp.getAccounts(cb)
+  getProvider () {
+    return this.executionContext.getProvider()
   }
 
   isWeb3Provider () {
-    const isVM = this.executionContext.isVM()
-    const isInjected = this.executionContext.getProvider() === 'injected'
+    const isVM = this.getProvider === 'vm'
+    const isInjected = this.getProvider() === 'injected'
     return (!isVM && !isInjected)
   }
 
   isInjectedWeb3 () {
-    return this.executionContext.getProvider() === 'injected'
+    return this.getProvider() === 'injected'
   }
 
   signMessage (message, account, passphrase, cb) {
@@ -279,28 +271,11 @@ class Blockchain {
         } else {
           logCallback(`${logMsg}`)
         }
-        if (funABI.type === 'fallback') data.dataHex = value
-        this.udapp.callFunction(address, data, funABI, confirmationCb, continueCb, promptCb, (error, txResult) => {
-          if (!error) {
-            const isVM = this.executionContext.isVM()
-            if (isVM) {
-              const vmError = txExecution.checkVMError(txResult)
-              if (vmError.error) {
-                logCallback(`${logMsg} errored: ${vmError.message} `)
-                return
-              }
-            }
-            if (lookupOnly) {
-              const returnValue = (this.executionContext.isVM() ? txResult.result.execResult.returnValue : ethJSUtil.toBuffer(txResult.result))
-              outputCb(returnValue)
-            }
-          } else {
-            logCallback(`${logMsg} errored: ${error} `)
-          }
-        })
-      } else {
-        logCallback(`${logMsg} errored: ${error} `)
-      }
+        if (lookupOnly) {
+          const returnValue = (this.executionContext.isVM() ? txResult.result.execResult.returnValue : ethJSUtil.toBuffer(txResult.result))
+          outputCb(returnValue)
+        }
+      })
     },
     (msg) => {
       logCallback(msg)
@@ -352,7 +327,7 @@ class Blockchain {
         this.executionContext.detectNetwork(cb)
       },
       personalMode: () => {
-        return this.executionContext.getProvider() === 'web3' ? this.config.get('settings/personal-mode') : false
+        return this.getProvider() === 'web3' ? this.config.get('settings/personal-mode') : false
       }
     }, this.executionContext)
     this.txRunner.event.register('transactionBroadcasted', (txhash) => {
@@ -368,7 +343,7 @@ class Blockchain {
    * @param {{privateKey: string, balance: string}} newAccount The new account to create
    */
   createVMAccount (newAccount) {
-    if (this.executionContext.getProvider() !== 'vm') {
+    if (this.getProvider() !== 'vm') {
       throw new Error('plugin API does not allow creating a new account through web3 connection. Only vm mode is allowed')
     }
     return this.providers.vm.createVMAccount(newAccount)
@@ -398,6 +373,14 @@ class Blockchain {
   callFunction (to, data, funAbi, confirmationCb, continueCb, promptCb, callback) {
     const useCall = funAbi.stateMutability === 'view' || funAbi.stateMutability === 'pure'
     this.runTx({to, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult) => {
+      const isVM = this.executionContext.isVM()
+      if (isVM) {
+        const vmError = txExecution.checkVMError(txResult)
+        if (vmError.error) {
+          return callback(vmError.message)
+        }
+      }
+
       // see universaldapp.js line 660 => 700 to check possible values of txResult (error case)
       callback(error, txResult)
     })
