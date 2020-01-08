@@ -257,14 +257,20 @@ class Blockchain {
   runOrCallContractMethod (contractName, contractAbi, funABI, value, address, callType, lookupOnly, logMsg, logCallback, outputCb, confirmationCb, continueCb, promptCb) {
     // contractsDetails is used to resolve libraries
     txFormat.buildData(contractName, contractAbi, {}, false, funABI, callType, (error, data) => {
-      if (!error) {
-        if (!lookupOnly) {
-          logCallback(`${logMsg} pending ... `)
-        } else {
-          logCallback(`${logMsg}`)
+      if (error) {
+        return logCallback(`${logMsg} errored: ${error} `)
+      }
+      if (!lookupOnly) {
+        logCallback(`${logMsg} pending ... `)
+      } else {
+        logCallback(`${logMsg}`)
+      }
+      if (funABI.type === 'fallback') data.dataHex = value
+      this.callFunction(address, data, funABI, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
+        if (error) {
+          return logCallback(`${logMsg} errored: ${error} `)
         }
         if (lookupOnly) {
-          const returnValue = (this.executionContext.isVM() ? txResult.result.execResult.returnValue : ethJSUtil.toBuffer(txResult.result))
           outputCb(returnValue)
         }
       })
@@ -474,11 +480,13 @@ class Blockchain {
       }
 
       let address = null
+      let returnValue = null
       if (txResult && txResult.result) {
         address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
+        returnValue = (txResult.result.execResult && isVM) ? txResult.result.execResult.returnValue : ethJSUtil.toBuffer(txResult.result)
       }
 
-      cb(error, txResult, address)
+      cb(error, txResult, address, returnValue)
     })
   }
 
