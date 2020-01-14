@@ -10,6 +10,7 @@
     "@babel/preset-es2015": "latest",
     "@babel/preset-es2017": "latest",
     "@babel/preset-stage-0": "^7.0.0",
+    "@babel/preset-typescript": "7.7.7",
     "@babel/register": "^7.4.4",
     "@fortawesome/fontawesome-free": "^5.8.1",
     "@resolver-engine/imports": "^0.3.0",
@@ -41,6 +42,7 @@
     "ipfs-mini": "^1.1.5",
     "is-electron": "^2.2.0",
     "javascript-serialize": "^1.6.1",
+    "jest": "^24.9.0",
     "jquery": "^3.3.1",
     "js-base64": "^2.1.9",
     "js-beautify": "1.6.14",
@@ -183,6 +185,12 @@
     "test": "csslint && standard && node test/index.js",
     "test-browser": "npm-run-all -lpr selenium downloadsolc_root make-mock-compiler serve browsertest",
     "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc",
-    "reinstall": "rm ./node-modules/ -rf; rm package-lock.json; rm ./build/ -rf; npm install; npm run build"
+    "reinstall": "rm ./node-modules/ -rf; rm package-lock.json; rm ./build/ -rf; npm install; npm run build",
+    "test-jest": "jest"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/test-browser/jest/**/*.test.js"
+    ]
   }
 }
