@@ -17,9 +17,6 @@ module.exports = {
     console.log('token', process.env.gist_token)
     browser
     .waitForElementVisible('#icon-panel', 10000)
-    .clickLaunchIcon('settings')
-    .setValue('#gistaccesstoken', process.env.gist_token)
-    .click('#savegisttoken')
     .clickLaunchIcon('fileExplorers')
     .click('#publishToGist')
     .modalFooterOKClick()
@@ -37,9 +34,10 @@ module.exports = {
           .switchFile('browser/gists')
           .switchFile(`browser/gists/${gistid}`)
           .switchFile(`browser/gists/${gistid}/1_Storage.sol`)
-          .end()
+          .perform(done)
       }
     })
+    .end()
   },
   tearDown: sauce
 }
