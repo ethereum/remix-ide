@@ -122,7 +122,13 @@ class App {
       if (message.error) toolTip(message.error)
     })
 
-    self._components.filesProviders['localhost'] = new RemixDProvider(remixd)
+    this.remixdGit = new Remixd(65521)
+    registry.put({api: this.remixdGit, name: 'remixdGit'})
+    this.remixdGit.event.register('system', (message) => {
+      if (message.error) toolTip(message.error)
+    })
+
+    self._components.filesProviders['localhost'] = new RemixDProvider(remixd, this.remixdGit)
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders, name: 'fileproviders'})
 
@@ -249,7 +255,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
   // LAYOUT & SYSTEM VIEWS
   const appPanel = new MainPanel()
-  const mainview = new MainView(editor, appPanel, fileManager, appManager, txlistener, eventsDecoder, executionContext)
+  const mainview = new MainView(editor, appPanel, fileManager, appManager, txlistener, eventsDecoder, executionContext, this.remixdGit)
   registry.put({ api: mainview, name: 'mainview' })
 
   appManager.register([

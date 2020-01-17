@@ -664,10 +664,16 @@ class Terminal extends Plugin {
     return self.commands[name]
   }
   _shell (script, scopedCommands, done) { // default shell
+    var self = this
     if (script.indexOf('remix:') === 0) {
       return done(null, 'This type of command has been deprecated and is not functionning anymore. Please run remix.help() to list available commands.')
     }
-    var self = this
+    if (script.indexOf('git ') === 0) {
+      return self._opts.remixdGit.call('git', 'command', {script}, (data) => {
+        if (data && data.error) return done(data.error)
+        done(null, data.result)
+      })
+    }
     var context = domTerminalFeatures(self, scopedCommands, self.executionContext)
     try {
       var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context, self._jsSandboxRegistered))

@@ -3,10 +3,12 @@ var EventManager = require('../../lib/events')
 var pathtool = require('path')
 
 module.exports = class RemixDProvider {
-  constructor (remixd) {
+  constructor (remixd, remixdGit) {
     this.event = new EventManager()
     this._remixd = remixd
+    this._remixdGit = remixdGit
     this.remixd = remixapi(remixd, this)
+    this.remixdGit = remixapi(remixdGit, this)
     this.type = 'localhost'
     this.error = { 'EEXIST': 'File already exists' }
     this._isReady = false
@@ -68,6 +70,11 @@ module.exports = class RemixDProvider {
         this._readOnlyMode = result
         cb(error)
       })
+    })
+
+    this._remixdGit.ensureSocket((error) => {
+      if (error) return cb(error)
+      console.log(error)
     })
   }
 
