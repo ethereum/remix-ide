@@ -9,7 +9,7 @@ module.exports = {
 	before: function (browser, done) {
 		init(browser, done);
 	},
-	'From Gist': function (browser) {
+	'From Gist URL success': function (browser) {
 		browser
 			.waitForElementVisible('#icon-panel', 10000)
 			.scrollAndClick('.file .btn-group button:nth-of-type(1)') // this selector is a bit dangeours
@@ -19,7 +19,22 @@ module.exports = {
 			.switchFile('browser/gists')
 			.switchFile(`browser/gists/${gistid}`)
 			.switchFile(`browser/gists/${gistid}/SimpleStorage.sol`)
-			.end();
+	},
+	'From Gist failed': function (browser) {
+		browser
+			.clickLaunchIcon('home')
+			.scrollAndClick('.file .btn-group button:nth-of-type(1)')
+			.waitForElementVisible('#modal-footer-ok', 6000)
+			.setValue('input[id="prompt_text"]', `https://gist.github.com/jernejc/${gistid.slice(0, gistid.length - 2)}`)
+			.modalFooterOKClick()
+			.waitForElementVisible('#modal-footer-ok', 6000)
+			.getText('.modal-body', (result) => {
+				browser.assert.equal(result.value, 'Gist load error: Not Found');
+			})
+	},
+	after: (browser, done) => {
+		browser.end();
+		done();
 	},
 	tearDown: sauce
 }
