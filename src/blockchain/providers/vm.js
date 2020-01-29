@@ -1,5 +1,6 @@
 const Web3 = require('web3')
-const { BN, privateToAddress, toChecksumAddress, isValidPrivate, stripHexPrefix } = require('ethereumjs-util')
+// const { BN, privateToAddress, toChecksumAddress, isValidPrivate, stripHexPrefix } = require('ethereumjs-util')
+const { BN, privateToAddress, isValidPrivate, stripHexPrefix } = require('ethereumjs-util')
 const crypto = require('crypto')
 const ethJSUtil = require('ethereumjs-util')
 const RemixSimulator = require('remix-simulator')
@@ -8,7 +9,8 @@ class VMProvider {
 
   constructor (executionContext) {
     this.executionContext = executionContext
-    this.remixSimulatorProvider = RemixSimulator.Provider({executionContext: this.executionContext})
+    this.remixSimulatorProvider = new RemixSimulator.Provider({executionContext: this.executionContext})
+    this.remixSimulatorProvider.init()
     this.web3 = new Web3(this.remixSimulatorProvider)
     this.accounts = {}
   }
