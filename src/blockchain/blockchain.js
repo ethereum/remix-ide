@@ -3,6 +3,7 @@ const txFormat = remixLib.execution.txFormat
 const txExecution = remixLib.execution.txExecution
 const typeConversion = remixLib.execution.typeConversion
 const Txlistener = remixLib.execution.txListener
+const TxRunner = remixLib.execution.txRunner
 const EventManager = remixLib.EventManager
 const executionContext = remixLib.execution.executionContext
 const ethJSUtil = require('ethereumjs-util')
@@ -56,17 +57,17 @@ class Blockchain {
       this.event.trigger('removeProvider', [name])
     })
 
-    this.udapp.event.register('initiatingTransaction', (timestamp, tx, payLoad) => {
-      this.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
-    })
+    // this.udapp.event.register('initiatingTransaction', (timestamp, tx, payLoad) => {
+      // this.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
+    // })
 
-    this.udapp.event.register('transactionExecuted', (error, from, to, data, call, txResult, timestamp) => {
-      this.event.trigger('transactionExecuted', [error, from, to, data, call, txResult, timestamp])
-    })
+    // this.udapp.event.register('transactionExecuted', (error, from, to, data, call, txResult, timestamp) => {
+      // this.event.trigger('transactionExecuted', [error, from, to, data, call, txResult, timestamp])
+    // })
 
-    this.udapp.event.register('transactionBroadcasted', (txhash, networkName) => {
-      this.event.trigger('transactionBroadcasted', [txhash, networkName])
-    })
+    // this.udapp.event.register('transactionBroadcasted', (txhash, networkName) => {
+      // this.event.trigger('transactionBroadcasted', [txhash, networkName])
+    // })
   }
 
   setupProviders () {
@@ -241,14 +242,11 @@ class Blockchain {
 
   getTxListener (opts) {
     opts.event = {
-      udapp: this.udapp.event
+      // udapp: this.udapp.event
+      udapp: this.event
     }
     const txlistener = new Txlistener(opts, this.executionContext)
     return txlistener
-  }
-
-  startListening (txlistener) {
-    this.udapp.startListening(txlistener)
   }
 
   runOrCallContractMethod (contractName, contractAbi, funABI, value, address, callType, lookupOnly, logMsg, logCallback, outputCb, confirmationCb, continueCb, promptCb) {
@@ -294,7 +292,7 @@ class Blockchain {
     this.executionContext.init(config)
     this.executionContext.stopListenOnLastBlock()
     this.executionContext.listenOnLastBlock()
-    this.udapp.resetEnvironment()
+    this.resetEnvironment()
   }
 
   addNetwork (customNetwork) {
