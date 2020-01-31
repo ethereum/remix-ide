@@ -5,9 +5,9 @@ class sendLowLevelTx extends EventEmitter {
     this.api.waitForElementVisible(`#instance${address} #deployAndRunLLTxSendTransaction`, 1000)
         .clearValue(`#instance${address} #deployAndRunLLTxCalldata`)
         .setValue(`#instance${address} #deployAndRunLLTxCalldata`, callData)
-        .waitForElementVisible('#value')
-        .clearValue('#value')
-        .setValue('#value', value)
+        .waitForElementVisible('#deployAndRunTransferValue')
+        .clearValue('#deployAndRunTransferValue')
+        .setValue('#deployAndRunTransferValue', value)
         .scrollAndClick(`#instance${address} #deployAndRunLLTxSendTransaction`)
         .perform(() => {
           this.emit('complete')

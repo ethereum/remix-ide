@@ -167,7 +167,7 @@ UniversalDAppUI.prototype.renderInstanceFromABI = function (contractABI, address
       contractName: contractName,
       contractABI: contractABI
     }
-    const amount = document.querySelector('#value').value
+    const amount = document.querySelector('#deployAndRunTransferValue').value
     if (amount !== '0') {
       // check for numeric and receive/fallback
       if (!helper.isNumeric(amount)) {
