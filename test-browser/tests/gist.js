@@ -1,4 +1,6 @@
 'use strict'
+require('dotenv').config()
+
 const init = require('../helpers/init')
 const sauce = require('./sauce')
 // 99266d6da54cc12f37f11586e8171546c7700d67
@@ -14,7 +16,7 @@ module.exports = {
        - retrieve the gist
        - switch to a file in the new gist
       */
-    console.log('token', process.env.gist_token)
+     
     browser
     .waitForElementVisible('#icon-panel', 10000)
     .clickLaunchIcon('fileExplorers')
@@ -23,7 +25,7 @@ module.exports = {
     .getModalBody((value, done) => {
       const reg = /gist.github.com\/([^.]+)/
       const id = value.match(reg)
-      console.log('gist regex', id)
+      
       if (!id) {
         browser.assert.fail('cannot get the gist id', '', '')
       } else {
