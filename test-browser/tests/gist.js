@@ -1,6 +1,4 @@
 'use strict'
-require('dotenv').config()
-
 const init = require('../helpers/init')
 const sauce = require('./sauce')
 // 99266d6da54cc12f37f11586e8171546c7700d67
@@ -10,12 +8,12 @@ module.exports = {
     init(browser, done)
   },
   'UploadToGists': function (browser) {
-      /*
-       - set the access token
-       - publish to gist
-       - retrieve the gist
-       - switch to a file in the new gist
-      */
+    /*
+      - set the access token
+      - publish to gist
+      - retrieve the gist
+      - switch to a file in the new gist
+    */
 
     browser
     .waitForElementVisible('#icon-panel', 10000)
