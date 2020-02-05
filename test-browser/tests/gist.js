@@ -16,7 +16,7 @@ module.exports = {
        - retrieve the gist
        - switch to a file in the new gist
       */
-     
+
     browser
     .waitForElementVisible('#icon-panel', 10000)
     .clickLaunchIcon('fileExplorers')
@@ -25,7 +25,7 @@ module.exports = {
     .getModalBody((value, done) => {
       const reg = /gist.github.com\/([^.]+)/
       const id = value.match(reg)
-      
+
       if (!id) {
         browser.assert.fail('cannot get the gist id', '', '')
       } else {
