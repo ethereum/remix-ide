@@ -1,3 +1,4 @@
+require('@babel/polyfill')
 module.exports = function (browser, callback, url, preloadPlugins = true) {
   browser
     .url(url || 'http://127.0.0.1:8080')
