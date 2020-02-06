@@ -1,35 +1,33 @@
 const EventEmitter = require('events')
 
 class CheckTerminalFilter extends EventEmitter {
-  command (filter, test) {
-    this.api.perform((done) => {
-      checkFilter(this.api, filter, test, () => {
-        done()
+  async command (filter, test) {
+    const filters = async () => {
+      await checkFilter(this.api, filter, test, () => {
         this.emit('complete')
       })
-    })
+    }
+
+    await this.api.perform(filters);
     return this
   }
 }
 
-function checkFilter (browser, filter, test, done) {
+async function checkFilter (browser, filter, test, done) {
   if (browser.options.desiredCapabilities.browserName === 'chrome') { // nightwatch deos not handle well that part.... works locally
     done()
     return
   }
   const filterClass = '#main-panel div[class^="search"] input[class^="filter"]'
-  browser.setValue(filterClass, filter, function () {
-    browser.execute(function () {
-      return document.querySelector('#main-panel div[class^="journal"]').innerHTML === test
-    }, [], function (result) {
-      browser.clearValue(filterClass).setValue(filterClass, '', function () {
-        if (!result.value) {
-          browser.assert.fail('useFilter on ' + filter + ' ' + test, 'info about error', '')
-        }
-        done()
-      })
-    })
-  })
+  await browser.setValue(filterClass, filter);
+  const result = await browser.execute(function () {
+    return document.querySelector('#main-panel div[class^="journal"]').innerHTML === test
+  }, [])
+  await browser.clearValue(filterClass).setValue(filterClass, '')
+  if (!result.value) {
+    await browser.assert.fail('useFilter on ' + filter + ' ' + test, 'info about error', '')
+  }
+  done()
 }
 
 module.exports = CheckTerminalFilter

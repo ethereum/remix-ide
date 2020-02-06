@@ -1,36 +1,41 @@
 const EventEmitter = require('events')
 
 class AddFile extends EventEmitter {
-  command (name, content) {
-    this.api.perform((done) => {
-      addFile(this.api, name, content, () => {
-        done()
+  async command (name, content) {
+    const file = async () => {
+      await addFile(this.api, name, content, () => {
         this.emit('complete')
       })
-    })
+    }
+
+    await this.api.perform(file)
     return this
   }
 }
 
-function addFile (browser, name, content, done) {
-  browser.clickLaunchIcon('udapp').clickLaunchIcon('fileExplorers').click('.newFile')
-      .waitForElementVisible('#modal-dialog')
-      .perform((client, done) => {
-        browser.execute(function (fileName) {
-          if (fileName !== 'Untitled.sol') {
-            document.querySelector('#modal-dialog #prompt_text').setAttribute('value', fileName)
-          }
-          document.querySelector('#modal-footer-ok').click()
-        }, [name], function (result) {
-          console.log(result)
-          done()
-        })
-      })
-      .setEditorValue(content.content)
-      .pause(1000)
-      .perform(function () {
-        done()
-      })
+async function addFile (browser, name, content, done) {
+  const loadFile = async (client, done) => {
+    await browser.execute(function (fileName) {
+      if (fileName !== 'Untitled.sol') {
+        document.querySelector('#modal-dialog #prompt_text').setAttribute('value', fileName)
+      }
+      document.querySelector('#modal-footer-ok').click()
+    }, [name], function (result) {
+      console.log(result)
+      done()
+    })
+  }
+
+  await browser.clickLaunchIcon('udapp')
+  await browser.clickLaunchIcon('fileExplorers')
+  await browser.click('.newFile')
+  await browser.waitForElementVisible('#modal-dialog')
+  await browser.perform(loadFile)
+  await browser.setEditorValue(content.content)
+  await browser.pause(1000)
+  await browser.perform(function () {
+    done()
+  })
 }
 
 module.exports = AddFile

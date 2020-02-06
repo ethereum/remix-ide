@@ -1,21 +1,22 @@
 const EventEmitter = require('events')
 
 class ClickFunction extends EventEmitter {
-  command (fnFullName, expectedInput) {
-    this.api.waitForElementPresent('.instance button[title="' + fnFullName + '"]')
-    .perform(function (client, done) {
-      client.execute(function () {
+  async command (fnFullName, expectedInput) {
+    const scrollTop = async function (client, done) {
+      await client.execute(function () {
         document.querySelector('#runTabView').scrollTop = document.querySelector('#runTabView').scrollHeight
-      }, [], function () {
-        if (expectedInput) {
-          client.setValue('#runTabView input[title="' + expectedInput.types + '"]', expectedInput.values, function () {})
-        }
-        done()
-      })
-    })
-    .click('.instance button[title="' + fnFullName + '"]')
-    .pause(2000)
-    .perform(() => {
+      }, [])
+      if (expectedInput) {
+        await client.setValue('#runTabView input[title="' + expectedInput.types + '"]', expectedInput.values, function () {})
+      }
+      done()
+    }
+
+    await this.api.waitForElementPresent('.instance button[title="' + fnFullName + '"]')
+    await browser.perform(scrollTop)
+    await browser.click('.instance button[title="' + fnFullName + '"]')
+    await browser.pause(2000)
+    await browser.perform(() => {
       this.emit('complete')
     })
     return this
