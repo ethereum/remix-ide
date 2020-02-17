@@ -14,7 +14,7 @@ module.exports = {
     "port" : 4444,
     "cli_args" : {
       "webdriver.chrome.driver" : "",
-      "webdriver.gecko.driver" : "",
+      "webdriver.gecko.driver" : "/.selenium/geckodriver/0.19.0-x64-geckodriver",
       "webdriver.edge.driver" : ""
     }
   },
