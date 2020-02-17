@@ -29,12 +29,12 @@ module.exports = {
     },
 
     'chrome': {
-      "selenium_port": 9515,
+      "selenium_port": 5555,
       "selenium_host": "localhost",
       "webdriver" : {
         "server_path": "node_modules/chromedriver/lib/chromedriver/chromedriver.exe",
         "host": "localhost",
-        "port": 9515
+        "port": 5555
       },
       'desiredCapabilities': {
         'browserName': 'chrome',
