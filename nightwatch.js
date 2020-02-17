@@ -29,6 +29,13 @@ module.exports = {
     },
 
     'chrome': {
+      "selenium_port": 9515,
+      "selenium_host": "localhost",
+      "webdriver" : {
+        "server_path": "node_modules/chromedriver/lib/chromedriver/chromedriver.exe",
+        "host": "localhost",
+        "port": 9515
+      },
       'desiredCapabilities': {
         'browserName': 'chrome',
         'javascriptEnabled': true,
@@ -56,6 +63,16 @@ module.exports = {
     },
 
     'firefox': {
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "webdriver": {
+        "server_path": "node_modules/geckodriver/geckodriver.exe",
+        "silent": false,
+        "cli_args": [
+          "--log", "debug"
+        ],
+        "port": 4444
+      },
       'desiredCapabilities': {
         'browserName': 'firefox',
         'javascriptEnabled': true,
