@@ -8,6 +8,9 @@ module.exports = {
   'custom_assertions_path': '',
   'page_objects_path': '',
   'globals_path': '',
+  "webdriver": {
+    "start_process": true
+  },
 
   'test_settings': {
     'default': {
