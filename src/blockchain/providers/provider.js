@@ -1,11 +1,13 @@
 const Web3 = require('web3')
-const { stripHexPrefix } = require('ethereumjs-util')
+const { BN, stripHexPrefix } = require('ethereumjs-util')
 
 class Provider {
 
   constructor (executionContext) {
     this.executionContext = executionContext
-    this.web3 = new Web3(this.executionContext.internalWeb3().givenProvider)
+    if (this.executionContext) {
+      this.web3 = new Web3(this.executionContext.internalWeb3().givenProvider)
+    }
   }
 
   getAccounts (cb) {
@@ -50,5 +52,5 @@ class Provider {
   }
 }
 
-module.exports = NodeProvider
+module.exports = Provider
 

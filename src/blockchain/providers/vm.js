@@ -6,6 +6,7 @@ const Provider = require('./provider.js')
 class VMProvider extends Provider {
 
   constructor (executionContext) {
+    super(executionContext)
     this.executionContext = executionContext
     this.RemixSimulatorProvider = new RemixSimulator.Provider({executionContext: this.executionContext})
     this.RemixSimulatorProvider.init()
