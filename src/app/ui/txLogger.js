@@ -215,7 +215,7 @@ function renderKnownTransaction (self, data, blockchain) {
         ${checkTxStatus(data.receipt, txType)}
         ${context(self, {from, to, data}, blockchain)}
         <div class=${css.buttons}>
-          <button data-shared="txLoggerDebugButton" data-id="txLoggerDebugButton${data.tx.hash}" class="${css.debug} btn btn-primary btn-sm" onclick=${(e) => debug(e, data, self)}>Debug</div>
+          <button class="${css.debug} btn btn-primary btn-sm" data-id="txLoggerDebugButton${data.tx.hash}" data-shared="txLoggerDebugButton" onclick=${(e) => debug(e, data, self)}>Debug</div>
         </div>
         <i class="${css.arrow} fas fa-angle-down"></i>
       </div>
