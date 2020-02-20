@@ -21,25 +21,25 @@ module.exports = {
         .click('#runTabView .instance div[class^="title"]')
         .clickFunction('f - transact (not payable)')
         .testFunction('0x38bb944fa4709ed9e163d6c670259f97284b4defd916d512a2fcc3f35bb53e03',
-        {
-          status: '0x1 Transaction mined and execution succeed',
-          'transaction hash': '0x38bb944fa4709ed9e163d6c670259f97284b4defd916d512a2fcc3f35bb53e03',
-          'decoded output': { '0': 'uint256: 8' }
-        })
+      {
+        status: '0x1 Transaction mined and execution succeed',
+        'transaction hash': '0x38bb944fa4709ed9e163d6c670259f97284b4defd916d512a2fcc3f35bb53e03',
+        'decoded output': { '0': 'uint256: 8' }
+      })
         .pause(500)
         .checkTerminalFilter('0x12332162e2e31397dc1e07ed0a1cf08f728e9b4487c6f9ed79d2f39410c92782', '')
         .clickFunction('g - transact (not payable)')
         .testFunction('0xab4f794ca0b531f27fc6eace623666b440facbf20e77615a057d728c67b500f0',
-        {
-          status: '0x1 Transaction mined and execution succeed',
-          'transaction hash': '0xab4f794ca0b531f27fc6eace623666b440facbf20e77615a057d728c67b500f0',
-          'decoded output': {
-            '0': 'uint256: 345',
-            '1': 'string: comment_comment_',
-            '2': 'bool: true',
-            '3': 'uint256: 4'
-          }
-        })
+      {
+        status: '0x1 Transaction mined and execution succeed',
+        'transaction hash': '0xab4f794ca0b531f27fc6eace623666b440facbf20e77615a057d728c67b500f0',
+        'decoded output': {
+          '0': 'uint256: 345',
+          '1': 'string: comment_comment_',
+          '2': 'bool: true',
+          '3': 'uint256: 4'
+        }
+      })
         .click('i[class^="clearinstance"]')
   },
 
