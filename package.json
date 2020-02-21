@@ -64,7 +64,7 @@
     "remixd": "0.1.8-alpha.10",
     "request": "^2.83.0",
     "rimraf": "^2.6.1",
-    "selenium-standalone": "^6.0.1",
+    "selenium-standalone": "^6.17.0",
     "semver": "^6.1.2",
     "solc": "^0.6.0",
     "swarmgw": "^0.3.1",
