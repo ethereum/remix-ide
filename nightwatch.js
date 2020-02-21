@@ -30,7 +30,7 @@ module.exports = {
 
     'chrome': {
       'selenium_host': 'localhost',
-      'selenium_port': 4444,
+      'selenium_port': 8545,
       'desiredCapabilities': {
         'browserName': 'chrome',
         'javascriptEnabled': true,
