@@ -42,6 +42,74 @@ class FileManager extends Plugin {
     this.init()
   }
 
+  /**
+   * Open the content of the file in the context (eg: Editor)
+   * @param {string} path path of the file
+   * @returns {void}
+   */
+  open (path) {
+
+  }
+  
+  /** 
+   * Set the content of a specific file
+   * @param {string} path path of the file
+   * @param {string} data content to write on the file
+   * @returns {void}
+   */
+  writeFile (path, data) {
+
+  }
+  
+  /**
+   * Return the content of a specific file
+   * @param {string} path path of the file
+   * @returns {string} content of the file
+   */
+  readFile(path) {
+
+  }
+
+  /** 
+   * Change the path of a file
+   * @param {string} oldPath current path of the file
+   * @param {string} newPath new path of the file
+   * @returns {void}
+   */
+  rename(oldPath, newPath) {
+
+  }
+
+  /** 
+   * Upsert a file with the content of the source file
+   * @param {string} src path of the source file
+   * @param {string} dest path of the destrination file
+   * @returns {void}
+   */
+  copyFile(src, dest) {
+
+  }
+
+  /**
+   * Create a directory
+   * @param {string} path path of the new directive
+   * @returns {void}
+   */
+  mkdir(path) {
+
+  }
+
+  /** 
+   * Get the list of files in the directory
+   * @param {string} path path of the directory
+   * @returns {string[]} list of the file/directory name in this directory
+   */
+  readdir(path) {
+    
+  }
+
+
+
   init () {
     this._deps = {
       config: this._components.registry.get('config').api,
