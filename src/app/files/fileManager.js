@@ -23,12 +23,9 @@ const profile = {
   icon: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjk2IDM4NHE0MCAwIDY4IDI4dDI4IDY4djEyMTZxMCA0MC0yOCA2OHQtNjggMjhoLTk2MHEtNDAgMC02OC0yOHQtMjgtNjh2LTI4OGgtNTQ0cS00MCAwLTY4LTI4dC0yOC02OHYtNjcycTAtNDAgMjAtODh0NDgtNzZsNDA4LTQwOHEyOC0yOCA3Ni00OHQ4OC0yMGg0MTZxNDAgMCA2OCAyOHQyOCA2OHYzMjhxNjgtNDAgMTI4LTQwaDQxNnptLTU0NCAyMTNsLTI5OSAyOTloMjk5di0yOTl6bS02NDAtMzg0bC0yOTkgMjk5aDI5OXYtMjk5em0xOTYgNjQ3bDMxNi0zMTZ2LTQxNmgtMzg0djQxNnEwIDQwLTI4IDY4dC02OCAyOGgtNDE2djY0MGg1MTJ2LTI1NnEwLTQwIDIwLTg4dDQ4LTc2em05NTYgODA0di0xMTUyaC0zODR2NDE2cTAgNDAtMjggNjh0LTY4IDI4aC00MTZ2NjQwaDg5NnoiLz48L3N2Zz4=',
   permission: true,
   version: packageJson.version,
-  methods: ['getFolder', 'getCurrentFile', 'getFile', 'setFile', 'switchFile'],
+  methods: ['file', 'exists', 'open', 'writeFile', 'readFile', 'copyFile', 'unlink', 'rename', 'readdir', 'rmdir'],
   kind: 'file-system'
 }
-
-// File System profile
-// - methods: ['getFolder', 'getCurrentFile', 'getFile', 'setFile', 'switchFile']
 
 class FileManager extends Plugin {
   constructor (editor) {
@@ -43,12 +40,71 @@ class FileManager extends Plugin {
   }
 
   /**
+   * Emit error if path doesn't exist
+   * @param {string} path path of the file/directory
+   * @param {string} message message to display if path doesn't exist.
+   */
+  _handleExists (path, message) {
+    if (!this.exists(path)) {
+      throw new Error(`Path ${path} doesn't exist: ${message}.`)
+    }
+  }
+
+  /**
+   * Emit error if path is not a file
+   * @param {string} path path of the file/directory
+   * @param {string} message message to display if path is not a file.
+   */
+  _handleIsFile (path, message) {
+    if (!this.isFile(path)) {
+      throw new Error(`Path ${path} is not a file: ${message}.`)
+    }
+  }
+
+  /**
+   * Emit error if path is not a directory
+   * @param {string} path path of the file/directory
+   * @param {string} message message to display if path is not a directory.
+   */
+  _handleIsDir (path, message) {
+    if (this.isFile(path)) {
+      throw new Error(`Path ${path} is not a directory: ${message}.`)
+    }
+  }
+
+  /** The current opened file */
+  file () {
+    return this.currentFile()
+  }
+
+  /**
+   * Verify if the path exists (directory or file)
+   * @param {string} path path of the directory or file
+   * @returns {boolean} true if the path exists
+   */
+  exists(path) {
+    // To implement
+  }
+
+  /**
+   * Verify if the path provided is a file
+   * @param {string} path path of the directory or file
+   * @returns {boolean} true if path is a file.
+   */
+  isFile (path) {
+    const extension = path.split('.').pop()
+    return !!extension && extension.split('/').length === 0
+  }
+
+  /**
    * Open the content of the file in the context (eg: Editor)
    * @param {string} path path of the file
    * @returns {void}
    */
   open (path) {
-
+    this._handleExists(path, 'Cannot open file')
+    this._handleIsFile(path, 'Cannot open file')
+    this.switchFile(path)
   }
   
   /** 
@@ -58,7 +114,8 @@ class FileManager extends Plugin {
    * @returns {void}
    */
   writeFile (path, data) {
-
+    this._handleIsFile(path, 'Cannot write file')
+    this.setFile(path, data)
   }
   
   /**
@@ -66,18 +123,10 @@ class FileManager extends Plugin {
    * @param {string} path path of the file
    * @returns {string} content of the file
    */
-  readFile(path) {
-
-  }
-
-  /** 
-   * Change the path of a file
-   * @param {string} oldPath current path of the file
-   * @param {string} newPath new path of the file
-   * @returns {void}
-   */
-  rename(oldPath, newPath) {
-
+  readFile (path) {
+    this._handleExists(path, 'Cannot read file')
+    this._handleIsFile(path, 'Cannot read file')
+    this.getFile(path)
   }
 
   /** 
@@ -86,17 +135,48 @@ class FileManager extends Plugin {
    * @param {string} dest path of the destrination file
    * @returns {void}
    */
-  copyFile(src, dest) {
+  copyFile (src, dest) {
+    this._handleExists(src, 'Cannot copy from it')
+    this._handleIsFile(src, 'Cannot copy from it')
+    this._handleIsFile(dest, 'Cannot paste content into it')
+    const content = this.readFile(src)
+    this.writeFile(dest, content)
+  }
 
+  /**
+   * Removes a file
+   * @param {string} path path of the file to remove
+   * @note will not work on a directory, use `rmdir` instead
+   * @returns {void}
+   */
+  unlink(path) {
+    this._handleExists(path, 'Cannot remove file')
+    this._handleIsDir(path, 'Cannot remove file')
+  }
+
+  /** 
+   * Change the path of a file/directory
+   * @param {string} oldPath current path of the file/directory
+   * @param {string} newPath new path of the file/directory
+   * @returns {void}
+   */
+  rename (oldPath, newPath) {
+    this.__handleExists(oldPath, 'Cannot rename')
+    // todo: should we verify if newPath exists here ?
+    const isFile = this.isFile(oldPath)
+    this.fileRenamedEvent(oldPath, newPath, !isFile)
   }
 
   /**
    * Create a directory
-   * @param {string} path path of the new directive
+   * @param {string} path path of the new directory
    * @returns {void}
    */
-  mkdir(path) {
-
+  mkdir (path) {
+    if (this.exists(path)) {
+      throw new Error(`Path ${path} already exists: Cannot create a directory`)
+    }
+    // To implement
   }
 
   /** 
@@ -104,8 +184,22 @@ class FileManager extends Plugin {
    * @param {string} path path of the directory
    * @returns {string[]} list of the file/directory name in this directory
    */
-  readdir(path) {
-    
+  readdir (path) {
+    this._handleExists(path, 'Cannot read directory')
+    this._handleIsDir(path, 'Cannot read directory')
+    // To implement
+  }
+
+  /**
+   * Removes a directory recursively
+   * @param {string} path path of the directory to remove
+   * @note will not work on a file, use `unlink` instead
+   * @returns {void}
+   */
+  rmdir(path) {
+    this._handleExists(path, 'Cannot remove directory')
+    this._handleIsDir(path, 'Cannot remove directory')
+    // To implement
   }
 
 
