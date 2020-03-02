@@ -41,7 +41,7 @@ class Terminal extends Plugin {
     super(profile)
     var self = this
     self.event = new EventManager()
-    self.executionContext = opts.executionContext
+    self.blockchain = opts.blockchain
     self._api = api
     self._opts = opts
     self.data = {
@@ -52,7 +52,7 @@ class Terminal extends Plugin {
     }
     self._view = { el: null, bar: null, input: null, term: null, journal: null, cli: null }
     self._components = {}
-    self._components.cmdInterpreter = new CommandInterpreterAPI(this, null, self.executionContext)
+    self._components.cmdInterpreter = new CommandInterpreterAPI(this, null, self.blockchain)
     self._components.autoCompletePopup = new AutoCompletePopup(self._opts)
     self._components.autoCompletePopup.event.register('handleSelect', function (input) {
       let textList = self._view.input.innerText.split(' ')
@@ -113,24 +113,25 @@ class Terminal extends Plugin {
   render () {
     var self = this
     if (self._view.el) return self._view.el
-    self._view.journal = yo`<div id="journal" class=${css.journal}></div>`
+    self._view.journal = yo`<div id="journal" class=${css.journal} data-id="terminalJournal"></div>`
     self._view.input = yo`
       <span class=${css.input} onload=${() => { this.focus() }} onpaste=${paste} onkeydown=${change}></span>
     `
     self._view.input.setAttribute('spellcheck', 'false')
     self._view.input.setAttribute('contenteditable', 'true')
     self._view.input.setAttribute('id', 'terminalCliInput')
+    self._view.input.setAttribute('data-id', 'terminalCliInput')
 
     self._view.input.innerText = '\n'
     self._view.cli = yo`
-      <div id="terminalCli" class="${css.cli}">
+      <div id="terminalCli" data-id="terminalCli" class="${css.cli}">
         <span class=${css.prompt}>${'>'}</span>
         ${self._view.input}
       </div>
     `
     self._view.icon = yo`
       <i onmouseenter=${hover} onmouseleave=${hover} onmousedown=${minimize}
-      class="btn btn-secondary btn-sm align-items-center ${css.toggleTerminal} fas fa-angle-double-down"></i>`
+      class="btn btn-secondary btn-sm align-items-center ${css.toggleTerminal} fas fa-angle-double-down" data-id="terminalToggleIcon"></i>`
     self._view.dragbar = yo`
       <div onmousedown=${mousedown} class=${css.dragbarHorizontal}></div>`
 
@@ -146,9 +147,9 @@ class Terminal extends Plugin {
     self._view.bar = yo`
       <div class="${css.bar}">
         ${self._view.dragbar}
-        <div class="${css.menu} border-top border-dark bg-light">
+        <div class="${css.menu} border-top border-dark bg-light" data-id="terminalToggleMenu">
           ${self._view.icon}
-          <div class=${css.clear} onclick=${clear}>
+          <div class=${css.clear} id="clearConsole" onclick=${clear}>
             <i class="fas fa-ban" aria-hidden="true" title="Clear console"
             onmouseenter=${hover} onmouseleave=${hover}></i>
           </div>
@@ -177,9 +178,9 @@ class Terminal extends Plugin {
       </div>
     `
     self._view.term = yo`
-      <div class="${css.terminal_container}" onscroll=${throttle(reattach, 10)} onclick=${focusinput}>
+      <div class="${css.terminal_container}" data-id="terminalContainer" onscroll=${throttle(reattach, 10)} onclick=${focusinput}>
         ${self._components.autoCompletePopup.render()}
-        <div class="bg-secondary" style="
+        <div class="bg-secondary" data-id="terminalContainerDisplay" style="
           position: absolute;
           height: 100%;
           width: 100%;
@@ -437,7 +438,7 @@ class Terminal extends Plugin {
     self._shell('remix.help()', self.commands, () => {})
     self.commands.html(intro)
 
-    self._components.txLogger = new TxLogger(self._opts.eventsDecoder, self._opts.txListener, this, self.executionContext)
+    self._components.txLogger = new TxLogger(self._opts.eventsDecoder, self._opts.txListener, this, self.blockchain)
     self._components.txLogger.event.register('debuggingRequested', (hash) => {
       // TODO should probably be in the run module
       if (!self._opts.appManager.isActive('debugger')) self._opts.appManager.activateOne('debugger')
@@ -668,7 +669,7 @@ class Terminal extends Plugin {
       return done(null, 'This type of command has been deprecated and is not functionning anymore. Please run remix.help() to list available commands.')
     }
     var self = this
-    var context = domTerminalFeatures(self, scopedCommands, self.executionContext)
+    var context = domTerminalFeatures(self, scopedCommands, self.blockchain)
     try {
       var cmds = vm.createContext(Object.assign(self._jsSandboxContext, context, self._jsSandboxRegistered))
       var result = vm.runInContext(script, cmds)
@@ -680,12 +681,12 @@ class Terminal extends Plugin {
   }
 }
 
-function domTerminalFeatures (self, scopedCommands, executionContext) {
+function domTerminalFeatures (self, scopedCommands, blockchain) {
   return {
     swarmgw,
     ethers,
     remix: self._components.cmdInterpreter,
-    web3: new Web3(executionContext.web3().currentProvider),
+    web3: new Web3(blockchain.web3().currentProvider),
     console: {
       log: function () { scopedCommands.log.apply(scopedCommands, arguments) },
       info: function () { scopedCommands.info.apply(scopedCommands, arguments) },

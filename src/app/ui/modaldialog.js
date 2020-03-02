@@ -1,6 +1,7 @@
 var yo = require('yo-yo')
 var css = require('./styles/modaldialog-styles')
 
+let incomingModal = false // in case modals are queued, ensure we are not hiding the last one.
 module.exports = (title, content, ok, cancel, focusSelector, opts) => {
   let agreed = true
   let footerIsActive = false
@@ -9,7 +10,8 @@ module.exports = (title, content, ok, cancel, focusSelector, opts) => {
   if (!container) {
     document.querySelector('body').appendChild(html(opts))
     container = document.querySelector(`.modal`)
-  }
+    incomingModal = false
+  } else incomingModal = true
 
   var closeDiv = document.getElementById('modal-close')
   if (opts.hideClose) closeDiv.style.display = 'none'
@@ -50,13 +52,15 @@ module.exports = (title, content, ok, cancel, focusSelector, opts) => {
   function okListener () {
     removeEventListener()
     if (ok && ok.fn && agreed) ok.fn()
-    hide()
+    if (!incomingModal) hide()
+    incomingModal = false
   }
 
   function cancelListener () {
     removeEventListener()
     if (cancel && cancel.fn) cancel.fn()
-    hide()
+    if (!incomingModal) hide()
+    incomingModal = false
   }
 
   function modalKeyEvent (e) {
@@ -81,6 +85,7 @@ module.exports = (title, content, ok, cancel, focusSelector, opts) => {
     container.style.display = 'none'
     if (container.parentElement) container.parentElement.removeChild(container)
     container = null
+    incomingModal = false
   }
 
   function show () {
@@ -125,17 +130,17 @@ module.exports = (title, content, ok, cancel, focusSelector, opts) => {
 
 function html (opts) {
   return yo`
-  <div id="modal-dialog" class="modal" tabindex="-1" role="dialog">
+  <div id="modal-dialog" data-id="modalDialogContainer" class="modal" tabindex="-1" role="dialog">
     <div id="modal-background" class="modal-dialog" role="document">
       <div class="modal-content ${css.modalContent} ${opts.class}">
         <div class="modal-header">
-          <h6 class="modal-title"></h6>
+          <h6 class="modal-title" data-id="modalDialogModalTitle"></h6>
           <span class="modal-close">
             <i id="modal-close" title="Close" class="fas fa-times" aria-hidden="true"></i>
           </span>
         </div>
-        <div class="modal-body ${css.modalBody}"> - </div>
-        <div class="modal-footer" autofocus>
+        <div class="modal-body ${css.modalBody}" data-id="modalDialogModalBody"> - </div>
+        <div class="modal-footer" data-id="modalDialogModalFooter" autofocus>
           <span id="modal-footer-ok" class="${css['modalFooterOk']} modal-ok btn btn-sm btn-light" tabindex='5'>OK</span>
           <span id="modal-footer-cancel" class="${css['modalFooterCancel']} modal-cancel btn btn-sm btn-light" tabindex='10' data-dismiss="modal">Cancel</span>
         </div>

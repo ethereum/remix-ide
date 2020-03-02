@@ -1,13 +1,12 @@
 import { Plugin } from '@remixproject/engine'
 import { EventEmitter } from 'events'
 import * as packageJson from '../../../package.json'
+import yo from 'yo-yo'
 
 const themes = [
-  {name: 'Dark', quality: 'dark', url: 'https://res.cloudinary.com/dvtmp0niu/raw/upload/v1578991867/remix-dark-theme.css'},
-  {name: 'Light', quality: 'light', url: 'https://res.cloudinary.com/dvtmp0niu/raw/upload/v1578991821/light-theme.css'},
+  {name: 'Dark', quality: 'dark', url: 'https://res.cloudinary.com/dvtmp0niu/raw/upload/v1581586063/remix-dark-theme_w5nghe.css'},
+  {name: 'Light', quality: 'light', url: 'https://res.cloudinary.com/dvtmp0niu/raw/upload/v1581586063/light-theme_fswxxf.css'},
 
-  // switching to the url Todo: remove when the theme is ready
-  // {name: 'Dark', quality: 'dark', url: 'assets/css/remix-dark-theme.css'},
   {name: 'Cerulean', quality: 'light', url: 'https://bootswatch.com/4/cerulean/bootstrap.min.css'},
   {name: 'Flatly', quality: 'light', url: 'https://bootswatch.com/4/flatly/bootstrap.min.css'},
   {name: 'Lumen', quality: 'light', url: 'https://bootswatch.com/4/lumen/bootstrap.min.css'},
@@ -39,7 +38,7 @@ export class ThemeModule extends Plugin {
       config: registry.get('config').api
     }
     this.themes = themes.reduce((acc, theme) => ({ ...acc, [theme.name]: theme }), {})
-    this.active = this._deps.config.get('settings/theme') ? this._deps.config.get('settings/theme') : 'Flatly'
+    this.active = this._deps.config.get('settings/theme') ? this._deps.config.get('settings/theme') : 'Dark'
   }
 
   /** Return the active theme */
@@ -50,6 +49,21 @@ export class ThemeModule extends Plugin {
   /** Returns all themes as an array */
   getThemes () {
     return Object.keys(this.themes).map(key => this.themes[key])
+  }
+
+  /**
+   * Init the theme
+   */
+  initTheme (callback) {
+    if (this.active) {
+      const nextTheme = this.themes[this.active] // Theme
+      document.documentElement.style.setProperty('--theme', nextTheme.quality)
+      const theme = yo`<link rel="stylesheet" href="${nextTheme.url}" id="theme-link"/>`
+      theme.addEventListener('load', () => {
+        if (callback) callback()
+      })
+      document.head.insertBefore(theme, document.head.firstChild)
+    }
   }
 
   /**

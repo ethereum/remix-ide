@@ -51,10 +51,11 @@ class ContractDropdownUI {
     this.atAddressButtonInput = yo`<input class="${css.input} ${css.ataddressinput} ataddressinput form-control" placeholder="Load contract from Address" title="address of contract" oninput=${this.atAddressChanged.bind(this)} />`
     this.selectContractNames = yo`<select class="${css.contractNames} custom-select" disabled></select>`
 
-    this.createPanel = yo`<div class="${css.button}"></div>`
+    this.createPanel = yo`<div class="${css.deployDropdown}"></div>`
     this.orLabel = yo`<div class="${css.orLabel}">or</div>`
     let el = yo`
       <div class="${css.container}">
+        <label class="${css.settingsLabel}">Contract</label>
         <div class="${css.subcontainer}">
           ${this.selectContractNames} ${this.compFails} ${info}
         </div>
@@ -193,7 +194,7 @@ class ContractDropdownUI {
         {
           label: 'Force Send',
           fn: () => {
-            this.blockchain.deployContract(selectedContract, args, contractMetadata, compilerContracts, {continueCb, promptCb, statusCb, finalCb}, confirmationCb)
+            this.deployContract(selectedContract, args, contractMetadata, compilerContracts, {continueCb, promptCb, statusCb, finalCb}, confirmationCb)
           }}, {
             label: 'Cancel',
             fn: () => {
@@ -201,26 +202,36 @@ class ContractDropdownUI {
             }
           })
     }
-    this.blockchain.deployContract(selectedContract, args, contractMetadata, compilerContracts, {continueCb, promptCb, statusCb, finalCb}, confirmationCb)
+    this.deployContract(selectedContract, args, contractMetadata, compilerContracts, {continueCb, promptCb, statusCb, finalCb}, confirmationCb)
+  }
+
+  deployContract (selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb) {
+    const { statusCb } = callbacks
+    if (!contractMetadata || (contractMetadata && contractMetadata.autoDeployLib)) {
+      return this.blockchain.deployContractAndLibraries(selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb)
+    }
+    if (Object.keys(selectedContract.bytecodeLinkReferences).length) statusCb(`linking ${JSON.stringify(selectedContract.bytecodeLinkReferences, null, '\t')} using ${JSON.stringify(contractMetadata.linkReferences, null, '\t')}`)
+    this.blockchain.deployContractWithLibrary(selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb)
   }
 
   getConfirmationCb (modalDialog, confirmDialog) {
+    // this code is the same as in recorder.js. TODO need to be refactored out
     const confirmationCb = (network, tx, gasEstimation, continueTxExecution, cancelCb) => {
       if (network.name !== 'Main') {
         return continueTxExecution(null)
       }
-      const amount = this.dropdownLogic.fromWei(tx.value, true, 'ether')
-      const content = confirmDialog(tx, amount, gasEstimation, null, this.dropdownLogic.determineGasFees(tx), this.blockchain.determineGasPrice)
+      const amount = this.blockchain.fromWei(tx.value, true, 'ether')
+      const content = confirmDialog(tx, amount, gasEstimation, null, this.blockchain.determineGasFees(tx), this.blockchain.determineGasPrice.bind(this.blockchain))
 
       modalDialog('Confirm transaction', content,
         { label: 'Confirm',
           fn: () => {
-            this.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
+            this.blockchain.udapp.config.setUnpersistedProperty('doNotShowTransactionConfirmationAgain', content.querySelector('input#confirmsetting').checked)
             // TODO: check if this is check is still valid given the refactor
             if (!content.gasPriceStatus) {
               cancelCb('Given gas price is not correct')
             } else {
-              var gasPrice = this.dropdownLogic.toWei(content.querySelector('#gasprice').value, 'gwei')
+              var gasPrice = this.blockchain.toWei(content.querySelector('#gasprice').value, 'gwei')
               continueTxExecution(gasPrice)
             }
           }}, {

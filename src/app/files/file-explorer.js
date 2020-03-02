@@ -599,7 +599,7 @@ fileExplorer.prototype.createNewFile = function (parentFolder = 'browser') {
       } else {
         self._deps.fileManager.switchFile(newName)
         if (newName.includes('_test.sol')) {
-          self.event.trigger('newTestFileCreated', [newName])
+          self.events.trigger('newTestFileCreated', [newName])
         }
       }
     })
@@ -643,7 +643,7 @@ fileExplorer.prototype.renderMenuItems = function () {
         `
       } else {
         return yo`
-        <span id=${action} onclick=${(event) => { event.stopPropagation(); this[ action ]() }} class="newFile ${icon} ${css.newFile}" title=${title}></span>
+        <span id=${action} data-id="fileExplorerNewFile${action}" onclick=${(event) => { event.stopPropagation(); this[ action ]() }} class="newFile ${icon} ${css.newFile}" title=${title}></span>
         `
       }
     })

@@ -22,7 +22,8 @@ var toolTip = require('./app/ui/tooltip')
 var CompilerMetadata = require('./app/files/compiler-metadata')
 var CompilerImport = require('./app/compiler/compiler-imports')
 
-var executionContext = remixLib.execution.executionContext
+const Blockchain = require('./blockchain/blockchain.js')
+const PluginUDapp = require('./blockchain/pluginUDapp.js')
 
 const PluginManagerComponent = require('./app/components/plugin-manager-component')
 const CompilersArtefacts = require('./app/compiler/compiler-artefacts')
@@ -34,6 +35,8 @@ const DebuggerTab = require('./app/tabs/debugger-tab')
 const TestTab = require('./app/tabs/test-tab')
 const FilePanel = require('./app/panels/file-panel')
 const Editor = require('./app/editor/editor')
+
+import { basicLogo } from './app/ui/svgLogo'
 
 import { RunTab, makeUdapp } from './app/udapp'
 
@@ -48,7 +51,6 @@ import { HiddenPanel } from './app/components/hidden-panel'
 import { VerticalIcons } from './app/components/vertical-icons'
 import { LandingPage } from './app/ui/landing-page/landing-page'
 import { MainPanel } from './app/components/main-panel'
-import { UniversalDApp } from 'remix-lib'
 
 import migrateFileSystem from './migrateFileSystem'
 
@@ -98,12 +100,34 @@ var css = csjs`
     background-color   : var(--info);
     opacity            : 0.5;
   }
+  .centered {
+    position           : fixed;
+    top                : 20%;
+    left               : 45%;
+    width              : 200px;
+    height             : 200px;
+  }
+  .centered svg path {
+    fill: var(--secondary);
+  }
+  .centered svg polygon {
+    fill: var(--secondary);
+  }
 `
 
 class App {
   constructor (api = {}, events = {}, opts = {}) {
     var self = this
     self._components = {}
+    self._view = {}
+    self._view.splashScreen = yo`<div class=${css.centered}>
+    ${basicLogo()}
+    <div class="info-secondary" style="text-align:center">
+      REMIX IDE
+    </div>
+    </div>`
+    document.body.appendChild(self._view.splashScreen)
+
     // setup storage
     var configStorage = new Storage('config-v0.8:')
 
@@ -126,8 +150,6 @@ class App {
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders, name: 'fileproviders'})
 
-    self._view = {}
-
     migrateFileSystem(self._components.filesProviders['browser'])
   }
 
@@ -141,21 +163,21 @@ class App {
     if (self._view.el) return self._view.el
     // not resizable
     self._view.iconpanel = yo`
-      <div id="icon-panel" class="${css.iconpanel} bg-light">
+      <div id="icon-panel" data-id="remixIdeIconPanel" class="${css.iconpanel} bg-light">
       ${''}
       </div>
     `
 
     // center panel, resizable
     self._view.sidepanel = yo`
-      <div id="side-panel" style="min-width: 320px;" class=${css.sidepanel}>
+      <div id="side-panel" data-id="remixIdeSidePanel" style="min-width: 320px;" class=${css.sidepanel}>
         ${''}
       </div>
     `
 
     // handle the editor + terminal
     self._view.mainpanel = yo`
-      <div id="main-panel" class=${css.mainpanel}>
+      <div id="main-panel" data-id="remixIdeMainPanel" class=${css.mainpanel}>
         ${''}
       </div>
     `
@@ -163,7 +185,7 @@ class App {
     self._components.resizeFeature = new PanelsResize(self._view.sidepanel)
 
     self._view.el = yo`
-      <div class=${css.remixIDE}>
+      <div style="visibility:hidden" class=${css.remixIDE}>
         ${self._view.iconpanel}
         ${self._view.sidepanel}
         ${self._components.resizeFeature.render()}
@@ -215,6 +237,12 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   // ----------------- theme servive ----------------------------
   const themeModule = new ThemeModule(registry)
   registry.put({api: themeModule, name: 'themeModule'})
+  themeModule.initTheme(() => {
+    setTimeout(() => {
+      document.body.removeChild(self._view.splashScreen)
+      self._view.el.style.visibility = 'visible'
+    }, 1500)
+  })
   // ----------------- editor servive ----------------------------
   const editor = new Editor({}, themeModule) // wrapper around ace editor
   registry.put({api: editor, name: 'editor'})
@@ -222,16 +250,19 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   // ----------------- fileManager servive ----------------------------
   const fileManager = new FileManager(editor)
   registry.put({api: fileManager, name: 'filemanager'})
+
+  const blockchain = new Blockchain(registry.get('config').api)
+  const pluginUdapp = new PluginUDapp(blockchain)
+
   // ----------------- compilation metadata generation servive ----------------------------
-  const compilerMetadataGenerator = new CompilerMetadata(executionContext, fileManager, registry.get('config').api)
+  const compilerMetadataGenerator = new CompilerMetadata(blockchain, fileManager, registry.get('config').api)
   // ----------------- compilation result service (can keep track of compilation results) ----------------------------
   const compilersArtefacts = new CompilersArtefacts() // store all the compilation results (key represent a compiler name)
   registry.put({api: compilersArtefacts, name: 'compilersartefacts'})
-  // ----------------- universal dapp: run transaction, listen on transactions, decode events
-  const udapp = new UniversalDApp(registry.get('config').api, executionContext)
-  const {eventsDecoder, txlistener} = makeUdapp(udapp, executionContext, compilersArtefacts, (domEl) => mainview.getTerminal().logHtml(domEl))
+
+  const {eventsDecoder, txlistener} = makeUdapp(blockchain, compilersArtefacts, (domEl) => mainview.getTerminal().logHtml(domEl))
   // ----------------- network service (resolve network id / name) ----------------------------
-  const networkModule = new NetworkModule(executionContext)
+  const networkModule = new NetworkModule(blockchain)
   // ----------------- convert offset to line/column service ----------------------------
   var offsetToLineColumnConverter = new OffsetToLineColumnConverter()
   registry.put({api: offsetToLineColumnConverter, name: 'offsettolinecolumnconverter'})
@@ -249,7 +280,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
   // LAYOUT & SYSTEM VIEWS
   const appPanel = new MainPanel()
-  const mainview = new MainView(editor, appPanel, fileManager, appManager, txlistener, eventsDecoder, executionContext)
+  const mainview = new MainView(editor, appPanel, fileManager, appManager, txlistener, eventsDecoder, blockchain)
   registry.put({ api: mainview, name: 'mainview' })
 
   appManager.register([
@@ -293,8 +324,8 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     registry.get('filemanager').api
   )
   const run = new RunTab(
-    udapp,
-    executionContext,
+    blockchain,
+    pluginUdapp,
     registry.get('config').api,
     registry.get('filemanager').api,
     registry.get('editor').api,
@@ -304,7 +335,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
     mainview
   )
   const analysis = new AnalysisTab(registry)
-  const debug = new DebuggerTab(executionContext)
+  const debug = new DebuggerTab(blockchain)
   const test = new TestTab(
     registry.get('filemanager').api,
     filePanel,

@@ -105,9 +105,9 @@ module.exports = class TestTab extends ViewPlugin {
     if (result.type === 'contract') {
       this.testsOutput.appendChild(yo`<div class=${css.outputTitle}>${result.filename} (${result.value})</div>`)
     } else if (result.type === 'testPass') {
-      this.testsOutput.appendChild(yo`<div class="${css.testPass} ${css.testLog} bg-success">✓ (${result.value})</div>`)
+      this.testsOutput.appendChild(yo`<div class="${css.testPass} ${css.testLog} alert-success">✓ (${result.value})</div>`)
     } else if (result.type === 'testFailure') {
-      this.testsOutput.appendChild(yo`<div class="${css.testFailure} ${css.testLog} bg-danger">✘ (${result.value})</div>`)
+      this.testsOutput.appendChild(yo`<div class="${css.testFailure} ${css.testLog} alert-danger">✘ (${result.value})</div>`)
     }
   }
 
@@ -153,8 +153,15 @@ module.exports = class TestTab extends ViewPlugin {
     return new Promise((resolve, reject) => {
       let runningTest = {}
       runningTest[path] = { content }
-      let currentCompilerUrl = this.baseurl + '/' + this.compileTab.getCurrentVersion()
-      remixTests.runTestSources(runningTest, currentCompilerUrl, canUseWorker(this.compileTab.getCurrentVersion()), () => {}, () => {}, (error, result) => {
+      const {currentVersion, evmVersion, optimize} = this.compileTab.getCurrentCompilerConfig()
+      const currentCompilerUrl = this.baseurl + '/' + currentVersion
+      const compilerConfig = {
+        currentCompilerUrl,
+        evmVersion,
+        optimize,
+        usingWorker: canUseWorker(currentVersion)
+      }
+      remixTests.runTestSources(runningTest, compilerConfig, () => {}, () => {}, (error, result) => {
         if (error) return reject(error)
         resolve(result)
       }, (url, cb) => {
@@ -166,13 +173,19 @@ module.exports = class TestTab extends ViewPlugin {
   runTest (testFilePath, callback) {
     this.loading.hidden = false
     this.fileManager.getFile(testFilePath).then((content) => {
-      var runningTest = {}
+      const runningTest = {}
       runningTest[testFilePath] = { content }
-      let currentCompilerUrl = this.baseurl + '/' + this.compileTab.getCurrentVersion()
+      const {currentVersion, evmVersion, optimize} = this.compileTab.getCurrentCompilerConfig()
+      const currentCompilerUrl = this.baseurl + '/' + currentVersion
+      const compilerConfig = {
+        currentCompilerUrl,
+        evmVersion,
+        optimize,
+        usingWorker: canUseWorker(currentVersion)
+      }
       remixTests.runTestSources(
         runningTest,
-        currentCompilerUrl,
-        canUseWorker(this.compileTab.getCurrentVersion()),
+        compilerConfig,
         (result) => this.testCallback(result),
         (_err, result, cb) => this.resultsCallback(_err, result, cb),
         (error, result) => {

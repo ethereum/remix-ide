@@ -11,12 +11,12 @@ const globalRegistry = require('../../../global/registry')
 
 class SettingsUI {
 
-  constructor (settings, networkModule) {
-    this.settings = settings
+  constructor (blockchain, networkModule) {
+    this.blockchain = blockchain
     this.event = new EventManager()
     this._components = {}
 
-    this.settings.event.register('transactionExecuted', (error, from, to, data, lookupOnly, txResult) => {
+    this.blockchain.event.register('transactionExecuted', (error, from, to, data, lookupOnly, txResult) => {
       if (error) return
       if (!lookupOnly) this.el.querySelector('#value').value = '0'
       this.updateAccountBalances()
@@ -44,7 +44,7 @@ class SettingsUI {
     if (!this.el) return
     var accounts = $(this.el.querySelector('#txorigin')).children('option')
     accounts.each((index, account) => {
-      this.settings.getAccountBalanceForAddress(account.value, (err, balance) => {
+      this.blockchain.getBalanceInEther(account.value, (err, balance) => {
         if (err) return
         account.innerText = helper.shortenAddress(account.value, balance)
       })
@@ -56,11 +56,11 @@ class SettingsUI {
 
     var environmentEl = yo`
       <div class="${css.crow}">
-        <div id="selectExEnv" class="${css.col1_1}">
+        <label id="selectExEnv" class="${css.settingsLabel}">
           Environment
-        </div>
-        <div class=${css.environment}>
-          <select id="selectExEnvOptions" onchange=${() => { this.updateNetwork() }} class="form-control ${css.select}">
+        </label>
+        <div class="${css.environment}">
+          <select id="selectExEnvOptions" onchange=${() => { this.updateNetwork() }} class="form-control ${css.select} custom-select">
             <option id="vm-mode"
               title="Execution environment does not connect to any node, everything is local and in memory only."
               value="vm" name="executionContext"> JavaScript VM
@@ -75,13 +75,13 @@ class SettingsUI {
               value="web3" name="executionContext"> Web3 Provider
             </option>
           </select>
-          <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md" target="_blank"><i class="${css.infoDeployAction} fas fa-info"></i></a>
+          <a href="https://remix-ide.readthedocs.io/en/latest/run.html#run-setup" target="_blank"><i class="${css.infoDeployAction} fas fa-info" title="check out docs to setup Environment"></i></a>
         </div>
       </div>
     `
     const networkEl = yo`
     <div class="${css.crow}">
-        <div class="${css.col1_1}">
+        <div class="${css.settingsLabel}">
         </div>
         <div class="${css.environment}">
           ${this.netUI}
@@ -90,14 +90,14 @@ class SettingsUI {
     `
     const accountEl = yo`
       <div class="${css.crow}">
-        <div class="${css.col1_1}">
+        <label class="${css.settingsLabel}">
           Account
           <span id="remixRunPlusWraper" title="Create a new account" onload=${this.updatePlusButton.bind(this)}>
             <i id="remixRunPlus" class="fas fa-plus-circle ${css.icon}" aria-hidden="true" onclick=${this.newAccount.bind(this)}"></i>
           </span>
-        </div>
-        <div class=${css.account}>
-          <select name="txorigin" class="form-control ${css.select}" id="txorigin"></select>
+        </label>
+        <div class="${css.account}">
+          <select name="txorigin" class="form-control ${css.select} custom-select" id="txorigin"></select>
           ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
           <i id="remixRunSignMsg" class="fas fa-edit ${css.icon}" aria-hidden="true" onclick=${this.signMessage.bind(this)} title="Sign a message using this account key"></i>
         </div>
@@ -106,17 +106,17 @@ class SettingsUI {
 
     const gasPriceEl = yo`
       <div class="${css.crow}">
-        <div class="${css.col1_1}">Gas limit</div>
+        <label class="${css.settingsLabel}">Gas limit</label>
         <input type="number" class="form-control ${css.gasNval} ${css.col2}" id="gasLimit" value="3000000">
       </div>
     `
 
     const valueEl = yo`
       <div class="${css.crow}">
-        <div class="${css.col1_1}">Value</div>
+        <label class="${css.settingsLabel}">Value</label>
         <div class="${css.gasValueContainer}">
           <input type="text" class="form-control ${css.gasNval} ${css.col2}" id="value" value="0" title="Enter the value and choose the unit">
-          <select name="unit" class="form-control p-1 ${css.gasNvalUnit} ${css.col2_2}" id="unit">
+          <select name="unit" class="form-control p-1 ${css.gasNvalUnit} ${css.col2_2} custom-select" id="unit">
             <option data-unit="wei">wei</option>
             <option data-unit="gwei">gwei</option>
             <option data-unit="finney">finney</option>
@@ -139,7 +139,7 @@ class SettingsUI {
     var selectExEnv = environmentEl.querySelector('#selectExEnvOptions')
     this.setDropdown(selectExEnv)
 
-    this.settings.event.register('contextChanged', (context, silent) => {
+    this.blockchain.event.register('contextChanged', (context, silent) => {
       this.setFinalContext()
     })
 
@@ -156,7 +156,7 @@ class SettingsUI {
   setDropdown (selectExEnv) {
     this.selectExEnv = selectExEnv
 
-    this.settings.event.register('addProvider', (network) => {
+    this.blockchain.event.register('addProvider', (network) => {
       selectExEnv.appendChild(yo`<option
         title="Manually added environment: ${network.url}"
         value="${network.name}"
@@ -167,7 +167,7 @@ class SettingsUI {
       addTooltip(`${network.name} [${network.url}] added`)
     })
 
-    this.settings.event.register('removeProvider', (name) => {
+    this.blockchain.event.register('removeProvider', (name) => {
       var env = selectExEnv.querySelector(`option[value="${name}"]`)
       if (env) {
         selectExEnv.removeChild(env)
@@ -177,9 +177,9 @@ class SettingsUI {
 
     selectExEnv.addEventListener('change', (event) => {
       let context = selectExEnv.options[selectExEnv.selectedIndex].value
-      this.settings.changeExecutionContext(context, () => {
+      this.blockchain.changeExecutionContext(context, () => {
         modalDialogCustom.prompt('External node request', this.web3ProviderDialogBody(), 'http://localhost:8545', (target) => {
-          this.settings.setProviderFromEndpoint(target, context, (alertMsg) => {
+          this.blockchain.setProviderFromEndpoint(target, context, (alertMsg) => {
             if (alertMsg) addTooltip(alertMsg)
             this.setFinalContext()
           })
@@ -189,7 +189,7 @@ class SettingsUI {
       }, this.setFinalContext.bind(this))
     })
 
-    selectExEnv.value = this.settings.getProvider()
+    selectExEnv.value = this.blockchain.getProvider()
   }
 
   web3ProviderDialogBody () {
@@ -208,7 +208,7 @@ class SettingsUI {
 
   setFinalContext () {
     // set the final context. Cause it is possible that this is not the one we've originaly selected
-    this.selectExEnv.value = this.settings.getProvider()
+    this.selectExEnv.value = this.blockchain.getProvider()
     this.event.trigger('clearInstance', [])
     this.updateNetwork()
     this.updatePlusButton()
@@ -250,7 +250,8 @@ class SettingsUI {
   }
 
   newAccount () {
-    this.settings.newAccount(
+    this.blockchain.newAccount(
+      '',
       (cb) => {
         modalDialogCustom.promptPassphraseCreation((error, passphrase) => {
           if (error) {
@@ -269,14 +270,14 @@ class SettingsUI {
   }
 
   signMessage () {
-    this.settings.getAccounts((err, accounts) => {
+    this.blockchain.getAccounts((err, accounts) => {
       if (err) {
         return addTooltip(`Cannot get account list: ${err}`)
       }
 
       var signMessageDialog = { 'title': 'Sign a message', 'text': 'Enter a message to sign', 'inputvalue': 'Message to sign' }
       var $txOrigin = this.el.querySelector('#txorigin')
-      if (!$txOrigin.selectedOptions[0] && (this.settings.isInjectedWeb3() || this.settings.isWeb3Provider())) {
+      if (!$txOrigin.selectedOptions[0] && (this.blockchain.isInjectedWeb3() || this.blockchain.isWeb3Provider())) {
         return addTooltip(`Account list is empty, please make sure the current provider is properly connected to remix`)
       }
 
@@ -284,7 +285,7 @@ class SettingsUI {
 
       var promptCb = (passphrase) => {
         const modal = modalDialogCustom.promptMulti(signMessageDialog, (message) => {
-          this.settings.signMessage(message, account, passphrase, (err, msgHash, signedData) => {
+          this.blockchain.signMessage(message, account, passphrase, (err, msgHash, signedData) => {
             if (err) {
               return addTooltip(err)
             }
@@ -301,7 +302,7 @@ class SettingsUI {
         }, false)
       }
 
-      if (this.settings.isWeb3Provider()) {
+      if (this.blockchain.isWeb3Provider()) {
         return modalDialogCustom.promptPassphrase(
           'Passphrase to sign a message',
           'Enter your passphrase for this account to sign the message',
@@ -315,7 +316,7 @@ class SettingsUI {
   }
 
   updateNetwork () {
-    this.settings.updateNetwork((err, {id, name} = {}) => {
+    this.blockchain.updateNetwork((err, {id, name} = {}) => {
       if (err) {
         this.netUI.innerHTML = 'can\'t detect network '
         return
@@ -331,7 +332,7 @@ class SettingsUI {
     this.accountListCallId++
     var callid = this.accountListCallId
     var txOrigin = this.el.querySelector('#txorigin')
-    this.settings.getAccounts((err, accounts) => {
+    this.blockchain.getAccounts((err, accounts) => {
       if (this.accountListCallId > callid) return
       this.accountListCallId++
       if (err) { addTooltip(`Cannot get account list: ${err}`) }

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = function (browser, callback, url, preloadPlugins = true) {
   browser
     .url(url || 'http://127.0.0.1:8080')
@@ -24,5 +26,9 @@ function initModules (browser, callback) {
     .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_solidityStaticAnalysis"] button')
     .scrollAndClick('#pluginManager article[id="remixPluginManagerListItem_debugger"] button')
     .scrollAndClick('#icon-panel div[plugin="fileExplorers"]')
+    .clickLaunchIcon('settings')
+    .setValue('#gistaccesstoken', process.env.gist_token)
+    .click('#savegisttoken')
+    .click('#settingsView #Flatly') // e2e tests were initially developed with Flatly. Some tests are failing with the default one (Dark), because the dark theme put uppercase everywhere.
     .perform(() => { callback() })
 }
