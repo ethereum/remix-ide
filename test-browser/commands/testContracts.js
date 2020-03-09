@@ -15,7 +15,6 @@ class TestContracts extends EventEmitter {
 function testContracts (browser, fileName, contractCode, compiledContractNames, callback) {
   browser
       .clickLaunchIcon('solidity')
-      .clearValue('#input textarea')
       .addFile(fileName, contractCode)
       .pause(1000)
       .verifyContracts(compiledContractNames)

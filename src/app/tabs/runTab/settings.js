@@ -60,7 +60,7 @@ class SettingsUI {
           Environment
         </label>
         <div class="${css.environment}">
-          <select id="selectExEnvOptions" onchange=${() => { this.updateNetwork() }} class="form-control ${css.select} custom-select">
+          <select id="selectExEnvOptions" data-id="settingsSelectEnvOptions" onchange=${() => { this.updateNetwork() }} class="form-control ${css.select} custom-select">
             <option id="vm-mode"
               title="Execution environment does not connect to any node, everything is local and in memory only."
               value="vm" name="executionContext"> JavaScript VM
@@ -83,7 +83,7 @@ class SettingsUI {
     <div class="${css.crow}">
         <div class="${css.settingsLabel}">
         </div>
-        <div class="${css.environment}">
+        <div class="${css.environment}" data-id="settingsNetworkEnv">
           ${this.netUI}
         </div>
       </div>
@@ -97,7 +97,7 @@ class SettingsUI {
           </span>
         </label>
         <div class="${css.account}">
-          <select name="txorigin" class="form-control ${css.select} custom-select" id="txorigin"></select>
+          <select data-id="runTabSelectAccount" name="txorigin" class="form-control ${css.select} custom-select" id="txorigin"></select>
           ${copyToClipboard(() => document.querySelector('#runTabView #txorigin').value)}
           <i id="remixRunSignMsg" class="fas fa-edit ${css.icon}" aria-hidden="true" onclick=${this.signMessage.bind(this)} title="Sign a message using this account key"></i>
         </div>
