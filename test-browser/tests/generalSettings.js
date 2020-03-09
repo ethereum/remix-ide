@@ -48,6 +48,7 @@ module.exports = {
     .click('*[data-id="settingsTabSaveGistToken"]')
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Access token saved')
+    .pause(2000)
     .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
@@ -56,6 +57,7 @@ module.exports = {
     .click('*[data-id="copyToClipboardCopyIcon"]')
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Copy value to clipboard')
+    .pause(2000)
     .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
@@ -65,6 +67,7 @@ module.exports = {
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Access token removed')
     .assert.containsText('*[data-id="settingsTabGistAccessToken"]', '')
+    .pause(2000)
     .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
