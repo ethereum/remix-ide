@@ -17,14 +17,12 @@ module.exports = {
   },
 
   'Should open gitter channel in a new tab when `Gitter Channel Button` is clicked': function (browser) {
-    const runtimeBrowser = browser.capabilities.browserName
-
     browser.waitForElementVisible('*[data-id="remixIdeSidePanel"]')
     .waitForElementVisible('*[data-id="settingsTabGitterChannelButton"]')
     .click('*[data-id="settingsTabGitterChannelButton"]')
     .pause(2000)
     .switchBrowserTab(1)
-    if (runtimeBrowser === 'chrome') browser.assert.urlContains('https://gitter.im/ethereum/remix')
+    .assert.urlContains('https://gitter.im/ethereum/remix')
   },
 
   'Should activate `generate contract metadata`': function (browser) {
@@ -50,7 +48,7 @@ module.exports = {
     .click('*[data-id="settingsTabSaveGistToken"]')
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Access token saved')
-    .click('*[data-id="tooltipCloseButton"]')
+    .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
   'Should copy github access token to clipboard': function (browser) {
@@ -58,7 +56,7 @@ module.exports = {
     .click('*[data-id="copyToClipboardCopyIcon"]')
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Copy value to clipboard')
-    .click('*[data-id="tooltipCloseButton"]')
+    .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
   'Should remove github access token': function (browser) {
@@ -67,7 +65,7 @@ module.exports = {
     .waitForElementVisible('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
     .assert.containsText('*[data-shared="tooltipPopup"]:nth-last-of-type(1)', 'Access token removed')
     .assert.containsText('*[data-id="settingsTabGistAccessToken"]', '')
-    .click('*[data-id="tooltipCloseButton"]')
+    .click('*[data-shared="tooltipPopup"]:nth-last-of-type(1)')
   },
 
   'Should load dark theme': function (browser) {

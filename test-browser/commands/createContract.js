@@ -14,9 +14,19 @@ class CreateContract extends EventEmitter {
 
 function createContract (browser, inputParams, callback) {
   browser.clickLaunchIcon('settings').clickLaunchIcon('udapp')
-    .setValue('div[class^="contractActionsContainerSingle"] input', inputParams, function () {
+  .execute(function (cssSelector) {
+    return !!window.getComputedStyle(document.querySelector(cssSelector)).getPropertyValue('visibility')
+  }, ['div[class^="contractActionsContainerSingle"] input'], function (result) {
+    const hidden = result.value
+
+    if (!hidden) {
+      browser.setValue('div[class^="contractActionsContainerSingle"] input', inputParams, function () {
+        browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
+      })
+    } else {
       browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
-    })
+    }
+  })
 }
 
 module.exports = CreateContract
