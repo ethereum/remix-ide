@@ -19,6 +19,7 @@ function signMsg (browser, msg, cb) {
       .waitForElementPresent('i[id="remixRunSignMsg"]')
       .click('i[id="remixRunSignMsg"]')
       .waitForElementPresent('textarea[id="prompt_text"]')
+      .pause(2000)
       .setValue('textarea[id="prompt_text"]', msg, () => {
         browser.modalFooterOKClick().perform(
           (client, done) => {
