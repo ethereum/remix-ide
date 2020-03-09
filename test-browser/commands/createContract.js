@@ -16,11 +16,11 @@ function createContract (browser, inputParams, callback) {
   browser.clickLaunchIcon('settings').clickLaunchIcon('udapp')
   .execute(function (cssSelector) {
     const hidden = window.getComputedStyle(document.querySelector(cssSelector)).getPropertyValue('visibility')
-  
-    return hidden.trim() === 'hidden' ? true : false
+
+    return hidden.trim() === 'hidden' ? true : false // eslint-disable-line
   }, ['div[class^="contractActionsContainerSingle"] input'], function (result) {
     const hidden = result.value
-    
+
     if (!hidden) {
       browser.setValue('div[class^="contractActionsContainerSingle"] input', inputParams, function () {
         browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
