@@ -1,25 +1,20 @@
 const EventEmitter = require('events')
 
 class checkElementStyle extends EventEmitter {
-  command (cssSelector, styleProperty, expectedResult) {
-    this.api.perform((done) => {
-      checkStyle(this.api, cssSelector, styleProperty, expectedResult, () => {
-        done()
-        this.emit('complete')
-      })
-    })
+  async command (cssSelector, styleProperty, expectedResult) {
+    await checkStyle(this.api, cssSelector, styleProperty, expectedResult)
+    this.emit('complete')
     return this
   }
 }
 
-function checkStyle (browser, cssSelector, styleProperty, expectedResult, callback) {
-  browser.execute(function (cssSelector, styleProperty) {
+async function checkStyle (browser, cssSelector, styleProperty, expectedResult) {
+  await browser.execute(function (cssSelector, styleProperty) {
     return window.getComputedStyle(document.querySelector(cssSelector)).getPropertyValue(styleProperty)
-  }, [cssSelector, styleProperty], function (result) {
+  }, [cssSelector, styleProperty], async function (result) {
     const value = result.value
 
-    browser.assert.equal(value.trim(), expectedResult)
-    callback()
+    await browser.assert.equal(value.trim(), expectedResult)
   })
 }
 

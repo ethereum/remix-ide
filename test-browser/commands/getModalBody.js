@@ -1,14 +1,13 @@
 const EventEmitter = require('events')
 
 class GetModalBody extends EventEmitter {
-  command (callback) {
-    this.api.waitForElementVisible('.modal-body')
-    .getText('.modal-body', (result) => {
+  async command (callback) {
+    await this.api.waitForElementVisible('.modal-body')
+    await this.api.getText('.modal-body', async (result) => {
       console.log(result)
-      callback(result.value, () => {
-        this.emit('complete')
-      })
+      await callback(result.value)
     })
+    this.emit('complete')
     return this
   }
 }

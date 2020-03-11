@@ -1,18 +1,14 @@
 const EventEmitter = require('events')
 
 class clearEditablecontent extends EventEmitter {
-  command (cssSelector) {
-    this.api.perform((done) => {
-      clearContent(this.api, cssSelector, () => {
-        done()
-        this.emit('complete')
-      })
-    })
+  async command (cssSelector) {
+    await clearContent(this.api, cssSelector)
+    this.emit('complete')
     return this
   }
 }
 
-function clearContent (browser, cssSelector, callback) {
+function clearContent (browser, cssSelector) {
   browser.execute(function (cssSelector) {
     const selection = window.getSelection()
     const range = document.createRange()
@@ -20,10 +16,9 @@ function clearContent (browser, cssSelector, callback) {
     range.selectNodeContents(document.querySelector(cssSelector))
     selection.removeAllRanges()
     selection.addRange(range)
-  }, [cssSelector], function () {
-    browser.sendKeys(cssSelector, browser.Keys.BACK_SPACE)
-    .pause(5000)
-    callback()
+  }, [cssSelector], async function () {
+    await browser.sendKeys(cssSelector, browser.Keys.BACK_SPACE)
+    await browser.pause(5000)
   })
 }
 

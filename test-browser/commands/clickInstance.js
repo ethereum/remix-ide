@@ -1,10 +1,12 @@
 const EventEmitter = require('events')
 
 class ClickInstance extends EventEmitter {
-  command (index) {
+  async command (index) {
     index = index + 2
     let selector = '.instance:nth-of-type(' + index + ') > div > button'
-    this.api.waitForElementPresent(selector).scrollAndClick(selector).perform(() => { this.emit('complete') })
+    await this.api.waitForElementPresent(selector)
+    await this.api.scrollAndClick(selector)
+    this.emit('complete')
     return this
   }
 }

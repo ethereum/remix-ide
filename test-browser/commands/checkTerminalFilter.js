@@ -1,34 +1,25 @@
 const EventEmitter = require('events')
 
 class CheckTerminalFilter extends EventEmitter {
-  command (filter, test) {
-    this.api.perform((done) => {
-      checkFilter(this.api, filter, test, () => {
-        done()
-        this.emit('complete')
-      })
-    })
+  async command (filter, test) {
+    await checkFilter(this.api, filter, test)
+    this.emit('complete')
     return this
   }
 }
 
-function checkFilter (browser, filter, test, done) {
-  if (browser.options.desiredCapabilities.browserName === 'chrome') { // nightwatch deos not handle well that part.... works locally
-    done()
-    return
-  }
+async function checkFilter (browser, filter, test) {
   const filterClass = '[data-id="terminalInputSearch"]'
-  browser.setValue(filterClass, filter, function () {
-    browser.execute(function () {
-      return document.querySelector('[data-id="terminalJournal"]').innerHTML === test
-    }, [], function (result) {
-      browser.clearValue(filterClass).setValue(filterClass, '', function () {
-        if (!result.value) {
-          browser.assert.fail('useFilter on ' + filter + ' ' + test, 'info about error', '')
-        }
-        done()
-      })
-    })
+
+  await browser.setValue(filterClass, filter)
+  await browser.execute(function () {
+    return document.querySelector('[data-id="terminalJournal"]').innerHTML === test
+  }, [], async function (result) {
+    await browser.clearValue(filterClass)
+    await browser.setValue(filterClass, '')
+    if (!result.value) {
+      await browser.assert.fail('useFilter on ' + filter + ' ' + test, 'info about error', '')
+    }
   })
 }
 

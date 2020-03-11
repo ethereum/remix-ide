@@ -1,34 +1,29 @@
 const EventEmitter = require('events')
 
 class CreateContract extends EventEmitter {
-  command (inputParams) {
-    this.api.perform((done) => {
-      createContract(this.api, inputParams, () => {
-        done()
-        this.emit('complete')
-      })
-    })
+  async command (inputParams) {
+    await createContract(this.api, inputParams)
+    this.emit('complete')
     return this
   }
 }
 
-function createContract (browser, inputParams, callback) {
-  browser.clickLaunchIcon('settings').clickLaunchIcon('udapp')
-  .execute(function (cssSelector) {
+async function createContract (browser, inputParams) {
+  await browser.clickLaunchIcon('settings')
+  await browser.clickLaunchIcon('udapp')
+  await browser.execute(function (cssSelector) {
     const hidden = window.getComputedStyle(document.querySelector(cssSelector)).getPropertyValue('visibility')
 
     return hidden.trim() === 'hidden' ? true : false // eslint-disable-line
-  }, ['div[class^="contractActionsContainerSingle"] input'], function (result) {
+  }, ['div[class^="contractActionsContainerSingle"] input'], async function (result) {
     const hidden = result.value
 
     if (!hidden) {
-      browser.setValue('div[class^="contractActionsContainerSingle"] input', inputParams, function () {
-        browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
-      })
-    } else {
-      browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
+      await browser.setValue('div[class^="contractActionsContainerSingle"] input', inputParams)
     }
   })
+  await browser.click('#runTabView button[class^="instanceButton"]')
+  await browser.pause(500)
 }
 
 module.exports = CreateContract
