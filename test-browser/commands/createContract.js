@@ -18,15 +18,15 @@ function createContract (browser, inputParams, callback) {
     const hidden = window.getComputedStyle(document.querySelector(cssSelector)).getPropertyValue('visibility')
 
     return hidden.trim() === 'hidden' ? true : false // eslint-disable-line
-  }, ['div[class^="contractActionsContainerSingle"] input'], function (result) {
+  }, ['*[data-id="multiParamManagerBasicInputField"]'], function (result) {
     const hidden = result.value
 
     if (!hidden) {
-      browser.setValue('div[class^="contractActionsContainerSingle"] input', inputParams, function () {
-        browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
+      browser.setValue('*[data-id="multiParamManagerBasicInputField"]', inputParams, function () {
+        browser.click('*[data-id="multiParamManagerFuncButton"]').pause(500).perform(function () { callback() })
       })
     } else {
-      browser.click('#runTabView button[class^="instanceButton"]').pause(500).perform(function () { callback() })
+      browser.click('*[data-id="multiParamManagerFuncButton"]').pause(500).perform(function () { callback() })
     }
   })
 }
