@@ -9,7 +9,6 @@ const toaster = require('../ui/tooltip')
 const modalDialogCustom = require('../ui/modal-dialog-custom')
 const helper = require('../../lib/helper.js')
 import { Plugin } from '@remixproject/engine'
-import { isNative } from '../../remixAppManager.js'
 import * as packageJson from '../../../package.json'
 
 /*
@@ -173,10 +172,12 @@ class FileManager extends Plugin {
       toaster.hide()
     }
     if (this.currentRequest) {
-      if (isNative(this.currentRequest.from)) {
+      const canCall = await this.askUserPermission('setFile', '')
+      if (canCall) {
         this._setFileInternal(path, content)
         return
       }
+
       let actions = (toaster) => {
         return yo`
           <div class="container ml-1">
