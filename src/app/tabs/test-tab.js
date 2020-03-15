@@ -162,7 +162,10 @@ module.exports = class TestTab extends ViewPlugin {
         usingWorker: canUseWorker(currentVersion)
       }
       remixTests.runTestSources(runningTest, compilerConfig, () => {}, () => {}, (error, result) => {
-        if (error) return reject(error)
+        if (error) {
+          error = typeof error !== 'string' ? JSON.stringify(error) : error
+          return reject(new Error(error))
+        }
         resolve(result)
       }, (url, cb) => {
         return this.compileTab.compileTabLogic.importFileCb(url, cb)
