@@ -85,3 +85,21 @@ Similarly, to pass in a struct as a parameter of a function, it needs to be put 
 `pragma experimental ABIEncoderV2;`
 needs to put in at the top of the solidity file.
 
+### Example of passing nested struct to a function
+Consider a nested struct defined like this:
+```
+struct PurchaseOrder
+{
+    uint someField;  
+    uint someOtherField;
+    PurchaseOrderItem[] items;
+}
+struct PurchaseOrderItem
+{
+    uint andAnotherField;                    
+}
+```
+If a function has signature `function someFunction(PurchaseOrder memory po)` then the correct syntax is:
+```
+["1", "1", [["1"]]]
+```
