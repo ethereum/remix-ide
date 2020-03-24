@@ -170,29 +170,25 @@ export class RunTab extends LibraryPlugin {
   render () {
     this.udappUI = new UniversalDAppUI(this.blockchain, this.logCallback)
     this.blockchain.resetAndInit(this.config, {
-      getAddress: (cb) => {
-        cb(null, $('#txorigin').val())
+      getAddress: () => {
+        return $('#txorigin').val()
       },
-      getValue: (cb) => {
-        try {
-          const number = document.querySelector('#value').value
-          const select = document.getElementById('unit')
-          const index = select.selectedIndex
-          const selectedUnit = select.querySelectorAll('option')[index].dataset.unit
-          let unit = 'ether' // default
-          if (['ether', 'finney', 'gwei', 'wei'].indexOf(selectedUnit) >= 0) {
-            unit = selectedUnit
-          }
-          cb(null, Web3.utils.toWei(number, unit))
-        } catch (e) {
-          cb(e)
+      getValue: () => {
+        const number = document.querySelector('#value').value
+        const select = document.getElementById('unit')
+        const index = select.selectedIndex
+        const selectedUnit = select.querySelectorAll('option')[index].dataset.unit
+        let unit = 'ether' // default
+        if (['ether', 'finney', 'gwei', 'wei'].indexOf(selectedUnit) >= 0) {
+          unit = selectedUnit
         }
+        return Web3.utils.toWei(number, unit)
       },
-      getGasLimit: (cb) => {
+      getGasLimit: () => {
         try {
-          cb(null, '0x' + new ethJSUtil.BN($('#gasLimit').val(), 10).toString(16))
+          return '0x' + new ethJSUtil.BN($('#gasLimit').val(), 10).toString(16)
         } catch (e) {
-          cb(e.message)
+          throw new Error(e.message)
         }
       }
     })

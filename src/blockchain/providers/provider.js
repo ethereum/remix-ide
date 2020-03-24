@@ -47,6 +47,10 @@ class Provider {
     })
   }
 
+  async sendTransaction (tx, confirmationCb, continueCb, promptCb) {
+    return this.web3.eth.sendTransaction({from: tx.from, to: tx.to, data: tx.data, value: tx.value, gas: tx.gasLimit})
+  }
+
   getProvider () {
     return this.executionContext.getProvider()
   }
