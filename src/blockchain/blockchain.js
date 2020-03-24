@@ -72,7 +72,7 @@ class Blockchain {
 
   /** Return the list of accounts */
   // note: the dual promise/callback is kept for now as it was before
-  getAccounts (cb) {
+  async getAccounts (cb) {
     return new Promise((resolve, reject) => {
       this.getCurrentProvider().getAccounts((error, accounts) => {
         if (cb) {
@@ -87,6 +87,8 @@ class Blockchain {
   }
 
   deployContractAndLibraries (selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb) {
+    console.dir("-- deployContractAndLibraries")
+
     const { continueCb, promptCb, statusCb, finalCb } = callbacks
     const constructor = selectedContract.getConstructorInterface()
     txFormat.buildData(selectedContract.name, selectedContract.object, compilerContracts, true, constructor, args, (error, data) => {
@@ -101,6 +103,7 @@ class Blockchain {
   }
 
   deployContractWithLibrary (selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb) {
+    console.dir("-- deployContractWithLibrary")
     const { continueCb, promptCb, statusCb, finalCb } = callbacks
     const constructor = selectedContract.getConstructorInterface()
     txFormat.encodeConstructorCallAndLinkLibraries(selectedContract.object, args, constructor, contractMetadata.linkReferences, selectedContract.bytecodeLinkReferences, (error, data) => {
@@ -112,6 +115,7 @@ class Blockchain {
   }
 
   createContract (selectedContract, data, continueCb, promptCb, confirmationCb, finalCb) {
+    console.dir("-- createContract")
     if (data) {
       data.contractName = selectedContract.name
       data.linkReferences = selectedContract.bytecodeLinkReferences
@@ -119,14 +123,16 @@ class Blockchain {
     }
 
     this.runTx({ data: data, useCall: false }, confirmationCb, continueCb, promptCb,
-      (error, txResult, address) => {
+      // (error, txResult, address) => {
+      (error, receipt) => {
         if (error) {
           return finalCb(`creation of ${selectedContract.name} errored: ${error}`)
         }
-        if (txResult.result.status && txResult.result.status === '0x0') {
+        // if (txResult.result.status && txResult.result.status === '0x0') {
+        if (!receipt.status) {
           return finalCb(`creation of ${selectedContract.name} errored: transaction execution failed`)
         }
-        finalCb(null, selectedContract, address)
+        finalCb(null, selectedContract, receipt.contractAddress)
       }
     )
   }
@@ -240,8 +246,10 @@ class Blockchain {
   }
 
   runOrCallContractMethod (contractName, contractAbi, funABI, value, address, callType, lookupOnly, logMsg, logCallback, outputCb, confirmationCb, continueCb, promptCb) {
+    console.dir("-- runOrCallContractMethod")
     // contractsDetails is used to resolve libraries
     txFormat.buildData(contractName, contractAbi, {}, false, funABI, callType, (error, data) => {
+      console.dir("--> buildData")
       if (error) {
         return logCallback(`${logMsg} errored: ${error} `)
       }
@@ -253,12 +261,17 @@ class Blockchain {
       if (funABI.type === 'fallback') data.dataHex = value
 
       const useCall = funABI.stateMutability === 'view' || funABI.stateMutability === 'pure'
-      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
+      // this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
+      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, receipt) => {
         if (error) {
           return logCallback(`${logMsg} errored: ${error} `)
         }
         if (lookupOnly) {
-          outputCb(returnValue)
+
+          // TODO: figure out how tx gets passed back
+
+          // outputCb(returnValue)
+          outputCb(receipt.transactionHash)
         }
       })
     },
@@ -266,6 +279,7 @@ class Blockchain {
       logCallback(msg)
     },
     (data, runTxCallback) => {
+      console.dir("--> buildData callback")
       // called for libraries deployment
       this.runTx(data, confirmationCb, runTxCallback, promptCb, () => {})
     })
@@ -380,7 +394,63 @@ class Blockchain {
     })
   }
 
-  runTx (args, confirmationCb, continueCb, promptCb, cb) {
+  // async runCall() {
+  // }
+
+  async runTx(args, confirmationCb, continueCb, promptCb, cb) {
+    console.dir("--- runTx");
+    console.dir(args);
+
+    try {
+      let gasLimit = 3000000
+      if (this.transactionContextAPI.getGasLimit) {
+        gasLimit = this.transactionContextAPI.getGasLimit()
+      }
+
+      let value = args.value
+      if (!value && (args.useCall || !this.transactionContextAPI.getValue)) {
+        value = 0
+      } else {
+        value = this.transactionContextAPI.getValue()
+      }
+
+      let fromAddress = args.from
+      if (this.transactionContextAPI.getAddress) {
+        fromAddress = this.transactionContextAPI.getAddress()
+      } else {
+        let accounts = await this.getAccounts();
+        fromAddress = accounts[0]
+      }
+
+      const tx = { to: args.to, data: args.data.dataHex, useCall: args.useCall, from: fromAddress, value: value, gasLimit: gasLimit, timestamp: args.data.timestamp }
+      const payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName, contractABI: args.data.contractABI, linkReferences: args.data.linkReferences }
+      let timestamp = Date.now()
+      if (tx.timestamp) {
+        timestamp = tx.timestamp
+      }
+      this.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
+
+      let receipt = await this.getCurrentProvider().sendTransaction(tx, confirmationCb, continueCb, promptCb)
+
+      cb(null, receipt)
+      console.dir(receipt)
+
+      // let eventName = (tx.useCall ? 'callExecuted' : 'transactionExecuted')
+      // let error = null // TODO: check if this needs to be passed in catch as well
+      // let result = {} // TODO: check if this needs to be passed in catch as well
+      // this.event.trigger(eventName, [error, tx.from, tx.to, tx.data, tx.useCall, result, timestamp, payLoad, receipt.contractAddress])
+
+    } catch (error) {
+      console.dir("-------")
+      console.dir(error)
+      cb(error)
+    }
+  }
+
+  runTx2 (args, confirmationCb, continueCb, promptCb, cb) {
+    console.dir("--- runTx2");
+    console.dir(args);
+
     const self = this
     async.waterfall([
       function getGasLimit (next) {
