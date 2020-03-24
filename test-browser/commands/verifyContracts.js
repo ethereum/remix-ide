@@ -16,7 +16,7 @@ function getCompiledContracts (browser, opts, callback) {
   browser
   .clickLaunchIcon('solidity')
   .pause(opts.wait)
-  .waitForElementPresent('#compileTabView select#compiledContracts option')
+  .waitForElementPresent('*[data-id="compiledContracts"] option')
   .execute(function () {
     var contracts = document.querySelectorAll('#compileTabView select#compiledContracts option')
     if (!contracts) {
