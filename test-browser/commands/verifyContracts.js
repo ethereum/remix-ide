@@ -1,7 +1,7 @@
 const EventEmitter = require('events')
 
 class VerifyContracts extends EventEmitter {
-  command (compiledContractNames, opts = { wait: 15000 }) {
+  command (compiledContractNames, opts = { wait: 1000 }) {
     this.api.perform((done) => {
       verifyContracts(this.api, compiledContractNames, opts, () => {
         done()
