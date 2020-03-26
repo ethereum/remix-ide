@@ -7,7 +7,9 @@ module.exports = function (browser, callback, url, preloadPlugins = true) {
       browser.resizeWindow(2560, 1440, () => {
         if (preloadPlugins) {
           initModules(browser, () => {
-            browser.clickLaunchIcon('solidity').click('#autoCompile')
+            browser.clickLaunchIcon('solidity')
+            .waitForElementPresent('*[data-id="compilerContainerAutoCompile"]')
+            .click('*[data-id="compilerContainerAutoCompile"]')
             .perform(function () {
               callback()
             })
