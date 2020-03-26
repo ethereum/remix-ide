@@ -8,7 +8,7 @@ module.exports = function (browser, callback, url, preloadPlugins = true) {
         if (preloadPlugins) {
           initModules(browser, () => {
             browser.clickLaunchIcon('solidity').pause(2000)
-            .execute(()=>{
+            .execute(() => {
               document.getElementById('autoCompile').click()
             })
             .perform(function () {
