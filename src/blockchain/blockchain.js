@@ -1,6 +1,5 @@
 const remixLib = require('remix-lib')
 const txFormat = remixLib.execution.txFormat
-const txExecution = remixLib.execution.txExecution
 const typeConversion = remixLib.execution.typeConversion
 const Txlistener = remixLib.execution.txListener
 const TxRunner = remixLib.execution.txRunner
@@ -9,7 +8,6 @@ const EventManager = remixLib.EventManager
 const executionContext = remixLib.execution.executionContext
 const Web3 = require('web3')
 
-const async = require('async')
 const { EventEmitter } = require('events')
 
 const { resultToRemixTx } = require('./txResultHelper')
@@ -87,8 +85,6 @@ class Blockchain {
   }
 
   deployContractAndLibraries (selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb) {
-    console.dir("-- deployContractAndLibraries")
-
     const { continueCb, promptCb, statusCb, finalCb } = callbacks
     const constructor = selectedContract.getConstructorInterface()
     txFormat.buildData(selectedContract.name, selectedContract.object, compilerContracts, true, constructor, args, (error, data) => {
@@ -103,7 +99,6 @@ class Blockchain {
   }
 
   deployContractWithLibrary (selectedContract, args, contractMetadata, compilerContracts, callbacks, confirmationCb) {
-    console.dir("-- deployContractWithLibrary")
     const { continueCb, promptCb, statusCb, finalCb } = callbacks
     const constructor = selectedContract.getConstructorInterface()
     txFormat.encodeConstructorCallAndLinkLibraries(selectedContract.object, args, constructor, contractMetadata.linkReferences, selectedContract.bytecodeLinkReferences, (error, data) => {
@@ -115,7 +110,6 @@ class Blockchain {
   }
 
   createContract (selectedContract, data, continueCb, promptCb, confirmationCb, finalCb) {
-    console.dir("-- createContract")
     if (data) {
       data.contractName = selectedContract.name
       data.linkReferences = selectedContract.bytecodeLinkReferences
@@ -246,10 +240,8 @@ class Blockchain {
   }
 
   runOrCallContractMethod (contractName, contractAbi, funABI, value, address, callType, lookupOnly, logMsg, logCallback, outputCb, confirmationCb, continueCb, promptCb) {
-    console.dir("-- runOrCallContractMethod")
     // contractsDetails is used to resolve libraries
     txFormat.buildData(contractName, contractAbi, {}, false, funABI, callType, (error, data) => {
-      console.dir("--> buildData")
       if (error) {
         return logCallback(`${logMsg} errored: ${error} `)
       }
@@ -262,16 +254,13 @@ class Blockchain {
 
       const useCall = funABI.stateMutability === 'view' || funABI.stateMutability === 'pure'
       // this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
-      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, receipt) => {
+      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, result) => {
         if (error) {
           return logCallback(`${logMsg} errored: ${error} `)
         }
         if (lookupOnly) {
-
-          // TODO: figure out how tx gets passed back
-
-          // outputCb(returnValue)
-          outputCb(receipt.transactionHash)
+          outputCb(result)
+          // outputCb(result.transactionHash)
         }
       })
     },
@@ -279,7 +268,6 @@ class Blockchain {
       logCallback(msg)
     },
     (data, runTxCallback) => {
-      console.dir("--> buildData callback")
       // called for libraries deployment
       this.runTx(data, confirmationCb, runTxCallback, promptCb, () => {})
     })
@@ -394,13 +382,7 @@ class Blockchain {
     })
   }
 
-  // async runCall() {
-  // }
-
-  async runTx(args, confirmationCb, continueCb, promptCb, cb) {
-    console.dir("--- runTx");
-    console.dir(args);
-
+  async runTx (args, confirmationCb, continueCb, promptCb, cb) {
     try {
       let gasLimit = 3000000
       if (this.transactionContextAPI.getGasLimit) {
@@ -418,7 +400,7 @@ class Blockchain {
       if (this.transactionContextAPI.getAddress) {
         fromAddress = this.transactionContextAPI.getAddress()
       } else {
-        let accounts = await this.getAccounts();
+        let accounts = await this.getAccounts()
         fromAddress = accounts[0]
       }
 
@@ -430,118 +412,29 @@ class Blockchain {
       }
       this.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
 
-      let receipt = await this.getCurrentProvider().sendTransaction(tx, confirmationCb, continueCb, promptCb)
+      let error = null
 
-      cb(null, receipt)
-      console.dir(receipt)
+      if (args.useCall) {
+        let result = await this.getCurrentProvider().doCall(tx, confirmationCb, continueCb, promptCb)
 
-      // let eventName = (tx.useCall ? 'callExecuted' : 'transactionExecuted')
-      // let error = null // TODO: check if this needs to be passed in catch as well
-      // let result = {} // TODO: check if this needs to be passed in catch as well
-      // this.event.trigger(eventName, [error, tx.from, tx.to, tx.data, tx.useCall, result, timestamp, payLoad, receipt.contractAddress])
+        if (this.executionContext.isVM()) {
+          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, {result: { execResult: result } }, timestamp, payLoad, null])
+        } else {
+          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, {result}, timestamp, payLoad, null])
+        }
 
+        cb(null, result)
+      } else {
+        let receipt = await this.getCurrentProvider().sendTransaction(tx, confirmationCb, continueCb, promptCb)
+
+        receipt.result = receipt
+
+        this.event.trigger('transactionExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, receipt, timestamp, payLoad, receipt.contractAddress])
+        cb(null, receipt)
+      }
     } catch (error) {
-      console.dir("-------")
-      console.dir(error)
       cb(error)
     }
-  }
-
-  runTx2 (args, confirmationCb, continueCb, promptCb, cb) {
-    console.dir("--- runTx2");
-    console.dir(args);
-
-    const self = this
-    async.waterfall([
-      function getGasLimit (next) {
-        if (self.transactionContextAPI.getGasLimit) {
-          return self.transactionContextAPI.getGasLimit(next)
-        }
-        next(null, 3000000)
-      },
-      function queryValue (gasLimit, next) {
-        if (args.value) {
-          return next(null, args.value, gasLimit)
-        }
-        if (args.useCall || !self.transactionContextAPI.getValue) {
-          return next(null, 0, gasLimit)
-        }
-        self.transactionContextAPI.getValue(function (err, value) {
-          next(err, value, gasLimit)
-        })
-      },
-      function getAccount (value, gasLimit, next) {
-        if (args.from) {
-          return next(null, args.from, value, gasLimit)
-        }
-        if (self.transactionContextAPI.getAddress) {
-          return self.transactionContextAPI.getAddress(function (err, address) {
-            next(err, address, value, gasLimit)
-          })
-        }
-        self.getAccounts(function (err, accounts) {
-          let address = accounts[0]
-
-          if (err) return next(err)
-          if (!address) return next('No accounts available')
-          // if (self.executionContext.isVM() && !self.providers.vm.accounts[address]) {
-          if (self.executionContext.isVM() && !self.providers.vm.RemixSimulatorProvider.Accounts.accounts[address]) {
-            return next('Invalid account selected')
-          }
-          next(null, address, value, gasLimit)
-        })
-      },
-      function runTransaction (fromAddress, value, gasLimit, next) {
-        const tx = { to: args.to, data: args.data.dataHex, useCall: args.useCall, from: fromAddress, value: value, gasLimit: gasLimit, timestamp: args.data.timestamp }
-        const payLoad = { funAbi: args.data.funAbi, funArgs: args.data.funArgs, contractBytecode: args.data.contractBytecode, contractName: args.data.contractName, contractABI: args.data.contractABI, linkReferences: args.data.linkReferences }
-        let timestamp = Date.now()
-        if (tx.timestamp) {
-          timestamp = tx.timestamp
-        }
-
-        self.event.trigger('initiatingTransaction', [timestamp, tx, payLoad])
-        self.txRunner.rawRun(tx, confirmationCb, continueCb, promptCb,
-          function (error, result) {
-            if (error) return next(error)
-
-            const rawAddress = self.executionContext.isVM() ? result.result.createdAddress : result.result.contractAddress
-            let eventName = (tx.useCall ? 'callExecuted' : 'transactionExecuted')
-            self.event.trigger(eventName, [error, tx.from, tx.to, tx.data, tx.useCall, result, timestamp, payLoad, rawAddress])
-
-            if (error && (typeof (error) !== 'string')) {
-              if (error.message) error = error.message
-              else {
-                try { error = 'error: ' + JSON.stringify(error) } catch (e) {}
-              }
-            }
-            next(error, result)
-          }
-        )
-      }
-    ],
-    (error, txResult) => {
-      if (error) {
-        return cb(error)
-      }
-
-      const isVM = this.executionContext.isVM()
-      if (isVM) {
-        const vmError = txExecution.checkVMError(txResult)
-        if (vmError.error) {
-          return cb(vmError.message)
-        }
-      }
-
-      let address = null
-      let returnValue = null
-      if (txResult && txResult.result) {
-        address = isVM ? txResult.result.createdAddress : txResult.result.contractAddress
-        // if it's not the VM, we don't have return value. We only have the transaction, and it does not contain the return value.
-        returnValue = (txResult.result.execResult && isVM) ? txResult.result.execResult.returnValue : txResult.result
-      }
-
-      cb(error, txResult, address, returnValue)
-    })
   }
 
 }
