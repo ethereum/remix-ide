@@ -15,7 +15,7 @@ class Provider {
   }
 
   newAccount (passwordPromptCb, cb) {
-    throw new Error("needs to be implemented");
+    throw new Error('needs to be implemented')
   }
 
   resetEnvironment () {
@@ -45,6 +45,10 @@ class Provider {
       }
       cb(null, hashedMsg, signedData)
     })
+  }
+
+  async doCall (tx, confirmationCb, continueCb, promptCb) {
+    return this.web3.eth.call({from: tx.from, to: tx.to, data: tx.data, value: tx.value, gas: tx.gasLimit})
   }
 
   async sendTransaction (tx, confirmationCb, continueCb, promptCb) {
