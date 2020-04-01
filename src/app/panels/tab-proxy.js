@@ -130,6 +130,15 @@ export class TabProxy {
     }
   }
 
+  guessIcon(title) {
+    const ext = title.lastIndexOf('.')
+    if (ext === '-1') return
+    switch (title.substring(ext + 1, title.length).toLowerCase()) {
+      case "sol":
+        return './assets/img/solidityLogoIcon.webp'
+    }
+  }
+
   addTab (name, title, switchTo, close, icon) {
     if (this._handlers[name]) return
 
@@ -137,6 +146,7 @@ export class TabProxy {
     if (!title) {
       title = name.indexOf('/') !== -1 ? slash[slash.length - 1] : name
     }
+    if (!icon) icon = this.guessIcon(title)
     this._view.filetabs.addTab({
       id: name,
       title,
