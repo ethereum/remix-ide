@@ -254,7 +254,7 @@ class Blockchain {
 
       const useCall = funABI.stateMutability === 'view' || funABI.stateMutability === 'pure'
       // this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
-      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, result) => {
+      this.runTx({ to: address, data, useCall }, confirmationCb, continueCb, promptCb, (error, result) => {
         if (error) {
           return logCallback(`${logMsg} errored: ${error} `)
         }
@@ -264,13 +264,13 @@ class Blockchain {
         }
       })
     },
-    (msg) => {
-      logCallback(msg)
-    },
-    (data, runTxCallback) => {
-      // called for libraries deployment
-      this.runTx(data, confirmationCb, runTxCallback, promptCb, () => {})
-    })
+      (msg) => {
+        logCallback(msg)
+      },
+      (data, runTxCallback) => {
+        // called for libraries deployment
+        this.runTx(data, confirmationCb, runTxCallback, promptCb, () => { })
+      })
   }
 
   context () {
@@ -418,9 +418,9 @@ class Blockchain {
         let result = await this.getCurrentProvider().doCall(tx, confirmationCb, continueCb, promptCb)
 
         if (this.executionContext.isVM()) {
-          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, {result: { execResult: result } }, timestamp, payLoad, null])
+          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, { result: { execResult: result } }, timestamp, payLoad, null])
         } else {
-          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, {result}, timestamp, payLoad, null])
+          this.event.trigger('callExecuted', [error, tx.from, tx.to, tx.data, tx.useCall, { result }, timestamp, payLoad, null])
         }
 
         cb(null, result)
