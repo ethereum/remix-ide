@@ -89,7 +89,7 @@ module.exports = {
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(20000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
-    .scrollInto('*[data-id="testTabSolidityUnitTestsSummary"]')
+    .scrollToBottom('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', 'SyntaxError: No visibility specified')
   },
 
