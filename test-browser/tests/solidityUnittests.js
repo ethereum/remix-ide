@@ -88,6 +88,7 @@ module.exports = {
     .execute(() => {
       document.querySelector('*[data-id="testTabRunTestsTabRunAction"]').click()
     })
+    .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
     .scrollToBottom('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', 'SyntaxError: No visibility specified')
