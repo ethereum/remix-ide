@@ -222,6 +222,7 @@ module.exports = class TestTab extends ViewPlugin {
     if (!tests) return
     this.loading.hidden = tests.length === 0
     async.eachOfSeries(tests, (value, key, callback) => { this.runTest(value, callback) })
+    // ROB - how to run spinner when any of the async processes are going?
   }
 
   updateGenerateFileAction (currentFile) {
@@ -239,7 +240,8 @@ module.exports = class TestTab extends ViewPlugin {
   }
 
   updateRunAction (currentFile) {
-    let el = yo`<button id="runTestsTabRunAction" data-id="testTabRunTestsTabRunAction" class="${css.runButton} btn btn-primary"  onclick="${this.runTests.bind(this)}">Run Tests</button>`
+    let runButSpinner =  yo`<i class="fas fa-sync ${css.icon} ${css.spinningIcon}" aria-hidden="true"></i>`
+    let el = yo`<button id="runTestsTabRunAction" data-id="testTabRunTestsTabRunAction" class="${css.runButton} btn btn-primary"  onclick="${this.runTests.bind(this)}">${runButSpinner} Run Tests</button>`
     const isSolidityActive = this.appManager.actives.includes('solidity')
     if (!currentFile || !isSolidityActive) {
       el.setAttribute('disabled', 'disabled')

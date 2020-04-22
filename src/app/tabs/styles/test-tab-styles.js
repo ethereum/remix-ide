@@ -61,5 +61,16 @@ var css = csjs`
     align-items: center;
     white-space: nowrap;
   }
+  .icon {
+    margin-right: 0.3em;
+  }
+  .spinningIcon {
+    display: inline-block;
+    position: relative;
+    animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+  }
 `
 module.exports = css
