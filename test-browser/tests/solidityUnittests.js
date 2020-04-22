@@ -45,6 +45,7 @@ module.exports = {
     .click('.singleTestLabel:nth-of-type(2)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(15000)
+    .scrollInto('*[data-id="testTabSolidityUnitTestsOutput"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', 'browser/simple_storage_test.sol (MyTest)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✓ (Initial value should be100)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✓ (Value is set200)')
@@ -63,6 +64,7 @@ module.exports = {
     .click('.singleTestLabel:nth-of-type(3)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(30000)
+    .scrollInto('*[data-id="testTabSolidityUnitTestsOutput"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', 'browser/ks2b_test.sol (kickstarterTest)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✓ (Check project exists)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✘ (Check wrong project owner)')
@@ -85,6 +87,7 @@ module.exports = {
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
+    .scrollInto('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', 'SyntaxError: No visibility specified')
   },
 
@@ -97,8 +100,9 @@ module.exports = {
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(5)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
-    .pause(10000)
+    .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
+    .scrollInto('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', 'contract deployment failed after trying twice')
   },
 
@@ -113,6 +117,7 @@ module.exports = {
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
+    .scrollInto('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', `Method 'add' can not have parameters inside a test contract`)
   },
 
