@@ -83,7 +83,7 @@ module.exports = {
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(4)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
-    .pause(10000)
+    .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsSummary"]', 'SyntaxError: No visibility specified')
   },
