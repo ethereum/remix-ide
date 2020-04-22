@@ -87,6 +87,7 @@ module.exports = {
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(4)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
+    .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(20000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
     .scrollToBottom('*[data-id="testTabSolidityUnitTestsSummary"]')
