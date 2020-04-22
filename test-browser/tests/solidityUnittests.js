@@ -82,7 +82,7 @@ module.exports = {
     .clickLaunchIcon('fileExplorers')
     .switchFile('browser/compilationError_test.sol')
     .clickLaunchIcon('solidity')
-    .setSolidityCompilerVersion('soljson-v0.5.17+commit.d19bba13.js')
+    .setSolidityCompilerVersion('soljson-v0.6.0+commit.26b70077.js')
     .clickLaunchIcon('solidityUnitTesting')
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(4)')
