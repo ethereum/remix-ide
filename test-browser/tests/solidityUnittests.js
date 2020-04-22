@@ -62,7 +62,7 @@ module.exports = {
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(3)')
     .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
-    .pause(25000)
+    .pause(30000)
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', 'browser/ks2b_test.sol (kickstarterTest)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✓ (Check project exists)')
     .assert.containsText('*[data-id="testTabSolidityUnitTestsOutput"]', '✘ (Check wrong project owner)')
