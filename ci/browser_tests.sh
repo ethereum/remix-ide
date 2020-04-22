@@ -21,7 +21,7 @@ setupRemixd
 
 sleep 5
 
-npm run nightwatch_chrome || TEST_EXITCODE=1
+npm run nightwatch_local_chrome || TEST_EXITCODE=1
 #npm run nightwatch_parallel || TEST_EXITCODE=1
 #npm run nightwatch_local_runAndDeploy || TEST_EXITCODE=1
 
