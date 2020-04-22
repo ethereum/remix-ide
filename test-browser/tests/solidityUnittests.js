@@ -310,7 +310,7 @@ var sources = [
     },
     'browser/compilationError_test.sol': {
       content: `
-      pragma solidity ^0.6.1;
+      pragma solidity ^0.6.0;
       
       contract failOnCompilation {
         fallback() {
