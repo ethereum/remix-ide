@@ -333,6 +333,7 @@ class SettingsUI {
     var callid = this.accountListCallId
     var txOrigin = this.el.querySelector('#txorigin')
     this.blockchain.getAccounts((err, accounts) => {
+      if (err) return
       if (this.accountListCallId > callid) return
       this.accountListCallId++
       if (err) { addTooltip(`Cannot get account list: ${err}`) }
