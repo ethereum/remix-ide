@@ -85,9 +85,7 @@ module.exports = {
     .clickLaunchIcon('solidityUnitTesting')
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(4)')
-    .execute(() => {
-      document.getElementById('runTestsTabRunAction').click()
-    })
+    .scrollAndClick('*[data-id="testTabRunTestsTabRunAction"]')
     .pause(15000)
     .waitForElementPresent('*[data-id="testTabSolidityUnitTestsSummary"]')
     .scrollToBottom('*[data-id="testTabSolidityUnitTestsSummary"]')
@@ -202,7 +200,7 @@ var sources = [
     },
     'browser/ks2a.sol': {
       content: `
-      pragma solidity >=0.4.22 <0.6.0;
+      pragma solidity >=0.4.22 <0.7.0;
       contract Kickstarter {
           enum State { Started, Completed }
       
