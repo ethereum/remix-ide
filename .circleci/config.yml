@@ -24,6 +24,9 @@ jobs:
       - run: npm install
       - run: npm run lint && npm run test && npm run make-mock-compiler
       - run:
+          name: Uninstall Chrome
+          command: sudo apt-get purge chromium-browser && sudo apt-get purge chromiumdriver
+      - run:
           name: Download Selenium
           command: ./node_modules/.bin/selenium-standalone install --config=../remix-ide/seleniumConfig.js
       - run:
