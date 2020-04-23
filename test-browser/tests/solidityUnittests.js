@@ -254,7 +254,7 @@ var sources = [
     },
     'browser/ks2b_test.sol': {
       content: `
-      pragma solidity >=0.4.22 <0.6.0;
+      pragma solidity >=0.4.22 <0.7.0;
       pragma experimental ABIEncoderV2;
 
       import "remix_tests.sol"; // this import is automatically injected by Remix.
