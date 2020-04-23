@@ -85,6 +85,7 @@ module.exports = {
     .clickLaunchIcon('solidityUnitTesting')
     .click('*[data-id="testTabCheckAllTests"]')
     .click('.singleTestLabel:nth-of-type(4)')
+    .pause(5000)
     .execute(() => {
       document.querySelector('*[data-id="testTabRunTestsTabRunAction"]').click()
     })
