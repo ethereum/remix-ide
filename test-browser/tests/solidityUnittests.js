@@ -58,6 +58,8 @@ module.exports = {
     browser.waitForElementPresent('*[data-id="verticalIconsKindfileExplorers"]')
     .clickLaunchIcon('fileExplorers')
     .addFile('ks2b_test.sol', sources[0]['browser/ks2b_test.sol'])
+    .clickLaunchIcon('solidity')
+    .setSolidityCompilerVersion('soljson-v0.5.17+commit.d19bba13.js')
     .click('*[data-id="verticalIconsKindsolidityUnitTesting"]')
     .waitForElementPresent('*[data-id="testTabCheckAllTests"]')
     .click('*[data-id="testTabCheckAllTests"]')
@@ -200,7 +202,7 @@ var sources = [
     },
     'browser/ks2a.sol': {
       content: `
-      pragma solidity >=0.4.22 <0.7.0;
+      pragma solidity >=0.4.22 <0.6.0;
       contract Kickstarter {
           enum State { Started, Completed }
       
@@ -254,7 +256,7 @@ var sources = [
     },
     'browser/ks2b_test.sol': {
       content: `
-      pragma solidity >=0.4.22 <0.7.0;
+      pragma solidity >=0.4.22 <0.6.0;
       pragma experimental ABIEncoderV2;
 
       import "remix_tests.sol"; // this import is automatically injected by Remix.
