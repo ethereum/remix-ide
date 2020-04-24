@@ -1,48 +1,16 @@
-const Web3 = require('web3')
-const { stripHexPrefix, hashPersonalMessage } = require('ethereumjs-util')
+// const Web3 = require('web3')
+// const { stripHexPrefix, hashPersonalMessage } = require('ethereumjs-util')
 
-class InjectedProvider {
+const Provider = require('./provider.js')
 
-  constructor (executionContext) {
-    this.executionContext = executionContext
-  }
+class InjectedProvider extends Provider {
 
-  getAccounts (cb) {
-    return this.executionContext.web3().eth.getAccounts(cb)
-  }
+  // constructor (executionContext) {
+  //   this.executionContext = executionContext
+  // }
 
   newAccount (passwordPromptCb, cb) {
-    passwordPromptCb((passphrase) => {
-      this.executionContext.web3().personal.newAccount(passphrase, cb)
-    })
-  }
-
-  resetEnvironment () {
-  }
-
-  getBalanceInEther (address, cb) {
-    address = stripHexPrefix(address)
-    this.executionContext.web3().eth.getBalance(address, (err, res) => {
-      if (err) {
-        return cb(err)
-      }
-      cb(null, Web3.utils.fromWei(res.toString(10), 'ether'))
-    })
-  }
-
-  getGasPrice (cb) {
-    this.executionContext.web3().eth.getGasPrice(cb)
-  }
-
-  signMessage (message, account, _passphrase, cb) {
-    const messageHash = hashPersonalMessage(Buffer.from(message))
-    try {
-      this.executionContext.web3().eth.sign(message, account, (error, signedData) => {
-        cb(error, '0x' + messageHash.toString('hex'), signedData)
-      })
-    } catch (e) {
-      cb(e.message)
-    }
+    throw new Error('not allowed in injected provider')
   }
 
   getProvider () {
