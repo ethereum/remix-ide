@@ -126,11 +126,12 @@ export class LandingPage extends ViewPlugin {
     const learnMore = () => { window.open('https://remix-ide.readthedocs.io/en/latest/layout.html', '_blank') }
 
     const waitSelect = (name) => {
+      let incr = 0
       let id = setInterval(_ => {
-        if (this.appManager.isActive(name)) {
+        if (this.appManager.isActive(name) || incr > 20) {
           clearInterval(id)
           this.verticalIcons.select(name)
-        }
+        } else incr++
       }, 200)
     }
 
