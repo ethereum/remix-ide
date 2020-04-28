@@ -125,17 +125,26 @@ export class LandingPage extends ViewPlugin {
 
     const learnMore = () => { window.open('https://remix-ide.readthedocs.io/en/latest/layout.html', '_blank') }
 
+    const waitSelect = (name) => {
+      let id = setInterval(_ => {
+        if (this.appManager.isActive(name)) {
+          clearInterval(id)
+          this.verticalIcons.select(name)
+        }
+      }, 200)
+    }
+
     const startSolidity = () => {
       this.appManager.ensureActivated('solidity')
       this.appManager.ensureActivated('udapp')
       this.appManager.ensureActivated('solidityStaticAnalysis')
       this.appManager.ensureActivated('solidityUnitTesting')
-      this.verticalIcons.select('solidity')
+      waitSelect('solidity')
     }
     const startVyper = () => {
       this.appManager.ensureActivated('vyper')
       this.appManager.ensureActivated('udapp')
-      this.verticalIcons.select('vyper')
+      waitSelect('vyper')
     }
     /*
     const startWorkshop = () => {
@@ -154,17 +163,17 @@ export class LandingPage extends ViewPlugin {
     }
     const startDebugger = () => {
       this.appManager.ensureActivated('debugger')
-      this.verticalIcons.select('debugger')
+      waitSelect('debugger')
     }
     const startMythX = () => {
       this.appManager.ensureActivated('solidity')
       this.appManager.ensureActivated('mythx')
-      this.verticalIcons.select('mythx')
+      waitSelect('mythx')
     }
     const startSourceVerify = () => {
       this.appManager.ensureActivated('solidity')
       this.appManager.ensureActivated('source-verification')
-      this.verticalIcons.select('source-verification')
+      waitSelect('source-verification')
     }
     const startPluginManager = () => {
       this.appManager.ensureActivated('pluginManager')
