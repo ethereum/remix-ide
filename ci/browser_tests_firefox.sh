@@ -21,7 +21,8 @@ setupRemixd
 
 sleep 5
 
-npm run nightwatch_local_firefox || TEST_EXITCODE=1
+TESTFILES=$(circleci tests glob "./test-browser/tests/**/*.test.js" | circleci tests split --split-by=timings)
+npm run nightwatch $TESTFILES
 
 echo "$TEST_EXITCODE"
 if [ "$TEST_EXITCODE" -eq 1 ]
