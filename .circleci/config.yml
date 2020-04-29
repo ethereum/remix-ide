@@ -35,7 +35,7 @@ jobs:
           name: Run Nightwatch Test Using Nightwatch Pallelism
           command: |
             TESTFILES=$(circleci tests glob "./test-browser/tests/**/*.test.js" | circleci tests split --split-by=timings)
-            npm run nightwatch -- $TESTFILES --config nightwatch.js --env chrome
+            npm run nightwatch -- $TESTFILES
       - run: ./ci/browser_tests_chrome.sh
       - store_artifacts:
           path: ./reports/screenshots
