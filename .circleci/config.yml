@@ -19,6 +19,7 @@ jobs:
       - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
     working_directory: ~/remix-ide
 
+    parallelism: 4
     steps:
       - checkout
       - run: npm install
@@ -30,6 +31,11 @@ jobs:
           name: Start Selenium
           command: ./node_modules/.bin/selenium-standalone start --config=../remix-ide/seleniumConfig.js
           background: true
+      - run:
+          name: Run Nightwatch Test Using Nightwatch Pallelism
+          command: |
+            TESTFILES=$(circleci tests glob "./test-browser/tests/**/*.test.js" | circleci tests split --split-by=timings)
+            npm run nightwatch -- $TESTFILES --config nightwatch.js --env chrome
       - run: ./ci/browser_tests_chrome.sh
       - store_artifacts:
           path: ./reports/screenshots
