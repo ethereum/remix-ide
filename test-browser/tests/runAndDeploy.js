@@ -100,8 +100,9 @@ module.exports = {
     .click('.transaction-status--unapproved')
     .waitForElementPresent('.page-container__footer-button:nth-of-type(2)')
     .click('.page-container__footer-button:nth-of-type(2)')
+    .pause(10000)
     .waitForElementPresent('.transaction-status--submitted')
-    .pause(120000)
+    .pause(60000)
     .switchBrowserTab(0)
   },
 
@@ -116,8 +117,9 @@ module.exports = {
     .click('.transaction-status--unapproved')
     .waitForElementPresent('.page-container__footer-button:nth-of-type(2)')
     .click('.page-container__footer-button:nth-of-type(2)')
+    .pause(10000)
     .waitForElementPresent('.transaction-status--submitted')
-    .pause(120000)
+    .pause(60000)
     .switchBrowserTab(0)
   },
 
