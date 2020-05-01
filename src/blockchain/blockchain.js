@@ -96,7 +96,7 @@ class Blockchain {
       this.createContract(selectedContract, data, continueCb, promptCb, confirmationCb, finalCb)
     }, statusCb, (data, runTxCallback) => {
       // called for libraries deployment
-      this.runTx(data, confirmationCb, continueCb, promptCb, runTxCallback)
+      this.runTx2(data, confirmationCb, continueCb, promptCb, runTxCallback)
     })
   }
 
@@ -253,7 +253,7 @@ class Blockchain {
       if (funABI.type === 'fallback') data.dataHex = value
 
       const useCall = funABI.stateMutability === 'view' || funABI.stateMutability === 'pure'
-      this.runTx({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
+      this.runTx2({to: address, data, useCall}, confirmationCb, continueCb, promptCb, (error, txResult, _address, returnValue) => {
         if (error) {
           return logCallback(`${logMsg} errored: ${error} `)
         }
@@ -267,7 +267,7 @@ class Blockchain {
     },
     (data, runTxCallback) => {
       // called for libraries deployment
-      this.runTx(data, confirmationCb, runTxCallback, promptCb, () => {})
+      this.runTx2(data, confirmationCb, runTxCallback, promptCb, () => {})
     })
   }
 
@@ -380,7 +380,10 @@ class Blockchain {
     })
   }
 
-  runTx (args, confirmationCb, continueCb, promptCb, cb) {
+
+
+
+  runTx2 (args, confirmationCb, continueCb, promptCb, cb) {
     const self = this
     async.waterfall([
       function getGasLimit (next) {
