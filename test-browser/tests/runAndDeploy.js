@@ -183,7 +183,7 @@ module.exports = {
     .assert.containsText('*[data-id="solidityLocals"]', 'to: 0x6C3CCC7FBA111707D5A1AAF2758E9D4F4AC5E7B1')
     .end()
   },
-  
+
   tearDown: sauce
 }
 
