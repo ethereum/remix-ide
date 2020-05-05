@@ -178,7 +178,7 @@ class SettingsUI {
     selectExEnv.addEventListener('change', (event) => {
       let context = selectExEnv.options[selectExEnv.selectedIndex].value
       this.blockchain.changeExecutionContext(context, () => {
-        modalDialogCustom.prompt('External node request', this.web3ProviderDialogBody(), 'http://localhost:8545', (target) => {
+        modalDialogCustom.prompt('External node request', this.web3ProviderDialogBody(), 'http://127.0.0.1:8545', (target) => {
           this.blockchain.setProviderFromEndpoint(target, context, (alertMsg) => {
             if (alertMsg) addTooltip(alertMsg)
             this.setFinalContext()
@@ -201,7 +201,7 @@ class SettingsUI {
         <div class="border p-1">geth --rpc --rpccorsdomain https://remix.ethereum.org</div>
         <br>
         To run Remix & a local Geth test node, use this command: (see <a href="https://geth.ethereum.org/getting-started/dev-mode" target="_blank">Geth Docs on Dev mode</a>)
-        <div class="border p-1">geth --rpc --rpccorsdomain="${window.origin}" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir ${thePath} --dev console</div>
+        <div class="border p-1">geth --datadir ${thePath} --rpc --dev --rpccorsdomain="${window.origin}"</div>
         <br>
         <br> 
         <b>WARNING:</b> It is not safe to use the --rpccorsdomain flag with a wildcard: <b>--rpccorsdomain *</b>
