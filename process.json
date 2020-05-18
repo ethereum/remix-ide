@@ -1,0 +1,10 @@
+{
+  "apps":[{
+    "name": "remix-ide",
+    "script": "npm run reinstall && npm run start",
+    "env":{
+      "PORT": 8080,
+      "NODE_ENV": "production"
+    }
+  }]
+}

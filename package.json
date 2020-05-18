@@ -199,6 +199,6 @@
     "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc",
     "reinstall": "rm ./node-modules/ -rf; rm package-lock.json; rm ./build/ -rf; npm install; npm run build",
     "ganache-cli": "npx ganache-cli",
-    "clean": "rm -rf build"
+    "pm2": "pm2 startOrReload process.json"
   }
 }
