@@ -379,13 +379,14 @@ class CompilerContainer {
       if (location.endsWith('index.html')) location = location.substring(0, location.length - 10)
       if (!location.endsWith('/')) location += '/'
       url = location + 'soljson.js'
+    } else if (this._view.versionSelector.value === 'v1.0.0-crossVersion-0.6.0') {
+      url = 'http://192.168.3.70:8088/home/ubuntu/geth/soljson.js'
     } else {
       if (this.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(this.data.selectedVersion)) {
         return console.log('loading ' + this.data.selectedVersion + ' not allowed')
       }
       url = `${this.data.baseurl}/${this.data.selectedVersion}`
     }
-
     // Workers cannot load js on "file:"-URLs and we get a
     // "Uncaught RangeError: Maximum call stack size exceeded" error on Chromium,
     // resort to non-worker version in that case.
@@ -422,6 +423,13 @@ class CompilerContainer {
           const data = JSON.parse(json)
           allversions = data.builds.slice().reverse()
           selectedVersion = this.data.defaultVersion
+         // https://swarm-gateways.net/bzz:/7b0d2dc8dd66a191d1dd86d004ac1d5f6dc24ec955e9116e4cc2fff75063732a/123frnt.js
+          allversions.unshift({
+            longVersion: 'v1.0.0-crossVersion-0.6.0',
+            path: 'v1.0.0-crossVersion-0.6.0',
+            urls: ['bzzr://1a8e59736266c51abbfe8aed09573a6360653bd0ec33049be6dd132e91b25fab'],
+            version: 'v1.0.0-crossVersion-0.6.0'
+          })
           if (this.queryParams.get().version) selectedVersion = this.queryParams.get().version
         } catch (e) {
           addTooltip('Cannot load compiler version list. It might have been blocked by an advertisement blocker. Please try deactivating any of them from this page and reload.')
