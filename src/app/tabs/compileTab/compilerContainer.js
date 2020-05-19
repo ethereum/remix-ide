@@ -7,7 +7,7 @@ const semver = require('semver')
 const modalDialogCustom = require('../../ui/modal-dialog-custom')
 const css = require('../styles/compile-tab-styles')
 import { canUseWorker } from '../../compiler/compiler-utils'
-
+const crossVersions = ["v1.0.0-crossVersion-0.6.0", "v1.0.1-crossVersion-0.6.0"]
 class CompilerContainer {
 
   constructor (compileTabLogic, editor, config, queryParams) {
@@ -160,7 +160,11 @@ class CompilerContainer {
         if (isOfficial && (!isInRange && !isNewestNightly)) {
           const compilerToLoad = semver.maxSatisfying(releasedVersions, pragma)
           const compilerPath = this.data.allversions.filter(obj => !obj.prerelease && obj.version === compilerToLoad)[0].path
-          if (this.data.selectedVersion !== compilerPath) {
+          const isCrossVersion = crossVersions.includes(this.data.selectedVersion)
+          if (isCrossVersion) {
+            this._updateVersionSelector()
+          }
+          if (this.data.selectedVersion !== compilerPath && !isCrossVersion) {
             this.data.selectedVersion = compilerPath
             this._updateVersionSelector()
           }
@@ -379,7 +383,7 @@ class CompilerContainer {
       if (location.endsWith('index.html')) location = location.substring(0, location.length - 10)
       if (!location.endsWith('/')) location += '/'
       url = location + 'soljson.js'
-    } else if (this._view.versionSelector.value === 'v1.0.0-crossVersion-0.6.0') {
+    } else if (this._view.versionSelector.value === crossVersions[0]) {
       url = 'http://192.168.3.70:8088/home/ubuntu/geth/soljson.js'
     } else {
       if (this.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(this.data.selectedVersion)) {
@@ -425,10 +429,10 @@ class CompilerContainer {
           selectedVersion = this.data.defaultVersion
          // https://swarm-gateways.net/bzz:/7b0d2dc8dd66a191d1dd86d004ac1d5f6dc24ec955e9116e4cc2fff75063732a/123frnt.js
           allversions.unshift({
-            longVersion: 'v1.0.0-crossVersion-0.6.0',
-            path: 'v1.0.0-crossVersion-0.6.0',
+            longVersion: crossVersions[0],
+            path: crossVersions[0],
             urls: ['bzzr://1a8e59736266c51abbfe8aed09573a6360653bd0ec33049be6dd132e91b25fab'],
-            version: 'v1.0.0-crossVersion-0.6.0'
+            version: crossVersions[0]
           })
           if (this.queryParams.get().version) selectedVersion = this.queryParams.get().version
         } catch (e) {
