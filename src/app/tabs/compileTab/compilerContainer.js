@@ -384,7 +384,7 @@ class CompilerContainer {
       if (!location.endsWith('/')) location += '/'
       url = location + 'soljson.js'
     } else if (this._view.versionSelector.value === crossVersions[0]) {
-      url = 'http://192.168.3.70:8088/home/ubuntu/geth/soljson.js'
+      url = `https://simplechain.oss-cn-hangzhou.aliyuncs.com/explorer/cross/${this._view.versionSelector.value}.js`
     } else {
       if (this.data.selectedVersion.indexOf('soljson') !== 0 || helper.checkSpecialChars(this.data.selectedVersion)) {
         return console.log('loading ' + this.data.selectedVersion + ' not allowed')
