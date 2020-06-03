@@ -132,6 +132,22 @@ After that, follow these steps:
 - Click 'Load unpacked extension...' to pop up a file-selection dialog
 - Select your `remix-ide` folder
 
+## Usage through docker
+
+Prerequisites:
+* docker
+* docker-compose
+
+If you want to run official image: 
+```docker-compose -f docker-compose.yaml up -d```
+
+
+If you want to build image locally use:
+```docker-compose -f docker-compose.yaml -f build.yaml build```
+
+
 ## Documentation
 
 To see details about how to use Remix for developing and/or debugging Solidity contracts, please see [our documentation page](https://remix-ide.readthedocs.io/en/latest/)
+
+

@@ -1,0 +1,21 @@
+version: "3.7"
+networks:
+  remix-ide:
+
+x-project-base:
+  &project-base
+  env_file:
+    - .env
+  restart: always
+  networks:
+    - remix-ide
+
+services:
+  remixide:
+    <<: *project-base
+    image: ethereum/remix-ide:latest
+    container_name: remix-ide
+    ports:
+    - "8080:8080"
+    - "65520:65520"
+
