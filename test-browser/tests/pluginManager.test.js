@@ -27,8 +27,8 @@ module.exports = {
     .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtondebugger"]')
     .clearValue('*[data-id="pluginManagerComponentSearchInput"]')
     .click('*[data-id="pluginManagerComponentSearchInput"]')
-    .keys('Vyper')
-    .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtonvyper"]')
+    .keys('Deploy & run transactions')
+    .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtonudapp"]')
     .clearValue('*[data-id="pluginManagerComponentSearchInput"]')
     .click('*[data-id="pluginManagerComponentSearchInput"]')
     .keys('ZoKrates')
@@ -43,8 +43,8 @@ module.exports = {
     .click('*[data-id="pluginManagerComponentPluginManager"]')
     .scrollAndClick('*[data-id="pluginManagerComponentActivateButtondebugger"]')
     .waitForElementVisible('*[data-id="pluginManagerComponentDeactivateButtondebugger"]')
-    .scrollAndClick('*[data-id="pluginManagerComponentActivateButtonvyper"]')
-    .waitForElementVisible('*[data-id="pluginManagerComponentDeactivateButtonvyper"]')
+    .scrollAndClick('*[data-id="pluginManagerComponentActivateButtonudapp"]')
+    .waitForElementVisible('*[data-id="pluginManagerComponentDeactivateButtonudapp"]')
     .scrollAndClick('*[data-id="pluginManagerComponentActivateButtonZoKrates"]')
     .waitForElementVisible('*[data-id="pluginManagerComponentDeactivateButtonZoKrates"]')
   },
@@ -54,8 +54,8 @@ module.exports = {
     .click('*[data-id="pluginManagerComponentPluginManager"]')
     .scrollAndClick('*[data-id="pluginManagerComponentDeactivateButtondebugger"]')
     .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtondebugger"]')
-    .scrollAndClick('*[data-id="pluginManagerComponentDeactivateButtonvyper"]')
-    .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtonvyper"]')
+    .scrollAndClick('*[data-id="pluginManagerComponentDeactivateButtonudapp"]')
+    .waitForElementVisible('*[data-id="pluginManagerComponentActivateButtonudapp"]')
   },
 
   /*
