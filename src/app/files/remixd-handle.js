@@ -1,5 +1,5 @@
 import isElectron from 'is-electron'
-import { Plugin } from '@remixproject/engine'
+import { WebsocketPlugin } from '@remixproject/engine'
 import * as packageJson from '../../../package.json'
 var yo = require('yo-yo')
 var modalDialog = require('../ui/modaldialog')
@@ -20,14 +20,15 @@ var css = csjs`
 
 const profile = {
   name: 'remixd',
-  methods: [],
+  url: 'ws://127.0.0.1:65520',
+  methods: ['folderIsReadOnly'],
   events: [],
   description: 'Using Remixd daemon, allow to access file system',
   kind: 'other',
   version: packageJson.version
 }
 
-export class RemixdHandle extends Plugin {
+export class RemixdHandle extends WebsocketPlugin {
   constructor (fileSystemExplorer, locahostProvider, appManager) {
     super(profile)
     this.fileSystemExplorer = fileSystemExplorer

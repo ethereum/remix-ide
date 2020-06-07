@@ -122,6 +122,7 @@ var css = csjs`
 class App {
   constructor (api = {}, events = {}, opts = {}) {
     var self = this
+    self.appManager = new RemixAppManager({})
     self._components = {}
     self._view = {}
     self._view.splashScreen = yo`
@@ -152,7 +153,7 @@ class App {
       if (message.error) toolTip(message.error)
     })
 
-    self._components.filesProviders['localhost'] = new RemixDProvider(remixd)
+    self._components.filesProviders['localhost'] = new RemixDProvider(remixd, self.appManager)
     registry.put({api: self._components.filesProviders['localhost'], name: 'fileproviders/localhost'})
     registry.put({api: self._components.filesProviders, name: 'fileproviders'})
 
@@ -235,7 +236,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   }
 
   // APP_MANAGER
-  const appManager = new RemixAppManager({})
+  const appManager = self.appManager
   const workspace = appManager.pluginLoader.get()
   const engine = new Engine(appManager)
   await engine.onload()
