@@ -37,12 +37,14 @@ export class RemixdHandle extends WebsocketPlugin {
   }
 
   deactivate () {
+    super.deactivate()
     this.locahostProvider.close((error) => {
       if (error) console.log(error)
     })
   }
 
-  activate () {
+  async activate () {
+    await super.activate()
     this.connectToLocalhost()
   }
 

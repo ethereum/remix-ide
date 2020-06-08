@@ -56,20 +56,15 @@ module.exports = class RemixDProvider {
   }
 
   close (cb) {
-    this.remixd.exit()
     this._isReady = false
     cb()
   }
 
-  init (cb) {
-    this._remixd.ensureSocket((error) => {
-      if (error) return cb(error)
-      this._isReady = !error
-      this._appManager.call('remixd', 'folderIsReadOnly', {}, (error, result) => {
-        this._readOnlyMode = result
-        cb(error)
-      })
-    })
+  async init (cb) {
+      this._isReady = true
+      this._readOnlyMode = await this._appManager.call('remixd', 'folderIsReadOnly', {})
+      console.log('this._readOnlyMode: ', this._readOnlyMode)
+      cb()
   }
 
   // @TODO: refactor all `this._remixd.call(....)` uses into `this.remixd[api](...)`
