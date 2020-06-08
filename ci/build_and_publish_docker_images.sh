@@ -5,5 +5,5 @@ set -e
 export TAG="$CIRCLE_BRANCH"
 
 docker login --username $DOCKER_USER --password $DOCKER_PASS
-docker build -f Dockerfile -t remixproject/remix-ide:$TAG
+docker build -f Dockerfile.dev -t remixproject/remix-ide:$TAG .
 docker push remixproject/remix-ide:$TAG
