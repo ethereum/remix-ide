@@ -135,7 +135,7 @@ class App {
     document.body.appendChild(self._view.splashScreen)
 
     // setup storage
-    const configStorage = new Storage('config-v0.8:')
+    var configStorage = new Storage('config-v0.8:')
 
     // load app config
     const config = new Config(configStorage)
@@ -404,13 +404,7 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   const params = queryParams.get()
 
   // Set workspace after initial activation
-  if (Array.isArray(workspace)) {
-    await appManager.activatePlugin(workspace)
-  } else {
-    // activate solidity plugin
-    appManager.ensureActivated('solidity')
-    appManager.ensureActivated('udapp')
-  }
+  if (Array.isArray(workspace)) await appManager.activatePlugin(workspace)
 
   // Load and start the service who manager layout and frame
   const framingService = new FramingService(sidePanel, menuicons, mainview, this._components.resizeFeature)
