@@ -45,6 +45,22 @@ npm run setupremix  # only if you plan to link remix and remix-ide repositories 
 npm start
 ```
 
+## Docker:
+
+Prerequisites: 
+* Docker (https://docs.docker.com/desktop/)
+* Docker-compose (https://docs.docker.com/compose/install/)
+
+### Run with docker:
+
+To run locally without building you only need docker-compose.yaml file and you can run:
+
+```
+docker-compose up -d
+```
+
+Then go to http://localhost:8080 and you can use you Remix instance.
+
 ## DEVELOPING:
 
 Run `npm start` and open `http://127.0.0.1:8080` in your browser.
