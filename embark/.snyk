@@ -1,0 +1,48 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.15.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - remixd > lerna > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - http-server > portfinder > async > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > conventional-changelog-cli > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > inquirer > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > standard > eslint > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > http-server > portfinder > async > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > conventional-recommended-bump > conventional-commits-parser > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > conventional-changelog-cli > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > inquirer > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > standard > eslint > inquirer > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > standard > eslint > table > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > conventional-recommended-bump > conventional-commits-parser > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > serve > serve-handler > glob-slasher > toxic > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > conventional-changelog-writer > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > conventional-commits-parser > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > serve > serve-handler > glob-slasher > toxic > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > conventional-changelog-writer > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
+    - remix-ide > remixd > lerna > conventional-changelog-cli > conventional-changelog > conventional-changelog-core > conventional-commits-parser > lodash:
+        patched: '2020-06-15T10:40:25.895Z'
