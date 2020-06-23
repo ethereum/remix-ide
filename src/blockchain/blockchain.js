@@ -53,8 +53,16 @@ class Blockchain {
       this.event.trigger('addProvider', [network])
     })
 
+    this.executionContext.event.register('addWeb3Provider', (providerName) => {
+      this.event.trigger('addWeb3Provider', [providerName])
+    })
+
     this.executionContext.event.register('removeProvider', (name) => {
       this.event.trigger('removeProvider', [name])
+    })
+
+    this.executionContext.event.register('removeWeb3Provider', (name) => {
+      this.event.trigger('removeWeb3Provider', [name])
     })
   }
 
@@ -212,6 +220,10 @@ class Blockchain {
     return this.executionContext.getProvider()
   }
 
+  getProviderName () {
+    return this.executionContext.getProviderName()
+  }
+
   isWeb3Provider () {
     const isVM = this.getProvider() === 'vm'
     const isInjected = this.getProvider() === 'injected'
@@ -287,6 +299,10 @@ class Blockchain {
 
   addNetwork (customNetwork) {
     this.executionContext.addProvider(customNetwork)
+  }
+
+  addWeb3Provider (name, provider) {
+    this.executionContext.addWeb3provider(name, provider)
   }
 
   removeNetwork (name) {

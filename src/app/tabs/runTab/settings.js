@@ -156,7 +156,7 @@ class SettingsUI {
   setDropdown (selectExEnv) {
     this.selectExEnv = selectExEnv
 
-    this.blockchain.event.register('addProvider', (network) => {
+    const addProvider = (network) => {
       selectExEnv.appendChild(yo`<option
         title="Manually added environment: ${network.url}"
         value="${network.name}"
@@ -164,16 +164,20 @@ class SettingsUI {
       >
         ${network.name}
       </option>`)
-      addTooltip(`${network.name} [${network.url}] added`)
-    })
+      addTooltip(yo`<span><b>${network.name}</b> provider added ${network.url ? `- ${network.url}` : ''}</span>`)
+    }
 
-    this.blockchain.event.register('removeProvider', (name) => {
+    const removeProvider = (name) => {
       var env = selectExEnv.querySelector(`option[value="${name}"]`)
       if (env) {
         selectExEnv.removeChild(env)
-        addTooltip(`${name} removed`)
+        addTooltip(yo`<span><b>${name}</b> provider removed</span>`)
       }
-    })
+    }
+    this.blockchain.event.register('addProvider', network => addProvider(network))
+    this.blockchain.event.register('removeProvider', name => removeProvider(name))
+    this.blockchain.event.register('addWeb3Provider', network => addProvider(network))
+    this.blockchain.event.register('removeWeb3Provider', name => removeProvider(name))
 
     selectExEnv.addEventListener('change', (event) => {
       let context = selectExEnv.options[selectExEnv.selectedIndex].value
@@ -216,7 +220,7 @@ class SettingsUI {
 
   setFinalContext () {
     // set the final context. Cause it is possible that this is not the one we've originaly selected
-    this.selectExEnv.value = this.blockchain.getProvider()
+    this.selectExEnv.value = this.blockchain.getProviderName()
     this.event.trigger('clearInstance', [])
     this.updateNetwork()
     this.updatePlusButton()

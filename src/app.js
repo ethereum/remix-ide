@@ -121,7 +121,6 @@ var css = csjs`
 class App {
   constructor (api = {}, events = {}, opts = {}) {
     var self = this
-    self.appManager = new RemixAppManager({})
     self._components = {}
     self._view = {}
     self._view.splashScreen = yo`
@@ -140,6 +139,9 @@ class App {
     // load app config
     const config = new Config(configStorage)
     registry.put({api: config, name: 'config'})
+
+    self.blockchain = new Blockchain(config)
+    self.appManager = new RemixAppManager(self.blockchain)
 
     // load file system
     self._components.filesProviders = {}
@@ -229,6 +231,8 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
 
   // APP_MANAGER
   const appManager = self.appManager
+  const blockchain = self.blockchain
+
   const pluginLoader = appManager.pluginLoader
   const workspace = pluginLoader.get()
   const engine = new Engine(appManager)
@@ -260,7 +264,6 @@ Please make a backup of your contracts and start using http://remix.ethereum.org
   const fileManager = new FileManager(editor, appManager)
   registry.put({api: fileManager, name: 'filemanager'})
 
-  const blockchain = new Blockchain(registry.get('config').api)
   const pluginUdapp = new PluginUDapp(blockchain)
 
   // ----------------- compilation metadata generation servive ---------
