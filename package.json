@@ -81,7 +81,8 @@
   "dependencies": {
     "@remixproject/engine": "^0.2.5",
     "http-server": "^0.11.1",
-    "standard": "^8.5.0"
+    "standard": "^8.5.0",
+    "snyk": "^1.361.3"
   },
   "repository": {
     "type": "git",
@@ -190,7 +191,7 @@
     "nightwatch_local_fileManager": "nightwatch ./test-browser/tests/fileManager_api.test.js --config nightwatch.js --env chrome ",
     "nightwatch_local_runAndDeploy": "nightwatch ./test-browser/tests/runAndDeploy.js --config nightwatch.js --env chrome-runAndDeploy ",
     "onchange": "onchange build/app.js -- npm-run-all lint",
-    "prepublish": "mkdirp build; npm-run-all -ls downloadsolc_root build",
+    "prepublish": "npm run snyk-protect && mkdirp build; npm-run-all -ls downloadsolc_root build",
     "remixd": "remixd -s ./contracts --remix-ide http://127.0.0.1:8080",
     "selenium": "selenium-standalone start",
     "selenium-install": "selenium-standalone install",
@@ -201,6 +202,8 @@
     "test-browser": "npm-run-all -lpr selenium downloadsolc_root make-mock-compiler serve browsertest",
     "watch": "watchify src/index.js -dv -p browserify-reload -o build/app.js --exclude solc",
     "reinstall": "rm ./node-modules/ -rf; rm package-lock.json; rm ./build/ -rf; npm install; npm run build",
-    "ganache-cli": "npx ganache-cli"
-  }
+    "ganache-cli": "npx ganache-cli",
+    "snyk-protect": "snyk protect"
+  },
+  "snyk": true
 }
