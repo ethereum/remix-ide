@@ -17,7 +17,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     parallelism: 20
@@ -51,7 +51,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     parallelism: 20
@@ -91,7 +91,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     steps:
@@ -123,7 +123,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     steps:
@@ -152,7 +152,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     steps:
@@ -175,7 +175,7 @@ jobs:
     environment:
       - COMMIT_AUTHOR_EMAIL: "yann@ethereum.org"
       - COMMIT_AUTHOR: "Circle CI"
-      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json"
+      - FILES_TO_PACKAGE: "assets background.js build icon.png index.html manifest.json README.md soljson.js package.json favicon.ico"
     working_directory: ~/remix-ide
 
     steps:
