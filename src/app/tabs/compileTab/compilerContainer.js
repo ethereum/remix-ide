@@ -7,7 +7,7 @@ const semver = require('semver')
 const modalDialogCustom = require('../../ui/modal-dialog-custom')
 const css = require('../styles/compile-tab-styles')
 import { canUseWorker } from '../../compiler/compiler-utils'
-const crossVersions = ["v1.0.0-crossVersion-0.6.0", "v1.0.1-crossVersion-0.6.0"]
+const crossVersions = ['v1.0.0-crossVersion-0.6.0', 'v1.0.1-crossVersion-0.6.0']
 class CompilerContainer {
 
   constructor (compileTabLogic, editor, config, queryParams) {
