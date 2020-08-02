@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  remix_ide:
+    image: remix-ide:latest
+    container_name: remixide-latest
+    ports:
+      - 8080:80
+      - 65520:65520
