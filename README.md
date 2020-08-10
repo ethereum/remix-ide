@@ -1,3 +1,5 @@
+**The project has been moved to https://github.com/ethereum/remix-project**
+
 [![CircleCI](https://circleci.com/gh/ethereum/remix-ide.svg?style=svg)](https://circleci.com/gh/ethereum/remix-ide)
 
 # Remix
