@@ -1,6 +1,6 @@
 **The project code base has been moved to https://github.com/ethereum/remix-project**
 
-Although the documentation is still located in this [repository](https://remix-ide.readthedocs.io/en/latest/)
+Although the [documentation](https://remix-ide.readthedocs.io/en/latest/) is still located in this repository.
 
 Remix is a browser-based compiler and IDE that enables users to build **Ethereum contracts with Solidity language** and to debug transactions.
 
