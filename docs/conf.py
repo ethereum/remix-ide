@@ -69,6 +69,8 @@ release = u'1'
 # Usually you set "language" from the command line for these cases.
 language = None
 
+locale_dirs = ["locales/"]
+
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
 #today = ''
