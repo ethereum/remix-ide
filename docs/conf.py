@@ -69,7 +69,8 @@ release = u'1'
 # Usually you set "language" from the command line for these cases.
 language = None
 
-locale_dirs = ["locales/"]
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
