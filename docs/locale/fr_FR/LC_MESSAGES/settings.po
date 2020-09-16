@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../settings.md:1
+msgid "Settings"
+msgstr ""
+
+#: ../../settings.md:4
+msgid "To get to Settings click the gear a the very bottom of the icon panel."
+msgstr ""
+
+#: ../../settings.md:6
+msgid ""
+"You can find a link to the homepage (if you closed it) as well as a link "
+"to our Gitter Channel and for you aesthetes out there, we now have a "
+"rather large list of themes."
+msgstr ""
+
+#: ../../settings.md:10
+msgid "Another important settings:"
+msgstr ""
+
+#: ../../settings.md:12
+msgid "Text wrap: controls if the text in the editor should be wrapped."
+msgstr ""
+
+#: ../../settings.md:14
+msgid ""
+"Enable optimization: defines if the compiler should enable optimization "
+"during compilation. Enabling this option saves execution gas. It is "
+"useful to enable optimization for contracts ready to be deployed in "
+"production but could lead to some inconsistencies when debugging such a "
+"contract."
+msgstr ""
+

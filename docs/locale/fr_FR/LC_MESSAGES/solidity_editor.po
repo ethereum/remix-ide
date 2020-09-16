@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../solidity_editor.md:1
+msgid "Solidity Editor"
+msgstr ""
+
+#: ../../solidity_editor.md:4
+msgid ""
+"The Remix editor recompiles the code each time the current file is "
+"changed or another file is selected. It also provides syntax highlighting"
+" mapped to solidity keywords."
+msgstr ""
+
+#: ../../solidity_editor.md:10
+msgid "Here's the list of some important features:"
+msgstr ""
+
+#: ../../solidity_editor.md:12
+msgid "It display opened files as tabs."
+msgstr ""
+
+#: ../../solidity_editor.md:13
+msgid "Compilation Warning and Error are displayed in the gutter"
+msgstr ""
+
+#: ../../solidity_editor.md:14
+msgid "Remix saves the current file continuously (5s after the last changes)"
+msgstr ""
+
+#: ../../solidity_editor.md:16
+msgid ""
+"+/- on the top left corner enable you to increase/decrease the font size "
+"of the editor"
+msgstr ""
+

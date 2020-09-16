@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../plugin_manager.md:1
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../plugin_manager.md:4
+msgid "Everything is a PLUGIN in Remix"
+msgstr ""
+
+#: ../../plugin_manager.md:6
+msgid ""
+"In order to integrate new tools made by us and by ...you into Remix, "
+"we've now made everything a plugin. This architecture will also allow "
+"Remix or just parts of Remix to be integrated into other projects (your's"
+" for example)."
+msgstr ""
+
+#: ../../plugin_manager.md:9
+msgid "This means that you only load the functionality you need."
+msgstr ""
+
+#: ../../plugin_manager.md:11
+msgid "It also means that you can turn off and on plugins - as your needs change."
+msgstr ""
+
+#: ../../plugin_manager.md:13
+msgid "This all happens in the plug manager."
+msgstr ""
+
+#: ../../plugin_manager.md:15
+msgid ""
+"The Plugin Manager is also the place you go when you are creating your "
+"own plugin and you want to load your local plugin into Remix."
+msgstr ""
+
+#: ../../plugin_manager.md:17
+msgid ""
+"To load your local plugin, you'd click on the \"Connect to a Local "
+"Plugin\" link at the top of the Plugin Manager panel."
+msgstr ""
+
+#: ../../plugin_manager.md:21
+msgid ""
+"To learn more about how to create your own plugin, go to the README of "
+"remix-plugin repo."
+msgstr ""
+
