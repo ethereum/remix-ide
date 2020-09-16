@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../layout.md:1
+msgid "Remix-IDE Layout"
+msgstr ""
+
+#: ../../layout.md:4
+msgid "The new structure"
+msgstr ""
+
+#: ../../layout.md:8
+msgid "Icon Panel - click to change which plugin appears in the Side Panel"
+msgstr ""
+
+#: ../../layout.md:9
+msgid "Side Panel - Most but not all plugins will have their GUI here."
+msgstr ""
+
+#: ../../layout.md:10
+msgid ""
+"Main Panel - In the old layout this was just for editing files.  In the "
+"tabs can be plugins or files for the IDE to compile."
+msgstr ""
+
+#: ../../layout.md:11
+msgid ""
+"Terminal - where you will see the results of your interactions with the "
+"GUI's.  Also you can run scripts here."
+msgstr ""
+
+#: ../../layout.md:13
+msgid "Icon Panel at Page Load"
+msgstr ""
+
+#: ../../layout.md:15
+msgid "When you load remix - the icon panel show these icons by default."
+msgstr ""
+
+#: ../../layout.md:19
+msgid ""
+"Everything in remix is now a plugin...  so the Plugin Manager is very "
+"important. In the old layout, each basic task in remix was separated into"
+" the tabs.  Now these tabs are plugins."
+msgstr ""
+
+#: ../../layout.md:22
+msgid ""
+"But to activate a half a dozen plugins - (or however many you are using) "
+"each time the page load is tedious.  So learn about the Environments."
+msgstr ""
+
+#: ../../layout.md:24
+msgid "Homepage"
+msgstr ""
+
+#: ../../layout.md:29
+msgid "The homepage is located in a tab in the Main Panel."
+msgstr ""
+
+#: ../../layout.md:31
+msgid ""
+"You can also get there by clicking the remix logo at the top of the icon "
+"panel."
+msgstr ""
+
+#: ../../layout.md:33
+msgid "Environments"
+msgstr ""
+
+#: ../../layout.md:34
+msgid ""
+"Clicking on one of the environment buttons loads up a collection of "
+"plugins.  We currently have a Solidity Button and a Vyper button.  In the"
+" future you will be able to save your own environment."
+msgstr ""
+
+#: ../../layout.md:36
+msgid ""
+"To see all the plugins go to the plugin manager - by selecting the plug "
+"in the icon panel."
+msgstr ""
+
+#: ../../layout.md:39
+msgid ""
+"The environment buttons are time & sanity savers - so you don't need to "
+"go to the plugin manager to get started everytime you load the page."
+msgstr ""
+
+#: ../../layout.md:42
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../layout.md:45
+msgid ""
+"In order to make Remix flexible for integrating changes into its "
+"functionality and for integrating remix into other projects (your's for "
+"example), we've now made everything a plugin.  This means that you only "
+"load the functionality you need.  It also means that you need a place to "
+"turn off and on plugins - as your needs change.  This all happens in the "
+"plug manager."
+msgstr ""
+
+#: ../../layout.md:47
+msgid ""
+"The Plugin Manager is also the place you go when you are creating your "
+"own plugin and you want to load your local plugin into Remix. In that "
+"case you'd click on the \"Connect to a Local Plugin\" link at the top of "
+"the Plugin Manager panel."
+msgstr ""
+
+#: ../../layout.md:49
+msgid "Themes"
+msgstr ""
+
+#: ../../layout.md:52
+msgid ""
+"So you want to work on Remix with a dark theme or a gray theme or just a "
+"different theme that the one you are currently looking at?  Go to the "
+"settings tab and at the bottom is a choice of lots of bootstrap based "
+"themes."
+msgstr ""
+

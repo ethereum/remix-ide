@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../remix_commands.md:1
+msgid "Remix Commands"
+msgstr ""
+
+#: ../../remix_commands.md:4
+msgid ""
+"In the console, you can run the commands listed below.  Once you start to"
+" type a command, there is auto completion.  These commands are using the "
+"following libraries:"
+msgstr ""
+
+#: ../../remix_commands.md:6
+msgid ""
+"ethers: The ethers.js library is a compact and complete JavaScript "
+"library for Ethereum."
+msgstr ""
+
+#: ../../remix_commands.md:8
+msgid "remix:  Ethereum IDE and tools for the web."
+msgstr ""
+
+#: ../../remix_commands.md:10
+msgid ""
+"web3: The web3.js library is a collection of modules which contain "
+"specific functionality for the ethereum ecosystem."
+msgstr ""
+
+#: ../../remix_commands.md:12
+msgid ""
+"swarmgw: This library can be used to upload/download files to Swarm via "
+"https://swarm-gateways.net/."
+msgstr ""
+
+#: ../../remix_commands.md:14
+msgid "Here's the list of commands"
+msgstr ""
+
+#: ../../remix_commands.md:15
+msgid "remix.debug(hash): Start debugging a transaction."
+msgstr ""
+
+#: ../../remix_commands.md:17
+msgid "remix.debugHelp(): Display help message for debugging"
+msgstr ""
+
+#: ../../remix_commands.md:19
+msgid ""
+"remix.execute(filepath): Run the script specified by file path. If "
+"filepath is empty, script currently displayed in the editor is executed."
+msgstr ""
+
+#: ../../remix_commands.md:21
+msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
+msgstr ""
+
+#: ../../remix_commands.md:23
+msgid ""
+"remix.getFile(path): Returns the content of the file located at the given"
+" path"
+msgstr ""
+
+#: ../../remix_commands.md:25
+msgid "remix.help(): Display this help message."
+msgstr ""
+
+#: ../../remix_commands.md:27
+msgid "remix.loadgist(id): Load a gist in the file explorer."
+msgstr ""
+
+#: ../../remix_commands.md:29
+msgid ""
+"remix.loadurl(url): Load the given url in the file explorer. The url can "
+"be of type github, swarm or ipfs."
+msgstr ""
+
+#: ../../remix_commands.md:31
+msgid ""
+"remix.setFile(path, content): set the content of the file located at the "
+"given path"
+msgstr ""
+
+#: ../../remix_commands.md:33
+msgid ""
+"remix.setproviderurl(url): Change the current provider to Web3 provider "
+"and set the url endpoint."
+msgstr ""
+
+#: ../../remix_commands.md:35
+msgid ""
+"swarmgw.get(url, cb): Download files from Swarm via https**://swarm-"
+"gateways.net/"
+msgstr ""
+
+#: ../../remix_commands.md:37
+msgid ""
+"swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-"
+"gateways.net/"
+msgstr ""
+
+#: ../../remix_commands.md:39
+msgid ""
+"ethers.Contract: This API provides a graceful connection to a contract "
+"deployed on the blockchain, simplifying calling and querying its "
+"functions and handling all the binary protocol and conversion as "
+"necessarily."
+msgstr ""
+
+#: ../../remix_commands.md:41
+msgid ""
+"ethers.HDNode: A Hierarchical Deterministic Wallet represents a large "
+"tree of private keys which can reliably be reproduced from an initial "
+"seed."
+msgstr ""
+
+#: ../../remix_commands.md:43
+msgid ""
+"ethers.Interface: The Interface Object is a meta-class that accepts a "
+"Solidity (or compatible) Application Binary Interface (ABI) and populates"
+" functions to deal with encoding and decoding the parameters to pass in "
+"and results returned."
+msgstr ""
+
+#: ../../remix_commands.md:45
+msgid ""
+"ethers.providers: A Provider abstracts a connection to the Ethereum "
+"blockchain, for issuing queries and sending state changing transactions."
+msgstr ""
+
+#: ../../remix_commands.md:47
+msgid ""
+"ethers.SigningKey: The SigningKey interface provides an abstraction "
+"around the secp256k1 elliptic curve cryptography library."
+msgstr ""
+
+#: ../../remix_commands.md:49
+msgid ""
+"ethers.utils: The utility functions exposed in both the ethers umbrella "
+"package and the ethers-utils."
+msgstr ""
+
+#: ../../remix_commands.md:51
+msgid "ethers.utils.AbiCoder: Create a new ABI Coder object"
+msgstr ""
+
+#: ../../remix_commands.md:53
+msgid ""
+"ethers.utils.RLP: This encoding method is used internally for several "
+"aspects of Ethereum, such as encoding transactions and determining "
+"contract addresses."
+msgstr ""
+
+#: ../../remix_commands.md:55
+msgid ""
+"ethers.Wallet: A wallet manages a private/public key pair which is used "
+"to cryptographically sign transactions and prove ownership on the "
+"Ethereum network."
+msgstr ""
+
+#: ../../remix_commands.md:57
+msgid "ethers.version: Contains the version of the ethers container object."
+msgstr ""
+
+#: ../../remix_commands.md:59
+msgid "web3.bzz: Bzz module for interacting with the swarm network."
+msgstr ""
+
+#: ../../remix_commands.md:61
+msgid "web3.eth: Eth module for interacting with the Ethereum network."
+msgstr ""
+
+#: ../../remix_commands.md:63
+msgid ""
+"web3.eth.accounts: The web3.eth.accounts contains functions to generate "
+"Ethereum accounts and sign transactions and data."
+msgstr ""
+
+#: ../../remix_commands.md:65
+msgid ""
+"web3.eth.abi: The web3.eth.abi functions let you de- and encode "
+"parameters to ABI (Application Binary Interface) for function calls to "
+"the EVM (Ethereum Virtual Machine)."
+msgstr ""
+
+#: ../../remix_commands.md:67
+msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
+msgstr ""
+
+#: ../../remix_commands.md:69
+msgid ""
+"web3.eth.Iban: The web3.eth.Iban function lets convert Ethereum addresses"
+" from and to IBAN and BBAN."
+msgstr ""
+
+#: ../../remix_commands.md:71
+msgid "web3.eth.net: Net module for interacting with network properties."
+msgstr ""
+
+#: ../../remix_commands.md:73
+msgid ""
+"web3.eth.personal: Personal module for interacting with the Ethereum "
+"accounts."
+msgstr ""
+
+#: ../../remix_commands.md:75
+msgid ""
+"web3.eth.subscribe: The web3.eth.subscribe function lets you subscribe to"
+" specific events in the blockchain."
+msgstr ""
+
+#: ../../remix_commands.md:77
+msgid ""
+"web3.givenProvider: When using web3.js in an Ethereum compatible browser,"
+" it will set with the current native provider by that browser. Will "
+"return the given provider by the (browser) environment, otherwise null."
+msgstr ""
+
+#: ../../remix_commands.md:79
+msgid "web3.modules: Contains the version of the web3 container object."
+msgstr ""
+
+#: ../../remix_commands.md:81
+msgid "web3.providers: Contains the current available providers."
+msgstr ""
+
+#: ../../remix_commands.md:83
+msgid "web3.shh: Shh module for interacting with the whisper protocol"
+msgstr ""
+
+#: ../../remix_commands.md:85
+msgid ""
+"web3.utils: This package provides utility functions for Ethereum dapps "
+"and other **web3.js packages."
+msgstr ""
+
+#: ../../remix_commands.md:87
+msgid "web3.version: Contains the version of the web3 container object."
+msgstr ""
+
+#: ../../remix_commands.md:89
+msgid "web3.eth.clearSubscriptions();: Resets subscriptions."
+msgstr ""
+
+#: ../../remix_commands.md:91
+msgid ""
+"web3.eth.Contract(jsonInterface[, address][, options]): The "
+"**web3.eth.Contract object makes it easy to interact with smart contracts"
+" on the ethereum blockchain."
+msgstr ""
+
+#: ../../remix_commands.md:93
+msgid ""
+"web3.eth.accounts.create([entropy]);: The web3.eth.accounts contains "
+"functions to generate Ethereum accounts and sign transactions and data."
+msgstr ""
+

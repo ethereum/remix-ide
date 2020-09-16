@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../compile.md:1
+msgid "Compiler (Solidity)"
+msgstr ""
+
+#: ../../compile.md:4
+msgid ""
+"Clicking the Solidity icon in the icon panel brings you to the Solidty "
+"Compiler."
+msgstr ""
+
+#: ../../compile.md:6
+msgid ""
+"Compiling is triggered when you click the compile button ( D. in image "
+"below). If you want the file to be compiled each time the file is saved "
+"or when another file is selected - check the auto compile checkbox ( E. "
+"in image below)."
+msgstr ""
+
+#: ../../compile.md:8
+msgid ""
+"Since the Solidity version 0.5.7, it is possible to compile Yul files. "
+"Please read the (solidity documentation about Yul) which contain some "
+"code examples. You can use the language dropdown ( B. in image below) to "
+"switch the language. This dropdown list is only available for versions "
+"greater than or equal to 0.5.7."
+msgstr ""
+
+#: ../../compile.md:11
+msgid ""
+"The fork selection dropdown list ( C. in image below) allows to compile "
+"code against a specific ethereum hard fork. The compiler default "
+"corresponds to the default hard fork used by a specific version. Please "
+"go to \"Compilation Details\" ( G. in image below) in the settings of "
+"Metadata section to see the harfork name used for the current "
+"compilation."
+msgstr ""
+
+#: ../../compile.md:14
+msgid ""
+"If the contract has a lot of dependencies it can take a while to compile "
+"- so you use autocompilation at your discretion."
+msgstr ""
+
+#: ../../compile.md:18
+msgid ""
+"After each compilation, a list is updated with all newly compiled "
+"contracts.  A compiled contract can be selected with the Contract "
+"pulldown menu ( F. in the image).  Multiple contracts are compiled when "
+"one contract imports other contracts.  Selecting a contract will show "
+"information about that one."
+msgstr ""
+
+#: ../../compile.md:21
+msgid ""
+"When the \"Compilation Details\" button is clicked ( G. in image), a "
+"modal opens displaying detailed information about the current selected "
+"contract."
+msgstr ""
+
+#: ../../compile.md:23
+msgid ""
+"For those writing your own custom solidity compiler, you can import that "
+"by clicking the + button (X. in the image) to open a modal where you can "
+"input the url of the compiler to be loaded."
+msgstr ""
+
+#: ../../compile.md:25
+msgid ""
+"From the Solidity Compiler module you can also publish your contract to "
+"Swarm (only non abstract contracts can be published) & IPFS."
+msgstr ""
+
+#: ../../compile.md:28
+msgid "Published data notably contains the abi and the solidity source code."
+msgstr ""
+
+#: ../../compile.md:30
+msgid ""
+"After a contract is published, you can find its metadata information "
+"using the bzz URL located in the details modal dialog SWARM LOCATION."
+msgstr ""
+
+#: ../../compile.md:33
+msgid ""
+"Compilation Errors and Warning are displayed below the contract section. "
+"At each compilation, the static analysis tab builds a report. It is "
+"important to address reported issues even if the compiler doesn't "
+"complain. (see more)"
+msgstr ""
+

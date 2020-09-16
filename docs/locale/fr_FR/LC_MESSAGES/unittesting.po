@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../unittesting.md:1
+msgid "Unit Testing Plugin"
+msgstr ""
+
+#: ../../unittesting.md:4
+msgid "Click the double check icon to get to the Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:8
+msgid ""
+"If you haven't used this plugin before and are not seeing double check "
+"icon, you have to activate it from Remix plugin manager."
+msgstr ""
+
+#: ../../unittesting.md:10
+msgid ""
+"Go to the plugin manager (by click the plug icon) and load up the unit "
+"testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:14
+msgid ""
+"Now double check icon will appear on the left side icon bar. Clicking on "
+"icon will load the unit testing module in the side panel."
+msgstr ""
+
+#: ../../unittesting.md:16
+msgid ""
+"Alternatively, just select Solidity environment from remix IDE home page."
+" This will activate Solidity Unit Testing plugin along with Solidity "
+"Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
+msgstr ""
+
+#: ../../unittesting.md:20
+msgid "Generate"
+msgstr ""
+
+#: ../../unittesting.md:22
+msgid ""
+"Select a solidity file which you want to test and click on the button "
+"Generate. It will generate a new sample solidity test file in the current"
+" folder suffixed with _test. This file contains the minimum you need for "
+"running unit testing."
+msgstr ""
+
+#: ../../unittesting.md:24
+msgid "Write Tests"
+msgstr ""
+
+#: ../../unittesting.md:26
+msgid ""
+"Write tests to check the functionality of your contract. Remix injects a "
+"built-in assert library which can be used for testing. Visit the library "
+"documentation here."
+msgstr ""
+
+#: ../../unittesting.md:28
+msgid ""
+"Apart from this, Remix allows usage of some special functions to make "
+"testing more structural. They are:"
+msgstr ""
+
+#: ../../unittesting.md:30
+msgid "beforeEach() - Runs before each test"
+msgstr ""
+
+#: ../../unittesting.md:31
+msgid "beforeAll() - Runs before all tests"
+msgstr ""
+
+#: ../../unittesting.md:32
+msgid "afterEach() - Runs after each test"
+msgstr ""
+
+#: ../../unittesting.md:33
+msgid "afterAll() - Runs after all tests"
+msgstr ""
+
+#: ../../unittesting.md:35
+msgid "To get started, see this simple example."
+msgstr ""
+
+#: ../../unittesting.md:37
+msgid "Run"
+msgstr ""
+
+#: ../../unittesting.md:39
+msgid ""
+"Once you are done with writing tests, select the _test.sol files in the "
+"list and click on the button Run to execute the tests in the selected "
+"files. The execution will run in a separate environment and the result "
+"will be displayed below."
+msgstr ""
+
+#: ../../unittesting.md:43
+msgid "Stop"
+msgstr ""
+
+#: ../../unittesting.md:45
+msgid ""
+"If you have selected multiple files to run the tests and want to stop the"
+" execution, click on Stop button. It will stop execution after running "
+"the tests for current file."
+msgstr ""
+
+#: ../../unittesting.md:47
+msgid "Customization"
+msgstr ""
+
+#: ../../unittesting.md:49
+msgid ""
+"Remix facilitates users with various types of customizations to test a "
+"contract properly."
+msgstr ""
+
+#: ../../unittesting.md:51
+msgid "1. Custom Compiler Context"
+msgstr ""
+
+#: ../../unittesting.md:53
+msgid ""
+"Solidity Unit Testing refers Solidity Compiler plugin for compiler "
+"configurations. One can provide customized inputs for Compiler, EVM "
+"Version & Enable Optimization and these will be the configuration "
+"settings used for contract compilation before running unit tests."
+msgstr ""
+
+#: ../../unittesting.md:57
+msgid "2. Custom Transaction Context"
+msgstr ""
+
+#: ../../unittesting.md:59
+msgid ""
+"For a contract method interaction, prime parameters of transaction are "
+"from address, value & gas. Usually, we need to test a method's behaviour "
+"under different values of these parameters."
+msgstr ""
+
+#: ../../unittesting.md:61
+msgid ""
+"Remix provides the functionality of custom msg.sender & msg.value of "
+"transaction using method devdoc like:"
+msgstr ""
+
+#: ../../unittesting.md:71
+msgid "Things to keep in mind while using custom transaction context:"
+msgstr ""
+
+#: ../../unittesting.md:73
+msgid "Parameters must be defined in devdoc of related method"
+msgstr ""
+
+#: ../../unittesting.md:74
+msgid ""
+"Each parameter key should be prefixed with a hash (#) and end with a "
+"colon following a space (: ) like #sender:  & #value:"
+msgstr ""
+
+#: ../../unittesting.md:75
+msgid "For now, customization is available for parameters sender & value only"
+msgstr ""
+
+#: ../../unittesting.md:76
+msgid ""
+"Sender is from address of a transaction which is accessed using "
+"msg.sender inside a contract method. It should be defined in a fixed "
+"format as 'account-<account_index>'"
+msgstr ""
+
+#: ../../unittesting.md:77
+msgid ""
+"<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 "
+"afterwards"
+msgstr ""
+
+#: ../../unittesting.md:78
+msgid "remix_accounts.sol must be imported in your test file to use custom sender"
+msgstr ""
+
+#: ../../unittesting.md:79
+msgid ""
+"Value is value sent along with a transaction in wei which is accessed "
+"using msg.value inside a contract method. It should be a number."
+msgstr ""
+
+#: ../../unittesting.md:81
+msgid ""
+"Regarding gas, Remix estimates the required gas for each transaction "
+"internally. Still if a contract deployment fails with Out-of-Gas error, "
+"it tries to redeploy it by doubling the gas. Deployment failing with "
+"double gas will show error: contract deployment failed after trying "
+"twice: The contract code couldn't be stored, please check your gas limit"
+msgstr ""
+
+#: ../../unittesting.md:83
+msgid "Various test examples can be seen in examples section."
+msgstr ""
+
+#: ../../unittesting.md:86
+msgid "Points to remember"
+msgstr ""
+
+#: ../../unittesting.md:89
+msgid ""
+"A test contract cannot have a method with parameters. Having one such "
+"method will show error: Method 'methodname' can not have parameters "
+"inside a test contract"
+msgstr ""
+
+#: ../../unittesting.md:90
+msgid ""
+"Number of test accounts are 3 before remix-ide release v0.10.0 and 10 "
+"afterwards"
+msgstr ""
+
+#: ../../unittesting.md:91
+msgid ""
+"A test file which imports remix_accounts.sol might not compile "
+"successfully with Solidity Compiler plugin but it will work fine with "
+"Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:93
+msgid "Remix-tests"
+msgstr ""
+
+#: ../../unittesting.md:96
+msgid ""
+"remix-tests is the module which works underneath of remix-ide Solidity "
+"Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:98
+msgid ""
+"remix-tests is an NPM package. It can also be used as  a CLI/CI solution,"
+" supporting node.js. Find more information about this type of usage in "
+"the remix-tests repository"
+msgstr ""
+
+#: ../../unittesting.md:100
+msgid ""
+"For CI implementation example, see Su Squares contract and Travis build "
+"that uses remix-tests for continuous integration testing."
+msgstr ""
+
