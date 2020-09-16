@@ -43,20 +43,18 @@ msgid "Miscellaneous"
 msgstr ""
 
 #: ../../index.rst:2
-msgid "Welcome to Remix documentation!"
+msgid "Bienvenue sur la documentation de Remix!"
 msgstr ""
 
 #: ../../index.rst:4
 msgid ""
-"Remix is a powerful, open source tool that helps you write Solidity "
-"contracts straight from the browser. Written in JavaScript, Remix "
-"supports both usage in the browser and locally."
+"Remix est un outil de dévelopement performant, opensourceRemix qui vous permet de déveloper"
+"des contract Ethereum depuis votre navigateur en utilisant le language Solidity (une version de bureau est aussi disponible)." 
 msgstr ""
 
 #: ../../index.rst:7
 msgid ""
-"Remix also supports testing, debugging and deploying of smart contracts "
-"and much more."
+"Remix en autre de tester, debugger et deployer des contrats Ethereum"
 msgstr ""
 
 #: ../../index.rst:9
