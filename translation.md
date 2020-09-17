@@ -1,6 +1,6 @@
 ## Manage Translation
 
-Here's the list of commands to run in order to update the files which contain translated text:
+Here's the list of commands to run in order to update the files which contain translated texts:
 
 This [link](https://docs.readthedocs.io/en/stable/guides/manage-translations.html) details all the steps.
 
@@ -19,4 +19,4 @@ The command above needs to be run for each language.
 
 `-l es_AR -l pt_BR` represents a list of translated files to generate.
 
-Then *after* a `po` file is translated, the command (1) should be run, the `_build/gettext`  folder doesn't need to be pushed to master.
+Then *after* a `po` file is translated, the command (1) should be run. The `_build/gettext`  folder doesn't need to be pushed to master.
