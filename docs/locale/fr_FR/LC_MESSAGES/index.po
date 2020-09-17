@@ -51,8 +51,8 @@ msgid ""
 "Remix is a powerful, open source tool that helps you write Solidity "
 "contracts straight from the browser. Written in JavaScript, Remix "
 "supports both usage in the browser and locally."
-msgstr "Remix est un outil de développement opensource permettant de développer des contracts Ethereum"
-"en utilisant le language Solidity."
+msgstr "Remix est un outil de développement opensource permettant de développer des contracts Ethereum "
+"en utilisant le language Solidity. "
 "Remix IDE peut être utilisé dans une navigateur ou localement dans une application bureau."
 
 #: ../../index.rst:7
