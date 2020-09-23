@@ -2,7 +2,7 @@ Build Artifact
 ==============
 
 When a compilation succeeds, Remix creates a JSON file for each compiled contract.
-The JSON file contains the compilation's artifact.  Actually, for this to happen, you need to check the **Generate contract metadata** box in the **General settings** section of the **Settings** module.  The .JSON file with the metadata will appear in the file explorer where the compiled file is located.
+The JSON file contains the compilation's artifact.  Actually, for this to happen, you need to check the **Generate contract metadata** box in the **General settings** section of the **Settings** module.  The .JSON file with the metadata will appear in the file explorer in the **artifacts** folder.
 
 This JSON file contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI.
 
