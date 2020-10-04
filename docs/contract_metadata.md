@@ -1,17 +1,22 @@
 Build Artifact
 ==============
 
-When a compilation succeeds, Remix creates a JSON file for each compiled contract.
-The JSON file contains the compilation's artifact.  Actually, for this to happen, you need to check the **Generate contract metadata** box in the **General settings** section of the **Settings** module.  The .JSON file with the metadata will appear in the file explorer in the **artifacts** folder.
+When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files **captures the output from the Solidity compilation**. This file is named with the suffix _metadata.json - which is to say this metatdata file generated from **filename.sol** will be **filename_metadata.json** .
 
-This JSON file contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI.
+The other JSON file is named **filename.json** .
+ 
+The **filename.json** file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. 
 
-You can write scripts that can access this file. 
+In order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the **artifacts** folder - which you can see in the Files Explorers plugin.
 
-Library Deployment
-------------------
+You can write scripts that can access either of these files. 
+
+Library Deployment with filename.json
+-------------------------------------
 
 By default Remix automatically deploys needed libraries.
+
+When you open the metadata file for the libraries - **artifact/filename.json** you will see the following sections:
 
 `linkReferences` contains a map representing libraries which depend on the current contract. 
 Values are addresses of libraries used for linking the contract.
@@ -19,10 +24,10 @@ Values are addresses of libraries used for linking the contract.
 `autoDeployLib` defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in `linkReferences`
 
 Note that Remix will resolve addresses corresponding to the current network.
-By default, a configuration key follow the form: `<network_name>:<networkd_id>`, but it is also possible
+By default, a configuration key follows the form: `<network_name>:<networkd_id>`, but it is also possible
 to define `<network_name>` or `<network_id>` as keys.
 
-
+Here is a sample metadata file for linking a library:
 
 ```
 {
