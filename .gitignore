@@ -1,0 +1,9 @@
+node_modules
+docs/_build
+reports
+npm-debug.log*
+.DS_Store
+TODO
+.tern-port
+.idea
+.vscode
