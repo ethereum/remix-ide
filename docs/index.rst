@@ -1,17 +1,22 @@
-Welcome to Remix documentation!
+Welcome to Remix's documentation!
 ===============================
 
-Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser.
-Written in JavaScript, Remix supports both usage in the browser and locally.
+Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as being a playground for learning and teaching Ethereum.
 
-Remix also supports testing, debugging and deploying of smart contracts and much more.
+Remix IDE is part of the Remix Project which is a platform for development tools that use a plugin architecture.  It encompasses sub-projects including Remix Plugin Engine, Remix Libs, and of course Remix-IDE.
 
-Our Remix project with all its features is available
+Remix IDE is a powerful open source tool that helps you write Solidity contracts straight from the browser.
+
+It is written in JavaScript and supports both usage in the browser, in the browser but run locally and in a desktop version.
+
+Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
+
+Remix-IDE is available
 at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these
 docs.  Our IDE tool is available at `our GitHub repository
-<https://github.com/ethereum/remix-ide>`__.
+<https://github.com/ethereum/remix-project>`__.
 
-This set of documents covers instructions on how to use Remix and some tutorials to help you get started.
+This set of documents covers instructions on how to use Remix.  Additional tutorials are found in our Medium blog and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
 
 Useful links:
 
@@ -19,13 +24,18 @@ Useful links:
 
 - `Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!).
 
+- `Remix Desktop <https://github.com/ethereum/remix-desktop/releases>`__ - Remix Desktop's release page. 
+
+- `Remix on Github <https://github.com/ethereum/remix-project>`__
+
 - `Remix on Medium <https://medium.com/remix-ide>`__
 
-- `Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__
+- `Remix on Twitter <https://twitter.com/EthereumRemix>`__
 
-- `Community support channel <https://gitter.im/ethereum/remix>`__
+- `Our Gitter support channel <https://gitter.im/ethereum/remix>`__
 
-- `Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__
+- `Ethereum.org's Developer resources <https://ethereum.org/en/developers/>`__
+
 
 .. toctree::
    :maxdepth: 2
