@@ -1,11 +1,9 @@
 Build Artifact
 ==============
 
-When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files **captures the output from the Solidity compilation**. This file is named with the suffix _metadata.json - which is to say this metatdata file generated from **filename.sol** will be **filename_metadata.json** .
+When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files **captures the output from the Solidity compilation**. This file will be named  **contractName_metadata.json**.
 
-The other JSON file is named **filename.json** .
- 
-The **filename.json** file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. 
+The other JSON file is named **contractName.json** . The **contractName.json** file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. 
 
 In order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the **artifacts** folder - which you can see in the Files Explorers plugin.
 
