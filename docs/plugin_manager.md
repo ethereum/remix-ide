@@ -1,18 +1,29 @@
 Plugin Manager
 ===================
 
-## Everything is a PLUGIN in Remix
+![](images/a-plugin-man-overview.png)
 
-In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin.
-This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example).   
+In Remix IDE you only load the functionality you need.  Controlling which plugins are active or inactive happens in the **Plugin Manager**.
 
-This means that you only load the functionality you need.  
+This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects (your's for example).   
 
-It also means that you can turn off and on plugins - as your needs change.  
+## Manage the permissions of the plugins
+Often plugins need to access other plugins for their operation.  When this occurs, a modal will appear to ask you for permission.  
 
-This all happens in the plug manager.  
+![](images/a-permission-modal.png)
 
-The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. 
+Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up.
+
+### Viewing permissions
+You can view the permissions that you have granted to plugins by clicking on the **Permissions** button at the bottom of the **Plugin Manager**.
+
+![](images/a-plugin-man-permissions.png)
+
+A modal will appear like the one below where you can view and erase the granted permission.
+
+![](images/a-plugin-manager-modal.png)
+
+## Plugin Devs: use the Plugin Manager to load a local plugin
 
 To load your local plugin, you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
 
