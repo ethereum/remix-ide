@@ -1,7 +1,7 @@
 Remix Commands
 ==============
 
-In the console, you can run the commands listed below.  Once you start to type a command, there is *auto completion*.  These commands are using the following libraries:
+In the console, you can run the remix commands listed below.  Once you start to type a command, there is *auto completion*.  These commands are using the following libraries:
 
 + *ethers*: The [ethers.js](https://docs.ethers.io/ethers.js/html/getting-started.html) library is a compact and complete JavaScript library for Ethereum. 
 
@@ -11,26 +11,21 @@ In the console, you can run the commands listed below.  Once you start to type a
 
 + *swarmgw*: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/.
 
-#### Here's the list of commands
-**remix.debug(hash)**: Start debugging a transaction.
+If you want a command to return something in the console - you need to wrap it in a console.log() - like this: `console.log(ethers.utils.formatBytes32String(‘remix'))`
 
-**remix.debugHelp()**: Display help message for debugging
+For more information about running scripts in Remix IDE please go [here](running_scripts.html).
+
+#### Here's the list of commands
 
 **remix.execute(filepath)**: Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed.
 
 **remix.exeCurrent()**: Run the script currently displayed in the editor.
 
-**remix.getFile(path)**: Returns the content of the file located at the given path
-
-**remix.help()**: Display this help message.
-
 **remix.loadgist(id)**: Load a gist in the file explorer.
 
 **remix.loadurl(url)**: Load the given url in the file explorer. The url can be of type github, swarm or ipfs.
 
-**remix.setFile(path, content)**: set the content of the file located at the given path
-
-**remix.setproviderurl(url)**: Change the current provider to Web3 provider and set the url endpoint.
+**remix.help()**: Display this help message.
 
 **swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/
 
