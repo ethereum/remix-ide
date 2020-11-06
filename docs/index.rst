@@ -80,6 +80,8 @@ Useful links:
    tutorial_debug
    import
    remix_commands
+   running_js_scripts
+   FAS
    remixd
    FAQ
 
