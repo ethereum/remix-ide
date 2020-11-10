@@ -21,7 +21,11 @@ After successful loading, plugin looks like this:
 
 Test directory
 ----------
-Plugin asks you to provide a directory which will be your workspace folder for this plugin only. This directory will be used to load test files and to store newly generated test files.
+Plugin asks you to provide a directory which will be your workspace only for this plugin. To select directory, as soon as you add `/` to the path, it shows the possible options. 
+
+![](images/a-unit-testing-test-directory.png)
+
+Once selected, this directory will be used to load test files and to store newly generated test files.
 
 Default test directory is `browser/tests`.
 
@@ -96,7 +100,7 @@ To get started, see [this simple example](./unittesting_examples.html#simple-exa
 
 Run
 -----
-Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After complete execution of one file, a test summary will be show as below:
+Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be show as below:
 
 ![](images/a-unit-testing-run-result.png)
 
@@ -118,7 +122,7 @@ Remix facilitates users with various types of customizations to test a contract 
 
 **2. Custom Transaction Context**
 
-For a contract method interaction, prime parameters of transaction are `from` address, `value` & `gas`. Usually, we need to test a method's behaviour with different values of these parameters.
+For interacting with a contract's method, the prime parameters of a transaction are `from` address, `value` & `gas`. Typically, a method's behaviour is tested with different values of these parameters.
 
 Remix provides the functionality of custom `msg.sender` & `msg.value` of transaction using natspec, like:
 
@@ -132,10 +136,10 @@ function checkSenderIs0AndValueis10 () public payable {
 ```
 <u>Instructions to use:</u>
 
-1. Parameters must be defined in the method natspec
+1. Parameters must be defined in the method's natspec
 2. Each parameter key should be prefixed with a hash (**#**) and end with a colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `
-3. For now, customization is available for parameters `sender` & `value` only
-4. Sender is `from` address of a transaction which is accessed using `msg.sender` inside a contract method. It should be defined in a fixed format as '**account-**<account_index>'
+3. For now, customization is only available for parameters `sender` & `value` 
+4. Sender is the `from` address of a transaction which is accessed using `msg.sender` inside a contract method. It should be defined in a fixed format as '**account-**<account_index>'
 5. `<account_index>` varies from `0-2` before remix-ide release v0.10.0 and `0-9` afterwards
 6. `remix_accounts.sol` must be imported in your test file to use custom `sender`
 7. Value is `value` sent along with a transaction in `wei` which is accessed using `msg.value` inside a contract method. It should be a number.
@@ -150,7 +154,7 @@ Points to remember
 
 * A test contract cannot have a method with parameters. Having one such method will show error: `Method 'methodname' can not have parameters inside a test contract`
 * Number of test accounts are `3` before remix-ide release v0.10.0 and `10` afterwards
-* A test file which imports `remix_accounts.sol` might not compile successfully with `Solidity Compiler` plugin but it will work fine with `Solidity Unit Testing` plugin.
+* While a test file which imports `remix_accounts.sol` might not compile successfully with `Solidity Compiler` plugin, do not worry, this will have no bearing on its success with `Solidity Unit Testing` plugin.
 
 Remix-tests
 ----------------------
