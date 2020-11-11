@@ -116,7 +116,9 @@ Remix facilitates users with various types of customizations to test a contract 
 
 **1. Custom Compiler Context**
 
-`Solidity Unit Testing` refers `Solidity Compiler` plugin for compiler configurations. One can provide customized inputs for `Compiler`, `EVM Version`, `Enable Optimization` & `runs`. This configuration will be used for contract compilation before running unit tests.
+`Solidity Unit Testing` refers to the `Solidity Compiler` plugin for compiler configurations. Configure `Compiler`, `EVM Version`, `Enable Optimization` & `runs` in the `Solidity Compiler` plugin and this will be used in the `Solidity Unit Testing` plugin for contract compilation before running unit tests.
+
+
 
 ![](images/a-unit-testing-custom-compiler-config.png)
 
@@ -124,7 +126,7 @@ Remix facilitates users with various types of customizations to test a contract 
 
 For interacting with a contract's method, the prime parameters of a transaction are `from` address, `value` & `gas`. Typically, a method's behaviour is tested with different values of these parameters.
 
-Remix provides the functionality of custom `msg.sender` & `msg.value` of transaction using natspec, like:
+One can input custom values for `msg.sender` & `msg.value` of transaction using NatSpec comments, like:
 
 ```
 /// #sender: account-0
@@ -134,9 +136,9 @@ function checkSenderIs0AndValueis10 () public payable {
     Assert.equal(msg.value, 10, "wrong value in checkSenderIs0AndValueis10");
 }
 ```
-<u>Instructions to use:</u>
+<b>Instructions to use:</b>
 
-1. Parameters must be defined in the method's natspec
+1. Parameters must be defined in the method's NatSpec
 2. Each parameter key should be prefixed with a hash (**#**) and end with a colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `
 3. For now, customization is only available for parameters `sender` & `value` 
 4. Sender is the `from` address of a transaction which is accessed using `msg.sender` inside a contract method. It should be defined in a fixed format as '**account-**<account_index>'
