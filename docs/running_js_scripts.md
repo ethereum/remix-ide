@@ -1,7 +1,7 @@
 Running JS Scripts in Remix
 ===========================
 
-Remix accepts async/await scripts to run web3.js or ethers.js commands. The script needs to be wrapped in a self executing function.
+Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
 
 ## Why run JavaScript Scripts in Remix?
 * To mimic how the front-end of your dapp will use web3.js or ethers.js
@@ -52,4 +52,6 @@ The example below is to deploy a solidity contract named CustomERC20.sol.  That 
 })()
 ```
 
-For more script examples, please see [Frequently Asked Scripts](fas.html)
+For more script examples, please see [Frequently Asked Scripts](fas.html).
+
+Also see our Medium post about [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41).
