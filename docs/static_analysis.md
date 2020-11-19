@@ -3,23 +3,40 @@ Solidity Static Analysis
 
 Static code analysis is a process to debug the code by examining it and without actually executing the code. 
 
-`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. This plugin comes with `Solidity` environment of Remix IDE. It can also be activated individually from `Plugin Manager`.
+`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
+
+![](images/a-static-analysis-from-pm.png)
+
+This plugin comes with `Solidity` environment of Remix IDE. 
 
 How to use
 ------------
 
-If you select this plugin, you will see a number of modules listed along with checkboxes, one `Auto run` checkbox and a `Run` button.
+If you select this plugin, you will see a number of modules listed along with checkboxes, one `Auto run` checkbox and a `Run` button. `Run` button will be disabled as there is no compiled contract for now. 
+
+![](images/a-static-analysis-onload.png)
+
+By default, all modules are selected for analysing a smart contract.
+
+One can select/deselect the modules under which contract should be analyzed and can run the analysis for last compiled contract by clicking on `Run`.
+
+If `Auto run` checkbox is checked, analysis will be performed each time a contract is compiled. Uncheck the checkbox if you want to stop this behaviour.
+
+Run
+------
+
+If `Auto run` checkbox is checked, analysis will be performed on compiling a contract and result will be shown as badge to the plugin icon. This number tells warnings count for the contract (e.g; `12` in attached image below) .
+
+By visiting the plugin UI, the details of the warning can be seen along with the category name for each warning.
+
+Clicking on warning details will highlight the relevant code in the editor.
+
 
 ![](images/a-static-analysis.png)
 
-By default, all modules are selected for analysis and a new analysis is performed at each compilation.
-
-One can select/deselect the modules under which contract should be analyzed and can run the analysis again for last compiled contract by clicking on `Run`.
-
-If you don't want to run analysis each time you compile a contract, just uncheck the checkbox near to `Auto run`.
-
 Analysis Modules
 -----------------
+
 Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`.
 
 Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:
@@ -293,4 +310,4 @@ Remix-analyzer
 -----------------
 `remix-analyzer` is the library which works underneath of remix-ide `Solidity Static Analysis` plugin.
 
-`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix/tree/master/remix-analyzer#how-to-use)
+`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/@remix-project/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)
