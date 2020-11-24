@@ -9,20 +9,24 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
 * To run some tests on a previous deployed contract.
 
 ## Setup
-1. Make sure the **Generate contract metadata** option is **checked** in the settings module.
-[Settings documentation](settings.html)  ( ROB TODO: and make sure to update Settings.md!!!)
+1. These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**.
 
-2. **Async/await scripts do not currently work on the JSVM**  
-    * Go to the Deploy and Run module to select Injected Web3 or Web3 Provider and NOT the JSVM. 
+2. Compile a Solidity file - to generate the contract metadata.
 
-3. Compile a solidity file.
+3. In the Deploy & Run plugin, choose the Environment. 
+    * Async/await scripts work on in all of the Environments: the JavascriptVM, Injected Web3, and Web3 Provider. 
 
-4. Write the script
+4. Write the script - see below for an example.
 
-5. To run the script - either have the script be the active file in the editor and run `remix.exeCurrent()` in the console or right click on the script in the files explorer to get the popup context menu and select the **run** option. (ROB TODO - update with an image of the context menu)
+5. To run the script - either **(a)** make the script the **active file in the editor** and run `remix.exeCurrent()` in the console OR **(b)** right click on the script **in the files explorer** to get the popup context menu (see the image below) and select the **run** option. 
 
-## An Example
-The example below is to deploy a solidity contract named CustomERC20.sol.  That contract had been compiled and its metadata generated and put into the browser/artifacts folder. This example is using the web3.js library.  Ethers.js could also be used.
+  ![](images/a-running-scripts-run.png)
+
+
+## An Example Script
+The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library.  Ethers.js could also be used.
+
+For more information about this example, please see: [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)
 
 ```
 (async () => {
@@ -53,5 +57,3 @@ The example below is to deploy a solidity contract named CustomERC20.sol.  That 
 ```
 
 For more script examples, please see [Frequently Asked Scripts](fas.html).
-
-Also see our Medium post about [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41).
