@@ -17,7 +17,6 @@ Remix-IDE's urls have parameters -so it is possible to specify:
 * **The theme** (Dark or Light). 
 * The panels that should be **minimized**.
 * The **version of the Solidity** compiler & the **optimize** option enabled or disabled.
-* Which panels should be minimized.
 
 ### Activating a list of plugins
 The following example contains the url parameter **activate** followed by **a list of plugins**. The last plugin will gain the focus.  
@@ -33,7 +32,7 @@ https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,udapp,defiexp
 https://remix.ethereum.org/?#deactivate=udapp
 ```
 
-Note: plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)
+Note: a plugin is called by its **name** in its profile.  To check for a plugin's profile name - for plugins built by external teams, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)
 
 ### Minimizing Remix panels
 
@@ -45,6 +44,11 @@ https://remix.ethereum.org/?#embed=true
 To minimize just the side panel, use this URL:
 ```
 https://remix.ethereum.org/?#minimizesidepanel=true
+```
+
+To minimize just the terminal, use this URL:
+```
+https://remix.ethereum.org/?#minimizeterminal=true
 ```
 
 ### Specifying a theme
@@ -68,6 +72,12 @@ To link to Remix with the a list of plugins activated and with:
 
 ## Passing commands to a plugin via a url param
 It is also possible to pass a command to a plugin's api with a url parameter. 
+
+The URL parameter to issue a command is `call`.  Following the `call` is a // (double slash) separated list of arguements.
+
+```
+call=plugin_name//function//parameter1//paremeter2
+```
 
 **Here are some examples:**
 
@@ -101,3 +111,8 @@ https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth&call=LearnEth//sta
 https://remix.ethereum.org/?#version=soljson-v0.6.6+commit.6c089d02
 ```
 **Note:** you need to specify both the Solidity version and the commit.
+
+### Load a custom Solidity compiler:
+```
+https://remix.ethereum.org/#version=https://solidity-blog.s3.eu-central-1.amazonaws.com/data/08preview/soljson.js
+```
