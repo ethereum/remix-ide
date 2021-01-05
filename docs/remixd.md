@@ -37,7 +37,18 @@ There is an option to run remixd in read-only mode, use `--read-only` flag.
 - `remixd` provides `full read and write access` to the given folder for `any
 application` that can access the `TCP port 65520` on your local host.
 
-- To minimize the risk, Remixd can only bridge between your filesystem and Remix IDE URLS.
+- To minimize the risk, Remixd can only bridge between your filesystem and the Remix IDE URLS - including:
+
+```
+  http://remix-alpha.ethereum.org
+  http://remix.ethereum.org
+  https://remix-alpha.ethereum.org
+  https://remix.ethereum.org
+  package://a7df6d3c223593f3550b35e90d7b0b1f.mod
+  package://6fd22d6fe5549ad4c4d8fd3ca0b7816b.mod
+  https://ipfsgw.komputing.org
+```
+(the package:// urls are for remix desktop)
 
 ### After the command is running, activate the remixd plugin.
 From `Remix IDE`, in the Plugin Manager, activate the remixd plugin.  This plugin is a **websocket plugin** and it has no UI other than a modal dialog box.
