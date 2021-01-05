@@ -56,4 +56,4 @@ For more information about this example, please see: [running async/await script
 })()
 ```
 
-For more script examples, please see [Frequently Asked Scripts](fas.html).
+For more script examples, please see [Frequently Asked Scripts](FAS.html).
