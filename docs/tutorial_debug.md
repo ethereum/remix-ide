@@ -1,16 +1,15 @@
 Debugging Transactions
 ======================
 
-There are two ways to start debugging, each one corresponds to a different use case.
-* from the transaction log in the Terminal - use this when you want to debug a transaction.
-* from the Debugger - use this if you have a *transaction hash*.
+(also see this page's companion: [the Debugger Tour](debugger.html))
+
+There are two ways to start a debugging session, each one corresponds to a different use case.
+* Use Case 1: for debugging a transaction made in Remix - click the **Debug button** in the transaction log in Remix's Terminal.
+
+* Use Case 2: for debugging a transaction where you have a **txn hash** from **verified contract** or where you have the txn hash and the compiled source code with the same compilation settings as the deployed contract.
 
 ### Initiate Debugging from the transaction log in the Terminal
-Let's start with a basic contract ( or replace this one by your own ) :
-- create a blank file in the file explorer (by clicking the + icon) and give it a name.
-- copy the code below.
-- compile the code.
-- click the Run & Deploy icon in the icon panel.
+Let's start with a basic contract ( or replace the contract below with your own ) 
 
 ``` 
 pragma solidity >=0.5.1 <0.6.0;
@@ -50,10 +49,13 @@ contract Donation {
 }
 ```
 
-For the purpose of this tutorial, we will run the `JavaScript VM`.
-This simulates a custom blockchain. You could do the same using a proper backend node.
+- Make a new file in Remix and copy the code above into it.
+- Compile the code.
+- Go to the Run & Deploy module.
 
-Let's deploy the contract:
+For the purpose of this tutorial, we will run the `JavaScript VM`.
+
+- Deploy the contract:
 
 Click the `Deploy` button
 
@@ -68,15 +70,15 @@ Then open it up (by clicking the caret).
 ![](images/a-debug3-udapp2.png)
 
 
-We are going to call the `Donate` function and will send it ether.  
+We are going to call the `Donate` function and will send 2 Ethers.  
 
-To do this: in the value input box put in **2** and select Ether as the unit (and not wei like I did in the image below - well you could - it won't really change anything).
+To do this: in the value input box put in **2** and **select Ether** as the unit (DO NOT LEAVE THE DEFAULT unit as **gwei** or the change will be hard to detect).
 
 ![](images/a-debug4-value-loc.png)
 
 Then click the `Donate` button.
 
-This will send Ether to the this function.
+This will send the Ether to the the function.
 
 Because we are using the `JavaScript VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)
 
@@ -84,11 +86,11 @@ Remix displays information related to each transaction result in the terminal.
 
 Check in the **terminal** where the transaction you just made is logged. 
 
-Click the debug button to start debugging it.
+Click the **debug button**.
 
 ![](images/a-debug5-term-debug-but.png)
 
-Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger.
+But before we get to the actual debugging tool, the next section shows how to start a debugging session directly from the Debugger.
 
 ### Initiate Debugging from the Debugger
 
@@ -160,35 +162,32 @@ These panels display low level informations about the execution:
 > -   Call Data
 > -   Call Stack
 > -   Return Value (only if the current step is a RETURN opcode)
-> -   Full Storages Changes (only at the end of the execution - display
->     every storage change of every modified contract)
+> -   Full Storages Changes (only at the end of the execution & it displays the all the storage changes)
 
 ### Reverted Transaction
 
-A transaction can be `reverted` (because of an *out of gas exception* or
-Solidity `revert` statement or because of a low level exception).
+A transaction can be `reverted` (because of an *out of gas exception*, a Solidity `revert` statement or a low level exception).
 
-It is important to be aware of the exception and to locate
-where the exception is in the source code.
+It is important to be aware of the exception and to locate where the exception is in the source code.
 
-Remix will warn you when the execution throws an exception. The
-`warning` button will jump to the last opcode before the exception
-happened.
+Remix will warn you when the execution throws an exception. 
+The `warning` button will jump to the last opcode before the exception happened.
 
 ### Breakpoints
 
 The two last buttons from the navigation area are used to jump either
 back to the previous breakpoint or forward to the next breakpoint.
 
-Breakpoints can be added and removed by clicking on the line number in the *Editor*.
+Breakpoints can be added and removed by clicking on the line number in the **Editor**.
 
-When using debug session with breakpoints, the execution will jump to the first
+When using a debug session with breakpoints, the execution will jump to the first
 encountered breakpoint.
 
 **Important note:** If you add a breakpoint to a line that declares a
 variable, it might be triggered twice: Once for initializing the
-variable to zero and second time for assigning the actual value. As an
-example, assume you are debugging the following contract:
+variable to zero and second time for assigning the actual value. 
+
+Here's an example of this issue.  If you are debugging the following contract:
 
 ``` 
 pragma solidity >=0.5.1 <0.6.0;
@@ -203,7 +202,7 @@ contract ctr {
 }
 ```
 
-And let's says that breakpoints are set for the lines
+And breakpoints are set for the lines
 
 `uint p = 45;`
 
@@ -211,7 +210,7 @@ And let's says that breakpoints are set for the lines
 
 `uint l = 34;`
 
-then clicking on `Jump to next breakpoint` will stop at the following
+then clicking on the `Jump to the next breakpoint` button will stop at the following
 lines in the given order:
 
 > `uint p = 45;` (declaration of p)
