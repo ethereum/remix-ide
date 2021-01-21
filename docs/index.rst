@@ -1,5 +1,5 @@
 Welcome to Remix's documentation!
-===============================
+=====================================
 
 Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as being a playground for learning and teaching Ethereum.
 
@@ -68,6 +68,7 @@ Useful links:
    :caption: Solidity Unit Testing
 
    unittesting
+   unittestingAsCLI
    assert_library
    unittesting_examples
 
