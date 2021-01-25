@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Remix - Ethereum IDE'
-copyright = u'2019-21, Remix'
+copyright = u'2019-21, Remix;'
 author = u'Remix Team'
 
 github_doc_root = 'https://github.com/ethereum/remix-ide/tree/master/docs'
@@ -155,7 +155,7 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
