@@ -91,5 +91,5 @@ Examples:
 Assert.lesserThan(int(-2), int(-1));
 // OK
 Assert.lesserThan(int(2), int(1), "2 is not lesser than 1");
-// error: 2 is not greater than 1
+// error: 2 is not lesser than 1
 ```
