@@ -8,15 +8,19 @@ To give the Remix-ide (the web app) access to a folder on your local computer, y
 **NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin.**
 
 The code of `remixd` is
-[here](https://github.com/ethereum/remixd) .
+[here](https://github.com/ethereum/remix-project/tree/master/libs/remixd) .
 
 ### remixd Installation
 `remixd` can be globally installed using the following command:
-`npm install -g remixd`
+`npm install -g @remix-project/remixd`
 
 Or just install it in the directory of your choice by removing the -g flag:
-`npm install remixd`
+`npm install @remix-project/remixd`
 
+**NOTE: The npm address of remixd has moved - it had been in its own repo but now it is under remix-project.**
+Please update to the latest remixd by:
+1. uninstall the old one: npm uninstall -g remixd
+2. install the new: npm install -g @remix-project/remixd
 ### remixd Command
 From the terminal, the command `remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance>` will start `remixd` and will share the given folder with remix-ide. 
 
