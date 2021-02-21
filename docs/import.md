@@ -17,7 +17,7 @@ Files in Remix can be imported with the `import` key word with the path to the f
 ```
 pragma solidity >=0.4.22 <0.6.0;
 
-import "./ballot.sol";
+import "./contracts/2_Owner.sol";
 ```
 
 
