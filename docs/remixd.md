@@ -10,15 +10,18 @@ To give the Remix-ide (the web app) access to a folder on your local computer, y
 The code of `remixd` is
 [here](https://github.com/ethereum/remix-project/tree/master/libs/remixd) .
 
-### remixd Installation
+### Remixd Installation
 `remixd` can be globally installed using the following command:
 `npm install -g @remix-project/remixd`
 
 Or just install it in the directory of your choice by removing the -g flag:
 `npm install @remix-project/remixd`
 
-**NOTE: The npm address of remixd has moved - it had been in its own repo but now it is under remix-project.**
-Please update to the latest remixd by:
+**NOTE: The npm address as well as the github repo of remixd have changed - in both cases moving under **remix-project**. 
+- In github remixd moved to https://github.com/ethereum/remix-project/tree/master/libs/remixd.
+- In NPM the new address is remix-project/remixd.
+
+### Update to the latest Remixd
 1. uninstall the old one: npm uninstall -g remixd
 2. install the new: npm install -g @remix-project/remixd
 ### remixd Command
