@@ -7,9 +7,9 @@ To get to the File Explorers module - click the file explorers icon.
 
 By default Remix IDE **ONLY** stores files in your browser's local storage.  It is possible to go beyond this default behavior - see the **Important Note** below.
 
-The files explorer's **browser folder** has a sample project in it. The files stored in your browser's **browser storage**.
+The files explorer's **browser folder** has a sample project in it. The files are stored in your browser's **browser storage**.
 
-If, when you open Remix IDE, you do not see the sample project (like in the image above), they will appear when all the files in the File Explorer are erased or when the cache is cleared.
+If you open Remix IDE and you do not see the sample project (like in the image above), they will appear when all the files in the File Explorer are erased or when the cache is cleared.
 
 **Important Note:** Clearing the browser storage will **permanently delete** all the
 solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use [RemixD](remixd.html) or use the [desktop version of Remix-IDE](https://github.com/ethereum/remix-desktop/releases/). RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app. Furthermore you can use the DGIT plugin to save a git repo of your files in IPFS.
@@ -78,4 +78,4 @@ Right Click on a Script
 
 ![](images/a-file-ex-rt-click-script.png)
 
-Right click on any file with a .js extension will gives the **run** option in the context menu.  The **run** shortcut is equivalent to getting the script file to be the active tab in the editor and then running the command `remix.exeCurrent()` in the console.
+Right click on any file with a .js extension will give the **run** option in the context menu.  The **run** shortcut is equivalent to getting the script file to be the active tab in the editor and then running the command `remix.exeCurrent()` in the console.
