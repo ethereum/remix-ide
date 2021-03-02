@@ -85,3 +85,35 @@ The input of initPeepToPeeps takes a struct.  If you input
 **Q:** Where do plugin developers go with their questions?
 
 **A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin
+
+### Analytics
+
+**Q:** What information does Remix save when Matomo Analytics is enabled?   
+
+**A:** We want to know:
+
+- Which plugins get activated & deactivated
+- If users check the box to publish a contract's metadata when deploying
+- Which themes are used/used most/not used at all
+- The usage of the links to documentation
+- On the homepage, which file importing buttons are used
+
+**Q:** Is it opt-in or opt-out?
+
+**A:** We use Matomo as an opt-in analytics platform. 
+
+**Q:** Where is the info stored?  Is the info shared with 3rd parties? 
+
+**A:** All data collected through Matomo is stored on our own server. No data is given to third parties.
+
+We respect your privacy and do not collect nor store any personally identifiable information (PII).
+
+**Q:** What does Remix do with this info?
+
+**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential.
+
+With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users.
+
+**Q:** After I agree opt-in, can I change my mind?
+
+**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out.
