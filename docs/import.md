@@ -11,7 +11,7 @@ When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gatew
 
 Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder. 
 
-Under the hood, Remix checks to see if the files are already loaded in the **.deps** directory.  If not, it goes out and gets them from a url - if provided or via unpkg (if it is an NPM lib).
+Under the hood, Remix checks to see if the files are already loaded in the **.deps** directory.  If not, it gets them via unpkg if it is an NPM lib.
 
 Here are some example import statements:
 
@@ -38,7 +38,7 @@ You should specify the release tag (where available), otherwise you will get the
 import 'bzz-raw://5766400e5d6d822f2029b827331b354c41e0b61f73440851dd0d06f603dd91e5';
 ```
 
-### Importing from IPFS
+### Import from IPFS
 
 ```
 import 'ipfs://Qmdyq9ZmWcaryd1mgGZ4PttRNctLGUSAMpPqufsk6uRMKh';
