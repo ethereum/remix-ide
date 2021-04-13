@@ -17,13 +17,13 @@ files: [
   # Source files filter
   # e.g. "/resources/en/*.json"
   #
-  "source" : "",
+  "source" : "/docs/locale/%locale_with_underscore%/LC_MESSAGES/*.po",
 
   #
   # Where translations will be placed
   # e.g. "/resources/%two_letters_code%/%original_file_name%"
   #
-  "translation" : "/docs/locale/%locale_with_underscore%/LC_MESSAGES/*.po",
+  "translation" : "/docs/locale/%locale_with_underscore%/LC_MESSAGES",
 
   #
   # Files or directories for ignore
