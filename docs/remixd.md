@@ -1,68 +1,90 @@
 Remixd: Access your Local Filesystem 
 =========================================
-To give the Remix-ide (the web app) access to a folder on your local computer, you need to use `remixd`.  
+To give the Remix IDE (the web app) access to a folder on your computer, you need to use **Remixd** - the plugin along with **remixd** - the cli/npm module. 
 
-`remixd` is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the `remixd` npm module. 
+The **Remixd** plugin can be activated from the plugin manager or in the **File Explorers** - see the image below.  The **connect to local host** - will activate the **Remixd** plugin.
 
+![](images/a-remixd-fe.png)
 
-**NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin.**
+Once you click **connect to local host** or activate Remixd from the **Plugin Manager**, a modal will come up:
+
+![](images/a-remixd-modal.png)
+
+The Remixd plugin is a **websocket plugin** and it has no UI other than this modal dialog box - so you won't see a Remixd icon in the icon panel.
+
+Before you hit **Connect**, you need to install the **remixd** NPM module and run the **remixd** command. 
 
 The code of `remixd` is
 [here](https://github.com/ethereum/remix-project/tree/master/libs/remixd) .
 
-### Remixd Installation
-`remixd` can be globally installed using the following command:
+### remixd Installation
+**remixd** can be globally installed using the following command:
 `npm install -g @remix-project/remixd`
 
 Or just install it in the directory of your choice by removing the -g flag:
 `npm install @remix-project/remixd`
 
-**NOTE: The npm address as well as the github repo of remixd have changed - in both cases moving under **remix-project**. 
-- In github remixd moved to https://github.com/ethereum/remix-project/tree/master/libs/remixd.
-- In NPM the new address is remix-project/remixd.
+**NOTE:** The npm address as well as the github repo of remixd have changed - in both cases moving under **remix-project**. 
+- **Github** address is:
+**https://github.com/ethereum/remix-project/tree/master/libs/remixd**
+- **NPM** address is: **remix-project/remixd**
 
-### Update to the latest Remixd
-1. uninstall the old one: npm uninstall -g remixd
-2. install the new: npm install -g @remix-project/remixd
+### Find your version of remixd
+The command: `remixd -v` or `remixd --verison` will return your version number.  
+
+**If this command does not work, then you have an outdated version!**
+### Update to the latest remixd
+Because **remixd** creates a bridge from the browser to your local filesystem, it is important that you have the latest version of script.  
+
+For users who had installed the version of remixd from the old NPM address or for users who do not know which NPM address they had installed it from, run these 2 steps:
+
+1. uninstall the old one: **npm uninstall -g remixd**
+2. install the new: **npm install -g @remix-project/remixd**
+
+For users who know that they have a remixd version installed from @remix-project/remixd then just run: 
+
+**npm install -g @remix-project/remixd**
+
 ### remixd Command
-From the terminal, the command `remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance>` will start `remixd` and will share the given folder with remix-ide. 
+From the terminal, the command `remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance>` <br>will start **remixd** and will share the given folder with Remix IDE. 
 
-For example, to use remixd with Remix IDE at https://remix.ethereum.org, use this command: 
+#### HTTP vs HTTPS in the remixd command
+If your browser is on https://remix.ethereum.org (**secure http**) then use https in the command:<br>
 `remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org`
 
-Make sure that if you use https://remix.ethereum.org (**secure http**) in the remixd command (like in the example above), that you are also pointing your browser to https://remix.ethereum.org and not to http://remix.ethereum.org (plain old insecure http).  Or if you want to use http in the browser use http in the remixd command.
+Or if you are using **http** in the browser, then use **http** in the remixd command.
 
+#### Read/Write permission & Read-only mode
 The folder is shared using **a websocket connection** between `Remix IDE`
 and `remixd`.
 
 Be sure the user executing `remixd` has read/write permission on the
 folder.
 
-There is an option to run remixd in read-only mode, use `--read-only` flag.
+Alternatively, there is an option to run remixd in read-only mode, use `--read-only` flag.
 
 ### Warning!
-- `remixd` provides `full read and write access` to the given folder for `any
-application` that can access the `TCP port 65520` on your local host.
+- `remixd` **provides full read and write access** to the given folder **for any
+application** that can access the `TCP port 65520` on your local host.
 
-- To minimize the risk, Remixd can only bridge between your filesystem and the Remix IDE URLS - including:
+- To minimize the risk, Remixd can **ONLY** bridge between your filesystem and the Remix IDE URLS - including:
 
 ```
-  http://remix-alpha.ethereum.org
-  http://remix.ethereum.org
-  https://remix-alpha.ethereum.org
   https://remix.ethereum.org
+  https://remix-alpha.ethereum.org
+  https://remix-beta.ethereum.org
+  http://remix.ethereum.org
+  http://remix-alpha.ethereum.org
+  http://remix-beta.ethereum.org
   package://a7df6d3c223593f3550b35e90d7b0b1f.mod
   package://6fd22d6fe5549ad4c4d8fd3ca0b7816b.mod
   https://ipfsgw.komputing.org
 ```
-(the package:// urls are for remix desktop)
+(the package:// urls in the list above are for remix desktop)
 
-### After the command is running, activate the remixd plugin.
-From `Remix IDE`, in the Plugin Manager, activate the remixd plugin.  This plugin is a **websocket plugin** and it has no UI other than a modal dialog box.
+### Clicking Connect on the modal.
 
-This modal will ask confirmation
-
-Accepting this dialog will start a session.
+Clicking on the **Connect** button on the Remixd modal (see the image above), will attempt to start a session where your browser can access the specified folder on your computer's filesystem.
 
 If you do not have `remixd` running in the background - another modal will open up and it will say: 
 
@@ -71,14 +93,12 @@ Cannot connect to the remixd daemon.
 Please make sure you have the remixd running in the background.
 ```
 
-Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be available in the file explorer.
+Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be visible in the File Explorer's workspace under **localhost**.
 
-**When you click the activation of remixd is successful - there will NOT be an icon that loads in the icon panel.**
+![](images/a-ws-localhost.png)
 
-Click the File Explorers icon and in the swap panel you should now see the folder for `localhost`.
+### Creating & deleting folders & files
+Clicking on the **new folder** or **new file** icon under **localhost** will create a new file or folder in the shared folder.  Similarly, if you **right click** on a file or folder you can **rename** or **delete** the file.
 
-Click on the `localhost connection` icon:
-
-![](images/a-remixd-success.png)
-
-
+### Closing a remixd session
+In the terminal where **remixd** is running, typing `ctrl-c` will close the session.  Remix IDE will then put up a modal saying that **remixd** has stopped running.
