@@ -1,37 +1,33 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019, Remix
-# This file is distributed under the same license as the Remix, Ethereum-IDE
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-16 15:02+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-04-19 09:55\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/locale/fr_FR/LC_MESSAGES/tutorial_debug.po\n"
+"X-Crowdin-File-ID: 5054\n"
+"Language: fr_FR\n"
 
 #: ../../tutorial_debug.md:1
 msgid "Debugging Transactions"
 msgstr ""
 
 #: ../../tutorial_debug.md:4
-msgid ""
-"There are two ways to start debugging, each one corresponds to a "
-"different use case."
+msgid "There are two ways to start debugging, each one corresponds to a different use case."
 msgstr ""
 
 #: ../../tutorial_debug.md:5
-msgid ""
-"from the transaction log in the Terminal - use this when you want to "
-"debug a transaction."
+msgid "from the transaction log in the Terminal - use this when you want to debug a transaction."
 msgstr ""
 
 #: ../../tutorial_debug.md:6
@@ -47,9 +43,7 @@ msgid "Let's start with a basic contract ( or replace this one by your own ) :"
 msgstr ""
 
 #: ../../tutorial_debug.md:10
-msgid ""
-"create a blank file in the file explorer (by clicking the + icon) and "
-"give it a name."
+msgid "create a blank file in the file explorer (by clicking the + icon) and give it a name."
 msgstr ""
 
 #: ../../tutorial_debug.md:11
@@ -65,10 +59,7 @@ msgid "click the Run & Deploy icon in the icon panel."
 msgstr ""
 
 #: ../../tutorial_debug.md:53
-msgid ""
-"For the purpose of this tutorial, we will run the JavaScript VM. This "
-"simulates a custom blockchain. You could do the same using a proper "
-"backend node."
+msgid "For the purpose of this tutorial, we will run the JavaScript VM. This simulates a custom blockchain. You could do the same using a proper backend node."
 msgstr ""
 
 #: ../../tutorial_debug.md:56
@@ -92,10 +83,7 @@ msgid "We are going to call the Donate function and will send it ether."
 msgstr ""
 
 #: ../../tutorial_debug.md:73
-msgid ""
-"To do this: in the value input box put in 2 and select Ether as the unit "
-"(and not wei like I did in the image below - well you could - it won't "
-"really change anything)."
+msgid "To do this: in the value input box put in 2 and select Ether as the unit (and not wei like I did in the image below - well you could - it won't really change anything)."
 msgstr ""
 
 #: ../../tutorial_debug.md:77
@@ -107,17 +95,11 @@ msgid "This will send Ether to the this function."
 msgstr ""
 
 #: ../../tutorial_debug.md:81
-msgid ""
-"Because we are using the JavaScript VM, everything happens almost "
-"instantly.  (If we had been using Injected Web 3, then we would have to "
-"need to approve the transaction, pay for gas and wait for the transaction"
-" to get mined.)"
+msgid "Because we are using the JavaScript VM, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
 msgstr ""
 
 #: ../../tutorial_debug.md:83
-msgid ""
-"Remix displays information related to each transaction result in the "
-"terminal."
+msgid "Remix displays information related to each transaction result in the terminal."
 msgstr ""
 
 #: ../../tutorial_debug.md:85
@@ -129,9 +111,7 @@ msgid "Click the debug button to start debugging it."
 msgstr ""
 
 #: ../../tutorial_debug.md:91
-msgid ""
-"Before we get to the actual debugging tool, the next section show how to "
-"start debugging session directly from the Debugger."
+msgid "Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger."
 msgstr ""
 
 #: ../../tutorial_debug.md:93
@@ -139,15 +119,11 @@ msgid "Initiate Debugging from the Debugger"
 msgstr ""
 
 #: ../../tutorial_debug.md:95
-msgid ""
-"Click the bug icon in the icon panel to get to the debugger in the side "
-"panel."
+msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
 msgstr ""
 
 #: ../../tutorial_debug.md:97
-msgid ""
-"If you don't see the bug icon, go to the plugin manager and activate the "
-"debugger."
+msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
 msgstr ""
 
 #: ../../tutorial_debug.md:99
@@ -171,9 +147,7 @@ msgid "The transaction hash is there - copy it."
 msgstr ""
 
 #: ../../tutorial_debug.md:108
-msgid ""
-"Then click in the debugger paste the hash and click on the Start "
-"debugging button."
+msgid "Then click in the debugger paste the hash and click on the Start debugging button."
 msgstr ""
 
 #: ../../tutorial_debug.md:112
@@ -181,16 +155,11 @@ msgid "Using the debugger"
 msgstr ""
 
 #: ../../tutorial_debug.md:117
-msgid ""
-"The debugger allows one to see detailed informations about the "
-"transaction's execution. It uses the editor to display the location in "
-"the source code where the current execution is."
+msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
 msgstr ""
 
 #: ../../tutorial_debug.md:121
-msgid ""
-"The navigation part contains a slider and buttons that can be used to "
-"step through the transaction execution."
+msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
 msgstr ""
 
 #: ../../tutorial_debug.md:125
@@ -214,18 +183,11 @@ msgid "Instructions"
 msgstr ""
 
 #: ../../tutorial_debug.md:134
-msgid ""
-"The Instructions panel displays the bytecode of the current executing "
-"contract- with the current step highlighted."
+msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
 msgstr ""
 
 #: ../../tutorial_debug.md:137
-msgid ""
-"Important note: When this panel is hidden, the slider will have a courser"
-" granularity and only stop at expression boundaries, even if they are "
-"compiled into multiple EVM instructions. When the panel is displayed, it "
-"will be possible to step over every instruction, even those that refers "
-"to the same expression."
+msgid "Important note: When this panel is hidden, the slider will have a courser granularity and only stop at expression boundaries, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
 msgstr ""
 
 #: ../../tutorial_debug.md:143
@@ -233,9 +195,7 @@ msgid "Solidity Locals"
 msgstr ""
 
 #: ../../tutorial_debug.md:145
-msgid ""
-"The Solidity Locals panel displays local variables associated with the "
-"current context."
+msgid "The Solidity Locals panel displays local variables associated with the current context."
 msgstr ""
 
 #: ../../tutorial_debug.md:148
@@ -243,9 +203,7 @@ msgid "Solidity State"
 msgstr ""
 
 #: ../../tutorial_debug.md:150
-msgid ""
-"The Solidity State panel displays state variables of the current "
-"executing contract."
+msgid "The Solidity State panel displays state variables of the current executing contract."
 msgstr ""
 
 #: ../../tutorial_debug.md:153
@@ -281,9 +239,7 @@ msgid "Return Value (only if the current step is a RETURN opcode)"
 msgstr ""
 
 #: ../../tutorial_debug.md:163
-msgid ""
-"Full Storages Changes (only at the end of the execution - display every "
-"storage change of every modified contract)"
+msgid "Full Storages Changes (only at the end of the execution - display every storage change of every modified contract)"
 msgstr ""
 
 #: ../../tutorial_debug.md:166
@@ -291,21 +247,15 @@ msgid "Reverted Transaction"
 msgstr ""
 
 #: ../../tutorial_debug.md:168
-msgid ""
-"A transaction can be reverted (because of an out of gas exception or "
-"Solidity revert statement or because of a low level exception)."
+msgid "A transaction can be reverted (because of an out of gas exception or Solidity revert statement or because of a low level exception)."
 msgstr ""
 
 #: ../../tutorial_debug.md:171
-msgid ""
-"It is important to be aware of the exception and to locate where the "
-"exception is in the source code."
+msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
 msgstr ""
 
 #: ../../tutorial_debug.md:174
-msgid ""
-"Remix will warn you when the execution throws an exception. The warning "
-"button will jump to the last opcode before the exception happened."
+msgid "Remix will warn you when the execution throws an exception. The warning button will jump to the last opcode before the exception happened."
 msgstr ""
 
 #: ../../tutorial_debug.md:178
@@ -313,29 +263,19 @@ msgid "Breakpoints"
 msgstr ""
 
 #: ../../tutorial_debug.md:180
-msgid ""
-"The two last buttons from the navigation area are used to jump either "
-"back to the previous breakpoint or forward to the next breakpoint."
+msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
 msgstr ""
 
 #: ../../tutorial_debug.md:183
-msgid ""
-"Breakpoints can be added and removed by clicking on the line number in "
-"the Editor."
+msgid "Breakpoints can be added and removed by clicking on the line number in the Editor."
 msgstr ""
 
 #: ../../tutorial_debug.md:185
-msgid ""
-"When using debug session with breakpoints, the execution will jump to the"
-" first encountered breakpoint."
+msgid "When using debug session with breakpoints, the execution will jump to the first encountered breakpoint."
 msgstr ""
 
 #: ../../tutorial_debug.md:188
-msgid ""
-"Important note: If you add a breakpoint to a line that declares a "
-"variable, it might be triggered twice: Once for initializing the variable"
-" to zero and second time for assigning the actual value. As an example, "
-"assume you are debugging the following contract:"
+msgid "Important note: If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and second time for assigning the actual value. As an example, assume you are debugging the following contract:"
 msgstr ""
 
 #: ../../tutorial_debug.md:206
@@ -355,9 +295,7 @@ msgid "uint l = 34;"
 msgstr ""
 
 #: ../../tutorial_debug.md:214
-msgid ""
-"then clicking on Jump to next breakpoint will stop at the following lines"
-" in the given order:"
+msgid "then clicking on Jump to next breakpoint will stop at the following lines in the given order:"
 msgstr ""
 
 #: ../../tutorial_debug.md:217
