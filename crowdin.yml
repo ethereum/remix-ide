@@ -17,7 +17,7 @@ files: [
   # Source files filter
   # e.g. "/resources/en/*.json"
   #
-  "source" : "/docs/locale/%locale_with_underscore%/LC_MESSAGES/*.po",
+  "source" : "*.po",
 
   #
   # Where translations will be placed
