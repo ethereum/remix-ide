@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2021-04-20 12:27\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/locations.pot\n"
+"X-Crowdin-File-ID: 5092\n"
+"Language: zh_CN\n"
+
+#: ../../locations.md:1
+msgid "Remix URLs & Links with Parameters"
+msgstr ""
+
+#: ../../locations.md:4
+msgid "Remix URLs"
+msgstr ""
+
+#: ../../locations.md:5
+msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
+msgstr ""
+
+#: ../../locations.md:6
+msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
+msgstr ""
+
+#: ../../locations.md:8
+msgid "Github repo: https://github.com/ethereum/remix-project . The README contains instructions for running Remix-IDE locally."
+msgstr ""
+
+#: ../../locations.md:10
+msgid "Github release: https://github.com/ethereum/remix-project/releases ."
+msgstr ""
+
+#: ../../locations.md:13
+msgid "Embedding & Linking to Remix"
+msgstr ""
+
+#: ../../locations.md:15
+msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
+msgstr ""
+
+#: ../../locations.md:16
+msgid "the list of plugins you want activated"
+msgstr ""
+
+#: ../../locations.md:17
+msgid "the theme (Dark or Light)"
+msgstr ""
+
+#: ../../locations.md:18
+msgid "the panels that should be minimized"
+msgstr ""
+
+#: ../../locations.md:19
+msgid "if you want the Solidity compiler to have optimize enabled"
+msgstr ""
+
+#: ../../locations.md:21
+msgid "In the following example, there is a list of plugins that follows the word plugins will be activated and the last plugin will gain the focus."
+msgstr ""
+
+#: ../../locations.md:26
+msgid "For the plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
+msgstr ""
+
+#: ../../locations.md:28
+msgid "Further Customization with URL parameters"
+msgstr ""
+
+#: ../../locations.md:30
+msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
+msgstr ""
+
+#: ../../locations.md:32
+msgid "https://remix.ethereum.org/?#embed=true"
+msgstr ""
+
+#: ../../locations.md:34
+msgid "To link with the side panel minimized use this URL:"
+msgstr ""
+
+#: ../../locations.md:36
+msgid "https://remix.ethereum.org/?#minimizesidepanel=true"
+msgstr ""
+
+#: ../../locations.md:38
+msgid "To link to Remix with the dark theme or the light theme specified use this url:"
+msgstr ""
+
+#: ../../locations.md:40
+msgid "https://remix.ethereum.org/?#theme=Dark"
+msgstr ""
+
+#: ../../locations.md:42
+msgid "To link to Remix with the Solidity compiler, the unit testing, and LearnEth plugins activated (with Learneth gaining the side panel's focus) & with the Light theme loaded & with the terminal minimized use this URL & with optimize off:"
+msgstr ""
+
+#: ../../locations.md:44
+msgid "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
+msgstr ""
+
