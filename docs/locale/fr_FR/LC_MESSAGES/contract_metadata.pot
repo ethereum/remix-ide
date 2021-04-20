@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2021-04-20 12:27\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_metadata.pot\n"
+"X-Crowdin-File-ID: 5078\n"
+"Language: fr_FR\n"
+
+#: ../../contract_metadata.md:1
+msgid "Build Artifact"
+msgstr ""
+
+#: ../../contract_metadata.md:4
+msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
+msgstr ""
+
+#: ../../contract_metadata.md:6
+msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
+msgstr ""
+
+#: ../../contract_metadata.md:8
+msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
+msgstr ""
+
+#: ../../contract_metadata.md:10
+msgid "You can write scripts that can access either of these files."
+msgstr ""
+
+#: ../../contract_metadata.md:12
+msgid "Library Deployment with filename.json"
+msgstr ""
+
+#: ../../contract_metadata.md:15
+msgid "By default Remix automatically deploys needed libraries."
+msgstr ""
+
+#: ../../contract_metadata.md:17
+msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
+msgstr ""
+
+#: ../../contract_metadata.md:19
+msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
+msgstr ""
+
+#: ../../contract_metadata.md:22
+msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
+msgstr ""
+
+#: ../../contract_metadata.md:24
+msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
+msgstr ""
+
+#: ../../contract_metadata.md:28
+msgid "Here is a sample metadata file for linking a library:"
+msgstr ""
+
