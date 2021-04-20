@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../FAQ.md:1
+msgid "FAQ"
+msgstr ""
+
+#: ../../FAQ.md:4
+msgid "Solidity compiler"
+msgstr ""
+
+#: ../../FAQ.md:6
+msgid "Q: Error: compiler might be in a non-sane state"
+msgstr ""
+
+#: ../../FAQ.md:13
+msgid ""
+"A: Old versions of solidity compiler had this problem with chrome. Please"
+" change the compiler version in Solidity Plugin to the newer one or use "
+"another browser."
+msgstr ""
+
+#: ../../FAQ.md:16
+msgid ""
+"Q: I’m getting an issue with Maximum call stack exceed and various other "
+"errors, can't compile."
+msgstr ""
+
+#: ../../FAQ.md:18
+msgid "A:  Try a different browser or a newer solidity compiler version."
+msgstr ""
+
+#: ../../FAQ.md:20
+msgid "Q: How to verify a contract that imports other contracts?"
+msgstr ""
+
+#: ../../FAQ.md:22
+msgid ""
+"A:  The verification tool does not recursively go through the import "
+"statments in a contract.  So can only verify a 'flattened' contract."
+msgstr ""
+
+#: ../../FAQ.md:24
+msgid ""
+"There is a plugin called Flattener which will stuff all the original code"
+" and the imported code into a single file."
+msgstr ""
+
+#: ../../FAQ.md:26
+msgid "Deploy & Run"
+msgstr ""
+
+#: ../../FAQ.md:28
+msgid ""
+"Q: I am using an Infura endpoint in my app, but when I try to deploy "
+"against that endpoint in remix IDE selecting \"web3 provider\" and "
+"putting my endpoint in, it's telling me that it can't connect"
+msgstr ""
+
+#: ../../FAQ.md:30
+msgid "A: If the endpoint you are using is http, it won't work."
+msgstr ""
+
+#: ../../FAQ.md:32
+msgid "Q: Where is deploy button?"
+msgstr ""
+
+#: ../../FAQ.md:34
+msgid ""
+"A: Its in the Deploy & Run module. If you haven't activated that module, "
+"you should do that by clicking Deploy & Run module in the Plugin Manager."
+" You could also activate everything you need to work with solidity on the"
+" landing page ( click the remix logo at the top left for the screen) and "
+"click the \"Solidity\" button in the environment section."
+msgstr ""
+
+#: ../../FAQ.md:37
+msgid "Q: How to pass a tuple to a public function in Remix?"
+msgstr ""
+
+#: ../../FAQ.md:39
+msgid "A: Pass it as an array []."
+msgstr ""
+
+#: ../../FAQ.md:41
+msgid ""
+"Q: How to input a struct as input to a parameter of a function in the "
+"Deploy & Run module?"
+msgstr ""
+
+#: ../../FAQ.md:43
+msgid ""
+"A: For inputting a struct, just like a tuple, pass it in as an array []."
+"  Also you need to put in the line:"
+msgstr ""
+
+#: ../../FAQ.md:45
+msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
+msgstr ""
+
+#: ../../FAQ.md:47
+msgid "For example, here's a solidity file with a struct is an input parameter."
+msgstr ""
+
+#: ../../FAQ.md:79
+msgid ""
+"The input of initPeepToPeeps takes a struct.  If you input [1,2] the "
+"transaction will go through."
+msgstr ""
+
+#: ../../FAQ.md:83
+msgid "General"
+msgstr ""
+
+#: ../../FAQ.md:85
+msgid "Q: Where do plugin developers go with their questions?"
+msgstr ""
+
+#: ../../FAQ.md:87
+msgid ""
+"A: The Gitter Remix plugin developers room https://gitter.im/ethereum"
+"/remix-dev-plugin"
+msgstr ""
+
