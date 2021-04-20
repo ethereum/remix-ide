@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Remix
+# This file is distributed under the same license as the Remix, Ethereum-IDE
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-16 15:02+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../contract_metadata.md:1
+msgid "Build Artifact"
+msgstr ""
+
+#: ../../contract_metadata.md:4
+msgid ""
+"When a compilation succeeds, Remix creates a JSON file for each compiled "
+"contract. The JSON file contains the compilation's artifact.  Actually, "
+"for this to happen, you need to check the Generate contract metadata box "
+"in the General settings section of the Settings module.  The .JSON file "
+"with the metadata will appear in the file explorer where the compiled "
+"file is located."
+msgstr ""
+
+#: ../../contract_metadata.md:7
+msgid ""
+"This JSON file contains the link to the libraries, the bytecode, the "
+"deployed bytecode, the gas estimation, the method identifiers, and the "
+"ABI."
+msgstr ""
+
+#: ../../contract_metadata.md:9
+msgid "You can write scripts that can access this file."
+msgstr ""
+
+#: ../../contract_metadata.md:11
+msgid "Library Deployment"
+msgstr ""
+
+#: ../../contract_metadata.md:14
+msgid "By default Remix automatically deploys needed libraries."
+msgstr ""
+
+#: ../../contract_metadata.md:16
+msgid ""
+"linkReferences contains a map representing libraries which depend on the "
+"current contract. Values are addresses of libraries used for linking the "
+"contract."
+msgstr ""
+
+#: ../../contract_metadata.md:19
+msgid ""
+"autoDeployLib defines if the libraries should be auto deployed by Remix "
+"or if the contract should be linked with libraries described in "
+"linkReferences"
+msgstr ""
+
+#: ../../contract_metadata.md:21
+msgid ""
+"Note that Remix will resolve addresses corresponding to the current "
+"network. By default, a configuration key follow the form: "
+"<network_name>:<networkd_id>, but it is also possible to define "
+"<network_name> or <network_id> as keys."
+msgstr ""
+
