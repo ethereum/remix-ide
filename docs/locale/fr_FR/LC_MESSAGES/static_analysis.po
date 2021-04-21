@@ -2,20 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 15:02+0200\n"
-"PO-Revision-Date: 2021-04-19 09:55\n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2021-04-21 10:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Crowdin-Project: remix-translation\n"
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/locale/fr_FR/LC_MESSAGES/static_analysis.po\n"
-"X-Crowdin-File-ID: 5048\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/static_analysis.pot\n"
+"X-Crowdin-File-ID: 5108\n"
 "Language: fr_FR\n"
 
 #: ../../static_analysis.md:1
@@ -74,16 +73,26 @@ msgstr ""
 msgid "tx.origin is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
 msgstr ""
 
-#: ../../static_analysis.md:32 ../../static_analysis.md:41
-#: ../../static_analysis.md:54 ../../static_analysis.md:65
-#: ../../static_analysis.md:78 ../../static_analysis.md:87
-#: ../../static_analysis.md:95 ../../static_analysis.md:105
-#: ../../static_analysis.md:119 ../../static_analysis.md:136
-#: ../../static_analysis.md:150 ../../static_analysis.md:168
-#: ../../static_analysis.md:194 ../../static_analysis.md:207
-#: ../../static_analysis.md:217 ../../static_analysis.md:229
-#: ../../static_analysis.md:239 ../../static_analysis.md:247
-#: ../../static_analysis.md:257 ../../static_analysis.md:269
+#: ../../static_analysis.md:32
+#: ../../static_analysis.md:41
+#: ../../static_analysis.md:54
+#: ../../static_analysis.md:65
+#: ../../static_analysis.md:78
+#: ../../static_analysis.md:87
+#: ../../static_analysis.md:95
+#: ../../static_analysis.md:105
+#: ../../static_analysis.md:119
+#: ../../static_analysis.md:136
+#: ../../static_analysis.md:150
+#: ../../static_analysis.md:168
+#: ../../static_analysis.md:194
+#: ../../static_analysis.md:207
+#: ../../static_analysis.md:217
+#: ../../static_analysis.md:229
+#: ../../static_analysis.md:239
+#: ../../static_analysis.md:247
+#: ../../static_analysis.md:257
+#: ../../static_analysis.md:269
 #: ../../static_analysis.md:284
 msgid "Example:"
 msgstr ""
