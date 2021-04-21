@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:08\n"
+"PO-Revision-Date: 2021-04-21 12:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "Welcome to Remix documentation!"
-msgstr ""
+msgstr "Bienvenue sur la documentation de Remix!"
 
 #: ../../index.rst:4
 msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
-msgstr ""
+msgstr "Remix est un outil de développement opensource permettant de développer des contracts Ethereum en utilisant le language Solidity. Remix IDE peut être utilisé dans une navigateur ou localement dans une application bureau."
 
 #: ../../index.rst:7
 msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
