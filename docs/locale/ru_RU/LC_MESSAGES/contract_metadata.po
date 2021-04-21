@@ -2,20 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 15:02+0200\n"
-"PO-Revision-Date: 2021-04-19 09:55\n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2021-04-21 11:08\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
 "X-Crowdin-Project: remix-translation\n"
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/locale/fr_FR/LC_MESSAGES/contract_metadata.po\n"
-"X-Crowdin-File-ID: 5018\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_metadata.pot\n"
+"X-Crowdin-File-ID: 5078\n"
 "Language: ru_RU\n"
 
 #: ../../contract_metadata.md:1
@@ -23,34 +22,46 @@ msgid "Build Artifact"
 msgstr ""
 
 #: ../../contract_metadata.md:4
-msgid "When a compilation succeeds, Remix creates a JSON file for each compiled contract. The JSON file contains the compilation's artifact.  Actually, for this to happen, you need to check the Generate contract metadata box in the General settings section of the Settings module.  The .JSON file with the metadata will appear in the file explorer where the compiled file is located."
+msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
 msgstr ""
 
-#: ../../contract_metadata.md:7
-msgid "This JSON file contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
+#: ../../contract_metadata.md:6
+msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
 msgstr ""
 
-#: ../../contract_metadata.md:9
-msgid "You can write scripts that can access this file."
+#: ../../contract_metadata.md:8
+msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
 msgstr ""
 
-#: ../../contract_metadata.md:11
-msgid "Library Deployment"
+#: ../../contract_metadata.md:10
+msgid "You can write scripts that can access either of these files."
 msgstr ""
 
-#: ../../contract_metadata.md:14
+#: ../../contract_metadata.md:12
+msgid "Library Deployment with filename.json"
+msgstr ""
+
+#: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
 msgstr ""
 
-#: ../../contract_metadata.md:16
-msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
+#: ../../contract_metadata.md:17
+msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
 msgstr ""
 
 #: ../../contract_metadata.md:19
+msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
+msgstr ""
+
+#: ../../contract_metadata.md:22
 msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
 msgstr ""
 
-#: ../../contract_metadata.md:21
-msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follow the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
+#: ../../contract_metadata.md:24
+msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
+msgstr ""
+
+#: ../../contract_metadata.md:28
+msgid "Here is a sample metadata file for linking a library:"
 msgstr ""
 
