@@ -2,103 +2,122 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 15:02+0200\n"
-"PO-Revision-Date: 2021-04-19 09:55\n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2021-04-21 11:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: remix-translation\n"
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/locale/fr_FR/LC_MESSAGES/remixd.po\n"
-"X-Crowdin-File-ID: 5040\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remixd.pot\n"
+"X-Crowdin-File-ID: 5100\n"
 "Language: zh_CN\n"
 
 #: ../../remixd.md:1
 msgid "Remixd: Access your Local Filesystem"
 msgstr ""
 
-#: ../../remixd.md:4
-msgid "remixd is an npm module. Its purpose is to give the remix web application access to a folder on your local computer."
+#: ../../remixd.md:3
+msgid "To give the Remix-ide (the web app) access to a folder on your local computer, you need to use remixd."
 msgstr ""
 
-#: ../../remixd.md:7
-msgid "The code of remixd is here ."
+#: ../../remixd.md:5
+msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
+msgstr ""
+
+#: ../../remixd.md:8
+msgid "NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin."
 msgstr ""
 
 #: ../../remixd.md:10
-msgid "remixd can be globally installed using the following command: npm install -g remixd"
+msgid "The code of remixd is here ."
 msgstr ""
 
 #: ../../remixd.md:13
+msgid "remixd Installation"
+msgstr ""
+
+#: ../../remixd.md:14
+msgid "remixd can be globally installed using the following command: npm install -g remixd"
+msgstr ""
+
+#: ../../remixd.md:17
 msgid "Or just install it in the directory of your choice by removing the -g flag: npm install remixd"
 msgstr ""
 
-#: ../../remixd.md:16
-msgid "Then from the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
-msgstr ""
-
-#: ../../remixd.md:18
-msgid "For example, to use remixd with Remix IDE ( and not the alpha version) use this command: remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
+#: ../../remixd.md:20
+msgid "remixd Command"
 msgstr ""
 
 #: ../../remixd.md:21
+msgid "From the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
+msgstr ""
+
+#: ../../remixd.md:23
+msgid "For example, to use remixd with Remix IDE, use this command: remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
+msgstr ""
+
+#: ../../remixd.md:26
 msgid "Make sure that if you use https://remix.ethereum.org (secure http) in the remixd command (like in the example above), that you are also pointing your browser to https://remix.ethereum.org and not to http://remix.ethereum.org (plain old insecure http).  Or if you want to use http in the browser use http in the remixd command."
 msgstr ""
 
-#: ../../remixd.md:24
+#: ../../remixd.md:28
 msgid "The folder is shared using a websocket connection between Remix IDE and remixd."
 msgstr ""
 
-#: ../../remixd.md:27
+#: ../../remixd.md:31
 msgid "Be sure the user executing remixd has read/write permission on the folder."
 msgstr ""
 
-#: ../../remixd.md:30
+#: ../../remixd.md:34
 msgid "There is an option to run remixd in read-only mode, use --read-only flag."
 msgstr ""
 
-#: ../../remixd.md:32
+#: ../../remixd.md:36
 msgid "Warning!"
 msgstr ""
 
-#: ../../remixd.md:34
+#: ../../remixd.md:37
 msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
 msgstr ""
 
-#: ../../remixd.md:37
-msgid "From Remix IDE, in the Plugin Manager you need to activate the remixd plugin."
-msgstr ""
-
-#: ../../remixd.md:39
-msgid "A modal dialog will ask confirmation"
+#: ../../remixd.md:40
+msgid "After the command is running, activate the remixd plugin."
 msgstr ""
 
 #: ../../remixd.md:41
-msgid "Accepting this dialog will start a session."
+msgid "From Remix IDE, in the Plugin Manager, activate the remixd plugin.  This plugin is a websocket plugin and it has no UI other than a modal dialog box."
 msgstr ""
 
 #: ../../remixd.md:43
+msgid "This modal will ask confirmation"
+msgstr ""
+
+#: ../../remixd.md:45
+msgid "Accepting this dialog will start a session."
+msgstr ""
+
+#: ../../remixd.md:47
 msgid "If you do not have remixd running in the background - another modal will open up and it will say:"
 msgstr ""
 
-#: ../../remixd.md:50
+#: ../../remixd.md:54
 msgid "Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be available in the file explorer."
 msgstr ""
 
-#: ../../remixd.md:52
+#: ../../remixd.md:56
 msgid "When you click the activation of remixd is successful - there will NOT be an icon that loads in the icon panel."
 msgstr ""
 
-#: ../../remixd.md:54
+#: ../../remixd.md:58
 msgid "Click the File Explorers icon and in the swap panel you should now see the folder for localhost."
 msgstr ""
 
-#: ../../remixd.md:56
+#: ../../remixd.md:60
 msgid "Click on the localhost connection icon:"
 msgstr ""
 
