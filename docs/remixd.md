@@ -25,9 +25,10 @@ Or just install it in the directory of your choice by removing the -g flag:
 `npm install @remix-project/remixd`
 
 **NOTE:** The npm address as well as the github repo of remixd have changed - in both cases moving under **remix-project**. 
-- **Github** address is:
+- **Github** address is:<br>
 **https://github.com/ethereum/remix-project/tree/master/libs/remixd**
-- **NPM** address is: **remix-project/remixd**
+- **NPM** address is: <br>
+**https://www.npmjs.com/package/@remix-project/remixd**
 
 ### Find your version of remixd
 The command: `remixd -v` or `remixd --verison` will return your version number.  
