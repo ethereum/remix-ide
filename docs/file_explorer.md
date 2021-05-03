@@ -11,7 +11,7 @@ By default, Remix IDE stores files in **Workspaces** which are folders in your *
 
 **Important Note:** Clearing the browser storage will **permanently delete** all the files stored there. 
 
-If you want to use browser storage, but also to save to save a git repo on IPFS, use the **DGIT** plugin.
+If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.
 
 If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix-IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app. 
 
@@ -58,7 +58,7 @@ The icon (marked **F.** above) creates a new folder in the current workspace.
 Publish to Gist
 ---------------
 
-The icon (marked **G.** above) publishes all files from the current Workspace to a gist.  Only file in the root of **browser** will be published.  Files in subfolders will not be publish to the Gist.
+The icon (marked **G.** above) publishes all files from the current Workspace to a gist.  Only file in the root of **browser** will be published.  Files in subfolders will not be published to the Gist.
 
 Gist API **requires** users to be authenticated to be able to publish a gist.  
 
@@ -71,18 +71,18 @@ Upload to Browser Storage
 
 Click the icon marked **H.** to upload a file from your computer's file system to your browser's local storage.
 
-Right Click on a File
+Right-Click on a File
 ----------------------
 
 ![](images/a-file-ex-rt-click.png)
 
-Right clicking on a file will give you a context menu — offering you the possibility to delete or rename the file. 
+Right-clicking on a file will give you a context menu — offering you the possibility to delete or rename the file. 
 
 You can rename or delete a selected file or a folder. You can also create a folder. 
 
-Right Click on a Folder
+Right-Click on a Folder
 ------------------------
-To create a file with the context menu, right click on a folder to get the **Create File** option. A file will be created inside that folder. 
+To create a file with the context menu, right-click on a folder to get the **Create File** option. A file will be created inside that folder. 
 
 ![](images/a-file-ex-rt-click-folder.png)
 
@@ -90,11 +90,11 @@ The functionality of the context menu also works with RemixD (which gives you ha
 
 **Note:** When working with RemixD, you need to open and close the **localhost** folder to refresh the view.
 
-Right Click on a Script
+Right-Click on a Script
 ------------------------
 
 ![](images/a-file-ex-rt-click-script.png)
 
-Right click on any file with a .js extension get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
+Right-click on any file with a .js extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
 1. Click on the script to make it the active tab in the editor 
 2. Input the command `remix.exeCurrent()` in the console.
