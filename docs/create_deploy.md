@@ -1,107 +1,114 @@
 Creating and Deploying a Contract
 ================================
 
-There are 3 type of environments Remix can be plugged to:
-`Javascript VM`, `Injected provider`, or `Web3 provider`. (for details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
-
-Both `Web3 provider` and `Injected provider` require the use of an
-external tool.
-
-The external tool for `Web3 provider` is an Ethereum node and for
-`Injected provider` Metamask.
-
-The `JavaScript VM` mode is convenient because each execution runs in
-your browser and you don't need any other software or Ethereum node to run it. 
-
-So, it is the easiest test environment - **no setup required!**
-
-But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state.
-
-For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it might also be better to use an external node.
-
-Selecting the VM mode
----------------------
-
-Make sure the VM mode is selected. All accounts displayed in `Accounts`
-should have 100 ether.
+This page contains the process of creating a contract, compiling it, deploying and then interacting with it.
 
 Sample contract
 ---------------
+This contract is very basic. The goal is to quickly start to create and
+to interact with a sample contract.
+
+![](images/a-file-explorer-new-file2.png)
+
+Go to the File Explorer, create a new file, name it and in the editor paste the contract below.
 
 ``` 
-pragma solidity ^0.5.1;
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity ^0.7.6;
 
 contract testContract {
 
-    uint value;
+    uint256 value;
 
-    constructor (uint _p) public {
+    constructor (uint256 _p) {
         value = _p;
     }
 
-    function setP(uint _n) payable public {
+    function setP(uint256 _n) payable public {
         value = _n;
     }
 
-    function setNP(uint _n) public {
+    function setNP(uint256 _n) public {
         value = _n;
     }
 
-    function get () view public returns (uint) {
+    function get () view public returns (uint256) {
         return value;
     }
 }
 
 ```
 
-This contract is very basic. The goal is to quickly start to create and
-to interact with a sample contract.
+Compile the file
+----------------
+With the contract above as the active tab in the Editor, compile the contract.  
+
+**For More Info** see the docs on the ([Solidity Compiler](compile.html)).
+
+Deploy the file
+----------------
+Go to the **Deploy & Run** plugin.
+
+There are 3 type of environments Remix can be plugged to:
+* Javascript VM
+* Injected Web3
+* Web3 Provider
+
+ (For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
+
+Both **Injected Web3** and **Web3 Provider** require the use of an external tool.
+
+The external tool for `Injected provider` is Metamask and for `Web3 provider` is an Ethereum node itself.
+
+The **JavaScript VM** is convenient because it is a blockchain that runs in
+your browser and you don't need any other software or Ethereum node to run it. 
+
+**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart in an empty state.
+
+For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it can be better to use an external node.
+
+Select the VM mode
+---------------------
+
+Make sure the VM mode is selected. All accounts displayed in `Accounts` should have 100 ether.
+
+![](images/a-run-jsvm-accounts.png)
 
 Deploying an instance
 ---------------------
 
-The `Compile tab` displays information related to the current contract
-(note that there can be more than one) ([see compile](compile.html)).
+![](images/a-run-testContract.png)
 
-Moving on, in the `Run tab` select, `JavaScript VM` to specify that you
-are going to deploy an instance of the contract in the `JavaScript VM`
-state.
+The constructor of `testContract` needs a parameter (of type `uint256`).
+Input a uint256 and click on `Deploy`.
 
-![](images/a-jvm.png)
+The transaction is created which deploys the instance of `testContract` .
 
-The constructor of `Ballot.sol` needs a parameter (of type `uint8`).
-Give any value and click on `Deploy`.
+In a "normal" blockchain, you would have to wait for the transaction to be mined. However, because we are using the `JavaScript VM`, our execution is immediate.
 
-The transaction which deploys the instance of `Ballot` is created.
+The terminal will give information about the transaction.
 
-In a "normal" blockchain, it can take several seconds to execute. This
-is the time for the transaction to be mined. However, because we are
-using the `JavaScript VM`, our execution is immediate.
-
-The terminal will inform you about the transaction. You can see details
-there and start debugging.
-
-The newly created instance is displayed in the `run tab`.
+The newly created instance is displayed in the **Deployed Contracts** section.
 
 ![](images/a-jvm-instance.png)
 
 Interacting with an instance
 ----------------------------
+Clicking on the caret to the left of the instance of TESTCONTRACT will open it up so you can see its function.
 
 This new instance contains 3 actions which corresponds to the 3
-functions (`setP`, `setPN`, `get`). Clicking on `SetP` or `SetPN` will
+functions (`setP`, `setPN`, `get`). Clicking on `setP` or `setPN` will
 create a new transaction.
 
-Note that `SetP` is `payable` (red button) : it is possible to send
+Note that `setP` is `payable` (red button) : it is possible to send
 value (Ether) to the contract.
 
-`SetPN` is not payable (orange button - depending on the theme) : it is not possible to send
-value (Ether) to the contract.
+`setPN` is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract.
 
-Clicking on `get` will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (variable
-`value`) of this instance.
+Clicking on `get` will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance.
 
-As `get` is `view` you can see the return value just below the
-action.
+Because `get` is a **view function**, you can see the return value just below the
+`get` button.
 
 ![](images/a-jvm-calling-instance.png)
