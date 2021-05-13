@@ -30,7 +30,7 @@ https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth&call=LearnEth//sta
 
 Here is the current list of Learneth Tutorials
 
-***Beginner Level***
+***Beginner***
 
     Remix Basics
     Intro to Solidity
