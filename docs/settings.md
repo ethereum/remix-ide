@@ -1,7 +1,7 @@
 Settings
 ========
 
-To get to **Settings** click the gear a the very bottom of the icon panel. 
+To get to **Settings** click the gear at the very bottom of the icon panel. 
 
 ### General Settings 
 
@@ -11,7 +11,7 @@ To get to **Settings** click the gear a the very bottom of the icon panel.
 
 -  Text wrap: controls if the text in the editor should be wrapped.
 -  Personal mode: can be used when one is connecting to a **local node**.  It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in GETH.  Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone.
--  Matomo Analytics: This is where you can turn off and on your approval for us to use Matomo.  We do not collect any personally identifyable information (PII) and our reports are public.  See our [blog post on the subject](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6).
+-  Matomo Analytics: This is where you can turn off and on your approval for us to use Matomo.  We do not collect any personally identifiable information (PII) and our reports are public.  See our [blog post on the subject](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6).
 
 
 
@@ -19,7 +19,7 @@ To get to **Settings** click the gear a the very bottom of the icon panel.
 
 ### Github Access Token
 
-For creating GISTs as well as other Github functions, it is necessary to put in an access token.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
+For creating GISTs as well as using other Github functions, it is necessary to put in an access token.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 ![](images/a-settings-gh-token.png)
 
