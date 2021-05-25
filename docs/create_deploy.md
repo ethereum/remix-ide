@@ -3,7 +3,7 @@ Creating and Deploying a Contract
 
 This page contains the process of creating a contract, compiling it, deploying and then interacting with it.
 
-Sample contract
+A sample contract
 ---------------
 This contract is very basic. The goal is to quickly start to create and
 to interact with a sample contract.
@@ -40,15 +40,15 @@ contract testContract {
 
 ```
 
-Compile the file
-----------------
+Compile the Contract
+--------------------
 With the contract above as the active tab in the Editor, compile the contract.  
 
 **For More Info** see the docs on the ([Solidity Compiler](compile.html)).
 
-Deploy the file
-----------------
-Go to the **Deploy & Run** plugin.
+Deploy the contract
+-------------------
+Go to the **Deploy & Run Transactions** plugin.
 
 There are 3 type of environments Remix can be plugged to:
 * Javascript VM
@@ -59,23 +59,23 @@ There are 3 type of environments Remix can be plugged to:
 
 Both **Injected Web3** and **Web3 Provider** require the use of an external tool.
 
-The external tool for `Injected provider` is Metamask and for `Web3 provider` is an Ethereum node itself.
+An external tool for **Injected provider** is Metamask.  Some external tools used with **Web3 provider** are a Truffle Ganache-CLI, Hardhat node, or an Ethereum node itself.
 
 The **JavaScript VM** is convenient because it is a blockchain that runs in
 your browser and you don't need any other software or Ethereum node to run it. 
 
-**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart in an empty state.
+**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart to its fresh & default state.
 
 For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it can be better to use an external node.
 
-Select the VM mode
----------------------
+Select the VM environment
+-------------------------
 
-Make sure the VM mode is selected. All accounts displayed in `Accounts` should have 100 ether.
+Make sure the VM mode is selected. All accounts displayed in **ACCOUNT** should have 100 ether.
 
 ![](images/a-run-jsvm-accounts.png)
 
-Deploying an instance
+Deploying a contract
 ---------------------
 
 ![](images/a-run-testContract.png)
