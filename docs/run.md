@@ -64,22 +64,40 @@ Gas Limit:
 
 Value:
 -----
--   This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is **NOT** for gas.  
+-   This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br> 
+**Note:** payable functions have a red button. 
+
+The **Value** field is always reset to 0 after each transaction execution. <br>
+The **Value** field is **NOT** for gas.  
 
  ![](images/a-Runtab-deploy-atAddress.png)
 
-Initiate Instance
------------------
+Deploy & AtAddress
+------------------
 
--   In the image above, the select box is set to Ballot.  This select box will contain the list of compiled contracts.
+-   In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts.
 
--   `Deploy` send a transaction that deploys the selected contract. When
+-   `Deploy` sends a transaction that deploys the selected contract. When
     the transaction is mined, the newly created instance will be added
-    (this might take several seconds). Note that if the `constructor`
-    has parameters, you need to specify them.
+    (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them.
 
--   `At Address` this is used at access a contract that has already been deployed. It assumes that the given address is an instance of the selected contract.  **Note:** There's no check at this point, so be careful when using this feature, and be sure you trust the contract at that address.
+-   `At Address` is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with **AtAddress** does not cost gas.
 
+**Note:** When using AtAddress, be sure you trust the contract at that address.
+
+To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access.
+
+Using the ABI with AtAddress
+----------------------------
+
+The **ABI** is a JSON array which describes the contract's interface.
+
+To interact with a contract using the ABI, create a new file in Remix
+with extension ***.abi** and copy the ABI content to it. 
+
+Make sure this file is the active tab in the editor. Then, in the field next to `At Address`, input the contract's address and click on `At Address`. If successful, an instance of the contract will appear below - in the list of **Deployed Contracts**.
+
+**Note:** To generate the ABI, in the Solidity compiler, after a contract is compiled, click on the **Compilation Details** button.  A modal will come up with that contains the ABI among other info.  
 
 Pending Instances
 -----------------
@@ -88,19 +106,6 @@ Validating a transaction takes several seconds. During this time, the GUI
 shows it in a pending mode. When the transaction is mined, the number of
 pending transactions is updated and the transaction is added to the log
 ([see terminal](terminal.html)).
-
-Using the ABI
-------------
-
-Using `Deploy` or `At Address` is a classic use case of Remix. However, it is
-possible to interact with a contract by using its ABI. The ABI is
-a JSON array which describe its interface.
-
-To interact with a contract using the ABI, create a new file in Remix
-with extension `*.abi` and copy the ABI content to it. Then, in the input
-next to `At Address`, put the Address of the contract you want to
-interact with. Click on `At Address`, a new "connection" with the
-contract will popup below.
 
 Using the Recorder
 ------------------
