@@ -34,4 +34,30 @@ and remixd terminal both.
 Hardhat Provider
 ------------------
 
+_In hardhat, contracts are deployed starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_
+
+**Hardhat Provider** is a plugin on Remix IDE which enables user to deploy the contract to hardhat 'localhost' network. This plugin can be activated from Remix IDE plugin manager.
+
+![](images/a-hardhat-provider.png)
+
+Once you activate it, you will an extra option in the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin with the label `Hardhat Provider`
+
+![](images/a-hardhat-provider-dropdown.png)
+
+As soon as you select `Hardhat Provider`, a modal is opened asking the `Hardhat JSON-RPC Endpoint`.
+
+![](images/a-hardhat-provider-modal.png)
+
+If hardhat node is running with default options, default endpoint value in modal will not need any change. In case, hardhat node host and port are different, JSON-RPC endpoint should be updated in the modal text box.
+
+Once correct endpoint is filled in the modal, just click on `OK` and accounts from hardhat node will be loaded in `ACCOUNT` section. Network id will also be shown.
+
+![](images/a-hardhat-provider-connected.png)
+
+Now, one can start deploying the contract from Remix IDE to hardhat local node as usual.
+
+
+
+
+
 
