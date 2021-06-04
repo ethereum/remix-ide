@@ -19,6 +19,18 @@ It doesn't need any extra installation as it is shipped with [remixd NPM](https:
 Enable Hardhat Compilation
 ------------------
 
+If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`.
+
+![](images/a-hardhat-compilation.png)
+
+One can check this box to run the compilation for hardhat along with the Remix. Result of the compilation will be shown in the Remix IDE terminal 
+
+![](images/a-hardhat-compilation-success.png)
+
+and remixd terminal both.
+
+![](images/a-hardhat-compilation-success-remixd.png)
+
 Hardhat Provider
 ------------------
 
