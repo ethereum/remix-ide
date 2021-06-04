@@ -1,6 +1,8 @@
 Hardhat Integration
 ============
 
+_(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_
+
 Remixd and Hardhat
 ------------------
 
