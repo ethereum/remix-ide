@@ -97,6 +97,6 @@ Useful links:
    :caption: Miscellaneous
 
    locations
-   remix_tutorials_github
+   remix_tutorials_learneth
    code_contribution_guide
    community
