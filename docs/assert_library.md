@@ -40,8 +40,8 @@ Assert.equal(uint(100), 100);
 foo.set(200)
 Assert.equal(foo.get(), 200);
 // OK
-Assert.equal(foo.get(), 100, "value should be 200");
-// error: value should be 200
+Assert.equal(foo.get(), 100, "value should be 100");
+// error: value should be 100
 ```
 
 ### Assert.notEqual(actual, expected[, message])
