@@ -70,28 +70,32 @@ To link to Remix with the a list of plugins activated and with:
  https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js
 ```
 
-## Passing commands to a plugin via a url param
-It is also possible to pass a command to a plugin's api with a url parameter. 
-
-The URL parameter to issue a command is `call`.  Following the `call` is a // (double slash) separated list of arguements.
+## Pass commands to a plugin's API via a url param
+The URL parameter to issue a command is `call`.  Following the `call` is a // (double slash) separated list of arguments.
 
 ```
 call=plugin_name//function//parameter1//paremeter2
 ```
 
-**Here are some examples:**
-
-### Load one of the default Remix files:
+### An example using call
+The URL below uses `activate` & `call`.  It **activates** a number of plugins and **calls** the File Explorers to tell it to load one of the default Remix files:
 ```
 https://remix.ethereum.org/?#activate=udapp,solidity&call=fileManager//open//3_Ballot.sol
 ```
 
-### Load a GIST
+### Load a specific tutorial in the **LearnEth** plugin:
+```
+https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
+```
+
+## Load a GIST
+The URL parameter here is `gist`.
 ```
 https://remix.ethereum.org/?gist=0fe90e825327ef313c88aedfe66ec142
 ```
 
 ### Load a GIST and have it be visible in the Editor:
+Using both `gist` & `call`
 ```
 https://remix.ethereum.org/?#activate=solidity,udapp&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//browser/gists/0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
 ```
@@ -101,18 +105,19 @@ https://remix.ethereum.org/?#activate=solidity,udapp&gist=0fe90e825327ef313c88ae
 https://remix.ethereum.org/?#activate=solidity,udapp&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//browser/gists/0fe90e825327ef313c88aedfe66ec142/gridMix4.sol 
 ```
 
-### Load a specific tutorial in the **LearnEth** plugin:
-```
-https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
-```
-
-### Load a specific version of the Solidity compiler:
+## Load a specific version of the Solidity compiler:
 ```
 https://remix.ethereum.org/?#version=soljson-v0.6.6+commit.6c089d02
 ```
 **Note:** you need to specify both the Solidity version and the commit.
 
-### Load a custom Solidity compiler:
+## Load a custom Solidity compiler:
 ```
 https://remix.ethereum.org/#version=https://solidity-blog.s3.eu-central-1.amazonaws.com/data/08preview/soljson.js
 ```
+## Load an encoded base64 string into a .sol file
+The `code` parameter takes an encoded base64 string and loads it the Editor as a .sol file and saves to the code-sample workspace of the File Explorer:
+```
+https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVAoKcHJhZ21hIHNvbGlkaXR5IDAuOC40OwoKLyoqCiAqIEB0aXRsZSBXb25kZXJmdWxDb2RlCiAqIEBkZXYgV2VsY29tZSB0byBSZW1peAogKi8KY29udHJhY3QgWW91IHsKCiAgICBhZGRyZXNzIHByaXZhdGUgb3duZXI7CiAgICAKICAgIC8qKgogICAgICogQGRldiBTZXQgY29udHJhY3QgZGVwbG95ZXIgYXMgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYKICAgICAqLwogICAgY29uc3RydWN0b3IoKSB7CiAgICAgICAgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYgPSBtc2cuc2VuZGVyOwoKICAgIH0KCiAgICAvKioKICAgICAqIEBkZXYgQ2hhbmdlIG1vb2QKICAgICAqIEBwYXJhbSBuZXdPd25lciBhZGRyZXNzIG9mIG5ldyBvd25lcgogICAgICovCiAgICBmdW5jdGlvbiBjaGFuZ2VNb29kKGFkZHJlc3MgbmV3TW9vZEFkZHIpIHB1YmxpYyB7CiAgICAgICAgb3duZXJNb29kID0gbmV3TW9vZEFkZHI7CiAgICB9Cn0=
+```
+
