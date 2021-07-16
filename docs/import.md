@@ -17,7 +17,11 @@ Here are some example import statements:
 
 ### Import from NPM
 ```
-import "@openzeppelin/contracts/token//ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+```
+
+```
+import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 ```
 
 **Note:** In the example above, **@openzeppelin** is the name of the npm library.  In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name.
