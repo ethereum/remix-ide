@@ -31,7 +31,7 @@ To run Remix using  https://remix.ethereum.org & a local test node, use this Get
 
 **geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console**
 
-If you are using remix-alpha or a local version of remix - replace the url of the --rpccorsdomain with the url of Remix that you are using. 
+If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using. 
 
 To run Remix Desktop & a local test node, use this Geth command:
 
