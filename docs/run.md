@@ -43,7 +43,7 @@ The Web3 Provider Endpoint for a local node is **http://localhost:8545**
 
 ---
 
-**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--rpccorsdomain</b> with a wildcard: `--http.corsdomain *`
+**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: `--http.corsdomain *`
 
 If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--http.corsdomain 'https://remix-alpha.ethereum.org'`
 
