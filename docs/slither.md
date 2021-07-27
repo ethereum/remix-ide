@@ -55,7 +55,19 @@ If one want to run the analysis only for Slither, deselect `Select all` checkbox
 
 ![](images/a-slither-analysis-only.png)
 
+### More Details
 
+Analysis for Slither is run using the version set in `Solidity Compiler` plugin on Remix IDE. Slither is a CLI tool and requires `solc` to run the analysis. Before running the analysis, Slither websocket plugin checks if current version of solc is same as the version set in Remix IDE.
+
+Incase, compiler version set in Solidity Compiler is different from current version of solc installed locally, Slither websocket plugin will update the `solc` version same as required using `solc-select`.
+
+For example, if current `solc` version on the system is 0.8.4 and on the Remix IDE 0.8.6 is set, `remixd` logs explain remote solc version selection
+
+![](images/a-slither-analysis-select.png)
+
+After successful analysis run:
+
+![](images/a-slither-analysis-select-success.png)
 
 
 
