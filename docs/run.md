@@ -23,19 +23,19 @@ More about Web3 Provider
 -------------
 If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:
 
-**geth --rpc --rpccorsdomain https://remix.ethereum.org**
+**geth --http --http.corsdomain https://remix.ethereum.org**
 
-Also see [Geth Docs about the rpc server](https://geth.ethereum.org/docs/rpc/server)
+Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/rpc/server)
 
 To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:
 
-**geth --rpc --rpccorsdomain="https://remix.ethereum.org" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console**
+**geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console**
 
-If you are using remix-alpha or a local version of remix - replace the url of the --rpccorsdomain with the url of Remix that you are using. 
+If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using. 
 
 To run Remix Desktop & a local test node, use this Geth command:
 
-**geth --rpc --rpccorsdomain="package://a7df6d3c223593f3550b35e90d7b0b1f.mod" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console**
+**geth --http --http.corsdomain="package://a7df6d3c223593f3550b35e90d7b0b1f.mod" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console**
 
 Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode)
 
@@ -43,11 +43,11 @@ The Web3 Provider Endpoint for a local node is **http://localhost:8545**
 
 ---
 
-**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--rpccorsdomain</b> with a wildcard: `--rpccorsdomain *`
+**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: `--http.corsdomain *`
 
-If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--rpccorsdomain 'https://remix-alpha.ethereum.org'`
+If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--http.corsdomain 'https://remix-alpha.ethereum.org'`
 
-Only use `--rpccorsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**.
+Only use `--http.corsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**.
 
 --- 
       

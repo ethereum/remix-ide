@@ -74,6 +74,12 @@ Useful links:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Native External Integrations
+
+   hardhat
+
+.. toctree::
+   :maxdepth: 2
    :caption: Using Remix
    
    contract_metadata
@@ -91,6 +97,6 @@ Useful links:
    :caption: Miscellaneous
 
    locations
-   remix_tutorials_github
+   remix_tutorials_learneth
    code_contribution_guide
    community
