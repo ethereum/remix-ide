@@ -21,13 +21,25 @@ It doesn't need any separate installation as it is shipped with [remixd NPM](htt
 Enable Slither Analysis
 ------------------
 
+### Prerequisites
+
+To use Slither analysis with Remix IDE efficiently, following tools should be installed locally on the system:
+
+1. **Slither:** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)
+2. **Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)
+3. **Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)
+
+### How to use
+
 If a project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Static Analysis` plugin with the label `Enable Slither Analysis`.
 
 ![](images/a-slither-analysis.png)
 
 One can check this box to run the analysis using Slither along with the Remix. 
 
-Generated report of Slither analysis will be stored locally on project root with a file name prefixed with `remix-slitherReport_`, for example: `remix-slitherReport_1627362090.json`. This report will also be displayed on the Remix IDE side after the Remix analysis report for better user readability.
+Generated report of Slither analysis will be stored locally on project root with a file name prefixed with `remix-slitherReport_`, for example: `remix-slitherReport_1627362090.json`. 
+
+Slither Analysis report will also be displayed on the Remix IDE side after the Remix analysis report for better user readability.
 
 ![](images/a-slither-analysis-success.png)
 
@@ -38,6 +50,12 @@ The result of the analysis will be shown in the Remix IDE terminal
 and also in the **remixd** console.
 
 ![](images/a-slither-analysis-success-remixd.png)
+
+If one want to run the analysis only for Slither, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report.
+
+![](images/a-slither-analysis-only.png)
+
+
 
 
 
