@@ -35,7 +35,7 @@ If a project is shared through remixd and `localhost` workspace is loaded in Rem
 
 ![](images/a-slither-analysis.png)
 
-One can check this box to run the analysis using Slither along with the Remix. 
+One can check this box to run the analysis using Slither along with the Remix's analysis library. 
 
 Generated report of Slither analysis will be stored locally on project root with a file name prefixed with `remix-slitherReport_`, for example: `remix-slitherReport_1627362090.json`. 
 
@@ -51,7 +51,7 @@ and also in the **remixd** console.
 
 ![](images/a-slither-analysis-success-remixd.png)
 
-If one want to run the analysis only for Slither, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report.
+To only run Slither Analysis, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report.
 
 ![](images/a-slither-analysis-only.png)
 
@@ -59,7 +59,7 @@ If one want to run the analysis only for Slither, deselect `Select all` checkbox
 
 Analysis for Slither is run using the version set in `Solidity Compiler` plugin on Remix IDE. Slither is a CLI tool and requires `solc` to run the analysis. Before running the analysis, Slither websocket plugin checks if current version of solc is same as the version set in Remix IDE.
 
-Incase, compiler version set in Solidity Compiler is different from current version of solc installed locally, Slither websocket plugin will update the `solc` version same as required using `solc-select`.
+If the compiler version set in Solidity Compiler is different from current version of solc installed locally, the Slither websocket plugin will update the `solc` to be the same as the required version `solc-select`.
 
 For example, if current `solc` version on the system is 0.8.4 and on the Remix IDE 0.8.6 is set, `remixd` logs explain remote solc version selection
 
