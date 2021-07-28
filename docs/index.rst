@@ -77,6 +77,7 @@ Useful links:
    :caption: Native External Integrations
 
    hardhat
+   slither
 
 .. toctree::
    :maxdepth: 2
