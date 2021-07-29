@@ -1,14 +1,14 @@
 Slither Integration
 ============
 
-_(Supported since Remix IDE v0.15.0 and Remixd v0.4.3)_
+_(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)_
 
 Remixd and Slither
 ------------------
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
-Since Remixd `v0.4.3`, when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for [Slither](https://github.com/crytic/slither) integration.
+Since Remixd `v0.5.0`, when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for [Slither](https://github.com/crytic/slither) integration.
 
 > _Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors, prints visual information about contract details, and provides an API to easily write custom analyses._
 
