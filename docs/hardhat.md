@@ -12,7 +12,7 @@ If `remixd` is running locally on your device and shared folder is a **Hardhat p
 
 > _Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js file._
 
-So, it looks for `hardhat.config.js` file in shared folder, only then Hardhat websocket lister will run.
+Remixd looks for the `hardhat.config.js` file in shared folder, and if it finds the file, the Hardhat websocket listener will run.
 
 The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE. 
 
