@@ -64,6 +64,16 @@ folder.
 
 Alternatively, there is an option to run remixd in read-only mode, use `--read-only` flag.
 
+### Ports Usage
+
+`remixd` functions by making websocket connections with Remix IDE on different ports. Ports are defined according to specific purpose. Port usage details are as:
+
+- **65520** : For `remixd` websocket listener, to share local file system with Remix IDE. Shared folder will be loaded in the Remix IDE `File Explorers` workspace named `localhost`
+- **65523** : For `slither` websocket listener, to enable the Slither Analysis using Remix IDE `Solidity Static Analysis` plugin
+- **65522** : For `hardhat` websocket listener, to enable the Hardhat Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Hardhat project.
+
+**Note:** Please make sure your system is secured enough and these ports are not opened nor forwarded.
+
 ### Warning!
 - `remixd` **provides full read and write access** to the given folder **for any
 application** that can access the `TCP port 65520` on your local host.
