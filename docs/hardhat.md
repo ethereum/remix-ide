@@ -8,24 +8,40 @@ Remixd and Hardhat
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
-If `remixd` is running locally on your device and shared folder is a **hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,
+If `remixd` is running locally on your device and shared folder is a **Hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,
 
 > _Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js file._
 
-The remixd hardhat listener is a websocket plugin similar to remixd and is used to perform Hardhat actions with Remix IDE. 
+Remixd looks for the `hardhat.config.js` file in shared folder, and if it finds the file, the Hardhat websocket listener will run.
 
-It doesn't need any extra installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module.
+The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE. 
+
+It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module.
 
 ![](images/a-hardhat-remixd.png)
 
 Enable Hardhat Compilation
 ------------------
 
+### Prerequisites
+
+To use Hardhat compilation with Remix IDE efficiently:
+
+1. **Hardhat** should be installed locally on the system [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)
+2. Shared folder should be a Hardhat project containing `hardhat.config.js`
+3. `Remixd` Hardhat websocket listener should be running at `65522`
+
+### How to use
+
 If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`.
 
 ![](images/a-hardhat-compilation.png)
 
-One can check this box to run the compilation for hardhat along with the Remix. The result of the compilation will be shown in the Remix IDE terminal 
+One can check this box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin.
+
+On clicking `Compile` button, a file with `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Hardhat for compilation.
+
+The result of the compilation will be shown in the Remix IDE terminal 
 
 ![](images/a-hardhat-compilation-success.png)
 
