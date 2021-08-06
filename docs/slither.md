@@ -35,6 +35,8 @@ If a project is shared through remixd and `localhost` workspace is loaded in Rem
 
 ![](images/a-slither-analysis.png)
 
+There is an info icon on the right side of the label which redirects to a specific section of Remix official documentation that explains how to use Slither Analysis and prerequisites for it.
+
 One can check this box to run the analysis using Slither along with the Remix's analysis library. 
 
 Generated report of Slither analysis will be stored locally on project root with a file name prefixed with `remix-slitherReport_`, for example: `remix-slitherReport_1627362090.json`. 
