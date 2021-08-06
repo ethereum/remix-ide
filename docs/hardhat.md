@@ -37,6 +37,8 @@ If a hardhat project is shared through remixd and `localhost` workspace is loade
 
 ![](images/a-hardhat-compilation.png)
 
+There is an info icon along side the label which redirects to a specific section of Remix official documentation which explains how to use it.
+
 One can check this box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin.
 
 On clicking `Compile` button, a file with `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Hardhat for compilation.
