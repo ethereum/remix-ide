@@ -31,7 +31,7 @@ Or just install it in the directory of your choice by removing the -g flag:
 **https://www.npmjs.com/package/@remix-project/remixd**
 
 ### Find your version of remixd
-The command: `remixd -v` or `remixd --verison` will return your version number.  
+The command: `remixd -v` or `remixd --version` will return your version number.  
 
 **If this command does not work, then you have an outdated version!**
 ### Update to the latest remixd
