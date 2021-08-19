@@ -2,10 +2,10 @@ Importing & Loading Source Files in Solidity
 ==================================
 
 There are two main reasons for loading external files into Remix:
-- **to import a library or dependancy** (for files you will NOT be editing)
+- **to import a library or dependency** (for files you will NOT be editing)
 - **to load some files for manipulation, editing and play** (for files you might want to edit)
 
-## Importing a library or dependancy
+## Importing a library or dependency
 
 When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be "preloaded" into the File Explorer's current Workspace before the contract is compiled.
 
