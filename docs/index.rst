@@ -82,15 +82,21 @@ Useful links:
 .. toctree::
    :maxdepth: 2
    :caption: Using Remix
-   
+
+   remixd
    contract_metadata
    create_deploy
    tutorial_debug
    import
+   plugin_list
    remix_commands
    running_js_scripts
+
+ .. toctree::
+   :maxdepth: 2
+   :caption: FAQ
+    
    FAS
-   remixd
    FAQ
 
 .. toctree::
