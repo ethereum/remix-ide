@@ -78,6 +78,7 @@ Useful links:
 
    hardhat
    slither
+   hardhat_console
 
 .. toctree::
    :maxdepth: 2
