@@ -78,7 +78,7 @@ To do this: in the value input box put in **2** and **select Ether** as the unit
 
 Then click the `Donate` button.
 
-This will send the Ether to the the function.
+This will send the Ether to the function.
 
 Because we are using the `JavaScript VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)
 
@@ -102,7 +102,7 @@ You can start a debug session by providing a `transaction hash`.
 
 To find a transaction hash: 
 1. Go to a transaction in the terminal. 
-2. Click a line with a transaction - to exand the log.
+2. Click a line with a transaction - to expand the log.
 3. The transaction hash is there - copy it.
 
 ![](images/a-debug6-term-txn-hash.png)
@@ -137,7 +137,7 @@ The Instructions panel displays the bytecode of the current executing
 contract- with the current step highlighted.
 
 Important note: When this panel is hidden, the slider will have a
-courser granularity and only stop at *expression boundaries*, even if they
+coarser granularity and only stop at *expression boundaries*, even if they
 are compiled into multiple EVM instructions. When the panel is
 displayed, it will be possible to step over every instruction, even
 those that refers to the same expression.
@@ -185,7 +185,7 @@ encountered breakpoint.
 
 **Important note:** If you add a breakpoint to a line that declares a
 variable, it might be triggered twice: Once for initializing the
-variable to zero and second time for assigning the actual value. 
+variable to zero and a second time for assigning the actual value. 
 
 Here's an example of this issue.  If you are debugging the following contract:
 
