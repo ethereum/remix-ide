@@ -24,7 +24,19 @@ To see the name of the hard fork used in the current compilation, click the "Com
 If a contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion.
 
 ### Enable optimization
-To learn more about optimization, ( **F. in the image**) visit the [Solidity docs on the subject](https://docs.soliditylang.org/en/latest/internals/optimizer.html).
+According to the the Solidity Docs, "the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract."
+
+For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) . 
+
+To learn more about optimization, ( **F. in the image**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html).
+
+To the right of the **Enable optimization** checkbox is the box to input the number of Optimization runs.  The default value is 200.  
+
+You may ask — "What is the right number of runs for my contract?" And the Solidity docs say:
+
+   > If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number.
+
+To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options).
 
 ### Compilation Details and Publishing
 
