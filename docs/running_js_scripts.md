@@ -23,7 +23,7 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
   ![](images/a-running-scripts-run.png)
 
 ## JS Scripts in the File Explorers
-In the **scripts** folder of a **workspace** in the File Explorers, there 2 example files: one using **web3.js** and the other using **ethers.js**.
+In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**.
 
 
 ## An Example Script
