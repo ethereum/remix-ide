@@ -67,7 +67,7 @@ These are the state variables of the contract.
 ![](images/a-debug-sol-state.png)
 
 ### Opcodes
-This panel shows the step number and the **opcode** that the debugger is currently on.
+This panel shows the program counter and the **opcode** that the debugger is currently on.
 
 ![](images/a-debug-opcodes1.png)
 
