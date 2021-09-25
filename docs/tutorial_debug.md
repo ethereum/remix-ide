@@ -24,7 +24,7 @@ contract Donation {
         owner = msg.sender;
     }
 
-    function donate() public payable {
+    function donate() payable  public {
         addGiver(msg.value);
     }
 
@@ -193,7 +193,7 @@ Here's an example of this issue.  If you are debugging the following contract:
 pragma solidity >=0.5.1 <0.6.0;
 
 contract ctr {
-    function hid() public {
+    function hid () public {
         uint p = 45;
         uint m;
         m = 89;
