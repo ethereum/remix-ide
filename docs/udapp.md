@@ -57,7 +57,7 @@ So if you made a mistake and put a uint8 where an address should have been, clic
 
 ## Low level interactions
 
-Low level interactions are used to send funds or calldata or funds & calldata to a contract through the **recieve()** or **fallback()** function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern.
+Low level interactions are used to send funds or calldata or funds & calldata to a contract through the **receive()** or **fallback()** function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern.
 
 The low level interactions section is below the functions in each deployed contract.
 
