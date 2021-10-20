@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-10-20 01:33\n"
+"PO-Revision-Date: 2021-10-20 02:33\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -156,11 +156,11 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "Compilador (Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
-msgstr ""
+msgstr "Haciendo click en el ícono de Solidity dentro del panel del ícono te lleva al Compilador de Solidity."
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
