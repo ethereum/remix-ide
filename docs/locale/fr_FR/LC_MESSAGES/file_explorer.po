@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 10:46\n"
+"PO-Revision-Date: 2021-10-26 22:20\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
-msgstr ""
+msgstr "Pour accéder au module Explorateurs de fichiers - cliquez sur l'icône explorateurs de fichiers."
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
