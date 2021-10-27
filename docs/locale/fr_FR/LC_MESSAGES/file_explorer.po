@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-10-27 13:13\n"
+"PO-Revision-Date: 2021-10-27 14:34\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "L'explorateur de fichiers de base répertorie tous les fichiers stockés
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
-msgstr ""
+msgstr "Remarque importante: le nettoyage du stockage du navigateur supprimera définitivement tous les fichiers de solidité qui y sont stockés. Ceci est une limitation inhérente à un IDE basé sur le navigateur. Cependant, si vous voulez stocker des fichiers en dehors du navigateur et sur le système de fichiers de votre ordinateur, utilisez Remixd ou utilisez la version bureau de Remix-IDE. RemixD vous permet d'avoir accès à un dossier sélectionné sur votre disque dur. Remix Desktop est une version de Remix-IDE dans une application Electron."
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
