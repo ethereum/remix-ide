@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-10-26 22:20\n"
+"PO-Revision-Date: 2021-10-27 13:13\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Pour accéder au module Explorateurs de fichiers - cliquez sur l'icône 
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
-msgstr ""
+msgstr "L'explorateur de fichiers de base répertorie tous les fichiers stockés dans le stockage de votre navigateur. Vous pouvez les voir dans le dossier du navigateur."
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
