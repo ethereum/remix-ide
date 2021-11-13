@@ -426,3 +426,11 @@ contract testSuite is donations {
     }
 }
 ```
+
+
+### 6. Calling Functions As Other Users
+
+(please add an example for this)
+
+
+
