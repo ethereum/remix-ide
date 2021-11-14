@@ -16,7 +16,7 @@ You can install it using NPM:
 
 * As a global NPM module:
 
-`npm -g install @remix-project/remix-tests`
+`npm install -g @remix-project/remix-tests`
 
 To confirm installation, run:
 ```
