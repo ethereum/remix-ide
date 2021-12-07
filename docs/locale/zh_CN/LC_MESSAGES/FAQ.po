@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2021-12-07 04:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,15 +23,15 @@ msgstr ""
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
-msgstr ""
+msgstr "Solidity 编译器"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "问：错误：编译器状态可能不正常"
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "答：在 Chrome 浏览器上使用旧版本的 Solidity 编译器时存在这个问题。请在 Solidity 插件中使用更新的编译器版本，或者换一个浏览器。"
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
