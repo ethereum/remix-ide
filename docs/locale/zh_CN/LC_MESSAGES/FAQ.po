@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-07 04:57\n"
+"PO-Revision-Date: 2021-12-07 05:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -35,27 +35,27 @@ msgstr "答：在 Chrome 浏览器上使用旧版本的 Solidity 编译器时存
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr ""
+msgstr "问：我遇到了调用栈溢出以及各种其他错误提示，没办法编译成功。"
 
 #: ../../FAQ.md:18
 msgid "A:  Try a different browser or a newer solidity compiler version."
-msgstr ""
+msgstr "答：换个浏览器或者用更新版本的 Solidity 编译器试试。"
 
 #: ../../FAQ.md:20
 msgid "Q: How to verify a contract that imports other contracts?"
-msgstr ""
+msgstr "问：如何验证一个导入了其他合约的合约？"
 
 #: ../../FAQ.md:22
 msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr ""
+msgstr "答：验证工具不会递归地验证合约中的导入语句，所以只能验证“平铺结构的”合约。"
 
 #: ../../FAQ.md:24
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
-msgstr ""
+msgstr "有一个 Flattener 插件可以将原始代码和其所导入的代码抽取出来并写到同一个文件中。"
 
 #: ../../FAQ.md:26
 msgid "Deploy & Run"
-msgstr ""
+msgstr "部署 & 运行"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
