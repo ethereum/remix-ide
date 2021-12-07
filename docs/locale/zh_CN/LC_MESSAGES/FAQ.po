@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-07 05:58\n"
+"PO-Revision-Date: 2021-12-07 06:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "常见问题"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
@@ -59,15 +59,15 @@ msgstr "部署 & 运行"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
-msgstr ""
+msgstr "问：我的应用里面使用了一个 Infura 节点，我想通过 Remix IDE 将合约部署到该节点上，当我选择“web3 provider”并填入对应节点 URL 时，它提示无法建立连接。"
 
 #: ../../FAQ.md:30
 msgid "A: If the endpoint you are using is http, it won't work."
-msgstr ""
+msgstr "答：如果你使用的节点采用的是 http 协议，那它是没法用的。"
 
 #: ../../FAQ.md:32
 msgid "Q: Where is deploy button?"
-msgstr ""
+msgstr "问：部署按钮在哪里？"
 
 #: ../../FAQ.md:34
 msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
