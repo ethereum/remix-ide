@@ -3,7 +3,7 @@ Compiler (Solidity)
 
 Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.
 
-Compiling is triggered when you click the compile button ( **D. in image below**). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( **E. in image below**).
+Compiling is triggered when you click the compile button ( **F. in image below**). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( **D. in image below**).
 
 ### Solidity versions & Remix functionality
 Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://solidity.readthedocs.io/en/latest/yul.html)) which contain some code examples.
