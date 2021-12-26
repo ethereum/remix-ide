@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-26 09:16\n"
+"PO-Revision-Date: 2021-12-26 10:13\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -23,75 +23,75 @@ msgstr "Вопрос"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
-msgstr ""
+msgstr "Компилятор Solidity"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "Вопрос: Ошибка: компилятор может быть в неисправном состоянии"
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "Ответ: У старая версии компилятора solidity возникает такая проблема с браузером Chrome. Поменяйте версию компилятора в Плагине Solidity на более новую или воспользуйтесь другим браузером."
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr ""
+msgstr "Вопрос: у меня возникает проблема с превышением максимального количества запусков и другими ошибками, не могу скомпилировать."
 
 #: ../../FAQ.md:18
 msgid "A:  Try a different browser or a newer solidity compiler version."
-msgstr ""
+msgstr "Отет: Попробуйте другой браузер или более новую версию компилятора solidity."
 
 #: ../../FAQ.md:20
 msgid "Q: How to verify a contract that imports other contracts?"
-msgstr ""
+msgstr "Вопрос: Как подтвердить контракт, который импортирует другие контракты?"
 
 #: ../../FAQ.md:22
 msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr ""
+msgstr "Ответ: Проверяющий инструмент не выполняет рекурсивный просмотр импортированных выражений в контракте. Так что можно проверить только \"прямые\" контракты."
 
 #: ../../FAQ.md:24
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
-msgstr ""
+msgstr "Есть плагин Flattener или Выравниватель, который вставит исходный и импортированный код в один файл."
 
 #: ../../FAQ.md:26
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Применить и Запустить"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
-msgstr ""
+msgstr "Вопрос: Я использую в приложении конечную точку Infura, но когда я пытаюсь применить ее к этой конечной точке в ИСP remix, выбирая \"web3 provider\" и вводя свою конечную точку, она сообщает мне, что не может подключиться"
 
 #: ../../FAQ.md:30
 msgid "A: If the endpoint you are using is http, it won't work."
-msgstr ""
+msgstr "Ответ: Если использованная конечная точка http - она не сработает."
 
 #: ../../FAQ.md:32
 msgid "Q: Where is deploy button?"
-msgstr ""
+msgstr "Вопрос: Где кнопка \"использовать\"?"
 
 #: ../../FAQ.md:34
 msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
-msgstr ""
+msgstr "Ответ: Она в модуле Применить и Запустить. Если вы не включили этот модуль, вам стоит это сделать, нажав на модуль в Диспетчере Плагинов. Также вы можете включить что вам нужно с помощью solidity на начальной странице (Нажмите на логотип remix в верхнем левом углу) и нажмите кнопку \"Solidity\" в разделе \"среда\"."
 
 #: ../../FAQ.md:37
 msgid "Q: How to pass a tuple to a public function in Remix?"
-msgstr ""
+msgstr "Вопрос: Как передать кортеж публичной функции в Remix?"
 
 #: ../../FAQ.md:39
 msgid "A: Pass it as an array []."
-msgstr ""
+msgstr "Ответ: Передайте его как массив []."
 
 #: ../../FAQ.md:41
 msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
-msgstr ""
+msgstr "Вопрос: Как ввести структуру в качестве входных данных для параметра функции в модуле Применить и Запустить?"
 
 #: ../../FAQ.md:43
 msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
-msgstr ""
+msgstr "Ответ: Для введения структуры, как и кортежа, передайте его как массив []. Ещё вам нужно вставить в строку:"
 
 #: ../../FAQ.md:45
 msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
-msgstr ""
+msgstr "pragma experimental ABIEncoderV2; в верхней части файла Solidity."
 
 #: ../../FAQ.md:47
 msgid "For example, here's a solidity file with a struct is an input parameter."
