@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:08\n"
+"PO-Revision-Date: 2021-12-26 11:11\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../file_explorer.md:1
 msgid "File Explorers"
-msgstr ""
+msgstr "Проводник"
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
-msgstr ""
+msgstr "Что бы перейти в проводник - нажмите на символ проводника."
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
-msgstr ""
+msgstr "В обычном проводнике перечислены все файлы, находящиеся в хранилище вашего браузера. Вы можете увидеть их в папке браузера."
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
-msgstr ""
+msgstr "Создать новый файл"
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
-msgstr ""
+msgstr "Создать папку"
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
