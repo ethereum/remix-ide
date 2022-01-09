@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-01-09 01:27\n"
+"PO-Revision-Date: 2022-01-09 02:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -47,65 +47,65 @@ msgstr "嵌入并链接到Remix"
 
 #: ../../locations.md:15
 msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
-msgstr ""
+msgstr "Remix IDE的URL具有参数-因此可以指定："
 
 #: ../../locations.md:16
 msgid "the list of plugins you want activated"
-msgstr ""
+msgstr "你想要激活的插件列表"
 
 #: ../../locations.md:17
 msgid "the theme (Dark or Light)"
-msgstr ""
+msgstr "主题(暗色或亮色)"
 
 #: ../../locations.md:18
 msgid "the panels that should be minimized"
-msgstr ""
+msgstr "面板需要最小化"
 
 #: ../../locations.md:19
 msgid "if you want the Solidity compiler to have optimize enabled"
-msgstr ""
+msgstr "如果您希望 Solidity 编译器启用优化功能"
 
 #: ../../locations.md:21
 msgid "In the following example, there is a list of plugins that follows the word plugins will be activated and the last plugin will gain the focus."
-msgstr ""
+msgstr "在下面的示例中，在单词plugins将被激活之后有一个插件列表，最后一个插件将获得焦点。"
 
 #: ../../locations.md:26
 msgid "For the plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
-msgstr ""
+msgstr "因为插件在他们的配置文件中被称为他们的名字。要查看插件的配置文件名称-外部团队构建的插件，请访问https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
 
 #: ../../locations.md:28
 msgid "Further Customization with URL parameters"
-msgstr ""
+msgstr "进一步定制URL参数"
 
 #: ../../locations.md:30
 msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
-msgstr ""
+msgstr "下面的URL将关闭除主面板和图标面板以外的所有内容(因此侧面和终端被最小化)"
 
 #: ../../locations.md:32
 msgid "https://remix.ethereum.org/?#embed=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#embed=true"
 
 #: ../../locations.md:34
 msgid "To link with the side panel minimized use this URL:"
-msgstr ""
+msgstr "要链接到最小化的侧面板，请使用以下URL:"
 
 #: ../../locations.md:36
 msgid "https://remix.ethereum.org/?#minimizesidepanel=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#minimizesidepanel=true"
 
 #: ../../locations.md:38
 msgid "To link to Remix with the dark theme or the light theme specified use this url:"
-msgstr ""
+msgstr "若要链接到暗色主题或指定的亮色主题，请使用此URL："
 
 #: ../../locations.md:40
 msgid "https://remix.ethereum.org/?#theme=Dark"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#theme=Dark"
 
 #: ../../locations.md:42
 msgid "To link to Remix with the Solidity compiler, the unit testing, and LearnEth plugins activated (with Learneth gaining the side panel's focus) & with the Light theme loaded & with the terminal minimized use this URL & with optimize off:"
-msgstr ""
+msgstr "要使用Solidity编译器、单元测试和激活的LearnEth插件（LearnEth获得侧面板的焦点）链接到Remix，加载轻主题并最小化终端，请使用此URL并关闭优化："
 
 #: ../../locations.md:44
 msgid "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
 
