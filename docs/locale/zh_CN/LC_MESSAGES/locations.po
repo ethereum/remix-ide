@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:08\n"
+"PO-Revision-Date: 2022-01-09 01:27\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,31 +19,31 @@ msgstr ""
 
 #: ../../locations.md:1
 msgid "Remix URLs & Links with Parameters"
-msgstr ""
+msgstr "重置链接和参数"
 
 #: ../../locations.md:4
 msgid "Remix URLs"
-msgstr ""
+msgstr "重置链接"
 
 #: ../../locations.md:5
 msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
-msgstr ""
+msgstr "在线版本在 https://remix.ethereum.org 上可以看到。这个版本是稳定的，每次版本都会更新。"
 
 #: ../../locations.md:6
 msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
-msgstr ""
+msgstr "Alpha 版本在 https://remix-alpha.ethereum.org 上可以找到。这不是稳定版本。"
 
 #: ../../locations.md:8
 msgid "Github repo: https://github.com/ethereum/remix-project . The README contains instructions for running Remix-IDE locally."
-msgstr ""
+msgstr "Github repo: https://github.com/etherum/remix-project 。README 包含本地运行 Remix-IDE 的说明。"
 
 #: ../../locations.md:10
 msgid "Github release: https://github.com/ethereum/remix-project/releases ."
-msgstr ""
+msgstr "Github 版本: https://github.com/etherum/remix-project/release."
 
 #: ../../locations.md:13
 msgid "Embedding & Linking to Remix"
-msgstr ""
+msgstr "嵌入并链接到Remix"
 
 #: ../../locations.md:15
 msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
