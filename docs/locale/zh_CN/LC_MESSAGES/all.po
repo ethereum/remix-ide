@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-01-11 07:54\n"
+"PO-Revision-Date: 2022-01-11 08:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -104,11 +104,11 @@ msgstr ""
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
-msgstr ""
+msgstr "测试value1是否大于value2，如果失败则返回消息。"
 
 #: ../../assert_library.md:87
 msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
-msgstr ""
+msgstr "测试value1是否小于value2，如果失败则返回消息。"
 
 msgid ""
 msgstr ""
@@ -120,15 +120,15 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr ""
+msgstr "Remix是一个开放源码的工具，我们鼓励大家帮助我们改进它。请打开Issues，提供反馈或者通过提交PR来贡献代码到代码库。"
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr ""
+msgstr "Remix应用是使用JavaScript构建的，不使用任何框架。我们依靠一组选定的npm模块，例如yo-yo，csjs-inject等等。查看Remix子模块的package.json文件来了解更多信息。"
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr ""
+msgstr "要了解更多信息，请访问我们的 GitHub 页面。"
 
 msgid ""
 msgstr ""
@@ -136,11 +136,11 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "社区支持"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr ""
+msgstr "我们知到区块链生态系统非常新颖，大量的信息散布在网络上。因此我们创建了一个社区支持通道，如果您在使用 Remix 时遇到困难，我们和其他用户会尝试回答你们的问题。请加入社区并寻求帮助。"
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
