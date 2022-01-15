@@ -33,16 +33,16 @@ You can also get there by clicking the remix logo at the top of the icon panel.
 ### Environments
 Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a **Solidity** Button and a **Vyper** button.  In the future you will be able to save your own environment.
 
-To see all the plugins go to the **plugin manager** - by selecting the plug in the icon panel. 
+To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. 
 ![](images/a-plug.png) 
 
-The environment buttons are time & sanity savers - so you don't need to go to the plugin manager to get started everytime you load the page.   
+The environment buttons are time & sanity savers - so you don't need to go to the Plugin Manager to get started everytime you load the page.   
 
 
 Plugin Manager
 ---------------
 
-In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (yours for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the plug manager.  
+In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (yours for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the Plugin Manager.  
 
 The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
 
