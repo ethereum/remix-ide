@@ -1,7 +1,7 @@
 Welcome to Remix's documentation!
 =====================================
 
-Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as being a playground for learning and teaching Ethereum.
+Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as act as a playground for learning and teaching Ethereum.
 
 Remix IDE is part of the Remix Project which is a platform for development tools that use a plugin architecture.  It encompasses sub-projects including Remix Plugin Engine, Remix Libs, and of course Remix-IDE.
 
