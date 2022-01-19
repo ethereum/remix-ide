@@ -7,7 +7,7 @@ Remix IDE is part of the Remix Project which is a platform for development tools
 
 Remix IDE is a powerful open source tool that helps you write Solidity contracts straight from the browser.
 
-It is written in JavaScript and supports both usage in the browser, in the browser but run locally and in a desktop version.
+It is written in JavaScript and supports both usage in the browser, but run locally and in a desktop version.
 
 Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
 
