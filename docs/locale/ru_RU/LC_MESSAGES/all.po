@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-22 20:31\n"
+"PO-Revision-Date: 2022-02-13 16:49\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "Поддержка сообщества"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "Компилятор (Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
