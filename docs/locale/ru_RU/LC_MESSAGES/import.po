@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:08\n"
+"PO-Revision-Date: 2022-02-13 18:56\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr ""
+msgstr "Импорт исходных файлов в Solidity"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr ""
+msgstr "Существует несколько способов импорта файлов в Remix."
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr ""
+msgstr "Для просмотра руководства по импорту файлов, нажмите здесь. Вы также можете найти это руководство в плагине Remix Workshops."
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
@@ -35,11 +35,11 @@ msgstr ""
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr ""
+msgstr "Вот некоторые из основных способов импорта файла:"
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr ""
+msgstr "Импорт файла из локального хранилища браузера"
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
