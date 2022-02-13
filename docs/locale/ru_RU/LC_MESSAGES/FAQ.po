@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-26 11:11\n"
+"PO-Revision-Date: 2022-02-13 17:59\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr "Вопрос"
+msgstr "ЧаВо"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
@@ -27,27 +27,27 @@ msgstr "Компилятор Solidity"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr "Вопрос: Ошибка: компилятор может быть в неисправном состоянии"
+msgstr "В: Ошибка: компилятор может быть в неисправном состоянии"
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr "Ответ: У старая версии компилятора solidity возникает такая проблема с браузером Chrome. Поменяйте версию компилятора в Плагине Solidity на более новую или воспользуйтесь другим браузером."
+msgstr "О: У старой версии компилятора solidity возникает такая проблема с браузером Chrome. Поменяйте версию компилятора в Плагине Solidity на более новую или воспользуйтесь другим браузером."
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr "Вопрос: у меня возникает проблема с превышением максимального количества запусков и другими ошибками, не могу скомпилировать."
+msgstr "В: У меня возникает проблема с превышением максимального количества запусков и другими ошибками, не могу скомпилировать."
 
 #: ../../FAQ.md:18
 msgid "A:  Try a different browser or a newer solidity compiler version."
-msgstr "Отет: Попробуйте другой браузер или более новую версию компилятора solidity."
+msgstr "О: Попробуйте другой браузер или более новую версию компилятора solidity."
 
 #: ../../FAQ.md:20
 msgid "Q: How to verify a contract that imports other contracts?"
-msgstr "Вопрос: Как подтвердить контракт, который импортирует другие контракты?"
+msgstr "В: Как подтвердить контракт, который импортирует другие контракты?"
 
 #: ../../FAQ.md:22
 msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr "Ответ: Проверяющий инструмент не выполняет рекурсивный просмотр импортированных выражений в контракте. Так что можно проверить только \"прямые\" контракты."
+msgstr "О: Проверяющий инструмент не выполняет рекурсивную проверку операторов импорта в контракте. Так что можно проверить только \"прямые\" контракты."
 
 #: ../../FAQ.md:24
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
@@ -79,11 +79,11 @@ msgstr "Вопрос: Как передать кортеж публичной ф
 
 #: ../../FAQ.md:39
 msgid "A: Pass it as an array []."
-msgstr "Ответ: Передайте его как массив []."
+msgstr "О: Передайте его как массив []."
 
 #: ../../FAQ.md:41
 msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
-msgstr "Вопрос: Как ввести структуру в качестве входных данных для параметра функции в модуле Применить и Запустить?"
+msgstr "В: Как ввести структуру в качестве входных данных для параметра функции в модуле Развернуть и запустить?"
 
 #: ../../FAQ.md:43
 msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
@@ -107,9 +107,9 @@ msgstr "Общие"
 
 #: ../../FAQ.md:85
 msgid "Q: Where do plugin developers go with their questions?"
-msgstr "Вопрос: Где задавать вопросы разработчикам плагинов?"
+msgstr "В: Где разработчикам плагинов задавать вопросы?"
 
 #: ../../FAQ.md:87
 msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
-msgstr "Ответ: В комнате разработчиков плагинов Remix в Gitter https://gitter.im/ethereum/remix-dev-plugin"
+msgstr "О: В комнате разработчиков плагинов Remix в Gitter https://gitter.im/ethereum/remix-dev-plugin"
 
