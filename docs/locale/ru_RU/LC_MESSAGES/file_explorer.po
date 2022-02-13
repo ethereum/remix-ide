@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-12-26 11:11\n"
+"PO-Revision-Date: 2022-02-13 16:50\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
-msgstr ""
+msgstr "Вы можете переименовать, удалить или добавить новые файлы в проводник."
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
@@ -83,25 +83,25 @@ msgstr ""
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr ""
+msgstr "Контекстное меню (правый клик)"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
-msgstr ""
+msgstr "Нажмите правой кнопкой мыши на файл или папку, и появится контекстное меню."
 
 #: ../../file_explorer.md:51
 msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr ""
+msgstr "Вы можете переименовать или удалить выбранный файл или папку. Вы также можете создать папку."
 
 #: ../../file_explorer.md:53
 msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr ""
+msgstr "Чтобы создать файл с помощью контекстного меню, щелкните правой кнопкой мыши на папку, чтобы появился параметр «Создать файл». Внутри этой папки будет создан файл."
 
 #: ../../file_explorer.md:57
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
-msgstr ""
+msgstr "Функции контекстного меню также работает с RemixD (что дает вам доступ к папке на жестком диске)."
 
 #: ../../file_explorer.md:59
 msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
-msgstr ""
+msgstr "Примечание. При работе с RemixD вам необходимо открывать и закрывать папку localhost, чтобы обновить вид."
 
