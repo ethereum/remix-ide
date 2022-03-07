@@ -90,6 +90,7 @@ Useful links:
    import
    remix_commands
    running_js_scripts
+   testing_using_Chai_&_Mocha
    FAS
    remixd
    FAQ

@@ -1,4 +1,4 @@
-Running JS Scripts in Remix
+Running JS Scripts
 ===========================
 
 Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
