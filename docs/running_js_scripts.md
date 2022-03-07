@@ -1,12 +1,43 @@
-Running JS Scripts in Remix
+Running JS Scripts
 ===========================
 
-Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
+_JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._
+
+Remix IDE supports execution of JS scripts.
+
+## Write & Run a script
+
+Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:
+
+1. Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal
+2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option
+
+Here is a sample script:
+
+```
+function test() {
+  var num=12;
+  if(num<10)
+    console.log(num + " is less than 10");
+  else
+    console.log(num + " is not less than 10");
+}
+
+test();
+```
+
+Running it using one of options mentioned above will show result in Remix terminal
+
+![](images/a-running-scripts-run.png)
 
 ## Why run JavaScript Scripts in Remix?
 * To mimic how the front-end of your dapp will use web3.js or ethers.js
 * To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI.
 * To run some tests on a previous deployed contract.
+
+## Script to deploy a contract 
+
+Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
 
 ## Setup
 1. These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**.
@@ -15,12 +46,6 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
 
 3. In the Deploy & Run plugin, choose the Environment. 
     * Async/await scripts work on in all of the Environments: the JavascriptVM, Injected Web3, and Web3 Provider. 
-
-4. Write the script - see below for an example.
-
-5. To run the script - either **(a)** make the script the **active file in the editor** and run `remix.exeCurrent()` in the console OR **(b)** right click on the script **in the files explorer** to get the popup context menu (see the image below) and select the **run** option. 
-
-  ![](images/a-running-scripts-run.png)
 
 ## JS Scripts in the File Explorers
 In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**.
