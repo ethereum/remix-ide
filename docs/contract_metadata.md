@@ -1,11 +1,13 @@
-Build Artifact
+Generate Artifact
 ==============
 
-When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files **captures the output from the Solidity compilation**. This file will be named  **contractName_metadata.json**.
+When a compilation for a Solidity file succeeds, Remix creates three JSON files for each compiled contract. Files can be seen in the `File Explorers plugin` as:
 
-The other JSON file is named **contractName.json** . The **contractName.json** file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. 
+1. `artifacts/<contractName>.json`: contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. It is used for linking a library address to the file. 
+1. `artifacts/<contractName_metadata>.json`: contains the metadata from the output of Solidity compilation.
+1. `artifacts/build-info/<dynamic_hash>.json`: contains info about `solc` compiler versino, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try [Hardhat compilation](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) from Remix.
 
-In order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the **artifacts** folder - which you can see in the Files Explorers plugin.
+Please note that in order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked. By default, it is checked.
 
 You can write scripts that can access either of these files. 
 
