@@ -1,59 +1,41 @@
-**The project code base has been moved to https://github.com/ethereum/remix-project**
+[![Documentation Status](https://readthedocs.org/projects/docs/badge/?version=latest)](https://remix-ide.readthedocs.io/en/latest/index.html)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ethereum/remix-ide)
 
-Although the [documentation](https://remix-ide.readthedocs.io/en/latest/) is still located in this repository.
+# Remix
 
-Remix is a browser-based compiler and IDE that enables users to build **Ethereum contracts with Solidity language** and to debug transactions.
+This repository contain only Remix's official [Read the Docs](https://readthedocs.org/) documentation source code. Documentation is available [here](https://remix-ide.readthedocs.io/en/latest/).
 
-To try it out, visit [https://remix.ethereum.org](https://remix.ethereum.org).
+**If looking for Remix IDE codebase, it has been moved to https://github.com/ethereum/remix-project**
 
-https://github.com/ethereum/remix-ide/releases also gives others ways to use Remix locally. Please check it out.
+## About Remix Project
 
-Remix consists of many modules and in this repository you will find the Remix IDE (aka. Browser-Solidity).
+Remix Project is a platform for development tools that use a plugin architecture. It encompasses sub-projects including Remix Plugin Engine, Remix Libraries, and of course Remix IDE.
 
-![Remix screenshot](https://github.com/ethereum/remix-ide/raw/master/remix_screenshot.png)
+Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development with Solidity language as well as a playground for learning and teaching Ethereum.
 
-## Release:
+Start developing using Remix on browser, visit: https://remix.ethereum.org
 
-The latest release is always deployed to https://remix.ethereum.org, the actual code base is located at https://github.com/ethereum/remix-project
-It is also possible to run Remix as a desktop application https://github.com/ethereum/remix-desktop/releases (Osx, Linux, Windows).
+For desktop version, see releases: https://github.com/ethereum/remix-desktop/releases
 
-## Docker:
+Remix libraries work as a core of native plugins of Remix IDE. Read more about libraries [here](https://github.com/ethereum/remix-project/blob/master/libs/README.md)
 
-Prerequisites: 
-* Docker (https://docs.docker.com/desktop/)
-* Docker-compose (https://docs.docker.com/compose/install/)
+![Remix screenshot](remix_screenshot.png)
 
-### Run with docker
+## Build
 
-If you want to run latest changes that are merged into master branch then run:
-
+Steps to build this project as as:
 ```
-docker pull remixproject/remix-ide:latest
-docker run -p 8080:80 remixproject/remix-ide:latest
-```
-
-If you want to run latest remix-live release run.
-```
-docker pull remixproject/remix-ide:remix_live
-docker run -p 8080:80 remixproject/remix-ide:remix_live
+pip3 install sphinx sphinx_rtd_theme
+pip3 install recommonmark
+git clone https://github.com/ethereum/remix-ide.git
+cd docs/
+make html
 ```
 
-### Run with docker-compose:
+Go to `docs/_build/html` ann open `index.html` on the browser.
 
-To run locally without building you only need docker-compose.yaml file and you can run:
+## Contributing
 
-```
-docker-compose pull
-docker-compose up -d
-```
+Everyone is very welcome to contribute. Suggestions, issues, queries and feedbacks are our pleasure. Please reach us on [Gitter](https://gitter.im/ethereum/remix) in case of any query.
 
-Then go to http://localhost:8080 and you can use you Remix instance.
 
-To fetch docker-compose file without cloning this repo run:
-```
-curl https://raw.githubusercontent.com/ethereum/remix-ide/master/docker-compose.yaml > docker-compose.yaml
-```
-
-## Documentation
-
-To see details about how to use Remix for developing and/or debugging Solidity contracts, please see [our documentation page](https://remix-ide.readthedocs.io/en/latest/)
