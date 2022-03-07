@@ -86,6 +86,12 @@ Result will be as:
 
 ![](images/run_with_mocha_storage_test.png)
 
+## Debugging a test transaction
+
+To debug a transaction in one of the tests can be done by printing the tranasation hash and using the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html).
+
+![](images/run_with_mocha_print_hash.png)
+
 ## Hardhat Ethers Plugin
 
 Remix script runner also supports Hardhat plugin for integration with [ethers.js](https://github.com/ethers-io/ethers.js/) named as `hardhat-ethers`. Available methods under this plugin are:
