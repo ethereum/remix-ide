@@ -85,3 +85,71 @@ describe("Storage", function () {
 Result will be as:
 
 ![](images/run_with_mocha_storage_test.png)
+
+## Hardhat Ethers Plugin
+
+Remix script runner also supports Hardhat plugin for integration with [ethers.js](https://github.com/ethers-io/ethers.js/) named as `hardhat-ethers`. Available methods under this plugin are:
+
+```
+interface Libraries {
+  [libraryName: string]: string;
+}
+
+interface FactoryOptions {
+  signer?: ethers.Signer;
+  libraries?: Libraries;
+}
+
+function getContractFactory(name: string, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractFactory(name: string, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
+
+function getContractFactory(abi: any[], bytecode: ethers.utils.BytesLike, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractAt(name: string, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
+
+function getContractAt(abi: any[], address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
+
+function getSigners() => Promise<ethers.Signer[]>;
+
+function getSigner(address: string) => Promise<ethers.Signer>;
+
+function getContractFactoryFromArtifact(artifact: Artifact, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractFactoryFromArtifact(artifact: Artifact, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
+
+function getContractAtFromArtifact(artifact: Artifact, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
+```
+
+With this, one can run the tests for a hardhat project easily using Remix.
+
+Example to test `Storage` contract with this plugin methods can be as:
+
+```
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("Storage", function () {
+  it("test initial value", async function () {
+    const Storage = await ethers.getContractFactory("Storage");
+    const storage = await Storage.deploy();
+    await storage.deployed();
+    console.log('storage deployed at:'+ storage.address)
+    expect((await storage.retrieve()).toNumber()).to.equal(0);
+  });
+   it("test updating and retrieving updated value", async function () {
+    const Storage = await ethers.getContractFactory("Storage");
+    const storage = await Storage.deploy();
+    await storage.deployed();
+    const storage2 = await ethers.getContractAt("Storage", storage.address);
+    const setValue = await storage2.store(56);
+    await setValue.wait();
+    expect((await storage2.retrieve()).toNumber()).to.equal(56);
+  });
+});
+```
+Result will be as:
+
+![](images/run_with_mocha_hhethers.png)
+
+
