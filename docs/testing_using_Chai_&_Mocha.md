@@ -49,7 +49,7 @@ const { expect } = require("chai");
 
 describe("Storage", function () {
   it("test initial value", async function () {
-    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'browser/contracts/artifacts/Storage.json'))
+    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'contracts/artifacts/Storage.json'))
     const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner()
     let Storage = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer);
     let storage = await Storage.deploy();
@@ -59,7 +59,7 @@ describe("Storage", function () {
   });
 
   it("test updating and retrieving updated value", async function () {
-    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'browser/contracts/artifacts/Storage.json'))
+    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'contracts/artifacts/Storage.json'))
     const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner()
     let Storage = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer);
     let storage = await Storage.deploy();
@@ -70,7 +70,7 @@ describe("Storage", function () {
   });
 
   it("fail test updating and retrieving updated value", async function () {
-    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'browser/contracts/artifacts/Storage.json'))
+    const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'contracts/artifacts/Storage.json'))
     const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner()
     let Storage = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer);
     let storage = await Storage.deploy();
