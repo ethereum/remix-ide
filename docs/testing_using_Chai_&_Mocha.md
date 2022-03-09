@@ -49,6 +49,7 @@ const { expect } = require("chai");
 
 describe("Storage", function () {
   it("test initial value", async function () {
+    // Make sure contract is compiled and artifacts are generated
     const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'contracts/artifacts/Storage.json'))
     const signer = (new ethers.providers.Web3Provider(web3Provider)).getSigner()
     let Storage = new ethers.ContractFactory(metadata.abi, metadata.data.bytecode.object, signer);
@@ -88,13 +89,13 @@ Result will be as:
 
 ## Debugging a test transaction
 
-To debug a transaction in one of the tests can be done by printing the tranasation hash and using the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html).
+To debug a transaction in one of the tests, print the transaction hash and input that in the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html).
 
 ![](images/run_with_mocha_print_hash.png)
 
-## Hardhat Ethers Plugin
+## Hardhat-ethers support
 
-Remix script runner also supports Hardhat plugin for integration with [ethers.js](https://github.com/ethers-io/ethers.js/) named as `hardhat-ethers`. Available methods under this plugin are:
+Remix also supports methods of [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:
 
 ```
 interface Libraries {
