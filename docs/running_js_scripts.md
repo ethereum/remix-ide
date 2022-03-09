@@ -88,7 +88,7 @@ For more script examples, please see [Frequently Asked Scripts](FAS.html).
 
 ## `require` in scripts at Remix
 
-`require` statement is supported in limited manner for remix supported modules with Remix Scripts.
+`require` statement is supported in a limited manner for Remix supported modules with Remix Scripts.
 
 For now, modules supported by Remix are ethers, web3, swarmgw, chai, remix and hardhat only for hardhat.ethers object/plugin.
 
