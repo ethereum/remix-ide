@@ -32,11 +32,11 @@ describe("Sample", function () {
 
 ## Run tests
 
-Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run with Mocha`.
+Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JS scripts
 
 ![](images/run_with_mocha_option.png)
 
-Click on `Run with Mocha` option, tests will be executed and result will be shown on Terminal.
+Click on `Run`, tests will be executed and result will be shown on Terminal.
 
 ![](images/run_with_mocha_result.png)
 
