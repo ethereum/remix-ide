@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-02-13 18:56\n"
+"PO-Revision-Date: 2022-03-18 15:11\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Для просмотра руководства по импорту ф�
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr ""
+msgstr "Для детального понимания ключевого слова import смотрите документацию Solidity"
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr ""
+msgstr "Импорт из GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -63,23 +63,23 @@ msgstr ""
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
-msgstr ""
+msgstr "Импорт из Swarm"
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
-msgstr ""
+msgstr "Файлы можно импортировать, используя URL-адреса, поддерживаемые swarm. Если у вас нет узла swarm, используйте swarm-gateways.net."
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
-msgstr ""
+msgstr "Импорт из IPFS"
 
 #: ../../import.md:55
 msgid "Files can be imported from IPFS."
-msgstr ""
+msgstr "Файлы могут быть импортированы из IPFS."
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr ""
+msgstr "Импорт из консоли"
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
