@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-01-11 08:54\n"
+"PO-Revision-Date: 2022-03-19 09:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -284,7 +284,7 @@ msgstr ""
 
 #: ../../create_deploy.md:16
 msgid "So, it is the easiest test environment - no setup required!"
-msgstr ""
+msgstr "因此，它是最简单的测试环境 - 无需设置！"
 
 #: ../../create_deploy.md:18
 msgid "But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state."
@@ -364,7 +364,7 @@ msgstr ""
 
 #: ../../create_deploy.md:104
 msgid "As get is view you can see the return value just below the action."
-msgstr ""
+msgstr "作为 get 视图，您可以在操作下方看到返回值。"
 
 msgid ""
 msgstr ""
@@ -372,19 +372,19 @@ msgstr ""
 
 #: ../../debugger.md:1
 msgid "Debugger"
-msgstr ""
+msgstr "调试器"
 
 #: ../../debugger.md:4
 msgid "This module allows you to debug the transaction. It can be used to deploy transactions created from Remix and already mined transactions. (debugging works only if the current environment provides the necessary features)."
-msgstr ""
+msgstr "该模块允许您调试事务。 它可用于部署从 Remix 创建的交易和已挖掘的交易。 （仅当当前环境提供必要的功能时，调试才有效）。"
 
 #: ../../debugger.md:9
 msgid "To get to the debugger - you can click the debug button in the terminal when a successful or failed transaction appears there.  You can also load the module from the plugin manager and then click the bug in the icon panel.  Or you can get to the debugger by running the debug command in the console."
-msgstr ""
+msgstr "要进入调试器 - 当成功或失败的事务出现在终端时，您可以单击终端中的调试按钮。 您还可以从插件管理器加载模块，然后单击图标面板中的错误。 或者，您可以通过在控制台中运行调试命令来访问调试器。"
 
 #: ../../debugger.md:14
 msgid "To learn more about how to use this tool go to the debugger tutorial."
-msgstr ""
+msgstr "要了解有关如何使用此工具的更多信息，请访问调试器教程。"
 
 msgid ""
 msgstr ""
@@ -392,19 +392,19 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "常见问题"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
-msgstr ""
+msgstr "Solidity 编译器"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "问：错误：编译器可能处于非正常状态"
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "答：旧版本的solidity 编译器在chrome 中存在这个问题。 请将 Solidity Plugin 中的编译器版本更改为较新的版本或使用其他浏览器。"
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
