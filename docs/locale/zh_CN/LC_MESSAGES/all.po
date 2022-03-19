@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-19 10:44\n"
+"PO-Revision-Date: 2022-03-19 11:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -832,35 +832,35 @@ msgstr "Remix重置链接和参数"
 
 #: ../../locations.md:4
 msgid "Remix URLs"
-msgstr ""
+msgstr "Remix 重置链接"
 
 #: ../../locations.md:5
 msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
-msgstr ""
+msgstr "在线版本可在 https://remix.ethereum.org 获得。 这个版本很稳定，几乎每个版本都会更新。"
 
 #: ../../locations.md:6
 msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
-msgstr ""
+msgstr "Https://remix-alpha.ethereum.org 上提供了 alpha 在线版本。 这不是一个稳定的版本。"
 
 #: ../../locations.md:8
 msgid "Github repo: https://github.com/ethereum/remix-project . The README contains instructions for running Remix-IDE locally."
-msgstr ""
+msgstr "Github 仓库：https://github.com/ethereum/remix-project。 自述文件包含在本地运行 Remix-IDE 的说明。"
 
 #: ../../locations.md:10
 msgid "Github release: https://github.com/ethereum/remix-project/releases ."
-msgstr ""
+msgstr "Github 发布：https://github.com/ethereum/remix-project/releases。"
 
 #: ../../locations.md:13
 msgid "Embedding & Linking to Remix"
-msgstr ""
+msgstr "嵌入和链接到Remix"
 
 #: ../../locations.md:15
 msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
-msgstr ""
+msgstr "Remix-IDE url 有参数 - 所以可以指定："
 
 #: ../../locations.md:16
 msgid "the list of plugins you want activated"
-msgstr ""
+msgstr "您要激活的插件列表"
 
 #: ../../locations.md:17
 msgid "the theme (Dark or Light)"
@@ -1076,23 +1076,23 @@ msgstr ""
 
 #: ../../remix_commands.md:57
 msgid "ethers.version: Contains the version of the ethers container object."
-msgstr ""
+msgstr "ethers.version：包含 ethers 容器对象的版本。"
 
 #: ../../remix_commands.md:59
 msgid "web3.bzz: Bzz module for interacting with the swarm network."
-msgstr ""
+msgstr "web3.bzz：用于与 swarm 网络交互的 Bzz 模块。"
 
 #: ../../remix_commands.md:61
 msgid "web3.eth: Eth module for interacting with the Ethereum network."
-msgstr ""
+msgstr "web3.eth：用于与以太坊网络交互的 Eth 模块。"
 
 #: ../../remix_commands.md:63
 msgid "web3.eth.accounts: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts：web3.eth.accounts 包含生成以太坊账户以及签署交易和数据的功能。"
 
 #: ../../remix_commands.md:65
 msgid "web3.eth.abi: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
-msgstr ""
+msgstr "web3.eth.abi：web3.eth.abi 函数让您可以将参数解译和编码为 ABI（应用程序二进制接口），以便对 EVM（以太坊虚拟机）进行函数调用。"
 
 #: ../../remix_commands.md:67
 msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
