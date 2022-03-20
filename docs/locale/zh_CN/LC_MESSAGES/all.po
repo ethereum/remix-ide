@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-19 11:46\n"
+"PO-Revision-Date: 2022-03-20 04:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -24,35 +24,35 @@ msgstr "断言库"
 #: ../../assert_library.md:4
 #: ../../assert_library.md:13
 msgid "Assert.ok(value[, message])"
-msgstr ""
+msgstr "Assert.ok(value[, message])"
 
 #: ../../assert_library.md:5
 #: ../../assert_library.md:27
 msgid "Assert.equal(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.equal(actual, expected[, message])"
 
 #: ../../assert_library.md:6
 #: ../../assert_library.md:47
 msgid "Assert.notEqual(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.notEqual(actual, expected[, message])"
 
 #: ../../assert_library.md:7
 #: ../../assert_library.md:63
 msgid "Assert.greaterThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.greaterThan(value1, value2[, message])"
 
 #: ../../assert_library.md:8
 #: ../../assert_library.md:82
 msgid "Assert.lesserThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.lesserThan(value1, value2[, message])"
 
 #: ../../assert_library.md:11
 msgid "Assert"
-msgstr ""
+msgstr "Assert"
 
 #: ../../assert_library.md:14
 msgid "value: <bool>"
-msgstr ""
+msgstr "value: <bool>"
 
 #: ../../assert_library.md:15
 #: ../../assert_library.md:30
@@ -60,11 +60,11 @@ msgstr ""
 #: ../../assert_library.md:66
 #: ../../assert_library.md:85
 msgid "message: <string>"
-msgstr ""
+msgstr "message: <string>"
 
 #: ../../assert_library.md:17
 msgid "Tests if value is truthy. message is returned in case of failure."
-msgstr ""
+msgstr "测试值是否真实。 失败时返回消息。"
 
 #: ../../assert_library.md:19
 #: ../../assert_library.md:34
@@ -72,17 +72,17 @@ msgstr ""
 #: ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
-msgstr ""
+msgstr "例子："
 
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
 msgid "actual: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "actual: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:29
 #: ../../assert_library.md:49
 msgid "expected: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "expected: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
