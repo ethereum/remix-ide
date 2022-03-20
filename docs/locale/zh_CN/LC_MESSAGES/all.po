@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-20 04:23\n"
+"PO-Revision-Date: 2022-03-20 05:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -86,21 +86,21 @@ msgstr "expected: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
-msgstr ""
+msgstr "测试实际值和预期值是否相同。 失败时返回消息"
 
 #: ../../assert_library.md:52
 msgid "Tests if actual & expected values are not same. message is returned in case of failure."
-msgstr ""
+msgstr "测试实际值和预期值是否不同。 失败时返回消息。"
 
 #: ../../assert_library.md:64
 #: ../../assert_library.md:83
 msgid "value1: <uint | int>"
-msgstr ""
+msgstr "value1: <uint | int>"
 
 #: ../../assert_library.md:65
 #: ../../assert_library.md:84
 msgid "value2: <uint | int>"
-msgstr ""
+msgstr "value2: <uint | int>"
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
@@ -116,7 +116,7 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr ""
+msgstr "代码贡献指南"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
@@ -144,11 +144,11 @@ msgstr "我们知到区块链生态系统非常新颖，大量的信息散布在
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
-msgstr ""
+msgstr "对于任何有兴趣为 Remix 开发自定义插件或想要为代码库做出贡献的人，我们开设了一个贡献者频道，特别是针对使用 Remix 工具的开发人员。"
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
-msgstr ""
+msgstr "我们恳请您尊重这个空间，并使用它来获得工作帮助，并使用开发人员的频道来讨论与 Remix 代码库相关的讨论。 如果您有合作的想法或想推广您的项目，请尝试找到一些更合适的渠道来这样做。 或者您可以直接在 Gitter 或 Twitter 上联系主要贡献者。"
 
 msgid ""
 msgstr ""
@@ -156,55 +156,55 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "编译器 (Solidy)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
-msgstr ""
+msgstr "单击图标面板中的 Solidity 图标，您将进入 Solidity 编译器。"
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
-msgstr ""
+msgstr "单击编译按钮（下图中的 D.）会触发编译。 如果您希望在每次保存文件或选择另一个文件时编译文件 - 选中自动编译复选框（下图中的 E.）。"
 
 #: ../../compile.md:8
 msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgstr "从 Solidity 版本 0.5.7 开始，可以编译 Yul 文件。 请阅读包含一些代码示例的（关于 Yul 的可靠文档）。 您可以使用语言下拉菜单（下图中的 B.）来切换语言。 此下拉列表仅适用于大于或等于 0.5.7 的版本。"
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
-msgstr ""
+msgstr "分叉选择下拉列表（下图中的 C.）允许针对特定的以太坊硬分叉编译代码。 编译器默认对应于特定版本使用的默认硬分叉。 请到 Metadata 部分设置中的“编译详细信息”（下图中的 G.）查看当前编译使用的 harfork 名称。"
 
 #: ../../compile.md:14
 msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgstr "如果合约有很多依赖项，编译可能需要一段时间——因此您可以自行决定使用自动编译。"
 
 #: ../../compile.md:18
 msgid "After each compilation, a list is updated with all newly compiled contracts.  A compiled contract can be selected with the Contract pulldown menu ( F. in the image).  Multiple contracts are compiled when one contract imports other contracts.  Selecting a contract will show information about that one."
-msgstr ""
+msgstr "每次编译后，都会使用所有新编译的合约更新列表。可以使用合约下拉菜单（图中的 F.）选择已编译的合约。当一个合同导入其他合同时，会编译多个合同。 选择合同将显示有关该合同的信息。"
 
 #: ../../compile.md:21
 msgid "When the \"Compilation Details\" button is clicked ( G. in image), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgstr "单击“Compilation Details”按钮（图像中的 G.）时，将打开一个模式，显示有关当前所选合约的详细信息。"
 
 #: ../../compile.md:23
 msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in the image) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgstr "对于那些编写自己的自定义solidity编译器的人，您可以通过单击+按钮（X. in the image）打开一个模式来导入它，您可以在其中输入要加载的编译器的url。"
 
 #: ../../compile.md:25
 msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
-msgstr ""
+msgstr "从 Solidity Compiler 模块，您还可以将合约发布到 Swarm（只能发布非抽象合约）和 IPFS。"
 
 #: ../../compile.md:28
 msgid "Published data notably contains the abi and the solidity source code."
-msgstr ""
+msgstr "发布的数据尤其包含 abi 和solidity 源代码。"
 
 #: ../../compile.md:30
 msgid "After a contract is published, you can find its metadata information using the bzz URL located in the details modal dialog SWARM LOCATION."
-msgstr ""
+msgstr "合约发布后，您可以使用位于详细模式对话框 SWARM LOCATION 中的 bzz URL 找到其元数据信息。"
 
 #: ../../compile.md:33
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
-msgstr ""
+msgstr "编译错误和警告显示在合约部分下方。 在每次编译时，静态分析选项卡都会生成一份报告。 即使编译器没有抱怨，解决报告的问题也很重要。 （查看更多）"
 
 msgid ""
 msgstr ""
@@ -212,51 +212,51 @@ msgstr ""
 
 #: ../../contract_metadata.md:1
 msgid "Build Artifact"
-msgstr ""
+msgstr "构建神器"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
-msgstr ""
+msgstr "当编译成功时，Remix 为每个编译的合约创建两个 JSON 文件。 其中一个文件捕获了 Solidity 编译的输出。 此文件将命名为 contractName_metadata.json。"
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
-msgstr ""
+msgstr "另一个 JSON 文件名为 contractName.json 。 contractName.json 文件包含将库链接到文件所需的编译工件。 它包含库的链接、字节码、部署的字节码、气体估计、方法标识符和 ABI。"
 
 #: ../../contract_metadata.md:8
 msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
-msgstr ""
+msgstr "为了生成这些工件文件，需要选中设置模块的常规设置部分中的生成合同元数据框。 这些元数据文件将在您编译文件时生成，并将放置在 artifacts 文件夹中 - 您可以在 Files Explorers 插件中看到该文件夹。"
 
 #: ../../contract_metadata.md:10
 msgid "You can write scripts that can access either of these files."
-msgstr ""
+msgstr "您可以编写可以访问其中任何一个文件的脚本。"
 
 #: ../../contract_metadata.md:12
 msgid "Library Deployment with filename.json"
-msgstr ""
+msgstr "使用 filename.json 部署库"
 
 #: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
-msgstr ""
+msgstr "默认情况下，Remix 会自动部署所需的库。"
 
 #: ../../contract_metadata.md:17
 msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
-msgstr ""
+msgstr "当您打开库的元数据文件 - artifact/filename.json 时，您将看到以下部分："
 
 #: ../../contract_metadata.md:19
 msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
-msgstr ""
+msgstr "linkReferences 包含一个表示依赖于当前合约的库的映射。 值是用于链接合约的库的地址。"
 
 #: ../../contract_metadata.md:22
 msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
-msgstr ""
+msgstr "autoDeployLib 定义库是否应由 Remix 自动部署，或者合同是否应与链接参考中描述的库链接"
 
 #: ../../contract_metadata.md:24
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
-msgstr ""
+msgstr "请注意，Remix 将解析与当前网络对应的地址。 默认情况下，配置键遵循以下形式：<network_name>:<networkd_id>，但也可以将 <network_name> 或 <network_id> 定义为密钥。"
 
 #: ../../contract_metadata.md:28
 msgid "Here is a sample metadata file for linking a library:"
-msgstr ""
+msgstr "这是用于链接库的示例元数据文件："
 
 msgid ""
 msgstr ""
