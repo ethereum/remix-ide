@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-22 05:51\n"
+"PO-Revision-Date: 2022-03-22 06:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -276,11 +276,11 @@ msgstr "Web3 提供者和注入提供者都需要使用外部工具。"
 
 #: ../../create_deploy.md:10
 msgid "The external tool for Web3 provider is an Ethereum node and for Injected provider Metamask."
-msgstr ""
+msgstr "Web3 供应商的外部工具是以太坊节点和用于进入供应商的Metamask.。"
 
 #: ../../create_deploy.md:13
 msgid "The JavaScript VM mode is convenient because each execution runs in your browser and you don't need any other software or Ethereum node to run it."
-msgstr ""
+msgstr "JavaScript VM 模式很方便，因为每次执行都在您的浏览器中运行，您不需要任何其他软件或以太坊节点来运行它。"
 
 #: ../../create_deploy.md:16
 msgid "So, it is the easiest test environment - no setup required!"
@@ -288,63 +288,63 @@ msgstr "因此，它是最简单的测试环境 - 无需设置！"
 
 #: ../../create_deploy.md:18
 msgid "But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state."
-msgstr ""
+msgstr "但请记住，当您在 Javascript VM 中时重新加载浏览器会以清空状态重新启动 Remix。"
 
 #: ../../create_deploy.md:20
 msgid "For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it might also be better to use an external node."
-msgstr ""
+msgstr "出于性能目的（也就是说 - 在最接近主网的环境中进行测试），使用外部节点可能会更好。"
 
 #: ../../create_deploy.md:22
 msgid "Selecting the VM mode"
-msgstr ""
+msgstr "选择虚拟机模式"
 
 #: ../../create_deploy.md:25
 msgid "Make sure the VM mode is selected. All accounts displayed in Accounts should have 100 ether."
-msgstr ""
+msgstr "确保选择了 VM 模式。 Accounts 中显示的所有帐户都应该有 100 个以太币。"
 
 #: ../../create_deploy.md:28
 msgid "Sample contract"
-msgstr ""
+msgstr "合约示范"
 
 #: ../../create_deploy.md:57
 msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
-msgstr ""
+msgstr "这份合同非常基础， 目标是快速开始创建示例合约并与之交互。"
 
 #: ../../create_deploy.md:60
 msgid "Deploying an instance"
-msgstr ""
+msgstr "部署实例"
 
 #: ../../create_deploy.md:63
 msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
-msgstr ""
+msgstr "编译选项卡显示与当前合约相关的信息（注意可以有多个）（参见编译）。"
 
 #: ../../create_deploy.md:66
 msgid "Moving on, in the Run tab select, JavaScript VM to specify that you are going to deploy an instance of the contract in the JavaScript VM state."
-msgstr ""
+msgstr "正在运行，在 Run 选项卡中选择 JavaScript VM，以指定您将在 JavaScript VM 状态下部署合同实例。"
 
 #: ../../create_deploy.md:72
 msgid "The constructor of Ballot.sol needs a parameter (of type uint8). Give any value and click on Deploy."
-msgstr ""
+msgstr "Ballot.sol 的构造函数需要一个参数（类型为 uint8）， 给出任何值并单击部署。"
 
 #: ../../create_deploy.md:75
 msgid "The transaction which deploys the instance of Ballot is created."
-msgstr ""
+msgstr "创建部署 Ballot 实例的事务。"
 
 #: ../../create_deploy.md:77
 msgid "In a \"normal\" blockchain, it can take several seconds to execute. This is the time for the transaction to be mined. However, because we are using the JavaScript VM, our execution is immediate."
-msgstr ""
+msgstr "在“正常”区块链中，执行可能需要几秒钟。 这是交易被挖掘的时间。 但是，因为我们使用的是 JavaScript VM，所以我们的执行是立即的"
 
 #: ../../create_deploy.md:81
 msgid "The terminal will inform you about the transaction. You can see details there and start debugging."
-msgstr ""
+msgstr "终端机将通知您有关交易的信息。 您可以在那里查看详细信息并开始调试。"
 
 #: ../../create_deploy.md:84
 msgid "The newly created instance is displayed in the run tab."
-msgstr ""
+msgstr "新创建的实例显示在运行选项卡中。"
 
 #: ../../create_deploy.md:88
 msgid "Interacting with an instance"
-msgstr ""
+msgstr "与实例交互"
 
 #: ../../create_deploy.md:91
 msgid "This new instance contains 3 actions which corresponds to the 3 functions (setP, setPN, get). Clicking on SetP or SetPN will create a new transaction."
@@ -504,55 +504,55 @@ msgstr "基本文件资源管理器列出了存储在浏览器浏览器存储中
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
-msgstr ""
+msgstr "重要提示：清除浏览器存储将永久删除存储在那里的所有 Solidity 文件。 这是基于浏览器的 IDE 的固有限制。 但是如果您想在浏览器之外和计算机的文件系统上存储文件，请使用 Remixd 或使用 Remix-IDE 的桌面版本。 RemixD 使您可以访问硬盘驱动器上的选定文件夹。 Remix Desktop 是 Electron 应用程序中的 Remix-IDE 版本。"
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
-msgstr ""
+msgstr "您可以在文件资源管理器中重命名、删除或添加新文件。"
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
-msgstr ""
+msgstr "我们将首先审查上面图像中的图标"
 
 #: ../../file_explorer.md:21
 msgid "The book icon - A. is the link to the module's documentation."
-msgstr ""
+msgstr "该书图标 - A. 是该模块文档的链接。"
 
 #: ../../file_explorer.md:23
 msgid "The icons to the right of the browser file explorer in the image above only appear for browser storage."
-msgstr ""
+msgstr "上图中浏览器文件浏览器右侧的图标仅用于浏览器存储。"
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
-msgstr ""
+msgstr "创建新文件"
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
-msgstr ""
+msgstr "上面标有 B. 的图标，创建一个新文件。"
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
-msgstr ""
+msgstr "发布为在线"
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
-msgstr ""
+msgstr "上面标有 C. 的图标，将浏览器文件夹中的所有文件发布到 gist只会发布浏览器根目录中的文件，子文件夹中的文件不会发布到 Gist，Gist API 在 2018 年发生了变化，要求用户经过身份验证才能发布 gist。"
 
 #: ../../file_explorer.md:36
 msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token."
-msgstr ""
+msgstr "单击此链接到 Github ，代币设置并选择生成新代币。 然后选中 Create gists 复选框并生成一个新代币。"
 
 #: ../../file_explorer.md:38
 msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save. Now you should be able to use the feature."
-msgstr ""
+msgstr "获取代币并将其粘贴到 Remix 的设置模块中的 Github 访问代币部分。 然后单击保存。 现在您应该可以使用该功能了。"
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
-msgstr ""
+msgstr "新建文件夹"
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
-msgstr ""
+msgstr "上面标有 D. 的图标。 在浏览器文件资源管理器中创建一个新文件夹。"
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
