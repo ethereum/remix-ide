@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-22 06:55\n"
+"PO-Revision-Date: 2022-03-22 08:14\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -556,27 +556,27 @@ msgstr "上面标有 D. 的图标。 在浏览器文件资源管理器中创建�
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr ""
+msgstr "上下文菜单（右键单击）"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
-msgstr ""
+msgstr "右键单击文件或文件夹，将出现上下文菜单。"
 
 #: ../../file_explorer.md:51
 msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr ""
+msgstr "您可以重命名或删除选定的文件或文件夹，您也可以创建一个文件夹。"
 
 #: ../../file_explorer.md:53
 msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr ""
+msgstr "要使用上下文菜单创建文件，请右键单击文件夹以获取“创建文件”选项，将在该文件夹中创建一个文件。"
 
 #: ../../file_explorer.md:57
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
-msgstr ""
+msgstr "上下文菜单的功能也适用于 RemixD（它使您可以访问硬盘驱动器上的文件夹）。"
 
 #: ../../file_explorer.md:59
 msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
-msgstr ""
+msgstr "注意：使用 RemixD 时，您需要打开和关闭 localhost 文件夹以刷新视图。"
 
 msgid ""
 msgstr ""
@@ -584,47 +584,47 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr ""
+msgstr "在 Solidity 中导入源文件"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr ""
+msgstr "将文件导入 Remix 有多种方法。"
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr ""
+msgstr "有关导入文件的教程，请单击此处。您还可以在 Remix Workshops 插件中找到本教程。"
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr ""
+msgstr "有关 import 关键字的详细说明，请参阅 Solidity 文档。"
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr ""
+msgstr "以下是导入文件的一些主要方法："
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr ""
+msgstr "从浏览器的本地存储导入文件"
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
-msgstr ""
+msgstr "Remix 中的文件可以使用带有文件路径的 import 关键字导入，使用 ./ 作为相对路径以增加可移植性。"
 
 #: ../../import.md:24
 msgid "Importing a file from your computer's filesystem"
-msgstr ""
+msgstr "从计算机的文件系统导入文件"
 
 #: ../../import.md:27
 msgid "This method uses remixd - the remix daemon.  Please go to the remixd tutorial for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr ""
+msgstr "此方法使用 remixd - remix 守护程序，请转到 remixd 教程以获取有关如何搭建浏览器和计算机文件系统之间的问题说明。"
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr ""
+msgstr "从 GitHub 导入"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "可以直接从 GitHub 导入文件。 您应该指定发布标签（如果可用），否则您将在主分支中获得最新代码。 对于 OpenZeppelin Contracts，您应该只使用在官方版本中发布的代码，下面的示例从 OpenZeppelin Contracts v2.5.0 导入。"
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
@@ -1052,27 +1052,27 @@ msgstr ""
 
 #: ../../remix_commands.md:45
 msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
-msgstr ""
+msgstr "ethers.providers：提供者提取与以太坊区块链的连接，用于发出查询和发送状态变化的交易。"
 
 #: ../../remix_commands.md:47
 msgid "ethers.SigningKey: The SigningKey interface provides an abstraction around the secp256k1 elliptic curve cryptography library."
-msgstr ""
+msgstr "ethers.SigningKey：SigningKey 接口提供了围绕 secp256k1 椭圆曲线密码库的抽象。"
 
 #: ../../remix_commands.md:49
 msgid "ethers.utils: The utility functions exposed in both the ethers umbrella package and the ethers-utils."
-msgstr ""
+msgstr "ethers.utils： ethers umbrella package 和 ethers-utils 中公开的实用程序函数。"
 
 #: ../../remix_commands.md:51
 msgid "ethers.utils.AbiCoder: Create a new ABI Coder object"
-msgstr ""
+msgstr "ethers.utils.AbiCoder：创建一个新的 ABI Coder 对象"
 
 #: ../../remix_commands.md:53
 msgid "ethers.utils.RLP: This encoding method is used internally for several aspects of Ethereum, such as encoding transactions and determining contract addresses."
-msgstr ""
+msgstr "ethers.utils.RLP：这种编码方法在内部用于以太坊的几个方面，例如编码交易和确定合约地址。"
 
 #: ../../remix_commands.md:55
 msgid "ethers.Wallet: A wallet manages a private/public key pair which is used to cryptographically sign transactions and prove ownership on the Ethereum network."
-msgstr ""
+msgstr "ethers.Wallet：钱包管理私钥/公钥对，用于对交易进行加密签名并证明以太坊网络的所有权。"
 
 #: ../../remix_commands.md:57
 msgid "ethers.version: Contains the version of the ethers container object."
@@ -1096,59 +1096,59 @@ msgstr "web3.eth.abi：web3.eth.abi 函数让您可以将参数解译和编码�
 
 #: ../../remix_commands.md:67
 msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
-msgstr ""
+msgstr "web3.eth.ens：web3.eth.ens 函数让您可以与 ENS 交互。"
 
 #: ../../remix_commands.md:69
 msgid "web3.eth.Iban: The web3.eth.Iban function lets convert Ethereum addresses from and to IBAN and BBAN."
-msgstr ""
+msgstr "web3.eth.Iban：web3.eth.Iban 函数允许将以太坊地址与 IBAN 和 BBAN 相互转换。"
 
 #: ../../remix_commands.md:71
 msgid "web3.eth.net: Net module for interacting with network properties."
-msgstr ""
+msgstr "web3.eth.net：用于与网络属性交互的网络模块。"
 
 #: ../../remix_commands.md:73
 msgid "web3.eth.personal: Personal module for interacting with the Ethereum accounts."
-msgstr ""
+msgstr "web3.eth.personal：用于与以太坊账户交互的个人模块。"
 
 #: ../../remix_commands.md:75
 msgid "web3.eth.subscribe: The web3.eth.subscribe function lets you subscribe to specific events in the blockchain."
-msgstr ""
+msgstr "web3.eth.subscribe：web3.eth.subscribe 功能让您可以订阅区块链中的特定事件。"
 
 #: ../../remix_commands.md:77
 msgid "web3.givenProvider: When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser. Will return the given provider by the (browser) environment, otherwise null."
-msgstr ""
+msgstr "web3.givenProvider：在以太坊兼容的浏览器中使用 web3.js 时，它将由该浏览器设置为当前的本地提供程序。 将由（browser）环境返回给定的提供者，否则为空。"
 
 #: ../../remix_commands.md:79
 msgid "web3.modules: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.modules：包含 web3 容器对象的版本。"
 
 #: ../../remix_commands.md:81
 msgid "web3.providers: Contains the current available providers."
-msgstr ""
+msgstr "web3.providers：包含当前可用的提供者。"
 
 #: ../../remix_commands.md:83
 msgid "web3.shh: Shh module for interacting with the whisper protocol"
-msgstr ""
+msgstr "web3.shh：用于与 Whisper 协议交互的 Shh 模块"
 
 #: ../../remix_commands.md:85
 msgid "web3.utils: This package provides utility functions for Ethereum dapps and other **web3.js packages."
-msgstr ""
+msgstr "web3.utils：该包为以太坊 dapps 和其他 **web3.js 包提供实用功能。"
 
 #: ../../remix_commands.md:87
 msgid "web3.version: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.version：包含 web3 容器对象的版本。"
 
 #: ../../remix_commands.md:89
 msgid "web3.eth.clearSubscriptions();: Resets subscriptions."
-msgstr ""
+msgstr "web3.eth.clearSubscriptions();：重置订阅。"
 
 #: ../../remix_commands.md:91
 msgid "web3.eth.Contract(jsonInterface[, address][, options]): The **web3.eth.Contract object makes it easy to interact with smart contracts on the ethereum blockchain."
-msgstr ""
+msgstr "web3.eth.Contract(jsonInterface[, address][, options])：**web3.eth.Contract 对象可以轻松地与以太坊区块链上的智能合约进行交互。"
 
 #: ../../remix_commands.md:93
 msgid "web3.eth.accounts.create([entropy]);: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts.create([entropy]);：web3.eth.accounts 包含生成以太坊账户和签署交易和数据的功能。"
 
 msgid ""
 msgstr ""
@@ -1156,11 +1156,11 @@ msgstr ""
 
 #: ../../remixd.md:1
 msgid "Remixd: Access your Local Filesystem"
-msgstr ""
+msgstr "Remixd：访问您的本地文件系统"
 
 #: ../../remixd.md:3
 msgid "To give the Remix-ide (the web app) access to a folder on your local computer, you need to use remixd."
-msgstr ""
+msgstr "要让 Remix-ide（网络应用程序）访问本地计算机上的文件夹，您需要使用 remixd。"
 
 #: ../../remixd.md:5
 msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
