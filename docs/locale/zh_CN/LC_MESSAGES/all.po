@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-20 05:19\n"
+"PO-Revision-Date: 2022-03-22 05:51\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -264,15 +264,15 @@ msgstr ""
 
 #: ../../create_deploy.md:1
 msgid "Creating and Deploying a Contract"
-msgstr ""
+msgstr "创建和部署合同"
 
 #: ../../create_deploy.md:4
 msgid "There are 3 type of environments Remix can be plugged to: Javascript VM, Injected provider, or Web3 provider. (for details see Running transactions)"
-msgstr ""
+msgstr "Remix 可以插入 3 种类型的环境：Javascript VM、Injected 提供程序或 Web3 提供程序。 （有关详细信息，请参阅运行事务）"
 
 #: ../../create_deploy.md:7
 msgid "Both Web3 provider and Injected provider require the use of an external tool."
-msgstr ""
+msgstr "Web3 提供者和注入提供者都需要使用外部工具。"
 
 #: ../../create_deploy.md:10
 msgid "The external tool for Web3 provider is an Ethereum node and for Injected provider Metamask."
