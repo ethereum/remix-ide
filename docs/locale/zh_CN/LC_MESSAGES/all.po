@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-22 10:57\n"
+"PO-Revision-Date: 2022-03-22 11:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -888,35 +888,35 @@ msgstr "使用 URL 参数进行进一步自定义"
 
 #: ../../locations.md:30
 msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
-msgstr ""
+msgstr "以下 URL 将关闭除主面板和图标面板之外的所有内容（因此将侧面和终端最小化）"
 
 #: ../../locations.md:32
 msgid "https://remix.ethereum.org/?#embed=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#embed=true"
 
 #: ../../locations.md:34
 msgid "To link with the side panel minimized use this URL:"
-msgstr ""
+msgstr "要链接到最小化的侧面板，请使用以下 URL："
 
 #: ../../locations.md:36
 msgid "https://remix.ethereum.org/?#minimizesidepanel=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#minimizesidepanel=true"
 
 #: ../../locations.md:38
 msgid "To link to Remix with the dark theme or the light theme specified use this url:"
-msgstr ""
+msgstr "要使用指定的暗色主题或亮色主题链接到 Remix，请使用以下网址："
 
 #: ../../locations.md:40
 msgid "https://remix.ethereum.org/?#theme=Dark"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#theme=Dark"
 
 #: ../../locations.md:42
 msgid "To link to Remix with the Solidity compiler, the unit testing, and LearnEth plugins activated (with Learneth gaining the side panel's focus) & with the Light theme loaded & with the terminal minimized use this URL & with optimize off:"
-msgstr ""
+msgstr "要链接到 Remix，使用 Solidity 编译器、单元测试和激活的 LearnEth 插件（Learneth 获得侧面板的焦点）并加载亮色主题并最小化终端使用此 URL 并关闭优化："
 
 #: ../../locations.md:44
 msgid "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
 
 msgid ""
 msgstr ""
@@ -928,23 +928,23 @@ msgstr "插件管理器"
 
 #: ../../plugin_manager.md:4
 msgid "Everything is a PLUGIN in Remix"
-msgstr ""
+msgstr "Remix 中的一切都是插件"
 
 #: ../../plugin_manager.md:6
 msgid "In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin. This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example)."
-msgstr ""
+msgstr "为了将我们和您制作的新工具集成到 Remix 中，我们现在将所有东西都制作成了插件。 这种架构还允许将 Remix 或仅 Remix 的一部分集成到其他项目中（例如您的项目）。"
 
 #: ../../plugin_manager.md:9
 msgid "This means that you only load the functionality you need."
-msgstr ""
+msgstr "这意味着您只加载您需要的功能。"
 
 #: ../../plugin_manager.md:11
 msgid "It also means that you can turn off and on plugins - as your needs change."
-msgstr ""
+msgstr "这也意味着您可以根据需求的变化关闭和打开插件。"
 
 #: ../../plugin_manager.md:13
 msgid "This all happens in the plug manager."
-msgstr ""
+msgstr "这一切都发生在插件管理器中。"
 
 #: ../../plugin_manager.md:15
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
