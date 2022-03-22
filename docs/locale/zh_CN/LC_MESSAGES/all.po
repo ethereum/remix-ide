@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-22 09:39\n"
+"PO-Revision-Date: 2022-03-22 10:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -644,11 +644,11 @@ msgstr "文件可以从 IPFS 导入。"
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr ""
+msgstr "从控制台导入"
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "您还可以使用命令 remix.loadurl('<the_url>')。 您应该指定发布标签（where available），否则您将在主分支中获得最新代码。 对于 OpenZeppelin Contracts，您应该只使用在官方版本中发布的代码，下面的示例从 OpenZeppelin Contracts v2.5.0 导入。"
 
 #: ../../import.md:70
 msgid "Notice that this will create a github folder in the file explorer.  To load a file in the github folder, you would use a command like this:"
@@ -864,27 +864,27 @@ msgstr "您要激活的插件列表"
 
 #: ../../locations.md:17
 msgid "the theme (Dark or Light)"
-msgstr ""
+msgstr "主题(暗色或亮色)"
 
 #: ../../locations.md:18
 msgid "the panels that should be minimized"
-msgstr ""
+msgstr "面板需要最小化"
 
 #: ../../locations.md:19
 msgid "if you want the Solidity compiler to have optimize enabled"
-msgstr ""
+msgstr "如果您希望 Solidity 编译器启用优化"
 
 #: ../../locations.md:21
 msgid "In the following example, there is a list of plugins that follows the word plugins will be activated and the last plugin will gain the focus."
-msgstr ""
+msgstr "在下面的示例中，有一个插件列表，后面跟着单词 plugins will beactivated 并且最后一个插件将获得专注。"
 
 #: ../../locations.md:26
 msgid "For the plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
-msgstr ""
+msgstr "因为插件在他们的个人资料中被他们的名字所调用。 要检查插件的配置文件名称 - 对于外部团队构建的插件，请转到 https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
 
 #: ../../locations.md:28
 msgid "Further Customization with URL parameters"
-msgstr ""
+msgstr "使用 URL 参数进行进一步自定义"
 
 #: ../../locations.md:30
 msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
