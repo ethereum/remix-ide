@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-23 12:09\n"
+"PO-Revision-Date: 2022-03-23 13:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1004,51 +1004,51 @@ msgstr "remix.execute(filepath)：运行文件路径指定的脚本。 如果文
 
 #: ../../remix_commands.md:21
 msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
-msgstr ""
+msgstr "remix.exeCurrent()：运行编辑器中当前显示的脚本。"
 
 #: ../../remix_commands.md:23
 msgid "remix.getFile(path): Returns the content of the file located at the given path"
-msgstr ""
+msgstr "remix.getFile(path)：返回位于指定路径的文件内容"
 
 #: ../../remix_commands.md:25
 msgid "remix.help(): Display this help message."
-msgstr ""
+msgstr "remix.help()：显示此帮助信息。"
 
 #: ../../remix_commands.md:27
 msgid "remix.loadgist(id): Load a gist in the file explorer."
-msgstr ""
+msgstr "remix.loadgist(id): 在文件探索器中加载一个 Gist"
 
 #: ../../remix_commands.md:29
 msgid "remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
-msgstr ""
+msgstr "remix.loadurl(url)：在文件资源管理器中加载给定的 url。 url 可以是 github、swarm 或 ipfs 类型。"
 
 #: ../../remix_commands.md:31
 msgid "remix.setFile(path, content): set the content of the file located at the given path"
-msgstr ""
+msgstr "remix.setFile(path, content)：设置位于指定路径的文件内容"
 
 #: ../../remix_commands.md:33
 msgid "remix.setproviderurl(url): Change the current provider to Web3 provider and set the url endpoint."
-msgstr ""
+msgstr "remix.setproviderurl(url)：将当前提供者更改为 Web3 提供者并设置 url 端点。"
 
 #: ../../remix_commands.md:35
 msgid "swarmgw.get(url, cb): Download files from Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.get(url, cb): 通过 https**://swarm-gateways.net/ 从 Swarm 下载文件"
 
 #: ../../remix_commands.md:37
 msgid "swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.put(content, cb): 通过 https**://swarm-gateways.net/ 上传文件到 Swarm"
 
 #: ../../remix_commands.md:39
 msgid "ethers.Contract: This API provides a graceful connection to a contract deployed on the blockchain, simplifying calling and querying its functions and handling all the binary protocol and conversion as necessarily."
-msgstr ""
+msgstr "ethers.Contract：此 API 提供与部署在区块链上的合约的友好连接，简化调用和查询其功能，并根据需要处理所有二进制协议和转换。"
 
 #: ../../remix_commands.md:41
 msgid "ethers.HDNode: A Hierarchical Deterministic Wallet represents a large tree of private keys which can reliably be reproduced from an initial seed."
-msgstr ""
+msgstr "ethers.HDNode：分层确定性钱包代表一个树形结构的私钥，可以从初始种子可靠地复制。"
 
 #: ../../remix_commands.md:43
 msgid "ethers.Interface: The Interface Object is a meta-class that accepts a Solidity (or compatible) Application Binary Interface (ABI) and populates functions to deal with encoding and decoding the parameters to pass in and results returned."
-msgstr ""
+msgstr "ethers.Interface：接口对象是一个元类，它接受一个 Solidity（或兼容的）应用程序二进制接口（ABI）并填充函数来处理编码和解码要传入的参数和返回的结果。"
 
 #: ../../remix_commands.md:45
 msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
@@ -1280,27 +1280,27 @@ msgstr "在这个 repo 中有所有级别的教程。"
 
 #: ../../remix_tutorials_github.md:10
 msgid "There are tutorials for specific remix functionalities like:"
-msgstr ""
+msgstr "有关特定remix功能的教程，例如："
 
 #: ../../remix_tutorials_github.md:12
 msgid "Deploying"
-msgstr ""
+msgstr "合约部署"
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
-msgstr ""
+msgstr "测试"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
-msgstr ""
+msgstr "Remix 插件开发"
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr ""
+msgstr "其它"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr ""
+msgstr "2. 其他外部讲习班"
 
 msgid ""
 msgstr ""
@@ -1312,79 +1312,79 @@ msgstr "部署和运行"
 
 #: ../../run.md:4
 msgid "The Deploy & Run module allows you to send transactions to the current environment."
-msgstr ""
+msgstr "Deploy & Run 模块允许您将事务发送到当前环境。"
 
 #: ../../run.md:6
 msgid "To use this module, you need to have a contract compiled.  So, if there is a contract name in the <b>CONTRACT</b> select box (the select box is under the VALUE input field), you can use this module.  If nothing is there or you do not see the contract you want, you need to select a contract in the editor to make it active, go to a compiler module and compile it, and then come back to Deploy & Run."
-msgstr ""
+msgstr "要使用这个模块，你需要编译一个合约。 因此，如果 <b>CONTRACT</b> 选择框（选择框在 VALUE 输入字段下方）中有合约名称，则可以使用该模块。 如果什么都没有，或者您没有看到您想要的合约，您需要在编辑器中选择一个合约使其处于活动状态，进入编译器模块并编译它，然后返回 Deploy & Run。"
 
 #: ../../run.md:10
 msgid "Environment"
-msgstr ""
+msgstr "环境"
 
 #: ../../run.md:13
 msgid "JavaScript VM: All the transactions will be executed in a sandbox blockchain in the browser. This means nothing will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved."
-msgstr ""
+msgstr "JavaScript VM：所有交易都将在浏览器的沙箱区块链中执行。 这意味着重新加载页面时不会保留任何内容。 JsVM 是它自己的区块链，每次重新加载时都会启动一个新的区块链，旧的不会被保存。"
 
 #: ../../run.md:17
 msgid "Injected Provider: Remix will connect to an injected web3 provider. Metamask is an example of a provider that inject web3."
-msgstr ""
+msgstr "Injected Provider：Remix 将连接到注入的 web3 提供者。 Metamask 是注入 web3 的提供程序的一个示例。"
 
 #: ../../run.md:20
 msgid "Web3 Provider: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client."
-msgstr ""
+msgstr "Web3 Provider：Remix 将连接到远程节点。 您需要提供所选提供商的 URL：geth、parity 或任何以太坊客户端。"
 
 #: ../../run.md:22
 msgid "More about Web3 Provider"
-msgstr ""
+msgstr "关于更多 Web3 供应商的信息"
 
 #: ../../run.md:24
 msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
-msgstr ""
+msgstr "如果您使用 Geth 和 https://remix.ethereum.org，请使用以下 Geth 命令来允许来自 Remix 的请求："
 
 #: ../../run.md:26
 msgid "geth --rpc --rpccorsdomain https://remix.ethereum.org"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain https://remix.etherum.org"
 
 #: ../../run.md:28
 msgid "Also see Geth Docs about the rpc server"
-msgstr ""
+msgstr "另请参阅有关 rpc 服务器的 Geth Docs"
 
 #: ../../run.md:30
 msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
-msgstr ""
+msgstr "要使用 https://remix.ethereum.org 和本地测试节点运行 Remix，请使用以下 Geth 命令："
 
 #: ../../run.md:32
 msgid "geth --rpc --rpccorsdomain=\"https://remix.ethereum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain=\"https://remix.etherum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
 
 #: ../../run.md:34
 msgid "If you are using remix-alpha or a local version of remix - replace the url of the --rpccorsdomain with the url of Remix that you are using."
-msgstr ""
+msgstr "如果您使用的是 remix-alpha 或本地版本的 remix - 将 --rpccorsdomain 的 url 替换为您正在使用的 Remix 的 url。"
 
 #: ../../run.md:36
 msgid "To run Remix Desktop & a local test node, use this Geth command:"
-msgstr ""
+msgstr "要运行 Remix Desktop 和本地测试节点，请使用以下 Geth 命令："
 
 #: ../../run.md:38
 msgid "geth --rpc --rpccorsdomain=\"package://a7df6d3c223593f3550b35e90d7b0b1f.mod\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain=\"https://remix.etherum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
 
 #: ../../run.md:40
 msgid "Also see Geth Docs on Dev mode"
-msgstr ""
+msgstr "另请参阅 Dev 模式的 Geth 文档"
 
 #: ../../run.md:42
 msgid "The Web3 Provider Endpoint for a local node is http://localhost:8545"
-msgstr ""
+msgstr "本地节点的 Web3 提供程序端点是 http://localhost:8545"
 
 #: ../../run.md:46
 msgid "WARNING: Don't get lazy. It is a bad idea to use the Geth flag <b>--rpccorsdomain</b> with a wildcard: --rpccorsdomain *"
-msgstr ""
+msgstr "警告：不要懒惰。将 Geth 通配符 <b>--rpccorsdomain</b> 来使用通配符: --rpccorsdomain * 是一个坏主意。"
 
 #: ../../run.md:48
 msgid "If you put the wildcard *, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  --rpccorsdomain 'https://remix-alpha.ethereum.org'"
-msgstr ""
+msgstr "如果放通配符*，则表示每个人都可以请求该节点。 然而，如果你放置一个 URL，它会将 URL 限制在那个 URL 上——例如 --rpccorsdomain 'https://remix-alpha.ethereum.org'"
 
 #: ../../run.md:50
 msgid "Only use --rpccorsdomain * when using a test chain AND using only test accounts. For real accounts or on the mainchain specify the url."
@@ -1600,43 +1600,43 @@ msgstr ""
 
 #: ../../static_analysis.md:11
 msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one Auto run checkbox and a Run button."
-msgstr ""
+msgstr "如果您选择此插件，您将看到许多模块与复选框、一个自动运行复选框和一个运行按钮一起列出。"
 
 #: ../../static_analysis.md:15
 msgid "By default, all modules are selected for analysis and a new analysis is performed at each compilation."
-msgstr ""
+msgstr "默认情况下，选择所有模块进行分析，并在每次编译时执行新的分析。"
 
 #: ../../static_analysis.md:17
 msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis again for last compiled contract by clicking on Run."
-msgstr ""
+msgstr "可以select/deselect选择应分析合约的模块，并可以通过单击“Run”再次为上次编译的合约运行分析。"
 
 #: ../../static_analysis.md:19
 msgid "If you don't want to run analysis each time you compile a contract, just uncheck the checkbox near to Auto run."
-msgstr ""
+msgstr "如果您不想在每次编译合约时都运行分析，只需取消选中 Auto run 附近的复选框即可。"
 
 #: ../../static_analysis.md:21
 msgid "Analysis Modules"
-msgstr ""
+msgstr "分析模式"
 
 #: ../../static_analysis.md:23
 msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: Security, Gas & Economy, ERC & Miscellaneous."
-msgstr ""
+msgstr "目前，在 Remix IDE v0.10.1 中，共有 21 个分析模块列在 4 个类别下。 类别包括：Security, Gas & Economy, ERC & Miscellaneous."
 
 #: ../../static_analysis.md:25
 msgid "Here is the list of modules under each category along with the example code which should be avoided or used very carefully while development:"
-msgstr ""
+msgstr "以下是每个类别下的模块列表以及在开发时应避免或非常小心使用的示例代码："
 
 #: ../../static_analysis.md:27
 msgid "Category: Security"
-msgstr ""
+msgstr "类别：安全"
 
 #: ../../static_analysis.md:28
 msgid "Transaction origin: 'tx.origin' is used"
-msgstr ""
+msgstr "交易来源：使用“tx.origin”"
 
 #: ../../static_analysis.md:30
 msgid "tx.origin is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
-msgstr ""
+msgstr "tx.origin 仅在非常特殊的情况下才有用。 如果您使用它进行身份验证，您通常希望将其替换为“msg.sender”，因为否则您调用的任何合约都可以代表您行事。"
 
 #: ../../static_analysis.md:32
 #: ../../static_analysis.md:41
@@ -1660,35 +1660,35 @@ msgstr ""
 #: ../../static_analysis.md:269
 #: ../../static_analysis.md:284
 msgid "Example:"
-msgstr ""
+msgstr "示例："
 
 #: ../../static_analysis.md:37
 msgid "Check effects: Potential reentrancy bugs"
-msgstr ""
+msgstr "Check effects: 潜在的重入错误"
 
 #: ../../static_analysis.md:39
 msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
-msgstr ""
+msgstr "检查-效果-交互模式的潜在违规可能导致重入漏洞。"
 
 #: ../../static_analysis.md:50
 msgid "Inline assembly: Inline assembly used"
-msgstr ""
+msgstr "Inline assembly：使用内联汇编"
 
 #: ../../static_analysis.md:52
 msgid "Use of inline assembly is advised only in rare cases."
-msgstr ""
+msgstr "建议仅在极少数情况下使用内联汇编。"
 
 #: ../../static_analysis.md:61
 msgid "Block timestamp: Semantics maybe unclear"
-msgstr ""
+msgstr "Block timestamp：语义可能不明确"
 
 #: ../../static_analysis.md:63
 msgid "now does not mean current time. now is an alias for block.timestamp. block.timestamp can be influenced by miners to a certain degree, be careful."
-msgstr ""
+msgstr "now 并不表示当前时间。 now 是 block.timestamp 的别名。 block.timestamp 可能会受到矿工的一定程度的影响，请小心。"
 
 #: ../../static_analysis.md:74
 msgid "Low level calls: Semantics maybe unclear"
-msgstr ""
+msgstr "Low level calls：语义可能不清楚"
 
 #: ../../static_analysis.md:76
 msgid "Use of low level call, callcode or delegatecall should be avoided whenever possible. send does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use transfer whenever failure of the ether transfer should rollback the whole transaction."
