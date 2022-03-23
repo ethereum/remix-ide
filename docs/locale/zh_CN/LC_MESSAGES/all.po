@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-22 11:55\n"
+"PO-Revision-Date: 2022-03-23 12:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -948,15 +948,15 @@ msgstr "这一切都发生在插件管理器中。"
 
 #: ../../plugin_manager.md:15
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
-msgstr ""
+msgstr "插件管理器也是您在创建自己的插件和想要将本地插件加载到 Remix。"
 
 #: ../../plugin_manager.md:17
 msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr ""
+msgstr "要加载本地插件，您可以单击插件管理器面板顶部的“Connect to a Local Plugin”链接。"
 
 #: ../../plugin_manager.md:21
 msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
-msgstr ""
+msgstr "要了解有关如何创建自己的插件的更多信息，请转到 remix-plugin repo 的 README。"
 
 msgid ""
 msgstr ""
@@ -964,43 +964,43 @@ msgstr ""
 
 #: ../../remix_commands.md:1
 msgid "Remix Commands"
-msgstr ""
+msgstr "Remixd 命令"
 
 #: ../../remix_commands.md:4
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto completion.  These commands are using the following libraries:"
-msgstr ""
+msgstr "在控制台中，您可以运行下面列出的命令。 一旦你开始输入命令，就会自动完成。 这些命令使用以下库："
 
 #: ../../remix_commands.md:6
 msgid "ethers: The ethers.js library is a compact and complete JavaScript library for Ethereum."
-msgstr ""
+msgstr "ethers：ethers.js 库是一个紧凑且完整的以太坊 JavaScript 库。"
 
 #: ../../remix_commands.md:8
 msgid "remix:  Ethereum IDE and tools for the web."
-msgstr ""
+msgstr "remix：以太坊 IDE 和网络工具。"
 
 #: ../../remix_commands.md:10
 msgid "web3: The web3.js library is a collection of modules which contain specific functionality for the ethereum ecosystem."
-msgstr ""
+msgstr "web3：web3.js 库是一组包含以太坊生态系统特定功能的模块。"
 
 #: ../../remix_commands.md:12
 msgid "swarmgw: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
-msgstr ""
+msgstr "swarmgw：该库可用于通过 https://swarm-gateways.net/ 将文件上传/下载到 Swarm。"
 
 #: ../../remix_commands.md:14
 msgid "Here's the list of commands"
-msgstr ""
+msgstr "这是命令列表"
 
 #: ../../remix_commands.md:15
 msgid "remix.debug(hash): Start debugging a transaction."
-msgstr ""
+msgstr "remix.debug(hash)：开始调试一个事务。"
 
 #: ../../remix_commands.md:17
 msgid "remix.debugHelp(): Display help message for debugging"
-msgstr ""
+msgstr "remix.debugHelp()：显示调试帮助信息"
 
 #: ../../remix_commands.md:19
 msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
-msgstr ""
+msgstr "remix.execute(filepath)：运行文件路径指定的脚本。 如果文件路径为空，则执行当前显示在编辑器中的脚本。"
 
 #: ../../remix_commands.md:21
 msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
