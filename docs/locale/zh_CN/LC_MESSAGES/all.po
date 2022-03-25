@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-23 14:08\n"
+"PO-Revision-Date: 2022-03-25 11:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1760,7 +1760,7 @@ msgstr "类别：ERC"
 
 #: ../../static_analysis.md:190
 msgid "ERC20: 'decimals' should be 'uint8'"
-msgstr ""
+msgstr "ERC20：“decimals”应该是“uint8”"
 
 #: ../../static_analysis.md:192
 msgid "ERC20 Contracts decimals function should have uint8 as return type."
