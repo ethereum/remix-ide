@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-25 11:44\n"
+"PO-Revision-Date: 2022-03-26 13:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1764,15 +1764,15 @@ msgstr "ERC20：“decimals”应该是“uint8”"
 
 #: ../../static_analysis.md:192
 msgid "ERC20 Contracts decimals function should have uint8 as return type."
-msgstr ""
+msgstr "ERC20 Contracts decimals 函数应将 uint8 作为返回类型。"
 
 #: ../../static_analysis.md:202
 msgid "Category: Miscellaneous"
-msgstr ""
+msgstr "类别：其他事项"
 
 #: ../../static_analysis.md:203
 msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
-msgstr ""
+msgstr "Constant/View/Pure 函数: Potentially constant/view/pure 函数"
 
 #: ../../static_analysis.md:205
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
