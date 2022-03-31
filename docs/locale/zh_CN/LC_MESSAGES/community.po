@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2022-03-31 12:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "社区支持"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr ""
+msgstr "我们知道区块链生态系统是非常新的，并且大量信息分散在网络上。 这就是为什么我们创建了一个社区支持频道，如果您在使用 Remix 时遇到问题，我们和其他用户会尝试回答您的问题。 请加入社区并寻求帮助。"
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
-msgstr ""
+msgstr "对于任何有兴趣为 Remix 开发自定义插件或想要为代码库做出贡献的人，我们开设了一个贡献者频道，特别是针对使用 Remix 工具的开发人员。"
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
