@@ -32,10 +32,10 @@ cd docs/
 make html
 ```
 
-Go to `docs/_build/html` ann open `index.html` on the browser.
+Go to `docs/_build/html` and open `index.html` on the browser.
 
 ## Contributing
 
-Everyone is very welcome to contribute. Suggestions, issues, queries and feedbacks are our pleasure. Please reach us on [Gitter](https://gitter.im/ethereum/remix) in case of any query.
+We wholeheartedly welcome everyone to contribute. Suggestions, issues, queries and feedbacks are our pleasure. Please reach us on [Gitter](https://gitter.im/ethereum/remix) in case of any query.
 
 
