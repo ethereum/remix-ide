@@ -1,5 +1,5 @@
-Running JS Scripts
-===========================
+Running Scripts
+===============
 
 _JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._
 
@@ -10,7 +10,7 @@ Remix IDE supports execution of JS scripts.
 Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:
 
 1. Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal
-2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option
+2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. Alternatively it is possible to just hit `Ctrl+Shift+S` when the script is displayed in the editor.
 
 Here is a sample script:
 
@@ -49,6 +49,27 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
 
 ## JS Scripts in the File Explorers
 In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**.
+
+## Compile a contract and run a script on the fly
+It is often convenient when drafting a contract to run a script just after the compilation succeeded.
+
+That way one can quickly deploy and call several contracts in order to set them in a desired state for testing purpose.
+
+Also if the script contains Mocha tests, those will also be ran.
+
+In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the file path, like:
+
+```code
+  /**
+   * @title ContractName
+   * @dev ContractDescription
+   * @custom:dev-run-script file_path
+   */
+  contract ContractName {}
+```
+
+Hitting `Ctrl+Shift+S` when editing a solidity file will compile that file and run the script.
+`Ctrl+S` will only start compiling.
 
 
 ## An Example Script
