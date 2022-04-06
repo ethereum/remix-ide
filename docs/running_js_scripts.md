@@ -10,7 +10,7 @@ Remix IDE supports execution of JS scripts.
 Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:
 
 1. Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal
-2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. Alternatively it is possible to just hit `Ctrl+Shift+S` when the script is displayed in the editor.
+2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor.
 
 Here is a sample script:
 
@@ -55,9 +55,9 @@ It is often convenient when drafting a contract to run a script just after the c
 
 That way one can quickly deploy and call several contracts in order to set them in a desired state for testing purpose.
 
-Also if the script contains Mocha tests, those will also be ran.
+Also if the script contains Mocha tests, those will also be run.
 
-In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the file path, like:
+In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:
 
 ```code
   /**
@@ -68,9 +68,7 @@ In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract 
   contract ContractName {}
 ```
 
-Hitting `Ctrl+Shift+S` when editing a solidity file will compile that file and run the script.
-`Ctrl+S` will only start compiling.
-
+**ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling.
 
 ## An Example Script
 The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library.  Ethers.js could also be used.
