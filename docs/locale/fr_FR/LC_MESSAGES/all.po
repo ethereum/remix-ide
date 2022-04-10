@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-05 06:46\n"
+"PO-Revision-Date: 2022-04-10 17:10\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -164,11 +164,11 @@ msgstr "En cliquant sur l'icône Solidity dans le panneau d'icônes, vous accéd
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
-msgstr ""
+msgstr "La compilation est déclenchée lorsque vous cliquez sur le bouton de compilation (D. dans l'image ci-dessous). Si vous souhaitez que le fichier soit compilé à chaque fois qu'il est sauvegardé ou lorsqu'un autre fichier est sélectionné : cochez la case de compilation automatique (E. dans l'image ci-dessous)."
 
 #: ../../compile.md:8
 msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgstr "Depuis la version 0.5.7 de Solidity, il est possible de compiler des fichiers Yul. Veuillez consulter la documentation sur Yul qui contient des exemples de code. Vous pouvez utiliser le menu déroulant de la langue (B. dans l'image ci-dessous) pour changer de langue. Cette liste déroulante n'est disponible que pour les versions supérieures ou égales à la 0.5.7."
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
