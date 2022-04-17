@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-17 13:05\n"
+"PO-Revision-Date: 2022-04-17 14:02\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -1476,47 +1476,47 @@ msgstr "在受限环境(如 JavaScript VM)中对合约进行编码和测试后�
 
 #: ../../run.md:120
 msgid "You can also change the settings in the scenario.json file to customize the playback."
-msgstr ""
+msgstr "您还可以更改scenario.json 文件中的设置来自定义播放。"
 
 #: ../../run.md:122
 msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
-msgstr ""
+msgstr "部署合约通常需要的不仅仅是创建一个交易，因此记录器将自动执行此部署。"
 
 #: ../../run.md:125
 msgid "Working in a dev environment often requires to setup the state in a first place."
-msgstr ""
+msgstr "在开发环境中工作通常需要首先设置状态。"
 
 #: ../../run.md:130
 msgid "scenario.json"
-msgstr ""
+msgstr "scenario.json"
 
 #: ../../run.md:131
 msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a 0 next to Transactions Recorded.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
-msgstr ""
+msgstr "要在记录器中创建此文件，您首先当然需要运行一些事务。 在上图中 - 记录的交易旁边有一个 0。 所以现在不是保存交易的正确时机，因为——好吧，因为没有交易。 每次您进行交易时，该数字都会增加。 然后当你准备好时，点击软盘图标，就会创建scenario.json文件。"
 
 #: ../../run.md:133
 msgid "The JSON file below is an example of the scenario.json file."
-msgstr ""
+msgstr "下面的 JSON 文件是 scenario.json 文件的一个示例。"
 
 #: ../../run.md:135
 msgid "In it, 3 transactions are executed:"
-msgstr ""
+msgstr "在其中，执行了 3 个交易："
 
 #: ../../run.md:137
 msgid "The first corresponds to the deployment of the lib testLib."
-msgstr ""
+msgstr "第一个对应lib testLib的部署。"
 
 #: ../../run.md:139
 msgid "The second corresponds to the deployment of the contract test with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property linkReferences. In that case we use the address of the previously created library : created{1512830014773}. The number is the id (timestamp) of the transaction that led to the creation of the library."
-msgstr ""
+msgstr "第二个对应于合约测试的部署，构造函数的第一个参数设置为 11。该合约依赖于一个库。 链接是使用属性 linkReferences 完成的。 在这种情况下，我们使用之前创建的库的地址：created{1512830014773}。 该数字是导致创建库的事务的 Id(时间戳)。"
 
 #: ../../run.md:146
 msgid "The third record corresponds to the call to the function set of the contract test (the property to is set to: created{1512830015080}) . Input parameters are 1 and 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
-msgstr ""
+msgstr "第三条记录对应合约测试的函数集的调用(属性to设置为：created{1512830015080})。 输入参数为 1 和 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
 
 #: ../../run.md:151
 msgid "All these transactions are created using the value of the accounts account{0}."
-msgstr ""
+msgstr "所有这些交易都是使用账户的值创建的{0}。"
 
 msgid ""
 msgstr ""
@@ -1524,27 +1524,27 @@ msgstr ""
 
 #: ../../settings.md:1
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: ../../settings.md:4
 msgid "To get to Settings click the gear a the very bottom of the icon panel."
-msgstr ""
+msgstr "要进入设置，请单击图标面板最底部的齿轮。"
 
 #: ../../settings.md:6
 msgid "You can find a link to the homepage (if you closed it) as well as a link to our Gitter Channel and for you aesthetes out there, we now have a rather large list of themes."
-msgstr ""
+msgstr "您可以找到指向主页的链接(如果您关闭了它) 以及指向我们的 Gitter 频道的链接，对于你们那的唯美主义者来说，我们现在有一个相当大的主题清单。"
 
 #: ../../settings.md:10
 msgid "Another important settings:"
-msgstr ""
+msgstr "另一个重要设置："
 
 #: ../../settings.md:12
 msgid "Text wrap: controls if the text in the editor should be wrapped."
-msgstr ""
+msgstr "Text wrap：控制编辑器中的文本是否应换行。"
 
 #: ../../settings.md:14
 msgid "Enable optimization: defines if the compiler should enable optimization during compilation. Enabling this option saves execution gas. It is useful to enable optimization for contracts ready to be deployed in production but could lead to some inconsistencies when debugging such a contract."
-msgstr ""
+msgstr "Enable optimization：定义编译器是否应在编译期间启用优化。 启用此选项可节省执行gas。 为准备在生产中部署的合约启用优化很有用，但在调试此类合约时可能会导致一些不一致。"
 
 msgid ""
 msgstr ""
@@ -1552,31 +1552,31 @@ msgstr ""
 
 #: ../../solidity_editor.md:1
 msgid "Solidity Editor"
-msgstr ""
+msgstr "Solidity 编译器"
 
 #: ../../solidity_editor.md:4
 msgid "The Remix editor recompiles the code each time the current file is changed or another file is selected. It also provides syntax highlighting mapped to solidity keywords."
-msgstr ""
+msgstr "每次更改当前文件或选择另一个文件时，Remix 编辑器都会重新编译代码。 它还提供映射到可靠关键字的语法突出显示。"
 
 #: ../../solidity_editor.md:10
 msgid "Here's the list of some important features:"
-msgstr ""
+msgstr "以下是一些重要特性的列表："
 
 #: ../../solidity_editor.md:12
 msgid "It display opened files as tabs."
-msgstr ""
+msgstr "它将打开的文件显示为选项卡。"
 
 #: ../../solidity_editor.md:13
 msgid "Compilation Warning and Error are displayed in the gutter"
-msgstr ""
+msgstr "编译警告和错误显示在装订线中"
 
 #: ../../solidity_editor.md:14
 msgid "Remix saves the current file continuously (5s after the last changes)"
-msgstr ""
+msgstr "Remix 连续保存当前文件(最后一次更改后 5 秒)"
 
 #: ../../solidity_editor.md:16
 msgid "+/- on the top left corner enable you to increase/decrease the font size of the editor"
-msgstr ""
+msgstr "左上角的 +/- 使您可以增加/减少编译器的字体大小"
 
 msgid ""
 msgstr ""
@@ -1584,19 +1584,19 @@ msgstr ""
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
-msgstr ""
+msgstr "Solidity 静态分析"
 
 #: ../../static_analysis.md:4
 msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
-msgstr ""
+msgstr "静态代码分析是通过检查代码而不实际执行代码来调试代码的过程。"
 
 #: ../../static_analysis.md:6
 msgid "Solidity Static Analysis plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. This plugin comes with Solidity environment of Remix IDE. It can also be activated individually from Plugin Manager."
-msgstr ""
+msgstr "Solidity 静态分析插件在编译后对 Solidity 智能合约进行静态分析。 它检查安全漏洞和不良开发实践等问题。 这个插件带有 Remix IDE 的 Solidity 环境。 它也可以从插件管理器单独激活。"
 
 #: ../../static_analysis.md:8
 msgid "How to use"
-msgstr ""
+msgstr "如何使用"
 
 #: ../../static_analysis.md:11
 msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one Auto run checkbox and a Run button."
@@ -1988,135 +1988,136 @@ msgstr ""
 
 #: ../../tutorial_debug.md:87
 msgid "Click the debug button to start debugging it."
-msgstr ""
+msgstr "单击调试按钮开始调试它。"
 
 #: ../../tutorial_debug.md:91
 msgid "Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger."
-msgstr ""
+msgstr "在我们使用实际的调试工具之前，下一节将展示如何直接从调试器启动调试会话。"
 
 #: ../../tutorial_debug.md:93
 msgid "Initiate Debugging from the Debugger"
-msgstr ""
+msgstr "从调试器开始调试"
 
 #: ../../tutorial_debug.md:95
 msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
-msgstr ""
+msgstr "单击图标面板中的错误图标以访问侧面板中的调试器。"
 
 #: ../../tutorial_debug.md:97
 msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
-msgstr ""
+msgstr "如果您没有看到错误图标，请转到插件管理器并激活调试器。"
 
 #: ../../tutorial_debug.md:99
 msgid "You can start a debug session by providing a transaction hash."
-msgstr ""
+msgstr "您可以通过提供交易哈希来启动调试会话。"
 
 #: ../../tutorial_debug.md:101
 msgid "To find a transaction hash:"
-msgstr ""
+msgstr "要查找交易哈希："
 
 #: ../../tutorial_debug.md:102
 msgid "Go to a transaction in the terminal."
-msgstr ""
+msgstr "在终端中进行交易。"
 
 #: ../../tutorial_debug.md:103
 msgid "Click a line with a transaction - to exand the log."
-msgstr ""
+msgstr "单击带有交易的行 - 展开日志。"
 
 #: ../../tutorial_debug.md:104
 msgid "The transaction hash is there - copy it."
-msgstr ""
+msgstr "交易哈希在那里 - 复制它。"
 
 #: ../../tutorial_debug.md:108
 msgid "Then click in the debugger paste the hash and click on the Start debugging button."
-msgstr ""
+msgstr "没有与您的搜索匹配的翻译\n"
+"然后单击调试器粘贴哈希并单击开始调试按钮。"
 
 #: ../../tutorial_debug.md:112
 msgid "Using the debugger"
-msgstr ""
+msgstr "使用调试器"
 
 #: ../../tutorial_debug.md:117
 msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
-msgstr ""
+msgstr "调试器允许人们查看有关交易执行的详细信息。 它使用编辑器在源代码中显示当前执行的位置。"
 
 #: ../../tutorial_debug.md:121
 msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
-msgstr ""
+msgstr "导航部分包含一个滑块和按钮，可用于逐步执行事务。"
 
 #: ../../tutorial_debug.md:125
 msgid "More explaination of what these buttons do."
-msgstr ""
+msgstr "更多解释这些按钮的作用。"
 
 #: ../../tutorial_debug.md:126
 msgid "Step Into"
-msgstr ""
+msgstr "踏进"
 
 #: ../../tutorial_debug.md:127
 msgid "Step Over Into"
-msgstr ""
+msgstr "步入到"
 
 #: ../../tutorial_debug.md:130
 msgid "11 panels give detailed information about the execution:"
-msgstr ""
+msgstr "11 个面板提供了有关执行的详细信息："
 
 #: ../../tutorial_debug.md:132
 msgid "Instructions"
-msgstr ""
+msgstr "指令"
 
 #: ../../tutorial_debug.md:134
 msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
-msgstr ""
+msgstr "指令面板显示当前执行合约的字节码——当前步骤突出显示。"
 
 #: ../../tutorial_debug.md:137
 msgid "Important note: When this panel is hidden, the slider will have a courser granularity and only stop at expression boundaries, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
-msgstr ""
+msgstr "重要提示：当此面板被隐藏时，滑块将具有更粗的粒度并且仅在表达式边界处停止，即使它们被编译成多个 EVM 指令。 显示面板时，可以跳过每条指令，即使是那些引用相同表达式的指令。"
 
 #: ../../tutorial_debug.md:143
 msgid "Solidity Locals"
-msgstr ""
+msgstr "Solidity Locals"
 
 #: ../../tutorial_debug.md:145
 msgid "The Solidity Locals panel displays local variables associated with the current context."
-msgstr ""
+msgstr "Solidity Locals 面板显示与当前上下文相关的局部变量。"
 
 #: ../../tutorial_debug.md:148
 msgid "Solidity State"
-msgstr ""
+msgstr "Solidity State"
 
 #: ../../tutorial_debug.md:150
 msgid "The Solidity State panel displays state variables of the current executing contract."
-msgstr ""
+msgstr "Solidity State 面板显示当前执行合约的状态变量。"
 
 #: ../../tutorial_debug.md:153
 msgid "Low level panels"
-msgstr ""
+msgstr "低级面板"
 
 #: ../../tutorial_debug.md:155
 msgid "These panels display low level informations about the execution:"
-msgstr ""
+msgstr "这些面板显示有关执行的低级信息："
 
 #: ../../tutorial_debug.md:157
 msgid "Stack"
-msgstr ""
+msgstr "堆栈"
 
 #: ../../tutorial_debug.md:158
 msgid "Storages Changes"
-msgstr ""
+msgstr "存储更改"
 
 #: ../../tutorial_debug.md:159
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #: ../../tutorial_debug.md:160
 msgid "Call Data"
-msgstr ""
+msgstr "调用数据"
 
 #: ../../tutorial_debug.md:161
 msgid "Call Stack"
-msgstr ""
+msgstr "调用堆栈"
 
 #: ../../tutorial_debug.md:162
 msgid "Return Value (only if the current step is a RETURN opcode)"
-msgstr ""
+msgstr "返回值 (仅当当前步骤是 RETURN 操作码时)"
 
 #: ../../tutorial_debug.md:163
 msgid "Full Storages Changes (only at the end of the execution - display every storage change of every modified contract)"
