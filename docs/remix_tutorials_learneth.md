@@ -9,7 +9,7 @@ Tutorials can contain quizzes for testing students' work.  These quizzes are run
 
 We have a growing set of tutorials on our repo- but anyone can build tutorials on their own repos and have their students load them up!  
 
-The tutorials contain .md files for instructions and can also contain example files, Solidity Unit Test files for quizzes, as well as answer files for a quizzes.
+The tutorials contain .md files for instructions and can also contain example files, Solidity Unit Test files for quizzes, as well as answer files for quizzes.
 
 ### Opening Learneth & associated links
 Learneth is a plugin - so to access it, you need to activate the Learneth plugin in the Plugin Manager.   Alternatively - this link will active it: click this link.
