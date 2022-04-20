@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 10:45\n"
+"PO-Revision-Date: 2022-04-20 09:29\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,73 +19,73 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "Welcome to Remix documentation!"
-msgstr "Bienvenue sur la documentation de Remix!"
+msgstr "Bienvenue sur la documentation de Remix !"
 
 #: ../../index.rst:4
 msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
-msgstr "Remix est un outil de développement opensource permettant de développer des contracts Ethereum en utilisant le language Solidity. Remix IDE peut être utilisé dans une navigateur ou localement dans une application bureau."
+msgstr "Remix est un puissant outil Opensource qui vous aide à écrire des contrats Solidity directement depuis le navigateur. Écrit en JavaScript, Remix prend an charge à la fois l'utilisation dans le navigateur et localement."
 
 #: ../../index.rst:7
 msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
-msgstr ""
+msgstr "Remix prend également en charge les tests, le débogage, le déploiement de contrats intelligents et bien plus encore."
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr ""
+msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur le site `remix.ethereum.org <http://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans cette documentation. Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
-msgstr ""
+msgstr "Cet ensemble de documents couvre les instructions sur la façon d'utiliser Remix et quelques tutoriels pour vous aider à débuter."
 
 #: ../../index.rst:16
 msgid "Useful links:"
-msgstr ""
+msgstr "Liens utiles :"
 
 #: ../../index.rst:18
 msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
-msgstr ""
+msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
 msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr ""
+msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ - La version où nous testons la nouvelle version de Remix (non stable !)."
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
-msgstr ""
+msgstr "`Remix sur Medium <https://medium.com/remix-ide>`__"
 
 #: ../../index.rst:24
 msgid "`Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
-msgstr ""
+msgstr "`Ethereum StackExchange pour Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
 
 #: ../../index.rst:26
 msgid "`Community support channel <https://gitter.im/ethereum/remix>`__"
-msgstr ""
+msgstr "`Salon de support de la Communauté <https://gitter.im/ethereum/remix>`__"
 
 #: ../../index.rst:28
 msgid "`Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
-msgstr ""
+msgstr "`Ressources pour les développeurs dApp (Wiki Ethereum) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
 
 #: ../../index.rst:30
 msgid "New Layout Intro"
-msgstr ""
+msgstr "Nouvelle mise en page de l'introduction"
 
 #: ../../index.rst:36
 msgid "Tour of default modules"
-msgstr ""
+msgstr "Aperçu des modules par défaut"
 
 #: ../../index.rst:46
 msgid "Tour of typical solidity modules"
-msgstr ""
+msgstr "Aperçu des des modules types de Solidity"
 
 #: ../../index.rst:56
 msgid "Solidity Unit Testing"
-msgstr ""
+msgstr "Test unitaire Solidity"
 
 #: ../../index.rst:64
 msgid "Using Remix"
-msgstr ""
+msgstr "Utiliser Remix"
 
 #: ../../index.rst:76
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Divers"
 
