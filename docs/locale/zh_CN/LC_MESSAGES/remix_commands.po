@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:06\n"
+"PO-Revision-Date: 2022-04-25 13:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,189 +19,189 @@ msgstr ""
 
 #: ../../remix_commands.md:1
 msgid "Remix Commands"
-msgstr ""
+msgstr "Remix命令"
 
 #: ../../remix_commands.md:4
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto completion.  These commands are using the following libraries:"
-msgstr ""
+msgstr "在控制台中，您可以运行下面列出的命令。 一旦你开始输入命令，就会自动完成。 这些命令使用以下库："
 
 #: ../../remix_commands.md:6
 msgid "ethers: The ethers.js library is a compact and complete JavaScript library for Ethereum."
-msgstr ""
+msgstr "ethers：ethers.js 库是一个紧凑且完整的以太坊 JavaScript 库。"
 
 #: ../../remix_commands.md:8
 msgid "remix:  Ethereum IDE and tools for the web."
-msgstr ""
+msgstr "remix：以太坊 IDE 和网络工具。"
 
 #: ../../remix_commands.md:10
 msgid "web3: The web3.js library is a collection of modules which contain specific functionality for the ethereum ecosystem."
-msgstr ""
+msgstr "web3：web3.js 库是一组包含以太坊生态系统特定功能的模块。"
 
 #: ../../remix_commands.md:12
 msgid "swarmgw: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
-msgstr ""
+msgstr "swarmgw：该库可用于通过 https://swarm-gateways.net/ 将文件上传/下载到 Swarm。"
 
 #: ../../remix_commands.md:14
 msgid "Here's the list of commands"
-msgstr ""
+msgstr "这是命令列表"
 
 #: ../../remix_commands.md:15
 msgid "remix.debug(hash): Start debugging a transaction."
-msgstr ""
+msgstr "remix.debug(hash)：开始调试事务。"
 
 #: ../../remix_commands.md:17
 msgid "remix.debugHelp(): Display help message for debugging"
-msgstr ""
+msgstr "remix.debugHelp()：显示调试帮助信息"
 
 #: ../../remix_commands.md:19
 msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
-msgstr ""
+msgstr "remix.execute(filepath)：运行文件路径指定的脚本。 如果文件路径为空，则执行当前显示在编辑器中的脚本。"
 
 #: ../../remix_commands.md:21
 msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
-msgstr ""
+msgstr "remix.exeCurrent()：运行编辑器中当前显示的脚本。"
 
 #: ../../remix_commands.md:23
 msgid "remix.getFile(path): Returns the content of the file located at the given path"
-msgstr ""
+msgstr "remix.getFile(path)：返回位于给定路径的文件内容"
 
 #: ../../remix_commands.md:25
 msgid "remix.help(): Display this help message."
-msgstr ""
+msgstr "remix.help()：显示此帮助信息。"
 
 #: ../../remix_commands.md:27
 msgid "remix.loadgist(id): Load a gist in the file explorer."
-msgstr ""
+msgstr "remix.loadgist(id)：在文件资源管理器中加载一个要点。"
 
 #: ../../remix_commands.md:29
 msgid "remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
-msgstr ""
+msgstr "remix.loadurl(url)：在文件资源管理器中加载给定的 url。 url 可以是 github、swarm 或 ipfs 类型。"
 
 #: ../../remix_commands.md:31
 msgid "remix.setFile(path, content): set the content of the file located at the given path"
-msgstr ""
+msgstr "remix.setFile(path, content)：设置位于给定路径的文件内容"
 
 #: ../../remix_commands.md:33
 msgid "remix.setproviderurl(url): Change the current provider to Web3 provider and set the url endpoint."
-msgstr ""
+msgstr "remix.setproviderurl(url)：将当前提供者更改为 Web3 提供者并设置 url 端点。"
 
 #: ../../remix_commands.md:35
 msgid "swarmgw.get(url, cb): Download files from Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.get(url, cb): 通过 https**://swarm-gateways.net/ 从 Swarm 下载文件"
 
 #: ../../remix_commands.md:37
 msgid "swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.put(content, cb): 通过 https**://swarm-gateways.net/ 上传文件到 Swarm"
 
 #: ../../remix_commands.md:39
 msgid "ethers.Contract: This API provides a graceful connection to a contract deployed on the blockchain, simplifying calling and querying its functions and handling all the binary protocol and conversion as necessarily."
-msgstr ""
+msgstr "ethers.Contract：此 API 提供与部署在区块链上的合约的优雅连接，简化调用和查询其功能，并根据需要处理所有二进制协议和转换。"
 
 #: ../../remix_commands.md:41
 msgid "ethers.HDNode: A Hierarchical Deterministic Wallet represents a large tree of private keys which can reliably be reproduced from an initial seed."
-msgstr ""
+msgstr "ethers.HDNode：分层确定性钱包代表一棵大树的私钥，可以从初始种子可靠地复制。"
 
 #: ../../remix_commands.md:43
 msgid "ethers.Interface: The Interface Object is a meta-class that accepts a Solidity (or compatible) Application Binary Interface (ABI) and populates functions to deal with encoding and decoding the parameters to pass in and results returned."
-msgstr ""
+msgstr "ethers.Interface：接口对象是一个元类，它接受一个 Solidity(或兼容的) 应用程序二进制接口(ABI)并填充函数来处理编码和解码要传入的参数和返回的结果。"
 
 #: ../../remix_commands.md:45
 msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
-msgstr ""
+msgstr "ethers.providers：提供者抽象出与以太坊区块链的连接，用于发出查询和发送状态变化的交易。"
 
 #: ../../remix_commands.md:47
 msgid "ethers.SigningKey: The SigningKey interface provides an abstraction around the secp256k1 elliptic curve cryptography library."
-msgstr ""
+msgstr "ethers.SigningKey：SigningKey 接口提供了围绕 secp256k1 椭圆曲线密码库的抽象。"
 
 #: ../../remix_commands.md:49
 msgid "ethers.utils: The utility functions exposed in both the ethers umbrella package and the ethers-utils."
-msgstr ""
+msgstr "ethers.utils：Eth umbrella package和 ethers-utils 中公开的实用程序函数。"
 
 #: ../../remix_commands.md:51
 msgid "ethers.utils.AbiCoder: Create a new ABI Coder object"
-msgstr ""
+msgstr "ethers.utils.AbiCoder：创建一个新的 ABI Coder 对象"
 
 #: ../../remix_commands.md:53
 msgid "ethers.utils.RLP: This encoding method is used internally for several aspects of Ethereum, such as encoding transactions and determining contract addresses."
-msgstr ""
+msgstr "ethers.utils.RLP：这种编码方法在内部用于以太坊的几个方面，例如编码交易和确定合约地址。"
 
 #: ../../remix_commands.md:55
 msgid "ethers.Wallet: A wallet manages a private/public key pair which is used to cryptographically sign transactions and prove ownership on the Ethereum network."
-msgstr ""
+msgstr "ethers.Wallet：钱包管理私钥/公钥对，用于对交易进行加密签名并证明以太坊网络的所有权。"
 
 #: ../../remix_commands.md:57
 msgid "ethers.version: Contains the version of the ethers container object."
-msgstr ""
+msgstr "ethers.version：包含Eth容器对象的版本。"
 
 #: ../../remix_commands.md:59
 msgid "web3.bzz: Bzz module for interacting with the swarm network."
-msgstr ""
+msgstr "web3.bzz：用于与 swarm 网络交互的 Bzz 模块。"
 
 #: ../../remix_commands.md:61
 msgid "web3.eth: Eth module for interacting with the Ethereum network."
-msgstr ""
+msgstr "web3.eth：用于与以太坊网络交互的 Eth 模块。"
 
 #: ../../remix_commands.md:63
 msgid "web3.eth.accounts: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts：web3.eth.accounts 包含生成以太坊账户以及签署交易和数据的功能。"
 
 #: ../../remix_commands.md:65
 msgid "web3.eth.abi: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
-msgstr ""
+msgstr "web3.eth.abi：web3.eth.abi 函数让您可以将参数解译和编码为 ABI(应用程序二进制接口)，以便对 EVM(以太坊虚拟机)进行函数调用。"
 
 #: ../../remix_commands.md:67
 msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
-msgstr ""
+msgstr "web3.eth.ens：web3.eth.ens 函数可以让你与 ENS 交互。"
 
 #: ../../remix_commands.md:69
 msgid "web3.eth.Iban: The web3.eth.Iban function lets convert Ethereum addresses from and to IBAN and BBAN."
-msgstr ""
+msgstr "web3.eth.Iban：web3.eth.Iban 函数允许将以太坊地址从 IBAN 和 BBAN 转换为 IBAN 和 BBAN。"
 
 #: ../../remix_commands.md:71
 msgid "web3.eth.net: Net module for interacting with network properties."
-msgstr ""
+msgstr "web3.eth.net：用于与网络属性交互的网络模块。"
 
 #: ../../remix_commands.md:73
 msgid "web3.eth.personal: Personal module for interacting with the Ethereum accounts."
-msgstr ""
+msgstr "web3.eth.personal：用于与以太坊账户交互的个人模块。"
 
 #: ../../remix_commands.md:75
 msgid "web3.eth.subscribe: The web3.eth.subscribe function lets you subscribe to specific events in the blockchain."
-msgstr ""
+msgstr "web3.eth.subscribe：web3.eth.subscribe 功能让您可以订阅区块链中的特定事件。"
 
 #: ../../remix_commands.md:77
 msgid "web3.givenProvider: When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser. Will return the given provider by the (browser) environment, otherwise null."
-msgstr ""
+msgstr "web3.givenProvider：在以太坊兼容的浏览器中使用 web3.js 时，它将由该浏览器设置为当前的本地提供程序。 将由(浏览器)环境返回给定的提供者，否则为空。"
 
 #: ../../remix_commands.md:79
 msgid "web3.modules: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.modules：包含 web3 容器对象的版本。"
 
 #: ../../remix_commands.md:81
 msgid "web3.providers: Contains the current available providers."
-msgstr ""
+msgstr "web3.providers：包含当前可用的供应商。"
 
 #: ../../remix_commands.md:83
 msgid "web3.shh: Shh module for interacting with the whisper protocol"
-msgstr ""
+msgstr "web3.shh：用于与 Whisper 协议交互的 Shh 模块"
 
 #: ../../remix_commands.md:85
 msgid "web3.utils: This package provides utility functions for Ethereum dapps and other **web3.js packages."
-msgstr ""
+msgstr "web3.utils：该包为以太坊 dapps 和其他 **web3.js 包提供实用功能。"
 
 #: ../../remix_commands.md:87
 msgid "web3.version: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.version：包含 web3 容器对象的版本。"
 
 #: ../../remix_commands.md:89
 msgid "web3.eth.clearSubscriptions();: Resets subscriptions."
-msgstr ""
+msgstr "web3.eth.clearSubscriptions();：重置订阅。"
 
 #: ../../remix_commands.md:91
 msgid "web3.eth.Contract(jsonInterface[, address][, options]): The **web3.eth.Contract object makes it easy to interact with smart contracts on the ethereum blockchain."
-msgstr ""
+msgstr "web3.eth.Contract(jsonInterface[, address][, options])：**web3.eth.Contract 对象可以轻松地与以太坊区块链上的智能合约进行交互。"
 
 #: ../../remix_commands.md:93
 msgid "web3.eth.accounts.create([entropy]);: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts.create([entropy]);：web3.eth.accounts 包含生成以太坊账户和签署交易和数据的功能。"
 
