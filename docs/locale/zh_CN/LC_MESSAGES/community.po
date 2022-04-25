@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-31 12:35\n"
+"PO-Revision-Date: 2022-04-25 11:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,5 +31,5 @@ msgstr "对于任何有兴趣为 Remix 开发自定义插件或想要为代码�
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
-msgstr ""
+msgstr "我们恳请您尊重这个空间，并使用它来获得工作帮助，并使用开发人员的频道来讨论与 Remix 代码库相关的讨论。 如果您有合作的想法或想推广您的项目，请尝试找到一些更合适的渠道来这样做。 或者您可以直接在 Gitter 或 Twitter 上联系主要贡献者。"
 
