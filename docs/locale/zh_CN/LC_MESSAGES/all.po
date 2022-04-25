@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-25 10:48\n"
+"PO-Revision-Date: 2022-04-25 11:48\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -2325,51 +2325,51 @@ msgstr "如果您使用 以太币将 calldata 发送到您的合约，那么您�
 
 #: ../../udapp.md:75
 msgid "If you are not sending ether to the contract but are sending call data then you need to use the fallback() function."
-msgstr ""
+msgstr "如果你没有向合约发送以太币而是发送调用数据，那么你需要使用 fallback() 函数。"
 
 #: ../../udapp.md:77
 msgid "If you break the rules when using the Low level interactions you will be slapped with a warning."
-msgstr ""
+msgstr "如果您在使用低级交互时违反规则，您将受到警告。"
 
 #: ../../udapp.md:79
 msgid "Please see the solidity docs for more specifics about using the fallback and receive functions."
-msgstr ""
+msgstr "有关使用回退和接收函数的更多细节，请参阅solidity 文档。"
 
 #: ../../udapp.md:81
 msgid "Passing in a tuple or a struct to a function"
-msgstr ""
+msgstr "将元组或结构传递给函数"
 
 #: ../../udapp.md:82
 msgid "To pass a tuple in, you need to put in an array []."
-msgstr ""
+msgstr "要传入一个元组，您需要放入一个数组 []。"
 
 #: ../../udapp.md:84
 msgid "Similarly, to pass in a struct as a parameter of a function, it needs to be put in as an array [].  Also note that the line pragma experimental ABIEncoderV2; needs to put in at the top of the solidity file."
-msgstr ""
+msgstr "类似地，要将结构体作为函数的参数传入，需要将其作为数组 [] 放入。 还要注意行 pragma 实验 ABIEncoderV2; 需要放在solidity文件的顶部。"
 
 #: ../../udapp.md:88
 msgid "Example of passing nested struct to a function"
-msgstr ""
+msgstr "将嵌套结构传递给函数的示例"
 
 #: ../../udapp.md:89
 msgid "Consider a nested struct defined like this:"
-msgstr ""
+msgstr "考虑这样定义的嵌套结构："
 
 #: ../../udapp.md:101
 msgid "If a function has the signature fertilizer(Garden memory gardenPlot) then the correct syntax is:"
-msgstr ""
+msgstr "如果函数具有签名 fertilizer(Garden memory gardenPlot)，那么正确的语法是："
 
 #: ../../udapp.md:106
 msgid "To continue on this example, here's a sample contract:"
-msgstr ""
+msgstr "为了继续这个例子，这里有一个示例合约："
 
 #: ../../udapp.md:133
 msgid "After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named fertilizer :"
-msgstr ""
+msgstr "在编译、部署合约并打开部署的实例后，我们可以将以下输入参数添加到名为fertilizer的函数中："
 
 #: ../../udapp.md:139
 msgid "The function fertilizer accepts a single parameter of the type Garden. The type Garden is a struct. Structs are wrapped in square brackets.  Inside Garden is an array that is an array of structs named theFlowers. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
-msgstr ""
+msgstr "Fertilizer函数接受Garden类型的单个参数。 Garden 类型是一个结构体。 结构体用方括号括起来。 Garden 内部是一个数组，它是一个名为 theFlowers 的结构数组。 它为数组获取一组括号，为结构获取另一组括号。 因此，双方括号。"
 
 msgid ""
 msgstr ""
@@ -2377,87 +2377,87 @@ msgstr ""
 
 #: ../../unittesting_examples.md:1
 msgid "Testing by Example"
-msgstr ""
+msgstr "示例测试"
 
 #: ../../unittesting_examples.md:4
 msgid "Here are some examples which can give you better understanding to plan your tests."
-msgstr ""
+msgstr "以下是一些示例，可以让您更好地理解计划测试。"
 
 #: ../../unittesting_examples.md:6
 msgid "Note: Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
-msgstr ""
+msgstr "注意：本节中的示例旨在推动您的开发。 我们不建议您在没有经过验证的情况下依赖它们。"
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
-msgstr ""
+msgstr "1. 简单的例子"
 
 #: ../../unittesting_examples.md:9
 msgid "In this example, we test setting & getting variables."
-msgstr ""
+msgstr "在这个例子中，我们测试设置和获取变量。"
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: Simple_storage.sol"
-msgstr ""
+msgstr "要测试的合约/程序：Simple_storage.sol"
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: simple_storage_test.sol"
-msgstr ""
+msgstr "测试合约/程序：simple_storage_test.sol"
 
 #: ../../unittesting_examples.md:60
 msgid "2. Testing a method involving msg.sender"
-msgstr ""
+msgstr "2.测试一个涉及msg.sender的方法"
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
-msgstr ""
+msgstr "在 Solidity 中，msg.sender 在智能合约方法交互的访问管理中发挥着重要作用。 不同的 msg.sender 可以帮助测试涉及具有不同角色的多个帐户的合约。 这是测试这种情况的示例："
 
 #: ../../unittesting_examples.md:63
 msgid "Contract/Program to be tested: Sender.sol"
-msgstr ""
+msgstr "要测试的合同/程序：Sender.sol"
 
 #: ../../unittesting_examples.md:85
 msgid "Test contract/program: Sender_test.sol"
-msgstr ""
+msgstr "测试合约/程序：Sender_test.sol"
 
 #: ../../unittesting_examples.md:137
 msgid "3. Testing method execution"
-msgstr ""
+msgstr "3. 测试方法执行"
 
 #: ../../unittesting_examples.md:139
 msgid "With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed."
-msgstr ""
+msgstr "使用 Solidity，人们可以通过从合约中检索这些变量来直接验证存储中的方法所做的更改。 但是测试一个成功的方法执行需要一些策略。 好吧，这并不完全正确，当测试成功时-通常很明显为什么它通过了。 但是，当测试失败时，必须了解它失败的原因。"
 
 #: ../../unittesting_examples.md:141
 msgid "To help in such cases, Solidity introduced the try-catch statement in version 0.6.0. Previously, we had to use low-level calls to track down what was going on."
-msgstr ""
+msgstr "为了在这种情况下提供帮助，Solidity 在 0.6.0 版本中引入了 try-catch 语句。 以前，我们必须使用低级调用来追踪正在发生的事情。"
 
 #: ../../unittesting_examples.md:143
 msgid "Here is an example test file that use both try-catch blocks and low level calls:"
-msgstr ""
+msgstr "这是一个使用 try-catch 块和低级调用的示例测试文件："
 
 #: ../../unittesting_examples.md:145
 msgid "Contract/Program to be tested: AttendanceRegister.sol"
-msgstr ""
+msgstr "要测试的合约/程序：AttendanceRegister.sol"
 
 #: ../../unittesting_examples.md:174
 msgid "Test contract/program: AttendanceRegister_test.sol"
-msgstr ""
+msgstr "测试合约/程序： AttendanceRegister_test.sol"
 
 #: ../../unittesting_examples.md:262
 msgid "4. Testing a method involving msg.value"
-msgstr ""
+msgstr "4.测试一个涉及msg.value的方法"
 
 #: ../../unittesting_examples.md:263
 msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as msg.value. Sometimes, multiple calculations in a method are performed based on msg.value which can be tested with various values using Remix's Custom transaction context. See the example:"
-msgstr ""
+msgstr "在 Solidity 中，Eth可以与方法调用一起传递，该方法调用在合约内部作为 msg.value 访问。 有时，一个方法中的多个计算是基于 msg.value 执行的，可以使用 Remix 的自定义事务上下文使用各种值进行测试。 请参阅示例："
 
 #: ../../unittesting_examples.md:265
 msgid "Contract/Program to be tested: Value.sol"
-msgstr ""
+msgstr "要测试的合约/程序：Value.sol"
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: Value_test.sol"
-msgstr ""
+msgstr "测试合约/程序：Value_test.sol"
 
 msgid ""
 msgstr ""
@@ -2465,181 +2465,181 @@ msgstr ""
 
 #: ../../unittesting.md:1
 msgid "Unit Testing Plugin"
-msgstr ""
+msgstr "单元测试插件"
 
 #: ../../unittesting.md:4
 msgid "Click the double check icon to get to the Solidity Unit Testing plugin."
-msgstr ""
+msgstr "单击双重检查图标以访问 Solidity 单元测试插件。"
 
 #: ../../unittesting.md:8
 msgid "If you haven't used this plugin before and are not seeing double check icon, you have to activate it from Remix plugin manager."
-msgstr ""
+msgstr "如果您之前没有使用过这个插件并且没有看到双重检查图标，您必须从 Remix 插件管理器中激活它。"
 
 #: ../../unittesting.md:10
 msgid "Go to the plugin manager (by click the plug icon) and load up the unit testing plugin."
-msgstr ""
+msgstr "转到插件管理器(通过单击插件图标) 并加载单元测试插件。"
 
 #: ../../unittesting.md:14
 msgid "Now double check icon will appear on the left side icon bar. Clicking on icon will load the unit testing module in the side panel."
-msgstr ""
+msgstr "现在仔细检查图标将出现在左侧图标栏上。 单击图标将在侧面板中加载单元测试模块。"
 
 #: ../../unittesting.md:16
 msgid "Alternatively, just select Solidity environment from remix IDE home page. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
-msgstr ""
+msgstr "或者，只需从 remix IDE 主页中选择 Solidity 环境。 这将激活 Solidity 单元测试插件以及 Solidity 编译器、部署和运行事务以及 Solidity 静态分析插件。"
 
 #: ../../unittesting.md:20
 msgid "Generate"
-msgstr ""
+msgstr "生成"
 
 #: ../../unittesting.md:22
 msgid "Select a solidity file which you want to test and click on the button Generate. It will generate a new sample solidity test file in the current folder suffixed with _test. This file contains the minimum you need for running unit testing."
-msgstr ""
+msgstr "选择您要测试的solidity 文件，然后单击按钮Generate。 它将在当前文件夹中生成一个新的样本可靠性测试文件，后缀为_test。 此文件包含运行单元测试所需的最低要求。"
 
 #: ../../unittesting.md:24
 msgid "Write Tests"
-msgstr ""
+msgstr "编写测试"
 
 #: ../../unittesting.md:26
 msgid "Write tests to check the functionality of your contract. Remix injects a built-in assert library which can be used for testing. Visit the library documentation here."
-msgstr ""
+msgstr "编写测试来检查合约的功能。 Remix 注入了一个可用于测试的内置断言库。 在此处访问库文档。"
 
 #: ../../unittesting.md:28
 msgid "Apart from this, Remix allows usage of some special functions to make testing more structural. They are:"
-msgstr ""
+msgstr "除此之外，Remix 允许使用一些特殊功能来使测试更加结构化。 他们是："
 
 #: ../../unittesting.md:30
 msgid "beforeEach() - Runs before each test"
-msgstr ""
+msgstr "beforeEach() - 在每次测试之前运行"
 
 #: ../../unittesting.md:31
 msgid "beforeAll() - Runs before all tests"
-msgstr ""
+msgstr "beforeAll() - 在所有测试之前运行"
 
 #: ../../unittesting.md:32
 msgid "afterEach() - Runs after each test"
-msgstr ""
+msgstr "afterEach() - 每次测试后运行"
 
 #: ../../unittesting.md:33
 msgid "afterAll() - Runs after all tests"
-msgstr ""
+msgstr "afterAll() - 在所有测试之后运行"
 
 #: ../../unittesting.md:35
 msgid "To get started, see this simple example."
-msgstr ""
+msgstr "要开始，请参阅这个简单的示例。"
 
 #: ../../unittesting.md:37
 msgid "Run"
-msgstr ""
+msgstr "运行"
 
 #: ../../unittesting.md:39
 msgid "Once you are done with writing tests, select the _test.sol files in the list and click on the button Run to execute the tests in the selected files. The execution will run in a separate environment and the result will be displayed below."
-msgstr ""
+msgstr "完成编写测试后，在列表中选择 _test.sol 文件，然后单击按钮运行以在所选文件中执行测试。 执行将在单独的环境中运行，结果将显示在下方。"
 
 #: ../../unittesting.md:43
 msgid "Stop"
-msgstr ""
+msgstr "停用"
 
 #: ../../unittesting.md:45
 msgid "If you have selected multiple files to run the tests and want to stop the execution, click on Stop button. It will stop execution after running the tests for current file."
-msgstr ""
+msgstr "如果您选择了多个文件来运行测试并想要停止执行，请单击停止按钮。 运行当前文件的测试后，它将停止执行。"
 
 #: ../../unittesting.md:47
 msgid "Customization"
-msgstr ""
+msgstr "自定义"
 
 #: ../../unittesting.md:49
 msgid "Remix facilitates users with various types of customizations to test a contract properly."
-msgstr ""
+msgstr "Remix 帮助用户通过各种类型的自定义来正确测试合约。"
 
 #: ../../unittesting.md:51
 msgid "1. Custom Compiler Context"
-msgstr ""
+msgstr "1. 自定义编译器上下文"
 
 #: ../../unittesting.md:53
 msgid "Solidity Unit Testing refers Solidity Compiler plugin for compiler configurations. One can provide customized inputs for Compiler, EVM Version & Enable Optimization and these will be the configuration settings used for contract compilation before running unit tests."
-msgstr ""
+msgstr "Solidity 单元测试是指用于编译器配置的 Solidity Compiler 插件。 可以为编译器、EVM 版本和启用优化提供自定义输入，这些将是在运行单元测试之前用于合约编译的配置设置。"
 
 #: ../../unittesting.md:57
 msgid "2. Custom Transaction Context"
-msgstr ""
+msgstr "2. 自定义交易上下文"
 
 #: ../../unittesting.md:59
 msgid "For a contract method interaction, prime parameters of transaction are from address, value & gas. Usually, we need to test a method's behaviour under different values of these parameters."
-msgstr ""
+msgstr "对于合约方法交互，交易的主要参数来自地址、值和gas。 通常，我们需要测试一个方法在这些参数的不同值下的行为。"
 
 #: ../../unittesting.md:61
 msgid "Remix provides the functionality of custom msg.sender & msg.value of transaction using method devdoc like:"
-msgstr ""
+msgstr "Remix 使用方法 devdoc 提供了自定义 msg.sender 和 msg.value 的功能，例如："
 
 #: ../../unittesting.md:71
 msgid "Things to keep in mind while using custom transaction context:"
-msgstr ""
+msgstr "使用自定义事务上下文时要记住的事项："
 
 #: ../../unittesting.md:73
 msgid "Parameters must be defined in devdoc of related method"
-msgstr ""
+msgstr "参数必须在相关方法的devdoc中定义"
 
 #: ../../unittesting.md:74
 msgid "Each parameter key should be prefixed with a hash (#) and end with a colon following a space (: ) like #sender:  & #value:"
-msgstr ""
+msgstr "每个参数键都应以哈希 (#) 为前缀，并以冒号结尾，后跟一个空格 (:)，例如 #sender: & #value:"
 
 #: ../../unittesting.md:75
 msgid "For now, customization is available for parameters sender & value only"
-msgstr ""
+msgstr "目前，自定义仅适用于参数 sender 和 value"
 
 #: ../../unittesting.md:76
 msgid "Sender is from address of a transaction which is accessed using msg.sender inside a contract method. It should be defined in a fixed format as 'account-<account_index>'"
-msgstr ""
+msgstr "发件人来自使用合约方法中的 msg.sender 访问的交易地址。 它应该以固定格式定义为 'account-<account_index>'"
 
 #: ../../unittesting.md:77
 msgid "<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 afterwards"
-msgstr ""
+msgstr "<account_index> 在 remix-ide v0.10.0 发布之前从 0-2 变化，之后从 0-9 变化"
 
 #: ../../unittesting.md:78
 msgid "remix_accounts.sol must be imported in your test file to use custom sender"
-msgstr ""
+msgstr "必须在您的测试文件中导入 remix_accounts.sol 才能使用自定义发件人"
 
 #: ../../unittesting.md:79
 msgid "Value is value sent along with a transaction in wei which is accessed using msg.value inside a contract method. It should be a number."
-msgstr ""
+msgstr "值是与 wei 中的交易一起发送的值，可以使用合约方法中的 msg.value 访问。 它应该是一个数字。"
 
 #: ../../unittesting.md:81
 msgid "Regarding gas, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with Out-of-Gas error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit"
-msgstr ""
+msgstr "关于 gas，Remix 在内部估计每笔交易所需的 gas。 尽管如此，如果合约部署因 Out-of-Gas 错误而失败，它会尝试通过将 gas 加倍来重新部署它。 双重gas部署失败将显示错误：尝试两次后合约部署失败：无法存储合约代码，请检查您的gas限制"
 
 #: ../../unittesting.md:83
 msgid "Various test examples can be seen in examples section."
-msgstr ""
+msgstr "在示例部分可以看到各种测试示例。"
 
 #: ../../unittesting.md:86
 msgid "Points to remember"
-msgstr ""
+msgstr "要记住的要点"
 
 #: ../../unittesting.md:89
 msgid "A test contract cannot have a method with parameters. Having one such method will show error: Method 'methodname' can not have parameters inside a test contract"
-msgstr ""
+msgstr "测试合约不能有带参数的方法。 拥有一种这样的方法将显示错误：方法“methodname”在测试合同中不能有参数"
 
 #: ../../unittesting.md:90
 msgid "Number of test accounts are 3 before remix-ide release v0.10.0 and 10 afterwards"
-msgstr ""
+msgstr "在 remix-ide v0.10.0 发布之前，测试账户数量为 3，之后为 10"
 
 #: ../../unittesting.md:91
 msgid "A test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin but it will work fine with Solidity Unit Testing plugin."
-msgstr ""
+msgstr "导入 remix_accounts.sol 的测试文件可能无法使用 Solidity Compiler 插件成功编译，但它可以与 Solidity Unit Testing 插件一起正常工作。"
 
 #: ../../unittesting.md:93
 msgid "Remix-tests"
-msgstr ""
+msgstr "Remix测试"
 
 #: ../../unittesting.md:96
 msgid "remix-tests is the module which works underneath of remix-ide Solidity Unit Testing plugin."
-msgstr ""
+msgstr "remix测试 是在 remix-ide Solidity 单元测试插件下工作的模块。"
 
 #: ../../unittesting.md:98
 msgid "remix-tests is an NPM package. It can also be used as  a CLI/CI solution, supporting node.js. Find more information about this type of usage in the remix-tests repository"
-msgstr ""
+msgstr "remix-tests 是一个 NPM 包。 它也可以用作 CLI/CI 解决方案，支持 node.js。 在 remix-tests 存储库中查找有关此类用法的更多信息"
 
 #: ../../unittesting.md:100
 msgid "For CI implementation example, see Su Squares contract and Travis build that uses remix-tests for continuous integration testing."
-msgstr ""
+msgstr "对于 CI 实现示例，请参阅使用 remix-tests 进行持续集成测试的 Su Squares 合同和 Travis 构建。"
 
