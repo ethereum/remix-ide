@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2022-04-25 08:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,53 +19,53 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "编译器(Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
-msgstr ""
+msgstr "单击图标面板中的 Solidity 图标，您将进入 Solidity 编译器。"
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
-msgstr ""
+msgstr "单击编译按钮(下图中的 D.) 会触发编译。 如果您希望在每次保存文件或选择另一个文件时编译文件 - 选中自动编译复选框(下图中的 E.)。"
 
 #: ../../compile.md:8
 msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgstr "从 Solidity 版本 0.5.7 开始，可以编译 Yul 文件。 请阅读包含一些代码示例的(有关于 Yul 的可靠文档)。 您可以使用语言下拉菜单(下图中的 B.) 来切换语言。 此下拉列表仅适用于大于或等于 0.5.7 的版本。"
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
-msgstr ""
+msgstr "分叉选择下拉列表(下图中的 C.) 允许针对特定的以太坊硬分叉编译代码。 编译器默认对应于特定版本使用的默认硬分叉。 请到 Metadata 部分设置中的“编译详细信息”(下图中的 G.) 查看当前编译使用的 harfork 名称。"
 
 #: ../../compile.md:14
 msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgstr "如果合约有很多依赖项，编译可能需要一段时间——因此您可以自行决定使用自动编译。"
 
 #: ../../compile.md:18
 msgid "After each compilation, a list is updated with all newly compiled contracts.  A compiled contract can be selected with the Contract pulldown menu ( F. in the image).  Multiple contracts are compiled when one contract imports other contracts.  Selecting a contract will show information about that one."
-msgstr ""
+msgstr "每次编译后，都会使用所有新编译的合约更新列表。 可以使用合约下拉菜单(图中的 F.) 选择已编译的合约。 当一个合约导入其他合约时，会编译多个合约。 选择合约将显示有关该合约的信息。"
 
 #: ../../compile.md:21
 msgid "When the \"Compilation Details\" button is clicked ( G. in image), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgstr "单击“编译详细信息”按钮(图像中的 G.) 时，将打开一个模式，显示有关当前所选合约的详细信息。"
 
 #: ../../compile.md:23
 msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in the image) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgstr "对于那些编写自己的自定义solidity编译器的人，您可以通过单击+按钮(图像中的X.) 打开一个模式来导入它，您可以在其中输入要加载的编译器的url。"
 
 #: ../../compile.md:25
 msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
-msgstr ""
+msgstr "从 Solidity Compiler 模块，您还可以将合约发布到 Swarm(只能发布非抽象合约) 和 IPFS。"
 
 #: ../../compile.md:28
 msgid "Published data notably contains the abi and the solidity source code."
-msgstr ""
+msgstr "发布的数据尤其包含 abi 和solidity 源代码。"
 
 #: ../../compile.md:30
 msgid "After a contract is published, you can find its metadata information using the bzz URL located in the details modal dialog SWARM LOCATION."
-msgstr ""
+msgstr "合约发布后，您可以使用位于详细模式对话框 SWARM LOCATION 中的 bzz URL 找到其元数据信息。"
 
 #: ../../compile.md:33
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
-msgstr ""
+msgstr "编译错误和警告显示在合约部分下方。 在每次编译时，静态分析选项卡都会生成一份报告。 即使编译器没有抱怨，解决报告的问题也很重要。(看更多)"
 
