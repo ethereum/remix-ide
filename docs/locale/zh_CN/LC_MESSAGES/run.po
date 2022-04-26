@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-26 03:56\n"
+"PO-Revision-Date: 2022-04-26 12:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -219,13 +219,13 @@ msgstr "第一个对应lib testLib的部署。"
 
 #: ../../run.md:139
 msgid "The second corresponds to the deployment of the contract test with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property linkReferences. In that case we use the address of the previously created library : created{1512830014773}. The number is the id (timestamp) of the transaction that led to the creation of the library."
-msgstr ""
+msgstr "第二个对应于合约测试的部署，构造函数的第一个参数设置为 11。该合约依赖于一个库。 链接是使用属性 linkReferences 完成的。 在这种情况下，我们使用之前创建的库的地址：created{1512830014773}。 该数字是导致创建库的事务的 Id(时间戳)。"
 
 #: ../../run.md:146
 msgid "The third record corresponds to the call to the function set of the contract test (the property to is set to: created{1512830015080}) . Input parameters are 1 and 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
-msgstr ""
+msgstr "第三条记录对应合约测试的函数集的调用(属性to设置为：created{1512830015080})。 输入参数为 1 和 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
 
 #: ../../run.md:151
 msgid "All these transactions are created using the value of the accounts account{0}."
-msgstr ""
+msgstr "所有这些交易都是使用账户 account{0} 的值创建的。"
 
