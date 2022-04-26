@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:08\n"
+"PO-Revision-Date: 2022-04-26 02:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,23 +19,23 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr ""
+msgstr "在 Solidity 中导入源文件"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr ""
+msgstr "有多种技术可以将文件导入 Remix。"
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr ""
+msgstr "有关导入文件的教程，请单击此处。 您还可以在 Remix Workshops 插件中找到本教程。"
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr ""
+msgstr "有关 import 关键字的详细说明，请参阅 Solidity 文档"
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr ""
+msgstr "以下是导入文件的一些主要方法："
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
