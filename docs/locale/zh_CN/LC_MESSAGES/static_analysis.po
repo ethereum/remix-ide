@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2022-04-26 14:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,31 +19,31 @@ msgstr ""
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
-msgstr ""
+msgstr "Solidity 静态分析"
 
 #: ../../static_analysis.md:4
 msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
-msgstr ""
+msgstr "静态代码分析是通过检查代码而不实际执行代码来调试代码的过程。"
 
 #: ../../static_analysis.md:6
 msgid "Solidity Static Analysis plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. This plugin comes with Solidity environment of Remix IDE. It can also be activated individually from Plugin Manager."
-msgstr ""
+msgstr "Solidity 静态分析插件在编译后对 Solidity 智能合约进行静态分析。 它检查安全漏洞和不良开发实践等问题。 这个插件带有 Remix IDE 的 Solidity 环境。 它也可以从插件管理器单独激活。"
 
 #: ../../static_analysis.md:8
 msgid "How to use"
-msgstr ""
+msgstr "如何使用"
 
 #: ../../static_analysis.md:11
 msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one Auto run checkbox and a Run button."
-msgstr ""
+msgstr "如果您选择此插件，您将看到许多模块与复选框、一个自动运行复选框和一个运行按钮一起列出。"
 
 #: ../../static_analysis.md:15
 msgid "By default, all modules are selected for analysis and a new analysis is performed at each compilation."
-msgstr ""
+msgstr "默认情况下，选择所有模块进行分析，并在每次编译时执行新的分析。"
 
 #: ../../static_analysis.md:17
 msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis again for last compiled contract by clicking on Run."
-msgstr ""
+msgstr "可以select/deselect选择应分析合约的模块，并可以通过单击“Run”再次为上次编译的合约运行分析。"
 
 #: ../../static_analysis.md:19
 msgid "If you don't want to run analysis each time you compile a contract, just uncheck the checkbox near to Auto run."
