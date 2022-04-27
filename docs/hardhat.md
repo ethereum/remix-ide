@@ -10,9 +10,9 @@ Remixd and Hardhat
 
 If `remixd` is running locally on your device and shared folder is a **Hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,
 
-> _Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js file._
+> _Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js or hardhat.config.ts file._
 
-Remixd looks for the `hardhat.config.js` file in shared folder, and if it finds the file, the Hardhat websocket listener will run.
+Remixd looks for the `hardhat.config.js` or `hardhat.config.ts` file in shared folder, and if it finds the file, the Hardhat websocket listener will run.
 
 The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE. 
 
@@ -28,7 +28,7 @@ Enable Hardhat Compilation
 To use Hardhat compilation with Remix IDE efficiently:
 
 1. **Hardhat** should be installed locally on the system [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)
-2. Shared folder should be a Hardhat project containing `hardhat.config.js`
+2. Shared folder should be a Hardhat project containing `hardhat.config.js` or `hardhat.config.ts`
 3. `Remixd` Hardhat websocket listener should be running at `65522`
 
 ### How to use
@@ -56,11 +56,7 @@ Hardhat Provider
 
 _In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_
 
-**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This plugin can be activated from Remix IDE plugin manager.
-
-![](images/a-hardhat-provider.png)
-
-When activated, you will have an extra option in the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin with the label `Hardhat Provider`
+**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This can be chosed from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin.
 
 ![](images/a-hardhat-provider-dropdown.png)
 
