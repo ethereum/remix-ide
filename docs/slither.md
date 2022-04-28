@@ -39,7 +39,7 @@ There is an info icon on the right side of the label which redirects to a specif
 
 One can check the `Enable Slither Analysis` box to run the analysis using Slither along with the Remix's analysis library. 
 
-Generated report of Slither analysis will be stored locally on project root with a file name prefixed with `remix-slitherReport_`, for example: `remix-slitherReport_1627362090.json`. 
+Latest report of Slither analysis will be stored locally on project root with a file named as `remix-slither-report.json`. 
 
 Slither Analysis report will also be displayed on the Remix IDE side after the Remix analysis report for better user readability.
 
@@ -56,6 +56,10 @@ and also in the **remixd** console.
 To only run Slither Analysis, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report.
 
 ![](images/a-slither-analysis-only.png)
+
+By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look on them, check the box with label `Show warnings for external libraries`.
+
+![](images/a-slither-analysis-ext-libs.png)
 
 ### More Details
 
