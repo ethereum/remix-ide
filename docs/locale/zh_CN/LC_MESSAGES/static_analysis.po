@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-26 14:04\n"
+"PO-Revision-Date: 2022-04-29 01:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../static_analysis.md:21
 msgid "Analysis Modules"
-msgstr ""
+msgstr "分析模块"
 
 #: ../../static_analysis.md:23
 msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: Security, Gas & Economy, ERC & Miscellaneous."
