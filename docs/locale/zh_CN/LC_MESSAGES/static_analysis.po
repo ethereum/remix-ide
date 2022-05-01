@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-01 03:28\n"
+"PO-Revision-Date: 2022-05-01 04:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../static_analysis.md:115
 msgid "This on local calls: Invocation of local functions via 'this'"
-msgstr ""
+msgstr "This on local calls：通过 'this' 调用本地函数"
 
 #: ../../static_analysis.md:117
 msgid "Never use this to call functions in the same contract, it only consumes more gas than normal local calls."
@@ -195,15 +195,15 @@ msgstr "类别：ERC"
 
 #: ../../static_analysis.md:190
 msgid "ERC20: 'decimals' should be 'uint8'"
-msgstr ""
+msgstr "ERC20： “decimals”应该是“uint8”"
 
 #: ../../static_analysis.md:192
 msgid "ERC20 Contracts decimals function should have uint8 as return type."
-msgstr ""
+msgstr "ERC20 Contracts decimals 函数应将 uint8 作为返回类型。"
 
 #: ../../static_analysis.md:202
 msgid "Category: Miscellaneous"
-msgstr ""
+msgstr "类别：其他事项"
 
 #: ../../static_analysis.md:203
 msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
@@ -215,15 +215,15 @@ msgstr ""
 
 #: ../../static_analysis.md:213
 msgid "Similar variable names: Variable names are too similar"
-msgstr ""
+msgstr "Similar variable names: 变量名太过于相似"
 
 #: ../../static_analysis.md:215
 msgid "It warns on the usage of similar variable names."
-msgstr ""
+msgstr "它警告使用类似的变量名。"
 
 #: ../../static_analysis.md:225
 msgid "No return: Function with 'returns' not returning"
-msgstr ""
+msgstr "No return: 带有“返回”的函数不返回"
 
 #: ../../static_analysis.md:227
 msgid "It warns for the methods which define a return type but never explicitly return a value."
@@ -231,7 +231,7 @@ msgstr ""
 
 #: ../../static_analysis.md:235
 msgid "Guard conditions: Use 'require' and 'assert' appropriately"
-msgstr ""
+msgstr "Guard conditions: 合理使用“require”和“assert”"
 
 #: ../../static_analysis.md:237
 msgid "Use assert(x) if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use require(x) if x can be false, due to e.g. invalid input or a failing external component."
@@ -239,7 +239,7 @@ msgstr ""
 
 #: ../../static_analysis.md:243
 msgid "Result not used: The result of an operation not used"
-msgstr ""
+msgstr "Result not used: 未使用操作的结果"
 
 #: ../../static_analysis.md:245
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
@@ -247,7 +247,7 @@ msgstr ""
 
 #: ../../static_analysis.md:253
 msgid "String Length: Bytes length != String length"
-msgstr ""
+msgstr "字符串长度：字节长度!=字符串长度"
 
 #: ../../static_analysis.md:255
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
@@ -271,7 +271,7 @@ msgstr ""
 
 #: ../../static_analysis.md:292
 msgid "Remix-analyzer"
-msgstr ""
+msgstr "Remix-分析器"
 
 #: ../../static_analysis.md:294
 msgid "remix-analyzer is the library which works underneath of remix-ide Solidity Static Analysis plugin."
