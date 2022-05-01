@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-01 13:39\n"
+"PO-Revision-Date: 2022-05-01 14:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -207,11 +207,11 @@ msgstr "类别：其他事项"
 
 #: ../../static_analysis.md:203
 msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
-msgstr ""
+msgstr "Constant/View/Pure 函数: 潜在的 constant/view/pure 函数"
 
 #: ../../static_analysis.md:205
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
-msgstr ""
+msgstr "它警告那些可能应该是constant/view/pure但不是的方法。"
 
 #: ../../static_analysis.md:213
 msgid "Similar variable names: Variable names are too similar"
@@ -227,7 +227,7 @@ msgstr "No return: 带有“返回”的函数不返回"
 
 #: ../../static_analysis.md:227
 msgid "It warns for the methods which define a return type but never explicitly return a value."
-msgstr ""
+msgstr "它警告定义返回类型但从不显式返回值的方法。"
 
 #: ../../static_analysis.md:235
 msgid "Guard conditions: Use 'require' and 'assert' appropriately"
@@ -235,7 +235,7 @@ msgstr "Guard conditions: 合理使用“require”和“assert”"
 
 #: ../../static_analysis.md:237
 msgid "Use assert(x) if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use require(x) if x can be false, due to e.g. invalid input or a failing external component."
-msgstr ""
+msgstr "如果您永远不希望 x 为假，请使用 assert(x)，而不是在任何情况下(除了代码中的错误)。 如果 x 可能为假，请使用 require(x)，例如 无效输入或失败的外部组件。"
 
 #: ../../static_analysis.md:243
 msgid "Result not used: The result of an operation not used"
@@ -243,7 +243,7 @@ msgstr "Result not used: 未使用操作的结果"
 
 #: ../../static_analysis.md:245
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
-msgstr ""
+msgstr "二元运算产生的值在下文中未使用。 这通常是由混淆的赋值 (=) 和比较 (==) 引起的。"
 
 #: ../../static_analysis.md:253
 msgid "String Length: Bytes length != String length"
@@ -251,23 +251,23 @@ msgstr "字符串长度：字节长度!=字符串长度"
 
 #: ../../static_analysis.md:255
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
-msgstr ""
+msgstr "字节和字符串长度不一样，因为假设字符串是 UTF-8 编码的(根据 ABI 定义)，因此一个字符不一定会编码在一字节数据中。"
 
 #: ../../static_analysis.md:265
 msgid "Delete from dynamic array: 'delete' on an array leaves a gap"
-msgstr ""
+msgstr "从动态数组中删除：数组上的“delete”会留下间距"
 
 #: ../../static_analysis.md:267
 msgid "Using delete on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
-msgstr ""
+msgstr "在数组上使用 delete 会留下一个空白。 数组的长度保持不变。 如果要删除空位置，则需要手动移动项目并更新长度属性。"
 
 #: ../../static_analysis.md:280
 msgid "Data Truncated: Division on int/uint values truncates the result"
-msgstr ""
+msgstr "数据截断：int/uint 值的除法会截断结果"
 
 #: ../../static_analysis.md:282
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr ""
+msgstr "整数值的除法再次产生整数值。 这意味着例如 10 / 100 = 0 而不是 0.1，因为结果又是一个整数。 这不适用于(仅)文字值的除法，因为它们产生有理常数。"
 
 #: ../../static_analysis.md:292
 msgid "Remix-analyzer"
@@ -275,9 +275,9 @@ msgstr "Remix-分析器"
 
 #: ../../static_analysis.md:294
 msgid "remix-analyzer is the library which works underneath of remix-ide Solidity Static Analysis plugin."
-msgstr ""
+msgstr "remix-analyzer 是在 remix-ide Solidity 静态分析插件下工作的库。"
 
 #: ../../static_analysis.md:296
 msgid "remix-analyzer is an NPM package. It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the remix-analyzer repository"
-msgstr ""
+msgstr "remix-analyzer 是一个 NPM 包。 它可以用作支持 node.js 的解决方案中的库。 在 remix-analyzer 存储库中查找有关此类用法的更多信息"
 
