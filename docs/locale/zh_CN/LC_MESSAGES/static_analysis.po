@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-01 04:39\n"
+"PO-Revision-Date: 2022-05-01 13:39\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -143,7 +143,7 @@ msgstr "Selfdestruct：注意调用者合约"
 
 #: ../../static_analysis.md:93
 msgid "selfdestruct can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
-msgstr ""
+msgstr "selfdestruct 可以意外阻止调用合约。 如果该合约计划被其他合约(即程序库合约、交互)使用，请特别小心。 被调用者合约的自毁可能会使调用者处于不可操作状态。"
 
 #: ../../static_analysis.md:100
 msgid "Category: Gas & Economy"
@@ -155,7 +155,7 @@ msgstr "Gas costs：功能gas 要求太高"
 
 #: ../../static_analysis.md:103
 msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
-msgstr ""
+msgstr "如果一个函数的gas需求高于block gas limit，它就不能被执行。 请避免在修改大面积存储的函数或操作中出现循环"
 
 #: ../../static_analysis.md:115
 msgid "This on local calls: Invocation of local functions via 'this'"
@@ -163,31 +163,31 @@ msgstr "This on local calls：通过 'this' 调用本地函数"
 
 #: ../../static_analysis.md:117
 msgid "Never use this to call functions in the same contract, it only consumes more gas than normal local calls."
-msgstr ""
+msgstr "永远不要使用它来调用同一个合约中的函数，它只会比普通的本地调用消耗更多的gas。"
 
 #: ../../static_analysis.md:132
 msgid "Delete on dynamic Array: Use require/assert appropriately"
-msgstr ""
+msgstr "删除动态数组：适当使用 require/assert"
 
 #: ../../static_analysis.md:134
 msgid "The delete operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
-msgstr ""
+msgstr "当应用于 Solidity 中动态大小的数组时，删除操作会生成代码以删除包含的每个元素。 如果数组很大，此操作可能会超过区块gas限制并引发 OOG 异常。 嵌套的动态大小的对象也可以产生相同的结果。"
 
 #: ../../static_analysis.md:146
 msgid "For loop over dynamic array: Iterations depend on dynamic array's size"
-msgstr ""
+msgstr "For 循环遍历动态数组：迭代取决于动态数组的大小"
 
 #: ../../static_analysis.md:148
 msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
-msgstr ""
+msgstr "没有固定迭代次数的循环，例如依赖于存储值的循环，必须谨慎使用：由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能会在某个点停止完整的合约。 此外，使用无界循环会产生大量可避免的 gas 成本。 仔细测试您最多可以将多少项传递给此类函数以使其成功。"
 
 #: ../../static_analysis.md:164
 msgid "Ether transfer in loop: Transferring Ether in a for/while/do-while loop"
-msgstr ""
+msgstr "循环中的以太币转移：在 for/while/do-while 循环中转移以太币"
 
 #: ../../static_analysis.md:166
 msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
-msgstr ""
+msgstr "以太币支付不应循环进行。 由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能导致完整的合约在某个点停滞不前。 如果需要，请确保迭代次数较少并且您信任所涉及的每个地址。"
 
 #: ../../static_analysis.md:189
 msgid "Category: ERC"
