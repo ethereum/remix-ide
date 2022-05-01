@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-01 01:37\n"
+"PO-Revision-Date: 2022-05-01 03:28\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -127,7 +127,7 @@ msgstr "Low level calls：语义可能不清楚"
 
 #: ../../static_analysis.md:76
 msgid "Use of low level call, callcode or delegatecall should be avoided whenever possible. send does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use transfer whenever failure of the ether transfer should rollback the whole transaction."
-msgstr ""
+msgstr "只要有可能，就应避免使用低级通话、调用码或代表通话。 发送失败时时不会出现异常，请确保您相应地处理故障情况。 当以太币传输失败时使用转账来回滚整个交易。"
 
 #: ../../static_analysis.md:83
 msgid "Blockhash usage: Semantics maybe unclear"
@@ -191,7 +191,7 @@ msgstr ""
 
 #: ../../static_analysis.md:189
 msgid "Category: ERC"
-msgstr ""
+msgstr "类别：ERC"
 
 #: ../../static_analysis.md:190
 msgid "ERC20: 'decimals' should be 'uint8'"
