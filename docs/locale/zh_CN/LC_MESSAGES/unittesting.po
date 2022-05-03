@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-03 06:58\n"
+"PO-Revision-Date: 2022-05-03 08:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -139,61 +139,61 @@ msgstr "每个参数键应以哈希 (#) 为前缀并以冒号结尾并以空格(
 
 #: ../../unittesting.md:75
 msgid "For now, customization is available for parameters sender & value only"
-msgstr ""
+msgstr "目前，自定义仅适用于参数 sender 和 value"
 
 #: ../../unittesting.md:76
 msgid "Sender is from address of a transaction which is accessed using msg.sender inside a contract method. It should be defined in a fixed format as 'account-<account_index>'"
-msgstr ""
+msgstr "发件人来自使用合约方法中的 msg.sender 访问的交易地址。 它应该以固定格式定义为 'account-<account_index>'"
 
 #: ../../unittesting.md:77
 msgid "<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 afterwards"
-msgstr ""
+msgstr "<account_index> 在 remix-ide v0.10.0 发布之前从 0-2 变化，之后从 0-9 变化"
 
 #: ../../unittesting.md:78
 msgid "remix_accounts.sol must be imported in your test file to use custom sender"
-msgstr ""
+msgstr "必须在您的测试文件中导入 remix_accounts.sol 才能使用自定义发件人"
 
 #: ../../unittesting.md:79
 msgid "Value is value sent along with a transaction in wei which is accessed using msg.value inside a contract method. It should be a number."
-msgstr ""
+msgstr "值是与 wei 中的交易一起发送的值，可以使用合约方法中的 msg.value 访问。 它应该是一个数字。"
 
 #: ../../unittesting.md:81
 msgid "Regarding gas, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with Out-of-Gas error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit"
-msgstr ""
+msgstr "关于 gas，Remix 在内部估计每笔交易所需的 gas。 尽管如此，如果合约部署因 Out-of-Gas 错误而失败，它会尝试通过将 gas 加倍来重新部署它。 双重gas部署失败将显示错误：尝试两次后合约部署失败：无法存储合约代码，请检查您的gas限制"
 
 #: ../../unittesting.md:83
 msgid "Various test examples can be seen in examples section."
-msgstr ""
+msgstr "在示例部分可以看到各种测试示例。"
 
 #: ../../unittesting.md:86
 msgid "Points to remember"
-msgstr ""
+msgstr "要记住的要点"
 
 #: ../../unittesting.md:89
 msgid "A test contract cannot have a method with parameters. Having one such method will show error: Method 'methodname' can not have parameters inside a test contract"
-msgstr ""
+msgstr "测试合约不能有带参数的方法。 拥有一种这样的方法将显示错误：方法'methodname'在测试合约中不能有参数"
 
 #: ../../unittesting.md:90
 msgid "Number of test accounts are 3 before remix-ide release v0.10.0 and 10 afterwards"
-msgstr ""
+msgstr "在 remix-ide v0.10.0 发布之前，测试账户数量为 3，之后为 10"
 
 #: ../../unittesting.md:91
 msgid "A test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin but it will work fine with Solidity Unit Testing plugin."
-msgstr ""
+msgstr "导入 remix_accounts.sol 的测试文件可能无法使用 Solidity Compiler 插件成功编译，但它可以与 Solidity Unit Testing 插件一起正常工作。"
 
 #: ../../unittesting.md:93
 msgid "Remix-tests"
-msgstr ""
+msgstr "Remix-tests"
 
 #: ../../unittesting.md:96
 msgid "remix-tests is the module which works underneath of remix-ide Solidity Unit Testing plugin."
-msgstr ""
+msgstr "remix-tests 是在 remix-ide Solidity 单元测试插件下工作的模块。"
 
 #: ../../unittesting.md:98
 msgid "remix-tests is an NPM package. It can also be used as  a CLI/CI solution, supporting node.js. Find more information about this type of usage in the remix-tests repository"
-msgstr ""
+msgstr "remix-tests 是一个 NPM 包。 它也可以用作 CLI/CI 解决方案，支持 node.js。 在 remix-tests 存储库中查找有关此类用法的更多信息"
 
 #: ../../unittesting.md:100
 msgid "For CI implementation example, see Su Squares contract and Travis build that uses remix-tests for continuous integration testing."
-msgstr ""
+msgstr "对于 CI 实现示例，请参阅使用 remix-tests 进行持续集成测试的 Su Squares 合同和 Travis 构建。"
 
