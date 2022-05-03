@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2022-05-03 06:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,123 +19,123 @@ msgstr ""
 
 #: ../../unittesting.md:1
 msgid "Unit Testing Plugin"
-msgstr ""
+msgstr "单元测试插件"
 
 #: ../../unittesting.md:4
 msgid "Click the double check icon to get to the Solidity Unit Testing plugin."
-msgstr ""
+msgstr "单击双重检查图标以访问 Solidity 单元测试插件。"
 
 #: ../../unittesting.md:8
 msgid "If you haven't used this plugin before and are not seeing double check icon, you have to activate it from Remix plugin manager."
-msgstr ""
+msgstr "如果您之前没有使用过这个插件并且没有看到双重检查图标，您必须从 Remix 插件管理器中激活它。"
 
 #: ../../unittesting.md:10
 msgid "Go to the plugin manager (by click the plug icon) and load up the unit testing plugin."
-msgstr ""
+msgstr "转到插件管理器(通过单击插件图标) 并加载单元测试插件。"
 
 #: ../../unittesting.md:14
 msgid "Now double check icon will appear on the left side icon bar. Clicking on icon will load the unit testing module in the side panel."
-msgstr ""
+msgstr "现在仔细检查图标将出现在左侧图标栏上。 单击图标将在侧面板中加载单元测试模块。"
 
 #: ../../unittesting.md:16
 msgid "Alternatively, just select Solidity environment from remix IDE home page. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
-msgstr ""
+msgstr "或者，只需从 remix IDE 主页中选择 Solidity 环境。 这将激活 Solidity 单元测试插件以及 Solidity 编译器、部署和运行事务以及 Solidity 静态分析插件。"
 
 #: ../../unittesting.md:20
 msgid "Generate"
-msgstr ""
+msgstr "生成"
 
 #: ../../unittesting.md:22
 msgid "Select a solidity file which you want to test and click on the button Generate. It will generate a new sample solidity test file in the current folder suffixed with _test. This file contains the minimum you need for running unit testing."
-msgstr ""
+msgstr "选择您要测试的solidity 文件，然后单击按钮Generate。 它将在当前文件夹中生成一个新的样本可靠性测试文件，后缀为_test。 此文件包含运行单元测试所需的最低要求。"
 
 #: ../../unittesting.md:24
 msgid "Write Tests"
-msgstr ""
+msgstr "编写测试"
 
 #: ../../unittesting.md:26
 msgid "Write tests to check the functionality of your contract. Remix injects a built-in assert library which can be used for testing. Visit the library documentation here."
-msgstr ""
+msgstr "编写测试来检查合约的功能。 Remix 注入了一个可用于测试的内置断言库。 在此处访问库文档。"
 
 #: ../../unittesting.md:28
 msgid "Apart from this, Remix allows usage of some special functions to make testing more structural. They are:"
-msgstr ""
+msgstr "除此之外，Remix 允许使用一些特殊功能来使测试更加结构化。 他们是："
 
 #: ../../unittesting.md:30
 msgid "beforeEach() - Runs before each test"
-msgstr ""
+msgstr "beforeEach() - 在每次测试之前运行"
 
 #: ../../unittesting.md:31
 msgid "beforeAll() - Runs before all tests"
-msgstr ""
+msgstr "beforeAll() - 在所有测试之前运行"
 
 #: ../../unittesting.md:32
 msgid "afterEach() - Runs after each test"
-msgstr ""
+msgstr "afterEach() - 每次测试后运行"
 
 #: ../../unittesting.md:33
 msgid "afterAll() - Runs after all tests"
-msgstr ""
+msgstr "afterAll() - 在所有测试之后运行"
 
 #: ../../unittesting.md:35
 msgid "To get started, see this simple example."
-msgstr ""
+msgstr "要开始，请参阅这个简单的示例。"
 
 #: ../../unittesting.md:37
 msgid "Run"
-msgstr ""
+msgstr "运行"
 
 #: ../../unittesting.md:39
 msgid "Once you are done with writing tests, select the _test.sol files in the list and click on the button Run to execute the tests in the selected files. The execution will run in a separate environment and the result will be displayed below."
-msgstr ""
+msgstr "完成编写测试后，在列表中选择 _test.sol 文件，然后单击按钮运行以在所选文件中执行测试。 执行将在单独的环境中运行，结果将显示在下方。"
 
 #: ../../unittesting.md:43
 msgid "Stop"
-msgstr ""
+msgstr "停止"
 
 #: ../../unittesting.md:45
 msgid "If you have selected multiple files to run the tests and want to stop the execution, click on Stop button. It will stop execution after running the tests for current file."
-msgstr ""
+msgstr "如果您选择了多个文件来运行测试并想要停止执行，请单击停止按钮。 运行当前文件的测试后，它将停止执行。"
 
 #: ../../unittesting.md:47
 msgid "Customization"
-msgstr ""
+msgstr "自定义"
 
 #: ../../unittesting.md:49
 msgid "Remix facilitates users with various types of customizations to test a contract properly."
-msgstr ""
+msgstr "Remix 帮助用户通过各种类型的自定义来正确测试合约。"
 
 #: ../../unittesting.md:51
 msgid "1. Custom Compiler Context"
-msgstr ""
+msgstr "1. 自定义编译器上下文"
 
 #: ../../unittesting.md:53
 msgid "Solidity Unit Testing refers Solidity Compiler plugin for compiler configurations. One can provide customized inputs for Compiler, EVM Version & Enable Optimization and these will be the configuration settings used for contract compilation before running unit tests."
-msgstr ""
+msgstr "Solidity 单元测试是指用于编译器配置的 Solidity Compiler 插件。 可以为编译器、EVM 版本和启用优化提供自定义输入，这些将是在运行单元测试之前用于合约编译的配置设置。"
 
 #: ../../unittesting.md:57
 msgid "2. Custom Transaction Context"
-msgstr ""
+msgstr "2. 自定义交易上下文"
 
 #: ../../unittesting.md:59
 msgid "For a contract method interaction, prime parameters of transaction are from address, value & gas. Usually, we need to test a method's behaviour under different values of these parameters."
-msgstr ""
+msgstr "对于合约方法交互，交易的主要参数来自地址、价值和gas。 通常，我们需要测试一个方法在这些参数的不同值下的行为。"
 
 #: ../../unittesting.md:61
 msgid "Remix provides the functionality of custom msg.sender & msg.value of transaction using method devdoc like:"
-msgstr ""
+msgstr "Remix 使用方法 devdoc 提供了自定义 msg.sender 和 msg.value 的功能，例如："
 
 #: ../../unittesting.md:71
 msgid "Things to keep in mind while using custom transaction context:"
-msgstr ""
+msgstr "使用自定义事务上下文时要记住的事项："
 
 #: ../../unittesting.md:73
 msgid "Parameters must be defined in devdoc of related method"
-msgstr ""
+msgstr "参数必须在相关方法的devdoc中定义"
 
 #: ../../unittesting.md:74
 msgid "Each parameter key should be prefixed with a hash (#) and end with a colon following a space (: ) like #sender:  & #value:"
-msgstr ""
+msgstr "每个参数键应以哈希 (#) 为前缀并以冒号结尾并以空格(: ) 结尾, 例如 #sender: & #value:"
 
 #: ../../unittesting.md:75
 msgid "For now, customization is available for parameters sender & value only"
