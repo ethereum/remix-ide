@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-03 01:06\n"
+"PO-Revision-Date: 2022-05-03 05:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -27,23 +27,23 @@ msgstr "有两种方式开始调试，每一种都对应不同的用例。"
 
 #: ../../tutorial_debug.md:5
 msgid "from the transaction log in the Terminal - use this when you want to debug a transaction."
-msgstr ""
+msgstr "来自终端中的交易日志 - 当您想要调试事务时使用它。"
 
 #: ../../tutorial_debug.md:6
 msgid "from the Debugger - use this if you have a transaction hash."
-msgstr ""
+msgstr "来自调试器 - 如果您有交易哈希，请使用它。"
 
 #: ../../tutorial_debug.md:8
 msgid "Initiate Debugging from the transaction log in the Terminal"
-msgstr ""
+msgstr "从终端中的事务日志启动调试"
 
 #: ../../tutorial_debug.md:9
 msgid "Let's start with a basic contract ( or replace this one by your own ) :"
-msgstr ""
+msgstr "让我们从一份基本合约开始(或者自己替换这个合约)："
 
 #: ../../tutorial_debug.md:10
 msgid "create a blank file in the file explorer (by clicking the + icon) and give it a name."
-msgstr ""
+msgstr "在文件资源管理器中创建一个空白文件(通过单击 + 图标) 并为其命名。"
 
 #: ../../tutorial_debug.md:11
 msgid "copy the code below."
@@ -55,11 +55,11 @@ msgstr "编译代码"
 
 #: ../../tutorial_debug.md:13
 msgid "click the Run & Deploy icon in the icon panel."
-msgstr ""
+msgstr "单击图标面板中的运行和部署图标。"
 
 #: ../../tutorial_debug.md:53
 msgid "For the purpose of this tutorial, we will run the JavaScript VM. This simulates a custom blockchain. You could do the same using a proper backend node."
-msgstr ""
+msgstr "出于本教程的目的，我们将运行 JavaScript VM。 这模拟了一个自定义区块链。 您可以使用适当的后端节点来做同样的事情。"
 
 #: ../../tutorial_debug.md:56
 msgid "Let's deploy the contract:"
@@ -67,15 +67,15 @@ msgstr "让我们部署合约："
 
 #: ../../tutorial_debug.md:58
 msgid "Click the Deploy button"
-msgstr ""
+msgstr "单击部署按钮"
 
 #: ../../tutorial_debug.md:62
 msgid "You'll see the deployed instance (AKA the udapp)."
-msgstr ""
+msgstr "您将看到已部署的实例(又名 udapp)。"
 
 #: ../../tutorial_debug.md:66
 msgid "Then open it up (by clicking the caret)."
-msgstr ""
+msgstr "然后打开它(通过单击插入符号)。"
 
 #: ../../tutorial_debug.md:71
 msgid "We are going to call the Donate function and will send it ether."
