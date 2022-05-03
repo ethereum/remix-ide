@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2021-04-21 11:07\n"
+"PO-Revision-Date: 2022-05-03 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../tutorial_debug.md:1
 msgid "Debugging Transactions"
-msgstr ""
+msgstr "调试交易"
 
 #: ../../tutorial_debug.md:4
 msgid "There are two ways to start debugging, each one corresponds to a different use case."
-msgstr ""
+msgstr "有两种方式开始调试，每一种都对应不同的用例。"
 
 #: ../../tutorial_debug.md:5
 msgid "from the transaction log in the Terminal - use this when you want to debug a transaction."
@@ -47,11 +47,11 @@ msgstr ""
 
 #: ../../tutorial_debug.md:11
 msgid "copy the code below."
-msgstr ""
+msgstr "复制下面的代码。"
 
 #: ../../tutorial_debug.md:12
 msgid "compile the code."
-msgstr ""
+msgstr "编译代码"
 
 #: ../../tutorial_debug.md:13
 msgid "click the Run & Deploy icon in the icon panel."
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../../tutorial_debug.md:56
 msgid "Let's deploy the contract:"
-msgstr ""
+msgstr "让我们部署合约："
 
 #: ../../tutorial_debug.md:58
 msgid "Click the Deploy button"
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../tutorial_debug.md:157
 msgid "Stack"
-msgstr ""
+msgstr "堆栈"
 
 #: ../../tutorial_debug.md:158
 msgid "Storages Changes"
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../tutorial_debug.md:166
 msgid "Reverted Transaction"
-msgstr ""
+msgstr "交易回滚"
 
 #: ../../tutorial_debug.md:168
 msgid "A transaction can be reverted (because of an out of gas exception or Solidity revert statement or because of a low level exception)."
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../../tutorial_debug.md:178
 msgid "Breakpoints"
-msgstr ""
+msgstr "断点"
 
 #: ../../tutorial_debug.md:180
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
