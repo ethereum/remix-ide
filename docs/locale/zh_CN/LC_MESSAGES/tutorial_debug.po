@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-03 05:58\n"
+"PO-Revision-Date: 2022-05-03 06:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -79,139 +79,139 @@ msgstr "然后打开它(通过单击插入符号)。"
 
 #: ../../tutorial_debug.md:71
 msgid "We are going to call the Donate function and will send it ether."
-msgstr ""
+msgstr "我们将调用 Donate 函数并将其发送它的ETH。"
 
 #: ../../tutorial_debug.md:73
 msgid "To do this: in the value input box put in 2 and select Ether as the unit (and not wei like I did in the image below - well you could - it won't really change anything)."
-msgstr ""
+msgstr "要做到这一点：在值输入框中输入 2 并选择ETH作为单位(而不是像我在下图中所做的那样 - 你可以 - 它不会真正改变任何东西)。"
 
 #: ../../tutorial_debug.md:77
 msgid "Then click the Donate button."
-msgstr ""
+msgstr "然后点击捐赠按钮。"
 
 #: ../../tutorial_debug.md:79
 msgid "This will send Ether to the this function."
-msgstr ""
+msgstr "这会将ETH发送到 this 函数。"
 
 #: ../../tutorial_debug.md:81
 msgid "Because we are using the JavaScript VM, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr ""
+msgstr "因为我们使用的是 JavaScript VM，所以几乎所有事情都会立即发生。(如果我们一直在使用 Injected Web 3，那么我们将需要批准交易、支付 gas 并等待交易被开采。)"
 
 #: ../../tutorial_debug.md:83
 msgid "Remix displays information related to each transaction result in the terminal."
-msgstr ""
+msgstr "Remix 在终端中显示与每个交易结果相关的信息。"
 
 #: ../../tutorial_debug.md:85
 msgid "Check in the terminal where the transaction you just made is logged."
-msgstr ""
+msgstr "签入记录您刚刚进行的交易的终端。"
 
 #: ../../tutorial_debug.md:87
 msgid "Click the debug button to start debugging it."
-msgstr ""
+msgstr "单击调试按钮开始调试它。"
 
 #: ../../tutorial_debug.md:91
 msgid "Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger."
-msgstr ""
+msgstr "在我们使用实际的调试工具之前，下一节将展示如何直接从调试器启动调试会话。"
 
 #: ../../tutorial_debug.md:93
 msgid "Initiate Debugging from the Debugger"
-msgstr ""
+msgstr "从调试器启动调试"
 
 #: ../../tutorial_debug.md:95
 msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
-msgstr ""
+msgstr "单击图标面板中的错误图标以访问侧面板中的调试器。"
 
 #: ../../tutorial_debug.md:97
 msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
-msgstr ""
+msgstr "如果您没有看到错误图标，请转到插件管理器并激活调试器。"
 
 #: ../../tutorial_debug.md:99
 msgid "You can start a debug session by providing a transaction hash."
-msgstr ""
+msgstr "您可以通过提供交易哈希来启动调试会话。"
 
 #: ../../tutorial_debug.md:101
 msgid "To find a transaction hash:"
-msgstr ""
+msgstr "要查找交易哈希："
 
 #: ../../tutorial_debug.md:102
 msgid "Go to a transaction in the terminal."
-msgstr ""
+msgstr "在终端中进行交易。"
 
 #: ../../tutorial_debug.md:103
 msgid "Click a line with a transaction - to exand the log."
-msgstr ""
+msgstr "单击带有交易的行 - 展开日志。"
 
 #: ../../tutorial_debug.md:104
 msgid "The transaction hash is there - copy it."
-msgstr ""
+msgstr "交易哈希在那里 - 复制它。"
 
 #: ../../tutorial_debug.md:108
 msgid "Then click in the debugger paste the hash and click on the Start debugging button."
-msgstr ""
+msgstr "然后单击调试器粘贴哈希并单击开始调试按钮。"
 
 #: ../../tutorial_debug.md:112
 msgid "Using the debugger"
-msgstr ""
+msgstr "使用调试器"
 
 #: ../../tutorial_debug.md:117
 msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
-msgstr ""
+msgstr "调试器允许人们查看有关事务执行的详细信息。 它使用编辑器在源代码中显示当前执行的位置。"
 
 #: ../../tutorial_debug.md:121
 msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
-msgstr ""
+msgstr "导航部分包含一个滑块和按钮，可用于逐步执行事务。"
 
 #: ../../tutorial_debug.md:125
 msgid "More explaination of what these buttons do."
-msgstr ""
+msgstr "更多解释这些按钮的作用。"
 
 #: ../../tutorial_debug.md:126
 msgid "Step Into"
-msgstr ""
+msgstr "进入"
 
 #: ../../tutorial_debug.md:127
 msgid "Step Over Into"
-msgstr ""
+msgstr "跨步进入"
 
 #: ../../tutorial_debug.md:130
 msgid "11 panels give detailed information about the execution:"
-msgstr ""
+msgstr "11 个面板提供了有关执行的详细信息："
 
 #: ../../tutorial_debug.md:132
 msgid "Instructions"
-msgstr ""
+msgstr "指令"
 
 #: ../../tutorial_debug.md:134
 msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
-msgstr ""
+msgstr "指令面板显示当前执行合约的字节码——当前步骤突出显示。"
 
 #: ../../tutorial_debug.md:137
 msgid "Important note: When this panel is hidden, the slider will have a courser granularity and only stop at expression boundaries, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
-msgstr ""
+msgstr "重要提示：当此面板被隐藏时，滑块将具有更粗的粒度并且仅在表达式边界处停止，即使它们被编译成多个 EVM 指令。 显示面板时，可以跳过每条指令，即使是那些引用相同表达式的指令。"
 
 #: ../../tutorial_debug.md:143
 msgid "Solidity Locals"
-msgstr ""
+msgstr "Solidity Locals"
 
 #: ../../tutorial_debug.md:145
 msgid "The Solidity Locals panel displays local variables associated with the current context."
-msgstr ""
+msgstr "Solidity Locals 面板显示与当前上下文相关的局部变量。"
 
 #: ../../tutorial_debug.md:148
 msgid "Solidity State"
-msgstr ""
+msgstr "Solidity State"
 
 #: ../../tutorial_debug.md:150
 msgid "The Solidity State panel displays state variables of the current executing contract."
-msgstr ""
+msgstr "Solidity State 面板显示当前执行合约的状态变量。"
 
 #: ../../tutorial_debug.md:153
 msgid "Low level panels"
-msgstr ""
+msgstr "低级面板"
 
 #: ../../tutorial_debug.md:155
 msgid "These panels display low level informations about the execution:"
-msgstr ""
+msgstr "这些面板显示有关执行的低级信息："
 
 #: ../../tutorial_debug.md:157
 msgid "Stack"
@@ -219,27 +219,27 @@ msgstr "堆栈"
 
 #: ../../tutorial_debug.md:158
 msgid "Storages Changes"
-msgstr ""
+msgstr "存储更改"
 
 #: ../../tutorial_debug.md:159
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #: ../../tutorial_debug.md:160
 msgid "Call Data"
-msgstr ""
+msgstr "调用数据"
 
 #: ../../tutorial_debug.md:161
 msgid "Call Stack"
-msgstr ""
+msgstr "调用堆栈"
 
 #: ../../tutorial_debug.md:162
 msgid "Return Value (only if the current step is a RETURN opcode)"
-msgstr ""
+msgstr "返回值(仅当当前步骤是 RETURN 操作码时)"
 
 #: ../../tutorial_debug.md:163
 msgid "Full Storages Changes (only at the end of the execution - display every storage change of every modified contract)"
-msgstr ""
+msgstr "完整存储更(仅在执行结束时 - 显示每个修改后的合约的每个存储更改)"
 
 #: ../../tutorial_debug.md:166
 msgid "Reverted Transaction"
@@ -247,15 +247,15 @@ msgstr "交易回滚"
 
 #: ../../tutorial_debug.md:168
 msgid "A transaction can be reverted (because of an out of gas exception or Solidity revert statement or because of a low level exception)."
-msgstr ""
+msgstr "可以恢复交易(因为用尽gas异常或 Solidity 恢复语句或因为低级别异常)。"
 
 #: ../../tutorial_debug.md:171
 msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
-msgstr ""
+msgstr "了解异常并找出异常在源代码中的位置很重要。"
 
 #: ../../tutorial_debug.md:174
 msgid "Remix will warn you when the execution throws an exception. The warning button will jump to the last opcode before the exception happened."
-msgstr ""
+msgstr "当执行引发异常时，Remix 会警告您。 警告按钮将跳转到异常发生之前的最后一个操作码。"
 
 #: ../../tutorial_debug.md:178
 msgid "Breakpoints"
@@ -263,57 +263,57 @@ msgstr "断点"
 
 #: ../../tutorial_debug.md:180
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
-msgstr ""
+msgstr "导航区域的最后两个按钮用于跳回上一个断点或前进到下一个断点。"
 
 #: ../../tutorial_debug.md:183
 msgid "Breakpoints can be added and removed by clicking on the line number in the Editor."
-msgstr ""
+msgstr "可以通过单击编辑器中的行号来添加和删除断点。"
 
 #: ../../tutorial_debug.md:185
 msgid "When using debug session with breakpoints, the execution will jump to the first encountered breakpoint."
-msgstr ""
+msgstr "当使用带断点的调试会话时，执行将跳转到第一个遇到的断点。"
 
 #: ../../tutorial_debug.md:188
 msgid "Important note: If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and second time for assigning the actual value. As an example, assume you are debugging the following contract:"
-msgstr ""
+msgstr "重要提示：如果在声明变量的行中添加断点，它可能会被触发两次：一次用于将变量初始化为零，第二次用于分配实际值。 例如，假设您正在调试以下合约："
 
 #: ../../tutorial_debug.md:206
 msgid "And let's says that breakpoints are set for the lines"
-msgstr ""
+msgstr "假设为这些行设置了断点"
 
 #: ../../tutorial_debug.md:208
 msgid "uint p = 45;"
-msgstr ""
+msgstr "uint p = 45;"
 
 #: ../../tutorial_debug.md:210
 msgid "m = 89;"
-msgstr ""
+msgstr "m = 89;"
 
 #: ../../tutorial_debug.md:212
 msgid "uint l = 34;"
-msgstr ""
+msgstr "uint l = 34;"
 
 #: ../../tutorial_debug.md:214
 msgid "then clicking on Jump to next breakpoint will stop at the following lines in the given order:"
-msgstr ""
+msgstr "然后单击跳转到下一个断点将按给定顺序在以下行处停止："
 
 #: ../../tutorial_debug.md:217
 msgid "uint p = 45; (declaration of p)"
-msgstr ""
+msgstr "uint p = 45;(p的声明)"
 
 #: ../../tutorial_debug.md:219
 msgid "uint l = 34; (declaration of l)"
-msgstr ""
+msgstr "uint l = 34;(l 的声明)"
 
 #: ../../tutorial_debug.md:221
 msgid "uint p = 45; (45 assigned to p)"
-msgstr ""
+msgstr "uint p = 45; (45 分配给 p)"
 
 #: ../../tutorial_debug.md:223
 msgid "m = 89; (89 assigned to m)"
-msgstr ""
+msgstr "m = 89; (89 分配给 m)"
 
 #: ../../tutorial_debug.md:225
 msgid "uint l = 34; (34 assigned to l)"
-msgstr ""
+msgstr "uint l = 34； (34 分配给 l)"
 
