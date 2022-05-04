@@ -1,26 +1,36 @@
 # Plugin List
 
-Here is the list of remix plugins:
+Here is the list of Remix plugins that you will see in the Plugin Manager:
 
-## Native Plugins
+## Core Plugins
 
-**File Explorer** &nbsp;  <br>
+**File Explorer** &nbsp; ![](images/pi-fe.png)<br>
 The File Explorers is where you can see the files.
 
-
 **Remixd** &nbsp; (No UI)
-<br>Remixd connects a folder on your filesystem to the Remix website. Please see the docs for instructions.
+<br>Remixd (with an npm package running locally) connects a folder on your filesystem to the Remix website. Please see the docs for instructions.
 <br>[Documentation](https://remix-ide.readthedocs.io/en/latest/remixd.html)
 
-Solidity Compiler
+**Solidity Compiler** &nbsp; ![](images/pi-sol.png)<br>
+Compiles Solidity & YUL.
+[Documentation](compile.html)
 
-Deploy & Run
+**Deploy & Run** &nbsp; ![](images/pi-deploy.png)<br>
+Deploy & interact with smart contracts on the in-browser chain (JSVM), local nodes, and public networks.
+[Documentation](run.html)
 
-Debugger
+**Debugger** &nbsp; ![](images/pi-debug.png)<br>
+Insert breakpoints, step through a contract, check high level and low level parameters, and fetch & debug a transaction of a verified contract.
+[Documentation](debugger.html)
 
-Solidity Static Analysis
+**Solidity Unit Testing** &nbsp; ![](images/pi-sut.png)<br>
+Run unit test written in Solidity, 
+[Documentation](unittesting.html)
 
-Solidity Unit Testing
+**Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br>
+Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html).
+[Documentation](static_analysis.html)
+
 
 
 ## Additional Plugins
@@ -30,13 +40,19 @@ Solidity Unit Testing
 **Celo Compiler / Deployer** &nbsp; ![](images/pi-celo.png)<br>
 Compile & Deploy to the Celo blockchain. 
 <br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin
-<br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)
+<br>[Documentation](https://github.com/dexfair/celo-remix-plugin)
+<br>[Make an issue](https://github.com/dexfair/celo-remix-plugin/issues)
+
+**Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br>
+Deploy a contract to multiple chains (1 at a time) with the same address. 
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin
+<br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin)
+<br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
 **Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; Compilation Result <br>
 Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API.
 <br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin
 <br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)
-
 
 **Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp;  File Loading  <br>
 The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers.
@@ -55,16 +71,15 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin)
 <br>[Make an issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)
 
-
 **EthDoc Documentation Generator** &nbsp; ![](images/pi-ethdoc.png) &nbsp;  
 <br>Creates the documentation of a soldity contract - generated from the Natspec comments in the code. The generated doc is placed in EthDoc viewer - which will be visible in an tab in the editor.
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): ethdoc
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc/profile.json): ethdoc
 <br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/)
 <br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-plugin/issues)
 
 **EthDoc Viewer** &nbsp; (main panel) &nbsp;  
 <br>This plugin work with EthDoc Generator.  It is automatically activated.
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc-viewer/profile.json): ethdoc-viewer
 <br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/)
 <br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-viewer-plugin/issues)
 
@@ -79,20 +94,11 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/flattener/profile.json): flattener
 <br>[Make an issue](https://github.com/bunsenstraat/flattener/issues)
 
-**Ganache Providerr** &nbsp; (appears in Deploy & Run)  <br>
-Adds an entry to Run & Deploy's Environment selection - so you can deploy to Ganache
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): 
-<br>[Make an issue](https://github.com/ethereum/remix-project/issues)
-
 **Gas Profiler** &nbsp; ![](images/pi-gas-profiler.png)
 <br>Profile gas costs for every transaction you execute.  Total execution costs as well as per line costs are displayed.
 <br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/gas-profiler/profile.json): gasProfiler
 <br>[Documentation](https://github.com/EdsonAlcala/remix-gas-profiler)
 <br>[Make an issue](/issues)  EDIT
-
-**HardHat Provider** &nbsp; (appears in Deploy & Run)
-<br>Adds an entry to Run & Deploy's Environment selection - so you can deploy to a local Hardhat node.
-<br>[Make an issue](https://github.com/ethereum/remix-project/issues)
 
 **Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials
 <br>Tutorials that contain quizes that teach users Solidity and Remix features.
@@ -114,7 +120,7 @@ Adds an entry to Run & Deploy's Environment selection - so you can deploy to Gan
 
 **Mythx Security Verification** &nbsp; ![](images/pi-mythx.png) 
 <br>Free version and paid version for Mythx analysis.
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): mythx
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json): mythx
 <br>[Documentation](https://docs.mythx.io/tools-integrations/remix)
 <br>[Make an issue](https://github.com/aquiladev/remix-mythx-plugin/issues)
 
@@ -137,51 +143,55 @@ Adds an entry to Run & Deploy's Environment selection - so you can deploy to Gan
 
 **Quorum Network** &nbsp; ![](images/pi-quorum.png)
 <br>A Connection to Quorum 
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/quorum/profile.json): quorum
 <br>[Documentation](https://medium.com/remix-ide/quorum-plugin-for-remix-ee232ebca64c)
 <br>[Make an issue](https://github.com/ConsenSys/quorum-remix/issues)
 
 **Solhint Linter** &nbsp; ![](images/pi-solhint.png)
-<br>Blah blah
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>Solidity Linter providing both Security and Style Guide validations.
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/solhint/profile.json): solhint
+<br>[Documentation](https://protofire.github.io/solhint/docs/rules.html)
+<br>[Make an issue](https://github.com/protofire/remix-solhint-plugin)
 
 **Solidity 2 UML** &nbsp; ![](images/pi-sol2uml.png) 
-<br>Blah blah
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>Generate UML diagrams from a compiled Solidity file
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/sol2uml/profile.json): sol2uml
+<br>[Documentation](https://github.com/aquiladev/remix-sol2uml)
+<br>[Make an issue](https://github.com/aquiladev/remix-sol2uml)
 
 **Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp; 
 <br>Verify you contracts and fetch verified contracts
 <br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
 <br>[Documentation](https://github.com/ethereum/sourcify)
-<br>[Make an issue](https://github.com/ethereum/sourcify/issues)
+<br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
+
+**Starnet** &nbsp; ![](images/pi-starknet.png) &nbsp; 
+<br>Compile contracts written in Cairo to Starknet
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler
+<br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin)
+<br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)
 
 **Tenderly** &nbsp; ![](images/pi-tenderly.png) 
-<br>Blah blah
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>Verify Contracts. Import To Remix From your Tenderly project.
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json): tenderly
+<br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix)
+<br>[Make an issue](/issues)???
 
 **UMA Playground** &nbsp; (main panel) 
 <br>Learn about the UMA protocol.  This plugin is loaded from the DEFI Tutorial plugin.
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground
+<br>[Make an issue](https://github.com/Machinalabs/remix-uma-playground/issues)
 
 **UMA Tutorials** &nbsp; (main panel) 
-<br>Blah blah
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>This plugin is activated by the DEFI Tutorials
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials
+<br>[Make an issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)
 
 **Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp; 
-<br>Blah blah
-<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation]()
-<br>[Make an issue](/issues)
+<br>Compile vyper code using local or remote Vyper compiler.
+<br>[Remix plugin directory name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper
+<br>[Documentation](https://github.com/GrandSchtroumpf/vyper-remix)
+<br>[Make an issue](https://github.com/GrandSchtroumpf/vyper-remix)
 
 **Wallet Connect** &nbsp; (main panel) 
 <br>Approve transactions on your mobile device
