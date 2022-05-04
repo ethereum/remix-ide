@@ -89,6 +89,7 @@ Useful links:
    create_deploy
    tutorial_debug
    import
+   plugin_list
    remix_commands
    running_js_scripts
    testing_using_Chai_&_Mocha
