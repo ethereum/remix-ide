@@ -1,22 +1,29 @@
 Welcome to Remix's documentation!
 =====================================
 
-Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as act as a playground for learning and teaching Ethereum.
+**Remix IDE** is used for the entire journey of smart contract development by users of any knowledge level. 
+It requires no setup, fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  
+The IDE comes in 2 flavors as well as a VSCode extension:
 
-Remix IDE is part of the Remix Project which is a platform for development tools that use a plugin architecture.  It encompasses sub-projects including Remix Plugin Engine, Remix Libs, and of course Remix-IDE.
+**Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__
 
-Remix IDE is a powerful open source tool that helps you write Solidity contracts straight from the browser.
+Supported browsers: Firefox, Chrome, Brave. We do not support Remix's use on tablets or mobile devices.
 
-It is written in JavaScript and supports both usage in the browser, but run locally and in a desktop version.
+**Remix Desktop IDE**, see releases: `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__
+
+**Ethereum-Remix** a VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__.  
+The documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__.
+
+Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which is also includes the
+`Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__: low-level tools for wider use.
+
+Remix IDE is primarily used to help developers write Solidity contracts straight from the browser. 
+It is written in JavaScript and supports usage in the browser (and can be run `locally <https://github.com/ethereum/remix-project/#offline-usage>`__) locally and in a desktop version.
 
 Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
 
-Remix-IDE is available
-at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these
-docs.  Our IDE tool is available at `our GitHub repository
-<https://github.com/ethereum/remix-project>`__.
-
-This set of documents covers instructions on how to use Remix.  Additional tutorials are found in our Medium blog and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
+This set of documents covers instructions on how to use Remix.  
+Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
 
 Useful links:
 
