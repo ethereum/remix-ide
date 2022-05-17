@@ -1,9 +1,9 @@
 Welcome to Remix's documentation!
 =====================================
 
-**Remix IDE** is used for the entire journey of smart contract development by users of any knowledge level. 
+**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. 
 It requires no setup, fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  
-The IDE comes in 2 flavors as well as a VSCode extension:
+The IDE comes in 2 flavors (web app or desktop app) and as a VSCode extension.
 
 **Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__
 
@@ -14,11 +14,15 @@ Supported browsers: Firefox, Chrome, Brave. We do not support Remix's use on tab
 **Ethereum-Remix** a VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__.  
 The documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__.
 
-Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which is also includes the
+Remix Project
+~~~~~~~~~~~~~
+Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the
 `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__: low-level tools for wider use.
 
 Remix IDE is primarily used to help developers write Solidity contracts straight from the browser. 
-It is written in JavaScript and supports usage in the browser (and can be run `locally <https://github.com/ethereum/remix-project/#offline-usage>`__) locally and in a desktop version.
+It is written in JavaScript. When accessed from a browser, it can be run from https://remix.ethereum.org or 
+run `locally <https://github.com/ethereum/remix-project/#offline-usage>`__.
+As stated above, there is also a desktop version and a VSCode extension.
 
 Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
 
