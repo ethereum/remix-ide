@@ -12,7 +12,7 @@ It is written in JavaScript and supports both usage in the browser, but run loca
 Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
 
 Remix-IDE is available
-at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these
+at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these
 docs.  Our IDE tool is available at `our GitHub repository
 <https://github.com/ethereum/remix-project>`__.
 
