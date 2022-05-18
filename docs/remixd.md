@@ -84,9 +84,9 @@ application** that can access the `TCP port 65520` on your local host.
   https://remix.ethereum.org
   https://remix-alpha.ethereum.org
   https://remix-beta.ethereum.org
-  http://remix.ethereum.org
-  http://remix-alpha.ethereum.org
-  http://remix-beta.ethereum.org
+  https://remix.ethereum.org
+  https://remix-alpha.ethereum.org
+  https://remix-beta.ethereum.org
   package://a7df6d3c223593f3550b35e90d7b0b1f.mod
   package://6fd22d6fe5549ad4c4d8fd3ca0b7816b.mod
   https://ipfsgw.komputing.org

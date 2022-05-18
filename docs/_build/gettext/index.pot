@@ -41,7 +41,7 @@ msgid "Remix IDE has modules for testing, debugging and deploying of smart contr
 msgstr ""
 
 #: ../../index.rst:14
-msgid "Remix-IDE is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
+msgid "Remix-IDE is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
 msgstr ""
 
 #: ../../index.rst:19
@@ -57,7 +57,7 @@ msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
 msgstr ""
 
 #: ../../index.rst:25
-msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
 msgstr ""
 
 #: ../../index.rst:27
