@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-26 14:04\n"
+"PO-Revision-Date: 2022-05-19 13:47\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,30 +14,30 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/settings.pot\n"
-"X-Crowdin-File-ID: 5104\n"
+"X-Crowdin-File-ID: 6492\n"
 "Language: zh_CN\n"
 
 #: ../../settings.md:1
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 #: ../../settings.md:4
 msgid "To get to Settings click the gear a the very bottom of the icon panel."
-msgstr "要进入设置，请单击图标面板最底部的齿轮。"
+msgstr ""
 
 #: ../../settings.md:6
 msgid "You can find a link to the homepage (if you closed it) as well as a link to our Gitter Channel and for you aesthetes out there, we now have a rather large list of themes."
-msgstr "您可以找到指向主页的链接(如果您关闭了它) 以及指向我们的 Gitter 频道的链接，对于那些在那里的美学家来讲，我们现在有一个相当大的主题列表。"
+msgstr ""
 
 #: ../../settings.md:10
 msgid "Another important settings:"
-msgstr "另一个重要设置："
+msgstr ""
 
 #: ../../settings.md:12
 msgid "Text wrap: controls if the text in the editor should be wrapped."
-msgstr "Text wrap：控制编辑器中的文本是否应换行。"
+msgstr ""
 
 #: ../../settings.md:14
 msgid "Enable optimization: defines if the compiler should enable optimization during compilation. Enabling this option saves execution gas. It is useful to enable optimization for contracts ready to be deployed in production but could lead to some inconsistencies when debugging such a contract."
-msgstr "Enable optimization：定义编译器是否应在编译期间启用优化。 启用此选项可节省执行gas。 为准备在生产中部署的合约启用优化很有用，但在调试此类合约时可能会导致一些不一致。"
+msgstr ""
 
