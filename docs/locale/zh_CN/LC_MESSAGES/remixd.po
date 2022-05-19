@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-26 03:56\n"
+"PO-Revision-Date: 2022-05-19 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,110 +14,110 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remixd.pot\n"
-"X-Crowdin-File-ID: 5100\n"
+"X-Crowdin-File-ID: 6488\n"
 "Language: zh_CN\n"
 
 #: ../../remixd.md:1
 msgid "Remixd: Access your Local Filesystem"
-msgstr "Remixd：访问您的本地文件系统"
+msgstr ""
 
 #: ../../remixd.md:3
 msgid "To give the Remix-ide (the web app) access to a folder on your local computer, you need to use remixd."
-msgstr "要让 Remix-ide(网络应用程序) 访问本地计算机上的文件夹，您需要使用 remixd。"
+msgstr ""
 
 #: ../../remixd.md:5
 msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
-msgstr "remixd 既是 npm 模块的名称，也是 Remix-plugin 的名称。 您需要安装插件(从插件管理器)，并且需要安装 remixd npm 模块。"
+msgstr ""
 
 #: ../../remixd.md:8
 msgid "NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin."
-msgstr "注意：在激活 remixd 插件之前，您需要安装 remixd npm 模块并运行它的命令。"
+msgstr ""
 
 #: ../../remixd.md:10
 msgid "The code of remixd is here ."
-msgstr "Remixd 的代码在这里。"
+msgstr ""
 
 #: ../../remixd.md:13
 msgid "remixd Installation"
-msgstr "remixd安装"
+msgstr ""
 
 #: ../../remixd.md:14
 msgid "remixd can be globally installed using the following command: npm install -g remixd"
-msgstr "remixd 可以使用以下命令全局安装： npm install -g remixd"
+msgstr ""
 
 #: ../../remixd.md:17
 msgid "Or just install it in the directory of your choice by removing the -g flag: npm install remixd"
-msgstr "或者通过删除 -g 标志将其安装在您选择的目录中： npm install remixd"
+msgstr ""
 
 #: ../../remixd.md:20
 msgid "remixd Command"
-msgstr "remixd命令"
+msgstr ""
 
 #: ../../remixd.md:21
 msgid "From the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
-msgstr "从终端，命令 remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> 将启动 remixd 并将与 remix-ide 共享给定文件夹。"
+msgstr ""
 
 #: ../../remixd.md:23
 msgid "For example, to use remixd with Remix IDE, use this command: remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
-msgstr "例如，要将 remixd 与 Remix IDE 一起使用，请使用以下命令：remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
+msgstr ""
 
 #: ../../remixd.md:26
 msgid "Make sure that if you use https://remix.ethereum.org (secure http) in the remixd command (like in the example above), that you are also pointing your browser to https://remix.ethereum.org and not to http://remix.ethereum.org (plain old insecure http).  Or if you want to use http in the browser use http in the remixd command."
-msgstr "确保如果您在 remixd 命令中使用 https://remix.ethereum.org (安全 http) (如上面的示例)，您也将浏览器指向 https://remix.ethereum.org 而不是 到 http://remix.ethereum.org(普通旧的不安全的 http)。 或者，如果您想在浏览器中使用 http，请在 remixd 命令中使用 http。"
+msgstr ""
 
 #: ../../remixd.md:28
 msgid "The folder is shared using a websocket connection between Remix IDE and remixd."
-msgstr "该文件夹使用 Remix IDE 和 remixd 之间的 websocket 连接共享。"
+msgstr ""
 
 #: ../../remixd.md:31
 msgid "Be sure the user executing remixd has read/write permission on the folder."
-msgstr "确保执行 remixd 的用户对该文件夹具有读/写权限。"
+msgstr ""
 
 #: ../../remixd.md:34
 msgid "There is an option to run remixd in read-only mode, use --read-only flag."
-msgstr "有一个选项可以在只读模式下运行 remixd，使用 --read-only 标志。"
+msgstr ""
 
 #: ../../remixd.md:36
 msgid "Warning!"
-msgstr "警告！"
+msgstr ""
 
 #: ../../remixd.md:37
 msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
-msgstr "remixd 为可以访问本地主机上的 TCP 端口 65520 的任何应用程序提供对给定文件夹的完全读写访问权限。"
+msgstr ""
 
 #: ../../remixd.md:40
 msgid "After the command is running, activate the remixd plugin."
-msgstr "命令运行后，激活 remixd 插件。"
+msgstr ""
 
 #: ../../remixd.md:41
 msgid "From Remix IDE, in the Plugin Manager, activate the remixd plugin.  This plugin is a websocket plugin and it has no UI other than a modal dialog box."
-msgstr "在 Remix IDE 的插件管理器中，激活 remixd 插件。 这个插件是一个 websocket 插件，除了一个模态对话框，它没有 UI。"
+msgstr ""
 
 #: ../../remixd.md:43
 msgid "This modal will ask confirmation"
-msgstr "此模式将要求确认"
+msgstr ""
 
 #: ../../remixd.md:45
 msgid "Accepting this dialog will start a session."
-msgstr "接受此对话框将启动会话。"
+msgstr ""
 
 #: ../../remixd.md:47
 msgid "If you do not have remixd running in the background - another modal will open up and it will say:"
-msgstr "如果您没有在后台运行 remixd background - another 模式将打开，它会说："
+msgstr ""
 
 #: ../../remixd.md:54
 msgid "Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be available in the file explorer."
-msgstr "假设您没有获得第二个模式，您与 remixd 守护程序的连接是成功的。 共享文件夹将在文件资源管理器中可用。"
+msgstr ""
 
 #: ../../remixd.md:56
 msgid "When you click the activation of remixd is successful - there will NOT be an icon that loads in the icon panel."
-msgstr "当您单击 remixd 激活成功时 - 图标面板中不会加载图标。"
+msgstr ""
 
 #: ../../remixd.md:58
 msgid "Click the File Explorers icon and in the swap panel you should now see the folder for localhost."
-msgstr "单击文件资源管理器图标，在交换面板中，您现在应该看到 localhost 的文件夹。"
+msgstr ""
 
 #: ../../remixd.md:60
 msgid "Click on the localhost connection icon:"
-msgstr "单击本地主机连接图标："
+msgstr ""
 
