@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/run.pot\n"
+"X-Crowdin-File-ID: 6490\n"
+"Language: zh_CN\n"
+
+#: ../../run.md:1
+msgid "Deploy & Run"
+msgstr "部署和运行"
+
+#: ../../run.md:4
+msgid "The Deploy & Run module allows you to send transactions to the current environment."
+msgstr "Deploy & Run 模块允许您将事务发送到当前环境。"
+
+#: ../../run.md:6
+msgid "To use this module, you need to have a contract compiled.  So, if there is a contract name in the <b>CONTRACT</b> select box (the select box is under the VALUE input field), you can use this module.  If nothing is there or you do not see the contract you want, you need to select a contract in the editor to make it active, go to a compiler module and compile it, and then come back to Deploy & Run."
+msgstr "要使用这个模块，你需要编译一个合约。 因此，如果 <b>CONTRACT</b> 选择框(选择框在 VALUE 输入字段下方) 中有合约名称，则可以使用该模块。 如果什么都没有或者你没有看到你想要的合约，你需要在编辑器中选择一个合约来激活它，去一个编译器模块并编译它，然后再回到部署和运行。"
+
+#: ../../run.md:10
+msgid "Environment"
+msgstr "环境"
+
+#: ../../run.md:13
+msgid "JavaScript VM: All the transactions will be executed in a sandbox blockchain in the browser. This means nothing will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved."
+msgstr "JavaScript VM：所有交易都将在浏览器的沙箱区块链中执行。 这意味着重新加载页面时不会保留任何内容。 JsVM 是它自己的区块链，每次重新加载时都会启动一个新的区块链，旧的不会被保存。"
+
+#: ../../run.md:17
+msgid "Injected Provider: Remix will connect to an injected web3 provider. Metamask is an example of a provider that inject web3."
+msgstr "Injected Provider：Remix 将连接到Injected的 web3 provider。 Metamask 是Injected web3 的提供程序的一个示例。"
+
+#: ../../run.md:20
+msgid "Web3 Provider: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client."
+msgstr "Web3 Provider：Remix 将连接到远程节点。 您需要提供所选提供商的 URL：geth、parity 或任何以太坊客户端。"
+
+#: ../../run.md:22
+msgid "More about Web3 Provider"
+msgstr "关于更多 Web3 Provider"
+
+#: ../../run.md:24
+msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
+msgstr "如果您使用 Geth 和 https://remix.ethereum.org，请使用以下 Geth 命令来允许来自 Remix 的请求："
+
+#: ../../run.md:30
+msgid "Also see Geth Docs about the http server"
+msgstr ""
+
+#: ../../run.md:32
+msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
+msgstr "要使用 https://remix.ethereum.org 和本地测试节点运行 Remix，请使用以下 Geth 命令："
+
+#: ../../run.md:38
+msgid "If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using."
+msgstr ""
+
+#: ../../run.md:40
+msgid "To run Remix Desktop & a local test node, use this Geth command:"
+msgstr "要运行 Remix Desktop 和本地测试节点，请使用以下 Geth 命令："
+
+#: ../../run.md:46
+msgid "Also see Geth Docs on Dev mode"
+msgstr "另请参阅 Dev 模式的 Geth 文档"
+
+#: ../../run.md:48
+msgid "The Web3 Provider Endpoint for a local node is http://localhost:8545"
+msgstr "本地节点的 Web3 Provider Endpoint 是 http://localhost:8545"
+
+#: ../../run.md:52
+msgid "WARNING: Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: --http.corsdomain *"
+msgstr ""
+
+#: ../../run.md:54
+msgid "If you put the wildcard *, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  --http.corsdomain 'https://remix-alpha.ethereum.org'"
+msgstr ""
+
+#: ../../run.md:56
+msgid "Only use --http.corsdomain * when using a test chain AND using only test accounts. For real accounts or on the mainchain specify the url."
+msgstr ""
+
+#: ../../run.md:61
+msgid "Account:"
+msgstr "账户："
+
+#: ../../run.md:63
+msgid "Account: the list of accounts associated with the current environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
+msgstr "账户：与当前环境关联的账户列表(及其关联的余额)。 在 JsVM 上，您可以选择 5 个账户。 如果将 Injected Web3 与 MetaMask 一起使用，则需要更改 MetaMask 中的账户。"
+
+#: ../../run.md:66
+msgid "Gas Limit:"
+msgstr "Gas限制："
+
+#: ../../run.md:68
+msgid "This sets the maximum amount of gas that will be allowed for all the transactions created in Remix."
+msgstr "这设置了在 Remix 中创建的所有交易允许的最大gas量。"
+
+#: ../../run.md:71
+msgid "Value:"
+msgstr "值："
+
+#: ../../run.md:73
+msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br> Note: payable functions have a red button."
+msgstr ""
+
+#: ../../run.md:76
+msgid "The Value field is always reset to 0 after each transaction execution. <br> The Value field is NOT for gas."
+msgstr ""
+
+#: ../../run.md:81
+msgid "Deploy & AtAddress"
+msgstr ""
+
+#: ../../run.md:84
+msgid "In the image above, the select box is set to Ballot.  This select box will contain the list of compiled contracts."
+msgstr "在上图中，选择框设置为 Ballot。 此选择框将包含已编译合约的列表。"
+
+#: ../../run.md:86
+msgid "Deploy sends a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). <br>Note: If the contract's constructor function has parameters, you need to specify them."
+msgstr ""
+
+#: ../../run.md:90
+msgid "At Address is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with AtAddress does not cost gas."
+msgstr ""
+
+#: ../../run.md:92
+msgid "Note: When using AtAddress, be sure you trust the contract at that address."
+msgstr ""
+
+#: ../../run.md:94
+msgid "To use AtAddress, you need to have the source code or ABI of the deployed contract  in the active tab of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
+msgstr ""
+
+#: ../../run.md:96
+msgid "Using the ABI with AtAddress"
+msgstr ""
+
+#: ../../run.md:99
+msgid "The ABI is a JSON array which describes the contract's interface."
+msgstr ""
+
+#: ../../run.md:101
+msgid "To interact with a contract using the ABI, create a new file in Remix with extension *.abi and copy the ABI content to it."
+msgstr ""
+
+#: ../../run.md:104
+msgid "Make sure this file is the active tab in the editor. Then, in the field next to At Address, input the contract's address and click on At Address. If successful, an instance of the contract will appear below - in the list of Deployed Contracts."
+msgstr ""
+
+#: ../../run.md:106
+msgid "Note: To generate the ABI, in the Solidity compiler, after a contract is compiled, click on the Compilation Details button.  A modal will come up with that contains the ABI among other info."
+msgstr ""
+
+#: ../../run.md:108
+msgid "Pending Instances"
+msgstr "待处理的实例"
+
+#: ../../run.md:111
+msgid "Validating a transaction takes several seconds. During this time, the GUI shows it in a pending mode. When the transaction is mined, the number of pending transactions is updated and the transaction is added to the log (see terminal)."
+msgstr "验证交易需要几秒钟。 在此期间，GUI 将其显示为挂起模式。 当交易被挖掘时，挂起交易的数量被更新并且交易被添加到日志中(见终端)。"
+
+#: ../../run.md:116
+msgid "Using the Recorder"
+msgstr "使用记录器"
+
+#: ../../run.md:119
+msgid "The Recorder is a tool used to save a bunch of transactions in a JSON file and rerun them later either in the same environment or in another."
+msgstr "Recorder 是一种工具，用于将一堆事务保存在 JSON 文件中，然后在同一环境或另一个环境中重新运行它们。"
+
+#: ../../run.md:122
+msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr "保存到 JSON 文件(默认情况下，它称为scenario.json)允许人们轻松检查事务列表、调整输入参数、更改链接库等......"
+
+#: ../../run.md:124
+msgid "There are many use cases for the recorder."
+msgstr "记录器有很多用例。"
+
+#: ../../run.md:126
+msgid "For instance:"
+msgstr "例如："
+
+#: ../../run.md:128
+msgid "After having coded and tested contracts in a constrained environment (like the JavaScript VM), you could then change the environment and redeploy it to a more realistic environment like a test net with an injected web3 or to a Geth node. By using the generated scenario.json file, you will be using all the same settings that you used in the Javascript VM.  And this mean that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
+msgstr "在受限环境(如 JavaScript VM)中对合约进行编码和测试后，您可以更改环境并将其重新部署到更现实的环境中，例如注入 web3 的测试网或 Geth 节点。 通过使用生成的scenario.json 文件，您将使用在Javascript VM 中使用的所有相同设置。 这意味着您无需单击界面 100 次或其他任何操作即可获得最初达到的状态。 所以记录器可以成为保护你理智的工具。"
+
+#: ../../run.md:131
+msgid "You can also change the settings in the scenario.json file to customize the playback."
+msgstr "您还可以更改scenario.json 文件中的设置来自定义播放。"
+
+#: ../../run.md:133
+msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
+msgstr "部署合约通常需要的不仅仅是创建一个事务，因此记录器将自动执行此部署。"
+
+#: ../../run.md:136
+msgid "Working in a dev environment often requires to setup the state in a first place."
+msgstr "在开发环境中工作通常需要首先设置状态。"
+
+#: ../../run.md:141
+msgid "scenario.json"
+msgstr "scenario.json"
+
+#: ../../run.md:142
+msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a 0 next to Transactions Recorded.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
+msgstr "要在记录器中创建此文件，您首先当然需要运行一些事务。 在上图中 - 记录的交易旁边有一个 0。 所以现在不是保存交易的正确时机，因为——好吧，因为没有交易。 每次您进行交易时，该数字都会增加。 然后当你准备好时，点击软盘图标，就会创建scenario.json文件。"
+
+#: ../../run.md:144
+msgid "The JSON file below is an example of the scenario.json file."
+msgstr "下面的 JSON 文件是 scenario.json 文件的一个示例。"
+
+#: ../../run.md:146
+msgid "In it, 3 transactions are executed:"
+msgstr "在其中，执行了 3 个事务："
+
+#: ../../run.md:148
+msgid "The first corresponds to the deployment of the lib testLib."
+msgstr "第一个对应lib testLib的部署。"
+
+#: ../../run.md:150
+msgid "The second corresponds to the deployment of the contract test with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property linkReferences. In that case we use the address of the previously created library : created{1512830014773}. The number is the id (timestamp) of the transaction that led to the creation of the library."
+msgstr "第二个对应于合约测试的部署，构造函数的第一个参数设置为 11。该合约依赖于一个库。 链接是使用属性 linkReferences 完成的。 在这种情况下，我们使用之前创建的库的地址：created{1512830014773}。 该数字是导致创建库的事务的 Id(时间戳)。"
+
+#: ../../run.md:157
+msgid "The third record corresponds to the call to the function set of the contract test (the property to is set to: created{1512830015080}) . Input parameters are 1 and 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
+msgstr "第三条记录对应合约测试的函数集的调用(属性to设置为：created{1512830015080})。 输入参数为 1 和 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
+
+#: ../../run.md:162
+msgid "All these transactions are created using the value of the accounts account{0}."
+msgstr "所有这些交易都是使用账户 account{0} 的值创建的。"
+
