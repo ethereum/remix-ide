@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr ""
+msgstr "Guide de contribution au code source"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr ""
+msgstr "Remix est un outil open source et nous encourageons quiconque à nous aider à améliorer notre outil. Vous pouvez contribuer en rapportant des erreurs, en nous envoyant vos commentaires ou en contribuant à notre code base avec un pull request."
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr ""
+msgstr "L'application Remix est construite avec JavaScript et n'utilise aucun framework. Nous comptons sur un ensemble de modules npm sélectionnés comme yo-yo, csjs-inject et d'autres. Consultez les fichiers package.json dans les sous-modules Remix pour en savoir plus sur la pile."
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr ""
+msgstr "Pour en savoir plus, veuillez consulter notre page GitHub."
 
