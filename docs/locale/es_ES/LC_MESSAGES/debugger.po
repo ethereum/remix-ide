@@ -1,38 +1,32 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019-22, Remix;
-# This file is distributed under the same license as the Remix - Ethereum
-# IDE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Remix - Ethereum IDE 1\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/debugger.pot\n"
+"X-Crowdin-File-ID: 6470\n"
+"Language: es_ES\n"
 
 #: ../../debugger.md:1
 msgid "Debugger"
 msgstr ""
 
 #: ../../debugger.md:4
-msgid ""
-"The Debugger shows the contract's state while stepping through a "
-"transaction."
+msgid "The Debugger shows the contract's state while stepping through a transaction."
 msgstr ""
 
 #: ../../debugger.md:6
-msgid ""
-"It can be used on transactions created on Remix or by providing a "
-"transaction's address.  The latter assumes that you have the contract's "
-"source code or that you have input the address of a verified contract."
+msgid "It can be used on transactions created on Remix or by providing a transaction's address.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
 msgstr ""
 
 #: ../../debugger.md:8
@@ -40,37 +34,23 @@ msgid "To start a debugging session either:"
 msgstr ""
 
 #: ../../debugger.md:9
-msgid ""
-"Click the debug button in the Terminal when a successful or failed "
-"transaction appears there. The Debugger will be activated and will gain "
-"the focus in the Side Panel."
+msgid "Click the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the Side Panel."
 msgstr ""
 
 #: ../../debugger.md:11
-msgid ""
-"Activate the Debugger in the Plugin Manager and then click the bug in the"
-" icon panel. To start the debugging session, input the address of a "
-"deployed transaction - while having the source code in the editor and "
-"then click the Start debugging button."
+msgid "Activate the Debugger in the Plugin Manager and then click the bug in the icon panel. To start the debugging session, input the address of a deployed transaction - while having the source code in the editor and then click the Start debugging button."
 msgstr ""
 
 #: ../../debugger.md:13
-msgid ""
-"The debugger will highlight the relevant code in the Editor.  If you want"
-" to go back to editing the code without the Debugger's highlights, then "
-"click the Stop Debugging button."
+msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the Stop Debugging button."
 msgstr ""
 
 #: ../../debugger.md:15
-msgid ""
-"To learn more about how to use this tool go to the Debugging Transactions"
-" page."
+msgid "To learn more about how to use this tool go to the Debugging Transactions page."
 msgstr ""
 
 #: ../../debugger.md:17
-msgid ""
-"This page will go over the Debugger's Use generated sources option, its "
-"navigation and its panels."
+msgid "This page will go over the Debugger's Use generated sources option, its navigation and its panels."
 msgstr ""
 
 #: ../../debugger.md:21
@@ -78,22 +58,15 @@ msgid "Use generated sources"
 msgstr ""
 
 #: ../../debugger.md:22
-msgid ""
-"This option is available for contracts using Solidity 0.7.2 or greater. "
-"See the solidity blog for more details about generated sourcess."
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about generated sourcess."
 msgstr ""
 
 #: ../../debugger.md:24
-msgid ""
-"Using generated sources will make it easier to audit your contracts.  "
-"When the option is checked, you can step into those compiler outputs — "
-"while debugging."
+msgid "Using generated sources will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
 msgstr ""
 
 #: ../../debugger.md:28
-msgid ""
-"These compiler outputs will appear in a separate .yul file in the Remix "
-"editor."
+msgid "These compiler outputs will appear in a separate .yul file in the Remix editor."
 msgstr ""
 
 #: ../../debugger.md:30
@@ -109,11 +82,7 @@ msgid "Slider"
 msgstr ""
 
 #: ../../debugger.md:35
-msgid ""
-"Moving the slider will highlight the relevant code in the Editor. On the "
-"most granular level, it scrolls through a transaction's opcodes (see the "
-"opcode section below). At each opcode, the transaction's state changes "
-"and these changes are reflected in the Debugger's panels."
+msgid "Moving the slider will highlight the relevant code in the Editor. On the most granular level, it scrolls through a transaction's opcodes (see the opcode section below). At each opcode, the transaction's state changes and these changes are reflected in the Debugger's panels."
 msgstr ""
 
 #: ../../debugger.md:37
@@ -121,9 +90,7 @@ msgid "Step over back"
 msgstr ""
 
 #: ../../debugger.md:38
-msgid ""
-"This button goes to the previous opcode.  If the previous step involves a"
-" function call, function will not be entered."
+msgid "This button goes to the previous opcode.  If the previous step involves a function call, function will not be entered."
 msgstr ""
 
 #: ../../debugger.md:39
@@ -139,9 +106,7 @@ msgid "Step into"
 msgstr ""
 
 #: ../../debugger.md:42
-msgid ""
-"This button advances to the next opcode. If the next line contains a "
-"function call, Step into will go into the function."
+msgid "This button advances to the next opcode. If the next line contains a function call, Step into will go into the function."
 msgstr ""
 
 #: ../../debugger.md:43
@@ -149,9 +114,7 @@ msgid "Step over forward"
 msgstr ""
 
 #: ../../debugger.md:44
-msgid ""
-"This button advances to the next opcode.  If the next step involves a "
-"function call, function will not be entered."
+msgid "This button advances to the next opcode.  If the next step involves a function call, function will not be entered."
 msgstr ""
 
 #: ../../debugger.md:45
@@ -159,10 +122,7 @@ msgid "Jump to the previous breakpoint"
 msgstr ""
 
 #: ../../debugger.md:46
-msgid ""
-"Breakpoints can be placed in the gutter of the Editor. If the current "
-"step in the call has passed a breakpoint, this button will move the "
-"slider to the most recently passed breakpoint."
+msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
 msgstr ""
 
 #: ../../debugger.md:48
@@ -170,9 +130,7 @@ msgid "Jump out"
 msgstr ""
 
 #: ../../debugger.md:49
-msgid ""
-"When you are in a call and click on this button, the slider will be moved"
-" to the end of the call."
+msgid "When you are in a call and click on this button, the slider will be moved to the end of the call."
 msgstr ""
 
 #: ../../debugger.md:51
@@ -180,9 +138,7 @@ msgid "Jump to the next breakpoint"
 msgstr ""
 
 #: ../../debugger.md:52
-msgid ""
-"If a breakpoint is ahead in the code, this button will advance to that "
-"point."
+msgid "If a breakpoint is ahead in the code, this button will advance to that point."
 msgstr ""
 
 #: ../../debugger.md:54
@@ -194,9 +150,7 @@ msgid "Function Stack"
 msgstr ""
 
 #: ../../debugger.md:56
-msgid ""
-"The Function stack lists the functions that the transaction is "
-"interacting with."
+msgid "The Function stack lists the functions that the transaction is interacting with."
 msgstr ""
 
 #: ../../debugger.md:59
@@ -220,15 +174,11 @@ msgid "Opcodes"
 msgstr ""
 
 #: ../../debugger.md:70
-msgid ""
-"This panel shows the step number and the opcode that the debugger is "
-"currently on."
+msgid "This panel shows the step number and the opcode that the debugger is currently on."
 msgstr ""
 
 #: ../../debugger.md:74
-msgid ""
-"As you drag the slider (which is above the navigation buttons), the "
-"focussed step number & opcode changes."
+msgid "As you drag the slider (which is above the navigation buttons), the focussed step number & opcode changes."
 msgstr ""
 
 #: ../../debugger.md:75
@@ -256,24 +206,15 @@ msgid "Memory"
 msgstr ""
 
 #: ../../debugger.md:87
-msgid ""
-"Memory is cleared for each new message call. Memory is linear and can be "
-"addressed at byte level. Reads are limited to a width of 256 bits while "
-"writes can be either 8 bits or 256 bits wide."
+msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. Reads are limited to a width of 256 bits while writes can be either 8 bits or 256 bits wide."
 msgstr ""
 
 #: ../../debugger.md:89
-msgid ""
-"The Memory panel consists of 3 columns.  You might need to make Remix's "
-"side panel a bit wider to get the formatting to be correct. (Drag the "
-"border between the main panel and the side panel to the right)."
+msgid "The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right)."
 msgstr ""
 
 #: ../../debugger.md:91
-msgid ""
-"The 1st column is the location in memory.  The 2nd column is the hex "
-"encoded value.  The 3rd column is the decoded value.  If there is "
-"nothing, then the question marks (?) will show - like this:"
+msgid "The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (?) will show - like this:"
 msgstr ""
 
 #: ../../debugger.md:96
@@ -281,9 +222,7 @@ msgid "Here is a full example of the Memory panel,"
 msgstr ""
 
 #: ../../debugger.md:100
-msgid ""
-"Some address slots have hex encoded values and those values are then "
-"decoded.  For example, check position 0xa0 and 0x140."
+msgid "Some address slots have hex encoded values and those values are then decoded.  For example, check position 0xa0 and 0x140."
 msgstr ""
 
 #: ../../debugger.md:101
@@ -299,9 +238,7 @@ msgid "Call Stack"
 msgstr ""
 
 #: ../../debugger.md:107
-msgid ""
-"All computations are performed on a data array called the call stack. It "
-"has a maximum size of 1024 elements and contains words of 256 bits."
+msgid "All computations are performed on a data array called the call stack. It has a maximum size of 1024 elements and contains words of 256 bits."
 msgstr ""
 
 #: ../../debugger.md:110
@@ -333,9 +270,7 @@ msgid "Breakpoints"
 msgstr ""
 
 #: ../../debugger.md:123
-msgid ""
-"Breakpoints can be placed in the gutter of the Editor to pause the "
-"debugger."
+msgid "Breakpoints can be placed in the gutter of the Editor to pause the debugger."
 msgstr ""
 
 #: ../../debugger.md:125
@@ -343,10 +278,7 @@ msgid "Additional Info"
 msgstr ""
 
 #: ../../debugger.md:126
-msgid ""
-"The debugger's granular information gives users detailed information "
-"about what is happening in a transaction - so not only is the debugger "
-"good for debugging, it is also an excellent teaching tool."
+msgid "The debugger's granular information gives users detailed information about what is happening in a transaction - so not only is the debugger good for debugging, it is also an excellent teaching tool."
 msgstr ""
 
 #: ../../debugger.md:128
