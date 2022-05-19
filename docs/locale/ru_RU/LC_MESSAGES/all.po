@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-02-13 17:59\n"
+"PO-Revision-Date: 2022-05-19 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/all.pot\n"
-"X-Crowdin-File-ID: 5068\n"
+"X-Crowdin-File-ID: 6456\n"
 "Language: ru_RU\n"
 
 #: ../../assert_library.md:1
@@ -72,7 +72,7 @@ msgstr ""
 #: ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
-msgstr "Примеры:"
+msgstr ""
 
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
@@ -116,11 +116,11 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr "Руководство по написанию кода"
+msgstr ""
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr "Remix - это инструмент с открытым исходным кодом, и мы призываем всех помочь нам его улучшить. Пожалуйста, находя проблемы, оставляйте отзывы или отправляйте запросы на добавление в нашу кодовую базу."
+msgstr ""
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr "Чтобы узнать больше, посетите нашу страницу на GitHub."
+msgstr ""
 
 msgid ""
 msgstr ""
@@ -136,11 +136,11 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr "Поддержка сообщества"
+msgstr ""
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr "Мы знаем, что блокчейн-экосистема очень новая и много информации разбросано по сети. Вот почему мы создали канал поддержки сообщества, где мы и другие пользователи пытаемся ответить на ваши вопросы, если вы столкнулись с трудностями при использовании Remix. Пожалуйста, присоединяйтесь к сообществу и попросите помощи."
+msgstr ""
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr "Компилятор (Solidity)"
+msgstr ""
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
