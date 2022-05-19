@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_github.pot\n"
+"X-Crowdin-File-ID: 6486\n"
+"Language: zh_CN\n"
+
+#: ../../remix_tutorials_github.md:1
+msgid "Remix Github Tutorials"
+msgstr "Remix Github 教程"
+
+#: ../../remix_tutorials_github.md:4
+msgid "There are a series of tutorials in our github repo remix-workshops."
+msgstr "我们的 github 库 remix-workshops 中有一系列教程。"
+
+#: ../../remix_tutorials_github.md:6
+msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
+msgstr "我们正在升级这些教程以使用新的 Remix 布局。"
+
+#: ../../remix_tutorials_github.md:8
+msgid "In this repo there tutorials for all levels."
+msgstr "在这个 repo 中有所有级别的教程。"
+
+#: ../../remix_tutorials_github.md:10
+msgid "There are tutorials for specific remix functionalities like:"
+msgstr "有针对特定Remix功能的教程，例如："
+
+#: ../../remix_tutorials_github.md:12
+msgid "Deploying"
+msgstr "部署"
+
+#: ../../remix_tutorials_github.md:18
+msgid "Testing"
+msgstr "测试"
+
+#: ../../remix_tutorials_github.md:23
+msgid "Remix Plugin Development"
+msgstr "Remix插件开发"
+
+#: ../../remix_tutorials_github.md:27
+msgid "Other"
+msgstr "其它"
+
+#: ../../remix_tutorials_github.md:35
+msgid "Additional external workshops"
+msgstr "其他外部研讨会"
+

@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/support.pot\n"
+"X-Crowdin-File-ID: 6498\n"
+"Language: ru_RU\n"
+
+#: ../../support.md:1
+msgid "Support chat"
+msgstr "Чат поддержки"
+
+#: ../../support.md:4
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
+msgstr "Мы знаем, что блокчейн-экосистема очень новая и много информации разбросано по сети. Вот почему мы создали канал поддержки сообщества, где мы и другие пользователи пытаемся ответить на ваши вопросы, если вы столкнулись с трудностями при использовании Remix. Пожалуйста, присоединяйтесь к каналу Remix и попросите помощи у сообщества."
+
+#: ../../support.md:8
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
+msgstr "Для всех, кто заинтересован в разработке собственного плагина для Remix или хочет внести свой вклад в кодовую базу, мы открыли еще один канал специально для разработчиков, работающих над инструментами Remix."
+
