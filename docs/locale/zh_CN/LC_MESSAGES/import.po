@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-26 03:56\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,78 +14,78 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/import.pot\n"
-"X-Crowdin-File-ID: 5086\n"
+"X-Crowdin-File-ID: 6474\n"
 "Language: zh_CN\n"
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr "在 Solidity 中导入源文件"
+msgstr ""
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr "有多种技术可以将文件导入 Remix。"
+msgstr ""
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr "有关导入文件的教程，请单击此处。 您还可以在 Remix Workshops 插件中找到本教程。"
+msgstr ""
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr "有关 import 关键字的详细说明，请参阅 Solidity 文档"
+msgstr ""
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr "以下是导入文件的一些主要方法："
+msgstr ""
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr "从浏览器的本地存储导入文件"
+msgstr ""
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
-msgstr "Remix 中的文件可以使用带有文件路径的 import 关键字导入。 使用 ./ 作为相对路径以增加可移植性。"
+msgstr ""
 
 #: ../../import.md:24
 msgid "Importing a file from your computer's filesystem"
-msgstr "从计算机的文件系统导入文件"
+msgstr ""
 
 #: ../../import.md:27
 msgid "This method uses remixd - the remix daemon.  Please go to the remixd tutorial for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr "此方法使用 remixd - remix 守护程序。 请转到 remixd 教程以获取有关如何弥合浏览器和计算机文件系统之间鸿沟的说明。"
+msgstr ""
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr "从 GitHub 导入"
+msgstr ""
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr "可以直接从 GitHub 导入文件。 您应该指定发布标签(如果可用)，否则您将在主分支中获得最新代码。 对于 OpenZeppelin Contracts，您应该只使用在官方版本中发布的代码，下面的示例从 OpenZeppelin Contracts v2.5.0 导入。"
+msgstr ""
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
-msgstr "从 Swarm 导入"
+msgstr ""
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
-msgstr "可以使用 swarm 支持的所有 URL 导入文件。 如果您没有 swarm 节点，请使用 swarm-gateways.net。"
+msgstr ""
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
-msgstr "从 IPFS 导入"
+msgstr ""
 
 #: ../../import.md:55
 msgid "Files can be imported from IPFS."
-msgstr "文件可以从 IPFS 导入。"
+msgstr ""
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr "从控制台导入"
+msgstr ""
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr "您还可以在控制台中使用Remix命令 remix.loadurl('<the_url>')。 您应该指定发布标签(如果可用)，否则您将在主分支中获得最新代码。 对于 OpenZeppelin Contracts，您应该只使用在官方版本中发布的代码，下面的示例从 OpenZeppelin Contracts v2.5.0 导入。"
+msgstr ""
 
 #: ../../import.md:70
 msgid "Notice that this will create a github folder in the file explorer.  To load a file in the github folder, you would use a command like this:"
-msgstr "请注意，这将在文件资源管理器中创建一个 github 文件夹。 要在 github 文件夹中加载文件，您可以使用如下命令："
+msgstr ""
 
