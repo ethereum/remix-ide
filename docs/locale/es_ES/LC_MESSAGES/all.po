@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../assert_library.md:1
 msgid "Remix Assert Library"
-msgstr ""
+msgstr "Librería de activos Remix"
 
 #: ../../assert_library.md:4
 #: ../../assert_library.md:13
@@ -29,30 +29,30 @@ msgstr ""
 #: ../../assert_library.md:5
 #: ../../assert_library.md:27
 msgid "Assert.equal(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.equal(actual, esperado[, mensaje])"
 
 #: ../../assert_library.md:6
 #: ../../assert_library.md:47
 msgid "Assert.notEqual(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.notEqual(actual, esperado[, mensaje])"
 
 #: ../../assert_library.md:7
 #: ../../assert_library.md:63
 msgid "Assert.greaterThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.mayorque(valor1, valor2[, mensaje])"
 
 #: ../../assert_library.md:8
 #: ../../assert_library.md:82
 msgid "Assert.lesserThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.menosque(valor1, valor2[, mensaje])"
 
 #: ../../assert_library.md:11
 msgid "Assert"
-msgstr ""
+msgstr "Assert"
 
 #: ../../assert_library.md:14
 msgid "value: <bool>"
-msgstr ""
+msgstr "valor: <bool>"
 
 #: ../../assert_library.md:15
 #: ../../assert_library.md:30
@@ -60,11 +60,11 @@ msgstr ""
 #: ../../assert_library.md:66
 #: ../../assert_library.md:85
 msgid "message: <string>"
-msgstr ""
+msgstr "mensaje: <string>"
 
 #: ../../assert_library.md:17
 msgid "Tests if value is truthy. message is returned in case of failure."
-msgstr ""
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
 
 #: ../../assert_library.md:19
 #: ../../assert_library.md:34
@@ -72,43 +72,43 @@ msgstr ""
 #: ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
-msgstr ""
+msgstr "Ejemplos:"
 
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
 msgid "actual: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "actual: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:29
 #: ../../assert_library.md:49
 msgid "expected: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "esperado: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
-msgstr ""
+msgstr "Pruebas si los valores reales y esperados son iguales. El mensaje se devuelve en caso de error."
 
 #: ../../assert_library.md:52
 msgid "Tests if actual & expected values are not same. message is returned in case of failure."
-msgstr ""
+msgstr "Pruebas si los valores reales y esperados no son iguales. El mensaje se devuelve en caso de error."
 
 #: ../../assert_library.md:64
 #: ../../assert_library.md:83
 msgid "value1: <uint | int>"
-msgstr ""
+msgstr "valor1: <uint | int>"
 
 #: ../../assert_library.md:65
 #: ../../assert_library.md:84
 msgid "value2: <uint | int>"
-msgstr ""
+msgstr "valor2: <uint | int>"
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
-msgstr ""
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
 
 #: ../../assert_library.md:87
 msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
-msgstr ""
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
 
 msgid ""
 msgstr ""
@@ -116,19 +116,19 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr ""
+msgstr "Guía de Contribución de Código"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr ""
+msgstr "Remix es una herramienta de código abierto y estamos animando a todos a ayudarnos a mejorarlo. Puedes abrir un issue, dar un feedback o contribuir con un pull request en nuestro código fuente."
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr ""
+msgstr "La aplicación Remix está construida en JavaScript y no usa framework alguno. Confiamos en una serie de módulos de npm como yo-yo y csjs-inject entre otros. Revisa los archivos package.json en los submódulos de Remix para saber más sobre su stack."
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr ""
+msgstr "Para saber más, puedes visitar nuestra página de GitHub."
 
 msgid ""
 msgstr ""
@@ -136,19 +136,19 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "Soporte de la Comunidad"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr ""
+msgstr "Sabemos que el ecosistema blockchain es muy nuevo y hay mucha información dispersa en la web. Por esa razón, hemos creado un canal comunitario de soporte en donde tratamos de responder todas tus preguntas si te quedas varado usando Remix. Por favor, únete a nuestra comunidad y pide ayuda."
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
-msgstr ""
+msgstr "Para cualquiera que esté interesado en desarrollar un plugin personalizado para Remix o quien quiera contribuir al código fuente, hemos abierto un canal de contribuidores, especialmente para desarrolladores que trabajen en herramientas para Remix."
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
-msgstr ""
+msgstr "Le rogamos que respete el espacio y que lo utilice para obtener ayuda en su trabajo y en el canal de los desarrolladores para las discusiones relacionadas con el trabajo en base al código Remix. Si tienes ideas de colaboración o quieres promocionar tu proyecto, intenta encontrar algunos canales más apropiados para hacerlo. O puede ponerse en contacto con los principales colaboradores directamente en Gitter o Twitter."
 
 msgid ""
 msgstr ""
@@ -156,55 +156,55 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "Compilador (Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
-msgstr ""
+msgstr "Haciendo click en el ícono de Solidity dentro del panel del ícono te lleva al Compilador de Solidity."
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
-msgstr ""
+msgstr "La compilación se activa cuando hace clic en el botón de compilación ( D. en la imagen de abajo). Si desea que el archivo sea compilado cada vez que el archivo es guardado o cuando otro archivo es seleccionado - marque la casilla de auto compilación ( E. en la imagen de abajo)."
 
 #: ../../compile.md:8
 msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgstr "Desde la versión 0.5.7 de Solidity, es posible compilar archivos de Yul. Por favor, lea la (documentación de solidez sobre Yul) que contiene algunos ejemplos de código. Puede utilizar el menú desplegable de idioma ( B. en la imagen de abajo) para cambiar el idioma. Esta lista desplegable sólo está disponible para versiones mayores o iguales a 0.5.7."
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
-msgstr ""
+msgstr "La lista desplegable de selección de bifurcaciones ( C en la imagen de abajo) permite compilar código contra un tenedor duro de ethereum específico. El compilador por defecto corresponde al fork duro por defecto usado por una versión específica. Por favor, vaya a \"Detalles de la compilación\" ( G. en la imagen de abajo) en la configuración de la sección de metadatos para ver el nombre de harfork usado para la compilación actual."
 
 #: ../../compile.md:14
 msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgstr "Si el contrato tiene muchas dependencias puede tomar un tiempo para compilar - para que use la autocompilación a su discreción."
 
 #: ../../compile.md:18
 msgid "After each compilation, a list is updated with all newly compiled contracts.  A compiled contract can be selected with the Contract pulldown menu ( F. in the image).  Multiple contracts are compiled when one contract imports other contracts.  Selecting a contract will show information about that one."
-msgstr ""
+msgstr "Después de cada compilación, una lista se actualiza con todos los contratos recién compilados. Se puede seleccionar un contrato compilado con el menú desplegable Contrato ( F. en la imagen). Múltiples contratos son compilados cuando un contrato importa otros contratos. Al seleccionar un contrato se mostrará información sobre éste."
 
 #: ../../compile.md:21
 msgid "When the \"Compilation Details\" button is clicked ( G. in image), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgstr "Cuando se hace clic en el botón \"Detalles de la compilación\" (G. en la imagen), se abre una modal que muestra información detallada sobre el contrato seleccionado."
 
 #: ../../compile.md:23
 msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in the image) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgstr "Para aquellos que escriban su propio compilador de solidez personalizado, puede importarlo haciendo clic en el botón + (X. en la imagen) para abrir un modal donde se puede introducir la url del compilador a cargar."
 
 #: ../../compile.md:25
 msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
-msgstr ""
+msgstr "Desde el módulo Compilador de Solididad también puede publicar su contrato a Swarm (sólo los contratos no abstractos pueden ser publicados) & IPFS."
 
 #: ../../compile.md:28
 msgid "Published data notably contains the abi and the solidity source code."
-msgstr ""
+msgstr "Los datos publicados contienen notablemente el abi y el código fuente de solidity."
 
 #: ../../compile.md:30
 msgid "After a contract is published, you can find its metadata information using the bzz URL located in the details modal dialog SWARM LOCATION."
-msgstr ""
+msgstr "Después de publicar un contrato, usted puede encontrar su información de metadatos usando la URL bzz ubicada en el diálogo modal de detalles SWARM LOCATION."
 
 #: ../../compile.md:33
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
-msgstr ""
+msgstr "Los errores de compilación y Advertencia se muestran debajo de la sección del contrato. En cada compilación, la pestaña de análisis estático crea un informe. Es importante abordar los problemas denunciados incluso si el compilador no se queja. (ver más)"
 
 msgid ""
 msgstr ""
@@ -212,51 +212,51 @@ msgstr ""
 
 #: ../../contract_metadata.md:1
 msgid "Build Artifact"
-msgstr ""
+msgstr "Construir artefacto"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
-msgstr ""
+msgstr "Cuando una compilación tiene éxito, Remix crea dos archivos JSON para cada contrato compilado. Uno de estos archivos captura la salida de la compilación de Solididad. Este archivo se llamará contractName_metadata.json."
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
-msgstr ""
+msgstr "El otro archivo JSON se llama contractName.json . El archivo contractName.json contiene el artefacto de la compilación que es necesario para enlazar una biblioteca al archivo. Contiene el enlace a las bibliotecas, el código de byte, el código de byte desplegado, la estimación del gas, los identificadores del método y el ABI."
 
 #: ../../contract_metadata.md:8
 msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
-msgstr ""
+msgstr "Para poder generar estos archivos de artefactos, es necesario marcar la casilla Generar metadatos contractuales en la sección Configuración General del módulo Configuración. Estos archivos de metadata se generarán cuando se compila un archivo y se colocará en la carpeta de artefactos - que se puede ver en el plugin Archivos Explorers."
 
 #: ../../contract_metadata.md:10
 msgid "You can write scripts that can access either of these files."
-msgstr ""
+msgstr "Puede escribir scripts que tengan acceso a cualquiera de estos archivos."
 
 #: ../../contract_metadata.md:12
 msgid "Library Deployment with filename.json"
-msgstr ""
+msgstr "Despliegue de la biblioteca con filename.json"
 
 #: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
-msgstr ""
+msgstr "Por defecto, Remix implementa automáticamente las bibliotecas necesarias."
 
 #: ../../contract_metadata.md:17
 msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
-msgstr ""
+msgstr "Cuando abra el archivo de metadatos para las bibliotecas - artifact/filename.json verá las siguientes secciones:"
 
 #: ../../contract_metadata.md:19
 msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
-msgstr ""
+msgstr "linkReferences contiene un mapa que representa las bibliotecas que dependen del contrato actual. Los valores son las direcciones de las bibliotecas utilizadas para vincular el contrato."
 
 #: ../../contract_metadata.md:22
 msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
-msgstr ""
+msgstr "autoDeployLib define si las librerías deben ser desplegadas automáticamente por Remix o si el contrato debe estar vinculado con las librerías descritas en linkReferences"
 
 #: ../../contract_metadata.md:24
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
-msgstr ""
+msgstr "Tenga en cuenta que Remix resolverá las direcciones correspondientes a la red actual. Por defecto, una clave de configuración sigue el formulario: <network_name>:<networkd_id>, pero también es posible definir <network_name> o <network_id> como llaves."
 
 #: ../../contract_metadata.md:28
 msgid "Here is a sample metadata file for linking a library:"
-msgstr ""
+msgstr "Aquí hay un archivo de metadatos de ejemplo para enlazar una biblioteca:"
 
 msgid ""
 msgstr ""
@@ -264,63 +264,63 @@ msgstr ""
 
 #: ../../create_deploy.md:1
 msgid "Creating and Deploying a Contract"
-msgstr ""
+msgstr "Crear y desplegar un contrato"
 
 #: ../../create_deploy.md:4
 msgid "There are 3 type of environments Remix can be plugged to: Javascript VM, Injected provider, or Web3 provider. (for details see Running transactions)"
-msgstr ""
+msgstr "Hay 3 tipos de entornos que Remix se pueden conectar a: proveedor de VM Javascript, Inyectado o proveedor Web3. (para más detalles ver las transacciones en ejecución)"
 
 #: ../../create_deploy.md:7
 msgid "Both Web3 provider and Injected provider require the use of an external tool."
-msgstr ""
+msgstr "Tanto el proveedor Web3 como el proveedor Inyectado requieren el uso de una herramienta externa."
 
 #: ../../create_deploy.md:10
 msgid "The external tool for Web3 provider is an Ethereum node and for Injected provider Metamask."
-msgstr ""
+msgstr "La herramienta externa para el proveedor Web3 es un nodo Ethereum y para el proveedor Inyected Metamask."
 
 #: ../../create_deploy.md:13
 msgid "The JavaScript VM mode is convenient because each execution runs in your browser and you don't need any other software or Ethereum node to run it."
-msgstr ""
+msgstr "El modo VM JavaScript es conveniente porque cada ejecución se ejecuta en su navegador y no necesita ningún otro software o nodo Ethereum para ejecutarlo."
 
 #: ../../create_deploy.md:16
 msgid "So, it is the easiest test environment - no setup required!"
-msgstr ""
+msgstr "Por lo tanto, es el entorno de prueba más fácil - ¡no se requiere ninguna configuración!"
 
 #: ../../create_deploy.md:18
 msgid "But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state."
-msgstr ""
+msgstr "Pero ten en cuenta que recargar el navegador cuando estás en la máquina virtual Javascript reiniciará Remix en un estado vacío."
 
 #: ../../create_deploy.md:20
 msgid "For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it might also be better to use an external node."
-msgstr ""
+msgstr "Para propósitos de rendimiento (es decir, para probar en un entorno más cercano al mainnet), también podría ser mejor usar un nodo externo."
 
 #: ../../create_deploy.md:22
 msgid "Selecting the VM mode"
-msgstr ""
+msgstr "Seleccionando el modo VM"
 
 #: ../../create_deploy.md:25
 msgid "Make sure the VM mode is selected. All accounts displayed in Accounts should have 100 ether."
-msgstr ""
+msgstr "Asegúrese de que el modo VM está seleccionado. Todas las cuentas mostradas en los clientes deben tener 100 éter."
 
 #: ../../create_deploy.md:28
 msgid "Sample contract"
-msgstr ""
+msgstr "Contrato de ejemplo"
 
 #: ../../create_deploy.md:57
 msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
-msgstr ""
+msgstr "Este contrato es muy básico, el objetivo es comenzar rápidamente a crear e interactuar con un contrato de muestra."
 
 #: ../../create_deploy.md:60
 msgid "Deploying an instance"
-msgstr ""
+msgstr "Despliega una instancia"
 
 #: ../../create_deploy.md:63
 msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
-msgstr ""
+msgstr "La ficha de compilación muestra información relacionada con el contrato actual (tenga en cuenta que puede haber más de uno) (ver compilación)."
 
 #: ../../create_deploy.md:66
 msgid "Moving on, in the Run tab select, JavaScript VM to specify that you are going to deploy an instance of the contract in the JavaScript VM state."
-msgstr ""
+msgstr "Activando, en la pestaña Ejecutar, seleccionar, VM JavaScript para especificar que va a desplegar una instancia del contrato en el estado de la máquina virtual JavaScript."
 
 #: ../../create_deploy.md:72
 msgid "The constructor of Ballot.sol needs a parameter (of type uint8). Give any value and click on Deploy."
@@ -392,7 +392,7 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "Preguntas Frecuentes (FAQ)"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
