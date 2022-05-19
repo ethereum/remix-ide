@@ -1,0 +1,223 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:55\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittesting.pot\n"
+"X-Crowdin-File-ID: 6506\n"
+"Language: zh_CN\n"
+
+#: ../../unittesting.md:1
+msgid "Unit Testing Plugin"
+msgstr "单元测试插件"
+
+#: ../../unittesting.md:4
+msgid "Click the  (double check) icon from icon bar to move to the Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:8
+msgid "If you haven't used this plugin before and are not seeing double check icon, you have to activate it from Remix plugin manager."
+msgstr "如果您之前没有使用过这个插件并且没有看到双重检查图标，您必须从 Remix 插件管理器中激活它。"
+
+#: ../../unittesting.md:10
+msgid "Go to the plugin manager by clicking the  (plug) icon and activate Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:14
+msgid "Now double check icon will appear on the left side icon bar. Clicking on icon will load the plugin in the side panel."
+msgstr ""
+
+#: ../../unittesting.md:16
+msgid "<i>Alternatively, just select Solidity environment from Remix IDE Home tab. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins.</i>"
+msgstr ""
+
+#: ../../unittesting.md:18
+msgid "After successful loading, plugin looks like this:"
+msgstr ""
+
+#: ../../unittesting.md:22
+msgid "Test directory"
+msgstr ""
+
+#: ../../unittesting.md:24
+msgid "Plugin asks you to provide a directory which will be your workspace only for this plugin. To select directory, as soon as you add / to the path, it shows the possible options."
+msgstr ""
+
+#: ../../unittesting.md:28
+msgid "Once selected, this directory will be used to load test files and to store newly generated test files."
+msgstr ""
+
+#: ../../unittesting.md:30
+msgid "Default test directory is browser/tests."
+msgstr ""
+
+#: ../../unittesting.md:32
+msgid "Generate"
+msgstr "生成"
+
+#: ../../unittesting.md:34
+msgid "Select a solidity file which you want to test and click on the button Generate. It will generate a test file dedicated to selected file in the test directory."
+msgstr ""
+
+#: ../../unittesting.md:36
+msgid "If no file is selected, it will still create a file with generic name as newFile_test.sol."
+msgstr ""
+
+#: ../../unittesting.md:38
+msgid "This file contains sufficient information to give better understanding about developing tests for a contract."
+msgstr ""
+
+#: ../../unittesting.md:40
+msgid "Generic file looks as:"
+msgstr ""
+
+#: ../../unittesting.md:86
+msgid "Write Tests"
+msgstr "编写测试"
+
+#: ../../unittesting.md:88
+msgid "Write sufficient unit tests to ensure that your contract works as expected under different scenarios."
+msgstr ""
+
+#: ../../unittesting.md:90
+msgid "Remix injects a built-in assert library which can be used for testing. You can visit the library documentation here."
+msgstr ""
+
+#: ../../unittesting.md:92
+msgid "Apart from this, Remix allows usage of some special functions in the test file to make testing more structural. They are as:"
+msgstr ""
+
+#: ../../unittesting.md:94
+msgid "beforeEach() - Runs before each test"
+msgstr "beforeEach() - 在每次测试之前运行"
+
+#: ../../unittesting.md:95
+msgid "beforeAll() - Runs before all tests"
+msgstr "beforeAll() - 在所有测试之前运行"
+
+#: ../../unittesting.md:96
+msgid "afterEach() - Runs after each test"
+msgstr "afterEach() - 每次测试后运行"
+
+#: ../../unittesting.md:97
+msgid "afterAll() - Runs after all tests"
+msgstr "afterAll() - 在所有测试之后运行"
+
+#: ../../unittesting.md:99
+msgid "To get started, see this simple example."
+msgstr "要开始，请参阅这个简单的示例。"
+
+#: ../../unittesting.md:101
+msgid "Run"
+msgstr "运行"
+
+#: ../../unittesting.md:103
+msgid "Once you are done with writing tests, select the file(s) and click on Run to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be show as below:"
+msgstr ""
+
+#: ../../unittesting.md:107
+msgid "For failed tests, there will be more assertion details to analyze the issue. Clicking on failed test will highlight the relevant line of code in the editor."
+msgstr ""
+
+#: ../../unittesting.md:109
+msgid "Stop"
+msgstr "停止"
+
+#: ../../unittesting.md:111
+msgid "If you have selected multiple files to run the tests and want to stop the execution, click on Stop button. It will stop execution after running the tests for current file."
+msgstr "如果您选择了多个文件来运行测试并想要停止执行，请单击停止按钮。 运行当前文件的测试后，它将停止执行。"
+
+#: ../../unittesting.md:113
+msgid "Customization"
+msgstr "自定义"
+
+#: ../../unittesting.md:115
+msgid "Remix facilitates users with various types of customizations to test a contract properly."
+msgstr "Remix 帮助用户通过各种类型的自定义来正确测试合约。"
+
+#: ../../unittesting.md:117
+msgid "1. Custom Compiler Context"
+msgstr "1. 自定义编译器上下文"
+
+#: ../../unittesting.md:119
+msgid "Solidity Unit Testing refers to the Solidity Compiler plugin for compiler configurations. Configure Compiler, EVM Version, Enable Optimization & runs in the Solidity Compiler plugin and this will be used in the Solidity Unit Testing plugin for contract compilation before running unit tests."
+msgstr ""
+
+#: ../../unittesting.md:125
+msgid "2. Custom Transaction Context"
+msgstr "2. 自定义交易上下文"
+
+#: ../../unittesting.md:127
+msgid "For interacting with a contract's method, the prime parameters of a transaction are from address, value & gas. Typically, a method's behaviour is tested with different values of these parameters."
+msgstr ""
+
+#: ../../unittesting.md:129
+msgid "One can input custom values for msg.sender & msg.value of transaction using NatSpec comments, like:"
+msgstr ""
+
+#: ../../unittesting.md:139
+msgid "<b>Instructions to use:</b>"
+msgstr ""
+
+#: ../../unittesting.md:141
+msgid "Parameters must be defined in the method's NatSpec"
+msgstr ""
+
+#: ../../unittesting.md:142
+msgid "Each parameter key should be prefixed with a hash (#) and end with a colon following a space (: ) like #sender:  & #value:"
+msgstr "每个参数键都应以哈希 (#) 为前缀，并以冒号结尾，后跟一个空格 (: ) ，例如 #sender:  & #value:"
+
+#: ../../unittesting.md:143
+msgid "For now, customization is only available for parameters sender & value"
+msgstr ""
+
+#: ../../unittesting.md:144
+msgid "Sender is the from address of a transaction which is accessed using msg.sender inside a contract method. It should be defined in a fixed format as 'account-<account_index>'"
+msgstr ""
+
+#: ../../unittesting.md:145
+msgid "<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 afterwards"
+msgstr "<account_index> 在 remix-ide v0.10.0 发布之前从 0-2 变化，之后从 0-9 变化"
+
+#: ../../unittesting.md:146
+msgid "remix_accounts.sol must be imported in your test file to use custom sender"
+msgstr "必须在您的测试文件中导入 remix_accounts.sol 才能使用自定义发件人"
+
+#: ../../unittesting.md:147
+msgid "Value is value sent along with a transaction in wei which is accessed using msg.value inside a contract method. It should be a number."
+msgstr "价值是与 wei 中的交易一起发送的价值，可以使用合约方法中的 msg.value 访问。 它应该是一个数字。"
+
+#: ../../unittesting.md:149
+msgid "Regarding gas, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with Out-of-Gas error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit"
+msgstr "关于 gas，Remix 在内部估计每笔交易所需的 gas。 尽管如此，如果合约部署因 Out-of-Gas 错误而失败，它会尝试通过将 gas 加倍来重新部署它。 双重gas部署失败将显示错误：尝试两次后合约部署失败：无法存储合约代码，请检查您的gas限制"
+
+#: ../../unittesting.md:151
+msgid "Various test examples can be seen in examples section."
+msgstr "在示例部分可以看到各种测试示例。"
+
+#: ../../unittesting.md:154
+msgid "Points to remember"
+msgstr "要记住的要点"
+
+#: ../../unittesting.md:157
+msgid "A test contract cannot have a method with parameters. Having one such method will show error: Method 'methodname' can not have parameters inside a test contract"
+msgstr "测试合约不能有带参数的方法。 拥有一种这样的方法将显示错误：方法'methodname'在测试合约中不能有参数"
+
+#: ../../unittesting.md:158
+msgid "Number of test accounts are 3 before remix-ide release v0.10.0 and 10 afterwards"
+msgstr "在 remix-ide v0.10.0 发布之前，测试账户数量为 3，之后为 10"
+
+#: ../../unittesting.md:159
+msgid "While a test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin, do not worry, this will have no bearing on its success with Solidity Unit Testing plugin."
+msgstr ""
+
