@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,40 +19,40 @@ msgstr ""
 
 #: ../../assert_library.md:1
 msgid "Remix Assert Library"
-msgstr ""
+msgstr "Bibliothèque Remix Assert"
 
 #: ../../assert_library.md:4
 #: ../../assert_library.md:13
 msgid "Assert.ok(value[, message])"
-msgstr ""
+msgstr "Assert.ok(value[, message])"
 
 #: ../../assert_library.md:5
 #: ../../assert_library.md:27
 msgid "Assert.equal(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.equal(actual, expected[, message])"
 
 #: ../../assert_library.md:6
 #: ../../assert_library.md:47
 msgid "Assert.notEqual(actual, expected[, message])"
-msgstr ""
+msgstr "Assert.notEqual(actual, expected[, message])"
 
 #: ../../assert_library.md:7
 #: ../../assert_library.md:63
 msgid "Assert.greaterThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.greaterThan(value1, value2[, message])"
 
 #: ../../assert_library.md:8
 #: ../../assert_library.md:82
 msgid "Assert.lesserThan(value1, value2[, message])"
-msgstr ""
+msgstr "Assert.lesserThan(value1, value2[, message])"
 
 #: ../../assert_library.md:11
 msgid "Assert"
-msgstr ""
+msgstr "Assert"
 
 #: ../../assert_library.md:14
 msgid "value: <bool>"
-msgstr ""
+msgstr "valeur : <bool>"
 
 #: ../../assert_library.md:15
 #: ../../assert_library.md:30
@@ -60,11 +60,11 @@ msgstr ""
 #: ../../assert_library.md:66
 #: ../../assert_library.md:85
 msgid "message: <string>"
-msgstr ""
+msgstr "message : <string>"
 
 #: ../../assert_library.md:17
 msgid "Tests if value is truthy. message is returned in case of failure."
-msgstr ""
+msgstr "Teste si la valeur est vraie. Le message est retourné en cas d'échec."
 
 #: ../../assert_library.md:19
 #: ../../assert_library.md:34
@@ -72,43 +72,43 @@ msgstr ""
 #: ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
-msgstr ""
+msgstr "Exemples :"
 
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
 msgid "actual: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "actuel : <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:29
 #: ../../assert_library.md:49
 msgid "expected: <uint | int | bool | address | bytes32 | string>"
-msgstr ""
+msgstr "attendu : <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
-msgstr ""
+msgstr "Teste si les valeurs actuelles et attendues sont identiques. Le message est retourné en cas d'échec."
 
 #: ../../assert_library.md:52
 msgid "Tests if actual & expected values are not same. message is returned in case of failure."
-msgstr ""
+msgstr "Teste si les valeurs actuelles et attendues sont différentes. Le message est retourné en cas d'échec."
 
 #: ../../assert_library.md:64
 #: ../../assert_library.md:83
 msgid "value1: <uint | int>"
-msgstr ""
+msgstr "valeur 1 : <uint | int>"
 
 #: ../../assert_library.md:65
 #: ../../assert_library.md:84
 msgid "value2: <uint | int>"
-msgstr ""
+msgstr "valeur 2 : <uint | int>"
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
-msgstr ""
+msgstr "Teste si la valeur 1 est supérieure à la valeur 2. Le message est retourné en cas d'échec."
 
 #: ../../assert_library.md:87
 msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
-msgstr ""
+msgstr "Teste si la valeur 1 est inférieure à la valeur 2. Le message est retourné en cas d'échec."
 
 msgid ""
 msgstr ""
@@ -116,19 +116,19 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr ""
+msgstr "Guide de contribution au code source"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr ""
+msgstr "Remix est un outil open source et nous encourageons quiconque à nous aider à améliorer notre outil. Vous pouvez contribuer en rapportant des erreurs, en nous envoyant vos commentaires ou en contribuant à notre code base avec un pull request."
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr ""
+msgstr "L'application Remix est construite avec JavaScript et n'utilise aucun framework. Nous comptons sur un ensemble de modules npm sélectionnés comme yo-yo, csjs-inject et d'autres. Consultez les fichiers package.json dans les sous-modules Remix pour en savoir plus sur la pile."
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr ""
+msgstr "Pour en savoir plus, veuillez consulter notre page GitHub."
 
 msgid ""
 msgstr ""
@@ -136,19 +136,19 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "Support de la Communauté"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr ""
+msgstr "Nous savons que l'écosystème de la blockchain est très récent et que de nombreuses informations sont dispersées sur le Web. C'est pourquoi nous avons créé un canal de soutien de la communauté où nous, ainsi que d'autres utilisateurs essayons de répondre à vos questions si vous êtes coincé dans l'utilisation de Remix. Rejoignez la Communauté et demandez de l'aide."
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
-msgstr ""
+msgstr "Pour tous ceux qui sont intéressés par le développement d'un plugin personnalisé pour Remix ou qui veulent contribuer au code de base, nous avons ouvert un canal dédié aux contributeurs spécialement pour les développeurs qui travaillent sur les outils Remix."
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
-msgstr ""
+msgstr "Nous vous prions de respecter cet espace et de l'utiliser pour obtenir de l'aide avec votre travail et le canal des développeurs pour les discussions relatives au travail sur le code Remix. Si vous avez des idées de collaboration ou si vous voulez promouvoir votre projet, essayez de trouver des canaux plus appropriés pour le faire. Vous pouvez également contacter les principaux contributeurs directement sur Gitter ou Twitter."
 
 msgid ""
 msgstr ""
@@ -156,55 +156,55 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "Compilateur (Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
-msgstr ""
+msgstr "En cliquant sur l'icône Solidity dans le panneau d'icônes, vous accédez au Compilateur Solidty."
 
 #: ../../compile.md:6
 msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
-msgstr ""
+msgstr "La compilation est déclenchée lorsque vous cliquez sur le bouton de compilation (D. dans l'image ci-dessous). Si vous souhaitez que le fichier soit compilé à chaque fois qu'il est sauvegardé ou lorsqu'un autre fichier est sélectionné : cochez la case de compilation automatique (E. dans l'image ci-dessous)."
 
 #: ../../compile.md:8
 msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgstr "Depuis la version 0.5.7 de Solidity, il est possible de compiler des fichiers Yul. Veuillez consulter la documentation sur Yul qui contient des exemples de code. Vous pouvez utiliser le menu déroulant de la langue (B. dans l'image ci-dessous) pour changer de langue. Cette liste déroulante n'est disponible que pour les versions supérieures ou égales à la 0.5.7."
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
-msgstr ""
+msgstr "La liste déroulante de sélection de fork (C. dans l'image ci-dessous) permet de compiler du code avec un fork majeur spécifique d'Ethereum. La valeur par défaut du compilateur correspond au fork par défaut utilisé par une version spécifique. Veuillez vous rendre sur \"Détails de compilation\" (G. dans l'image ci-dessous) dans les paramètres de la section Metadata pour voir le nom de fork majeur utilisé pour la compilation actuelle."
 
 #: ../../compile.md:14
 msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgstr "Si le contrat dispose de nombreuses dépendances, il peut prendre un certain temps à compiler. Utilisez la compilation automatique à votre discrétion."
 
 #: ../../compile.md:18
 msgid "After each compilation, a list is updated with all newly compiled contracts.  A compiled contract can be selected with the Contract pulldown menu ( F. in the image).  Multiple contracts are compiled when one contract imports other contracts.  Selecting a contract will show information about that one."
-msgstr ""
+msgstr "Après chaque compilation, une liste est mise à jour avec tous les contrats nouvellement compilés. Un contrat compilé peut être sélectionné dans le menu déroulant du contrat (F. dans l'image ci-dessous). Plusieurs contrats sont compilés lorsqu'un contrat importe d'autres contrats. La sélection d'un contrat montrera des informations sur celui-ci."
 
 #: ../../compile.md:21
 msgid "When the \"Compilation Details\" button is clicked ( G. in image), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgstr "Lorsque vous cliquez sur le bouton \"Détails de la compilation\" (G. dans l'image ci-dessous), une fenêtre modale affiche des informations détaillées sur le contrat sélectionné."
 
 #: ../../compile.md:23
 msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in the image) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgstr "Pour ceux qui écrivent leur propre compilateur Solidity, vous pouvez importer cela en cliquant sur le bouton + (X. dans l'image ci-dessous) pour ouvrir une fenêtre modale où vous pouvez renseigner l'url du compilateur à charger."
 
 #: ../../compile.md:25
 msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
-msgstr ""
+msgstr "À partir du module Compilateur Solidity, vous pouvez également publier votre contrat sur Swarm (seuls les contrats non abstraits peuvent être publiés) et IPFS."
 
 #: ../../compile.md:28
 msgid "Published data notably contains the abi and the solidity source code."
-msgstr ""
+msgstr "Les données publiées contiennent notamment l'ABI et le code source Solidity."
 
 #: ../../compile.md:30
 msgid "After a contract is published, you can find its metadata information using the bzz URL located in the details modal dialog SWARM LOCATION."
-msgstr ""
+msgstr "Une fois qu'un contrat est publié, vous pouvez trouver ses informations de métadonnées en utilisant l'URL bzz située dans la fenêtre modale de dialogue de SWARM LOCATION."
 
 #: ../../compile.md:33
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
-msgstr ""
+msgstr "Les erreurs et les avertissements de compilation sont affichés sous la section contrat. Pour chaque compilation, l'onglet analyse statique crée un rapport. Il est important de résoudre les problèmes signalés même si le compilateur ne se plaint pas. (voir plus)"
 
 msgid ""
 msgstr ""
@@ -212,7 +212,7 @@ msgstr ""
 
 #: ../../contract_metadata.md:1
 msgid "Build Artifact"
-msgstr ""
+msgstr "Construction de l'artefact"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
@@ -236,7 +236,7 @@ msgstr ""
 
 #: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
-msgstr ""
+msgstr "Par défaut, Remix déploie automatiquement les bibliothèques nécessaires."
 
 #: ../../contract_metadata.md:17
 msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
@@ -244,11 +244,11 @@ msgstr ""
 
 #: ../../contract_metadata.md:19
 msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
-msgstr ""
+msgstr "<code>linkReferences</code> contient une carte représentant les bibliothèques qui dépendent du contrat actuel. Les valeurs sont les adresses des bibliothèques utilisées pour relier le contrat."
 
 #: ../../contract_metadata.md:22
 msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
-msgstr ""
+msgstr "<code>autoDeployLib</code> définit si les bibliothèques doivent être automatiquement déployées par Remix ou si le contrat doit être lié avec les bibliothèques décrites dans <code>linkReferences</code>."
 
 #: ../../contract_metadata.md:24
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
@@ -496,15 +496,15 @@ msgstr ""
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
-msgstr ""
+msgstr "Pour accéder au module Explorateurs de fichiers - cliquez sur l'icône explorateurs de fichiers."
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
-msgstr ""
+msgstr "L'explorateur de fichiers de base répertorie tous les fichiers stockés dans le stockage de votre navigateur. Vous pouvez les voir dans le dossier du navigateur."
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
-msgstr ""
+msgstr "Remarque importante: le nettoyage du stockage du navigateur supprimera définitivement tous les fichiers de solidité qui y sont stockés. Ceci est une limitation inhérente à un IDE basé sur le navigateur. Cependant, si vous voulez stocker des fichiers en dehors du navigateur et sur le système de fichiers de votre ordinateur, utilisez Remixd ou utilisez la version bureau de Remix-IDE. RemixD vous permet d'avoir accès à un dossier sélectionné sur votre disque dur. Remix Desktop est une version de Remix-IDE dans une application Electron."
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
@@ -584,7 +584,7 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr ""
+msgstr "Importation des fichiers sources dans Solidity"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
@@ -620,7 +620,7 @@ msgstr ""
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr ""
+msgstr "Importation depuis GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -628,7 +628,7 @@ msgstr ""
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
-msgstr ""
+msgstr "Importation depuis Swarm"
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
@@ -636,15 +636,15 @@ msgstr ""
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
-msgstr ""
+msgstr "Importation depuis IPFS"
 
 #: ../../import.md:55
 msgid "Files can be imported from IPFS."
-msgstr ""
+msgstr "Les fichiers peuvent être importés depuis IPFS."
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr ""
+msgstr "Importation depuis la console"
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -660,75 +660,75 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "Welcome to Remix documentation!"
-msgstr ""
+msgstr "Bienvenue sur la documentation de Remix !"
 
 #: ../../index.rst:4
 msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
-msgstr ""
+msgstr "Remix est un puissant outil Opensource qui vous aide à écrire des contrats Solidity directement depuis le navigateur. Écrit en JavaScript, Remix prend an charge à la fois l'utilisation dans le navigateur et localement."
 
 #: ../../index.rst:7
 msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
-msgstr ""
+msgstr "Remix prend également en charge les tests, le débogage, le déploiement de contrats intelligents et bien plus encore."
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr ""
+msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur le site `remix.ethereum.org <http://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans cette documentation. Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
-msgstr ""
+msgstr "Cet ensemble de documents couvre les instructions sur la façon d'utiliser Remix et quelques tutoriels pour vous aider à débuter."
 
 #: ../../index.rst:16
 msgid "Useful links:"
-msgstr ""
+msgstr "Liens utiles :"
 
 #: ../../index.rst:18
 msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
-msgstr ""
+msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
 msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr ""
+msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ - La version où nous testons la nouvelle version de Remix (non stable !)."
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
-msgstr ""
+msgstr "`Remix sur Medium <https://medium.com/remix-ide>`__"
 
 #: ../../index.rst:24
 msgid "`Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
-msgstr ""
+msgstr "`Ethereum StackExchange pour Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
 
 #: ../../index.rst:26
 msgid "`Community support channel <https://gitter.im/ethereum/remix>`__"
-msgstr ""
+msgstr "`Salon de support de la Communauté <https://gitter.im/ethereum/remix>`__"
 
 #: ../../index.rst:28
 msgid "`Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
-msgstr ""
+msgstr "`Ressources pour les développeurs dApp (Wiki Ethereum) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
 
 #: ../../index.rst:30
 msgid "New Layout Intro"
-msgstr ""
+msgstr "Nouvelle mise en page de l'introduction"
 
 #: ../../index.rst:36
 msgid "Tour of default modules"
-msgstr ""
+msgstr "Aperçu des modules par défaut"
 
 #: ../../index.rst:46
 msgid "Tour of typical solidity modules"
-msgstr ""
+msgstr "Aperçu des des modules types de Solidity"
 
 #: ../../index.rst:56
 msgid "Solidity Unit Testing"
-msgstr ""
+msgstr "Test unitaire Solidity"
 
 #: ../../index.rst:64
 msgid "Using Remix"
-msgstr ""
+msgstr "Utiliser Remix"
 
 #: ../../index.rst:76
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Divers"
 
 msgid ""
 msgstr ""
@@ -736,35 +736,35 @@ msgstr ""
 
 #: ../../layout.md:1
 msgid "Remix-IDE Layout"
-msgstr ""
+msgstr "Mise en page de Remix-IDE"
 
 #: ../../layout.md:4
 msgid "The new structure"
-msgstr ""
+msgstr "La nouvelle structure"
 
 #: ../../layout.md:8
 msgid "Icon Panel - click to change which plugin appears in the Side Panel"
-msgstr ""
+msgstr "Panneau d'icônes - cliquez pour changer le plugin apparaîtra dans le panneau latéral"
 
 #: ../../layout.md:9
 msgid "Side Panel - Most but not all plugins will have their GUI here."
-msgstr ""
+msgstr "Panneau latéral - la plupart mais non l'intégralité des plugins auront leur interface graphique ici."
 
 #: ../../layout.md:10
 msgid "Main Panel - In the old layout this was just for editing files.  In the tabs can be plugins or files for the IDE to compile."
-msgstr ""
+msgstr "Panneau principal - dans l'ancienne mise en page, l'utilité résidait uniquement dans l'édition de fichiers. Dans les onglets peuvent être des plugins ou des fichiers pour que l'IDE puisse compiler."
 
 #: ../../layout.md:11
 msgid "Terminal - where you will see the results of your interactions with the GUI's.  Also you can run scripts here."
-msgstr ""
+msgstr "Terminal - où vous verrez les résultats de vos interactions avec les interfaces graphiques. Vous pouvez également y exécuter des scripts."
 
 #: ../../layout.md:13
 msgid "Icon Panel at Page Load"
-msgstr ""
+msgstr "Panneau d'icônes au chargement de la page"
 
 #: ../../layout.md:15
 msgid "When you load remix - the icon panel show these icons by default."
-msgstr ""
+msgstr "Lorsque vous chargez remix - le panneau d'icônes affiche ces icônes par défaut."
 
 #: ../../layout.md:19
 msgid "Everything in remix is now a plugin...  so the Plugin Manager is very important. In the old layout, each basic task in remix was separated into the tabs.  Now these tabs are plugins."
@@ -776,19 +776,19 @@ msgstr ""
 
 #: ../../layout.md:24
 msgid "Homepage"
-msgstr ""
+msgstr "Page d'accueil"
 
 #: ../../layout.md:29
 msgid "The homepage is located in a tab in the Main Panel."
-msgstr ""
+msgstr "La page d'accueil se trouve dans un onglet du panneau principal."
 
 #: ../../layout.md:31
 msgid "You can also get there by clicking the remix logo at the top of the icon panel."
-msgstr ""
+msgstr "Vous pouvez également y accéder en cliquant sur le logo Remix en haut du panneau d'icônes."
 
 #: ../../layout.md:33
 msgid "Environments"
-msgstr ""
+msgstr "Environnements"
 
 #: ../../layout.md:34
 msgid "Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a Solidity Button and a Vyper button.  In the future you will be able to save your own environment."
@@ -796,7 +796,7 @@ msgstr ""
 
 #: ../../layout.md:36
 msgid "To see all the plugins go to the plugin manager - by selecting the plug in the icon panel."
-msgstr ""
+msgstr "Pour voir tous les plugins, allez dans le gestionnaire de plugin - en sélectionnant l'icône de la prise dans le panneau d'icônes."
 
 #: ../../layout.md:39
 msgid "The environment buttons are time & sanity savers - so you don't need to go to the plugin manager to get started everytime you load the page."
@@ -804,7 +804,7 @@ msgstr ""
 
 #: ../../layout.md:42
 msgid "Plugin Manager"
-msgstr ""
+msgstr "Gestionnaire de plugin"
 
 #: ../../layout.md:45
 msgid "In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (your's for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the plug manager."
@@ -816,7 +816,7 @@ msgstr ""
 
 #: ../../layout.md:49
 msgid "Themes"
-msgstr ""
+msgstr "Thèmes"
 
 #: ../../layout.md:52
 msgid "So you want to work on Remix with a dark theme or a gray theme or just a different theme that the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes."
@@ -924,7 +924,7 @@ msgstr ""
 
 #: ../../plugin_manager.md:1
 msgid "Plugin Manager"
-msgstr ""
+msgstr "Gestionnaire de plugin"
 
 #: ../../plugin_manager.md:4
 msgid "Everything is a PLUGIN in Remix"
@@ -2376,35 +2376,35 @@ msgstr ""
 
 #: ../../unittesting_examples.md:1
 msgid "Testing by Example"
-msgstr ""
+msgstr "Exemple de tests"
 
 #: ../../unittesting_examples.md:4
 msgid "Here are some examples which can give you better understanding to plan your tests."
-msgstr ""
+msgstr "Voici quelques exemples qui peuvent vous aider à mieux planifier vos tests."
 
 #: ../../unittesting_examples.md:6
 msgid "Note: Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
-msgstr ""
+msgstr "Remarque : les exemples dans cette section sont destinés à vous aider dans le développement. Nous ne recommandons pas d'avoir une totale confiance en eux sans vérifier."
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
-msgstr ""
+msgstr "1. Exemple simple"
 
 #: ../../unittesting_examples.md:9
 msgid "In this example, we test setting & getting variables."
-msgstr ""
+msgstr "Dans cet exemple, nous testons la configuration et l'obtention de variables."
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: Simple_storage.sol"
-msgstr ""
+msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: simple_storage_test.sol"
-msgstr ""
+msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
 
 #: ../../unittesting_examples.md:60
 msgid "2. Testing a method involving msg.sender"
-msgstr ""
+msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
