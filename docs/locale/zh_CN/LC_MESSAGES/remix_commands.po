@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_commands.pot\n"
+"X-Crowdin-File-ID: 6484\n"
+"Language: zh_CN\n"
+
+#: ../../remix_commands.md:1
+#: ../../remix_commands.md:14
+msgid "Remix Commands"
+msgstr "Remix命令"
+
+#: ../../remix_commands.md:4
+msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto complete.  These commands are using the following libraries:"
+msgstr ""
+
+#: ../../remix_commands.md:6
+msgid "remix:  Remix has a number of CLI commands for loading & executing file in a workspace.  See the list below."
+msgstr ""
+
+#: ../../remix_commands.md:8
+msgid "ethers: Remix IDE enables the use of ethersjs commands. See the Ethers docs for the full list."
+msgstr ""
+
+#: ../../remix_commands.md:10
+msgid "web3: Remix IDE enable the use of web3js commands. See the Web3js docs for the full list."
+msgstr ""
+
+#: ../../remix_commands.md:12
+msgid "swarmgw: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
+msgstr "swarmgw：该库可用于通过 https://swarm-gateways.net/ 将文件上传/下载到 Swarm。"
+
+#: ../../remix_commands.md:16
+msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
+msgstr "remix.execute(filepath)：运行文件路径指定的脚本。 如果文件路径为空，则执行当前显示在编辑器中的脚本。"
+
+#: ../../remix_commands.md:18
+msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
+msgstr "remix.exeCurrent()：运行编辑器中当前显示的脚本。"
+
+#: ../../remix_commands.md:20
+msgid "remix.getFile(path): Returns the content of the file located at the given path"
+msgstr "remix.getFile(path)：返回位于给定路径的文件内容"
+
+#: ../../remix_commands.md:22
+msgid "remix.help(): Display this help message."
+msgstr "remix.help()：显示此帮助信息。"
+
+#: ../../remix_commands.md:24
+msgid "remix.loadgist(id): Load a gist in the file explorer."
+msgstr "remix.loadgist(id)：在文件资源管理器中加载一个 gist。"
+
+#: ../../remix_commands.md:26
+msgid "remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
+msgstr "remix.loadurl(url)：在文件资源管理器中加载给定的 url。 url 可以是 github、swarm 或 ipfs 类型。"
+
+#: ../../remix_commands.md:28
+msgid "A few Ethers JS examples"
+msgstr ""
+
+#: ../../remix_commands.md:29
+msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
+msgstr "ethers.providers：提供商抽象出于以太坊区块链的连接，用于发出查询和发送状态变化的交易。"
+
+#: ../../remix_commands.md:31
+msgid "ethers.utils: The utility functions exposed in both the ethers umbrella package and the ethers-utils.  eg ethers.utils.formatBytes32String( text )"
+msgstr ""
+
+#: ../../remix_commands.md:33
+msgid "A few Web3 JS examples"
+msgstr ""
+
+#: ../../remix_commands.md:35
+msgid "web3.eth.abi: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
+msgstr "web3.eth.abi：web3.eth.abi 函数让您可以将参数解译和编码为 ABI(应用程序二进制接口)，以便对 EVM(以太坊虚拟机)进行函数调用。"
+
+#: ../../remix_commands.md:37
+msgid "web3.providers: Contains the current available providers."
+msgstr "web3.providers：包含当前可用的供应商。"
+
+#: ../../remix_commands.md:39
+msgid "web3.utils: This package provides utility functions for Ethereum dapps and other **web3.js packages."
+msgstr "web3.utils：该包为以太坊 dapps 和其他 **web3.js 包提供实用功能。"
+
+#: ../../remix_commands.md:41
+msgid "A few Swarm examples examples (these will be updated soon)"
+msgstr ""
+
+#: ../../remix_commands.md:43
+msgid "swarmgw.get(url, cb): Download files from Swarm via https**://swarm-gateways.net/"
+msgstr "swarmgw.get(url, cb): 通过 https**://swarm-gateways.net/ 从 Swarm 下载文件"
+
+#: ../../remix_commands.md:45
+msgid "swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-gateways.net/"
+msgstr "swarmgw.put(content, cb): 通过 https**://swarm-gateways.net/ 上传文件到 Swarm"
+
