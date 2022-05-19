@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:45\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -111,5 +111,77 @@ msgstr ""
 
 #: ../../FAQ.md:87
 msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
+msgstr ""
+
+#: ../../FAQ.md:89
+msgid "Analytics"
+msgstr ""
+
+#: ../../FAQ.md:91
+msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
+msgstr ""
+
+#: ../../FAQ.md:93
+msgid "A: We want to know:"
+msgstr ""
+
+#: ../../FAQ.md:95
+msgid "Which plugins get activated & deactivated"
+msgstr ""
+
+#: ../../FAQ.md:96
+msgid "If users check the box to publish a contract's metadata when deploying"
+msgstr ""
+
+#: ../../FAQ.md:97
+msgid "Which themes are used/used most/not used at all"
+msgstr ""
+
+#: ../../FAQ.md:98
+msgid "The usage of the links to documentation"
+msgstr ""
+
+#: ../../FAQ.md:99
+msgid "On the homepage, which file importing buttons are used"
+msgstr ""
+
+#: ../../FAQ.md:101
+msgid "Q: Is it opt-in or opt-out?"
+msgstr ""
+
+#: ../../FAQ.md:103
+msgid "A: We use Matomo as an opt-in analytics platform."
+msgstr ""
+
+#: ../../FAQ.md:105
+msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
+msgstr ""
+
+#: ../../FAQ.md:107
+msgid "A: All data collected through Matomo is stored on our own server. No data is given to third parties."
+msgstr ""
+
+#: ../../FAQ.md:109
+msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
+msgstr ""
+
+#: ../../FAQ.md:111
+msgid "Q: What does Remix do with this info?"
+msgstr ""
+
+#: ../../FAQ.md:113
+msgid "A: Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
+msgstr ""
+
+#: ../../FAQ.md:115
+msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
+msgstr ""
+
+#: ../../FAQ.md:117
+msgid "Q: After I agree opt-in, can I change my mind?"
+msgstr ""
+
+#: ../../FAQ.md:119
+msgid "A: You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr ""
 
