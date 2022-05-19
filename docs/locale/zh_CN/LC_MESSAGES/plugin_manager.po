@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,37 +19,49 @@ msgstr ""
 
 #: ../../plugin_manager.md:1
 msgid "Plugin Manager"
-msgstr ""
-
-#: ../../plugin_manager.md:4
-msgid "Everything is a PLUGIN in Remix"
-msgstr ""
+msgstr "插件管理器"
 
 #: ../../plugin_manager.md:6
-msgid "In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin. This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example)."
+msgid "In Remix IDE you only load the functionality you need.  Controlling which plugins are active or inactive happens in the Plugin Manager."
 msgstr ""
 
-#: ../../plugin_manager.md:9
-msgid "This means that you only load the functionality you need."
+#: ../../plugin_manager.md:8
+msgid "This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects."
+msgstr ""
+
+#: ../../plugin_manager.md:10
+msgid "Manage permissions"
 msgstr ""
 
 #: ../../plugin_manager.md:11
-msgid "It also means that you can turn off and on plugins - as your needs change."
-msgstr ""
-
-#: ../../plugin_manager.md:13
-msgid "This all happens in the plug manager."
+msgid "When plugins need to access other plugins for their operation, a modal will appear to ask you for permission."
 msgstr ""
 
 #: ../../plugin_manager.md:15
-msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
+msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the Remember this choice box.  If you don't, you might get this modal repeatedly popping up."
 msgstr ""
 
 #: ../../plugin_manager.md:17
-msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgid "View permissions"
 msgstr ""
 
-#: ../../plugin_manager.md:21
-msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
+#: ../../plugin_manager.md:18
+msgid "You can view the permissions that you have granted to plugins by clicking on the Permissions button at the bottom of the Plugin Manager."
 msgstr ""
+
+#: ../../plugin_manager.md:22
+msgid "A modal will appear like the one below where you can view and erase the granted permission."
+msgstr ""
+
+#: ../../plugin_manager.md:26
+msgid "Plugin Devs: Load a local plugin"
+msgstr ""
+
+#: ../../plugin_manager.md:28
+msgid "A plugin in development can be loaded into Remix IDE by clicking the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr ""
+
+#: ../../plugin_manager.md:32
+msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
+msgstr "要了解有关如何创建自己的插件的更多信息，请转到 remix-plugin repo 的 README。"
 
