@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-25 13:04\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,78 +14,78 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/index.pot\n"
-"X-Crowdin-File-ID: 5088\n"
+"X-Crowdin-File-ID: 6476\n"
 "Language: zh_CN\n"
 
 #: ../../index.rst:2
 msgid "Welcome to Remix documentation!"
-msgstr "Bienvenue sur la documentation de Remix!"
+msgstr ""
 
 #: ../../index.rst:4
 msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
-msgstr "Remix est un outil de développement opensource permettant de développer des contracts Ethereum en utilisant le language Solidity. Remix IDE peut être utilisé dans une navigateur ou localement dans une application bureau."
+msgstr ""
 
 #: ../../index.rst:7
 msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
-msgstr "Remix 还支持智能合约的测试、调试和部署等等。"
+msgstr ""
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr "`remix.ethereum.org <http://remix.ethereum.org>`__ 上提供了我们的 Remix 项目及其所有功能，更多信息可以在这些文档中找到。 我们的 IDE 工具可在`我们的 GitHub 存储库 <https://github.com/ethereum/remix-ide>`__ 中获得。"
+msgstr ""
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
-msgstr "这组文档涵盖了有关如何使用 Remix 的说明以及一些帮助您入门的教程。"
+msgstr ""
 
 #: ../../index.rst:16
 msgid "Useful links:"
-msgstr "有用的链接："
+msgstr ""
 
 #: ../../index.rst:18
 msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
-msgstr "`Solidity 文档 <https://solidity.readthedocs.io>`__"
+msgstr ""
 
 #: ../../index.rst:20
 msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ - 我们测试新 Remix 版本的版本(不稳定!)。"
+msgstr ""
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
-msgstr "`在Remix 中<https://medium.com/remix-ide>`__"
+msgstr ""
 
 #: ../../index.rst:24
 msgid "`Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
-msgstr "`用于Remix的以太坊堆栈交换 <https://ethereum.stackexchange.com/questions/tagged"
+msgstr ""
 
 #: ../../index.rst:26
 msgid "`Community support channel <https://gitter.im/ethereum/remix>`__"
-msgstr "`社区支持频道<https://gitter.im/ethereum/remix>`__"
+msgstr ""
 
 #: ../../index.rst:28
 msgid "`Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
-msgstr "`Ðapp 开发者资源(以太坊维基)<https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
+msgstr ""
 
 #: ../../index.rst:30
 msgid "New Layout Intro"
-msgstr "新布局介绍"
+msgstr ""
 
 #: ../../index.rst:36
 msgid "Tour of default modules"
-msgstr "默认模块"
+msgstr ""
 
 #: ../../index.rst:46
 msgid "Tour of typical solidity modules"
-msgstr "典型 Solidity 模块"
+msgstr ""
 
 #: ../../index.rst:56
 msgid "Solidity Unit Testing"
-msgstr "Solidity 单元测试"
+msgstr ""
 
 #: ../../index.rst:64
 msgid "Using Remix"
-msgstr "使用Remix"
+msgstr ""
 
 #: ../../index.rst:76
 msgid "Miscellaneous"
-msgstr "其它选项"
+msgstr ""
 
