@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-25 09:53\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,22 +14,22 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/debugger.pot\n"
-"X-Crowdin-File-ID: 5082\n"
+"X-Crowdin-File-ID: 6470\n"
 "Language: zh_CN\n"
 
 #: ../../debugger.md:1
 msgid "Debugger"
-msgstr "调试器"
+msgstr ""
 
 #: ../../debugger.md:4
 msgid "This module allows you to debug the transaction. It can be used to deploy transactions created from Remix and already mined transactions. (debugging works only if the current environment provides the necessary features)."
-msgstr "该模块允许您调试事务。 它可用于部署从 Remix 创建的交易和已挖掘的交易。(仅当当前环境提供必要的功能时，调试才有效)。"
+msgstr ""
 
 #: ../../debugger.md:9
 msgid "To get to the debugger - you can click the debug button in the terminal when a successful or failed transaction appears there.  You can also load the module from the plugin manager and then click the bug in the icon panel.  Or you can get to the debugger by running the debug command in the console."
-msgstr "要进入调试器 - 当成功或失败的事务出现在终端时，您可以单击终端中的调试按钮。 您还可以从插件管理器加载模块，然后单击图标面板中的错误。 或者，您可以通过在控制台中运行调试命令来访问调试器。"
+msgstr ""
 
 #: ../../debugger.md:14
 msgid "To learn more about how to use this tool go to the debugger tutorial."
-msgstr "要了解有关如何使用此工具的更多信息，请访问调试器教程。"
+msgstr ""
 
