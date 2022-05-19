@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:47\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:55\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgid "Low level interactions"
 msgstr ""
 
 #: ../../udapp.md:60
-msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the recieve() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
+msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the receive() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
 msgstr ""
 
 #: ../../udapp.md:62
