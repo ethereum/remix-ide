@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-02-09 11:15\n"
+"PO-Revision-Date: 2022-05-19 13:46\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -14,22 +14,22 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/code_contribution_guide.pot\n"
-"X-Crowdin-File-ID: 5072\n"
+"X-Crowdin-File-ID: 6460\n"
 "Language: fr_FR\n"
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr "Guide de contribution au code source"
+msgstr ""
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
+msgstr ""
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr "L'application Remix est construite avec JavaScript et n'utilise pas de cadres. Nous comptons sur un ensemble de modules npm sélectionnés, comme yo-yo, csjs-inject et autres. Consultez les fichiers package.json dans les sous-modules Remix pour en savoir plus sur la pile."
+msgstr ""
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr "Pour en savoir plus, veuillez consulter notre page GitHub."
+msgstr ""
 
