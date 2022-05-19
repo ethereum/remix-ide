@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-25 09:53\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,54 +14,54 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_metadata.pot\n"
-"X-Crowdin-File-ID: 5078\n"
+"X-Crowdin-File-ID: 6466\n"
 "Language: zh_CN\n"
 
 #: ../../contract_metadata.md:1
 msgid "Build Artifact"
-msgstr "构建Artifact"
+msgstr ""
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
-msgstr "当编译成功时，Remix 为每个编译的合约创建两个 JSON 文件。 其中一个文件捕获了 Solidity 编译的输出。 此文件将命名为 contractName_metadata.json。"
+msgstr ""
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
-msgstr "另一个 JSON 文件名为 contractName.json 。 contractName.json 文件包含将库链接到文件所需的编译工件。 它包含库的链接、字节码、部署的字节码、气体估计、方法标识符和 ABI。"
+msgstr ""
 
 #: ../../contract_metadata.md:8
 msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
-msgstr "为了生成这些artifact文件，需要选中设置模块的常规设置部分中的生成合同元数据框。 这些元数据文件将在您编译文件时生成，并将放置在 artifacts 文件夹中 - 您可以在 Files Explorers 插件中看到该文件夹。"
+msgstr ""
 
 #: ../../contract_metadata.md:10
 msgid "You can write scripts that can access either of these files."
-msgstr "您可以编写可以访问其中任何一个文件的脚本。"
+msgstr ""
 
 #: ../../contract_metadata.md:12
 msgid "Library Deployment with filename.json"
-msgstr "使用 filename.json 部署库"
+msgstr ""
 
 #: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
-msgstr "默认情况下，Remix 会自动部署所需的库。"
+msgstr ""
 
 #: ../../contract_metadata.md:17
 msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
-msgstr "当您打开库的元数据文件 - artifact/filename.json 时，您将看到以下部分："
+msgstr ""
 
 #: ../../contract_metadata.md:19
 msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
-msgstr "linkReferences 包含一个表示依赖于当前合约的库的映射。 值是用于链接合约的程序库的地址。"
+msgstr ""
 
 #: ../../contract_metadata.md:22
 msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
-msgstr "autoDeployLib 定义库是否应由 Remix 自动部署，或者合约是否应与 linkReferences 中描述的程序库链接"
+msgstr ""
 
 #: ../../contract_metadata.md:24
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
-msgstr "请注意，Remix 将解析与当前网络对应的地址。 默认情况下，配置键遵循以下形式：<network_name>:<networkd_id>，但也可以将 <network_name> 或 <network_id> 定义为键。"
+msgstr ""
 
 #: ../../contract_metadata.md:28
 msgid "Here is a sample metadata file for linking a library:"
-msgstr "这是用于链接库的示例元数据文件："
+msgstr ""
 
