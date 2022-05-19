@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:47\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:55\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -99,5 +99,21 @@ msgstr ""
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: Value_test.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:331
+msgid "5. Testing a method involving msg.sender and msg.value"
+msgstr ""
+
+#: ../../unittesting_examples.md:332
+msgid "In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts."
+msgstr ""
+
+#: ../../unittesting_examples.md:334
+msgid "Contract/Program to be tested: Donations.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:379
+msgid "Test contract/program: Donations_test.sol"
 msgstr ""
 
