@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-22, Remix;
+# This file is distributed under the same license as the Remix - Ethereum
+# IDE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix - Ethereum IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../plugin_list.md:1
+msgid "Plugin List"
+msgstr ""
+
+#: ../../plugin_list.md:3
+msgid "Here is the list of Remix plugins that you will see in the Plugin Manager:"
+msgstr ""
+
+#: ../../plugin_list.md:5
+msgid "Core Plugins"
+msgstr ""
+
+#: ../../plugin_list.md:7
+msgid ""
+"File Explorer   <br> The File Explorers is where you can see the "
+"files.<br> profile name: fileManager <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:12
+msgid ""
+"Remixd   (No UI) <br>Remixd (with an npm package running locally) "
+"connects a folder on your filesystem to the Remix website. Please see the"
+" docs for instructions. <br>profile name: remixd <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:17
+msgid ""
+"Solidity Compiler   <br> Compiles Solidity & YUL. <br>profile name: "
+"solidity <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:22
+msgid ""
+"Deploy & Run   <br> Deploy & interact with smart contracts on the in-"
+"browser chain (JSVM), local nodes, and public networks. <br>profile name:"
+" udapp <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:27
+msgid ""
+"Debugger   <br> Insert breakpoints, step through a contract, check high "
+"level and low level parameters, and fetch & debug a transaction of a "
+"verified contract. <br>profile name: debugger <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:32
+msgid ""
+"Solidity Unit Testing   <br> Run unit test written in Solidity. "
+"<br>profile name: solidityUnitTesting <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:37
+msgid ""
+"Solidity Static Analysis   <br> Static code analysis is a process to "
+"debug the code by examining it and without actually executing the code. "
+"This plugin also has integrations with Slither. <br>profile name: "
+"solidityStaticAnalysis <br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:43
+msgid "Additional Plugins"
+msgstr ""
+
+#: ../../plugin_list.md:45
+msgid "(sorted alphabetically)"
+msgstr ""
+
+#: ../../plugin_list.md:47
+msgid ""
+"Celo Compiler / Deployer   <br> Compile & Deploy to the Celo blockchain. "
+"<br>profile name: celo-remix-plugin <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:53
+msgid ""
+"Contract Deployer   <br> Deploy a contract to multiple chains (1 at a "
+"time) with the same address. <br>profile name: celo-remix-plugin "
+"<br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:59
+msgid ""
+"Debug Tools for Remix        Compilation Result <br> Not to be confused "
+"with the Debugger, this tool is for plugin devs to help test their "
+"plugins & their plugin's API. <br>profile name: debugPlugin "
+"<br>Documentation"
+msgstr ""
+
+#: ../../plugin_list.md:64
+msgid ""
+"Defi Explorer        File Loading  <br> The Defi Explorer loads the "
+"Uniswap V2 Protocol into the File Explorers. <br>profile name: "
+"defiexplorer <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:70
+msgid ""
+"Defi Tutorials    (main panel)    <br> Learn about UMA. This plugin works"
+" with the UMA tutorials plugin. <br>profile name: defiTutorials <br>Make "
+"an issue"
+msgstr ""
+
+#: ../../plugin_list.md:75
+msgid ""
+"DGIT        Version Control  <br> Clone repos from github & create GIT "
+"repos & use standard git commands. Also export/import to IPFS. "
+"<br>profile name: dgit <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:81
+msgid ""
+"EthDoc Documentation Generator     <br /><br>Creates the documentation of"
+" a soldity contract - generated from the Natspec comments in the code. "
+"The generated doc is placed in EthDoc viewer - which will be visible in "
+"an tab in the editor. <br>profile name: ethdoc <br>Documentation <br>Make"
+" an issue"
+msgstr ""
+
+#: ../../plugin_list.md:87
+msgid ""
+"EthDoc Viewer   (main panel)  <br /><br>This plugin work with EthDoc "
+"Generator.  It is automatically activated. <br>profile name: ethdoc-"
+"viewer <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:93
+msgid ""
+"Etherscan Contract Verifier      <br>Verify a contract on Etherscan. "
+"<br>profile name: etherscan <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:99
+msgid ""
+"Flattener    <br>Flattens compiled contracts <br>profile name: flattener "
+"<br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:104
+msgid ""
+"Gas Profiler    <br>Profile gas costs for every transaction you execute."
+"  Total execution costs as well as per line costs are displayed. "
+"<br>profile name: gasProfiler <br>Documentation <br>Make an issue  EDIT"
+msgstr ""
+
+#: ../../plugin_list.md:110
+msgid ""
+"Learneth      Remix & Solidity Tutorials <br>Tutorials that contain "
+"quizes that teach users Solidity and Remix features. <br>profile name: "
+"learnEth <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:116
+msgid ""
+"Lexon      <br>Lexon is a language that reads like a legal contract and "
+"compile into Solidity (and then bytecode). This plugin allow you to take "
+"Lexon code and to <br>profile name: lexon <br>Documentation <br>Make an "
+"issue"
+msgstr ""
+
+#: ../../plugin_list.md:122
+msgid ""
+"Moonbeam    <br>Compile and Deploy to the Moonbeam network <br>profile "
+"name: moonbeam-remix-plugin <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:128
+msgid ""
+"Mythx Security Verification    <br>Free version and paid version for "
+"Mythx analysis. <br>profile name: mythx <br>Documentation <br>Make an "
+"issue"
+msgstr ""
+
+#: ../../plugin_list.md:134
+msgid ""
+"Nahmii compiler    <br>Compile solidity contracts for the Nahmii network "
+"<br>profile name: nahmii-compiler <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:139
+msgid ""
+"One Click Dapp    <br>Makes a basic front end for your contract once it "
+"is deployed on a public testnet.<br /><br>profile name: oneClickDapp "
+"<br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:145
+msgid ""
+"Proveable Oracle Services    <br>An oracle for the JavaScript VM "
+"environment. <br>profile name: provable <br>Documentation <br>Make an "
+"issue NEEDS A SITE"
+msgstr ""
+
+#: ../../plugin_list.md:151
+msgid ""
+"Quorum Network    <br>A Connection to Quorum <br>profile name: quorum "
+"<br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:157
+msgid ""
+"Solhint Linter    <br>Solidity Linter providing both Security and Style "
+"Guide validations. <br>profile name: solhint <br>Documentation <br>Make "
+"an issue"
+msgstr ""
+
+#: ../../plugin_list.md:163
+msgid ""
+"Solidity 2 UML    <br>Generate UML diagrams from a compiled Solidity file"
+" <br>profile name: sol2uml <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:169
+msgid ""
+"Sourcify      <br>Verify you contracts and fetch verified contracts "
+"<br>profile name: sourcify <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:175
+msgid ""
+"Starnet      <br>Compile contracts written in Cairo to Starknet "
+"<br>profile name: starkNet_compiler <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:181
+msgid ""
+"Tenderly    <br>Verify Contracts. Import To Remix From your Tenderly "
+"project. <br>profile name: tenderly <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:187
+msgid ""
+"UMA Playground   (main panel) <br>Learn about the UMA protocol.  This "
+"plugin is loaded from the DEFI Tutorial plugin. <br>profile name: "
+"umaPlayground <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:192
+msgid ""
+"UMA Tutorials   (main panel) <br>This plugin is activated by the DEFI "
+"Tutorials <br>profile name: umaTutorials <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:197
+msgid ""
+"Vyper Compiler      <br>Compile vyper code using local or remote Vyper "
+"compiler. <br>profile name: vyper <br>Documentation <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:203
+msgid ""
+"Wallet Connect   (main panel) <br>Approve transactions on your mobile "
+"device <br>profile name: walletconnect <br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:208
+msgid ""
+"YUL++      <br>A low level language for Ethereum. <br>profile name: yulp "
+"<br>Make an issue"
+msgstr ""
+
+#: ../../plugin_list.md:213
+msgid ""
+"Zokrates       <br>ZoKrates is a toolbox for zkSNARKs on Ethereum. "
+"<br>profile name: ZoKrates <br>Documentation <br>Make an issue"
+msgstr ""
+

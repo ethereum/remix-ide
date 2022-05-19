@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-22, Remix;
+# This file is distributed under the same license as the Remix - Ethereum
+# IDE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix - Ethereum IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../slither.md:1
+msgid "Slither Integration"
+msgstr ""
+
+#: ../../slither.md:4
+msgid "(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)"
+msgstr ""
+
+#: ../../slither.md:6
+msgid "Remixd and Slither"
+msgstr ""
+
+#: ../../slither.md:9
+msgid "Note: If you have not used remixd before, read more about it here"
+msgstr ""
+
+#: ../../slither.md:11
+msgid ""
+"Since Remixd v0.5.0, when remixd is running locally on your device, an "
+"additional websocket plugin will be listening on port 65523 which will be"
+" dedicated for Slither integration."
+msgstr ""
+
+#: ../../slither.md:13
+msgid ""
+"Slither is a Solidity static analysis framework written in Python 3. It "
+"runs a suite of vulnerability detectors, prints visual information about "
+"contract details, and provides an API to easily write custom analyses."
+msgstr ""
+
+#: ../../slither.md:15
+msgid ""
+"The remixd Slither listener is a websocket plugin similar to remixd and "
+"is used to perform Slither analysis with Remix IDE."
+msgstr ""
+
+#: ../../slither.md:17
+msgid ""
+"It doesn't need any separate installation as it is shipped with remixd "
+"NPM module."
+msgstr ""
+
+#: ../../slither.md:21
+msgid "Enable Slither Analysis"
+msgstr ""
+
+#: ../../slither.md:24
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../slither.md:26
+msgid ""
+"To use Slither analysis with Remix IDE efficiently, following tools "
+"should be installed locally on the system:"
+msgstr ""
+
+#: ../../slither.md:28
+msgid "Slither: https://github.com/crytic/slither#how-to-install"
+msgstr ""
+
+#: ../../slither.md:29
+msgid "Solc: https://docs.soliditylang.org/en/latest/installing-solidity.html"
+msgstr ""
+
+#: ../../slither.md:30
+msgid "Solc-select: https://github.com/crytic/solc-select#quickstart"
+msgstr ""
+
+#: ../../slither.md:32
+msgid "How to use"
+msgstr ""
+
+#: ../../slither.md:34
+msgid ""
+"If a project is shared through remixd and localhost workspace is loaded "
+"in Remix IDE, there will be an extra checkbox shown in Solidity Static "
+"Analysis plugin with the label Enable Slither Analysis."
+msgstr ""
+
+#: ../../slither.md:38
+msgid ""
+"There is an info icon on the right side of the label which redirects to a"
+" specific section of Remix official documentation that explains how to "
+"use Slither Analysis and prerequisites for it."
+msgstr ""
+
+#: ../../slither.md:40
+msgid ""
+"One can check the Enable Slither Analysis box to run the analysis using "
+"Slither along with the Remix's analysis library."
+msgstr ""
+
+#: ../../slither.md:42
+msgid ""
+"Latest report of Slither analysis will be stored locally on project root "
+"with a file named as remix-slither-report.json."
+msgstr ""
+
+#: ../../slither.md:44
+msgid ""
+"Slither Analysis report will also be displayed on the Remix IDE side "
+"after the Remix analysis report for better user readability."
+msgstr ""
+
+#: ../../slither.md:48
+msgid "The result of the analysis will be shown in the Remix IDE terminal"
+msgstr ""
+
+#: ../../slither.md:52
+msgid "and also in the remixd console."
+msgstr ""
+
+#: ../../slither.md:56
+msgid ""
+"To only run Slither Analysis, deselect Select all checkbox and click on "
+"Run. Now it will show only the Slither Analysis report."
+msgstr ""
+
+#: ../../slither.md:60
+msgid ""
+"By default, it doesn't show the warnings for external libraries like "
+"remix-tests.sol, hardhat/console.sol etc. To have a look on them, check "
+"the box with label Show warnings for external libraries."
+msgstr ""
+
+#: ../../slither.md:64
+msgid "More Details"
+msgstr ""
+
+#: ../../slither.md:66
+msgid ""
+"Analysis for Slither is run using the version set in Solidity Compiler "
+"plugin on Remix IDE. Slither is a CLI tool and requires solc to run the "
+"analysis. Before running the analysis, Slither websocket plugin checks if"
+" current version of solc is same as the version set in Remix IDE."
+msgstr ""
+
+#: ../../slither.md:68
+msgid ""
+"If the compiler version set in Solidity Compiler is different from "
+"current version of solc installed locally, the Slither websocket plugin "
+"will update the solc to be the same as the required version solc-select."
+msgstr ""
+
+#: ../../slither.md:70
+msgid ""
+"For example, if current solc version on the system is 0.8.4 and on the "
+"Remix IDE 0.8.6 is set, remixd logs explain remote solc version selection"
+msgstr ""
+
+#: ../../slither.md:74
+msgid "After successful analysis run:"
+msgstr ""
+
