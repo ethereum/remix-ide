@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-25 13:04\n"
+"PO-Revision-Date: 2022-05-19 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -14,42 +14,42 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/plugin_manager.pot\n"
-"X-Crowdin-File-ID: 5094\n"
+"X-Crowdin-File-ID: 6482\n"
 "Language: zh_CN\n"
 
 #: ../../plugin_manager.md:1
 msgid "Plugin Manager"
-msgstr "插件管理器"
+msgstr ""
 
 #: ../../plugin_manager.md:4
 msgid "Everything is a PLUGIN in Remix"
-msgstr "一切都是 Remix 中的插件"
+msgstr ""
 
 #: ../../plugin_manager.md:6
 msgid "In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin. This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example)."
-msgstr "为了将我们和您制作的新工具集成到 Remix 中，我们现在将所有东西都制作成了插件。 这种架构还允许将 Remix 或仅 Remix 的一部分集成到其他项目中(例如您的项目)。"
+msgstr ""
 
 #: ../../plugin_manager.md:9
 msgid "This means that you only load the functionality you need."
-msgstr "这意味着您只加载您需要的功能。"
+msgstr ""
 
 #: ../../plugin_manager.md:11
 msgid "It also means that you can turn off and on plugins - as your needs change."
-msgstr "这也意味着您可以根据需求的变化关闭和打开插件。"
+msgstr ""
 
 #: ../../plugin_manager.md:13
 msgid "This all happens in the plug manager."
-msgstr "这一切都发生在插件管理器中。"
+msgstr ""
 
 #: ../../plugin_manager.md:15
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
-msgstr "当您创建自己的插件并且想要将本地插件加载到 Remix 中时，插件管理器也是您要去的地方。"
+msgstr ""
 
 #: ../../plugin_manager.md:17
 msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr "要加载本地插件，您可以单击插件管理器面板顶部的“连接到本地插件”链接。"
+msgstr ""
 
 #: ../../plugin_manager.md:21
 msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
-msgstr "要了解有关如何创建自己的插件的更多信息，请转到 remix-plugin repo 的 README。"
+msgstr ""
 
