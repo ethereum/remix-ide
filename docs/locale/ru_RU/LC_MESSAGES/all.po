@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgstr ""
 #: ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
-msgstr ""
+msgstr "Примеры:"
 
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
@@ -116,11 +116,11 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:1
 msgid "Code Contribution Guide"
-msgstr ""
+msgstr "Руководство по написанию кода"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr ""
+msgstr "Remix - это инструмент с открытым исходным кодом, и мы призываем всех помочь нам его улучшить. Пожалуйста, находя проблемы, оставляйте отзывы или отправляйте запросы на добавление в нашу кодовую базу."
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
@@ -128,7 +128,7 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
-msgstr ""
+msgstr "Чтобы узнать больше, посетите нашу страницу на GitHub."
 
 msgid ""
 msgstr ""
@@ -136,11 +136,11 @@ msgstr ""
 
 #: ../../community.md:1
 msgid "Community Support"
-msgstr ""
+msgstr "Поддержка сообщества"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr ""
+msgstr "Мы знаем, что блокчейн-экосистема очень новая и много информации разбросано по сети. Вот почему мы создали канал поддержки сообщества, где мы и другие пользователи пытаемся ответить на ваши вопросы, если вы столкнулись с трудностями при использовании Remix. Пожалуйста, присоединяйтесь к сообществу и попросите помощи."
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
@@ -156,7 +156,7 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Compiler (Solidity)"
-msgstr ""
+msgstr "Компилятор (Solidity)"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
@@ -392,99 +392,99 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "ЧаВо"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
-msgstr ""
+msgstr "Компилятор Solidity"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "В: Ошибка: компилятор может быть в неисправном состоянии"
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "О: У старой версии компилятора solidity возникает такая проблема с браузером Chrome. Поменяйте версию компилятора в Плагине Solidity на более новую или воспользуйтесь другим браузером."
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr ""
+msgstr "В: У меня возникает проблема с превышением максимального количества запусков и другими ошибками, не могу скомпилировать."
 
 #: ../../FAQ.md:18
 msgid "A:  Try a different browser or a newer solidity compiler version."
-msgstr ""
+msgstr "О: Попробуйте другой браузер или более новую версию компилятора solidity."
 
 #: ../../FAQ.md:20
 msgid "Q: How to verify a contract that imports other contracts?"
-msgstr ""
+msgstr "В: Как подтвердить контракт, который импортирует другие контракты?"
 
 #: ../../FAQ.md:22
 msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr ""
+msgstr "О: Проверяющий инструмент не выполняет рекурсивную проверку операторов импорта в контракте. Так что можно проверить только \"прямые\" контракты."
 
 #: ../../FAQ.md:24
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
-msgstr ""
+msgstr "Есть плагин Flattener, который объединит весь исходный и импортированный код в один файл."
 
 #: ../../FAQ.md:26
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Развертывание и запуск"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
-msgstr ""
+msgstr "В: В своем приложении я использую конечную точку Infura, но при попытке выполнить развертывание на этой конечной точке в remix IDE, выбирая \"web3 provider\" и добавляя свою конечную точку, мне сообщается, что она не может подключиться."
 
 #: ../../FAQ.md:30
 msgid "A: If the endpoint you are using is http, it won't work."
-msgstr ""
+msgstr "О: Если вы используете конечную точку http, она не будет работать."
 
 #: ../../FAQ.md:32
 msgid "Q: Where is deploy button?"
-msgstr ""
+msgstr "В: Где кнопка \"развернуть\"?"
 
 #: ../../FAQ.md:34
 msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
-msgstr ""
+msgstr "О: Она находится в модуле Развертывание и запуск. Если вы не активировали этот модуль, вы должны сделать это в Диспетчере плагинов. Вы также можете активировать всё, что вам нужно для работы с Solidity, на стартовой странице (нажмите на логотип remix в левом верхнем углу), нажав кнопку \"Solidity\" в разделе \"среда\"."
 
 #: ../../FAQ.md:37
 msgid "Q: How to pass a tuple to a public function in Remix?"
-msgstr ""
+msgstr "В: Как передать кортеж публичной функции в Remix?"
 
 #: ../../FAQ.md:39
 msgid "A: Pass it as an array []."
-msgstr ""
+msgstr "О: Передайте его как массив []."
 
 #: ../../FAQ.md:41
 msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
-msgstr ""
+msgstr "В: Как ввести структуру в качестве входных данных для параметра функции в модуле Развертывание и запуск?"
 
 #: ../../FAQ.md:43
 msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
-msgstr ""
+msgstr "О: Для введения структуры, как и кортежа, передайте его как массив []. Ещё вам нужно вставить в строку:"
 
 #: ../../FAQ.md:45
 msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
-msgstr ""
+msgstr "pragma experimental ABIEncoderV2; в верхней части файла Solidity."
 
 #: ../../FAQ.md:47
 msgid "For example, here's a solidity file with a struct is an input parameter."
-msgstr ""
+msgstr "Например, вот файл solidity, структура которого является входным параметром."
 
 #: ../../FAQ.md:79
 msgid "The input of initPeepToPeeps takes a struct.  If you input [1,2] the transaction will go through."
-msgstr ""
+msgstr "Ввод initPeepToPeeps принимает структуру. Если вы введете [1,2], операция пройдёт."
 
 #: ../../FAQ.md:83
 msgid "General"
-msgstr ""
+msgstr "Общие"
 
 #: ../../FAQ.md:85
 msgid "Q: Where do plugin developers go with their questions?"
-msgstr ""
+msgstr "В: Где разработчикам плагинов задавать вопросы?"
 
 #: ../../FAQ.md:87
 msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
-msgstr ""
+msgstr "О: В комнате разработчиков плагинов Remix в Gitter https://gitter.im/ethereum/remix-dev-plugin"
 
 msgid ""
 msgstr ""
@@ -492,15 +492,15 @@ msgstr ""
 
 #: ../../file_explorer.md:1
 msgid "File Explorers"
-msgstr ""
+msgstr "Проводник"
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
-msgstr ""
+msgstr "Что бы перейти в проводник - нажмите на символ проводника."
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
-msgstr ""
+msgstr "В обычном проводнике перечислены все файлы, находящиеся в хранилище вашего браузера. Вы можете увидеть их в папке браузера."
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
@@ -508,7 +508,7 @@ msgstr ""
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
-msgstr ""
+msgstr "Вы можете переименовать, удалить или добавить новые файлы в проводник."
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
-msgstr ""
+msgstr "Создать новый файл"
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
@@ -532,7 +532,7 @@ msgstr ""
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
-msgstr ""
+msgstr "Опубликовать в Gist"
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
@@ -548,7 +548,7 @@ msgstr ""
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
-msgstr ""
+msgstr "Создать папку"
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
@@ -556,27 +556,27 @@ msgstr ""
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr ""
+msgstr "Контекстное меню (правый клик)"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
-msgstr ""
+msgstr "Нажмите правой кнопкой мыши на файл или папку, и появится контекстное меню."
 
 #: ../../file_explorer.md:51
 msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr ""
+msgstr "Вы можете переименовать или удалить выбранный файл или папку. Вы также можете создать папку."
 
 #: ../../file_explorer.md:53
 msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr ""
+msgstr "Чтобы создать файл с помощью контекстного меню, щелкните правой кнопкой мыши на папку, чтобы появился параметр «Создать файл». Внутри этой папки будет создан файл."
 
 #: ../../file_explorer.md:57
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
-msgstr ""
+msgstr "Функции контекстного меню также работает с RemixD (что дает вам доступ к папке на жестком диске)."
 
 #: ../../file_explorer.md:59
 msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
-msgstr ""
+msgstr "Примечание. При работе с RemixD вам необходимо открывать и закрывать папку localhost, чтобы обновить вид."
 
 msgid ""
 msgstr ""
@@ -584,27 +584,27 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr ""
+msgstr "Импорт исходных файлов в Solidity"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr ""
+msgstr "Существует несколько способов импорта файлов в Remix."
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr ""
+msgstr "Для просмотра руководства по импорту файлов, нажмите здесь. Вы также можете найти это руководство в плагине Remix Workshops."
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr ""
+msgstr "Для детального понимания ключевого слова import смотрите документацию Solidity"
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr ""
+msgstr "Вот некоторые из основных способов импорта файла:"
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr ""
+msgstr "Импорт файла из локального хранилища браузера"
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
@@ -620,7 +620,7 @@ msgstr ""
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr ""
+msgstr "Импорт из GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -628,23 +628,23 @@ msgstr ""
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
-msgstr ""
+msgstr "Импорт из Swarm"
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
-msgstr ""
+msgstr "Файлы можно импортировать, используя URL-адреса, поддерживаемые swarm. Если у вас нет узла swarm, используйте swarm-gateways.net."
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
-msgstr ""
+msgstr "Импорт из IPFS"
 
 #: ../../import.md:55
 msgid "Files can be imported from IPFS."
-msgstr ""
+msgstr "Файлы могут быть импортированы из IPFS."
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr ""
+msgstr "Импорт из консоли"
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -660,75 +660,75 @@ msgstr ""
 
 #: ../../index.rst:2
 msgid "Welcome to Remix documentation!"
-msgstr ""
+msgstr "Добро пожаловать в документацию по Remix!"
 
 #: ../../index.rst:4
 msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
-msgstr ""
+msgstr "Remix — это мощный инструмент с открытым исходным кодом, который помогает вам писать контракты Solidity прямо из браузера. Написанный на JavaScript, Remix поддерживает использование как в браузере, так и локально."
 
 #: ../../index.rst:7
 msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
-msgstr ""
+msgstr "Remix также поддерживает тестирование, отладку и развертывание смарт-контрактов и многое другое."
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr ""
+msgstr "Проект Remix со всеми его функциями доступен по адресу `remix.ethereum.org <http://remix.ethereum.org>`__, а дополнительную информацию можно найти в этих документах. Наш инструмент IDE доступен в репозитории GitHub <https://github.com/ethereum/remix-ide>`__."
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
-msgstr ""
+msgstr "Этот набор документов содержит инструкции по использованию Remix и некоторые руководства, которые помогут вам начать работу."
 
 #: ../../index.rst:16
 msgid "Useful links:"
-msgstr ""
+msgstr "Полезные ссылки:"
 
 #: ../../index.rst:18
 msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
-msgstr ""
+msgstr "`Документация Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
 msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr ""
+msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ — Версия, в которой мы тестируем новый релиз Remix (не стабильный!)."
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
-msgstr ""
+msgstr "`Remix на Medium <https://medium.com/remix-ide>`__"
 
 #: ../../index.rst:24
 msgid "`Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
-msgstr ""
+msgstr "`Ethereum StackExchange для Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
 
 #: ../../index.rst:26
 msgid "`Community support channel <https://gitter.im/ethereum/remix>`__"
-msgstr ""
+msgstr "`Канал поддержки сообщества <https://gitter.im/ethereum/remix>`__"
 
 #: ../../index.rst:28
 msgid "`Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
-msgstr ""
+msgstr "`Ресурсы разработчика Ðapp (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
 
 #: ../../index.rst:30
 msgid "New Layout Intro"
-msgstr ""
+msgstr "Введение в новый макет"
 
 #: ../../index.rst:36
 msgid "Tour of default modules"
-msgstr ""
+msgstr "Обзор модулей по умолчанию"
 
 #: ../../index.rst:46
 msgid "Tour of typical solidity modules"
-msgstr ""
+msgstr "Обзор типовых модулей solidity"
 
 #: ../../index.rst:56
 msgid "Solidity Unit Testing"
-msgstr ""
+msgstr "Модульное тестирование Solidity"
 
 #: ../../index.rst:64
 msgid "Using Remix"
-msgstr ""
+msgstr "Использование Remix"
 
 #: ../../index.rst:76
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Разное"
 
 msgid ""
 msgstr ""
@@ -1308,7 +1308,7 @@ msgstr ""
 
 #: ../../run.md:1
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Развертывание и запуск"
 
 #: ../../run.md:4
 msgid "The Deploy & Run module allows you to send transactions to the current environment."
@@ -1852,15 +1852,15 @@ msgstr ""
 
 #: ../../support.md:1
 msgid "Support chat"
-msgstr ""
+msgstr "Чат поддержки"
 
 #: ../../support.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
-msgstr ""
+msgstr "Мы знаем, что блокчейн-экосистема очень новая и много информации разбросано по сети. Вот почему мы создали канал поддержки сообщества, где мы и другие пользователи пытаемся ответить на ваши вопросы, если вы столкнулись с трудностями при использовании Remix. Пожалуйста, присоединяйтесь к каналу Remix и попросите помощи у сообщества."
 
 #: ../../support.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
-msgstr ""
+msgstr "Для всех, кто заинтересован в разработке собственного плагина для Remix или хочет внести свой вклад в кодовую базу, мы открыли еще один канал специально для разработчиков, работающих над инструментами Remix."
 
 msgid ""
 msgstr ""
@@ -1868,11 +1868,11 @@ msgstr ""
 
 #: ../../terminal.md:1
 msgid "Terminal"
-msgstr ""
+msgstr "Терминал"
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
-msgstr ""
+msgstr "Функции, доступные в терминале:"
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the web3 object. It enables the execution of the JavaScript script which interacts with the current context. (note that web3 is only available if the web provider or injected provider mode is selected)."
@@ -1892,7 +1892,7 @@ msgstr ""
 
 #: ../../terminal.md:20
 msgid "You can run scripts by inputting them at the bottom after the >."
-msgstr ""
+msgstr "Вы можете запускать скрипты, вводя их внизу, после >."
 
 msgid ""
 msgstr ""
