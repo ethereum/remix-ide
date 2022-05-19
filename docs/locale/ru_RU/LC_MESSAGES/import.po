@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-18 15:11\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -14,32 +14,32 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/import.pot\n"
-"X-Crowdin-File-ID: 5086\n"
+"X-Crowdin-File-ID: 6474\n"
 "Language: ru_RU\n"
 
 #: ../../import.md:1
 msgid "Importing Source Files in Solidity"
-msgstr "Импорт исходных файлов в Solidity"
+msgstr ""
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr "Существует несколько способов импорта файлов в Remix."
+msgstr ""
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr "Для просмотра руководства по импорту файлов, нажмите здесь. Вы также можете найти это руководство в плагине Remix Workshops."
+msgstr ""
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr "Для детального понимания ключевого слова import смотрите документацию Solidity"
+msgstr ""
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr "Вот некоторые из основных способов импорта файла:"
+msgstr ""
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr "Импорт файла из локального хранилища браузера"
+msgstr ""
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
-msgstr "Импорт из GitHub"
+msgstr ""
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
@@ -63,23 +63,23 @@ msgstr ""
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
-msgstr "Импорт из Swarm"
+msgstr ""
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
-msgstr "Файлы можно импортировать, используя URL-адреса, поддерживаемые swarm. Если у вас нет узла swarm, используйте swarm-gateways.net."
+msgstr ""
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
-msgstr "Импорт из IPFS"
+msgstr ""
 
 #: ../../import.md:55
 msgid "Files can be imported from IPFS."
-msgstr "Файлы могут быть импортированы из IPFS."
+msgstr ""
 
 #: ../../import.md:61
 msgid "Importing from the console"
-msgstr "Импорт из консоли"
+msgstr ""
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
