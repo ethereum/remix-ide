@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-04-20 09:29\n"
+"PO-Revision-Date: 2022-05-19 13:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -14,40 +14,40 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: fr\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittesting_examples.pot\n"
-"X-Crowdin-File-ID: 5120\n"
+"X-Crowdin-File-ID: 6508\n"
 "Language: fr_FR\n"
 
 #: ../../unittesting_examples.md:1
 msgid "Testing by Example"
-msgstr "Exemple de tests"
+msgstr ""
 
 #: ../../unittesting_examples.md:4
 msgid "Here are some examples which can give you better understanding to plan your tests."
-msgstr "Voici quelques exemples qui peuvent vous aider à mieux planifier vos tests."
+msgstr ""
 
 #: ../../unittesting_examples.md:6
 msgid "Note: Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
-msgstr "Remarque : les exemples dans cette section sont destinés à vous aider dans le développement. Nous ne recommandons pas d'avoir une totale confiance en eux sans vérifier."
+msgstr ""
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
-msgstr "1. Exemple simple"
+msgstr ""
 
 #: ../../unittesting_examples.md:9
 msgid "In this example, we test setting & getting variables."
-msgstr "Dans cet exemple, nous testons la configuration et l'obtention de variables."
+msgstr ""
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: Simple_storage.sol"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: simple_storage_test.sol"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:60
 msgid "2. Testing a method involving msg.sender"
-msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
