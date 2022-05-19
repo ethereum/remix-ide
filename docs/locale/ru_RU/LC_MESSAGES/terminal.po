@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-02-13 17:59\n"
+"PO-Revision-Date: 2022-05-19 13:47\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -14,16 +14,16 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/terminal.pot\n"
-"X-Crowdin-File-ID: 5112\n"
+"X-Crowdin-File-ID: 6500\n"
 "Language: ru_RU\n"
 
 #: ../../terminal.md:1
 msgid "Terminal"
-msgstr "Терминал"
+msgstr ""
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
-msgstr "Функции, доступные в терминале:"
+msgstr ""
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the web3 object. It enables the execution of the JavaScript script which interacts with the current context. (note that web3 is only available if the web provider or injected provider mode is selected)."
@@ -43,5 +43,5 @@ msgstr ""
 
 #: ../../terminal.md:20
 msgid "You can run scripts by inputting them at the bottom after the >."
-msgstr "Вы можете запускать скрипты, вводя их внизу, после >."
+msgstr ""
 
