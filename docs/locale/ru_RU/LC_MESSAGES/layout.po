@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:54\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -78,11 +78,11 @@ msgid "Clicking on one of the environment buttons loads up a collection of plugi
 msgstr ""
 
 #: ../../layout.md:36
-msgid "To see all the plugins go to the plugin manager - by selecting the plug in the icon panel."
+msgid "To see all the plugins go to the Plugin Manager - by selecting the plug in the icon panel."
 msgstr ""
 
 #: ../../layout.md:39
-msgid "The environment buttons are time & sanity savers - so you don't need to go to the plugin manager to get started everytime you load the page."
+msgid "The environment buttons are time & sanity savers - so you don't need to go to the Plugin Manager to get started everytime you load the page."
 msgstr ""
 
 #: ../../layout.md:42
@@ -90,7 +90,7 @@ msgid "Plugin Manager"
 msgstr ""
 
 #: ../../layout.md:45
-msgid "In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (your's for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the plug manager."
+msgid "In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (yours for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the Plugin Manager."
 msgstr ""
 
 #: ../../layout.md:47
