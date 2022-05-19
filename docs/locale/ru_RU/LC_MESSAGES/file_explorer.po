@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-03-18 14:12\n"
+"PO-Revision-Date: 2022-05-19 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -14,20 +14,20 @@ msgstr ""
 "X-Crowdin-Project-ID: 431830\n"
 "X-Crowdin-Language: ru\n"
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/file_explorer.pot\n"
-"X-Crowdin-File-ID: 5084\n"
+"X-Crowdin-File-ID: 6472\n"
 "Language: ru_RU\n"
 
 #: ../../file_explorer.md:1
 msgid "File Explorers"
-msgstr "Проводник"
+msgstr ""
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
-msgstr "Что бы перейти в проводник - нажмите на символ проводника."
+msgstr ""
 
 #: ../../file_explorer.md:8
 msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
-msgstr "В обычном проводнике перечислены все файлы, находящиеся в хранилище вашего браузера. Вы можете увидеть их в папке браузера."
+msgstr ""
 
 #: ../../file_explorer.md:11
 msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
-msgstr "Вы можете переименовать, удалить или добавить новые файлы в проводник."
+msgstr ""
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
-msgstr "Создать новый файл"
+msgstr ""
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
-msgstr "Опубликовать в Gist"
+msgstr ""
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
-msgstr "Создать папку"
+msgstr ""
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
@@ -83,25 +83,25 @@ msgstr ""
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr "Контекстное меню (правый клик)"
+msgstr ""
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
-msgstr "Нажмите правой кнопкой мыши на файл или папку, и появится контекстное меню."
+msgstr ""
 
 #: ../../file_explorer.md:51
 msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr "Вы можете переименовать или удалить выбранный файл или папку. Вы также можете создать папку."
+msgstr ""
 
 #: ../../file_explorer.md:53
 msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr "Чтобы создать файл с помощью контекстного меню, щелкните правой кнопкой мыши на папку, чтобы появился параметр «Создать файл». Внутри этой папки будет создан файл."
+msgstr ""
 
 #: ../../file_explorer.md:57
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
-msgstr "Функции контекстного меню также работает с RemixD (что дает вам доступ к папке на жестком диске)."
+msgstr ""
 
 #: ../../file_explorer.md:59
 msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
-msgstr "Примечание. При работе с RemixD вам необходимо открывать и закрывать папку localhost, чтобы обновить вид."
+msgstr ""
 
