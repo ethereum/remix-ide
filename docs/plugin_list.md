@@ -56,12 +56,12 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin)
 <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
-**Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; Compilation Result <br>
+**Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; <br>
 Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin
 <br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)
 
-**Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp;  File Loading  <br>
+**Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br>
 The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer
 <br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/)
@@ -138,7 +138,7 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 
 **One Click Dapp** &nbsp; ![](images/pi-1click.png) 
 <br>Makes a basic front end for your contract once it is deployed on a public testnet.  
-<br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp
+[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp
 <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp)
 <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)
 
