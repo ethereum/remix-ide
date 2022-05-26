@@ -146,7 +146,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>An oracle for the JavaScript VM environment.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable
 <br>[Documentation](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)
-<br>[Make an issue]() NEEDS A SITE
 
 **Quorum Network** &nbsp; ![](images/pi-quorum.png)
 <br>A Connection to Quorum 
@@ -172,7 +171,7 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://github.com/ethereum/sourcify)
 <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
 
-**Starnet** &nbsp; ![](images/pi-starknet.png) &nbsp; 
+**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; 
 <br>Compile contracts written in Cairo to Starknet
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler
 <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin)
