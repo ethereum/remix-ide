@@ -56,12 +56,12 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin)
 <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
-**Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; Compilation Result <br>
+**Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; <br>
 Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin
 <br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)
 
-**Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp;  File Loading  <br>
+**Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br>
 The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer
 <br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/)
@@ -138,7 +138,7 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 
 **One Click Dapp** &nbsp; ![](images/pi-1click.png) 
 <br>Makes a basic front end for your contract once it is deployed on a public testnet.  
-<br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp
+[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp
 <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp)
 <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)
 
@@ -146,7 +146,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>An oracle for the JavaScript VM environment.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable
 <br>[Documentation](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)
-<br>[Make an issue]() NEEDS A SITE
 
 **Quorum Network** &nbsp; ![](images/pi-quorum.png)
 <br>A Connection to Quorum 
@@ -172,7 +171,7 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://github.com/ethereum/sourcify)
 <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
 
-**Starnet** &nbsp; ![](images/pi-starknet.png) &nbsp; 
+**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; 
 <br>Compile contracts written in Cairo to Starknet
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler
 <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin)
