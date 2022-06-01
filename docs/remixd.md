@@ -46,17 +46,26 @@ For users who had installed the version of remixd from the **VERY** old NPM addr
 
 **npm install -g @remix-project/remixd**
 
-### remixd short command
-If you are NOT running Remix IDE locally - i.e. you are connected to https://remix.ethereum.org, https://remix-alpha.ethereum.org or https://remix-beta.ethereum.org, you can use the short remixd command. In a terminal, go to your working directory and then just run:
+### remixd command
+The remixd command without options uses the terminal's current directory as the shared directory and the shared Remix domain will be https://remix.ethereum.org, https://remix-alpha.ethereum.org, or https://remix-beta.ethereum.org
 
+The remixd command is:<br>
 `remixd`
 
-This will use the terminal's current directory as the shared directory and the shared Remix domain will be remix.ethereum.org, remix-alpha.ethereum.org, or remix-beta.ethereum.org
+If you are using Remix from localhost or you are not running the command from your working directory, you'll need to use the command with flags.
 
-If you are using Remix from localhost, then you'll need to use the full command.
+#### remixd options  
 
-#### The full remixd command  
-The command `remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance>` <br>will start **remixd** and will share the given folder with Remix IDE. 
+ **\-v, \-\-version**                  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output the version number<br>
+ **\-u, \-\-remix-ide <url>**          &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; URL of remix instance allowed to connect to this web sockect connection<br>
+  **\-s, \-\-shared-folder<path>**     &nbsp; &nbsp; Folder to share with Remix IDE<br>
+  **\-r, \-\-read-only**                &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; Treat shared folder as read-only (experimental)<br>
+  **\-h, \-\-help**                     &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output usage information<br>
+
+Example:
+
+    `remixd -s /path/to/working/directory/ -u http://localhost:8080`
+
 
 
 #### HTTP vs HTTPS in the remixd command
