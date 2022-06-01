@@ -14,7 +14,7 @@ If there is not an active file in the editor or a file has not already been comp
 
 ### Triggering compilation
 Compiling is triggered when you:
-- click the compile button (**D. in fig. 1 below **) 
+- click the compile button (**D. in fig. 1 below**) 
 - use the shortcut `control s`.  
 - right click on a file in the File Explorer and selecting **Compile** option 
 
@@ -36,10 +36,6 @@ However, the older compilers use a legacy AST — which we no longer support. Co
 Because a Solidity file can include multiple contracts and because contracts can import other contracts,  multiple contracts are often compiled.  **However**, only 1 contract's compilation details can be retrieved at a time.
 
 To select the desired contract, use the **Contract** select box (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected.
-
-### No files in the compiler
-If no file is active in the Editor, then no 
-
 
 ### Compilation Details and Publishing
 Using the publish button, you can upload your contract to  **IPFS** or **Swarm** (only non abstract contracts can be published to Swarm).
