@@ -15,7 +15,7 @@ If there is not an active file in the editor or a file has not already been comp
 ### Triggering compilation
 Compiling is triggered when you:
 - click the compile button (**D. in fig. 1 below**) 
-- use the shortcut `control s`.  
+- use the shortcut `control + s`.  
 - right click on a file in the File Explorer and selecting **Compile** option 
 
 ![](images/a-sol-comp-basic.png)
@@ -42,7 +42,7 @@ Using the publish button, you can upload your contract to  **IPFS** or **Swarm**
 
 When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address.
 
-**Published data contains the `abi` and the solidity source code.**
+**Published data contains the contract's metadata and the solidity source code.**
 
 After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**.
 
@@ -54,30 +54,30 @@ If you just want to get the **ABI** or the **Bytecode** - click the appropriate 
 When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything.
 
 ### Compile and Run script
-The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([see more](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))
+The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))
 
 ### Compilation Errors and Warning
 Compilation Errors and Warning are displayed below the contract section.
 At each compilation, the static analysis tab builds a report.
 
-It is important to address reported issues even if the compiler doesn't complain. ([see more](static_analysis.html))
+It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))
 
 ## Advanced Compiler Configurations
 Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 2 below**).
 
 ![](images/a-sol-comp-adv.png)
 
-There is a radio button to choose whether to configure the compiler through the interface (**N in fig 2**) or to use a JSON file for the cofiguration (**R in fig 2**). 
+There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**). 
 
 ### Solidity or YUL
-Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://solidity.readthedocs.io/en/latest/yul.html)) which contain some code examples.
+Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples.
 You can use the language dropdown (**O. in fig 2**) to switch the language. **This dropdown list is only available for versions greater than or equal to `0.5.7`.**
 
-### Select an Ethereum fork
-The "fork selection" dropdown list (**P. in fin fig 2**) allows to compile code against a specific **ethereum hard fork**.
+### Select an EVM version
+The EVM dropdown list (**P. in fig 2**) allows to compile code against a specific **Ethereum hard fork**.
 The `compiler default` corresponds to the default hard fork used by a specific version.
 
-To see the name of the hard fork used in the current compilation, click the "Compilation Details" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the hard fork's name.
+To see the name of the hard fork used in the current compilation, click the "Compilation Details" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name.
 
 ### Enable optimization
 According to the the Solidity Docs, "the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract."
@@ -95,8 +95,12 @@ You may ask — "What is the right number of runs for my contract?" And the Soli
 To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options).
 
 ### JSON file for Compiler configuration
-Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).  Clicking the file name will open it up in the Editor. 
-To change the config file click the **Change** button.
+Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   A default/sample compiler config file is now in each workspace. This file can be edited with all the available options.
+
+Clicking the file name will open it up in the Editor. 
+To change the config file click the **Change** button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents.
+
+There is no error checking when using the .json file for configuration settings, so make sure your config file is correct.
 
 ### Use a Custom Solidity Compiler
 For those writing your own custom solidity compiler, you can import that by clicking the **+** button (**X. in fig 1**) to open a modal where you can input the url of the compiler to be loaded.
