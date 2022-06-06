@@ -1,9 +1,18 @@
 FAQ
 ===
+### Supported devices & Browsers
+
+**Q:** What browsers will Remix work on?
+
+**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers.
+
+**Q:** Will Remix work on a tablet or mobile device?
+
+**A:** We do not support the use of Remix on tablets or mobile phones. 
 
 ### Solidity compiler
 
-**Q: Error: compiler might be in a non-sane state**
+**Q:** Error: compiler might be in a non-sane state
 ```
 error: "Uncaught JavaScript exception: RangeError: Maximum call stack size exceeded.
 The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet.
