@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_metadata.pot\n"
+"X-Crowdin-File-ID: 6466\n"
+"Language: es_ES\n"
+
+#: ../../contract_metadata.md:1
+msgid "Generate Artifact"
+msgstr ""
+
+#: ../../contract_metadata.md:4
+msgid "When a compilation for a Solidity file succeeds, Remix creates three JSON files for each compiled contract. Files can be seen in the File Explorers plugin as:"
+msgstr ""
+
+#: ../../contract_metadata.md:6
+msgid "artifacts/<contractName>.json: contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. It is used for linking a library address to the file."
+msgstr ""
+
+#: ../../contract_metadata.md:7
+msgid "artifacts/<contractName_metadata>.json: contains the metadata from the output of Solidity compilation."
+msgstr ""
+
+#: ../../contract_metadata.md:8
+msgid "artifacts/build-info/<dynamic_hash>.json: contains info about solc compiler versino, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try Hardhat compilation from Remix."
+msgstr ""
+
+#: ../../contract_metadata.md:10
+msgid "Please note that in order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked. By default, it is checked."
+msgstr ""
+
+#: ../../contract_metadata.md:12
+msgid "You can write scripts that can access either of these files."
+msgstr "Puede escribir scripts que tengan acceso a cualquiera de estos archivos."
+
+#: ../../contract_metadata.md:14
+msgid "Library Deployment with filename.json"
+msgstr "Despliegue de la biblioteca con filename.json"
+
+#: ../../contract_metadata.md:17
+msgid "By default Remix automatically deploys needed libraries."
+msgstr "Por defecto, Remix implementa automáticamente las bibliotecas necesarias."
+
+#: ../../contract_metadata.md:19
+msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
+msgstr "Cuando abra el archivo de metadatos para las bibliotecas - artifact/filename.json verá las siguientes secciones:"
+
+#: ../../contract_metadata.md:21
+msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
+msgstr "linkReferences contiene un mapa que representa las bibliotecas que dependen del contrato actual. Los valores son las direcciones de las bibliotecas utilizadas para vincular el contrato."
+
+#: ../../contract_metadata.md:24
+msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
+msgstr "autoDeployLib define si las librerías deben ser desplegadas automáticamente por Remix o si el contrato debe estar vinculado con las librerías descritas en linkReferences"
+
+#: ../../contract_metadata.md:26
+msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
+msgstr "Tenga en cuenta que Remix resolverá las direcciones correspondientes a la red actual. Por defecto, una clave de configuración sigue el formulario: <network_name>:<networkd_id>, pero también es posible definir <network_name> o <network_id> como llaves."
+
+#: ../../contract_metadata.md:30
+msgid "Here is a sample metadata file for linking a library:"
+msgstr "Aquí hay un archivo de metadatos de ejemplo para enlazar una biblioteca:"
+

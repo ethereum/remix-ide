@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"PO-Revision-Date: 2022-05-19 13:53\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/index.pot\n"
+"X-Crowdin-File-ID: 6476\n"
+"Language: es_ES\n"
+
+#: ../../index.rst:2
+msgid "Welcome to Remix's documentation!"
+msgstr ""
+
+#: ../../index.rst:4
+msgid "Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs.  Remix is used for the entire journey of contract development as well as act as a playground for learning and teaching Ethereum."
+msgstr ""
+
+#: ../../index.rst:6
+msgid "Remix IDE is part of the Remix Project which is a platform for development tools that use a plugin architecture.  It encompasses sub-projects including Remix Plugin Engine, Remix Libs, and of course Remix-IDE."
+msgstr ""
+
+#: ../../index.rst:8
+msgid "Remix IDE is a powerful open source tool that helps you write Solidity contracts straight from the browser."
+msgstr ""
+
+#: ../../index.rst:10
+msgid "It is written in JavaScript and supports both usage in the browser, but run locally and in a desktop version."
+msgstr ""
+
+#: ../../index.rst:12
+msgid "Remix IDE has modules for testing, debugging and deploying of smart contracts and much more."
+msgstr ""
+
+#: ../../index.rst:14
+msgid "Remix-IDE is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
+msgstr ""
+
+#: ../../index.rst:19
+msgid "This set of documents covers instructions on how to use Remix.  Additional tutorials are found in our Medium blog and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE."
+msgstr ""
+
+#: ../../index.rst:21
+msgid "Useful links:"
+msgstr ""
+
+#: ../../index.rst:23
+msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
+msgstr ""
+
+#: ../../index.rst:25
+msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgstr ""
+
+#: ../../index.rst:27
+msgid "`Remix Desktop <https://github.com/ethereum/remix-desktop/releases>`__ - Remix Desktop's release page."
+msgstr ""
+
+#: ../../index.rst:29
+msgid "`Remix on Github <https://github.com/ethereum/remix-project>`__"
+msgstr ""
+
+#: ../../index.rst:31
+msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
+msgstr ""
+
+#: ../../index.rst:33
+msgid "`Remix on Twitter <https://twitter.com/EthereumRemix>`__"
+msgstr ""
+
+#: ../../index.rst:35
+msgid "`Our Gitter support channel <https://gitter.im/ethereum/remix>`__"
+msgstr ""
+
+#: ../../index.rst:37
+msgid "`Ethereum.org's Developer resources <https://ethereum.org/en/developers/>`__"
+msgstr ""
+
+#: ../../index.rst:40
+msgid "New Layout Intro"
+msgstr ""
+
+#: ../../index.rst:46
+msgid "Tour of default modules"
+msgstr ""
+
+#: ../../index.rst:56
+msgid "Tour of typical solidity modules"
+msgstr ""
+
+#: ../../index.rst:66
+msgid "Solidity Unit Testing"
+msgstr ""
+
+#: ../../index.rst:75
+msgid "Native External Integrations"
+msgstr ""
+
+#: ../../index.rst:84
+msgid "Using Remix"
+msgstr ""
+
+#: ../../index.rst:100
+msgid "Miscellaneous"
+msgstr ""
+

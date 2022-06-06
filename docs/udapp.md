@@ -25,7 +25,7 @@ You will see the functions in the contract.  The functions buttons can have diff
 
 
 See more information about [Solidity
-modifiers](http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers) in the Solidity docs.
+modifiers](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers) in the Solidity docs.
 .
 
 If a function requires input parameters, well.. you gotta put them in.

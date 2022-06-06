@@ -19,12 +19,10 @@ Remix Project
 Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the
 `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__: low-level tools for wider use.
 
-Remix IDE is primarily used to help developers write Solidity contracts straight from the browser. 
-It is written in JavaScript. When accessed from a browser, it can be run from https://remix.ethereum.org or 
-run `locally <https://github.com/ethereum/remix-project/#offline-usage>`__.
-As stated above, there is also a desktop version and a VSCode extension.
-
-Remix IDE has modules for testing, debugging and deploying of smart contracts and much more.
+Remix-IDE is available
+at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these
+docs.  Our IDE tool is available at `our GitHub repository
+<https://github.com/ethereum/remix-project>`__.
 
 This set of documents covers instructions on how to use Remix.  
 Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
@@ -33,7 +31,7 @@ Useful links:
 
 - `Solidity documentation <https://solidity.readthedocs.io>`__
 
-- `Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!).
+- `Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!).
 
 - `Remix Desktop <https://github.com/ethereum/remix-desktop/releases>`__ - Remix Desktop's release page. 
 
@@ -100,6 +98,7 @@ Useful links:
    create_deploy
    tutorial_debug
    import
+   plugin_list
    remix_commands
    running_js_scripts
    testing_using_Chai_&_Mocha
