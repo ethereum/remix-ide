@@ -95,9 +95,9 @@ You may ask — "What is the right number of runs for my contract?" And the Soli
 To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options).
 
 ### JSON file for Compiler configuration
-Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   A default/sample compiler config file is now in each workspace. This file can be edited with all the available options.
+Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   When you switch to **compile with a config file**, a sample compiler config file is created. This file can be edited with all the available options.
 
-Clicking the file name will open it up in the Editor. 
+Clicking the config file's name will open it up in the Editor. 
 To change the config file click the **Change** button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents.
 
 There is no error checking when using the .json file for configuration settings, so make sure your config file is correct.
