@@ -37,17 +37,36 @@ The command: `remixd -v` or `remixd --version` will return your version number.
 ### Update to the latest remixd
 Because **remixd** creates a bridge from the browser to your local filesystem, it is important that you have the latest version of script.  
 
-For users who had installed the version of remixd from the old NPM address or for users who do not know which NPM address they had installed it from, run these 2 steps:
+For users who had installed the version of remixd from the **VERY** old NPM address or for users who do not know which NPM address they had installed it from, run these 2 steps:
 
 1. uninstall the old one: **npm uninstall -g remixd**
 2. install the new: **npm install -g @remix-project/remixd**
 
-For users who know that they have a remixd version installed from @remix-project/remixd then just run: 
+**For Most Users** who know that they have a remixd version installed from @remix-project/remixd then just run: 
 
 **npm install -g @remix-project/remixd**
 
-### remixd Command
-From the terminal, the command `remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance>` <br>will start **remixd** and will share the given folder with Remix IDE. 
+### remixd command
+The remixd command without options uses the terminal's current directory as the shared directory and the shared Remix domain will be https://remix.ethereum.org, https://remix-alpha.ethereum.org, or https://remix-beta.ethereum.org
+
+The remixd command is:<br>
+`remixd`
+
+If you are using Remix from localhost or you are not running the command from your working directory, you'll need to use the command with flags.
+
+#### remixd options  
+
+ **\-v, \-\-version**                  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output the version number<br>
+ **\-u, \-\-remix-ide <url>**          &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; URL of remix instance allowed to connect to this web sockect connection<br>
+  **\-s, \-\-shared-folder<path>**     &nbsp; &nbsp; Folder to share with Remix IDE<br>
+  **\-r, \-\-read-only**                &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; Treat shared folder as read-only (experimental)<br>
+  **\-h, \-\-help**                     &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output usage information<br>
+
+Example:
+
+    `remixd -s /path/to/working/directory/ -u http://localhost:8080`
+
+
 
 #### HTTP vs HTTPS in the remixd command
 If your browser is on https://remix.ethereum.org (**secure http**) then use https in the command:<br>
