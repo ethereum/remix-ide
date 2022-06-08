@@ -47,7 +47,7 @@ For users who had installed the version of remixd from the **VERY** old NPM addr
 **npm install -g @remix-project/remixd**
 
 ### remixd command
-The remixd command without options uses the terminal's current directory as the shared directory and the shared Remix domain will be https://remix.ethereum.org, https://remix-alpha.ethereum.org, or https://remix-beta.ethereum.org
+The remixd command without options uses the terminal's current directory as the shared directory and the shared Remix domain will be `https://remix.ethereum.org`, `https://remix-alpha.ethereum.org`, or `https://remix-beta.ethereum.org`
 
 The remixd command is:<br>
 `remixd`
@@ -64,7 +64,7 @@ If you are using Remix from localhost or you are not running the command from yo
 
 Example:
 
-    `remixd -s /path/to/working/directory/ -u http://localhost:8080`
+    remixd -s /path/to/working/directory/ -u http://localhost:8080
 
 
 
@@ -88,8 +88,10 @@ Alternatively, there is an option to run remixd in read-only mode, use `--read-o
 `remixd` functions by making websocket connections with Remix IDE on different ports. Ports are defined according to specific purpose. Port usage details are as:
 
 - **65520** : For `remixd` websocket listener, to share local file system with Remix IDE. Shared folder will be loaded in the Remix IDE `File Explorers` workspace named `localhost`
-- **65523** : For `slither` websocket listener, to enable the Slither Analysis using Remix IDE `Solidity Static Analysis` plugin
 - **65522** : For `hardhat` websocket listener, to enable the Hardhat Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Hardhat project.
+- **65523** : For `slither` websocket listener, to enable the Slither Analysis using Remix IDE `Solidity Static Analysis` plugin
+- **65524** : For `truffle` websocket listener, to enable the Truffle Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Truffle project.
+
 
 **Note:** Please make sure your system is secured enough and these ports are not opened nor forwarded.
 
