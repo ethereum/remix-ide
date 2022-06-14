@@ -1,75 +1,72 @@
-File Explorers
+File Explorer
 =============
 
-To get to the File Explorers module - click the file explorers icon.
+To get to the File Explorer module - click the File Explorer icon.
 
 ![](images/a-file-explorer1.png)
 
 File Storage
 ------------
-By default, Remix IDE stores files in **Workspaces** which are folders in your **browser's local storage**.  
+By default, Remix IDE stores files in **indexDB**.  
 
-**Important Note:** Clearing the browser storage will **permanently delete** all the files stored there. 
+Coding in Remix IDE Online is different from writing in a Google doc. Yes, both are written in a browser but a Google doc saves your work to Google’s servers, and Remix—out of the box—only saves your code to your browser’s storage. So tread carefully, browser storage is not permanent!
 
-If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.
+**Important Note:** Clearing the browser storage & indexDB will **permanently delete** all the files stored there. 
+
+## File Storage outside of the browser and Version Control
+
+If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.  
 
 If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix-IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app. 
 
-Workspaces
-------------
-Workspaces are new as of Remix IDE v0.11.0..  Workspaces should help clean up & organize your Files Explorer by allowing you to separate your projects.
-
-The Files Explorer's Workspaces all have a contracts folder, a scripts folder, a tests folder, and a README.txt.
-
-### Migrating your files to Workspaces
-If you had files stored in browser storage in versions of Remix before v0.11.0 to get these files, you will need to click on the **Migrate old filesystem to workspace** link the Home Tab.  After you click on that, you'll get a modal asking if you want to migrate and download or just migrate the files.
-
-![](images/a-migrate-download-btns2.png)
-
-Also note the **Download all files** link on the left of the Home tab. This link will download all files in your browser's local storage to your downloads folder.
-
-Files Explorer Tour
+File Explorer Tour
 -------------------
 
-![](images/a-file-explorer-buttons.png)
+![](images/a-fe-tour.png)
 
-We will start by reviewing the icons in the image above.
+The book icon - **F.** is the link to the documentation (this page).
 
-The book icon - **A.** is the link to the documentation (this page).
+### Workspaces
+Workspaces help to organize your files by allowing you to separate your projects.
+Here are the basic operations of managing a Workspace. The letters in bold below refer to the labels in fig. 1.
 
-### Workspace Manipulation
-Add a Workspace **B.** <br>
-Rename a Workspace **C.** <br>
-Delete a Workspace **D.** <br>
+- **A.** Add a Workspace <br>
+- **B.** Rename a Workspace  <br>
+- **C.** Delete a Workspace  <br>
+-  **D.** Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called **.workspaces** that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>
+- **E.** Upload the Workspaces backup made from the previous icon. <br>
+- **K.** Choose a Workspace <br>
+
+When you create a new Workspace, a modal comes up where you choose which template of files to include.
+
+![](images/a-workspace-templates.png)
+
+### File Manipulation
+The letters in bold below refer to the labels in fig. 1.
+
+- **G.** Create a file  <br>
+- **H.** Create a folder  <br>
+- **I.** Publish the Workspace to a GIST <br>
+- **J.** Load a local file into the current Workspace<br>
 
 ## File Manipulation
 
-Click on the new file icon (**E.**), an input for a new the file’s name will appear in the **Explorer**. Once a name is entered, the new empty file will open in the Editor.
+Click on the new file icon (**G.**), an input for a new the file’s name will appear in the **Explorer**. Once a name is entered, the new empty file will open in the Editor.
 
 ![](images/a-file-explorer-new-file2.png)
 
 When you click on the new file icon, the new file will be placed in the currently selected folder. If a file and not a folder is selected then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
 
-Create a folder
----------------
-
-The icon (marked **F.** above) creates a new folder in the current workspace.
-
 Publish to Gist
 ---------------
 
-The icon (marked **G.** above) publishes all files from the current Workspace to a gist.  Only file in the root of **browser** will be published.  Files in subfolders will not be published to the Gist.
+The icon (marked **I.** in fig.1) publishes all files from the current Workspace to a gist.
 
 Gist API **requires** users to be authenticated to be able to publish a gist.  
 
 Click [this link](https://github.com/settings/tokens) to Github tokens setup and select Generate new token. Then check the **Create gists** checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token.
 
 Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save. **For the moment**, after saving, in order for the token to be registered, you will need to refresh Remix. In an upcoming release, it will not be necessary to do the refresh.
-
-Upload to Browser Storage
----------------
-
-Click the icon marked **H.** to upload a file from your computer's file system to your browser's local storage.
 
 Right-Click on a File
 ----------------------
