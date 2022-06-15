@@ -1,100 +1,101 @@
-File Explorers
+File Explorer
 =============
 
-To get to the File Explorers module - click the file explorers icon.
+To get to the File Explorer module - click the File Explorer icon.
 
 ![](images/a-file-explorer1.png)
 
+The File Explorer is for managing Workspaces and files.  There is also a context menu that pops up when you right click on a file or folder.
+
 File Storage
 ------------
-By default, Remix IDE stores files in **Workspaces** which are folders in your **browser's local storage**.  
+By default, Remix IDE stores files in **IndexedDB**.  
 
-**Important Note:** Clearing the browser storage will **permanently delete** all the files stored there. 
+Coding in Remix IDE Online is different from writing in a Google doc. Yes, both are written in a browser but a Google doc saves your work to Google’s servers, and Remix—out of the box—only saves your code to your browser’s storage. So tread carefully, browser storage is not permanent!
 
-If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.
+**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. 
 
-If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix-IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app. 
+## File Storage outside of the browser and Version Control
 
-Workspaces
-------------
-Workspaces are new as of Remix IDE v0.11.0..  Workspaces should help clean up & organize your Files Explorer by allowing you to separate your projects.
+If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.  
 
-The Files Explorer's Workspaces all have a contracts folder, a scripts folder, a tests folder, and a README.txt.
+If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix IDE in an Electron app. 
 
-### Migrating your files to Workspaces
-If you had files stored in browser storage in versions of Remix before v0.11.0 to get these files, you will need to click on the **Migrate old filesystem to workspace** link the Home Tab.  After you click on that, you'll get a modal asking if you want to migrate and download or just migrate the files.
+Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)
 
-![](images/a-migrate-download-btns2.png)
-
-Also note the **Download all files** link on the left of the Home tab. This link will download all files in your browser's local storage to your downloads folder.
-
-Files Explorer Tour
+File Explorer Tour
 -------------------
 
-![](images/a-file-explorer-buttons.png)
+![](images/a-fe-tour.png)
 
-We will start by reviewing the icons in the image above.
+The book icon - **F.** is the link to the documentation (this page).
 
-The book icon - **A.** is the link to the documentation (this page).
+### Workspaces
+Workspaces help to organize your files by allowing you to separate your projects.
+Here are the basic operations of managing a Workspace. The letters in bold below refer to the labels in fig. 1.
 
-### Workspace Manipulation
-Add a Workspace **B.** <br>
-Rename a Workspace **C.** <br>
-Delete a Workspace **D.** <br>
+- **A.** Add a Workspace <br>
+- **B.** Rename a Workspace  <br>
+- **C.** Delete a Workspace  <br>
+-  **D.** Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called **.workspaces** that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>
+- **E.** Upload the Workspaces backup made from the previous icon. <br>
+- **K.** Choose a Workspace 
+### File Manipulation
+The letters in bold below refer to the labels in fig. 1.
 
-## File Manipulation
+- **G.** Create a file  <br>
+- **H.** Create a folder  <br>
+- **I.** Publish the Workspace to a GIST <br>
+- **J.** Load a local file into the current Workspace<br>
 
-Click on the new file icon (**E.**), an input for a new the file’s name will appear in the **Explorer**. Once a name is entered, the new empty file will open in the Editor.
+## Workspaces with Templates
+When you create a new Workspace, a modal comes up where you choose which template of files to include.
+
+![](images/a-workspace-templates.png)
+
+## Creating new files
+
+There are 2 ways of creating files.  The first is to click on the new file icon (**G.** in fig.1), an input for a new the file’s name will appear in the **File Explorer**. Once a name is entered, the new empty file will open in the Editor.
+
+The second way of creating a file is to right click on a file or folder to get a popup menu.
 
 ![](images/a-file-explorer-new-file2.png)
 
-When you click on the new file icon, the new file will be placed in the currently selected folder. If a file and not a folder is selected then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
-
-Create a folder
----------------
-
-The icon (marked **F.** above) creates a new folder in the current workspace.
+The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
 
 Publish to Gist
 ---------------
 
-The icon (marked **G.** above) publishes all files from the current Workspace to a gist.  Only file in the root of **browser** will be published.  Files in subfolders will not be published to the Gist.
-
-Gist API **requires** users to be authenticated to be able to publish a gist.  
+The icon (marked **I.** in fig.1) publishes all files from the current Workspace to a gist. **The Gist API requires users to be authenticated** to be able to publish a gist.  
 
 Click [this link](https://github.com/settings/tokens) to Github tokens setup and select Generate new token. Then check the **Create gists** checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token.
 
-Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save. **For the moment**, after saving, in order for the token to be registered, you will need to refresh Remix. In an upcoming release, it will not be necessary to do the refresh.
+Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save.
 
-Upload to Browser Storage
----------------
+You can also publish by right clicking on the file or folder.
 
-Click the icon marked **H.** to upload a file from your computer's file system to your browser's local storage.
+Right-Click on a File or Folder
+-------------------------------
 
-Right-Click on a File
-----------------------
+![](images/a-fe-rtclick-file.png)
 
-![](images/a-file-ex-rt-click.png)
-
-Right-clicking on a file will give you a context menu — offering you the possibility to delete or rename the file. 
-
-You can rename or delete a selected file or a folder. You can also create a folder. 
-
-Right-Click on a Folder
-------------------------
-To create a file with the context menu, right-click on a folder to get the **Create File** option. A file will be created inside that folder. 
-
-![](images/a-file-ex-rt-click-folder.png)
+Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder. 
 
 The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive).  
 
-**Note:** When working with RemixD, you need to open and close the **localhost** folder to refresh the view.
+**Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view.
+
+Right-Click on a Solidity file
+-------------------------------
+Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file.
+
+![](images/a-fe-rtclick-sol-file.png)
 
 Right-Click on a Script
 ------------------------
 
-![](images/a-file-ex-rt-click-script.png)
+![](images/a-fe-rtclick-script.png)
 
-Right-click on any file with a .js extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
+Right-click on any file with a .js or .ts extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
 1. Click on the script to make it the active tab in the editor 
 2. Input the command `remix.exeCurrent()` in the console.
