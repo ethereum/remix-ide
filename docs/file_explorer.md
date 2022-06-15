@@ -9,11 +9,11 @@ The File Explorer is for managing Workspaces and files.  There is also a context
 
 File Storage
 ------------
-By default, Remix IDE stores files in **IndexDB**.  
+By default, Remix IDE stores files in **IndexedDB**.  
 
 Coding in Remix IDE Online is different from writing in a Google doc. Yes, both are written in a browser but a Google doc saves your work to Google’s servers, and Remix—out of the box—only saves your code to your browser’s storage. So tread carefully, browser storage is not permanent!
 
-**Important Note:** Clearing the browser storage & IndexDB will **permanently delete** all the files stored there. 
+**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. 
 
 ## File Storage outside of the browser and Version Control
 
