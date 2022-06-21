@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,166 +17,193 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../file_explorer.md:1
-msgid "File Explorers"
+msgid "File Explorer"
 msgstr ""
 
 #: ../../file_explorer.md:4
-msgid "To get to the File Explorers module - click the file explorers icon."
+msgid "To get to the File Explorer module - click the File Explorer icon."
 msgstr ""
 
 #: ../../file_explorer.md:8
-msgid "File Storage"
+msgid "The File Explorer is for managing Workspaces and files.  There is also a context menu that pops up when you right click on a file or folder."
 msgstr ""
 
 #: ../../file_explorer.md:10
-msgid "By default, Remix IDE stores files in Workspaces which are folders in your browser's local storage."
+msgid "File Storage"
 msgstr ""
 
 #: ../../file_explorer.md:12
-msgid "Important Note: Clearing the browser storage will permanently delete all the files stored there."
+msgid "By default, Remix IDE stores files in IndexedDB."
 msgstr ""
 
 #: ../../file_explorer.md:14
-msgid "If you want to use browser storage, but also to save a git repo on IPFS, use the DGIT plugin."
+msgid "Coding in Remix IDE Online is different from writing in a Google doc. Yes, both are written in a browser but a Google doc saves your work to Google’s servers, and Remix—out of the box—only saves your code to your browser’s storage. So tread carefully, browser storage is not permanent!"
 msgstr ""
 
 #: ../../file_explorer.md:16
-msgid "If you want to store files on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
+msgid "Important Note: Clearing the browser storage & IndexedDB will permanently delete all the files stored there."
 msgstr ""
 
 #: ../../file_explorer.md:18
-msgid "Workspaces"
+msgid "File Storage outside of the browser and Version Control"
 msgstr ""
 
 #: ../../file_explorer.md:20
-msgid "Workspaces are new as of Remix IDE v0.11.0..  Workspaces should help clean up & organize your Files Explorer by allowing you to separate your projects."
+msgid "If you want to use browser storage, but also to save a git repo on IPFS, use the DGIT plugin."
 msgstr ""
 
 #: ../../file_explorer.md:22
-msgid "The Files Explorer's Workspaces all have a contracts folder, a scripts folder, a tests folder, and a README.txt."
+msgid "If you want to store files on your computer's filesystem, use Remixd or use the desktop version of Remix IDE. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix IDE in an Electron app."
 msgstr ""
 
 #: ../../file_explorer.md:24
-msgid "Migrating your files to Workspaces"
+msgid "Also see this article about securing your files in Remix"
 msgstr ""
 
-#: ../../file_explorer.md:25
-msgid "If you had files stored in browser storage in versions of Remix before v0.11.0 to get these files, you will need to click on the Migrate old filesystem to workspace link the Home Tab.  After you click on that, you'll get a modal asking if you want to migrate and download or just migrate the files."
-msgstr ""
-
-#: ../../file_explorer.md:29
-msgid "Also note the Download all files link on the left of the Home tab. This link will download all files in your browser's local storage to your downloads folder."
+#: ../../file_explorer.md:26
+msgid "File Explorer Tour"
 msgstr ""
 
 #: ../../file_explorer.md:31
-msgid "Files Explorer Tour"
+msgid "The book icon - F. is the link to the documentation (this page)."
 msgstr ""
 
-#: ../../file_explorer.md:36
-msgid "We will start by reviewing the icons in the image above."
+#: ../../file_explorer.md:33
+msgid "Workspaces"
+msgstr ""
+
+#: ../../file_explorer.md:34
+msgid "Workspaces help to organize your files by allowing you to separate your projects. Here are the basic operations of managing a Workspace. The letters in bold below refer to the labels in fig. 1."
+msgstr ""
+
+#: ../../file_explorer.md:37
+msgid "A. Add a Workspace <br>"
 msgstr ""
 
 #: ../../file_explorer.md:38
-msgid "The book icon - A. is the link to the documentation (this page)."
+msgid "B. Rename a Workspace  <br>"
+msgstr ""
+
+#: ../../file_explorer.md:39
+msgid "C. Delete a Workspace  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:40
-msgid "Workspace Manipulation"
+msgid "D. Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called .workspaces that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:41
-msgid "Add a Workspace B. <br> Rename a Workspace C. <br> Delete a Workspace D. <br>"
+msgid "E. Upload the Workspaces backup made from the previous icon. <br>"
 msgstr ""
 
-#: ../../file_explorer.md:45
+#: ../../file_explorer.md:42
+msgid "K. Choose a Workspace"
+msgstr ""
+
+#: ../../file_explorer.md:43
 msgid "File Manipulation"
 msgstr ""
 
+#: ../../file_explorer.md:44
+msgid "The letters in bold below refer to the labels in fig. 1."
+msgstr ""
+
+#: ../../file_explorer.md:46
+msgid "G. Create a file  <br>"
+msgstr ""
+
 #: ../../file_explorer.md:47
-msgid "Click on the new file icon (E.), an input for a new the file’s name will appear in the Explorer. Once a name is entered, the new empty file will open in the Editor."
+msgid "H. Create a folder  <br>"
+msgstr ""
+
+#: ../../file_explorer.md:48
+msgid "I. Publish the Workspace to a GIST <br>"
+msgstr ""
+
+#: ../../file_explorer.md:49
+msgid "J. Load a local file into the current Workspace<br>"
 msgstr ""
 
 #: ../../file_explorer.md:51
-msgid "When you click on the new file icon, the new file will be placed in the currently selected folder. If a file and not a folder is selected then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
+msgid "Workspaces with Templates"
 msgstr ""
 
-#: ../../file_explorer.md:53
-msgid "Create a folder"
+#: ../../file_explorer.md:52
+msgid "When you create a new Workspace, a modal comes up where you choose which template of files to include."
 msgstr ""
 
 #: ../../file_explorer.md:56
-msgid "The icon (marked F. above) creates a new folder in the current workspace."
+msgid "Creating new files"
 msgstr ""
 
 #: ../../file_explorer.md:58
+msgid "There are 2 ways of creating files.  The first is to click on the new file icon (G. in fig.1), an input for a new the file’s name will appear in the File Explorer. Once a name is entered, the new empty file will open in the Editor."
+msgstr ""
+
+#: ../../file_explorer.md:60
+msgid "The second way of creating a file is to right click on a file or folder to get a popup menu."
+msgstr ""
+
+#: ../../file_explorer.md:64
+msgid "The new file will be placed in the currently selected folder of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
+msgstr ""
+
+#: ../../file_explorer.md:66
 msgid "Publish to Gist"
 msgstr ""
 
-#: ../../file_explorer.md:61
-msgid "The icon (marked G. above) publishes all files from the current Workspace to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be published to the Gist."
+#: ../../file_explorer.md:69
+msgid "The icon (marked I. in fig.1) publishes all files from the current Workspace to a gist. The Gist API requires users to be authenticated to be able to publish a gist."
 msgstr ""
 
-#: ../../file_explorer.md:63
-msgid "Gist API requires users to be authenticated to be able to publish a gist."
-msgstr ""
-
-#: ../../file_explorer.md:65
+#: ../../file_explorer.md:71
 msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
 msgstr ""
 
-#: ../../file_explorer.md:67
-msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save. For the moment, after saving, in order for the token to be registered, you will need to refresh Remix. In an upcoming release, it will not be necessary to do the refresh."
+#: ../../file_explorer.md:73
+msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save."
 msgstr ""
 
-#: ../../file_explorer.md:69
-msgid "Upload to Browser Storage"
+#: ../../file_explorer.md:75
+msgid "You can also publish by right clicking on the file or folder."
 msgstr ""
 
-#: ../../file_explorer.md:72
-msgid "Click the icon marked H. to upload a file from your computer's file system to your browser's local storage."
+#: ../../file_explorer.md:77
+msgid "Right-Click on a File or Folder"
 msgstr ""
 
-#: ../../file_explorer.md:74
-msgid "Right-Click on a File"
+#: ../../file_explorer.md:82
+msgid "Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder."
 msgstr ""
 
-#: ../../file_explorer.md:79
-msgid "Right-clicking on a file will give you a context menu — offering you the possibility to delete or rename the file."
-msgstr ""
-
-#: ../../file_explorer.md:81
-msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr ""
-
-#: ../../file_explorer.md:83
-msgid "Right-Click on a Folder"
-msgstr ""
-
-#: ../../file_explorer.md:85
-msgid "To create a file with the context menu, right-click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr ""
-
-#: ../../file_explorer.md:89
+#: ../../file_explorer.md:84
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
 msgstr ""
 
-#: ../../file_explorer.md:91
-msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
+#: ../../file_explorer.md:86
+msgid "Note: When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of localhost workspace to refresh the view."
 msgstr ""
 
-#: ../../file_explorer.md:93
+#: ../../file_explorer.md:88
+msgid "Right-Click on a Solidity file"
+msgstr ""
+
+#: ../../file_explorer.md:90
+msgid "Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file."
+msgstr ""
+
+#: ../../file_explorer.md:94
 msgid "Right-Click on a Script"
 msgstr ""
 
-#: ../../file_explorer.md:98
-msgid "Right-click on any file with a .js extension to get the Run option in the context menu to run the script.  The Run in the context menu is a shortcut.  The other way to get a script to run is to:"
-msgstr ""
-
 #: ../../file_explorer.md:99
-msgid "Click on the script to make it the active tab in the editor"
+msgid "Right-click on any file with a .js or .ts extension to get the Run option in the context menu to run the script.  The Run in the context menu is a shortcut.  The other way to get a script to run is to:"
 msgstr ""
 
 #: ../../file_explorer.md:100
-msgid "Input the command remix.exeCurrent() in the console."
+msgid "Click on the script to make it the active tab in the editor"
 msgstr ""
 
+#: ../../file_explorer.md:101
+msgid "Input the command remix.exeCurrent() in the console."
+msgstr ""
