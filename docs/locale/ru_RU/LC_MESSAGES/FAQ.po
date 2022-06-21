@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -21,167 +21,187 @@ msgstr ""
 msgid "FAQ"
 msgstr "ЧаВо"
 
-#: ../../FAQ.md:4
+#: ../../FAQ.md:3
+msgid "Supported devices & Browsers"
+msgstr ""
+
+#: ../../FAQ.md:5
+msgid "Q: What browsers will Remix work on?"
+msgstr ""
+
+#: ../../FAQ.md:7
+msgid "A: We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
+msgstr ""
+
+#: ../../FAQ.md:9
+msgid "Q: Will Remix work on a tablet or mobile device?"
+msgstr ""
+
+#: ../../FAQ.md:11
+msgid "A: We do not support the use of Remix on tablets or mobile phones."
+msgstr ""
+
+#: ../../FAQ.md:13
 msgid "Solidity compiler"
 msgstr "Компилятор Solidity"
 
-#: ../../FAQ.md:6
+#: ../../FAQ.md:15
 msgid "Q: Error: compiler might be in a non-sane state"
 msgstr "В: Ошибка: компилятор может быть в неисправном состоянии"
 
-#: ../../FAQ.md:13
+#: ../../FAQ.md:22
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
 msgstr "О: У старой версии компилятора solidity возникает такая проблема с браузером Chrome. Поменяйте версию компилятора в Плагине Solidity на более новую или воспользуйтесь другим браузером."
 
-#: ../../FAQ.md:16
+#: ../../FAQ.md:25
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
 msgstr "В: У меня возникает проблема с превышением максимального количества запусков и другими ошибками, не могу скомпилировать."
 
-#: ../../FAQ.md:18
+#: ../../FAQ.md:27
 msgid "A:  Try a different browser or a newer solidity compiler version."
 msgstr "О: Попробуйте другой браузер или более новую версию компилятора solidity."
 
-#: ../../FAQ.md:20
+#: ../../FAQ.md:29
 msgid "Q: How to verify a contract that imports other contracts?"
 msgstr "В: Как подтвердить контракт, который импортирует другие контракты?"
 
-#: ../../FAQ.md:22
-msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr "О: Проверяющий инструмент не выполняет рекурсивную проверку операторов импорта в контракте. Так что можно проверить только \"прямые\" контракты."
+#: ../../FAQ.md:31
+msgid "A:  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
+msgstr ""
 
-#: ../../FAQ.md:24
+#: ../../FAQ.md:33
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
 msgstr "Есть плагин Flattener, который объединит весь исходный и импортированный код в один файл."
 
-#: ../../FAQ.md:26
+#: ../../FAQ.md:35
 msgid "Deploy & Run"
 msgstr "Развертывание и запуск"
 
-#: ../../FAQ.md:28
+#: ../../FAQ.md:37
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
 msgstr "В: В своем приложении я использую конечную точку Infura, но при попытке выполнить развертывание на этой конечной точке в remix IDE, выбирая \"web3 provider\" и добавляя свою конечную точку, мне сообщается, что она не может подключиться."
 
-#: ../../FAQ.md:30
+#: ../../FAQ.md:39
 msgid "A: If the endpoint you are using is http, it won't work."
 msgstr "О: Если вы используете конечную точку http, она не будет работать."
 
-#: ../../FAQ.md:32
+#: ../../FAQ.md:41
 msgid "Q: Where is deploy button?"
 msgstr "В: Где кнопка \"развернуть\"?"
 
-#: ../../FAQ.md:34
+#: ../../FAQ.md:43
 msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
 msgstr "О: Она находится в модуле Развертывание и запуск. Если вы не активировали этот модуль, вы должны сделать это в Диспетчере плагинов. Вы также можете активировать всё, что вам нужно для работы с Solidity, на стартовой странице (нажмите на логотип remix в левом верхнем углу), нажав кнопку \"Solidity\" в разделе \"среда\"."
 
-#: ../../FAQ.md:37
+#: ../../FAQ.md:46
 msgid "Q: How to pass a tuple to a public function in Remix?"
 msgstr "В: Как передать кортеж публичной функции в Remix?"
 
-#: ../../FAQ.md:39
+#: ../../FAQ.md:48
 msgid "A: Pass it as an array []."
 msgstr "О: Передайте его как массив []."
 
-#: ../../FAQ.md:41
+#: ../../FAQ.md:50
 msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
 msgstr "В: Как ввести структуру в качестве входных данных для параметра функции в модуле Развертывание и запуск?"
 
-#: ../../FAQ.md:43
+#: ../../FAQ.md:52
 msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
 msgstr "О: Для введения структуры, как и кортежа, передайте его как массив []. Ещё вам нужно вставить в строку:"
 
-#: ../../FAQ.md:45
+#: ../../FAQ.md:54
 msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
 msgstr "pragma experimental ABIEncoderV2; в верхней части файла Solidity."
 
-#: ../../FAQ.md:47
+#: ../../FAQ.md:56
 msgid "For example, here's a solidity file with a struct is an input parameter."
 msgstr "Например, вот файл solidity, структура которого является входным параметром."
 
-#: ../../FAQ.md:79
+#: ../../FAQ.md:88
 msgid "The input of initPeepToPeeps takes a struct.  If you input [1,2] the transaction will go through."
 msgstr "Ввод initPeepToPeeps принимает структуру. Если вы введете [1,2], операция пройдёт."
 
-#: ../../FAQ.md:83
+#: ../../FAQ.md:92
 msgid "General"
 msgstr "Общие"
 
-#: ../../FAQ.md:85
+#: ../../FAQ.md:94
 msgid "Q: Where do plugin developers go with their questions?"
 msgstr "В: Где разработчикам плагинов задавать вопросы?"
 
-#: ../../FAQ.md:87
+#: ../../FAQ.md:96
 msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
 msgstr "О: В комнате разработчиков плагинов Remix в Gitter https://gitter.im/ethereum/remix-dev-plugin"
 
-#: ../../FAQ.md:89
-msgid "Analytics"
-msgstr ""
-
-#: ../../FAQ.md:91
-msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
-msgstr ""
-
-#: ../../FAQ.md:93
-msgid "A: We want to know:"
-msgstr ""
-
-#: ../../FAQ.md:95
-msgid "Which plugins get activated & deactivated"
-msgstr ""
-
-#: ../../FAQ.md:96
-msgid "If users check the box to publish a contract's metadata when deploying"
-msgstr ""
-
-#: ../../FAQ.md:97
-msgid "Which themes are used/used most/not used at all"
-msgstr ""
-
 #: ../../FAQ.md:98
-msgid "The usage of the links to documentation"
-msgstr ""
+msgid "Analytics"
+msgstr "Аналитика"
 
-#: ../../FAQ.md:99
-msgid "On the homepage, which file importing buttons are used"
-msgstr ""
+#: ../../FAQ.md:100
+msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
+msgstr "Вопрос: Какую информацию Remix сохраняет, когда включена Matomo Analytics?"
 
-#: ../../FAQ.md:101
-msgid "Q: Is it opt-in or opt-out?"
-msgstr ""
+#: ../../FAQ.md:102
+msgid "A: We want to know:"
+msgstr "Ответ: Мы хотим знать:"
 
-#: ../../FAQ.md:103
-msgid "A: We use Matomo as an opt-in analytics platform."
-msgstr ""
+#: ../../FAQ.md:104
+msgid "Which plugins get activated & deactivated"
+msgstr "Какие плагины активируются и деактивируются"
 
 #: ../../FAQ.md:105
-msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
-msgstr ""
+msgid "If users check the box to publish a contract's metadata when deploying"
+msgstr "Если пользователи устанавливают флажок для публикации метаданных контракта при развертывании"
+
+#: ../../FAQ.md:106
+msgid "Which themes are used/used most/not used at all"
+msgstr "Какие темы используются / используются чаще всего / не используются вообще"
 
 #: ../../FAQ.md:107
+msgid "The usage of the links to documentation"
+msgstr "Использование ссылок на документацию"
+
+#: ../../FAQ.md:108
+msgid "On the homepage, which file importing buttons are used"
+msgstr "На главной странице, какие кнопки импорта файлов используются"
+
+#: ../../FAQ.md:110
+msgid "Q: Is it opt-in or opt-out?"
+msgstr "Вопрос: Это отказ от участия или отказ от участия?"
+
+#: ../../FAQ.md:112
+msgid "A: We use Matomo as an opt-in analytics platform."
+msgstr "Ответ: Мы используем Matomo в качестве аналитической платформы для подписки."
+
+#: ../../FAQ.md:114
+msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
+msgstr "Вопрос: Где хранится информация? Передается ли эта информация третьим лицам?"
+
+#: ../../FAQ.md:116
 msgid "A: All data collected through Matomo is stored on our own server. No data is given to third parties."
-msgstr ""
+msgstr "Ответ: Все данные, собранные через Matomo, хранятся на нашем собственном сервере. Никакие данные не передаются третьим лицам."
 
-#: ../../FAQ.md:109
+#: ../../FAQ.md:118
 msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
-msgstr ""
+msgstr "Мы уважаем вашу конфиденциальность и не собираем и не храним никакой личной информации (PII)."
 
-#: ../../FAQ.md:111
+#: ../../FAQ.md:120
 msgid "Q: What does Remix do with this info?"
-msgstr ""
+msgstr "Вопрос: Что Remix делает с этой информацией?"
 
-#: ../../FAQ.md:113
+#: ../../FAQ.md:122
 msgid "A: Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
-msgstr ""
+msgstr "Ответ: Наша цель - понять, сколько у нас пользователей, какие плагины люди используют, к чему не привыкают, что не используется в полной мере."
 
-#: ../../FAQ.md:115
+#: ../../FAQ.md:124
 msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
 msgstr ""
 
-#: ../../FAQ.md:117
+#: ../../FAQ.md:126
 msgid "Q: After I agree opt-in, can I change my mind?"
 msgstr ""
 
-#: ../../FAQ.md:119
+#: ../../FAQ.md:128
 msgid "A: You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr ""
 
