@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:55\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr "低级交互"
 
 #: ../../udapp.md:60
 msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the receive() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
-msgstr ""
+msgstr "低级交互用于通过 recieve() 或 fallback() 函数将资金或 calldata ，或资金和 calldata 发送到合约。 通常，如果您遵循升级或代理模式，您应该只需要实现回退功能。"
 
 #: ../../udapp.md:62
 msgid "The low level interactions section is below the functions in each deployed contract."
