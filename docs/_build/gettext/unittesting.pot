@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -219,3 +219,4 @@ msgstr ""
 #: ../../unittesting.md:159
 msgid "While a test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin, do not worry, this will have no bearing on its success with Solidity Unit Testing plugin."
 msgstr ""
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-05-19 15:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,3 +183,4 @@ msgstr ""
 #: ../../udapp.md:139
 msgid "The function fertilizer accepts a single parameter of the type Garden. The type Garden is a struct. Structs are wrapped in square brackets.  Inside Garden is an array that is an array of structs named theFlowers. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
 msgstr ""
+
