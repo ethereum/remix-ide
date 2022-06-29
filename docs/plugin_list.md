@@ -105,7 +105,13 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>Profile gas costs for every transaction you execute.  Total execution costs as well as per line costs are displayed.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/gas-profiler/profile.json): gasProfiler
 <br>[Documentation](https://github.com/EdsonAlcala/remix-gas-profiler)
-<br>[Make an issue](/issues)  EDIT
+<br>[Make an issue](/issues)
+
+**Klaytn** &nbsp; ![](images/pi-klaytn.png)
+<br>Deploy & interact with smart contracts to the Klaytn public network, local klaytn nodes.
+<br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin
+<br>[Documentation](https://github.com/klaytn-ozys/plug-and-klay)
+<br>[Make an issue](https://github.com/klaytn-ozys/plug-and-klay/issues)
 
 **Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials
 <br>Tutorials that contain quizes that teach users Solidity and Remix features.
