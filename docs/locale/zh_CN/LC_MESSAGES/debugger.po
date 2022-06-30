@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: ../../debugger.md:59
 msgid "Solidity Locals"
-msgstr ""
+msgstr "Solidity Locals"
 
 #: ../../debugger.md:60
 msgid "The Solidity Locals are the local variables inside a function."
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../debugger.md:64
 msgid "Solidity State"
-msgstr ""
+msgstr "Solidity State"
 
 #: ../../debugger.md:65
 msgid "These are the state variables of the contract."
@@ -191,7 +191,7 @@ msgstr ""
 
 #: ../../debugger.md:79
 msgid "Stack"
-msgstr ""
+msgstr "堆栈"
 
 #: ../../debugger.md:80
 msgid "This panel shows the EVM Stack."
@@ -203,7 +203,7 @@ msgstr ""
 
 #: ../../debugger.md:85
 msgid "Memory"
-msgstr ""
+msgstr "内存"
 
 #: ../../debugger.md:87
 msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. Reads are limited to a width of 256 bits while writes can be either 8 bits or 256 bits wide."
@@ -235,7 +235,7 @@ msgstr ""
 
 #: ../../debugger.md:106
 msgid "Call Stack"
-msgstr ""
+msgstr "调用堆栈"
 
 #: ../../debugger.md:107
 msgid "All computations are performed on a data array called the call stack. It has a maximum size of 1024 elements and contains words of 256 bits."
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../debugger.md:110
 msgid "Call Data"
-msgstr ""
+msgstr "调用数据"
 
 #: ../../debugger.md:111
 msgid "The call data contains the functions parameters."
@@ -267,7 +267,7 @@ msgstr ""
 
 #: ../../debugger.md:122
 msgid "Breakpoints"
-msgstr ""
+msgstr "断点"
 
 #: ../../debugger.md:123
 msgid "Breakpoints can be placed in the gutter of the Editor to pause the debugger."

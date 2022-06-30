@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -102,6 +102,6 @@ msgid "Themes"
 msgstr "Thèmes"
 
 #: ../../layout.md:52
-msgid "So you want to work on Remix with a dark theme or a gray theme or just a different theme that the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes."
+msgid "So you want to work on Remix with a dark theme or a gray theme or just a different theme than the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes."
 msgstr ""
 

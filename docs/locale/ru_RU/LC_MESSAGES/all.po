@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -671,8 +671,8 @@ msgid "Remix also supports testing, debugging and deploying of smart contracts a
 msgstr "Remix также поддерживает тестирование, отладку и развертывание смарт-контрактов и многое другое."
 
 #: ../../index.rst:9
-msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr "Проект Remix со всеми его функциями доступен по адресу `remix.ethereum.org <http://remix.ethereum.org>`__, а дополнительную информацию можно найти в этих документах. Наш инструмент IDE доступен в репозитории GitHub <https://github.com/ethereum/remix-ide>`__."
+msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
+msgstr ""
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
@@ -687,8 +687,8 @@ msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
 msgstr "`Документация Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
-msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ — Версия, в которой мы тестируем новый релиз Remix (не стабильный!)."
+msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgstr ""
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"

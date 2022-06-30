@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -216,7 +216,7 @@ msgstr "Construction de l'artefact"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
-msgstr ""
+msgstr "Lorsqu'une compilation réussit, Remix crée deux fichiers JSON pour chaque contrat compilé. L'un de ces fichiers capture la sortie de la compilation Solidity. Ce fichier sera nommé contractName_metadata.json."
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
@@ -304,15 +304,15 @@ msgstr ""
 
 #: ../../create_deploy.md:28
 msgid "Sample contract"
-msgstr ""
+msgstr "Contrat d'exemple"
 
 #: ../../create_deploy.md:57
 msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
-msgstr ""
+msgstr "Ce contrat est très basique. L'objectif est de commencer rapidement à créer et à interagir avec un exemple de contrat."
 
 #: ../../create_deploy.md:60
 msgid "Deploying an instance"
-msgstr ""
+msgstr "Déploiement d'une instance"
 
 #: ../../create_deploy.md:63
 msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
@@ -372,7 +372,7 @@ msgstr ""
 
 #: ../../debugger.md:1
 msgid "Debugger"
-msgstr ""
+msgstr "Débogueur"
 
 #: ../../debugger.md:4
 msgid "This module allows you to debug the transaction. It can be used to deploy transactions created from Remix and already mined transactions. (debugging works only if the current environment provides the necessary features)."
@@ -392,11 +392,11 @@ msgstr ""
 
 #: ../../FAQ.md:1
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: ../../FAQ.md:4
 msgid "Solidity compiler"
-msgstr ""
+msgstr "Compilateur Solidity"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
@@ -428,7 +428,7 @@ msgstr ""
 
 #: ../../FAQ.md:26
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Déployer & Exécuter"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
@@ -476,7 +476,7 @@ msgstr ""
 
 #: ../../FAQ.md:83
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: ../../FAQ.md:85
 msgid "Q: Where do plugin developers go with their questions?"
@@ -492,7 +492,7 @@ msgstr ""
 
 #: ../../file_explorer.md:1
 msgid "File Explorers"
-msgstr ""
+msgstr "Explorateur de fichiers"
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
@@ -524,7 +524,7 @@ msgstr ""
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
-msgstr ""
+msgstr "Créer un nouveau fichier"
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
@@ -532,7 +532,7 @@ msgstr ""
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
-msgstr ""
+msgstr "Publier sur le Gist"
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
@@ -548,7 +548,7 @@ msgstr ""
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
-msgstr ""
+msgstr "Créer un dossier"
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
@@ -556,7 +556,7 @@ msgstr ""
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr ""
+msgstr "Menu contextuel (Clic droit)"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
@@ -671,8 +671,8 @@ msgid "Remix also supports testing, debugging and deploying of smart contracts a
 msgstr "Remix prend également en charge les tests, le débogage, le déploiement de contrats intelligents et bien plus encore."
 
 #: ../../index.rst:9
-msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur le site `remix.ethereum.org <http://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans cette documentation. Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
+msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
+msgstr ""
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
@@ -687,8 +687,8 @@ msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
 msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
-msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ - La version où nous testons la nouvelle version de Remix (non stable !)."
+msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgstr ""
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
@@ -1176,7 +1176,7 @@ msgstr ""
 
 #: ../../remixd.md:13
 msgid "remixd Installation"
-msgstr ""
+msgstr "Installation remixd"
 
 #: ../../remixd.md:14
 msgid "remixd can be globally installed using the following command: npm install -g remixd"
@@ -1188,7 +1188,7 @@ msgstr ""
 
 #: ../../remixd.md:20
 msgid "remixd Command"
-msgstr ""
+msgstr "Commande remixd"
 
 #: ../../remixd.md:21
 msgid "From the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
@@ -1216,7 +1216,7 @@ msgstr ""
 
 #: ../../remixd.md:36
 msgid "Warning!"
-msgstr ""
+msgstr "Attention !"
 
 #: ../../remixd.md:37
 msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
@@ -1296,7 +1296,7 @@ msgstr ""
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr ""
+msgstr "Autre"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
@@ -1308,7 +1308,7 @@ msgstr ""
 
 #: ../../run.md:1
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Déployer & Exécuter"
 
 #: ../../run.md:4
 msgid "The Deploy & Run module allows you to send transactions to the current environment."
@@ -1320,7 +1320,7 @@ msgstr ""
 
 #: ../../run.md:10
 msgid "Environment"
-msgstr ""
+msgstr "Environnement"
 
 #: ../../run.md:13
 msgid "JavaScript VM: All the transactions will be executed in a sandbox blockchain in the browser. This means nothing will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved."
@@ -1392,7 +1392,7 @@ msgstr ""
 
 #: ../../run.md:55
 msgid "Account:"
-msgstr ""
+msgstr "Compte :"
 
 #: ../../run.md:57
 msgid "Account: the list of accounts associated with the current environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
@@ -1400,7 +1400,7 @@ msgstr ""
 
 #: ../../run.md:60
 msgid "Gas Limit:"
-msgstr ""
+msgstr "Limite de gaz :"
 
 #: ../../run.md:62
 msgid "This sets the maximum amount of gas that will be allowed for all the transactions created in Remix."
@@ -1408,7 +1408,7 @@ msgstr ""
 
 #: ../../run.md:65
 msgid "Value:"
-msgstr ""
+msgstr "Valeur :"
 
 #: ../../run.md:67
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is NOT for gas."
@@ -1524,7 +1524,7 @@ msgstr ""
 
 #: ../../settings.md:1
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #: ../../settings.md:4
 msgid "To get to Settings click the gear a the very bottom of the icon panel."
@@ -2444,7 +2444,7 @@ msgstr ""
 
 #: ../../unittesting_examples.md:262
 msgid "4. Testing a method involving msg.value"
-msgstr ""
+msgstr "4. Tester une méthode impliquant <code>msg.value</code>"
 
 #: ../../unittesting_examples.md:263
 msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as msg.value. Sometimes, multiple calculations in a method are performed based on msg.value which can be tested with various values using Remix's Custom transaction context. See the example:"

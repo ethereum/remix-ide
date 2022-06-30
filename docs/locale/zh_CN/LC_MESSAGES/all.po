@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:53\n"
+"PO-Revision-Date: 2022-06-21 15:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -671,8 +671,8 @@ msgid "Remix also supports testing, debugging and deploying of smart contracts a
 msgstr "Remix 还支持智能合约的测试、调试和部署等等。"
 
 #: ../../index.rst:9
-msgid "Our Remix project with all its features is available at `remix.ethereum.org <http://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr "`remix.ethereum.org <http://remix.ethereum.org>`__ 上提供了我们的 Remix 项目及其所有功能，更多信息可以在这些文档中找到。 我们的 IDE 工具可在`我们的 GitHub 存储库 <https://github.com/ethereum/remix-ide>`__ 中获得。"
+msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
+msgstr "`remix.ethereum.org <https://remix.ethereum.org>`__ 上提供了我们的 Remix 项目及其所有功能，更多信息可以在这些文档中找到。 我们的 IDE 工具可在`我们的 GitHub 存储库 <https://github.com/ethereum/remix-ide>`__ 中获得。"
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
@@ -687,8 +687,8 @@ msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
 msgstr "`Solidity 文档 <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
-msgid "`Remix alpha <http://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr "`Remix alpha <http://remix-alpha.ethereum.org>`__ - 我们测试新 Remix 版本的版本(不稳定！)。"
+msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgstr "`Remix alpha <https://remix-alpha.ethereum.org>`__ - 我们测试新 Remix 发行版本的版本(不稳定！)。"
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"

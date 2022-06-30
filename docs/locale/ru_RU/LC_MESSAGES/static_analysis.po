@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:54\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:23\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -270,7 +270,7 @@ msgid "String Length: Bytes length != String length"
 msgstr ""
 
 #: ../../static_analysis.md:272
-msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
 msgstr ""
 
 #: ../../static_analysis.md:282

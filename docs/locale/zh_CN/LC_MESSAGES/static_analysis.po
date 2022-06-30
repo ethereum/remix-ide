@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
-"PO-Revision-Date: 2022-05-19 13:54\n"
+"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"PO-Revision-Date: 2022-06-21 15:23\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../static_analysis.md:19
 msgid "By default, all modules are selected for analysing a smart contract."
-msgstr ""
+msgstr "默认情况下，所有模块都选择用于分析智能合约。"
 
 #: ../../static_analysis.md:21
 msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis for last compiled contract by clicking on Run."
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../static_analysis.md:25
 msgid "Run"
-msgstr ""
+msgstr "运行"
 
 #: ../../static_analysis.md:28
 msgid "If Auto run checkbox is checked, analysis will be performed on compiling a contract and result will be shown as badge to the plugin icon. This number tells warnings count for the contract (e.g; 12 in attached image below) ."
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../static_analysis.md:32
 msgid "Clicking on warning details will highlight the relevant code in the editor."
-msgstr ""
+msgstr "点击警告详情将会在编辑器中突出显示相关的代码。"
 
 #: ../../static_analysis.md:37
 msgid "Analysis Modules"
@@ -270,8 +270,8 @@ msgid "String Length: Bytes length != String length"
 msgstr "String Length：字节长度！=字符串长度"
 
 #: ../../static_analysis.md:272
-msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
-msgstr "字节和字符串长度不一样，因为假设字符串是 UTF-8 编码的(根据 ABI 定义)，因此一个字符不一定会编码在一字节数据中。"
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
+msgstr ""
 
 #: ../../static_analysis.md:282
 msgid "Delete from dynamic array: 'delete' on an array leaves a gap"
