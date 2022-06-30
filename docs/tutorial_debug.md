@@ -31,9 +31,9 @@ contract Donation {
     function moveFund(address payable _to, uint _amount) onlyowner  public {
         uint balance = address(this).balance;
         uint amount = _amount;
-        if (_amount <= balance) {
+        if (amount <= balance) {
             if (_to.send(balance)) {
-                emit fundMoved(_to, _amount);    
+                emit fundMoved(_to, amount);    
             } else {
                revert();
             }
