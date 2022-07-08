@@ -28,7 +28,7 @@ File Explorer Tour
 
 ![](images/a-fe-tour.png)
 
-The book icon - **F.** is the link to the documentation (this page).
+The book icon - **G.** is the link to the documentation (this page).
 
 ### Workspaces
 Workspaces help to organize your files by allowing you to separate your projects.
@@ -39,23 +39,28 @@ Here are the basic operations of managing a Workspace. The letters in bold below
 - **C.** Delete a Workspace  <br>
 -  **D.** Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called **.workspaces** that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>
 - **E.** Upload the Workspaces backup made from the previous icon. <br>
-- **K.** Choose a Workspace 
+- **F.** Clone a repo from Git repository <br>
+- **G.** Link to documentation <br>
+- **J.** Publish the Workspace to a GIST <br>
+- **L.** Choose a Workspace 
 ### File Manipulation
 The letters in bold below refer to the labels in fig. 1.
 
-- **G.** Create a file  <br>
-- **H.** Create a folder  <br>
-- **I.** Publish the Workspace to a GIST <br>
-- **J.** Load a local file into the current Workspace<br>
+- **H.** Create a file  <br>
+- **I.** Create a folder  <br>
+- **K.** Load a local file into the current Workspace<br>
 
 ## Workspaces with Templates
 When you create a new Workspace, a modal comes up where you choose which template of files to include.
 
 ![](images/a-workspace-templates.png)
 
+## Workspaces & cloning a repo
+When you click the **clone** icon (**F.** in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the GIT repo, go to the DGIT plugin.
+
 ## Creating new files
 
-There are 2 ways of creating files.  The first is to click on the new file icon (**G.** in fig.1), an input for a new the file’s name will appear in the **File Explorer**. Once a name is entered, the new empty file will open in the Editor.
+There are 2 ways of creating files.  The first is to click on the new file icon (**H.** in fig.1), an input for a new the file’s name will appear in the **File Explorer**. Once a name is entered, the new empty file will open in the Editor.
 
 The second way of creating a file is to right click on a file or folder to get a popup menu.
 
@@ -66,7 +71,7 @@ The new file will be placed in **the currently selected folder** of the Workspac
 Publish to Gist
 ---------------
 
-The icon (marked **I.** in fig.1) publishes all files from the current Workspace to a gist. **The Gist API requires users to be authenticated** to be able to publish a gist.  
+The icon (marked **J.** in fig.1) publishes all files from the current Workspace to a gist. **The Gist API requires users to be authenticated** to be able to publish a gist.  
 
 Click [this link](https://github.com/settings/tokens) to Github tokens setup and select Generate new token. Then check the **Create gists** checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token.
 
