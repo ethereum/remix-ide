@@ -16,39 +16,34 @@ When you load remix - the icon panel show these icons by default.
 
 ![](images/a-icons-at-load.png)
 
-Everything in remix is now a plugin...  so the **[Plugin Manager](#plugin-manager)** is very important.
-In the old layout, each basic task in remix was separated into the tabs.  Now these tabs are plugins.  
+Everything in Remix is a plugin...  so the **[Plugin Manager](#plugin-manager)** is very important.
 
-But to activate a half a dozen plugins - (or however many you are using) each time the page load is **tedious**.  So learn about the **[Environments](#environments)**.
-
-Homepage
+Home tab
 --------
 
 ![](images/a-hometab.png)
 
-The homepage is located in a tab in the Main Panel.  
+The home tab is located in the Main Panel.  It can be closed.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
-You can also get there by clicking the remix logo at the top of the icon panel.
+The hometab contains links to resouces - including links to these docs as well as our Twitter feed, our Medium blog, gitter chat and more.  There are also shortcuts for loading files into Remix.  
 
-### Environments
-Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a **Solidity** Button and a **Vyper** button.  In the future you will be able to save your own environment.
+### Solidity Environment
+Clicking the **Solidity button** in the featured plugins section of the home tab will **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run module (which are there by default).
 
-To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. 
-![](images/a-plug.png) 
-
-The environment buttons are time & sanity savers - so you don't need to go to the Plugin Manager to get started everytime you load the page.   
-
+To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel.
+![](images/a-plug.png) <br>
+You can also get there by clicking the **More** button in the featured plugin list.
 
 Plugin Manager
 ---------------
 
-In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (yours for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the Plugin Manager.  
+In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on.
 
 The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
 
 Themes
 ---------------
 
-So you want to work on Remix with a dark theme or a gray theme or just a different theme than the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes.
+So you want to work on Remix with a dark theme or a light theme or just a different theme than the one you are currently looking at?  At the bottom of the **Settings** plugin is where you can choose a theme. These are bootstrap based themes.  The Dark and Light theme have been the most customized for Remix.
 
 ![](images/a-themes.png) 
