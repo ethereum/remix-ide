@@ -56,7 +56,12 @@ When you create a new Workspace, a modal comes up where you choose which templat
 ![](images/a-workspace-templates.png)
 
 ## Workspaces & cloning a repo
-When you click the **clone** icon (**F.** in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the GIT repo, go to the DGIT plugin.
+When you click the **clone** icon (**F.** in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the Git repo, go to the DGIT plugin.
+
+## Workspaces with a Git repo
+Workspaces with an associated Git will have the Git icon next to them in the Workspaces select box.
+
+![](images/a-fe-select-git.png)
 
 ## Creating new files
 
