@@ -10,6 +10,22 @@ FAQ
 
 **A:** We do not support the use of Remix on tablets or mobile phones. 
 
+### General
+
+**Q:** Are there keyboard shortcuts in Remix?
+
+**A:** Yes - here is the list of keyboard shortcuts:
+
+`Ctrl+Shift+F` : Opens the File Explorer
+
+`Ctrl+Shift+A` : Opens the Plugin Manager
+
+`Ctrl+S`: Compiles the active Solidity file 
+
+`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)
+
+There is also a list of the shortcuts in the terminal when Remix loads.
+
 ### Solidity compiler
 
 **Q:** Error: compiler might be in a non-sane state
@@ -89,7 +105,7 @@ The input of initPeepToPeeps takes a struct.  If you input
 `[1,2]` the transaction will go through.
 
 
-### General
+### Plugin Developers
 
 **Q:** Where do plugin developers go with their questions?
 
