@@ -65,11 +65,12 @@ Workspaces with an associated Git will have the Git icon next to them in the Wor
 
 ## Creating new files
 
-There are 2 ways of creating files.  The first is to click on the new file icon (**H.** in fig.1), an input for a new the file’s name will appear in the **File Explorer**. Once a name is entered, the new empty file will open in the Editor.
-
-The second way of creating a file is to right click on a file or folder to get a popup menu.
+There are 2 ways of creating files:  
+- The first is to click on the new file icon (**H.** in fig.1), then an input for the new file’s name will appear in the **File Explorer**. Once a name is entered, a new empty file will open in the Editor.  If the file's name is entered **without** a file extension, the extension **.sol** will be appended by default.
 
 ![](images/a-file-explorer-new-file2.png)
+
+- The second way of creating a file is to right click on a file or folder to get a popup menu.
 
 The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
 
