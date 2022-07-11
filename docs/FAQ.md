@@ -24,8 +24,6 @@ FAQ
 
 `Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)
 
-There is also a list of the shortcuts in the terminal when Remix loads.
-
 ### Solidity compiler
 
 **Q:** Error: compiler might be in a non-sane state
