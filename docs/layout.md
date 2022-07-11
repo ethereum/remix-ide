@@ -25,10 +25,10 @@ Home tab
 
 The home tab is located in the Main Panel.  It can be closed.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
-The hometab contains links to resouces - including links to these docs as well as our Twitter feed, our Medium blog, gitter chat and more.  There are also shortcuts for loading files into Remix.  
+The hometab contains links to resources - including links to these docs as well as our Twitter feed, our Medium blog, gitter chat and more.  There are also shortcuts for loading files into Remix.  
 
 ### Solidity Environment
-Clicking the **Solidity button** in the featured plugins section of the home tab will **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run module (which are there by default).
+Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default).
 
 To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel.
 ![](images/a-plug.png) <br>
