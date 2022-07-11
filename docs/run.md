@@ -10,14 +10,26 @@ To use this module, you need to have a contract compiled.  So, if there is a con
 Environment
 ---------
 
--   `JavaScript VM`: All the transactions will be executed in
-    a sandbox blockchain in the browser. This means nothing
-    will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved.
+-   `Remix VM (London)` : For connecting to a sandbox blockchain in the browser. The Remix VM is its own "blockchain" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  The London refers to the London fork of Ethereum.
 
--   `Injected Provider`: Remix will connect to an injected
-    web3 provider. `Metamask` is an example of a provider that inject web3.
+-   `Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum.
 
--   `Web3 Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. 
+-   `Injected Provider - provider name`: For connecting Remix to an injected
+    web3 provider. The most common injected provider is `Metamask`.
+
+-   `Hardhat Provider`: For connecting Remix to a local Hardhat test chain.
+
+-   `Ganache Provider`: For connecting Remix to a local Hardhat test chain.
+
+-   `Foundry Provider`: For connecting Remix to a local Foundry test chain.
+
+-   `WalletConnect`: For using the WalletConnect allowing you to approve transactions on a mobile device.  
+
+-   `External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. 
+
+-   `L2 - Optimism Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Optimism Network's mainnet.
+
+-   `L2 - Arbitrum One Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network.
 
 More about Web3 Provider
 -------------
