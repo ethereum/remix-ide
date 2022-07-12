@@ -10,7 +10,7 @@ To use this module, you need to have a contract compiled.  So, if there is a con
 Environment
 ---------
 
--   `Remix VM (London)` : For connecting to a sandbox blockchain in the browser. The Remix VM is its own "blockchain" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  The London refers to the London fork of Ethereum.
+-   `Remix VM (London)` : For connecting to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own "blockchain" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  The London refers to the London fork of Ethereum. 
 
 -   `Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum.
 
@@ -19,9 +19,9 @@ Environment
 
 -   `Hardhat Provider`: For connecting Remix to a local Hardhat test chain.
 
--   `Ganache Provider`: For connecting Remix to a local Hardhat test chain.
+-   `Ganache Provider`: For connecting Remix to a local Truffle Ganache test chain.
 
--   `Foundry Provider`: For connecting Remix to a local Foundry test chain.
+-   `Foundry Provider`: For connecting Remix to a local Foundry Anvil test chain.
 
 -   `WalletConnect`: For using the WalletConnect allowing you to approve transactions on a mobile device.  
 
