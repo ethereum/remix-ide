@@ -1,4 +1,4 @@
-Truffle Integration
+Truffle
 ============
 
 _(Supported since Remix IDE v0.23.0 and Remixd v0.6.0)_
