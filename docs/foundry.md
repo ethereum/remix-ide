@@ -22,6 +22,17 @@ Once the correct endpoint is filled in the modal, just click on `OK` and the acc
 
 Now, one can start deploying the contract from Remix IDE to the local Anvil node as usual.
 
+Foundry Remappings
+------------------
+
+Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can show issue in normal compilation on Remix IDE.
+
+To support such compilation, Remix suggests to run compilation using compiler config file. Remix adds some default forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd.
+
+![](images/a-foundry-cc.png)
+
+Further, more remappings can be added manually, if required.
+
 
 
 
