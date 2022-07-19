@@ -8,13 +8,14 @@ Remixd and Slither
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
-Since Remixd `v0.5.0`, when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for [Slither](https://github.com/crytic/slither) integration.
+When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html), provided `Python3.6+ (pip3)` should be already there on the System. (Supported since Remixd `v0.6.4`)
 
-> _Slither is a Solidity static analysis framework written in Python 3. It runs a suite of vulnerability detectors, prints visual information about contract details, and provides an API to easily write custom analyses._
+In case, Slither or solc-select installation fails while installing remixd, they can also be installed using the command:
+`remixd -i slither` 
+
+ when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)
 
 The remixd Slither listener is a websocket plugin similar to remixd and is used to perform Slither analysis with Remix IDE. 
-
-It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module.
 
 ![](images/a-slither-remixd.png)
 
@@ -28,6 +29,8 @@ To use Slither analysis with Remix IDE efficiently, following tools should be in
 1. **Slither:** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)
 2. **Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)
 3. **Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)
+
+There are setup with [remixd](https://www.npmjs.com/package/@remix-project/remixd) installation or can be done using `remixd -i slither` commmand.
 
 ### How to use
 
