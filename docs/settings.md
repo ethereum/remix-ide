@@ -15,7 +15,7 @@ To get to **Settings** click the gear at the very bottom of the icon panel.
 
 ### Github Access Token
 
-For creating GISTs as well as using other Github functions, it is necessary to put in an access token.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
+For performing Git operations on Github and for creating GISTs, it is may be necessary to input an access token - a token that has the specific permissions for your git command. Depending on the operation, you may need to also input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 ![](images/a-settings-gh-token.png)
 
