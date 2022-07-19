@@ -1,34 +1,35 @@
 Remixd: Access your Local Filesystem 
 =========================================
+
+[![npm version](https://badge.fury.io/js/%40remix-project%2Fremixd.svg)](https://www.npmjs.com/package/@remix-project/remixd)
+
 To give the Remix IDE (the web app) access to a folder on your computer, you need to use **Remixd** - the plugin along with **remixd** - the cli/npm module. 
 
-The **Remixd** plugin can be activated from the plugin manager or in the **File Explorers** - see the image below.  The **connect to local host** - will activate the **Remixd** plugin.
+The **Remixd** plugin can be activated from the plugin manager or in the **File Explorers** - see the image below.  The **connect to localhost** - will activate the **Remixd** plugin.
 
 ![](images/a-remixd-fe.png)
 
-Once you click **connect to local host** or activate Remixd from the **Plugin Manager**, a modal will come up:
+Once you click **connect to localhost** or activate Remixd from the **Plugin Manager**, a modal will come up:
 
 ![](images/a-remixd-modal.png)
 
 The Remixd plugin is a **websocket plugin** and it has no UI other than this modal dialog box - so you won't see a Remixd icon in the icon panel.
 
-Before you hit **Connect**, you need to install the **remixd** NPM module and run the **remixd** command. 
+Before you hit **Connect**, you need to install the [remixd NPM module](https://www.npmjs.com/package/@remix-project/remixd) and run the **remixd** command. 
 
 The code of `remixd` is
 [here](https://github.com/ethereum/remix-project/tree/master/libs/remixd) .
 
 ### remixd Installation
-**remixd** can be globally installed using the following command:
+
+**remixd** is an NPM module and can be globally installed using the following command:
 `npm install -g @remix-project/remixd`
 
 Or just install it in the directory of your choice by removing the -g flag:
 `npm install @remix-project/remixd`
 
-**NOTE:** The npm address as well as the github repo of remixd have changed - in both cases moving under **remix-project**. 
-- **Github** address is:<br>
-**https://github.com/ethereum/remix-project/tree/master/libs/remixd**
-- **NPM** address is: <br>
-**https://www.npmjs.com/package/@remix-project/remixd**
+**NOTE:** When remixd NPM module is installed, it also installs [Slither](https://github.com/crytic/slither), [solc-select](https://github.com/crytic/solc-select#quickstart) and set [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html) to latest version i.e. 0.8.15 currently, provided `Python3.6+ (pip3)` should be already there on the System. (Supported since Remixd `v0.6.3`). In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither`
+
 
 ### Find your version of remixd
 The command: `remixd -v` or `remixd --version` will return your version number.  
@@ -56,17 +57,25 @@ If you are using Remix from localhost or you are not running the command from yo
 
 #### remixd options  
 
- **\-v, \-\-version**                  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output the version number<br>
- **\-u, \-\-remix-ide <url>**          &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; URL of remix instance allowed to connect to this web sockect connection<br>
-  **\-s, \-\-shared-folder<path>**     &nbsp; &nbsp; Folder to share with Remix IDE<br>
-  **\-r, \-\-read-only**                &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; Treat shared folder as read-only (experimental)<br>
-  **\-h, \-\-help**                     &nbsp;&nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; output usage information<br>
+```
+Usage: remixd [options]
+
+Establish a two-way websocket connection between the local computer and Remix IDE for a folder
+
+Options:
+  -v, --version               output the version number
+  -u, --remix-ide  <url>      URL of remix instance allowed to connect
+  -s, --shared-folder <path>  Folder to share with Remix IDE (Default: CWD)
+  -i, --install <name>        Module name to install locally (Supported: ["slither"])
+  -r, --read-only             Treat shared folder as read-only (experimental)
+  -h, --help                  output usage information
 
 Example:
 
-    remixd -s /path/to/working/directory/ -u http://localhost:8080
+    remixd -s ./shared_project -u http://localhost:8080
+```
 
-
+**NOTE**: `remixd -i slither` can be used to install Slither along with its dependencies
 
 #### HTTP vs HTTPS in the remixd command
 If your browser is on https://remix.ethereum.org (**secure http**) then use https in the command:<br>

@@ -8,7 +8,7 @@ Remixd and Slither
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
-When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html), provided `Python3.6+ (pip3)` should be already there on the System. (Supported since Remixd `v0.6.4`)
+When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html), provided `Python3.6+ (pip3)` should be already there on the System. (Supported since Remixd `v0.6.3`)
 
 In case, Slither or solc-select installation fails while installing remixd, they can also be installed using the command:
 `remixd -i slither` 
