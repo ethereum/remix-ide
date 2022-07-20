@@ -1,4 +1,4 @@
-Run & Deploy (part 2)
+Deploy & Run (part 2)
 =====================
 
 ## Deployed contracts

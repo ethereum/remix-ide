@@ -25,14 +25,14 @@ Environment
 
 -   `WalletConnect`: For using the WalletConnect allowing you to approve transactions on a mobile device.  
 
--   `External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. 
+-   `External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**.
 
 -   `L2 - Optimism Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Optimism Network's mainnet.
 
 -   `L2 - Arbitrum One Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network.
 
-More about Web3 Provider
--------------
+More about External HTTP Provider
+----------------------------------
 If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:
 
 ```shell
