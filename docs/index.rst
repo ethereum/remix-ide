@@ -69,6 +69,7 @@ Useful links:
    compile
    run
    udapp
+   run_proxy_contracts
    debugger
    static_analysis
 
