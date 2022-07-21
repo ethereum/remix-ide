@@ -111,6 +111,7 @@ Useful links:
    :caption: Miscellaneous
 
    locations
+   remix_as_code_viewer
    remix_tutorials_learneth
    code_contribution_guide
    community
