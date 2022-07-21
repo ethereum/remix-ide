@@ -85,7 +85,7 @@ To try it out, you need to put an import statement and use `console.log` to prin
 
 ![](images/hardhat-console-file.png)
 
-Further, once you execute the `changeOwner` method, value from console statement will be shown in Remix terminal after transaction details as below:
+Further, once you execute the `changeOwner` method, the value from console statement will be shown in Remix terminal after transaction details as below:
 
 ![](images/hardhat-tx-terminal.png)
 

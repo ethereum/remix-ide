@@ -25,9 +25,9 @@ Now, one can start deploying the contract from Remix IDE to the local Anvil node
 Foundry Remappings
 ------------------
 
-Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can show issue in normal compilation on Remix IDE.
+Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can have compilation errors on Remix IDE.
 
-To support such compilation, Remix suggests to run compilation using compiler config file. Remix adds some default forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd.
+To support such compilation, Remix suggests running [compilation using a compiler config file](https://remix-ide.readthedocs.io/en/latest/compile.html#json-file-for-compiler-configuration). Remix adds some default Forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd.
 
 ![](images/a-foundry-cc.png)
 
