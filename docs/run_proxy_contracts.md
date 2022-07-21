@@ -3,7 +3,7 @@ Deploy & Run Proxy Contracts
 
 Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern.
 
-A UUPS proxy contract is the implementation side of an ERC1967Proxy.
+A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967).  
 
 Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address.  
 
@@ -18,7 +18,7 @@ When a UUPS contract is selected in Deploy & Run's Contract select box, you'll s
 
 ![](images/a-proxy-deploy1-noParams.png)
 
-Choose Deploy with Proxy. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:
+Check the box for **Deploy with Proxy**. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:
 
 ![](images/a-proxy-modal1.png)
 
