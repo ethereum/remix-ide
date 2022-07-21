@@ -1,4 +1,4 @@
-Slither Integration
+Slither
 ============
 
 _(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)_

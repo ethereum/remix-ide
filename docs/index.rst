@@ -88,7 +88,7 @@ Useful links:
    hardhat
    truffle
    slither
-   hardhat_console
+   foundry
 
 .. toctree::
    :maxdepth: 2

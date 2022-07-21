@@ -1,4 +1,4 @@
-Hardhat Integration
+Hardhat
 ============
 
 _(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_
@@ -56,7 +56,7 @@ Hardhat Provider
 
 _In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_
 
-**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This can be chosed from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin.
+**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This can be chosen from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin.
 
 ![](images/a-hardhat-provider-dropdown.png)
 
@@ -71,6 +71,33 @@ Once the correct endpoint is filled in the modal, just click on `OK` and the acc
 ![](images/a-hardhat-provider-connected.png)
 
 Now, one can start deploying the contract from Remix IDE to the Hardhat local node as usual.
+
+`console.log` in Remix IDE
+---------------------------
+
+_(Supported since Remix IDE v0.17.0)_
+
+Remix IDE supports hardhat console library while using `Remix VM`. It can be used while making a transaction or running unit tests.
+
+### Deploy and Run Transactions
+
+To try it out, you need to put an import statement and use `console.log` to print the value as shown in image.
+
+![](images/hardhat-console-file.png)
+
+Further, once you execute the `changeOwner` method, the value from console statement will be shown in Remix terminal after transaction details as below:
+
+![](images/hardhat-tx-terminal.png)
+
+### Solidity Unit Testing
+
+Similarly, `console.log` can be used while running unit tests using Remix Solidity Unit Testing plugin. See image below.
+
+![](images/hardhat-utesting-file.png)
+
+For the tests including logging message, it will display in the Remix Terminal corresponding to test name.
+
+![](images/hardhat-utesting-terminal.png)
 
 
 
