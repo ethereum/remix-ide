@@ -5,7 +5,7 @@ Remixd: Access your Local Filesystem
 
 To give the Remix IDE (the web app) access to a folder on your computer, you need to use **Remixd** - the plugin along with **remixd** - the cli/npm module. 
 
-The **Remixd** plugin can be activated from the plugin manager or in the **File Explorers** - see the image below.  The **connect to localhost** - will activate the **Remixd** plugin.
+The **Remixd** plugin can be activated from the plugin manager or in the **File Explorer** - see the image below.  The **connect to localhost** - will activate the **Remixd** plugin.
 
 ![](images/a-remixd-fe.png)
 
@@ -28,7 +28,9 @@ The code of `remixd` is
 Or just install it in the directory of your choice by removing the -g flag:
 `npm install @remix-project/remixd`
 
-**NOTE:** When remixd NPM module is installed, it also installs [Slither](https://github.com/crytic/slither), [solc-select](https://github.com/crytic/solc-select#quickstart) and set [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html) to latest version i.e. 0.8.15 currently, provided `Python3.6+ (pip3)` should be already there on the System. (Supported since Remixd `v0.6.3`). In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither`
+**NOTE:** When the remixd NPM module is installed, it also installs [Slither](https://github.com/crytic/slither), [solc-select](https://github.com/crytic/solc-select#quickstart) and sets [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html) to latest version i.e. 0.8.15 currently.
+
+**ALSO NOTE:** `Python3.6+ (pip3)` needs to already be installed on the System. (This packaging of Slither with the remixd module is supported since Remixd v0.6.3). In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither`
 
 
 ### Find your version of remixd
