@@ -73,7 +73,7 @@ Only use `--http.corsdomain *` when using a **test chain** AND using only **test
 Account:
 --------
 -   Account: the list of accounts associated with the current
-     environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask.
+     environment (and their associated balances).  On the Remix VM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask.
 
 Gas Limit:
 ---------
@@ -129,7 +129,7 @@ Using the Recorder
 ------------------
 
 The Recorder is a tool used to save a bunch of transactions in a JSON file and
-rerun them later either in the same environment or in another.
+re-run them later either in the same environment or in another.
 
 Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc...
 
@@ -138,17 +138,19 @@ There are many use cases for the recorder.
 For instance:
 
 -   After having coded and tested contracts in a constrained
-    environment (like the JavaScript VM), you could then change the environment and redeploy it to a more realistic environment like a test net with an **injected web3** or to a Geth node. By using the generated **scenario.json** file, you will be using all the same settings that you used in the Javascript VM.  And this mean that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity.
+    environment (like the Remix VM), you could then change the environment and redeploy it to a more realistic environment like a public testnet or to a Geth node. By using the generated **scenario.json** file, you will be using all the same settings that you used in the Remix VM.  And this means that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity.
     
     You can also change the settings in the scenario.json file to customize the playback.
 
 -   Deploying contract does often require more than creating one
     transaction and so the recorder will automate this deployment.
 
--   Working in a dev environment often requires to setup the
+-   Working in a dev environment often requires setting up the
     state in a first place.  
 
-![](images/a-runtab-recorder.png)
+![](images/a-recorder.png)
+
+When checked, the option `Run transactions using the last compilation result` allows you to develop a contract and easily set the state.    
 
 ### scenario.json
 To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a `0` next to **Transactions Recorded**.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created.
