@@ -53,7 +53,7 @@ contract Donation {
 - Compile the code.
 - Go to the Run & Deploy module.
 
-For the purpose of this tutorial, we will run the `JavaScript VM`.
+For the purpose of this tutorial, we will run the `Remix VM`.
 
 - Deploy the contract:
 
@@ -80,7 +80,7 @@ Then click the `Donate` button.
 
 This will send the Ether to the function.
 
-Because we are using the `JavaScript VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)
+Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)
 
 Remix displays information related to each transaction result in the terminal.
 

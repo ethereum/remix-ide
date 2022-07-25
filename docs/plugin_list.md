@@ -149,7 +149,7 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)
 
 **Proveable Oracle Services** &nbsp; ![](images/pi-proveable.png) 
-<br>An oracle for the JavaScript VM environment.
+<br>An oracle for the Remix VM environment.
 <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable
 <br>[Documentation](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)
 
