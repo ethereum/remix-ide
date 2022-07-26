@@ -150,7 +150,7 @@ For instance:
 
 ![](images/a-recorder.png)
 
-When checked, the option `Run transactions using the last compilation result` allows you to develop a contract and easily set the state.    
+When checked, the option `Run transactions using the last compilation result` allows you to develop a contract and easily set the state using **the latest compiled versions of the contracts.**   
 
 ### scenario.json
 To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a `0` next to **Transactions Recorded**.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created.
