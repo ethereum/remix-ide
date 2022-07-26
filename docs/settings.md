@@ -3,6 +3,8 @@ Settings
 
 To get to **Settings** click the gear at the very bottom of the icon panel. 
 
+### Reset Button
+The Reset button at the top of the Setting panel will reset all of the settings back to the default.    
 ### General Settings 
 
 ![](images/a-settings-general.png)
@@ -15,9 +17,39 @@ To get to **Settings** click the gear at the very bottom of the icon panel.
 
 ### Github Access Token
 
-For performing Git operations on Github and for creating GISTs, it is may be necessary to input an access token - a token that has the specific permissions for your git command. Depending on the operation, you may need to also input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
+When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to also input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 ![](images/a-settings-gh-token.png)
+
+### Etherscan Access Token
+
+You need to input your Etherscan access token when debugging verified contracts with the Remix Debugger.  When verifying a contract with the Etherscan plugin, you need to put the API key in that plugin and not in the Settings panel.   
+
+Click [here](https://etherscan.io/myapikey) to get your Etherscan API key.
+
+![](images/a-settings-etherscan.png)
+
+### Swarm Settings
+
+In the Solidity Compiler, after the compilation is completed, there is a button to publish to Swarm.  
+
+![](images/a-settings-pub-swarm.png)
+
+Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info.
+
+![](images/a-settings-swarm.png)
+
+### IPFS Settings
+
+Just like the Swarm settings above, IPFS settings are for publishing your contracts to IPFS from the Solidity Compiler. 
+- If you do not put in any settings here, you will be using the public INFURA node. This will not guarantee your data will persist.
+
+Other options are to:
+- Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)
+- Use any external IPFS which doesn’t require any authentification.
+- Use your own local ipfs node (which usually runs under http://localhost:5001)
+
+![](images/a-settings-ipfs.png)
 
 ### Themes
 Choose themes here.  The Dark & Light themes are the themes that the Remix team actively maintains.
