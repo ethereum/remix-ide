@@ -3,7 +3,7 @@ Debugger
 
 The Debugger shows the contract's state while stepping through a transaction.  
 
-It can be used on transactions created on Remix or by providing a transaction's address.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract.
+It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract.
 
 To start a debugging session either:
  * **Click** the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the **Side Panel**.
