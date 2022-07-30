@@ -17,7 +17,7 @@ The Reset button at the top of the Setting panel will reset all of the settings 
 
 ### Github Access Token
 
-When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to also input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
+When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 ![](images/a-settings-gh-token.png)
 
