@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../solidity_editor.md:1
 msgid "Solidity Editor"
-msgstr "Solidity 编译器"
+msgstr "Solidity 编辑器"
 
 #: ../../solidity_editor.md:4
 msgid "The Remix editor recompiles the code each time the current file is changed or another file is selected. It also provides syntax highlighting mapped to solidity keywords."
