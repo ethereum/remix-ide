@@ -124,12 +124,25 @@ The navigation part contains a slider and buttons that can be used to
 step through the transaction execution.
 
 
-### More explaination of what these buttons do.
-1. Step Into
-2. Step Over Into
+### Explanation of Debugger button capabilities
+
+1. Step Over Back
+    Returns to the previous step, but ignores/steps over function calls: the debugger WILL NOT enter a function
+2. Step Back
+    Returns to the previous step. Does not ignore function calls: the debugger WILL enter any function along the way
+3. Step Into
+    Forwards to the next step. Does not ignore function calls: the debugger WILL enter any function along the way
+4. Step Over Forward
+    Forwards to the next step, but ignores/steps over function calls: the debugger WILL NOT enter a function
+5. Jump to the Previous Breakpoint
+    Sends the debugger to the last visited breakpoint. Note that breakpoints may be set by clicking the line number in source code
+6. Jump Out
+    Sends the debugger to the function's end
+7. Jump to the Next Breakpoint
+    Sends the debugger to the next breakpoint
 
 
-11 panels give detailed information about the execution:
+## 11 panels give detailed information about the execution:
 
 ### Instructions
 
