@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019-22, Remix;
+# This file is distributed under the same license as the Remix - Ethereum
+# IDE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix - Ethereum IDE 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-16 13:45+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../foundry.md:1
+msgid "Foundry"
+msgstr ""
+
+#: ../../foundry.md:4
+msgid "(Supported since Remix IDE v0.25.0)"
+msgstr ""
+
+#: ../../foundry.md:6
+msgid "Foundry Provider"
+msgstr ""
+
+#: ../../foundry.md:9
+msgid ""
+"Foundry Provider is a plugin on Remix IDE which enables users to deploy "
+"the contract to the Foundry's built-in Anvil blockchain. Foundry Provider"
+" can be chosen from the list of environments in Deploy & Run Transactions"
+" plugin."
+msgstr ""
+
+#: ../../foundry.md:13
+msgid ""
+"As soon as you select Foundry Provider, a modal is opened asking for the "
+"Anvil JSON-RPC Endpoint."
+msgstr ""
+
+#: ../../foundry.md:17
+msgid ""
+"If Foundry Anvil node is running with default options, the default "
+"endpoint value in modal will not need any change. In case, Anvil node "
+"host and port are different, JSON-RPC endpoint should be updated in the "
+"modal text box."
+msgstr ""
+
+#: ../../foundry.md:19
+msgid ""
+"Once the correct endpoint is filled in the modal, just click on OK and "
+"the accounts from the Anvil node will be loaded in the ACCOUNT section. "
+"Network id will also be shown."
+msgstr ""
+
+#: ../../foundry.md:23
+msgid ""
+"Now, one can start deploying the contract from Remix IDE to the local "
+"Anvil node as usual."
+msgstr ""
+
+#: ../../foundry.md:25
+msgid "Foundry Remappings"
+msgstr ""
+
+#: ../../foundry.md:28
+msgid ""
+"Foundry manages dependencies using git submodules and can remap "
+"dependencies to make them easier to import. So import defined by "
+"remappings can have compilation errors on Remix IDE."
+msgstr ""
+
+#: ../../foundry.md:30
+msgid ""
+"To support such compilation, Remix suggests running compilation using a "
+"compiler config file. Remix adds some default Forge remappings in the "
+"compiler config file when a Foundry project is loaded in Remix IDE using "
+"remixd."
+msgstr ""
+
+#: ../../foundry.md:34
+msgid "Further, more remappings can be added manually, if required."
+msgstr ""
+
