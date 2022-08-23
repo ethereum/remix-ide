@@ -105,6 +105,7 @@ Useful links:
    testing_using_Chai_&_Mocha
    FAS
    remixd
+   security
    FAQ
 
 .. toctree::
