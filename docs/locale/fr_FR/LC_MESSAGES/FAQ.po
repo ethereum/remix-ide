@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:22\n"
+"PO-Revision-Date: 2022-08-24 15:43\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../FAQ.md:5
 msgid "Q: What browsers will Remix work on?"
-msgstr ""
+msgstr "Q : Sur quels navigateurs Remix fonctionne-t-il?"
 
 #: ../../FAQ.md:7
 msgid "A: We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
