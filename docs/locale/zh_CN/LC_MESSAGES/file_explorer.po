@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-16 13:45+0800\n"
-"PO-Revision-Date: 2022-06-21 15:22+0000\n"
+"PO-Revision-Date: 2022-08-26 14:51+0800\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -97,7 +97,7 @@ msgid ""
 "letters in bold below refer to the labels in fig. 1."
 msgstr ""
 "工作区可以帮你组织你的文件并且分离你的项目。以下是管理工作区的基本操作。"
-"下方粗体字母对应 fig. 1 中的红色标签"
+"下方粗体字母对应图1中的红色标签"
 
 #: ../../file_explorer.md:37
 msgid "A. Add a Workspace <br>"
@@ -149,7 +149,7 @@ msgstr "文件操作"
 
 #: ../../file_explorer.md:47
 msgid "The letters in bold below refer to the labels in fig. 1."
-msgstr "下方粗体字母对应 fig. 1 中的红色标签"
+msgstr "下方粗体字母对应图1中的红色标签"
 
 #: ../../file_explorer.md:49
 msgid "H. Create a file  <br>"
@@ -183,7 +183,7 @@ msgid ""
 "of the repo.  A new workspace will be created that will contain the "
 "cloned repo.  To manage the Git repo, go to the DGIT plugin."
 msgstr ""
-"当你点击克隆图标 (F. in fig.1)，你需要填写一个仓库链接。一个新的工作区就会被创建，"
+"当你点击克隆图标 (图1中的F)，你需要填写一个仓库链接。一个新的工作区就会被创建，"
 "里面包含了克隆下来的仓库。想要管理这个 Git 仓库，请使用 DGIT 插件。"
 
 #: ../../file_explorer.md:61
@@ -213,7 +213,7 @@ msgid ""
 " entered without a file extension, the extension .sol will be appended by"
 " default."
 msgstr ""
-"第一种方式是点击新建文件图标 (H. in fig.1)，然后文件管理器中会出现一个输入框用来输入新文件的名称。"
+"第一种方式是点击新建文件图标 (图1中的H)，然后文件管理器中会出现一个输入框用来输入新文件的名称。"
 "输入文件名后，编辑器中就会打开一个新的空文件。如果文件名没有后缀，就会自动添加默认后缀 .sol 。"
 
 #: ../../file_explorer.md:73
@@ -244,7 +244,7 @@ msgid ""
 "Workspace to a gist. The Gist API requires users to be authenticated to "
 "be able to publish a gist."
 msgstr ""
-"这个图标 (标注在 J. in fig.1) 可以发布当前工作区的所有文件到 gist。"
+"这个图标 (标注在图1中的J) 可以发布当前工作区的所有文件到 gist。"
 "Gist API 需要用户授权才能把文件发布到 gist 。"
 
 #: ../../file_explorer.md:82
