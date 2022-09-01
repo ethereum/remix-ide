@@ -107,6 +107,14 @@ https://remix.ethereum.org/?#activate=defiexplorer,solidity&call=fileManager//op
 https://remix.ethereum.org/?#activate=solidityUnitTesting,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
 ```
 
+### Make calls to a number of different plugins' APIs
+Use the `calls` parameter to call a series of plugins.  Use `///` to separate the calls.
+
+For example, this command, after activating a list of plugins, calls the LearnEth plugin's API and then calls the File Explorer's API.
+
+```
+https://remix.ethereum.org/?#activate=solidityUnitTesting,solidity,LearnEth&calls=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract///fileManager//open//contracts/3_Ballot.sol
+```
 ## Load a file via a URL into the Editor
 The `url` parameter takes a URL, loads it into the Editor and saves it into the code-sample workspace of the File Explorer:
 ```
@@ -123,6 +131,21 @@ The `address` parameter takes an address, loads all the **verified contracts** f
 ```
 https://remix.ethereum.org/#address=0xdac17f958d2ee523a2206206994597c13d831ec7
 ```
+
+## Load a Solidity contract from Github
+With a github url of a Solidity contract like this one:
+
+```
+https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
+```
+
+Then delete the **github** part and type in **remix.ethereum.org** in its place, like this:
+
+```
+https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
+```
+
+Remix will fetch the Solidity file and open it up in the File Explorer in a Workspace named<br> **code-sample**.
 
 ## Load a GIST
 The URL parameter here is `gist`.
