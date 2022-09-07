@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-09-07 16:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,23 +31,23 @@ msgstr ""
 msgid "Tour of typical solidity modules"
 msgstr ""
 
-#: ../../index.rst:75
-#: ../../index.rst:75
+#: ../../index.rst:76
+#: ../../index.rst:76
 msgid "Solidity Unit Testing"
 msgstr ""
 
-#: ../../index.rst:84
-#: ../../index.rst:84
+#: ../../index.rst:85
+#: ../../index.rst:85
 msgid "Native External Integrations"
 msgstr ""
 
-#: ../../index.rst:93
-#: ../../index.rst:93
+#: ../../index.rst:94
+#: ../../index.rst:94
 msgid "Using Remix"
 msgstr ""
 
-#: ../../index.rst:109
-#: ../../index.rst:109
+#: ../../index.rst:111
+#: ../../index.rst:111
 msgid "Miscellaneous"
 msgstr ""
 

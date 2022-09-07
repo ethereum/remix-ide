@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-09-07 16:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "artifacts/<contractName_metadata>.json: contains the metadata from the ou
 msgstr ""
 
 #: ../../contract_metadata.md:8
-msgid "artifacts/build-info/<dynamic_hash>.json: contains info about solc compiler versino, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try Hardhat compilation from Remix."
+msgid "artifacts/build-info/<dynamic_hash>.json: contains info about solc compiler version, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try Hardhat compilation from Remix."
 msgstr ""
 
 #: ../../contract_metadata.md:10

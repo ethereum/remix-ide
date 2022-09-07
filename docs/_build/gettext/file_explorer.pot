@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-09-07 16:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgid "File Explorer Tour"
 msgstr ""
 
 #: ../../file_explorer.md:31
-msgid "The book icon - F. is the link to the documentation (this page)."
+msgid "The book icon - G. is the link to the documentation (this page)."
 msgstr ""
 
 #: ../../file_explorer.md:33
@@ -97,113 +97,141 @@ msgid "E. Upload the Workspaces backup made from the previous icon. <br>"
 msgstr ""
 
 #: ../../file_explorer.md:42
-msgid "K. Choose a Workspace"
+msgid "F. Clone a repo from Git repository <br>"
 msgstr ""
 
 #: ../../file_explorer.md:43
-msgid "File Manipulation"
+msgid "G. Link to documentation <br>"
 msgstr ""
 
 #: ../../file_explorer.md:44
-msgid "The letters in bold below refer to the labels in fig. 1."
+msgid "J. Publish the Workspace to a GIST <br>"
+msgstr ""
+
+#: ../../file_explorer.md:45
+msgid "L. Choose a Workspace"
 msgstr ""
 
 #: ../../file_explorer.md:46
-msgid "G. Create a file  <br>"
+msgid "File Manipulation"
 msgstr ""
 
 #: ../../file_explorer.md:47
-msgid "H. Create a folder  <br>"
-msgstr ""
-
-#: ../../file_explorer.md:48
-msgid "I. Publish the Workspace to a GIST <br>"
+msgid "The letters in bold below refer to the labels in fig. 1."
 msgstr ""
 
 #: ../../file_explorer.md:49
-msgid "J. Load a local file into the current Workspace<br>"
+msgid "H. Create a file  <br>"
+msgstr ""
+
+#: ../../file_explorer.md:50
+msgid "I. Create a folder  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:51
+msgid "K. Load a local file into the current Workspace<br>"
+msgstr ""
+
+#: ../../file_explorer.md:53
 msgid "Workspaces with Templates"
 msgstr ""
 
-#: ../../file_explorer.md:52
+#: ../../file_explorer.md:54
 msgid "When you create a new Workspace, a modal comes up where you choose which template of files to include."
 msgstr ""
 
-#: ../../file_explorer.md:56
-msgid "Creating new files"
-msgstr ""
-
 #: ../../file_explorer.md:58
-msgid "There are 2 ways of creating files.  The first is to click on the new file icon (G. in fig.1), an input for a new the file’s name will appear in the File Explorer. Once a name is entered, the new empty file will open in the Editor."
+msgid "Workspaces & cloning a repo"
 msgstr ""
 
-#: ../../file_explorer.md:60
-msgid "The second way of creating a file is to right click on a file or folder to get a popup menu."
+#: ../../file_explorer.md:59
+msgid "When you click the clone icon (F. in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the Git repo, go to the DGIT plugin."
 msgstr ""
 
-#: ../../file_explorer.md:64
-msgid "The new file will be placed in the currently selected folder of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
+#: ../../file_explorer.md:61
+msgid "Workspaces with a Git repo"
+msgstr ""
+
+#: ../../file_explorer.md:62
+msgid "Workspaces with an associated Git will have the Git icon next to them in the Workspaces select box."
 msgstr ""
 
 #: ../../file_explorer.md:66
-msgid "Publish to Gist"
+msgid "Creating new files"
+msgstr ""
+
+#: ../../file_explorer.md:68
+msgid "There are 2 ways of creating files:"
 msgstr ""
 
 #: ../../file_explorer.md:69
-msgid "The icon (marked I. in fig.1) publishes all files from the current Workspace to a gist. The Gist API requires users to be authenticated to be able to publish a gist."
-msgstr ""
-
-#: ../../file_explorer.md:71
-msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
+msgid "The first is to click on the new file icon (H. in fig.1), then an input for the new file’s name will appear in the File Explorer. Once a name is entered, a new empty file will open in the Editor.  If the file's name is entered without a file extension, the extension .sol will be appended by default."
 msgstr ""
 
 #: ../../file_explorer.md:73
-msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save."
+msgid "The second way of creating a file is to right click on a file or folder to get a popup menu."
 msgstr ""
 
 #: ../../file_explorer.md:75
-msgid "You can also publish by right clicking on the file or folder."
+msgid "The new file will be placed in the currently selected folder of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
 msgstr ""
 
 #: ../../file_explorer.md:77
-msgid "Right-Click on a File or Folder"
+msgid "Publish to Gist"
+msgstr ""
+
+#: ../../file_explorer.md:80
+msgid "The icon (marked J. in fig.1) publishes all files from the current Workspace to a gist. The Gist API requires users to be authenticated to be able to publish a gist."
 msgstr ""
 
 #: ../../file_explorer.md:82
-msgid "Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder."
+msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
 msgstr ""
 
 #: ../../file_explorer.md:84
-msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
+msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save."
 msgstr ""
 
 #: ../../file_explorer.md:86
-msgid "Note: When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of localhost workspace to refresh the view."
+msgid "You can also publish by right clicking on the file or folder."
 msgstr ""
 
 #: ../../file_explorer.md:88
-msgid "Right-Click on a Solidity file"
+msgid "Right-Click on a File or Folder"
 msgstr ""
 
-#: ../../file_explorer.md:90
-msgid "Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file."
+#: ../../file_explorer.md:93
+msgid "Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder."
 msgstr ""
 
-#: ../../file_explorer.md:94
-msgid "Right-Click on a Script"
+#: ../../file_explorer.md:95
+msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
+msgstr ""
+
+#: ../../file_explorer.md:97
+msgid "Note: When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of localhost workspace to refresh the view."
 msgstr ""
 
 #: ../../file_explorer.md:99
-msgid "Right-click on any file with a .js or .ts extension to get the Run option in the context menu to run the script.  The Run in the context menu is a shortcut.  The other way to get a script to run is to:"
-msgstr ""
-
-#: ../../file_explorer.md:100
-msgid "Click on the script to make it the active tab in the editor"
+msgid "Right-Click on a Solidity file"
 msgstr ""
 
 #: ../../file_explorer.md:101
+msgid "Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file."
+msgstr ""
+
+#: ../../file_explorer.md:105
+msgid "Right-Click on a Script"
+msgstr ""
+
+#: ../../file_explorer.md:110
+msgid "Right-click on any file with a .js or .ts extension to get the Run option in the context menu to run the script.  The Run in the context menu is a shortcut.  The other way to get a script to run is to:"
+msgstr ""
+
+#: ../../file_explorer.md:111
+msgid "Click on the script to make it the active tab in the editor"
+msgstr ""
+
+#: ../../file_explorer.md:112
 msgid "Input the command remix.exeCurrent() in the console."
 msgstr ""

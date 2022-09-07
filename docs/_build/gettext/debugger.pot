@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
+"POT-Creation-Date: 2022-09-07 16:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "The Debugger shows the contract's state while stepping through a transact
 msgstr ""
 
 #: ../../debugger.md:6
-msgid "It can be used on transactions created on Remix or by providing a transaction's address.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
+msgid "It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
 msgstr ""
 
 #: ../../debugger.md:8
