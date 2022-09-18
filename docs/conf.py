@@ -30,14 +30,19 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark'] # required for sphinx v3.0.0
+extensions = ['myst_parser'] # required for sphinx v3.0.0
+suppress_warnings = ['myst.header']
+myst_disable_syntax = ['image']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 
 # The encoding of source files.
