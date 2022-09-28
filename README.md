@@ -26,7 +26,7 @@ Remix libraries work as a core of native plugins of Remix IDE. Read more about l
 Steps to build this project as as:
 ```
 pip3 install sphinx sphinx_rtd_theme
-pip3 install recommonmark
+pip3 install myst-parser
 git clone https://github.com/ethereum/remix-ide.git
 cd docs/
 make html
