@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 16:28-0400\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "It is dangerous to send transactions on contracts you don't understand (e
 msgstr ""
 
 #: ../../security.md:6
-msgid "Check our article on a current scam promoting \"liquidity front runner bots\"."
+msgid "Check our [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) on a current scam promoting \"liquidity front runner bots\"."
 msgstr ""
 
 #: ../../security.md:8
@@ -33,15 +33,15 @@ msgid "Always check that you are loading Remix over HTTPS unless you have a spec
 msgstr ""
 
 #: ../../security.md:10
-msgid "Make sure all your imports include the version number otherwise you don't know what version of files you are getting and the builds are not reproducible."
+msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
 msgstr ""
 
 #: ../../security.md:12
-msgid "So do not use an import like this:<br> import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";"
+msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
 msgstr ""
 
 #: ../../security.md:15
-msgid "Rather, use one like this:<br> import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";"
+msgid "Rather, **use one** like this:<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
 msgstr ""
 
 #: ../../security.md:18
@@ -69,7 +69,7 @@ msgid "remix-beta.ethereum.org"
 msgstr ""
 
 #: ../../security.md:27
-msgid "If you are directed to some site that looks like Remix but has a similar but different URL - it is NOT Remix and is likely a scam."
+msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
 msgstr ""
 
 #: ../../security.md:29
@@ -81,7 +81,7 @@ msgid "Because Remix has no setup, it has a large community of noobies to smart 
 msgstr ""
 
 #: ../../security.md:32
-msgid "Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!"
+msgid "**Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!**"
 msgstr ""
 
 #: ../../security.md:34

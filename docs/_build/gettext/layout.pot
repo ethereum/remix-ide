@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 16:28-0400\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,10 @@ msgstr ""
 
 #: ../../layout.md:4
 msgid "The new structure"
+msgstr ""
+
+#: ../../layout.md:6
+msgid "![](images/a-layout1c.png)"
 msgstr ""
 
 #: ../../layout.md:8
@@ -48,12 +52,20 @@ msgstr ""
 msgid "When you load remix - the icon panel show these icons by default."
 msgstr ""
 
+#: ../../layout.md:17
+msgid "![](images/a-icons-at-load.png)"
+msgstr ""
+
 #: ../../layout.md:19
-msgid "Everything in Remix is a plugin...  so the Plugin Manager is very important."
+msgid "Everything in Remix is a plugin...  so the **[Plugin Manager](#plugin-manager)** is very important."
 msgstr ""
 
 #: ../../layout.md:21
 msgid "Home tab"
+msgstr ""
+
+#: ../../layout.md:24
+msgid "![](images/a-hometab.png)"
 msgstr ""
 
 #: ../../layout.md:26
@@ -69,11 +81,11 @@ msgid "Solidity Environment"
 msgstr ""
 
 #: ../../layout.md:31
-msgid "Clicking the Solidity button in the featured plugins section of the home tab will activate  Solidity Static Analysis and Solidity Unit Testing as well as the Solidity Compiler and Deploy & Run (which are there by default)."
+msgid "Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default)."
 msgstr ""
 
 #: ../../layout.md:33
-msgid "To see all the plugins go to the Plugin Manager - by selecting the plug in the icon panel.  <br> You can also get there by clicking the More button in the featured plugin list."
+msgid "To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. ![](images/a-plug.png) <br> You can also get there by clicking the **More** button in the featured plugin list."
 msgstr ""
 
 #: ../../layout.md:37
@@ -93,5 +105,9 @@ msgid "Themes"
 msgstr ""
 
 #: ../../layout.md:47
-msgid "So you want to work on Remix with a dark theme or a light theme or just a different theme than the one you are currently looking at?  At the bottom of the Settings plugin is where you can choose a theme. These are bootstrap based themes.  The Dark and Light theme have been the most customized for Remix."
+msgid "So you want to work on Remix with a dark theme or a light theme or just a different theme than the one you are currently looking at?  At the bottom of the **Settings** plugin is where you can choose a theme. These are bootstrap based themes.  The Dark and Light theme have been the most customized for Remix."
+msgstr ""
+
+#: ../../layout.md:49
+msgid "![](images/a-themes.png)"
 msgstr ""

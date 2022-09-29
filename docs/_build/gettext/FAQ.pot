@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 16:28-0400\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,19 +25,19 @@ msgid "Supported devices & Browsers"
 msgstr ""
 
 #: ../../FAQ.md:5
-msgid "Q: What browsers will Remix work on?"
+msgid "**Q:** What browsers will Remix work on?"
 msgstr ""
 
 #: ../../FAQ.md:7
-msgid "A: We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
+msgid "**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
 msgstr ""
 
 #: ../../FAQ.md:9
-msgid "Q: Will Remix work on a tablet or mobile device?"
+msgid "**Q:** Will Remix work on a tablet or mobile device?"
 msgstr ""
 
 #: ../../FAQ.md:11
-msgid "A: We do not support the use of Remix on tablets or mobile phones."
+msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
 msgstr ""
 
 #: ../../FAQ.md:13
@@ -45,27 +45,27 @@ msgid "General"
 msgstr ""
 
 #: ../../FAQ.md:15
-msgid "Q: Are there keyboard shortcuts in Remix?"
+msgid "**Q:** Are there keyboard shortcuts in Remix?"
 msgstr ""
 
 #: ../../FAQ.md:17
-msgid "A: Yes - here is the list of keyboard shortcuts:"
+msgid "**A:** Yes - here is the list of keyboard shortcuts:"
 msgstr ""
 
 #: ../../FAQ.md:19
-msgid "Ctrl+Shift+F : Opens the File Explorer"
+msgid "`Ctrl+Shift+F` : Opens the File Explorer"
 msgstr ""
 
 #: ../../FAQ.md:21
-msgid "Ctrl+Shift+A : Opens the Plugin Manager"
+msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
 msgstr ""
 
 #: ../../FAQ.md:23
-msgid "Ctrl+S: Compiles the active Solidity file"
+msgid "`Ctrl+S`: Compiles the active Solidity file"
 msgstr ""
 
 #: ../../FAQ.md:25
-msgid "Ctrl+Shift+S: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go here more info about this functionality)"
+msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)"
 msgstr ""
 
 #: ../../FAQ.md:27
@@ -73,31 +73,31 @@ msgid "Solidity compiler"
 msgstr ""
 
 #: ../../FAQ.md:29
-msgid "Q: Error: compiler might be in a non-sane state"
+msgid "**Q:** Error: compiler might be in a non-sane state"
 msgstr ""
 
 #: ../../FAQ.md:36
-msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
+msgid "**A:** Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
 msgstr ""
 
 #: ../../FAQ.md:39
-msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
+msgid "**Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
 msgstr ""
 
 #: ../../FAQ.md:41
-msgid "A:  Try a different browser or a newer solidity compiler version."
+msgid "**A:**  Try a different browser or a newer solidity compiler version."
 msgstr ""
 
 #: ../../FAQ.md:43
-msgid "Q: How to verify a contract that imports other contracts?"
+msgid "**Q:** How to verify a contract that imports other contracts?"
 msgstr ""
 
 #: ../../FAQ.md:45
-msgid "A:  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
+msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
 msgstr ""
 
 #: ../../FAQ.md:47
-msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
+msgid "There is a plugin called `Flattener` which will stuff all the original code and the imported code into a single file."
 msgstr ""
 
 #: ../../FAQ.md:49
@@ -105,39 +105,39 @@ msgid "Deploy & Run"
 msgstr ""
 
 #: ../../FAQ.md:51
-msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
+msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
 msgstr ""
 
 #: ../../FAQ.md:53
-msgid "A: If the endpoint you are using is http, it won't work."
+msgid "**A:** If the endpoint you are using is http, it won't work."
 msgstr ""
 
 #: ../../FAQ.md:55
-msgid "Q: Where is deploy button?"
+msgid "**Q:** Where is deploy button?"
 msgstr ""
 
 #: ../../FAQ.md:57
-msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
+msgid "**A:** Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
 msgstr ""
 
 #: ../../FAQ.md:60
-msgid "Q: How to pass a tuple to a public function in Remix?"
+msgid "**Q:** How to pass a tuple to a public function in Remix?"
 msgstr ""
 
 #: ../../FAQ.md:62
-msgid "A: Pass it as an array []."
+msgid "**A:** Pass it as an array []."
 msgstr ""
 
 #: ../../FAQ.md:64
-msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
+msgid "**Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?"
 msgstr ""
 
 #: ../../FAQ.md:66
-msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
+msgid "**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
 msgstr ""
 
 #: ../../FAQ.md:68
-msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
+msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
 msgstr ""
 
 #: ../../FAQ.md:70
@@ -145,7 +145,7 @@ msgid "For example, here's a solidity file with a struct is an input parameter."
 msgstr ""
 
 #: ../../FAQ.md:102
-msgid "The input of initPeepToPeeps takes a struct.  If you input [1,2] the transaction will go through."
+msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
 msgstr ""
 
 #: ../../FAQ.md:106
@@ -153,11 +153,11 @@ msgid "Plugin Developers"
 msgstr ""
 
 #: ../../FAQ.md:108
-msgid "Q: Where do plugin developers go with their questions?"
+msgid "**Q:** Where do plugin developers go with their questions?"
 msgstr ""
 
 #: ../../FAQ.md:110
-msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
+msgid "**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
 msgstr ""
 
 #: ../../FAQ.md:112
@@ -165,11 +165,11 @@ msgid "Analytics"
 msgstr ""
 
 #: ../../FAQ.md:114
-msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
+msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
 msgstr ""
 
 #: ../../FAQ.md:116
-msgid "A: We want to know:"
+msgid "**A:** We want to know:"
 msgstr ""
 
 #: ../../FAQ.md:118
@@ -193,19 +193,19 @@ msgid "On the homepage, which file importing buttons are used"
 msgstr ""
 
 #: ../../FAQ.md:124
-msgid "Q: Is it opt-in or opt-out?"
+msgid "**Q:** Is it opt-in or opt-out?"
 msgstr ""
 
 #: ../../FAQ.md:126
-msgid "A: We use Matomo as an opt-in analytics platform."
+msgid "**A:** We use Matomo as an opt-in analytics platform."
 msgstr ""
 
 #: ../../FAQ.md:128
-msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
+msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
 msgstr ""
 
 #: ../../FAQ.md:130
-msgid "A: All data collected through Matomo is stored on our own server. No data is given to third parties."
+msgid "**A:** All data collected through Matomo is stored on our own server. No data is given to third parties."
 msgstr ""
 
 #: ../../FAQ.md:132
@@ -213,11 +213,11 @@ msgid "We respect your privacy and do not collect nor store any personally ident
 msgstr ""
 
 #: ../../FAQ.md:134
-msgid "Q: What does Remix do with this info?"
+msgid "**Q:** What does Remix do with this info?"
 msgstr ""
 
 #: ../../FAQ.md:136
-msgid "A: Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
+msgid "**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
 msgstr ""
 
 #: ../../FAQ.md:138
@@ -225,9 +225,9 @@ msgid "With this understanding, we can make adjustments to the UI as well as pro
 msgstr ""
 
 #: ../../FAQ.md:140
-msgid "Q: After I agree opt-in, can I change my mind?"
+msgid "**Q:** After I agree opt-in, can I change my mind?"
 msgstr ""
 
 #: ../../FAQ.md:142
-msgid "A: You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
+msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr ""

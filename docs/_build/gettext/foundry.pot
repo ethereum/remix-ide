@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 16:28-0400\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Foundry"
 msgstr ""
 
 #: ../../foundry.md:4
-msgid "(Supported since Remix IDE v0.25.0)"
+msgid "_(Supported since Remix IDE v0.25.0)_"
 msgstr ""
 
 #: ../../foundry.md:6
@@ -29,11 +29,19 @@ msgid "Foundry Provider"
 msgstr ""
 
 #: ../../foundry.md:9
-msgid "Foundry Provider is a plugin on Remix IDE which enables users to deploy the contract to the Foundry's built-in Anvil blockchain. Foundry Provider can be chosen from the list of environments in Deploy & Run Transactions plugin."
+msgid "**Foundry Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Foundry's built-in **Anvil** blockchain. `Foundry Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."
+msgstr ""
+
+#: ../../foundry.md:11
+msgid "![](images/a-foundry-provider.png)"
 msgstr ""
 
 #: ../../foundry.md:13
-msgid "As soon as you select Foundry Provider, a modal is opened asking for the Anvil JSON-RPC Endpoint."
+msgid "As soon as you select `Foundry Provider`, a modal is opened asking for the `Anvil JSON-RPC Endpoint`."
+msgstr ""
+
+#: ../../foundry.md:15
+msgid "![](images/a-foundry-provider-modal.png)"
 msgstr ""
 
 #: ../../foundry.md:17
@@ -41,7 +49,11 @@ msgid "If Foundry Anvil node is running with default options, the default endpoi
 msgstr ""
 
 #: ../../foundry.md:19
-msgid "Once the correct endpoint is filled in the modal, just click on OK and the accounts from the Anvil node will be loaded in the ACCOUNT section. Network id will also be shown."
+msgid "Once the correct endpoint is filled in the modal, just click on `OK` and the accounts from the Anvil node will be loaded in the `ACCOUNT` section. Network id will also be shown."
+msgstr ""
+
+#: ../../foundry.md:21
+msgid "![](images/a-foundry-provider-connected.png)"
 msgstr ""
 
 #: ../../foundry.md:23
@@ -57,7 +69,11 @@ msgid "Foundry manages dependencies using git submodules and can remap dependenc
 msgstr ""
 
 #: ../../foundry.md:30
-msgid "To support such compilation, Remix suggests running compilation using a compiler config file. Remix adds some default Forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd."
+msgid "To support such compilation, Remix suggests running [compilation using a compiler config file](https://remix-ide.readthedocs.io/en/latest/compile.html#json-file-for-compiler-configuration). Remix adds some default Forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd."
+msgstr ""
+
+#: ../../foundry.md:32
+msgid "![](images/a-foundry-cc.png)"
 msgstr ""
 
 #: ../../foundry.md:34
