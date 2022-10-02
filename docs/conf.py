@@ -31,8 +31,17 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['myst_parser'] # required for sphinx v3.0.0
+
+# suppress warnings caused by non-consecutive header
+# see more details here https://myst-parser.readthedocs.io/en/latest/faq/index.html#suppress-warnings
 suppress_warnings = ['myst.header']
+
+# disable extraction of image alt
+# see more details here https://github.com/executablebooks/MyST-Parser/issues/623
 myst_disable_syntax = ['image']
+
+# myst will ignore all the internal links by default
+# see more details here https://myst-parser.readthedocs.io/en/latest/configuration.html?highlight=myst_all_links_external#global-configuration
 myst_all_links_external = True
 
 # Add any paths that contain templates here, relative to this directory.
