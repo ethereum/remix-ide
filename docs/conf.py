@@ -33,6 +33,7 @@ import os
 extensions = ['myst_parser'] # required for sphinx v3.0.0
 suppress_warnings = ['myst.header']
 myst_disable_syntax = ['image']
+myst_all_links_external = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
