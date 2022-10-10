@@ -35,7 +35,6 @@ extensions = ['myst_parser'] # required for sphinx v3.0.0
 # suppress warnings caused by non-consecutive header
 # see more details here https://myst-parser.readthedocs.io/en/latest/faq/index.html#suppress-warnings
 suppress_warnings = ['myst.header']
-myst_disable_syntax = ['image']
 
 # myst will ignore all the internal links by default
 # see more details here https://myst-parser.readthedocs.io/en/latest/configuration.html?highlight=myst_all_links_external#global-configuration
