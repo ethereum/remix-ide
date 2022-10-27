@@ -8,3 +8,5 @@ TODO
 .vscode
 docs/_build/html
 docs/_build/gettext/.doctrees
+docs/_build/doctrees/
+*.doctree
