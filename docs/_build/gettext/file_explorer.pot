@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-07 16:28-0400\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,6 +24,10 @@ msgstr ""
 msgid "To get to the File Explorer module - click the File Explorer icon."
 msgstr ""
 
+#: ../../file_explorer.md:6
+msgid "![](images/a-file-explorer1.png)"
+msgstr ""
+
 #: ../../file_explorer.md:8
 msgid "The File Explorer is for managing Workspaces and files.  There is also a context menu that pops up when you right click on a file or folder."
 msgstr ""
@@ -33,7 +37,7 @@ msgid "File Storage"
 msgstr ""
 
 #: ../../file_explorer.md:12
-msgid "By default, Remix IDE stores files in IndexedDB."
+msgid "By default, Remix IDE stores files in **IndexedDB**."
 msgstr ""
 
 #: ../../file_explorer.md:14
@@ -41,7 +45,7 @@ msgid "Coding in Remix IDE Online is different from writing in a Google doc. Yes
 msgstr ""
 
 #: ../../file_explorer.md:16
-msgid "Important Note: Clearing the browser storage & IndexedDB will permanently delete all the files stored there."
+msgid "**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there."
 msgstr ""
 
 #: ../../file_explorer.md:18
@@ -49,23 +53,27 @@ msgid "File Storage outside of the browser and Version Control"
 msgstr ""
 
 #: ../../file_explorer.md:20
-msgid "If you want to use browser storage, but also to save a git repo on IPFS, use the DGIT plugin."
+msgid "If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin."
 msgstr ""
 
 #: ../../file_explorer.md:22
-msgid "If you want to store files on your computer's filesystem, use Remixd or use the desktop version of Remix IDE. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix IDE in an Electron app."
+msgid "If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix IDE in an Electron app."
 msgstr ""
 
 #: ../../file_explorer.md:24
-msgid "Also see this article about securing your files in Remix"
+msgid "Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)"
 msgstr ""
 
 #: ../../file_explorer.md:26
 msgid "File Explorer Tour"
 msgstr ""
 
+#: ../../file_explorer.md:29
+msgid "![](images/a-fe-tour.png)"
+msgstr ""
+
 #: ../../file_explorer.md:31
-msgid "The book icon - G. is the link to the documentation (this page)."
+msgid "The book icon - **G.** is the link to the documentation (this page)."
 msgstr ""
 
 #: ../../file_explorer.md:33
@@ -77,39 +85,39 @@ msgid "Workspaces help to organize your files by allowing you to separate your p
 msgstr ""
 
 #: ../../file_explorer.md:37
-msgid "A. Add a Workspace <br>"
+msgid "**A.** Add a Workspace <br>"
 msgstr ""
 
 #: ../../file_explorer.md:38
-msgid "B. Rename a Workspace  <br>"
+msgid "**B.** Rename a Workspace  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:39
-msgid "C. Delete a Workspace  <br>"
+msgid "**C.** Delete a Workspace  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:40
-msgid "D. Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called .workspaces that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>"
+msgid "**D.** Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called **.workspaces** that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:41
-msgid "E. Upload the Workspaces backup made from the previous icon. <br>"
+msgid "**E.** Upload the Workspaces backup made from the previous icon. <br>"
 msgstr ""
 
 #: ../../file_explorer.md:42
-msgid "F. Clone a repo from Git repository <br>"
+msgid "**F.** Clone a repo from Git repository <br>"
 msgstr ""
 
 #: ../../file_explorer.md:43
-msgid "G. Link to documentation <br>"
+msgid "**G.** Link to documentation <br>"
 msgstr ""
 
 #: ../../file_explorer.md:44
-msgid "J. Publish the Workspace to a GIST <br>"
+msgid "**J.** Publish the Workspace to a GIST <br>"
 msgstr ""
 
 #: ../../file_explorer.md:45
-msgid "L. Choose a Workspace"
+msgid "**L.** Choose a Workspace"
 msgstr ""
 
 #: ../../file_explorer.md:46
@@ -121,15 +129,15 @@ msgid "The letters in bold below refer to the labels in fig. 1."
 msgstr ""
 
 #: ../../file_explorer.md:49
-msgid "H. Create a file  <br>"
+msgid "**H.** Create a file  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:50
-msgid "I. Create a folder  <br>"
+msgid "**I.** Create a folder  <br>"
 msgstr ""
 
 #: ../../file_explorer.md:51
-msgid "K. Load a local file into the current Workspace<br>"
+msgid "**K.** Load a local file into the current Workspace<br>"
 msgstr ""
 
 #: ../../file_explorer.md:53
@@ -140,12 +148,16 @@ msgstr ""
 msgid "When you create a new Workspace, a modal comes up where you choose which template of files to include."
 msgstr ""
 
+#: ../../file_explorer.md:56
+msgid "![](images/a-workspace-templates.png)"
+msgstr ""
+
 #: ../../file_explorer.md:58
 msgid "Workspaces & cloning a repo"
 msgstr ""
 
 #: ../../file_explorer.md:59
-msgid "When you click the clone icon (F. in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the Git repo, go to the DGIT plugin."
+msgid "When you click the **clone** icon (**F.** in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the Git repo, go to the DGIT plugin."
 msgstr ""
 
 #: ../../file_explorer.md:61
@@ -154,6 +166,10 @@ msgstr ""
 
 #: ../../file_explorer.md:62
 msgid "Workspaces with an associated Git will have the Git icon next to them in the Workspaces select box."
+msgstr ""
+
+#: ../../file_explorer.md:64
+msgid "![](images/a-fe-select-git.png)"
 msgstr ""
 
 #: ../../file_explorer.md:66
@@ -165,7 +181,11 @@ msgid "There are 2 ways of creating files:"
 msgstr ""
 
 #: ../../file_explorer.md:69
-msgid "The first is to click on the new file icon (H. in fig.1), then an input for the new file’s name will appear in the File Explorer. Once a name is entered, a new empty file will open in the Editor.  If the file's name is entered without a file extension, the extension .sol will be appended by default."
+msgid "The first is to click on the new file icon (**H.** in fig.1), then an input for the new file’s name will appear in the **File Explorer**. Once a name is entered, a new empty file will open in the Editor.  If the file's name is entered **without** a file extension, the extension **.sol** will be appended by default."
+msgstr ""
+
+#: ../../file_explorer.md:71
+msgid "![](images/a-file-explorer-new-file2.png)"
 msgstr ""
 
 #: ../../file_explorer.md:73
@@ -173,7 +193,7 @@ msgid "The second way of creating a file is to right click on a file or folder t
 msgstr ""
 
 #: ../../file_explorer.md:75
-msgid "The new file will be placed in the currently selected folder of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
+msgid "The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
 msgstr ""
 
 #: ../../file_explorer.md:77
@@ -181,15 +201,15 @@ msgid "Publish to Gist"
 msgstr ""
 
 #: ../../file_explorer.md:80
-msgid "The icon (marked J. in fig.1) publishes all files from the current Workspace to a gist. The Gist API requires users to be authenticated to be able to publish a gist."
+msgid "The icon (marked **J.** in fig.1) publishes all files from the current Workspace to a gist. **The Gist API requires users to be authenticated** to be able to publish a gist."
 msgstr ""
 
 #: ../../file_explorer.md:82
-msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
+msgid "Click [this link](https://github.com/settings/tokens) to Github tokens setup and select Generate new token. Then check the **Create gists** checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
 msgstr ""
 
 #: ../../file_explorer.md:84
-msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save."
+msgid "Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save."
 msgstr ""
 
 #: ../../file_explorer.md:86
@@ -198,6 +218,10 @@ msgstr ""
 
 #: ../../file_explorer.md:88
 msgid "Right-Click on a File or Folder"
+msgstr ""
+
+#: ../../file_explorer.md:91
+msgid "![](images/a-fe-rtclick-file.png)"
 msgstr ""
 
 #: ../../file_explorer.md:93
@@ -209,7 +233,7 @@ msgid "The functionality of the context menu also works with RemixD (which gives
 msgstr ""
 
 #: ../../file_explorer.md:97
-msgid "Note: When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of localhost workspace to refresh the view."
+msgid "**Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view."
 msgstr ""
 
 #: ../../file_explorer.md:99
@@ -220,12 +244,20 @@ msgstr ""
 msgid "Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file."
 msgstr ""
 
+#: ../../file_explorer.md:103
+msgid "![](images/a-fe-rtclick-sol-file.png)"
+msgstr ""
+
 #: ../../file_explorer.md:105
 msgid "Right-Click on a Script"
 msgstr ""
 
+#: ../../file_explorer.md:108
+msgid "![](images/a-fe-rtclick-script.png)"
+msgstr ""
+
 #: ../../file_explorer.md:110
-msgid "Right-click on any file with a .js or .ts extension to get the Run option in the context menu to run the script.  The Run in the context menu is a shortcut.  The other way to get a script to run is to:"
+msgid "Right-click on any file with a .js or .ts extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:"
 msgstr ""
 
 #: ../../file_explorer.md:111
@@ -233,5 +265,5 @@ msgid "Click on the script to make it the active tab in the editor"
 msgstr ""
 
 #: ../../file_explorer.md:112
-msgid "Input the command remix.exeCurrent() in the console."
+msgid "Input the command `remix.exeCurrent()` in the console."
 msgstr ""
