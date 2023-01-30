@@ -156,12 +156,12 @@ https://remix.ethereum.org/?gist=0fe90e825327ef313c88aedfe66ec142
 ### Load a GIST and have it be visible in the Editor:
 Using both `gist` & `call`
 ```
-https://remix.ethereum.org/?#activate=solidity,debugger&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//browser/gists/0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
+https://remix.ethereum.org/?#activate=solidity,fileManager&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol 
 ```
 
 ### Load a GIST, have it be visible in the Editor & load a list of plugins:
 ```
-https://remix.ethereum.org/?#activate=solidity,LearnEth&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//browser/gists/0fe90e825327ef313c88aedfe66ec142/gridMix4.sol 
+https://remix.ethereum.org/?#activate=solidity,pluginManager&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol 
 ```
 
 ## Load a specific version of the Solidity compiler:
