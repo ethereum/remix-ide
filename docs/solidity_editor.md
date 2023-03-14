@@ -5,10 +5,12 @@ Editor
 - Remix saves the current file every 5 seconds. 
 - The Remix Editor will highlight keywords in Soldiity, JS, and TS.
 
-## Editor displays concerning the Solidity Compiler and the Debugger
-The Editor works with the Soldity Compiler to display warnings and errors in the gutter.
+## Editor displays information from other plugins
+The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Soldity Compiler and the Debugger. 
 
-It also works with the Debugger for inputting breakpoints as well as for highlighting when stepping through code.
+- The Solidity Compiler will display warnings and errors in the Editor's gutter at the problematic line.
+- Breakpoints for the Debugger are input in the Editor's gutter. 
+- When stepping through code in the Debugger, the relevant code will be highlighted in the Editor.
 
 ![](images/a-editor-general.png)
 
