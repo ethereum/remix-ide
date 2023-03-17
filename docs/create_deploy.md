@@ -44,7 +44,7 @@ Compile the Contract
 --------------------
 With the contract above as the active tab in the Editor, compile the contract.  
 
-**For More Info** see the docs on the ([Solidity Compiler](compile.html)).
+For more information, see the docs on the ([Solidity Compiler](compile.html)).
 
 Deploy the contract
 -------------------
@@ -52,30 +52,60 @@ Go to the **Deploy & Run Transactions** plugin.
 
 There are 3 type of environments Remix can be plugged to:
 * Javascript VM
-* Injected Web3
-* Web3 Provider
+* Injected Provider
+* Custom - External HTTP Provider
 
- (For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
+---
 
-Both **Injected Web3** and **Web3 Provider** require the use of an external tool.
-
-An external tool for **Injected provider** is Metamask.  Some external tools used with **Web3 provider** are a Truffle Ganache-CLI, Hardhat node, or an Ethereum node itself.
+**Javascript VM**
 
 The **JavaScript VM** is convenient because it is a blockchain that runs in
 your browser and you don't need any other software or Ethereum node to run it. 
 
-**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart to its fresh & default state.
+Two notes: 
+- When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart to its fresh & default state.
+- For performance purposes (i.e., for testing in an environment that is closest to the mainnet), it can be better to use an external node via **Injected Provider** or **Custom - External HTTP Provider**
 
-For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it can be better to use an external node.
+---
 
-Select the VM environment
+**Injected Provider** 
+
+Both **Injected Provider** and **Custom - External HTTP Provider** require the use of an external tool -- most of the time, developers will use a connected wallet like Metamask.
+
+High level, these are the steps for deployed via an **Injected Provider**. This method allows you to deploy via an external rpc node provider of your choice: 
+
+(1) Add your RPC's network to Metamask. For example, if you were using Alchemy as the node provider, you'd add your Alchemy API key from your preferred chain to Metamask. You should add the etherscan URL to your Metamask network to be able to check your deployment status in step (6)
+
+(2) Make sure your Metamask wallet had enough funds to cover deployment. For example, if you were deploying to the Sepolia testnet, you'd get Sepolia testETH from a [Sepolia faucet](https://sepoliafaucet.com)
+
+(3) Select "Injected Provider" as your Remix deployment environment
+
+(4) Connect your Metamask to Remix. You should see your Metamask network account # appear in the "account" box in Remix. This is underneath "Environment" box
+
+(5) Hit "deploy" in Remix
+
+(6) Check the status of your deployment via the etherscan URL
+
+For more details on how to deploy an **Injected Provider**, [this tutorial](https://betterprogramming.pub/how-to-create-your-own-nft-smart-contract-tutorial-1b90978bd7a3) shows how to deploy a NFT token with the Remix IDE
+
+---
+
+**Custom - External HTTP Provider**
+
+Some external tools used with **Custom - External HTTP Provider** are a Truffle Ganache-CLI, Hardhat node, or an Ethereum node itself.
+
+
+(For more details on deploying, see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
+
+
+Notes about the VM environment
 -------------------------
 
 Make sure the VM mode is selected. All accounts displayed in **ACCOUNT** should have 100 ether.
 
 ![](images/a-run-jsvm-accounts.png)
 
-Deploying a contract
+Notes about deploying a contract
 ---------------------
 
 ![](images/a-run-testContract.png)
