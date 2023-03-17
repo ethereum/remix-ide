@@ -26,7 +26,7 @@ Environment
 
 -   `Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)
 
--   `Injected Provider - provider name`: Connects Remix to an injected web3 provider. The most common injected provider is `Metamask`.
+-   `Injected Provider - provider name`: Connects Remix to an injected web3 provider like Alchemy, Quicknode, or Moralis. The most common injected provider is `Metamask`. First, make sure your external node provider of choice is added as a network in Metamask and has enough funds to deploy. Once these two things are done, selected "Injected Provider" as your deployment environment, connect your wallet, and click "deploy". For more information, [see here](https://www.youtube.com/watch?v=U15XXqv8FmU). 
 
 -   `Custom - External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**. (See below for more info about External HTTP Provider)
 
