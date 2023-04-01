@@ -100,7 +100,7 @@ To get started, see [this simple example](./unittesting_examples.html#simple-exa
 
 Run
 -----
-Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be show as below:
+Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be shown as below:
 
 ![](images/a-unit-testing-run-result.png)
 
