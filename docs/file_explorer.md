@@ -1,12 +1,12 @@
 File Explorer
 =============
-The File Explorer is for managing Workspaces and files.  There is also a context menu that pops up when you right click on a file or folder.
+The File Explorer is for managing workspaces and files.  There is also a context menu that pops up when you right click on a file or folder.
 
 To get to the File Explorer module - click the File Explorer icon.
 
 ![](images/a-file-explorer1a.png)
 
-The green checkmark at the top of the page means that this plugin is in the Remix codebase.  When you click on the caret it will show more info about the plugin including a link to this documentation.
+The green checkmark at the top of the page means that this plugin is maintained by Remix Team.  When the caret is clicked, more info about the plugin will be shown -including a link to this documentation.
 
 ![](images/a-fe-top-caret.png)
 
@@ -16,22 +16,30 @@ By default, Remix IDE stores files in **IndexedDB**.
 
 Coding in Remix IDE Online is different from writing in a Google doc. 
 - A Google doc saves your work to your account on Google’s servers.
-- Remix has no user accounts.  By default, files are ONLY saved locally in the browser’s storage. So tread carefully, browser storage is not permanent!
+- Remix has no user accounts. By default, files are ONLY saved locally in the browser’s storage. So tread carefully, browser storage is not permanent!
 
-See below for using other storage locations - notably **Remixd** to connect Remix to a specific folder on your hard drive.
+It is very important to have a file backup & file saving strategy. 
 
-**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. 
+**Check the following techniques for:**
+- [saving to your hard drive](#file-storage-on-your-hard-drive)
+- using [remote Git repos](#connecting-remix-to-remote-git-repos)
+- [backing up workspaces](#backup).
+
+**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. It is prudent to backup your workspaces before deleting them...just in case. 
 
 ### File Storage on your hard drive
-If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix IDE](https://github.com/ethereum/remix-desktop/releases/)**. 
-- Remixd is a script that you run on your computer that shares a specified folder on your computer with Remix IDE.
-- Remix Desktop is a version of Remix IDE in an Electron app. When using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  You'd need to connect using a service like Infura.
+#### Remixd
+For storing files on your computer's hard drive when using Remix Online IDE, use **[Remixd](remixd.html)** 
+- Remixd is an NPM module that runs on your computer. It allows you to share a specified folder on your computer with Remix IDE. 
+
+#### Remix Desktop
+Remix Desktop is a version of Remix IDE in an Electron app. Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  To connect to public networks, you need to use service like Infura and then use the WalletConnect plugin to approve transactions on your mobile device.
 
 ### Connecting Remix to remote Git repos
 **If you are not using Remixd, it is highly recommended that you save to a remote repo.** 
 (Browsers do crash causing localstorage & indexedDB to be corrupted)
 
-Remix IDE can be connected to remote Git repos both on services like GitHub or repos in IPFS.  
+Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.  
 Most of the Git operations are done in the **DGIT** pluin. (DGIT stands for Decentralized GIT).
 
 Branch management is also available at the bottom of the File Explorer when the Workspace is Git initialized.
@@ -39,15 +47,14 @@ Branch management is also available at the bottom of the File Explorer when the 
 
 Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)
 
-
 Workspaces
 ------------
 
-Workspaces in Remix are special folders that separate projects.  Files in one Workspace cannot be accesses from another Workspace.  Workspaces are selected using the Workspace select box.
+Workspaces in Remix are special folders that separate projects.  Files in one workspace cannot import or access files in different workspace.  Choosing a workspace is done with the **Workspaces** select box.
 
 ![](images/a-fe-workspaces1.png)
 
-#### New Workspaces
+#### New Workspace
 Workspaces are created by clicking the + button or by going to the hamburger menu in the upper right side of the File Explorer.
 
 ![](images/a-fe-workspaces-new.png)
@@ -56,18 +63,18 @@ When making a new workspace, Remix offers the following templates:
 
 - Blank
 - Remix Default
-- Open Zeppelin ERC20
-- Open Zeppelin ERC721
-- Open Zeppelin ERC1155
-- 0x Project ERC20
+- OpenZeppelin ERC20
+- OpenZeppelin ERC721
+- OpenZeppelin ERC1155
+- 0xProject ERC20
 - Gnosis MultiSig
 
-When choosing an Open Zeppelin template, additional functionality can be added.
+When choosing an OpenZeppelin template, additional functionality can be added.
 ![](images/a-fe-modal-oz.png)
 
 #### Workspace operations
 
-The Workspace hamburger menu is for operations that work on an entire workspace.
+The **Workspace hamburger menu** is for operations that work on an entire workspace.
 
 ![](images/a-fe-hamburger.png)
 
@@ -77,23 +84,24 @@ When clicking Clone, you’ll be asked for the url of a remote repo. A new works
 Backup is for downloading all the Workspaces in a .zip file. The zip file will have a folder called **.workspaces** that will contain a folder of each Workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  
 
 ##### Restore
-Restore is only for uploading a .workspaces folder that was created using the Backup operation.
+Restore is only for uploading the backup zip file.
 
 ##### Create GitHub Actions
-The Workspace operations to create **Solidity Test Workflow**,  **Moca Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file in the .workflows folder of the active Workspace.
+The Workspace operations to create **Solidity Test Workflow**,  **Mocha Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file is created in the .workflows folder of the active Workspace.
 
 ### Workspaces initialized with Git
-Workspaces with an associated Git will have the Git icon next to them in the Workspaces select box.
+Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box.
 
 ![](images/a-fe-select-git.png)
 
-When creating a new Workspace, there is a checkbox in the modal for choosing the template that will initialize the Workspace for Git.
+To initialize a new Workspace for GIT, check the box at the bottom of the Create Workspace modal.
+![](images/a-fe-create-ws-modal.png)
 
 Working with Files
 -------------------
 When a file is clicked on it will appear in the Editor.
 
-Files can be manipulated by right clicking on them ([see below](#right-click-on-a-file-or-folder)) and also by using the icons under the Workspace select box.
+Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right clicking on a file or folder ([see below](#right-click-on-a-file-or-folder)).
 
 ![](images/a-fe-file-icons2.png)
 
@@ -125,22 +133,20 @@ Take the token and paste it in Remix's **Settings** module in the **Github Acces
 
 You can also publish by right clicking on the file or folder.
 
-Right-Click on a File or Folder
+Right-Click popup menu
 -------------------------------
-
+### Right-Click on a folder
 ![](images/a-fe-rtclick-file.png)
 
-Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder. 
+Right-clicking on a folder will bring a popup menu for operations you can do on that folder. 
 
-The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive).  
+The right-click popup menu also works with RemixD (which gives you have access to a folder on your hard drive).  
 
 **Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view.
 
-Right-Click Menu
----------------------
 ### Right-Click on a Solidity file
 
-Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file.
+Right-clicking on a file with a .sol extension will bring up a popup menu - which includes options for compiling & flattening, creating UML diagrams, and generating documentation.
 
 ![](images/a-fe-rtclick-sol-file.png)
 
@@ -148,6 +154,6 @@ Right-clicking on a file with a .sol extension will bring up an expanded context
 
 ![](images/a-fe-rtclick-script.png)
 
-Right-click on any file with a .js or .ts extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
-1. Click on the script to make it the active tab in the editor 
-2. Input the command `remix.exeCurrent()` in the console.
+Right-click on any file with a .js or .ts extension to get the **Run** option in the popup menu to run the script.  
+
+If the script you want to run is the active file in the Editor, you can also run it by using play button at the top left of the Editor or by inputting the command `remix.exeCurrent()` in the console.
