@@ -1,8 +1,8 @@
 File Explorer
 =============
-The File Explorer is for managing workspaces and files.  There is also a context menu that pops up when you right click on a file or folder.
+The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin.
 
-To get to the File Explorer module - click the File Explorer icon.
+To find the File Explorer module - click the File Explorer icon.
 
 ![](images/a-file-explorer1a.png)
 
@@ -40,7 +40,7 @@ Remix Desktop is a version of Remix IDE in an Electron app. Note that when using
 (Browsers do crash causing localstorage & indexedDB to be corrupted)
 
 Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.  
-Most of the Git operations are done in the **DGIT** pluin. (DGIT stands for Decentralized GIT).
+Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT).
 
 Branch management is also available at the bottom of the File Explorer when the Workspace is Git initialized.
 (see this page for the Git workflow).
@@ -79,7 +79,7 @@ The **Workspace hamburger menu** is for operations that work on an entire worksp
 ![](images/a-fe-hamburger.png)
 
 ##### Clone
-When clicking Clone, you’ll be asked for the url of a remote repo. A new workspace will be created that will contain the cloned repo. To manage the Git repo, go to the DGIT plugin.
+When clicking Clone, you’ll be asked for the url of a remote repo. A new workspace will be created that will contain the cloned repo. To manage the Git repo, go to the Dgit plugin.
 ##### Backup
 Backup is for downloading all the Workspaces in a .zip file. The zip file will have a folder called **.workspaces** that will contain a folder of each Workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  
 
@@ -140,7 +140,7 @@ Right-Click popup menu
 
 Right-clicking on a folder will bring a popup menu for operations you can do on that folder. 
 
-The right-click popup menu also works with RemixD (which gives you have access to a folder on your hard drive).  
+The right-click popup menu also works with Remixd (which gives you access to a folder on your hard drive).  
 
 **Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view.
 
@@ -157,3 +157,25 @@ Right-clicking on a file with a .sol extension will bring up a popup menu - whic
 Right-click on any file with a .js or .ts extension to get the **Run** option in the popup menu to run the script.  
 
 If the script you want to run is the active file in the Editor, you can also run it by using play button at the top left of the Editor or by inputting the command `remix.exeCurrent()` in the console.
+
+Git in the File Explorer
+------------------------
+In Remix, a workspace can be initialized with Git.  The Git commands then operate on the workspace.
+
+### Initialize
+For information about initializing a workspace, see this [section](#workspaces-initialized-with-git).
+
+### Clone
+The clone command is located in the **Workspace hamburger menu**.  For more information, see the section about [workspace operations](#workspace-operations)
+### Branch Management
+When you are in a workspace that is initialized with Git, at the bottom of the File Explorer, you’ll see the place for managing branches.
+
+![](images/a-fe-branch-man1.png)
+
+Then when you click on the branch name, this section will expand with an interface for switching branches and for creating a new branch.
+
+![](images/a-fe-branch-man2.png)
+
+For the rest of the Git commands, go to the DGit plugin.
+
+For more info about the DGit plugin, see ![this article](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da). 
