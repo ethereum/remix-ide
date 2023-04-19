@@ -1,6 +1,6 @@
 File Explorer
 =============
-The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin.
+The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right-click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin.
 
 To find the File Explorer module - click the File Explorer icon.
 
@@ -42,8 +42,7 @@ Remix Desktop is a version of Remix IDE in an Electron app. Note that when using
 Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.  
 Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT).
 
-Branch management is also available at the bottom of the File Explorer when the Workspace is Git initialized.
-(see this page for the Git workflow).
+[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized.
 
 Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)
 
@@ -101,7 +100,7 @@ Working with Files
 -------------------
 When a file is clicked on it will appear in the Editor.
 
-Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right clicking on a file or folder ([see below](#right-click-on-a-file-or-folder)).
+Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right-clicking on a file or folder ([see below](#right-click-on-a-file-or-folder)).
 
 ![](images/a-fe-file-icons2.png)
 
@@ -118,7 +117,7 @@ There are 2 ways of creating files:
 
 ![](images/a-file-explorer-new-file2.png)
 
-- The second way of creating a file is to right click on a file or folder to get a popup menu.
+- The second way of creating a file is to right-click on a file or folder to get a popup menu.
 
 The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
 
@@ -131,7 +130,7 @@ Click [this link](https://github.com/settings/tokens) to Github tokens setup and
 
 Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save.
 
-You can also publish by right clicking on the file or folder.
+You can also publish by right-clicking on the file or folder.
 
 Right-Click popup menu
 -------------------------------
