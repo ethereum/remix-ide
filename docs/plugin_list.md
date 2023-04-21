@@ -59,6 +59,8 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 Find any smart contract, build your project faster.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev
 <br>[Website](https://www.cookbook.dev)
+<br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin)
+<br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)
 
 **Debug Tools for Remix** &nbsp; ![](images/pi-remix-debug-tools.png) &nbsp; <br>
 Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API.
