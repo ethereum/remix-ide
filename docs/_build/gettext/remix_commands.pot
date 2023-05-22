@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"POT-Creation-Date: 2023-05-22 00:02-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,7 +94,7 @@ msgid "**web3.utils**: This package provides utility functions for Ethereum dapp
 msgstr ""
 
 #: ../../remix_commands.md:41
-msgid "A few Swarm examples examples (these will be updated soon)"
+msgid "A few Swarm examples (these will be updated soon)"
 msgstr ""
 
 #: ../../remix_commands.md:43
