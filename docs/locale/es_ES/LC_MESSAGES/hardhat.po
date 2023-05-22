@@ -9,21 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-19 15:40+0200\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../hardhat.md:1
-msgid "Hardhat Integration"
+msgid "Hardhat"
 msgstr ""
 
 #: ../../hardhat.md:4
-msgid "(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)"
+msgid "_(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_"
 msgstr ""
 
 #: ../../hardhat.md:6
@@ -31,39 +31,45 @@ msgid "Remixd and Hardhat"
 msgstr ""
 
 #: ../../hardhat.md:9
-msgid "Note: If you have not used remixd before, read more about it here"
+msgid ""
+"**Note:** If you have not used `remixd` before, read more about it "
+"[here](./remixd.html)"
 msgstr ""
 
 #: ../../hardhat.md:11
 msgid ""
-"If remixd is running locally on your device and shared folder is a "
-"Hardhat project, an additional websocket plugin will be listening on port"
-" 65522. According to its documentation,"
+"If `remixd` is running locally on your device and shared folder is a "
+"**Hardhat project**, an additional websocket plugin will be listening on "
+"port `65522`. According to its documentation,"
 msgstr ""
 
 #: ../../hardhat.md:13
 msgid ""
-"Hardhat projects are npm projects with the hardhat package installed and "
-"a hardhat.config.js or hardhat.config.ts file."
+"_Hardhat projects are npm projects with the hardhat package installed and"
+" a hardhat.config.js or hardhat.config.ts file._"
 msgstr ""
 
 #: ../../hardhat.md:15
 msgid ""
-"Remixd looks for the hardhat.config.js or hardhat.config.ts file in "
+"Remixd looks for the `hardhat.config.js` or `hardhat.config.ts` file in "
 "shared folder, and if it finds the file, the Hardhat websocket listener "
 "will run."
 msgstr ""
 
 #: ../../hardhat.md:17
 msgid ""
-"The Hardhat websocket listener is a websocket plugin similar to remixd "
+"The Hardhat websocket listener is a websocket plugin similar to `remixd` "
 "and is used to perform Hardhat specific actions with Remix IDE."
 msgstr ""
 
 #: ../../hardhat.md:19
 msgid ""
-"It doesn't need any separate installation as it is shipped with remixd "
-"NPM module."
+"It doesn't need any separate installation as it is shipped with [remixd "
+"NPM](https://www.npmjs.com/package/@remix-project/remixd) module."
+msgstr ""
+
+#: ../../hardhat.md:21
+msgid "![](images/a-hardhat-remixd.png)"
 msgstr ""
 
 #: ../../hardhat.md:23
@@ -80,18 +86,19 @@ msgstr ""
 
 #: ../../hardhat.md:30
 msgid ""
-"Hardhat should be installed locally on the system https://hardhat.org"
-"/getting-started/#installation"
+"**Hardhat** should be installed locally on the system "
+"[https://hardhat.org/getting-started/#installation](https://hardhat.org"
+"/getting-started/#installation)"
 msgstr ""
 
 #: ../../hardhat.md:31
 msgid ""
-"Shared folder should be a Hardhat project containing hardhat.config.js or"
-" hardhat.config.ts"
+"Shared folder should be a Hardhat project containing `hardhat.config.js` "
+"or `hardhat.config.ts`"
 msgstr ""
 
 #: ../../hardhat.md:32
-msgid "Remixd Hardhat websocket listener should be running at 65522"
+msgid "`Remixd` Hardhat websocket listener should be running at `65522`"
 msgstr ""
 
 #: ../../hardhat.md:34
@@ -100,9 +107,13 @@ msgstr ""
 
 #: ../../hardhat.md:36
 msgid ""
-"If a hardhat project is shared through remixd and localhost workspace is "
-"loaded in Remix IDE, there will be an extra checkbox shown in Solidity "
-"Compiler plugin with the label Enable Hardhat Compilation."
+"If a hardhat project is shared through remixd and `localhost` workspace "
+"is loaded in Remix IDE, there will be an extra checkbox shown in "
+"`Solidity Compiler` plugin with the label `Enable Hardhat Compilation`."
+msgstr ""
+
+#: ../../hardhat.md:38
+msgid "![](images/a-hardhat-compilation.png)"
 msgstr ""
 
 #: ../../hardhat.md:40
@@ -114,25 +125,33 @@ msgstr ""
 
 #: ../../hardhat.md:42
 msgid ""
-"One can check the Enable Hardhat Compilation box to run the compilation "
-"for Hardhat along with the Remix using the compiler configuration in "
-"Solidity Compiler plugin."
+"One can check the `Enable Hardhat Compilation` box to run the compilation"
+" for Hardhat along with the Remix using the compiler configuration in "
+"`Solidity Compiler` plugin."
 msgstr ""
 
 #: ../../hardhat.md:44
 msgid ""
-"On clicking Compile button, a file with remix-compiler.config.js will be "
-"created on the project root which will be storing compiler configuration "
-"set in Remix's Solidity Compiler plugin. It is passed to Hardhat for "
-"compilation."
+"On clicking `Compile` button, a file with `remix-compiler.config.js` will"
+" be created on the project root which will be storing compiler "
+"configuration set in Remix's `Solidity Compiler` plugin. It is passed to "
+"Hardhat for compilation."
 msgstr ""
 
 #: ../../hardhat.md:46
 msgid "The result of the compilation will be shown in the Remix IDE terminal"
 msgstr ""
 
+#: ../../hardhat.md:48
+msgid "![](images/a-hardhat-compilation-success.png)"
+msgstr ""
+
 #: ../../hardhat.md:50
-msgid "and also in the remixd terminal."
+msgid "and also in the **remixd** terminal."
+msgstr ""
+
+#: ../../hardhat.md:52
+msgid "![](images/a-hardhat-compilation-success-remixd.png)"
 msgstr ""
 
 #: ../../hardhat.md:54
@@ -141,21 +160,31 @@ msgstr ""
 
 #: ../../hardhat.md:57
 msgid ""
-"In Hardhat, contracts are deployed by starting a local node. Read more "
-"about it in Hardhat documentation"
+"_In Hardhat, contracts are deployed by starting a local node. Read more "
+"about it in [Hardhat documentation](https://hardhat.org/getting-"
+"started/#connecting-a-wallet-or-dapp-to-hardhat-network)_"
 msgstr ""
 
 #: ../../hardhat.md:59
 msgid ""
-"Hardhat Provider is a plugin on Remix IDE which enables users to deploy "
-"the contract to the Hardhat 'localhost' network. This can be chosed from "
-"the ENVIRONMENT dropdown of Deploy and Run Transactions plugin."
+"**Hardhat Provider** is a plugin on Remix IDE which enables users to "
+"deploy the contract to the Hardhat 'localhost' network. This can be "
+"chosen from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` "
+"plugin."
+msgstr ""
+
+#: ../../hardhat.md:61
+msgid "![](images/a-hardhat-provider-dropdown.png)"
 msgstr ""
 
 #: ../../hardhat.md:63
 msgid ""
-"As soon as you select Hardhat Provider, a modal is opened asking for the "
-"Hardhat JSON-RPC Endpoint."
+"As soon as you select `Hardhat Provider`, a modal is opened asking for "
+"the `Hardhat JSON-RPC Endpoint`."
+msgstr ""
+
+#: ../../hardhat.md:65
+msgid "![](images/a-hardhat-provider-modal.png)"
 msgstr ""
 
 #: ../../hardhat.md:67
@@ -168,9 +197,13 @@ msgstr ""
 
 #: ../../hardhat.md:69
 msgid ""
-"Once the correct endpoint is filled in the modal, just click on OK and "
-"the accounts from the Hardhat node will be loaded in the ACCOUNT section."
-" Network id will also be shown."
+"Once the correct endpoint is filled in the modal, just click on `OK` and "
+"the accounts from the Hardhat node will be loaded in the `ACCOUNT` "
+"section. Network id will also be shown."
+msgstr ""
+
+#: ../../hardhat.md:71
+msgid "![](images/a-hardhat-provider-connected.png)"
 msgstr ""
 
 #: ../../hardhat.md:73
@@ -178,4 +211,186 @@ msgid ""
 "Now, one can start deploying the contract from Remix IDE to the Hardhat "
 "local node as usual."
 msgstr ""
+
+#: ../../hardhat.md:75
+msgid "`console.log` in Remix IDE"
+msgstr ""
+
+#: ../../hardhat.md:78
+msgid "_(Supported since Remix IDE v0.17.0)_"
+msgstr ""
+
+#: ../../hardhat.md:80
+msgid ""
+"Remix IDE supports hardhat console library while using `Remix VM`. It can"
+" be used while making a transaction or running unit tests."
+msgstr ""
+
+#: ../../hardhat.md:82
+msgid "Deploy and Run Transactions"
+msgstr ""
+
+#: ../../hardhat.md:84
+msgid ""
+"To try it out, you need to put an import statement and use `console.log` "
+"to print the value as shown in image."
+msgstr ""
+
+#: ../../hardhat.md:86
+msgid "![](images/hardhat-console-file.png)"
+msgstr ""
+
+#: ../../hardhat.md:88
+msgid ""
+"Further, once you execute the `changeOwner` method, the value from "
+"console statement will be shown in Remix terminal after transaction "
+"details as below:"
+msgstr ""
+
+#: ../../hardhat.md:90
+msgid "![](images/hardhat-tx-terminal.png)"
+msgstr ""
+
+#: ../../hardhat.md:92
+msgid "Solidity Unit Testing"
+msgstr ""
+
+#: ../../hardhat.md:94
+msgid ""
+"Similarly, `console.log` can be used while running unit tests using Remix"
+" Solidity Unit Testing plugin. See image below."
+msgstr ""
+
+#: ../../hardhat.md:96
+msgid "![](images/hardhat-utesting-file.png)"
+msgstr ""
+
+#: ../../hardhat.md:98
+msgid ""
+"For the tests including logging message, it will display in the Remix "
+"Terminal corresponding to test name."
+msgstr ""
+
+#: ../../hardhat.md:100
+msgid "![](images/hardhat-utesting-terminal.png)"
+msgstr ""
+
+#~ msgid "Hardhat Integration"
+#~ msgstr ""
+
+#~ msgid "(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)"
+#~ msgstr ""
+
+#~ msgid "Note: If you have not used remixd before, read more about it here"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If remixd is running locally on "
+#~ "your device and shared folder is a"
+#~ " Hardhat project, an additional websocket"
+#~ " plugin will be listening on port "
+#~ "65522. According to its documentation,"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hardhat projects are npm projects with"
+#~ " the hardhat package installed and a"
+#~ " hardhat.config.js or hardhat.config.ts file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remixd looks for the hardhat.config.js "
+#~ "or hardhat.config.ts file in shared "
+#~ "folder, and if it finds the file,"
+#~ " the Hardhat websocket listener will "
+#~ "run."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Hardhat websocket listener is a "
+#~ "websocket plugin similar to remixd and"
+#~ " is used to perform Hardhat specific"
+#~ " actions with Remix IDE."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "It doesn't need any separate "
+#~ "installation as it is shipped with "
+#~ "remixd NPM module."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hardhat should be installed locally on"
+#~ " the system https://hardhat.org/getting-"
+#~ "started/#installation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Shared folder should be a Hardhat "
+#~ "project containing hardhat.config.js or "
+#~ "hardhat.config.ts"
+#~ msgstr ""
+
+#~ msgid "Remixd Hardhat websocket listener should be running at 65522"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a hardhat project is shared "
+#~ "through remixd and localhost workspace "
+#~ "is loaded in Remix IDE, there will"
+#~ " be an extra checkbox shown in "
+#~ "Solidity Compiler plugin with the label"
+#~ " Enable Hardhat Compilation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "One can check the Enable Hardhat "
+#~ "Compilation box to run the compilation"
+#~ " for Hardhat along with the Remix "
+#~ "using the compiler configuration in "
+#~ "Solidity Compiler plugin."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On clicking Compile button, a file "
+#~ "with remix-compiler.config.js will be "
+#~ "created on the project root which "
+#~ "will be storing compiler configuration "
+#~ "set in Remix's Solidity Compiler plugin."
+#~ " It is passed to Hardhat for "
+#~ "compilation."
+#~ msgstr ""
+
+#~ msgid "and also in the remixd terminal."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In Hardhat, contracts are deployed by"
+#~ " starting a local node. Read more "
+#~ "about it in Hardhat documentation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hardhat Provider is a plugin on "
+#~ "Remix IDE which enables users to "
+#~ "deploy the contract to the Hardhat "
+#~ "'localhost' network. This can be chosed"
+#~ " from the ENVIRONMENT dropdown of "
+#~ "Deploy and Run Transactions plugin."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As soon as you select Hardhat "
+#~ "Provider, a modal is opened asking "
+#~ "for the Hardhat JSON-RPC Endpoint."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once the correct endpoint is filled "
+#~ "in the modal, just click on OK "
+#~ "and the accounts from the Hardhat "
+#~ "node will be loaded in the ACCOUNT"
+#~ " section. Network id will also be "
+#~ "shown."
+#~ msgstr ""
 
