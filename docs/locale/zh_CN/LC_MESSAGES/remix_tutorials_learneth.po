@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_learneth.pot\n"
+"X-Crowdin-File-ID: 7427\n"
+"Language: zh_CN\n"
+
+#: ../../remix_tutorials_learneth.md:1
+msgid "Remix Tutorials with Learneth"
+msgstr "Remix Learneth教程"
+
+#: ../../remix_tutorials_learneth.md:4
+msgid "**Learneth** is a tutorial platform integrated into Remix."
+msgstr "**Learnneth** 是一个整合到Remix的教程平台。"
+
+#: ../../remix_tutorials_learneth.md:6
+msgid "Tutorials can contain quizzes for testing students' work.  These quizzes are run by Solidity Unit Tests."
+msgstr "教程可以包含测试学生学习成果的测验。这些测验由Solidity单元测试运行。"
+
+#: ../../remix_tutorials_learneth.md:8
+msgid "![](images/a-learneth.png)"
+msgstr "![](images/a-learneth.png)"
+
+#: ../../remix_tutorials_learneth.md:10
+msgid "We have a growing set of tutorials on our repo- but anyone can build tutorials on their own repos and have their students load them up!"
+msgstr "我们的仓库中有越来越多的教程，但任何人都可以在自己的仓库上构建教程，并让他们的学生加载它们！"
+
+#: ../../remix_tutorials_learneth.md:12
+msgid "The tutorials contain .md files for instructions and can also contain example files, Solidity Unit Test files for quizzes, as well as answer files for quizzes."
+msgstr "这些教程包含指导说明的 .md 文件，还可以包含示例文件、Solidity 单元测试文件以及测验答案文件。"
+
+#: ../../remix_tutorials_learneth.md:14
+msgid "Opening Learneth & associated links"
+msgstr "打开Learneth & 相关链接"
+
+#: ../../remix_tutorials_learneth.md:15
+msgid "Learneth is a plugin - so to access it, you need to activate the Learneth plugin in the Plugin Manager.   Alternatively - this link will active it: click this link."
+msgstr "Learneth是一个插件 - 因此要访问它，您需要在插件管理器中激活Learneth插件。或者 - 您可以点击此链接来激活它："
+
+#: ../../remix_tutorials_learneth.md:21
+msgid "This link will activate Learneth and then will open a specific tutorial - in this case it will load the **proxy contract** tutorial:"
+msgstr "这个链接将激活Learneth，然后打开一个特定的教程 - 在这种情况下，它将加载**代理合约**教程："
+
+#: ../../remix_tutorials_learneth.md:27
+msgid "**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html)."
+msgstr "**注意：**有关使用带参数的Remix URL的其他技巧，请转到[locations](locations.html)页面。"
+
+#: ../../remix_tutorials_learneth.md:29
+msgid "Learneth Tutorials"
+msgstr "Learneth教程"
+
+#: ../../remix_tutorials_learneth.md:31
+msgid "Here is the current list of Learneth Tutorials"
+msgstr "以下是当前的Learneth教程列表"
+
+#: ../../remix_tutorials_learneth.md:33
+msgid "***Beginner***"
+msgstr "***初级***"
+
+#: ../../remix_tutorials_learneth.md:38
+msgid "***Intermediate***"
+msgstr "***中级***"
+
+#: ../../remix_tutorials_learneth.md:43
+msgid "***Advanced***"
+msgstr "***高级**"
+
+#: ../../remix_tutorials_learneth.md:50
+msgid "Learneth & Tutorial Repos"
+msgstr "Learneth & 教程库"
+
+#: ../../remix_tutorials_learneth.md:52
+msgid "The code for the Learneth plugin is located here: https://github.com/bunsenstraat/remix-learneth-plugin/blob/master/docs/index.rst"
+msgstr "Learneth插件的代码：`https://github.com/bunsenstraat/remix-learneth-plugin/blob/master/docs/index.rst`"
+
+#: ../../remix_tutorials_learneth.md:55
+msgid "Documentation for creating your own tutorials is located here: https://remix-learneth-plugin.readthedocs.io/en/latest/index.html"
+msgstr "创建自己的教程的文档：`https://remix-learneth-plugin.readthedocs.io/en/latest/index.html`"
+
+#: ../../remix_tutorials_learneth.md:58
+msgid "Remix maintains and curates this repo of Learneth tutorials: https://github.com/ethereum/remix-workshops"
+msgstr "Remix维护和策划了Learneth教程库：https://github.com/ethereum/remix-workshops"
+
