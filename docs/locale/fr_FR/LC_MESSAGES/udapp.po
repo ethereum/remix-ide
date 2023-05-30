@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:24\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Language: fr_FR\n"
 
 #: ../../udapp.md:1
-msgid "Run & Deploy (part 2)"
+msgid "Deploy & Run (part 2)"
 msgstr ""
 
 #: ../../udapp.md:4
@@ -33,8 +33,17 @@ msgstr ""
 msgid "The deployed contract appears but is in its collapsed form."
 msgstr ""
 
+#: ../../udapp.md:10
+msgid "![](images/a-debug2-udapp1a.png)"
+msgstr ""
+
 #: ../../udapp.md:12
 msgid "Click the sideways caret to open it up."
+msgstr ""
+
+#: ../../udapp.md:14
+#: ../../udapp.md:64
+msgid "![](images/a-udapp1.png)"
 msgstr ""
 
 #: ../../udapp.md:16
@@ -42,19 +51,23 @@ msgid "You will see the functions in the contract.  The functions buttons can ha
 msgstr ""
 
 #: ../../udapp.md:18
-msgid "Functions that are constant or pure functions in Solidity have a blue buttons. Clicking one of this type does not create a new transaction. So clicking will not cause state changes - it will only return a value stored in the contract - so it won't cost you anything in gas fees."
+msgid "Functions that are `constant` or `pure` functions in Solidity have a blue buttons. Clicking one of this type does not create a new transaction. So clicking will not cause state changes - it will only return a value stored in the contract - so it won't cost you anything in gas fees."
 msgstr ""
 
 #: ../../udapp.md:20
-msgid "Functions that change the state of the contract AND that do not accept Ether are called non-payable functions and have an orange button. Clicking on them will create a transaction and thus cost gas."
+msgid "Functions that change the state of the contract AND that do not accept Ether are called `non-payable` functions and have an orange button. Clicking on them will create a transaction and thus cost gas."
 msgstr ""
 
 #: ../../udapp.md:22
-msgid "Functions that have red buttons are payable functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a value.  The value is put in in the Value field which is under the Gas Limit field."
+msgid "Functions that have red buttons are `payable` functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a **value**.  The **value** is put in in the Value field which is under the Gas Limit field."
+msgstr ""
+
+#: ../../udapp.md:24
+msgid "![](images/a-jvm-calling-instance.png)"
 msgstr ""
 
 #: ../../udapp.md:27
-msgid "See more information about Solidity modifiers in the Solidity docs. ."
+msgid "See more information about [Solidity modifiers](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers) in the Solidity docs. ."
 msgstr ""
 
 #: ../../udapp.md:31
@@ -63,6 +76,10 @@ msgstr ""
 
 #: ../../udapp.md:33
 msgid "Inputting parameters"
+msgstr ""
+
+#: ../../udapp.md:35
+msgid "![](images/a-udapp-inputs.png)"
 msgstr ""
 
 #: ../../udapp.md:37
@@ -82,7 +99,7 @@ msgid "Numbers and addresses do not need to be wrapped in double quotes."
 msgstr ""
 
 #: ../../udapp.md:42
-msgid "Strings need to be wrapped."
+msgid "Strings do not need to be wrapped."
 msgstr ""
 
 #: ../../udapp.md:43
@@ -98,7 +115,11 @@ msgid "Inputting parameters in the expanded view"
 msgstr ""
 
 #: ../../udapp.md:48
-msgid "Clicking the 'down' caret brings you to the Multi-param Manager - where you can input the parameters one at a time. Much less confusing!"
+msgid "Clicking the 'down' caret brings you to the *Multi-param Manager* - where you can input the parameters one at a time. **Much less confusing!**"
+msgstr ""
+
+#: ../../udapp.md:50
+msgid "![](images/a-udapp-multi-param-man.png)"
 msgstr ""
 
 #: ../../udapp.md:52
@@ -118,7 +139,7 @@ msgid "Low level interactions"
 msgstr ""
 
 #: ../../udapp.md:60
-msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the receive() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
+msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the **receive()** or **fallback()** function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
 msgstr ""
 
 #: ../../udapp.md:62
@@ -130,23 +151,27 @@ msgid "Please note the following:"
 msgstr ""
 
 #: ../../udapp.md:69
-msgid "If you are executing a plain Ether transfer to a contract, you need to have the receive() function in your contract.  If your contract has been deployed and you want to send it funds, you would input the amount of Ether or Wei etc. (see A in graphic below), and then input NOTHING in the calldata field of Low level interactions (see B in graphic) and click the Transact button (see C in graphic below)."
+msgid "If you are executing a plain Ether transfer to a contract, you need to have the receive() function in your contract.  If your contract has been deployed and you want to send it funds, you would input the amount of Ether or Wei etc. (see **A** in graphic below), and then input **NOTHING** in the calldata field of **Low level interactions** (see **B** in graphic) and click the Transact button (see **C** in graphic below)."
+msgstr ""
+
+#: ../../udapp.md:71
+msgid "![](images/a-receive-fun.png)"
 msgstr ""
 
 #: ../../udapp.md:73
-msgid "If you are sending calldata to your contract with Ether, then you need to use the fallback() function and have it with the state mutability of payable."
+msgid "If you are sending calldata to your contract with Ether, then you need to use the fallback() function and have it with the state mutability of **payable**."
 msgstr ""
 
 #: ../../udapp.md:75
-msgid "If you are not sending ether to the contract but are sending call data then you need to use the fallback() function."
+msgid "If you are not sending ether to the contract but **are** sending call data then you need to use the fallback() function."
 msgstr ""
 
 #: ../../udapp.md:77
-msgid "If you break the rules when using the Low level interactions you will be slapped with a warning."
+msgid "If you break the rules when using the **Low level interactions** you will be slapped with a warning."
 msgstr ""
 
 #: ../../udapp.md:79
-msgid "Please see the solidity docs for more specifics about using the fallback and receive functions."
+msgid "Please see the [solidity docs](https://solidity.readthedocs.io/en/latest/contracts.html#receive-ether-function) for more specifics about using the **fallback** and **receive** functions."
 msgstr ""
 
 #: ../../udapp.md:81
@@ -158,7 +183,7 @@ msgid "To pass a tuple in, you need to put in an array []."
 msgstr ""
 
 #: ../../udapp.md:84
-msgid "Similarly, to pass in a struct as a parameter of a function, it needs to be put in as an array [].  Also note that the line pragma experimental ABIEncoderV2; needs to put in at the top of the solidity file."
+msgid "Similarly, to pass in a struct as a parameter of a function, it needs to be put in as an array [].  Also note that the line `pragma experimental ABIEncoderV2;` needs to put in at the top of the solidity file."
 msgstr ""
 
 #: ../../udapp.md:88
@@ -170,7 +195,7 @@ msgid "Consider a nested struct defined like this:"
 msgstr ""
 
 #: ../../udapp.md:101
-msgid "If a function has the signature fertilizer(Garden memory gardenPlot) then the correct syntax is:"
+msgid "If a function has the signature `fertilizer(Garden memory gardenPlot)` then the correct syntax is:"
 msgstr ""
 
 #: ../../udapp.md:106
@@ -178,10 +203,10 @@ msgid "To continue on this example, here's a sample contract:"
 msgstr ""
 
 #: ../../udapp.md:133
-msgid "After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named fertilizer :"
+msgid "After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named **fertilizer** :"
 msgstr ""
 
 #: ../../udapp.md:139
-msgid "The function fertilizer accepts a single parameter of the type Garden. The type Garden is a struct. Structs are wrapped in square brackets.  Inside Garden is an array that is an array of structs named theFlowers. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
+msgid "The function **fertilizer** accepts a single parameter of the type **Garden**. The type **Garden** is a **struct**. Structs are wrapped in **square brackets**.  Inside **Garden** is an array that is an array of structs named **theFlowers**. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
 msgstr ""
 
