@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,167 +19,179 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Solidity Compiler"
-msgstr ""
+msgstr "Solidity 编译器"
 
 #: ../../compile.md:4
-msgid "Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.  The default view of the Solidity Compiler shows the basic configuration.  To open the Advanced Configuration panel, click the Advanced Configuration button (C. in fig. 1). For details on advanced features - see below."
-msgstr ""
+msgid "Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.  The default view of the Solidity Compiler shows the basic configuration.  To open the Advanced Configuration panel, click the **Advanced Configuration** button (**C. in fig. 1**). For details on advanced features - see below."
+msgstr "点击图标面板中的 Solidity 图标即可进入Solidity 编译器界面。界面中默认展示编译器的基础配置项。点击**高级配置**按钮即可打开高级配置面板 (**见图1中的C.**)。有关高级特性的详情，请看下文。"
 
 #: ../../compile.md:6
 msgid "Solidity Compiler Basics"
-msgstr ""
+msgstr "Solidity 编译器基础"
 
 #: ../../compile.md:8
 msgid "Selecting a contract to compile"
-msgstr ""
+msgstr "选择一个合约进行编译"
 
 #: ../../compile.md:9
 msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
-msgstr ""
+msgstr "在文件管理器中打开一个文件即可进行编译。如果打开了多个文件，请确保你想编译的文件在编辑器中处于选中状态。"
 
 #: ../../compile.md:11
 msgid "If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:"
-msgstr ""
+msgstr "如果编辑器中没有打开的文件，或者没有已编译的文件，那么 Solidity 编译器看起来会是这个样子："
+
+#: ../../compile.md:13
+msgid "![](images/a-sol-comp-no-file.png)"
+msgstr "![](images/a-sol-comp-no-file.png)"
 
 #: ../../compile.md:15
 msgid "Triggering compilation"
-msgstr ""
+msgstr "触发编译"
 
 #: ../../compile.md:16
 msgid "Compiling is triggered when you:"
-msgstr ""
+msgstr "当你这么做的时候会触发编译："
 
 #: ../../compile.md:17
-msgid "click the compile button (D. in fig. 1 below)"
-msgstr ""
+msgid "click the compile button (**D. in fig. 1 below**)"
+msgstr "点击编译按钮 (**下面图1中的D.**)"
 
 #: ../../compile.md:18
-msgid "use the shortcut control + s."
-msgstr ""
+msgid "use the shortcut `control + s`."
+msgstr "使用快捷键 `control + s`."
 
 #: ../../compile.md:19
-msgid "right click on a file in the File Explorer and selecting Compile option"
-msgstr ""
+msgid "right click on a file in the File Explorer and selecting **Compile** option"
+msgstr "在文件管理器中右键点击一个文件并且选择**编译**选项"
+
+#: ../../compile.md:21
+msgid "![](images/a-sol-comp-basic.png)"
+msgstr "![](images/a-sol-comp-basic.png)"
 
 #: ../../compile.md:23
 msgid "Auto Compile"
 msgstr "自动编译"
 
 #: ../../compile.md:24
-msgid "If the auto compile checkbox (B. in fig. 1 above) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected. If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
+msgstr "如果自动编译选项框 (**见上图1中的B.**) 是选中状态，编译会在几秒内进行(文件自动保存后)，当另一个文件被选中时也一样。如果一个合约有很多依赖，编译多会花一点时间 - 所以，您可以自行判断是否需要使用自动编译。"
 
 #: ../../compile.md:27
 msgid "Solidity versions & Remix functionality"
 msgstr "Solidity 版本 & Remix 功能"
 
 #: ../../compile.md:28
-msgid "The compiler version is selected in the COMPILER dropdown list (A. in fig. 1 above)."
-msgstr ""
+msgid "The compiler version is selected in the **COMPILER** dropdown list (**A. in fig. 1 above**)."
+msgstr "**编译器**下拉列表中已经选中了一个编译器版本(**见上图1中的A.**)。"
 
 #: ../../compile.md:30
-msgid "You can compile (and deploy) contracts with versions of Solidity older than 0.4.12. However, the older compilers use a legacy AST — which we no longer support. Consequently, some plugins may not work and some functionality - e.g. source highlighting in the Editor may only be partially working."
-msgstr ""
+msgid "You can compile (and deploy) contracts with versions of Solidity **older than 0.4.12**. However, the older compilers use a legacy AST — which we no longer support. Consequently, some plugins may not work and some functionality - e.g. source highlighting in the Editor may only be partially working."
+msgstr "您可以编译(且部署)**比 0.4.12 更老**的 Solidity 版本的合约。但是这些更老的编译器使用了传统的抽象语法树 — 我们已经不再支持。因此，有些插件可能无法使用，有些功能 — 比如编辑器语法高亮可能只有部分还能工作。"
 
 #: ../../compile.md:34
 msgid "Using the Contract select box"
-msgstr ""
+msgstr "使用合约选项框"
 
 #: ../../compile.md:36
-msgid "Because a Solidity file can include multiple contracts and because contracts can import other contracts,  multiple contracts are often compiled.  However, only 1 contract's compilation details can be retrieved at a time."
-msgstr ""
+msgid "Because a Solidity file can include multiple contracts and because contracts can import other contracts,  multiple contracts are often compiled.  **However**, only 1 contract's compilation details can be retrieved at a time."
+msgstr "因为一个 Solidity 文件可以包含多个合约，且合约也可以引用其他合约，所以多个合约经常会被同时编译。**但是**，一次只能获取一个合约的编译结果。"
 
 #: ../../compile.md:38
-msgid "To select the desired contract, use the Contract select box (F. in fig. 1). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected."
-msgstr ""
+msgid "To select the desired contract, use the **Contract** select box (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected."
+msgstr "在合约选项框中(**见图1中的F.**) 可以选择你想要的合约。忘记选择正确的合约是一种常见的错误 - 所以记得确认下您确实选中了您想要的那个合约。"
 
 #: ../../compile.md:40
 msgid "Compilation Details and Publishing"
 msgstr "编译细节和发布"
 
 #: ../../compile.md:41
-msgid "Using the publish button, you can upload your contract to  IPFS or Swarm (only non abstract contracts can be published to Swarm)."
-msgstr ""
+msgid "Using the publish button, you can upload your contract to  **IPFS** or **Swarm** (only non abstract contracts can be published to Swarm)."
+msgstr "使用发布按钮，您可以将您的合约上传到 **IPFS** 或者 **Swarm** (只有非抽象合约可以发布到 Swarm)。"
 
 #: ../../compile.md:43
 msgid "When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address."
-msgstr ""
+msgstr "当发布一个引用了其他合约的合约时，主合约和所有引用合约都会被发布 - 每一个都会有对应的地址。"
 
 #: ../../compile.md:45
-msgid "Published data contains the contract's metadata and the solidity source code."
-msgstr ""
+msgid "**Published data contains the contract's metadata and the solidity source code.**"
+msgstr "**发布的数据包含合约的元数据和 solidity 源码。**"
 
 #: ../../compile.md:47
-msgid "After either Publish on IPFS or Publish on Swarm is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's metadata."
-msgstr ""
+msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**."
+msgstr "点击 **Publish on IPFS** 或 **Publish on Swarm** 按钮后，会弹出一个对话框。对话框内包含了主合约和引用合约的地址，还有合约**元数据**的地址。"
 
 #: ../../compile.md:49
-msgid "When the \"Compilation Details\" button is clicked (G. in fig. 1), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgid "When the \"Compilation Details\" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract."
+msgstr "点击 \"Compilation Details\" 按钮 (**见图1中的G.**)，会弹出一个对话框展示包含当前选中合约详情信息。"
 
 #: ../../compile.md:51
-msgid "If you just want to get the ABI or the Bytecode - click the appropriate button see H. in fig. 1."
-msgstr ""
+msgid "If you just want to get the **ABI** or the **Bytecode** - click the appropriate button see **H. in fig. 1**."
+msgstr "如果你只想获取 **ABI** 或 **Bytecode** - 点击对应的按钮即可。**见图1中的H.** 。"
 
 #: ../../compile.md:53
 msgid "Passive Contract Verification"
-msgstr ""
+msgstr "被动合约验证"
 
 #: ../../compile.md:54
-msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service Sourcify,  will verifiy your contracts without you needing to do anything."
-msgstr ""
+msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything."
+msgstr "当你把你的元数据发布到 IPFS 且部署你的代码到主网络或者公共测试网络，合约验证服务 **[Sourcify](https://sourcify.dev/)** 会验证你的合约，而你自己不需要做任何事情。"
 
 #: ../../compile.md:56
 msgid "Compile and Run script"
-msgstr ""
+msgstr "编译且执行脚本"
 
 #: ../../compile.md:57
-msgid "The Compile and Run script button (E. in fig. 1) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  (more about Compile & Run)"
-msgstr ""
+msgid "The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
+msgstr "点击编译且执行脚本按钮 (**见图1中的E.**) 会编译且立即执行一个脚本。这是一个节省时间的方式，以便您编写一些代码并且自动执行脚本去设置合约状态 - 从而您可以快速理解代码是怎么工作的。([更多关于编译且执行脚本](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
 
 #: ../../compile.md:59
 msgid "Compilation Errors and Warning"
-msgstr ""
+msgstr "编译错误和警告"
 
 #: ../../compile.md:60
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report."
-msgstr ""
+msgstr "编译错误和警告展示在合约区域的下方。每次编译，静态分析选项卡都会生成一份报告。"
 
 #: ../../compile.md:63
-msgid "It is important to address reported issues even if the compiler doesn't complain. (more about static analysis)"
-msgstr ""
+msgid "It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))"
+msgstr "解决报告中的问题很重要，即使编译器并没有抱怨。([更多关于静态分析](static_analysis.html))"
 
 #: ../../compile.md:65
 msgid "Advanced Compiler Configurations"
-msgstr ""
+msgstr "高级编译配置"
 
 #: ../../compile.md:66
-msgid "Clicking on Advanced Compiler Configurations will open this panel (M. in fig. 2 below)."
-msgstr ""
+msgid "Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 2 below**)."
+msgstr "点击高级编译配置会打开如下面板 (**见下图2中的M.**)。"
+
+#: ../../compile.md:68
+msgid "![](images/a-sol-comp-adv.png)"
+msgstr "![](images/a-sol-comp-adv.png)"
 
 #: ../../compile.md:70
-msgid "There is a radio button to choose whether to configure the compiler through the interface (N. in fig 2) or to use a JSON file for the cofiguration (R. in fig 2)."
-msgstr ""
+msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**)."
+msgstr "有一个单选按钮可以选择使用交互界面配置 (**见图2中的N.**) 还是 JSON 文件配置 (**见图2中的R.**)。"
 
 #: ../../compile.md:72
 msgid "Solidity or YUL"
-msgstr ""
+msgstr "Solidity 或 YUL"
 
 #: ../../compile.md:73
-msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown (O. in fig 2) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
-msgstr ""
+msgid "Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples. You can use the language dropdown (**O. in fig 2**) to switch the language. **This dropdown list is only available for versions greater than or equal to `0.5.7`.**"
+msgstr "自 Solidity `0.5.7` 版本后就可以编译 `Yul` 文件。请阅读([solidity 文档中关于 Yul 的内容](https://docs.soliditylang.org/en/latest/yul.html))，里面包含了代码示例。您可以在语言下拉框 (**见图2中的O.**) 中切换语言。**Yul 选项只对大于等于 `0.5.7` 版本的编译器有效。**"
 
 #: ../../compile.md:76
 msgid "Select an EVM version"
-msgstr ""
+msgstr "选择 EVM 版本"
 
 #: ../../compile.md:77
-msgid "The EVM dropdown list (P. in fig 2) allows to compile code against a specific Ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version."
-msgstr ""
+msgid "The EVM dropdown list (**P. in fig 2**) allows to compile code against a specific **Ethereum hard fork**. The `compiler default` corresponds to the default hard fork used by a specific version."
+msgstr "EVM 下拉选框 (**图2中的P.**) 可以让您对特定的**以太坊硬分叉**版本进行编译。`compiler default`对应使用默认硬分叉版本作为给定版本。"
 
 #: ../../compile.md:80
-msgid "To see the name of the hard fork used in the current compilation, click the \"Compilation Details\" button and in the Metadata section there will be a sub-section called settings.  Open up the settings to see the EVM version's name."
-msgstr ""
+msgid "To see the name of the hard fork used in the current compilation, click the \"Compilation Details\" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name."
+msgstr "查看当前编译结果中使用的硬分叉名，可点击 \"Compilation Details\" 按钮，在 `Metadata` 章节下有一个叫 **settings** 的子章节，打开 **settings** 章节就可以看到 EVM 版本名称。"
 
 #: ../../compile.md:82
 msgid "Enable optimization"
@@ -187,53 +199,53 @@ msgstr "启用优化"
 
 #: ../../compile.md:83
 msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
-msgstr ""
+msgstr "根据 Solidity 文档，“优化器会试图简化复杂的表达式，这会减少代码体积和执行消耗，也就是说这可以减少部署合约和外部调用合约的油费。”"
 
 #: ../../compile.md:85
-msgid "For recent versions of Solidity, it is recommended to enable optimization ."
-msgstr ""
+msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
+msgstr "对于最近的 Solidity 版本，[推荐启用优化](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
 
 #: ../../compile.md:87
-msgid "To learn more about optimization, (Q. in the fig 2) visit the Solidity docs on the optimizer."
-msgstr ""
+msgid "To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html)."
+msgstr "想要深入了解优化， (**图2中的Q.**) 可以访问 [Solidity 文档中关于优化器的内容](https://docs.soliditylang.org/en/latest/internals/optimizer.html)。"
 
 #: ../../compile.md:89
-msgid "To the right of the Enable optimization checkbox is the box to input the number of Optimization runs.  The default value is 200."
-msgstr ""
+msgid "To the right of the **Enable optimization** checkbox is the box to input the number of Optimization runs.  The default value is 200."
+msgstr "**启用优化**复选框右边的输入框可以输入优化次数。默认值是200 。"
 
 #: ../../compile.md:91
 msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
-msgstr ""
+msgstr "你可能会问 - “对于我的合约来说，正确的次数应该是多少？” Solidity 文档是这么说的："
 
 #: ../../compile.md:93
 msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
-msgstr ""
+msgstr "如果你希望部署合约的时候油费便宜一点，且以后执行合约方法更贵一点，你可以设置 --optimize-runs=1 。如果你预料到这个合约以后会有很多交易，且并不在乎高昂的部署费用和输出尺寸，那就设置 --optimize-runs 为一个更高的值。"
 
 #: ../../compile.md:95
-msgid "To learn more about the optimization runs, visit the Solidity docs about Optimizer options."
-msgstr ""
+msgid "To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)."
+msgstr "想了解更多关于优化次数的细节，请访问 [Solidity 文档中关于优化器选项的内容](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)。"
 
 #: ../../compile.md:97
 msgid "JSON file for Compiler configuration"
-msgstr ""
+msgstr "JSON 文件的编译器配置"
 
 #: ../../compile.md:98
-msgid "Selecting the radio button next to Use configuration file will let you set the configuration using a JSON file (T. in fig 2).   When you switch to compile with a config file, a sample compiler config file is created. This file can be edited with all the available options."
-msgstr ""
+msgid "Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   When you switch to **compile with a config file**, a sample compiler config file is created. This file can be edited with all the available options."
+msgstr "选择**使用配置文件**旁边的单选按钮，您就可以用一个 JSON 文件 (**见图二中的T.**) 来进行配置。当您切换到**使用配置文件进行编译**，一份编译器配置文件示例就会自动生成。这个文件可以编辑所有可用的选项。"
 
 #: ../../compile.md:100
-msgid "Clicking the config file's name will open it up in the Editor. To change the config file click the Change button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents."
-msgstr ""
+msgid "Clicking the config file's name will open it up in the Editor.  To change the config file click the **Change** button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents."
+msgstr "点击配置文件名称会在编辑器中打开这个文件。点击**替换**按钮即可替换配置文件。如果你在输入框中输入了一个不存在的文件名称，一个包含了默认文件内容的新文件就会自动生成。"
 
 #: ../../compile.md:103
 msgid "There is no error checking when using the .json file for configuration settings, so make sure your config file is correct."
-msgstr ""
+msgstr "使用 .json 文件配置是不会有错误检测的，所以请确保您的配置文件是正确的。"
 
 #: ../../compile.md:105
 msgid "Use a Custom Solidity Compiler"
-msgstr ""
+msgstr "使用自定义 Solidity 编译器"
 
 #: ../../compile.md:106
-msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in fig 1) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgid "For those writing your own custom solidity compiler, you can import that by clicking the **+** button (**X. in fig 1**) to open a modal where you can input the url of the compiler to be loaded."
+msgstr "如果想使用自定义编译器，您可以点击 **+** 按钮 (**见图一中的X.**) 打开一个对话框，输入自定义编译器的链接。"
 
