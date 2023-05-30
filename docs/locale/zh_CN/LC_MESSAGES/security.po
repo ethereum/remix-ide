@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:48\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/security.pot\n"
+"X-Crowdin-File-ID: 7433\n"
+"Language: zh_CN\n"
+
+#: ../../security.md:1
+msgid "Using Remix Safely"
+msgstr "安全使用 Remix"
+
+#: ../../security.md:4
+msgid "It is dangerous to send transactions on contracts you don't understand (even if it's a get rich quick scheme that you've copied & pasted from a Discord DM or a youtube video and you really really want to get rich)."
+msgstr "在不理解合约的情况下发送交易是危险的（即使它是一个从Discord私信或YouTube视频中复制并粘贴的快速致富计划，你非常想变得富有）。"
+
+#: ../../security.md:6
+msgid "Check our [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) on a current scam promoting \"liquidity front runner bots\"."
+msgstr "请查看我们的[文章](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797)，介绍目前正在推广“流动性抢跑机器人”的骗局。"
+
+#: ../../security.md:8
+msgid "Always check that you are loading Remix over HTTPS unless you have a specific reason for accessing it with HTTP (e.g. for using Remix locally or for a connection you trust)."
+msgstr "始终检查您是否正在通过 HTTPS 加载 Remix，除非您有使用 HTTP 访问它的特定原因（例如在本地使用 Remix 或对您信任的连接）。"
+
+#: ../../security.md:10
+msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
+msgstr "请确保所有导入都包含**版本号**，否则您将不知道获取的文件版本，并且构建不能复现。"
+
+#: ../../security.md:12
+msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
+msgstr "所以**不要** 使用这样的导入：<br> `import \"@openzepelin/contracts/token/ERC20/ERC20.sol\";`"
+
+#: ../../security.md:15
+msgid "Rather, **use one** like this:<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
+msgstr "相反，**使用一个** 像这样：<br> `import \"@openzepelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
+
+#: ../../security.md:18
+msgid "When connecting a contract to an existing deployment, ensure that the thing you are connecting to is correct AND is the correct version."
+msgstr "合约连接到链上部署的时候，请确保您连接的对象是正确的，并且是正确版本。"
+
+#: ../../security.md:20
+msgid "Always be sure to address or understand every warning."
+msgstr "始终确保处理或理解每一个警告。"
+
+#: ../../security.md:22
+msgid "Remix is a subdomain of ethereum.org - so the only valid Remix urls are:"
+msgstr "Remix是ethereum.org的子域名 - 因此，唯一有效的Remix网址为："
+
+#: ../../security.md:23
+msgid "remix.ethereum.org"
+msgstr "remix.ethereum.org"
+
+#: ../../security.md:24
+msgid "remix-alpha.ethereum.org"
+msgstr "remix-alpha.ethereum.org"
+
+#: ../../security.md:25
+msgid "remix-beta.ethereum.org"
+msgstr "remix-beta.ethereum.org"
+
+#: ../../security.md:27
+msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
+msgstr "如果您被引导到一个看起来像Remix但URL类似但不同的网站 - 那不是Remix，很可能是一种骗局。"
+
+#: ../../security.md:29
+msgid "Remix's ease makes its users a target"
+msgstr "Remix的易用性使其用户成为骗子攻击的目标"
+
+#: ../../security.md:30
+msgid "Because Remix has no setup, it has a large community of noobies to smart contract development. This is great, but it provides a target audience for scammers exploit. Without Remix, the scammers would first need to instruct victims to set up a local dev environment, which would severely limit the success rate of the scam."
+msgstr "因为 Remix 没有安装过程，所以它拥有一个庞大的智能合约开发新手社区。这很棒，但也为骗子提供了可供利用的目标受众。如果没有 Remix，骗子首先需要指导受害者设置本地开发环境，这将严重限制骗局的成功率。"
+
+#: ../../security.md:32
+msgid "**Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!**"
+msgstr "**当潜在受害者了解诈骗及如何阅读和理解代码时，诈骗的效力就会减弱。学习Solidity并且要学好！**"
+
+#: ../../security.md:34
+msgid "For Solidity Tutorials in Remix, go to the LearnEth plugin."
+msgstr "要在Remix中学习Solidity教程，请使用LearnEth插件。"
+
