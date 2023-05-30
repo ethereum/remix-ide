@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:45\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +22,12 @@ msgid "Community Support"
 msgstr "Soporte de la Comunidad"
 
 #: ../../community.md:4
-msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
-msgstr "Sabemos que el ecosistema blockchain es muy nuevo y hay mucha información dispersa en la web. Por esa razón, hemos creado un canal comunitario de soporte en donde tratamos de responder todas tus preguntas si te quedas varado usando Remix. Por favor, únete a nuestra comunidad y pide ayuda."
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
+msgstr ""
 
 #: ../../community.md:8
-msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
-msgstr "Para cualquiera que esté interesado en desarrollar un plugin personalizado para Remix o quien quiera contribuir al código fuente, hemos abierto un canal de contribuidores, especialmente para desarrolladores que trabajen en herramientas para Remix."
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
+msgstr ""
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
