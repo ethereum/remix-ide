@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:45\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -26,10 +26,10 @@ msgid "Remix is an open source tool and we encourage everyone to help us improve
 msgstr "Remix - это инструмент с открытым исходным кодом, и мы призываем всех помочь нам его улучшить. Пожалуйста, находя проблемы, оставляйте отзывы или отправляйте запросы на добавление в нашу кодовую базу."
 
 #: ../../code_contribution_guide.md:8
-msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
+msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` and among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
 msgstr ""
 
 #: ../../code_contribution_guide.md:10
-msgid "To learn more, please visit our GitHub page."
-msgstr "Чтобы узнать больше, посетите нашу страницу на GitHub."
+msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
+msgstr ""
 
