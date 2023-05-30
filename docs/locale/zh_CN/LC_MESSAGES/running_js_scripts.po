@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:48\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/running_js_scripts.pot\n"
+"X-Crowdin-File-ID: 7431\n"
+"Language: zh_CN\n"
+
+#: ../../running_js_scripts.md:1
+msgid "Running Scripts"
+msgstr "运行脚本"
+
+#: ../../running_js_scripts.md:4
+msgid "_JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._"
+msgstr "_JavaScript（JS）是一种轻量级、解释型或即时编译的编程语言，具有一等函数。_"
+
+#: ../../running_js_scripts.md:6
+msgid "Remix IDE supports execution of JS scripts."
+msgstr "Remix IDE 支持执行 JS 脚本。"
+
+#: ../../running_js_scripts.md:8
+msgid "Write & Run a script"
+msgstr "编写并运行脚本"
+
+#: ../../running_js_scripts.md:10
+msgid "Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:"
+msgstr "创建一个扩展名为`.js`的文件，并编写逻辑代码。一旦准备就绪，有两种方法来运行此脚本："
+
+#: ../../running_js_scripts.md:12
+msgid "Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal"
+msgstr "在编辑器中将脚本设置为选中文件，并在 Remix 终端运行 `remix.exeCurrent()`。"
+
+#: ../../running_js_scripts.md:13
+msgid "Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor."
+msgstr "在`Files Explorers`插件中，右键单击脚本名称，然后点击**Run**选项。在编辑器中显示脚本时，快捷键为`Ctrl+Shift+S`。"
+
+#: ../../running_js_scripts.md:15
+msgid "Here is a sample script:"
+msgstr "这里是一个示例脚本："
+
+#: ../../running_js_scripts.md:29
+msgid "Running it using one of options mentioned above will show result in Remix terminal"
+msgstr "使用上述选项之一运行将在 Remix 终端中显示结果"
+
+#: ../../running_js_scripts.md:31
+msgid "![](images/a-running-scripts-run.png)"
+msgstr "![](images/a-running-scripts-run.png)"
+
+#: ../../running_js_scripts.md:33
+msgid "Why run JavaScript Scripts in Remix?"
+msgstr "为什么在 Remix中运行 JavaScript 脚本？"
+
+#: ../../running_js_scripts.md:34
+msgid "To mimic how the front-end of your dapp will use web3.js or ethers.js"
+msgstr "模拟您的dapp前端将如何使用web3.js或ethers.js"
+
+#: ../../running_js_scripts.md:35
+msgid "To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI."
+msgstr "快速部署和与多个合约实例交互，而无需通过Remix GUI。"
+
+#: ../../running_js_scripts.md:36
+msgid "To run some tests on a previous deployed contract."
+msgstr "对以前部署的合约运行一些测试。"
+
+#: ../../running_js_scripts.md:38
+msgid "Script to deploy a contract"
+msgstr "部署合约的脚本"
+
+#: ../../running_js_scripts.md:40
+msgid "Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function."
+msgstr "Remix接受异步/等待脚本来运行 [web3.js](https://web3js.readthedocs.io/)  或者 [ethers.js](https://docs.ethers.io/) 命令。该脚本需要包装在自执行函数中。"
+
+#: ../../running_js_scripts.md:42
+msgid "Setup"
+msgstr "设置"
+
+#: ../../running_js_scripts.md:43
+msgid "These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**."
+msgstr "这些脚本需要访问合约的ABI。 ABI位于合约的元数据文件中。请确保通过转到设置模块并检查“生成合约元数据”选项是否已选中来创建此元数据文件。"
+
+#: ../../running_js_scripts.md:45
+msgid "Compile a Solidity file - to generate the contract metadata."
+msgstr "编译Solidity文件-以生成合约元数据。"
+
+#: ../../running_js_scripts.md:47
+msgid "In the Deploy & Run plugin, choose the Environment."
+msgstr "在Deploy & Run插件中，选择环境。"
+
+#: ../../running_js_scripts.md:48
+msgid "Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider."
+msgstr "Async/await脚本适用于所有环境：Remix VM、Injected Provider（通常是MetaMask）和外部的HTTP Provider.。"
+
+#: ../../running_js_scripts.md:50
+msgid "JS Scripts in the File Explorers"
+msgstr "文件浏览器中的JS脚本"
+
+#: ../../running_js_scripts.md:51
+msgid "In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**."
+msgstr "在**工作区**的**脚本**文件夹中，有两个示例文件：一个使用**web3.js**，另一个使用**ethers.js**。"
+
+#: ../../running_js_scripts.md:53
+msgid "Compile a contract and run a script on the fly"
+msgstr "编写合约并实时运行脚本"
+
+#: ../../running_js_scripts.md:54
+msgid "It is often convenient when drafting a contract to run a script just after the compilation succeeded."
+msgstr "在开发合约时，通常在编译成功后运行脚本非常方便。"
+
+#: ../../running_js_scripts.md:56
+msgid "That way one can quickly deploy and call several contracts in order to set them in a desired state for testing purpose."
+msgstr "这样一来，人们可以快速部署和调用多个合约以将它们设置为所需的测试状态。"
+
+#: ../../running_js_scripts.md:58
+msgid "Also if the script contains Mocha tests, those will also be run."
+msgstr "此外，如果脚本包含Mocha测试，也会运行这些测试。"
+
+#: ../../running_js_scripts.md:60
+msgid "In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:"
+msgstr "为了实现这一点，请在合同中添加NatSpec标签@custom:dev-run-script，并跟随绝对文件路径，例如："
+
+#: ../../running_js_scripts.md:71
+msgid "**ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling."
+msgstr "**快捷键**：在编辑Solidity文件时，按Ctrl+Shift+S将编译该文件并运行脚本。相比之下，按Ctrl+S仅会开始编译。"
+
+#: ../../running_js_scripts.md:73
+msgid "An Example Script"
+msgstr "示例脚本"
+
+#: ../../running_js_scripts.md:74
+msgid "The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library.  Ethers.js could also be used."
+msgstr "下面的示例部署了一个名为`CustomERC20.sol`的Solidity合约。该示例使用web3.js库，也可以使用Ethers.js。"
+
+#: ../../running_js_scripts.md:76
+msgid "For more information about this example, please see: [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)"
+msgstr "有关此示例的更多信息，请参见：[运行async/await脚本](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)"
+
+#: ../../running_js_scripts.md:106
+msgid "For more script examples, please see [Frequently Asked Scripts](FAS.html)."
+msgstr "欲了解更多脚本示例，请查看[常见问题的脚本](FAS.html)。"
+
+#: ../../running_js_scripts.md:108
+msgid "`require` in scripts at Remix"
+msgstr "Remix脚本中的`require`"
+
+#: ../../running_js_scripts.md:110
+msgid "`require` statement is supported in a limited manner for Remix supported modules with Remix Scripts."
+msgstr "在 Remix 支持的模块和脚本中，`require` 语句仅以有限方式支持。"
+
+#: ../../running_js_scripts.md:112
+msgid "For now, modules supported by Remix are ethers, web3, swarmgw, chai, remix and hardhat only for hardhat.ethers object/plugin."
+msgstr "目前，Remix 支持的模块包括 ethers、web3、swarmgw、chai、remix 和 hardhat（仅适用于 hardhat.ethers 对象/插件）。"
+
+#: ../../running_js_scripts.md:114
+msgid "For unsupported modules, this error `<module_name> module require is not supported by Remix IDE` will be shown."
+msgstr "对于不支持的模块，将显示此错误信息：`<module_name>` 模块 require 不受 Remix IDE 支持。"
+
