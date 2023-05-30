@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_as_code_viewer.pot\n"
+"X-Crowdin-File-ID: 7425\n"
+"Language: zh_CN\n"
+
+#: ../../remix_as_code_viewer.md:1
+msgid "Remix as code viewer"
+msgstr "将Remix作为代码查看器"
+
+#: ../../remix_as_code_viewer.md:4
+msgid "Through Etherscan"
+msgstr "通过 Etherscan"
+
+#: ../../remix_as_code_viewer.md:7
+msgid "Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a mutiple part contract verification, Remix provides a quick way to load all the contracts."
+msgstr "在Etherscan上验证的合约可以通过对URL进行简单更改在Remix中查看。对于大部分合约验证，Remix提供了一种快速加载所有合约的方法。"
+
+#: ../../remix_as_code_viewer.md:9
+msgid "A typical Etherscan URL for a contract address looks like this:"
+msgstr "合约地址的典型 Etherscan URL如下所示："
+
+#: ../../remix_as_code_viewer.md:11
+msgid "`https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+msgstr "`https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+
+#: ../../remix_as_code_viewer.md:13
+msgid "In the URL, change `etherscan.io` to `remix.ethereum.org`"
+msgstr "在URL中，将`etherscan.io`更改为`remix.ethereum.org`"
+
+#: ../../remix_as_code_viewer.md:15
+msgid "`https://remix.ethereum.org/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+msgstr "`https://remix.ethereum.org/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+
+#: ../../remix_as_code_viewer.md:17
+msgid "and reload. It will fetch the contracts verified on Etherscan."
+msgstr "并重新加载。它将获取在Etherscan上验证的合同。"
+
+#: ../../remix_as_code_viewer.md:19
+msgid "Contracts verified on Ethereum mainnnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace."
+msgstr "在以太坊主网和其他测试网络（Ropsten、Rinkeby、Kovan和Goerli）上验证的合约将加载到相应目录下的`etherscan-code-sample`工作区中。"
+
+#: ../../remix_as_code_viewer.md:21
+msgid "![](images/a-code-viewer-etherscan.png)"
+msgstr "![](images/a-code-viewer-etherscan.png)"
+
+#: ../../remix_as_code_viewer.md:23
+msgid "Tihs works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix."
+msgstr "这适用于Etherscan测试网址 `https://ropsten.etherscan.io`，`https://goerli.etherscan.io/`等。如果它们被更新，则合约将在Remix中加载。"
+
+#: ../../remix_as_code_viewer.md:25
+msgid "Through GitHub"
+msgstr "通过 GitHub"
+
+#: ../../remix_as_code_viewer.md:28
+msgid "Solidity files in GitHub can be loaded on Remix with a similar tweak. For a file with URL like:"
+msgstr "GitHub 上的 Solidity 文件可以通过类似的调整在 Remix 上加载。对于像这样的 URL 文件："
+
+#: ../../remix_as_code_viewer.md:30
+msgid "`https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+msgstr "`https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+
+#: ../../remix_as_code_viewer.md:32
+msgid "change `github.com` to `remix.ethereum.org` like:"
+msgstr "将`github.com`更改为`remix.ethereum.org`，如下所示："
+
+#: ../../remix_as_code_viewer.md:34
+msgid "`https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+msgstr "`https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+
+#: ../../remix_as_code_viewer.md:36
+msgid "and reload. It will open the same file in Remix IDE."
+msgstr "然后重新加载即可。它将在 Remix IDE 中打开相同的文件。"
+
+#: ../../remix_as_code_viewer.md:38
+msgid "![](images/a-code-viewer-github.png)"
+msgstr "![](images/a-code-viewer-github.png)"
+
