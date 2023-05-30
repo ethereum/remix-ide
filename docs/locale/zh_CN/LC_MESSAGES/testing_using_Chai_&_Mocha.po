@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:48\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/testing_using_Chai_&_Mocha.pot\n"
+"X-Crowdin-File-ID: 7437\n"
+"Language: zh_CN\n"
+
+#: ../../testing_using_Chai_&_Mocha.md:1
+msgid "Testing using Chai & Mocha"
+msgstr "使用 Chai 和 Mocha 测试"
+
+#: ../../testing_using_Chai_&_Mocha.md:4
+msgid "_(Supported since Remix IDE v0.22.0)_"
+msgstr "_(从 Remix IDE v0.22.0 起开始支持)_"
+
+#: ../../testing_using_Chai_&_Mocha.md:6
+msgid "Remix supports testing of your files in JavaScript using assertion library [Chai](https://www.chaijs.com/) & test framework [Mocha](https://mochajs.org/)"
+msgstr "Remix支持使用断言库 [Chai](https://www.chaijs.com/) 和测试框架[Mocha](https://mochajs.org/)在JavaScript中对您的文件进行测试。"
+
+#: ../../testing_using_Chai_&_Mocha.md:8
+msgid "_Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework._"
+msgstr "_Chai是一个用于Node.js和浏览器的BDD / TDD断言库，可以与任何JavaScript测试框架愉快地配对使用。_"
+
+#: ../../testing_using_Chai_&_Mocha.md:10
+msgid "_Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun._"
+msgstr "_Mocha是一个功能丰富的JavaScript测试框架，在Node.js和浏览器上运行，使异步测试变得简单而有趣。_"
+
+#: ../../testing_using_Chai_&_Mocha.md:12
+msgid "Write tests"
+msgstr "编写测试"
+
+#: ../../testing_using_Chai_&_Mocha.md:14
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`."
+msgstr "在您的项目工作区中创建一个js文件。最好将其创建在`scripts`文件夹内。我们来命名它为`sample.test.js`。"
+
+#: ../../testing_using_Chai_&_Mocha.md:16
+msgid "Write your tests in the file. Here is a sample:"
+msgstr "在该文件中编写您的测试代码。以下是一个示例："
+
+#: ../../testing_using_Chai_&_Mocha.md:33
+msgid "Run tests"
+msgstr "运行测试"
+
+#: ../../testing_using_Chai_&_Mocha.md:35
+msgid "Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JS scripts"
+msgstr "完成编写测试后，在文件浏览器插件中右键单击文件名。它将显示一些选项，包括运行选项。此运行选项用于运行JS脚本。"
+
+#: ../../testing_using_Chai_&_Mocha.md:37
+msgid "![](images/run_with_mocha_option.png)"
+msgstr "![](images/run_with_mocha_option.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:39
+msgid "Click on `Run`, tests will be executed and result will be shown on Terminal."
+msgstr "点击 \"Run\" ，会执行测试，结果将显示在终端上。"
+
+#: ../../testing_using_Chai_&_Mocha.md:41
+msgid "![](images/run_with_mocha_result.png)"
+msgstr "![](images/run_with_mocha_result.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:43
+msgid "Test a contract"
+msgstr "测试一个合约"
+
+#: ../../testing_using_Chai_&_Mocha.md:45
+msgid "Similarly unit tests can be written to test the functionality of a smart contract. An example to test default `1_Storage.sol` contract can be as:"
+msgstr "同样，可以编写单元测试来测试智能合约的功能。一个测试默认的`1_Storage.sol`合约的示例可能如下："
+
+#: ../../testing_using_Chai_&_Mocha.md:86
+#: ../../testing_using_Chai_&_Mocha.md:158
+msgid "Result will be as:"
+msgstr "结果为："
+
+#: ../../testing_using_Chai_&_Mocha.md:88
+msgid "![](images/run_with_mocha_storage_test.png)"
+msgstr "![](images/run_with_mocha_storage_test.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:90
+msgid "Debugging a test transaction"
+msgstr "调试测试交易"
+
+#: ../../testing_using_Chai_&_Mocha.md:92
+msgid "To debug a transaction in one of the tests, print the transaction hash and input that in the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html)."
+msgstr "要在测试中调试交易，请打印交易哈希并将其输入到[Remix Debugger插件](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html)。"
+
+#: ../../testing_using_Chai_&_Mocha.md:94
+msgid "![](images/run_with_mocha_print_hash.png)"
+msgstr "![](images/run_with_mocha_print_hash.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:96
+msgid "Hardhat-ethers support"
+msgstr "支持 Hardhat-ethers"
+
+#: ../../testing_using_Chai_&_Mocha.md:98
+msgid "Remix also supports methods of [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:"
+msgstr "Remix 还支持 Hardhat 框架的  [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers)方法。该插件下可用的方法有："
+
+#: ../../testing_using_Chai_&_Mocha.md:131
+msgid "With this, one can run the tests for a hardhat project easily using Remix."
+msgstr "通过这个，可以使用Remix轻松地运行Hardhat项目的测试。"
+
+#: ../../testing_using_Chai_&_Mocha.md:133
+msgid "Example to test `Storage` contract with this plugin methods can be as:"
+msgstr "例如，使用此插件方法测试`Storage`合约可以如下："
+
+#: ../../testing_using_Chai_&_Mocha.md:160
+msgid "![](images/run_with_mocha_hhethers.png)"
+msgstr "![](images/run_with_mocha_hhethers.png)"
+
