@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2022-06-21 15:22\n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,145 +19,153 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing & Loading Source Files in Solidity"
-msgstr ""
+msgstr "在Solidity中导入和加载源文件"
 
 #: ../../import.md:4
 msgid "There are two main reasons for loading external files into Remix:"
-msgstr ""
+msgstr "将外部文件加载到Remix中有两个主要原因："
 
 #: ../../import.md:5
-msgid "to import a library or dependency (for files you will NOT be editing)"
-msgstr ""
+msgid "**to import a library or dependency** (for files you will NOT be editing)"
+msgstr "**导入库或依赖项**（对于您不会编辑的文件）"
 
 #: ../../import.md:6
-msgid "to load some files for manipulation, editing and play (for files you might want to edit)"
-msgstr ""
+msgid "**to load some files for manipulation, editing and play** (for files you might want to edit)"
+msgstr "**加载一些需要操作、编辑和测试的文件**（对于您可能想要编辑的文件）"
 
 #: ../../import.md:8
 msgid "Importing a library or dependency"
-msgstr ""
+msgstr "导入库或依赖项"
 
 #: ../../import.md:10
-msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the import statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
-msgstr ""
+msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
+msgstr "当从NPM或URL（如github、IPFS网关或Swarm网关）进行导入时，您只需在合约中使用import语句即可。在编译合约之前，不需要将依赖项“预加载”到File Explorer当前工作区。"
 
 #: ../../import.md:12
-msgid "Files loaded from the import statement are placed in the Files Explorer's current Workspace's .deps folder."
-msgstr ""
+msgid "Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder."
+msgstr "从import语句加载的文件放置在**Files Explorer**当前工作区的`.deps`文件夹中。"
 
 #: ../../import.md:14
-msgid "Under the hood, Remix checks to see if the files are already loaded in the .deps directory.  If not, it gets them via unpkg if it is an NPM lib."
-msgstr ""
+msgid "Under the hood, Remix checks to see if the files are already loaded in the **.deps** directory.  If not, it gets them via unpkg if it is an NPM lib."
+msgstr "在幕后，Remix检查这些文件是否已经被加载到**.deps**目录中。如果没有，则通过unpkg获取它们（如果是NPM lib）。"
 
 #: ../../import.md:16
 msgid "Here are some example import statements:"
-msgstr ""
+msgstr "以下是一些示例import语句："
 
 #: ../../import.md:18
 msgid "Import from NPM"
-msgstr ""
+msgstr "从NPM里导入"
 
 #: ../../import.md:27
-msgid "Note: In the example above, @openzeppelin is the name of the npm library.  In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name."
-msgstr ""
+msgid "**Note:** In the example above, **@openzeppelin** is the name of the npm library.  In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name."
+msgstr "**注意：** 在上面的示例中，@openzeppelin是npm库的名称。在下面的示例中，该库的名称不以@开头 - 但Remix将会去检查npm是否有这个名称的库。"
 
 #: ../../import.md:33
 msgid "Import from a Github URL"
-msgstr ""
+msgstr "从 Github URL 导入"
 
 #: ../../import.md:37
 msgid "You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example above imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "如果有的话，您应该指定发布标签，否则将获取主分支中的最新代码。对于OpenZeppelin合约，您应仅使用在官方发布中发布的代码，上面的示例导入了OpenZeppelin Contracts v2.5.0版本。"
 
 #: ../../import.md:39
 msgid "Import from Swarm"
-msgstr ""
+msgstr "从 Swarm 导入"
 
 #: ../../import.md:45
 msgid "Import from IPFS"
-msgstr ""
+msgstr "从 IPFS 导入"
 
 #: ../../import.md:51
 msgid "Importing a local file not in .deps"
-msgstr ""
+msgstr "导入不在 .deps 中的本地文件"
 
 #: ../../import.md:53
-msgid "To import a file NOT in the .deps folder, use a relative path (./). For example:"
-msgstr ""
+msgid "To import a file NOT in the **.deps** folder, use a relative path (**./**). For example:"
+msgstr "要导入不在.deps文件夹中的文件，请使用相对路径（./）。例如："
 
 #: ../../import.md:59
-msgid "Note: It is not possible to import across Workspaces."
-msgstr ""
+msgid "**Note:** It is not possible to import across Workspaces."
+msgstr "**注意：** 无法导入整个工作区。"
 
 #: ../../import.md:61
 msgid "Importing a file from your computer's filesystem"
 msgstr "从计算机的文件系统导入文件"
 
 #: ../../import.md:63
-msgid "This method uses remixd - the remix daemon.  Please go to the remixd docs for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr ""
+msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computers filesystem."
+msgstr "此方法使用**remixd** - remix守护程序。请前往[remixd文档](remixd.html) ，了解如何在浏览器和计算机文件系统之间建立连接。"
 
 #: ../../import.md:65
 msgid "More about the import keyword"
-msgstr ""
+msgstr "更多关于import关键字"
 
 #: ../../import.md:66
-msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr "有关 import 关键字的详细说明，请参阅 Solidity 文档"
+msgid "For a detailed explanation of the `import` keyword see the [Solidity documentation](https://docs.soliditylang.org/en/latest/layout-of-source-files.html?highlight=import#importing-other-source-files)"
+msgstr "关于`import`关键字的详细解释，见[Solidity documentation](https://docs.soliditylang.org/enarage/layout-source-files.html?highlight=importing-other-source-files)"
 
 #: ../../import.md:70
 msgid "Importing a files for manipulation"
-msgstr ""
+msgstr "导入文件以进行操作"
 
 #: ../../import.md:71
-msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the root of the current Workspace inside a folder the shows their source - eg github or gists."
-msgstr ""
+msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder the shows their source - eg github or gists."
+msgstr "从主页小部件导入或在控制台中使用remix命令时，文件将放置在当前工作区的根目录下，其中包含显示它们来源（例如github或gists）的文件夹。"
 
 #: ../../import.md:73
 msgid "Import buttons on the Remix home tab"
-msgstr ""
+msgstr "在 Remix 主页选项卡上的导入按钮"
 
 #: ../../import.md:74
 msgid "The Gist, Github, Swarm, IPFS, & HTTPS buttons are to assist in getting files into Remix so you can explore."
-msgstr ""
+msgstr "Gist, Github, Swarm, IPFS, & HTTPS 按钮将协助将文件导入Remix，以便您可以探索。"
+
+#: ../../import.md:76
+msgid "![](images/a-import-from.png)"
+msgstr "![](images/a-import-from.png)"
 
 #: ../../import.md:78
 msgid "Clicking on any of the Import buttons will bring up a modal like this one:"
-msgstr ""
+msgstr "点击任何一个导入按钮都会弹出类似于这个的模态框："
+
+#: ../../import.md:80
+msgid "![](images/a-gist-modal.png)"
+msgstr "![](images/a-gist-modal.png)"
 
 #: ../../import.md:82
 msgid "No need to wrap the input in quotes."
-msgstr ""
+msgstr "不需要用引号包裹输入。"
 
 #: ../../import.md:83
 msgid "Loading with a remix command in the console"
-msgstr ""
+msgstr "在控制台中使用remix命令进行加载"
 
 #: ../../import.md:84
 msgid "The 2 remix commands for loading are:"
-msgstr ""
+msgstr "两个用于加载的remix命令是："
 
 #: ../../import.md:85
 msgid "remix.loadurl(url)"
-msgstr ""
+msgstr "`remix.loadurl(url)`"
 
 #: ../../import.md:86
 msgid "remix.loadgist(id)"
-msgstr ""
+msgstr "`remix.loadgist(id)`"
 
 #: ../../import.md:95
 msgid "Accessing files loaded from the Home tab or from a remix command"
-msgstr ""
+msgstr "访问从主页选项卡或remix命令中加载的文件"
 
 #: ../../import.md:97
-msgid "When you load from github, a folder named github folder is created in the root of your current workspace.  To import a file from the github folder, you would use a command like this:"
-msgstr ""
+msgid "When you load from github, a folder named `github` folder is created in the root of your current workspace.  To import a file from the `github` folder, you would use a command like this:"
+msgstr "当你从Github加载时，会在当前工作区的根目录下创建一个名为`github` 目录的文件夹。要从该文件夹导入文件，您可以使用以下命令："
 
 #: ../../import.md:103
 msgid "Notice that this import statement doesn't include the version information that was in the remix.load(url) command.  So it is recommended that you use the methods described at the top of this page for importing dependencies that you are not intending to edit."
-msgstr ""
+msgstr "请注意，此导入语句不包括 remix.load(url) 命令中的版本信息。因此建议您使用本页顶部描述的方法来导入您不打算编辑的依赖项。"
 
 #: ../../import.md:105
-msgid "Assume the .sol file that contained the import statement above is in the contracts folder. Notice that this import statement didn't need to traverse back to the github folder with a relative path like: ../github."
-msgstr ""
+msgid "Assume the .sol file that contained the import statement above is in the contracts folder. Notice that this import statement didn't need to traverse back to the github folder with a relative path like: **../github**."
+msgstr "假设包含上述导入语句的 .sol 文件位于 contracts 文件夹中。请注意，此导入语句无需使用相对路径遍历回 github 文件夹，例如：`../github`。"
 
