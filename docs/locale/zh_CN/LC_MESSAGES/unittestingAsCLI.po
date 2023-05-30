@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-28 23:16-0400\n"
+"PO-Revision-Date: 2023-05-30 18:48\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittestingAsCLI.pot\n"
+"X-Crowdin-File-ID: 7441\n"
+"Language: zh_CN\n"
+
+#: ../../unittestingAsCLI.md:1
+msgid "Command Line Interface"
+msgstr "命令行接口"
+
+#: ../../unittestingAsCLI.md:3
+msgid "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+msgstr "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+
+#: ../../unittestingAsCLI.md:6
+msgid "`remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`."
+msgstr "remix-tests是一种命令行接口工具，用于运行Solidity单元测试。这个工具在Remix的`Solidity Unit Testing`插件下作为一个库使用。在NPM上以`@remix-project/remix-tests`的形式在提供。"
+
+#: ../../unittestingAsCLI.md:8
+msgid "Get started"
+msgstr "开始"
+
+#: ../../unittestingAsCLI.md:11
+msgid "You can install it using NPM:"
+msgstr "您可以使用 NPM安装它："
+
+#: ../../unittestingAsCLI.md:13
+msgid "As a dev dependency:"
+msgstr "作为开发依赖："
+
+#: ../../unittestingAsCLI.md:15
+msgid "`npm install --save-dev @remix-project/remix-tests`"
+msgstr "`npm install --save-dev @remix-project/remix-tests`"
+
+#: ../../unittestingAsCLI.md:17
+msgid "As a global NPM module:"
+msgstr "作为全局NPM模块："
+
+#: ../../unittestingAsCLI.md:19
+msgid "`npm install -g @remix-project/remix-tests`"
+msgstr "`npm install -g @remix-project/remix-tests`"
+
+#: ../../unittestingAsCLI.md:21
+msgid "To confirm installation, run:"
+msgstr "若要确认已安装，请运行："
+
+#: ../../unittestingAsCLI.md:26
+msgid "Version should be same as on NPM."
+msgstr "版本应与NPM上的版本相同。"
+
+#: ../../unittestingAsCLI.md:28
+msgid "How to use"
+msgstr "使用方式"
+
+#: ../../unittestingAsCLI.md:31
+msgid "You can see all available options using `help` command."
+msgstr "您可以使用 \"help\" 命令看到所有可用的选项。"
+
+#: ../../unittestingAsCLI.md:51
+msgid "General structure of a command is as:"
+msgstr "命令的一般结构为："
+
+#: ../../unittestingAsCLI.md:53
+msgid "`$ remix-tests <options> <file/directory path>`"
+msgstr "`$ remix-tests <options> <file/directory path>`"
+
+#: ../../unittestingAsCLI.md:55
+msgid "To run all test files inside `examples` directory"
+msgstr "在 \"示例\" 目录中运行所有测试文件"
+
+#: ../../unittestingAsCLI.md:59
+msgid "To run single test file named `simple_storage_test.sol` inside `examples` directory"
+msgstr "在“示例”目录中运行名为 `simplle_storage_test.sol` 的单个测试文件"
+
+#: ../../unittestingAsCLI.md:63
+msgid "**NOTE:** `remix-tests` will assume that name of test(s) file ends with `\"_test.sol\"`. e.g `simple_storage_test.sol`"
+msgstr "**注意:** `remix-tests` 将假定tests(s)文件的名称以 `_test.sol`为结尾。例如 `simple_storage_test.sol`"
+
+#: ../../unittestingAsCLI.md:65
+msgid "Example"
+msgstr "示例"
+
+#: ../../unittestingAsCLI.md:67
+msgid "Consider for a simple storage contract named `simple_storage.sol`:"
+msgstr "假设有一个名为`simple_storage.sol`的简单储存合约："
+
+#: ../../unittestingAsCLI.md:89
+msgid "Test file `simple_storage_test.sol` can be as:"
+msgstr "测试文件 `simplle_storage_test.sol` 可以为："
+
+#: ../../unittestingAsCLI.md:123
+msgid "Running `simple_storage_test.sol` file will output as:"
+msgstr "运行 `simple_storage_test.sol` 文件将输出："
+
+#: ../../unittestingAsCLI.md:149
+msgid "Custom compiler context"
+msgstr "自定义编译器环境"
+
+#: ../../unittestingAsCLI.md:152
+msgid "Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:"
+msgstr "大多数`remix-tests`选项都是用于自定义编译器环境的。使用扩展的自定义编译器环境，执行上述测试文件有如下输出："
+
+#: ../../unittestingAsCLI.md:183
+msgid "Rememeber, custom compiler version will require internet connection to load compiler."
+msgstr "记住，自定义编译器版本需要网络连接才能加载编译器。"
+
+#: ../../unittestingAsCLI.md:185
+msgid "As a CI solution"
+msgstr "作为CI 的解决办法"
+
+#: ../../unittestingAsCLI.md:188
+msgid "`remix-tests` can also be used for continuous integration (CI) testing."
+msgstr "`remix-tests` 也可以用于连续集成(CI)测试。"
+
+#: ../../unittestingAsCLI.md:190
+msgid "For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration."
+msgstr "具体实现样例，请查看[Su Squares contract](https://github.com/su-squares/eyasum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186)和[Travis build](https://travis-ci.org/su-squares/eferes-contract/builds/446186067)，其中使用了`remix-tests`进行持续集成。"
+
