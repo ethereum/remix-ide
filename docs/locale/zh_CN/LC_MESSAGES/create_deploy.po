@@ -1,21 +1,18 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/create_deploy.pot\n"
-"X-Crowdin-File-ID: 6468\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../create_deploy.md:1
 msgid "Creating and Deploying a Contract"
@@ -30,7 +27,9 @@ msgid "A sample contract"
 msgstr "合约示例"
 
 #: ../../create_deploy.md:8
-msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
+msgid ""
+"This contract is very basic. The goal is to quickly start to create and "
+"to interact with a sample contract."
 msgstr "这份合约非常基础。 目标是快速开始创建示例合约并与之交互。"
 
 #: ../../create_deploy.md:11
@@ -120,6 +119,10 @@ msgstr "部署合约"
 #: ../../create_deploy.md:81
 msgid "![](images/a-run-testContract.png)"
 msgstr "![](images/a-run-testContract.png)"
+
+#: ../../create_deploy.md:81
+msgid "![](images/a-run-testContract.png)"
+msgstr ""
 
 #: ../../create_deploy.md:83
 msgid "The constructor of `testContract` needs a parameter (of type `uint256`). Input a uint256 and click on `Deploy`."

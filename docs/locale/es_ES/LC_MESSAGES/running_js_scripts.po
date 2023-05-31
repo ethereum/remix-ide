@@ -57,6 +57,10 @@ msgstr ""
 msgid "![](images/a-running-scripts-run.png)"
 msgstr ""
 
+#: ../../running_js_scripts.md:31
+msgid "![](images/a-running-scripts-run.png)"
+msgstr ""
+
 #: ../../running_js_scripts.md:33
 msgid "Why run JavaScript Scripts in Remix?"
 msgstr ""

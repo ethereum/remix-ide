@@ -1,67 +1,114 @@
 File Explorer
 =============
+The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right-click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin.
 
-To get to the File Explorer module - click the File Explorer icon.
+To find the File Explorer module - click the File Explorer icon.
 
-![](images/a-file-explorer1.png)
+![](images/a-file-explorer1a.png)
 
-The File Explorer is for managing Workspaces and files.  There is also a context menu that pops up when you right click on a file or folder.
+The green checkmark at the top of the page means that this plugin is maintained by Remix Team.  When the caret is clicked, more info about the plugin will be shown -including a link to this documentation.
+
+![](images/a-fe-top-caret.png)
 
 File Storage
 ------------
 By default, Remix IDE stores files in **IndexedDB**.  
 
-Coding in Remix IDE Online is different from writing in a Google doc. Yes, both are written in a browser but a Google doc saves your work to Google’s servers, and Remix—out of the box—only saves your code to your browser’s storage. So tread carefully, browser storage is not permanent!
+Coding in Remix IDE Online is different from writing in a Google doc. 
+- A Google doc saves your work to your account on Google’s servers.
+- Remix has no user accounts. By default, files are ONLY saved locally in the browser’s storage. So tread carefully, browser storage is not permanent!
 
-**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. 
+It is very important to have a file backup & file saving strategy. 
 
-## File Storage outside of the browser and Version Control
+**Check the following techniques for:**
+- [saving to your hard drive](#file-storage-on-your-hard-drive)
+- using [remote Git repos](#connecting-remix-to-remote-git-repos)
+- [backing up workspaces](#backup).
 
-If you want to use browser storage, but also to save a git repo on IPFS, use the **DGIT** plugin.  
+**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. It is prudent to backup your workspaces before deleting them...just in case. 
 
-If you want to store files on your computer's filesystem, use **[Remixd](remixd.html)** or use the **[desktop version of Remix IDE](https://github.com/ethereum/remix-desktop/releases/)**. Remixd enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix IDE in an Electron app. 
+### File Storage on your hard drive
+#### Remixd
+For storing files on your computer's hard drive when using Remix Online IDE, use **[Remixd](remixd.html)** 
+- Remixd is an NPM module that runs on your computer. It allows you to share a specified folder on your computer with Remix IDE. 
+
+#### Remix Desktop
+Remix Desktop is a version of Remix IDE in an Electron app. Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  To connect to public networks, you need to use service like Infura and then use the WalletConnect plugin to approve transactions on your mobile device.
+
+### Connecting Remix to remote Git repos
+**If you are not using Remixd, it is highly recommended that you save to a remote repo.** 
+(Browsers do crash causing localstorage & indexedDB to be corrupted)
+
+Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.  
+Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT).
+
+[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized.
 
 Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)
 
-File Explorer Tour
--------------------
+Workspaces
+------------
 
-![](images/a-fe-tour.png)
+Workspaces in Remix are special folders that separate projects.  Files in one workspace cannot import or access files in different workspace.  Choosing a workspace is done with the **Workspaces** select box.
 
-The book icon - **G.** is the link to the documentation (this page).
+![](images/a-fe-workspaces1.png)
 
-### Workspaces
-Workspaces help to organize your files by allowing you to separate your projects.
-Here are the basic operations of managing a Workspace. The letters in bold below refer to the labels in fig. 1.
+#### New Workspace
+Workspaces are created by clicking the + button or by going to the hamburger menu in the upper right side of the File Explorer.
 
-- **A.** Add a Workspace <br>
-- **B.** Rename a Workspace  <br>
-- **C.** Delete a Workspace  <br>
--  **D.** Download all Workspaces This will create a .zip file with all the files of all the Workspaces.  The zip file will have a folder called **.workspaces** that will contain a folder of each workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  <br>
-- **E.** Upload the Workspaces backup made from the previous icon. <br>
-- **F.** Clone a repo from Git repository <br>
-- **G.** Link to documentation <br>
-- **J.** Publish the Workspace to a GIST <br>
-- **L.** Choose a Workspace 
-### File Manipulation
-The letters in bold below refer to the labels in fig. 1.
+![](images/a-fe-workspaces-new.png)
 
-- **H.** Create a file  <br>
-- **I.** Create a folder  <br>
-- **K.** Load a local file into the current Workspace<br>
+When making a new workspace, Remix offers the following templates: 
 
-## Workspaces with Templates
-When you create a new Workspace, a modal comes up where you choose which template of files to include.
+- Blank
+- Remix Default
+- OpenZeppelin ERC20
+- OpenZeppelin ERC721
+- OpenZeppelin ERC1155
+- 0xProject ERC20
+- Gnosis MultiSig
 
-![](images/a-workspace-templates.png)
+When choosing an OpenZeppelin template, additional functionality can be added.
+![](images/a-fe-modal-oz.png)
 
-## Workspaces & cloning a repo
-When you click the **clone** icon (**F.** in fig.1), you'll be asked for the url of the repo.  A new workspace will be created that will contain the cloned repo.  To manage the Git repo, go to the DGIT plugin.
+#### Workspace operations
 
-## Workspaces with a Git repo
-Workspaces with an associated Git will have the Git icon next to them in the Workspaces select box.
+The **Workspace hamburger menu** is for operations that work on an entire workspace.
+
+![](images/a-fe-hamburger.png)
+
+##### Clone
+When clicking Clone, you’ll be asked for the url of a remote repo. A new workspace will be created that will contain the cloned repo. To manage the Git repo, go to the Dgit plugin.
+##### Backup
+Backup is for downloading all the Workspaces in a .zip file. The zip file will have a folder called **.workspaces** that will contain a folder of each Workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible.  
+
+##### Restore
+Restore is only for uploading the backup zip file.
+
+##### Create GitHub Actions
+The Workspace operations to create **Solidity Test Workflow**,  **Mocha Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file is created in the .workflows folder of the active Workspace.
+
+### Workspaces initialized with Git
+Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box.
 
 ![](images/a-fe-select-git.png)
+
+To initialize a new Workspace for GIT, check the box at the bottom of the Create Workspace modal.
+![](images/a-fe-create-ws-modal.png)
+
+Working with Files
+-------------------
+When a file is clicked on it will appear in the Editor.
+
+Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right-clicking on a file or folder ([see below](#right-click-on-a-file-or-folder)).
+
+![](images/a-fe-file-icons2.png)
+
+- **A.** Create a file  <br>
+- **B.** Create a folder  <br>
+- **C.** Publish all the file in this Workspace to a GIST<br>
+- **D.** Upload a file into the current Workspace<br>
+- **E.** Upload a folder into the current Workspace<br>
 
 ## Creating new files
 
@@ -70,7 +117,7 @@ There are 2 ways of creating files:
 
 ![](images/a-file-explorer-new-file2.png)
 
-- The second way of creating a file is to right click on a file or folder to get a popup menu.
+- The second way of creating a file is to right-click on a file or folder to get a popup menu.
 
 The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in.
 
@@ -83,30 +130,51 @@ Click [this link](https://github.com/settings/tokens) to Github tokens setup and
 
 Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save.
 
-You can also publish by right clicking on the file or folder.
+You can also publish by right-clicking on the file or folder.
 
-Right-Click on a File or Folder
+Right-Click popup menu
 -------------------------------
-
+### Right-Click on a folder
 ![](images/a-fe-rtclick-file.png)
 
-Right-clicking on a file or folder will bring a context menu — where you can create a folder or file within the same folder or to delete, rename, or publish the file or folder. 
+Right-clicking on a folder will bring a popup menu for operations you can do on that folder. 
 
-The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive).  
+The right-click popup menu also works with Remixd (which gives you access to a folder on your hard drive).  
 
 **Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view.
 
-Right-Click on a Solidity file
--------------------------------
-Right-clicking on a file with a .sol extension will bring up an expanded context menu - which will also let you compile & flatten a file.
+### Right-Click on a Solidity file
+
+Right-clicking on a file with a .sol extension will bring up a popup menu - which includes options for compiling & flattening, creating UML diagrams, and generating documentation.
 
 ![](images/a-fe-rtclick-sol-file.png)
 
-Right-Click on a Script
-------------------------
+### Right-Click on a Script
 
 ![](images/a-fe-rtclick-script.png)
 
-Right-click on any file with a .js or .ts extension to get the **Run** option in the context menu to run the script.  The **Run** in the context menu is a shortcut.  The other way to get a script to run is to:
-1. Click on the script to make it the active tab in the editor 
-2. Input the command `remix.exeCurrent()` in the console.
+Right-click on any file with a .js or .ts extension to get the **Run** option in the popup menu to run the script.  
+
+If the script you want to run is the active file in the Editor, you can also run it by using play button at the top left of the Editor or by inputting the command `remix.exeCurrent()` in the console.
+
+Git in the File Explorer
+------------------------
+In Remix, a workspace can be initialized with Git.  The Git commands then operate on the workspace.
+
+### Initialize
+For information about initializing a workspace, see this [section](#workspaces-initialized-with-git).
+
+### Clone
+The clone command is located in the **Workspace hamburger menu**.  For more information, see the section about [workspace operations](#workspace-operations)
+### Branch Management
+When you are in a workspace that is initialized with Git, at the bottom of the File Explorer, you’ll see the place for managing branches.
+
+![](images/a-fe-branch-man1.png)
+
+Then when you click on the branch name, this section will expand with an interface for switching branches and for creating a new branch.
+
+![](images/a-fe-branch-man2.png)
+
+For the rest of the Git commands, go to the DGit plugin.
+
+For more info about the DGit plugin, see ![this article](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da). 

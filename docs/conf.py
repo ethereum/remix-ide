@@ -30,14 +30,25 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark'] # required for sphinx v3.0.0
+extensions = ['myst_parser'] # required for sphinx v3.0.0
+
+# suppress warnings caused by non-consecutive header
+# see more details here https://myst-parser.readthedocs.io/en/latest/faq/index.html#suppress-warnings
+suppress_warnings = ['myst.header']
+
+# myst will ignore all the internal links by default
+# see more details here https://myst-parser.readthedocs.io/en/latest/configuration.html?highlight=myst_all_links_external#global-configuration
+myst_all_links_external = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 
 # The encoding of source files.

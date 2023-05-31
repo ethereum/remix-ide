@@ -39,7 +39,7 @@ If a function requires input parameters, well.. you gotta put them in.
 (Inputting all the parameters in a single input box)
 + The input box tells you what type each parameter needs to be.
 + Numbers and addresses do not need to be wrapped in double quotes.  
-+ Strings need to be wrapped.
++ Strings do not need to be wrapped.
 + Parameters are separated by commas.
 
 In the example above the "delegate" function has 3 parameters.

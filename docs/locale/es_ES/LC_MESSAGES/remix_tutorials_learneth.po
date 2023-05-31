@@ -33,6 +33,10 @@ msgstr ""
 msgid "![](images/a-learneth.png)"
 msgstr ""
 
+#: ../../remix_tutorials_learneth.md:8
+msgid "![](images/a-learneth.png)"
+msgstr ""
+
 #: ../../remix_tutorials_learneth.md:10
 msgid "We have a growing set of tutorials on our repo- but anyone can build tutorials on their own repos and have their students load them up!"
 msgstr ""
@@ -92,4 +96,29 @@ msgstr ""
 #: ../../remix_tutorials_learneth.md:58
 msgid "Remix maintains and curates this repo of Learneth tutorials: https://github.com/ethereum/remix-workshops"
 msgstr ""
+
+#~ msgid "Learneth is a tutorial platform integrated into Remix."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This link will activate Learneth and "
+#~ "then will open a specific tutorial "
+#~ "- in this case it will load "
+#~ "the proxy contract tutorial:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NOTE: For other tricks about Remix "
+#~ "URLs with parameters, go here: "
+#~ "locations."
+#~ msgstr ""
+
+#~ msgid "Beginner"
+#~ msgstr ""
+
+#~ msgid "Intermediate"
+#~ msgstr ""
+
+#~ msgid "Advanced"
+#~ msgstr ""
 

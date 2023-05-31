@@ -1,28 +1,27 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
-"Language-Team: Spanish\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: es-ES\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/static_analysis.pot\n"
-"X-Crowdin-File-ID: 6496\n"
 "Language: es_ES\n"
+"Language-Team: Spanish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
 msgstr ""
 
 #: ../../static_analysis.md:4
-msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
+msgid ""
+"Static code analysis is a process to debug the code by examining it and "
+"without actually executing the code."
 msgstr ""
 
 #: ../../static_analysis.md:6
@@ -70,11 +69,19 @@ msgid "If `Auto run` checkbox is checked, analysis will be performed on compilin
 msgstr ""
 
 #: ../../static_analysis.md:30
-msgid "By visiting the plugin UI, the details of the warning can be seen along with the category name for each warning."
+msgid ""
+"By visiting the plugin UI, the details of the warning can be seen along "
+"with the category name for each warning."
 msgstr ""
 
 #: ../../static_analysis.md:32
-msgid "Clicking on warning details will highlight the relevant code in the editor."
+msgid ""
+"Clicking on warning details will highlight the relevant code in the "
+"editor."
+msgstr ""
+
+#: ../../static_analysis.md:35
+msgid "![](images/a-static-analysis.png)"
 msgstr ""
 
 #: ../../static_analysis.md:35
@@ -134,7 +141,9 @@ msgid "**Check effects: Potential reentrancy bugs**"
 msgstr ""
 
 #: ../../static_analysis.md:56
-msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
+msgid ""
+"Potential Violation of Checks-Effects-Interaction pattern can lead to re-"
+"entrancy vulnerability."
 msgstr ""
 
 #: ../../static_analysis.md:67
@@ -186,7 +195,10 @@ msgid "**Gas costs: Too high gas requirement of functions**"
 msgstr ""
 
 #: ../../static_analysis.md:120
-msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
+msgid ""
+"If the gas requirement of a function is higher than the block gas limit, "
+"it cannot be executed. Please avoid loops in your functions or actions "
+"that modify large areas of storage"
 msgstr ""
 
 #: ../../static_analysis.md:132
@@ -210,7 +222,15 @@ msgid "**For loop over dynamic array: Iterations depend on dynamic array's size*
 msgstr ""
 
 #: ../../static_analysis.md:165
-msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
+msgid ""
+"Loops that do not have a fixed number of iterations, for example, loops "
+"that depend on storage values, have to be used carefully: Due to the "
+"block gas limit, transactions can only consume a certain amount of gas. "
+"The number of iterations in a loop can grow beyond the block gas limit "
+"which can stall the complete contract at a certain point. Additionally, "
+"using unbounded loops can incur in a lot of avoidable gas costs. "
+"Carefully test how many items at maximum you can pass to such functions "
+"to make it successful."
 msgstr ""
 
 #: ../../static_analysis.md:181
@@ -218,7 +238,13 @@ msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop
 msgstr ""
 
 #: ../../static_analysis.md:183
-msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
+msgid ""
+"Ether payout should not be done in a loop. Due to the block gas limit, "
+"transactions can only consume a certain amount of gas. The number of "
+"iterations in a loop can grow beyond the block gas limit which can cause "
+"the complete contract to be stalled at a certain point. If required, make"
+" sure that number of iterations are low and you trust each address "
+"involved."
 msgstr ""
 
 #: ../../static_analysis.md:206
@@ -242,7 +268,9 @@ msgid "**Constant/View/Pure functions: Potentially constant/view/pure functions*
 msgstr ""
 
 #: ../../static_analysis.md:222
-msgid "It warns for the methods which potentially should be constant/view/pure but are not."
+msgid ""
+"It warns for the methods which potentially should be constant/view/pure "
+"but are not."
 msgstr ""
 
 #: ../../static_analysis.md:230
@@ -258,7 +286,9 @@ msgid "**No return: Function with 'returns' not returning**"
 msgstr ""
 
 #: ../../static_analysis.md:244
-msgid "It warns for the methods which define a return type but never explicitly return a value."
+msgid ""
+"It warns for the methods which define a return type but never explicitly "
+"return a value."
 msgstr ""
 
 #: ../../static_analysis.md:252
@@ -274,7 +304,9 @@ msgid "**Result not used: The result of an operation not used**"
 msgstr ""
 
 #: ../../static_analysis.md:262
-msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
+msgid ""
+"A binary operation yields a value that is not used in the following. This"
+" is often caused by confusing assignment (=) and comparison (==)."
 msgstr ""
 
 #: ../../static_analysis.md:270
@@ -282,7 +314,10 @@ msgid "**String Length: Bytes length != String length**"
 msgstr ""
 
 #: ../../static_analysis.md:272
-msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
+msgid ""
+"Bytes and string length are not the same since strings are assumed to be "
+"UTF-8 encoded (according to the ABI definition) therefore one character "
+"is not necessarily encoded in one byte of data."
 msgstr ""
 
 #: ../../static_analysis.md:282
@@ -298,7 +333,11 @@ msgid "**Data Truncated: Division on int/uint values truncates the result**"
 msgstr ""
 
 #: ../../static_analysis.md:299
-msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
+msgid ""
+"Division of integer values yields an integer value again. That means e.g."
+" 10 / 100 = 0 instead of 0.1 since the result is an integer again. This "
+"does not hold for division of (only) literal values since those yield "
+"rational constants."
 msgstr ""
 
 #: ../../static_analysis.md:309

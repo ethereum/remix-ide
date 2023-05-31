@@ -6,4 +6,7 @@ TODO
 .tern-port
 .idea
 .vscode
-docs/_build
+docs/_build/html
+docs/_build/gettext/.doctrees
+docs/_build/doctrees/
+*.doctree

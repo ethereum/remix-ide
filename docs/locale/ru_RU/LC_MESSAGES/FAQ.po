@@ -1,21 +1,20 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: 2023-05-30 18:45\n"
 "Last-Translator: \n"
-"Language-Team: Russian\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/FAQ.pot\n"
-"X-Crowdin-File-ID: 6454\n"
 "Language: ru_RU\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= "
+"2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 "
+">= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3))\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../FAQ.md:1
 msgid "FAQ"
@@ -143,7 +142,9 @@ msgstr ""
 
 #: ../../FAQ.md:70
 msgid "For example, here's a solidity file with a struct is an input parameter."
-msgstr "Например, вот файл solidity, структура которого является входным параметром."
+msgstr ""
+"Например, вот файл solidity, структура которого является входным "
+"параметром."
 
 #: ../../FAQ.md:102
 msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
@@ -179,7 +180,9 @@ msgstr "Какие плагины активируются и деактивир
 
 #: ../../FAQ.md:119
 msgid "If users check the box to publish a contract's metadata when deploying"
-msgstr "Если пользователи устанавливают флажок для публикации метаданных контракта при развертывании"
+msgstr ""
+"Если пользователи устанавливают флажок для публикации метаданных "
+"контракта при развертывании"
 
 #: ../../FAQ.md:120
 msgid "Which themes are used/used most/not used at all"
@@ -232,4 +235,37 @@ msgstr ""
 #: ../../FAQ.md:142
 msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr ""
+
+#~ msgid "Q: What browsers will Remix work on?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: We support Firefox, Chrome, and "
+#~ "Brave.  We do not test or look "
+#~ "for errors in Safari, Edge or "
+#~ "other browsers."
+#~ msgstr ""
+
+#~ msgid "Q: Will Remix work on a tablet or mobile device?"
+#~ msgstr ""
+
+#~ msgid "A: We do not support the use of Remix on tablets or mobile phones."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A:  The verification tool does not "
+#~ "recursively go through the import "
+#~ "statements in a contract.  So can "
+#~ "only verify a 'flattened' contract."
+#~ msgstr ""
+
+#~ msgid "Q: After I agree opt-in, can I change my mind?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: You can turn off or on "
+#~ "Matomo in the Settings panel.  There "
+#~ "are no consequences for not opting-"
+#~ "in or opting-out."
+#~ msgstr ""
 

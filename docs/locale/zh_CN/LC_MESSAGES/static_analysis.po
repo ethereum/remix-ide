@@ -1,28 +1,27 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/static_analysis.pot\n"
-"X-Crowdin-File-ID: 6496\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
 msgstr "Solidity 静态分析"
 
 #: ../../static_analysis.md:4
-msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
+msgid ""
+"Static code analysis is a process to debug the code by examining it and "
+"without actually executing the code."
 msgstr "静态代码分析是通过检查代码而不实际执行代码来调试代码的过程。"
 
 #: ../../static_analysis.md:6
@@ -74,7 +73,9 @@ msgid "By visiting the plugin UI, the details of the warning can be seen along w
 msgstr "通过访问插件 UI，可以查看每个警告的详细信息，以及每个警告的类别名称。"
 
 #: ../../static_analysis.md:32
-msgid "Clicking on warning details will highlight the relevant code in the editor."
+msgid ""
+"Clicking on warning details will highlight the relevant code in the "
+"editor."
 msgstr "点击警告详情将会在编辑器中突出显示相关的代码。"
 
 #: ../../static_analysis.md:35
@@ -134,7 +135,9 @@ msgid "**Check effects: Potential reentrancy bugs**"
 msgstr "**检查影响：潜在的可重入错误**"
 
 #: ../../static_analysis.md:56
-msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
+msgid ""
+"Potential Violation of Checks-Effects-Interaction pattern can lead to re-"
+"entrancy vulnerability."
 msgstr "Checks-Effects-Interaction 模式的潜在违反可能导致重入漏洞。"
 
 #: ../../static_analysis.md:67
@@ -186,7 +189,10 @@ msgid "**Gas costs: Too high gas requirement of functions**"
 msgstr "**Gas费用：函数的Gas消耗过高**"
 
 #: ../../static_analysis.md:120
-msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
+msgid ""
+"If the gas requirement of a function is higher than the block gas limit, "
+"it cannot be executed. Please avoid loops in your functions or actions "
+"that modify large areas of storage"
 msgstr "如果一个函数的gas需求高于block gas limit，它就不能被执行。 请避免在修改大面积存储的函数或操作中出现循环"
 
 #: ../../static_analysis.md:132
@@ -210,16 +216,35 @@ msgid "**For loop over dynamic array: Iterations depend on dynamic array's size*
 msgstr "**For循环遍历动态数组：根据动态数组的大小进行迭代**"
 
 #: ../../static_analysis.md:165
-msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
-msgstr "没有固定迭代次数的循环，例如依赖于存储值的循环，必须谨慎使用：由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能会在某个点停止完整的合约。 此外，使用无界循环会产生大量可避免的 gas 成本。 仔细测试您最多可以将多少项传递给此类函数以使其成功。"
+msgid ""
+"Loops that do not have a fixed number of iterations, for example, loops "
+"that depend on storage values, have to be used carefully: Due to the "
+"block gas limit, transactions can only consume a certain amount of gas. "
+"The number of iterations in a loop can grow beyond the block gas limit "
+"which can stall the complete contract at a certain point. Additionally, "
+"using unbounded loops can incur in a lot of avoidable gas costs. "
+"Carefully test how many items at maximum you can pass to such functions "
+"to make it successful."
+msgstr ""
+"没有固定迭代次数的循环，例如依赖于存储值的循环，必须谨慎使用：由于区块gas限制，交易只能消耗一定量的gas。 "
+"循环中的迭代次数可能会超过区块gas限制，这可能会在某个点停止完整的合约。 此外，使用无界循环会产生大量可避免的 gas 成本。 "
+"仔细测试您最多可以将多少项传递给此类函数以使其成功。"
 
 #: ../../static_analysis.md:181
 msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
 msgstr "**循环中转移ETH：在for/while/do-while循环中转移ETH**"
 
 #: ../../static_analysis.md:183
-msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
-msgstr "以太币支付不应循环进行。 由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能导致整个合约在某个点停滞不前。 如果需要，请确保迭代次数较少并且您信任所涉及的每个地址。"
+msgid ""
+"Ether payout should not be done in a loop. Due to the block gas limit, "
+"transactions can only consume a certain amount of gas. The number of "
+"iterations in a loop can grow beyond the block gas limit which can cause "
+"the complete contract to be stalled at a certain point. If required, make"
+" sure that number of iterations are low and you trust each address "
+"involved."
+msgstr ""
+"以太币支付不应循环进行。 由于区块gas限制，交易只能消耗一定量的gas。 "
+"循环中的迭代次数可能会超过区块gas限制，这可能导致整个合约在某个点停滞不前。 如果需要，请确保迭代次数较少并且您信任所涉及的每个地址。"
 
 #: ../../static_analysis.md:206
 msgid "Category: ERC"
@@ -242,7 +267,9 @@ msgid "**Constant/View/Pure functions: Potentially constant/view/pure functions*
 msgstr "**Constant/View/Pure 函数：可能的Constant/View/Pure函数**"
 
 #: ../../static_analysis.md:222
-msgid "It warns for the methods which potentially should be constant/view/pure but are not."
+msgid ""
+"It warns for the methods which potentially should be constant/view/pure "
+"but are not."
 msgstr "它警告那些可能应该是 constant/view/pure 但不是的方法。"
 
 #: ../../static_analysis.md:230
@@ -258,7 +285,9 @@ msgid "**No return: Function with 'returns' not returning**"
 msgstr "**没有返回：'returns'的函数没有返回**"
 
 #: ../../static_analysis.md:244
-msgid "It warns for the methods which define a return type but never explicitly return a value."
+msgid ""
+"It warns for the methods which define a return type but never explicitly "
+"return a value."
 msgstr "它警告定义返回类型但从不显式返回值的方法。"
 
 #: ../../static_analysis.md:252
@@ -274,7 +303,9 @@ msgid "**Result not used: The result of an operation not used**"
 msgstr "**结果未使用：操作的结果没有被使用**"
 
 #: ../../static_analysis.md:262
-msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
+msgid ""
+"A binary operation yields a value that is not used in the following. This"
+" is often caused by confusing assignment (=) and comparison (==)."
 msgstr "二元运算产生的值在下文中未使用。 这通常是由混淆的assignment (=) 和 comparison (==) 引起的。"
 
 #: ../../static_analysis.md:270
@@ -298,8 +329,14 @@ msgid "**Data Truncated: Division on int/uint values truncates the result**"
 msgstr "**数据截断：int/uint 值的除法会截断结果**"
 
 #: ../../static_analysis.md:299
-msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr "整数值的除法再次产生整数值。 这意味着例如 10 / 100 = 0 而不是 0.1，因为结果又是一个整数。 这不适用于(仅)文字值的除法，因为它们产生有理常数。"
+msgid ""
+"Division of integer values yields an integer value again. That means e.g."
+" 10 / 100 = 0 instead of 0.1 since the result is an integer again. This "
+"does not hold for division of (only) literal values since those yield "
+"rational constants."
+msgstr ""
+"整数值的除法再次产生整数值。 这意味着例如 10 / 100 = 0 而不是 0.1，因为结果又是一个整数。 "
+"这不适用于(仅)文字值的除法，因为它们产生有理常数。"
 
 #: ../../static_analysis.md:309
 msgid "Remix-analyzer"

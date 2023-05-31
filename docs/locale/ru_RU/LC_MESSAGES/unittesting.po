@@ -1,21 +1,20 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
 "PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
-"Language-Team: Russian\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: ru\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittesting.pot\n"
-"X-Crowdin-File-ID: 6506\n"
 "Language: ru_RU\n"
+"Language-Team: Russian\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= "
+"2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 "
+">= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3))\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../unittesting.md:1
 msgid "Unit Testing Plugin"
@@ -66,7 +65,9 @@ msgid "![](images/a-unit-testing-test-directory.png)"
 msgstr ""
 
 #: ../../unittesting.md:28
-msgid "Once selected, this directory will be used to load test files and to store newly generated test files."
+msgid ""
+"Once selected, this directory will be used to load test files and to "
+"store newly generated test files."
 msgstr ""
 
 #: ../../unittesting.md:30
@@ -86,7 +87,9 @@ msgid "If no file is selected, it will still create a file with generic name as 
 msgstr ""
 
 #: ../../unittesting.md:38
-msgid "This file contains sufficient information to give better understanding about developing tests for a contract."
+msgid ""
+"This file contains sufficient information to give better understanding "
+"about developing tests for a contract."
 msgstr ""
 
 #: ../../unittesting.md:40
@@ -98,7 +101,9 @@ msgid "Write Tests"
 msgstr ""
 
 #: ../../unittesting.md:88
-msgid "Write sufficient unit tests to ensure that your contract works as expected under different scenarios."
+msgid ""
+"Write sufficient unit tests to ensure that your contract works as "
+"expected under different scenarios."
 msgstr ""
 
 #: ../../unittesting.md:90
@@ -106,7 +111,9 @@ msgid "Remix injects a built-in `assert` library which can be used for testing. 
 msgstr ""
 
 #: ../../unittesting.md:92
-msgid "Apart from this, Remix allows usage of some special functions in the test file to make testing more structural. They are as:"
+msgid ""
+"Apart from this, Remix allows usage of some special functions in the test"
+" file to make testing more structural. They are as:"
 msgstr ""
 
 #: ../../unittesting.md:94
@@ -142,7 +149,10 @@ msgid "![](images/a-unit-testing-run-result.png)"
 msgstr ""
 
 #: ../../unittesting.md:107
-msgid "For failed tests, there will be more assertion details to analyze the issue. Clicking on failed test will highlight the relevant line of code in the editor."
+msgid ""
+"For failed tests, there will be more assertion details to analyze the "
+"issue. Clicking on failed test will highlight the relevant line of code "
+"in the editor."
 msgstr ""
 
 #: ../../unittesting.md:109
@@ -158,7 +168,9 @@ msgid "Customization"
 msgstr ""
 
 #: ../../unittesting.md:115
-msgid "Remix facilitates users with various types of customizations to test a contract properly."
+msgid ""
+"Remix facilitates users with various types of customizations to test a "
+"contract properly."
 msgstr ""
 
 #: ../../unittesting.md:117

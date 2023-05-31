@@ -19,4 +19,4 @@ The command above needs to be run for each language.
 
 `-l es_AR -l pt_BR` represents a list of translated files to generate.
 
-Then *after* a `po` file is translated, the command (1) should be run. The `_build/gettext`  folder doesn't need to be pushed to master.
+Then *after* a `po` file is translated, the command (1) should be run. The `_build/html` folder doesn't need to be pushed to master.

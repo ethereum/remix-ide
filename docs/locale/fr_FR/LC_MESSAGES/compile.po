@@ -1,21 +1,18 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
 "PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
-"Language-Team: French\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/compile.pot\n"
-"X-Crowdin-File-ID: 6464\n"
 "Language: fr_FR\n"
+"Language-Team: French\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../compile.md:1
 msgid "Solidity Compiler"
@@ -34,11 +31,20 @@ msgid "Selecting a contract to compile"
 msgstr ""
 
 #: ../../compile.md:9
-msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
+msgid ""
+"To select a contract to compile, choose a file in the File Explorer. Or "
+"if there are several files open, make sure the one you want to compile is"
+" the active file in the Editor."
 msgstr ""
 
 #: ../../compile.md:11
-msgid "If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:"
+msgid ""
+"If there is not an active file in the editor or a file has not already "
+"been compiled, then the Solidity compiler will look like this:"
+msgstr ""
+
+#: ../../compile.md:13
+msgid "![](images/a-sol-comp-no-file.png)"
 msgstr ""
 
 #: ../../compile.md:13
@@ -110,7 +116,10 @@ msgid "Using the publish button, you can upload your contract to  **IPFS** or **
 msgstr ""
 
 #: ../../compile.md:43
-msgid "When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address."
+msgid ""
+"When publishing a contract that imports other contracts, the main "
+"contract and all of its imported contracts will be published - each to "
+"their own address."
 msgstr ""
 
 #: ../../compile.md:45
@@ -150,7 +159,9 @@ msgid "Compilation Errors and Warning"
 msgstr ""
 
 #: ../../compile.md:60
-msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report."
+msgid ""
+"Compilation Errors and Warning are displayed below the contract section. "
+"At each compilation, the static analysis tab builds a report."
 msgstr ""
 
 #: ../../compile.md:63
@@ -198,7 +209,11 @@ msgid "Enable optimization"
 msgstr ""
 
 #: ../../compile.md:83
-msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgid ""
+"According to the the Solidity Docs, \"the optimizer tries to simplify "
+"complicated expressions, which reduces both code size and execution cost,"
+" i.e., it can reduce gas needed for contract deployment as well as for "
+"external calls made to the contract.\""
 msgstr ""
 
 #: ../../compile.md:85
@@ -214,11 +229,17 @@ msgid "To the right of the **Enable optimization** checkbox is the box to input 
 msgstr ""
 
 #: ../../compile.md:91
-msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
+msgid ""
+"You may ask — \"What is the right number of runs for my contract?\" And "
+"the Solidity docs say:"
 msgstr ""
 
 #: ../../compile.md:93
-msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
+msgid ""
+"If you want the initial contract deployment to be cheaper and the later "
+"function executions to be more expensive, set it to --optimize-runs=1. If"
+" you expect many transactions and do not care for higher deployment cost "
+"and output size, set --optimize-runs to a high number."
 msgstr ""
 
 #: ../../compile.md:95
@@ -238,7 +259,9 @@ msgid "Clicking the config file's name will open it up in the Editor.  To change
 msgstr ""
 
 #: ../../compile.md:103
-msgid "There is no error checking when using the .json file for configuration settings, so make sure your config file is correct."
+msgid ""
+"There is no error checking when using the .json file for configuration "
+"settings, so make sure your config file is correct."
 msgstr ""
 
 #: ../../compile.md:105
