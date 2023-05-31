@@ -1,28 +1,35 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:46\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: French\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: fr\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/settings.pot\n"
-"X-Crowdin-File-ID: 6492\n"
 "Language: fr_FR\n"
+"Language-Team: French\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../settings.md:1
 msgid "Settings"
 msgstr ""
 
 #: ../../settings.md:4
+<<<<<<< HEAD
 msgid "To get to **Settings** click the gear at the very bottom of the icon panel."
+=======
+msgid ""
+"To get to **Settings** click the gear at the very bottom of the icon "
+"panel."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:6
@@ -30,7 +37,13 @@ msgid "Reset Button"
 msgstr ""
 
 #: ../../settings.md:7
+<<<<<<< HEAD
 msgid "The Reset button at the top of the Setting panel will reset all of the settings back to the default."
+=======
+msgid ""
+"The Reset button at the top of the Setting panel will reset all of the "
+"settings back to the default."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:8
@@ -42,11 +55,25 @@ msgid "![](images/a-settings-general.png)"
 msgstr ""
 
 #: ../../settings.md:12
+<<<<<<< HEAD
 msgid "Generate contract metadata is used for deploying with libraries.  See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
 msgstr ""
 
 #: ../../settings.md:13
 msgid "Always use Remix VM at Load: will make the Remix VM the selected **environment** when Remix loads."
+=======
+msgid ""
+"Generate contract metadata is used for deploying with libraries.  See our"
+" blog post on the subject: [Deploying with Libraries](https://medium.com"
+"/remix-ide/deploying-with-libraries-on-remix-ide-"
+"24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
+msgstr ""
+
+#: ../../settings.md:13
+msgid ""
+"Always use Remix VM at Load: will make the Remix VM the selected "
+"**environment** when Remix loads."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:14
@@ -54,11 +81,28 @@ msgid "Text wrap: controls if the text in the editor should be wrapped."
 msgstr ""
 
 #: ../../settings.md:15
+<<<<<<< HEAD
 msgid "Personal mode: can be used when one is connecting to a **local node**.  It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in GETH.  Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone."
 msgstr ""
 
 #: ../../settings.md:16
 msgid "Matomo Analytics: This is where you can turn off and on your approval for us to use Matomo.  We do not collect any personally identifiable information (PII) and our reports are public.  See our [blog post on the subject](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
+=======
+msgid ""
+"Personal mode: can be used when one is connecting to a **local node**.  "
+"It is used to have Remix temporarily save the passphrase - so that you "
+"don't need to **unlock** the account in GETH.  Remix will not persist the"
+" passphrase - so if you refresh your browser the passphrase will be gone."
+msgstr ""
+
+#: ../../settings.md:16
+msgid ""
+"Matomo Analytics: This is where you can turn off and on your approval for"
+" us to use Matomo.  We do not collect any personally identifiable "
+"information (PII) and our reports are public.  See our [blog post on the "
+"subject](https://medium.com/remix-ide/help-us-improve-remix-ide-"
+"66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:18
@@ -66,7 +110,17 @@ msgid "Github Access Token"
 msgstr ""
 
 #: ../../settings.md:20
+<<<<<<< HEAD
 msgid "When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)"
+=======
+msgid ""
+"When performing Git operations on Github and when creating GISTs, it may "
+"be necessary to input an access token.  This token has the specific "
+"permissions for your Git commands. Depending on the operation, you may "
+"also need to input your Github username & email address.  Remix does not "
+"save your password info outside of your browser's localstorage.  "
+"[https://github.com/settings/tokens](https://github.com/settings/tokens)"
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:22
@@ -78,7 +132,15 @@ msgid "Etherscan Access Token"
 msgstr ""
 
 #: ../../settings.md:26
+<<<<<<< HEAD
 msgid "You need to input your Etherscan access token when debugging verified contracts with the Remix Debugger.  When verifying a contract with the Etherscan plugin, you need to put the API key in that plugin and not in the Settings panel."
+=======
+msgid ""
+"You need to input your Etherscan access token when debugging verified "
+"contracts with the Remix Debugger.  When verifying a contract with the "
+"Etherscan plugin, you need to put the API key in that plugin and not in "
+"the Settings panel."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:28
@@ -94,7 +156,13 @@ msgid "Swarm Settings"
 msgstr ""
 
 #: ../../settings.md:34
+<<<<<<< HEAD
 msgid "In the Solidity Compiler, after the compilation is completed, there is a button to publish to Swarm."
+=======
+msgid ""
+"In the Solidity Compiler, after the compilation is completed, there is a "
+"button to publish to Swarm."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:36
@@ -102,7 +170,14 @@ msgid "![](images/a-settings-pub-swarm.png)"
 msgstr ""
 
 #: ../../settings.md:38
+<<<<<<< HEAD
 msgid "Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info."
+=======
+msgid ""
+"Without putting in an address & postage stamp, you'll be using the public"
+" gateway, which may not persist you content as surely as if you put in "
+"your own info."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:40
@@ -114,11 +189,23 @@ msgid "IPFS Settings"
 msgstr ""
 
 #: ../../settings.md:44
+<<<<<<< HEAD
 msgid "Just like the Swarm settings above, IPFS settings are for publishing your contracts to IPFS from the Solidity Compiler."
 msgstr ""
 
 #: ../../settings.md:45
 msgid "If you do not put in any settings here, you will be using the public INFURA node. This will not guarantee your data will persist."
+=======
+msgid ""
+"Just like the Swarm settings above, IPFS settings are for publishing your"
+" contracts to IPFS from the Solidity Compiler."
+msgstr ""
+
+#: ../../settings.md:45
+msgid ""
+"If you do not put in any settings here, you will be using the public "
+"INFURA node. This will not guarantee your data will persist."
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:47
@@ -126,7 +213,13 @@ msgid "Other options are to:"
 msgstr ""
 
 #: ../../settings.md:48
+<<<<<<< HEAD
 msgid "Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)"
+=======
+msgid ""
+"Use your own INFURA IPFS node. This requires a subscription. [Learn "
+"more](https://infura.io/product/ipfs)"
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:49
@@ -134,7 +227,13 @@ msgid "Use any external IPFS which doesn’t require any authentification."
 msgstr ""
 
 #: ../../settings.md:50
+<<<<<<< HEAD
 msgid "Use your own local ipfs node (which usually runs under http://localhost:5001)"
+=======
+msgid ""
+"Use your own local ipfs node (which usually runs under "
+"http://localhost:5001)"
+>>>>>>> master
 msgstr ""
 
 #: ../../settings.md:52
@@ -146,10 +245,66 @@ msgid "Themes"
 msgstr "Thèmes"
 
 #: ../../settings.md:55
+<<<<<<< HEAD
 msgid "Choose themes here.  The Dark & Light themes are the themes that the Remix team actively maintains."
 msgstr ""
 
 #: ../../settings.md:57
 msgid "![](images/a-settings-themes.png)"
 msgstr ""
+=======
+msgid ""
+"Choose themes here.  The Dark & Light themes are the themes that the "
+"Remix team actively maintains."
+msgstr ""
+
+#: ../../settings.md:57
+msgid "![](images/a-settings-themes.png)"
+msgstr ""
+
+#~ msgid "To get to Settings click the gear at the very bottom of the icon panel."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Generate contract metadata is used for"
+#~ " deploying with libraries.  See our "
+#~ "blog post on the subject: Deploying "
+#~ "with Libraries"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Always use Ethereum VM at Load: "
+#~ "will make the Javascript VM the "
+#~ "selected environment when Remix loads."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Personal mode: can be used when "
+#~ "one is connecting to a local node."
+#~ "  It is used to have Remix "
+#~ "temporarily save the passphrase - so "
+#~ "that you don't need to unlock the"
+#~ " account in GETH.  Remix will not "
+#~ "persist the passphrase - so if you"
+#~ " refresh your browser the passphrase "
+#~ "will be gone."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Matomo Analytics: This is where you "
+#~ "can turn off and on your approval"
+#~ " for us to use Matomo.  We do"
+#~ " not collect any personally identifiable"
+#~ " information (PII) and our reports "
+#~ "are public.  See our blog post on"
+#~ " the subject."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For creating GISTs as well as "
+#~ "using other Github functions, it is "
+#~ "necessary to put in an access "
+#~ "token.  https://github.com/settings/tokens"
+#~ msgstr ""
+>>>>>>> master
 

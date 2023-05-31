@@ -38,7 +38,7 @@ In the console, you can run the commands listed below.  Once you start to type a
 
 **web3.utils**: This package provides utility functions for Ethereum dapps and other **web3.js packages.
 
-### A few Swarm examples examples (these will be updated soon)
+### A few Swarm examples (these will be updated soon)
 
 **swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/
 

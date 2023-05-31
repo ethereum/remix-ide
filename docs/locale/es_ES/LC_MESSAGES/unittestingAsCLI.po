@@ -3,12 +3,19 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:48\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
+=======
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+>>>>>>> master
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+<<<<<<< HEAD
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: remix-translation\n"
 "X-Crowdin-Project-ID: 431830\n"
@@ -16,17 +23,35 @@ msgstr ""
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittestingAsCLI.pot\n"
 "X-Crowdin-File-ID: 7441\n"
 "Language: es_ES\n"
+=======
+"Generated-By: Babel 2.9.1\n"
+>>>>>>> master
 
 #: ../../unittestingAsCLI.md:1
 msgid "Command Line Interface"
 msgstr ""
 
 #: ../../unittestingAsCLI.md:3
+<<<<<<< HEAD
 msgid "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
 msgstr ""
 
 #: ../../unittestingAsCLI.md:6
 msgid "`remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`."
+=======
+#, python-format
+msgid ""
+"remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-"
+"tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:6
+msgid ""
+"`remix-tests` is a tool which can be used as a CLI (Command Line "
+"Interface) solution to run the solidity unit tests. This is the same tool"
+" which works as a library underneath Remix's `Solidity Unit Testing` "
+"plugin. It is available on NPM as `@remix-project/remix-tests`."
+>>>>>>> master
 msgstr ""
 
 #: ../../unittestingAsCLI.md:8
@@ -82,11 +107,23 @@ msgid "To run all test files inside `examples` directory"
 msgstr ""
 
 #: ../../unittestingAsCLI.md:59
+<<<<<<< HEAD
 msgid "To run single test file named `simple_storage_test.sol` inside `examples` directory"
 msgstr ""
 
 #: ../../unittestingAsCLI.md:63
 msgid "**NOTE:** `remix-tests` will assume that name of test(s) file ends with `\"_test.sol\"`. e.g `simple_storage_test.sol`"
+=======
+msgid ""
+"To run single test file named `simple_storage_test.sol` inside `examples`"
+" directory"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:63
+msgid ""
+"**NOTE:** `remix-tests` will assume that name of test(s) file ends with "
+"`\"_test.sol\"`. e.g `simple_storage_test.sol`"
+>>>>>>> master
 msgstr ""
 
 #: ../../unittestingAsCLI.md:65
@@ -110,7 +147,14 @@ msgid "Custom compiler context"
 msgstr ""
 
 #: ../../unittestingAsCLI.md:152
+<<<<<<< HEAD
 msgid "Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:"
+=======
+msgid ""
+"Most of the `remix-tests` options are there to define a custom compiler "
+"context. With an extended custom compiler context, execution of above "
+"test file will go as:"
+>>>>>>> master
 msgstr ""
 
 #: ../../unittestingAsCLI.md:183
@@ -126,6 +170,84 @@ msgid "`remix-tests` can also be used for continuous integration (CI) testing."
 msgstr ""
 
 #: ../../unittestingAsCLI.md:190
+<<<<<<< HEAD
 msgid "For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration."
 msgstr ""
+=======
+msgid ""
+"For implementation example, see [Su Squares contract](https://github.com"
+"/su-squares/ethereum-"
+"contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis "
+"build](https://travis-ci.org/su-squares/ethereum-"
+"contract/builds/446186067) that uses `remix-tests` for continuous "
+"integration."
+msgstr ""
+
+#~ msgid "remix-tests"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "remix-tests is a tool which can"
+#~ " be used as a CLI (Command Line"
+#~ " Interface) solution to run the "
+#~ "solidity unit tests. This is the "
+#~ "same tool which works as a library"
+#~ " underneath Remix's Solidity Unit Testing"
+#~ " plugin. It is available on NPM "
+#~ "as @remix-project/remix-tests."
+#~ msgstr ""
+
+#~ msgid "npm install --save-dev @remix-project/remix-tests"
+#~ msgstr ""
+
+#~ msgid "npm install -g @remix-project/remix-tests"
+#~ msgstr ""
+
+#~ msgid "You can see all available options using help command."
+#~ msgstr ""
+
+#~ msgid "$ remix-tests <options> <file/directory path>"
+#~ msgstr ""
+
+#~ msgid "To run all test files inside examples directory"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To run single test file named "
+#~ "simple_storage_test.sol inside examples directory"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NOTE: remix-tests will assume that "
+#~ "name of test(s) file ends with "
+#~ "\"_test.sol\". e.g simple_storage_test.sol"
+#~ msgstr ""
+
+#~ msgid "Consider for a simple storage contract named simple_storage.sol:"
+#~ msgstr ""
+
+#~ msgid "Test file simple_storage_test.sol can be as:"
+#~ msgstr ""
+
+#~ msgid "Running simple_storage_test.sol file will output as:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most of the remix-tests options "
+#~ "are there to define a custom "
+#~ "compiler context. With an extended "
+#~ "custom compiler context, execution of "
+#~ "above test file will go as:"
+#~ msgstr ""
+
+#~ msgid "remix-tests can also be used for continuous integration (CI) testing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For implementation example, see Su "
+#~ "Squares contract and Travis build that"
+#~ " uses remix-tests for continuous "
+#~ "integration."
+#~ msgstr ""
+>>>>>>> master
 

@@ -1,35 +1,59 @@
 Deploy & Run
 ============
 
-![](images/a-run-icon.png) The Deploy & Run module allows you to send transactions to the current environment.
+![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**.
 
-To use this module, you need to have a contract compiled.  So, if there is a contract name in the <b>CONTRACT</b> select box (the select box is under the VALUE input field), you can use this module.  If nothing is there or you do not see the contract you want, you need to select a contract in the editor to make it active, go to a compiler module and compile it, and then come back to Deploy & Run.
+For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module. 
 
-![](images/a-runtab1a.png)
+![](images/a-contract.png)
+
+ If nothing is there, you need to compile a file. If you do not see the contract you want, you need to select a contract in the editor to make it active.
 
 Environment
 ---------
 
--   `Remix VM (London)` : For connecting to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own "blockchain" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  The London refers to the London fork of Ethereum. 
+-   `Remix VM (Merge)` : Connects to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own "blockchain" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  Merge refers to the fork of Ethereum when the Merge occurred. This fork is also known as the **Paris** fork. 
+
+-   `Remix VM (London)` : Same as above except this chain is using the London fork of Ethereum.
 
 -   `Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum.
 
--   `Injected Provider - provider name`: For connecting Remix to an injected
-    web3 provider. The most common injected provider is `Metamask`.
+-   `Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and will load it into the Remix VM.  It is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about Forking)
 
--   `Hardhat Provider`: For connecting Remix to a local Hardhat test chain.
+-   `Remix VM - Goerli fork` : Same as above except this forks the Goerli testnet. (See below for more info about Forking)
 
--   `Ganache Provider`: For connecting Remix to a local Truffle Ganache test chain.
+-   `Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about Forking)
 
--   `Foundry Provider`: For connecting Remix to a local Foundry Anvil test chain.
+-   `Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)
 
--   `WalletConnect`: For using the WalletConnect allowing you to approve transactions on a mobile device.  
+-   `Injected Provider - provider name`: Connects Remix to an injected web3 provider. The most common injected provider is `Metamask`.
 
--   `External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**.
+-   `Custom - External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**. (See below for more info about External HTTP Provider)
 
--   `L2 - Optimism Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Optimism Network's mainnet.
+-   `Dev - Hardhat Provider`: Connects Remix to a local Hardhat test chain.
 
--   `L2 - Arbitrum One Provider`: For connecting Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network.
+-   `Dev - Ganache Provider`: Connects Remix to a local Truffle Ganache test chain.
+
+-   `Dev - Foundry Provider`: Connects Remix to a local Foundry Anvil test chain.
+
+-   `L2 - Optimism Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the mainnet of Optimism.
+
+-   `L2 - Arbitrum One Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network.
+
+-   `WalletConnect`: Connects Remix to a wallet on a mobile device.  
+
+Forking chains in Remix
+-------------------------
+Forking is a great technique for developing a contract that interacts with deployed contracts on a specific chain. By bringing in a chain to the Remix VM, you'll have the 10 accounts loaded with 100ETH.  
+
+Careful though, if you refresh the browser, you’ll lose the forked chain.
+
+### Custom Fork
+The Custom fork option allows you to specify a chain's RPC server, a block number, and an EVM version.
+
+ ![](images/a-custom-fork.png)
+
+You can get the **Node URL** from chainlist.org. If the chain does not load, you may need to choose a different RPC server. You will also need to choose an EVM version appropriate to the block number. So, if you choose a very low block number, the EVM with the Merge “flavor” won’t work because this version of the EVM came out later.
 
 More about External HTTP Provider
 ----------------------------------

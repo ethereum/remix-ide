@@ -1,21 +1,22 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:46\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/plugin_manager.pot\n"
-"X-Crowdin-File-ID: 6482\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../plugin_manager.md:1
 msgid "Plugin Manager"
@@ -23,6 +24,7 @@ msgstr "插件管理器"
 
 #: ../../plugin_manager.md:4
 msgid "![](images/a-plugin-man-overview.png)"
+<<<<<<< HEAD
 msgstr "![](images/a-plugin-man-overview.png)"
 
 #: ../../plugin_manager.md:6
@@ -32,12 +34,29 @@ msgstr "在 Remix IDE 中，您可以只加载您需要的功能。在**插件�
 #: ../../plugin_manager.md:8
 msgid "This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects."
 msgstr "这种插件架构可以将 Remix 团队制作的工具与外部团队制作的工具集成在一起使用。这种架构还可以将 Remix 或 Remix 的一部分集成到其他项目中。"
+=======
+msgstr ""
+
+#: ../../plugin_manager.md:6
+msgid ""
+"In Remix IDE you only load the functionality you need.  Controlling which"
+" plugins are active or inactive happens in the **Plugin Manager**."
+msgstr ""
+
+#: ../../plugin_manager.md:8
+msgid ""
+"This plugin architecture has made it possible to integrate tools made by "
+"the Remix team with tools made by external teams. This architecture also "
+"allows Remix or just parts of Remix to be integrated into other projects."
+msgstr ""
+>>>>>>> master
 
 #: ../../plugin_manager.md:10
 msgid "Manage permissions"
 msgstr "管理权限"
 
 #: ../../plugin_manager.md:11
+<<<<<<< HEAD
 msgid "When plugins need to access other plugins for their operation, a modal will appear to ask you for permission."
 msgstr "当插件需要访问其他插件来进行操作时，会出现一个对话框请求您的许可。"
 
@@ -48,12 +67,31 @@ msgstr "![](images/a-permission-modal.png)"
 #: ../../plugin_manager.md:15
 msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
 msgstr "通常，同一个插件会想要多次执行相同的操作。因此，在授予权限时，最好选中**记住此选项**的复选框。如果不这样做，这个对话框可能会反复弹出。"
+=======
+msgid ""
+"When plugins need to access other plugins for their operation, a modal "
+"will appear to ask you for permission."
+msgstr ""
+
+#: ../../plugin_manager.md:13
+msgid "![](images/a-permission-modal.png)"
+msgstr ""
+
+#: ../../plugin_manager.md:15
+msgid ""
+"Often, the same plugin will want to do the same action multiple times.  "
+"So when granting permission, its helpful to click the **Remember this "
+"choice** box.  If you don't, you might get this modal repeatedly popping "
+"up."
+msgstr ""
+>>>>>>> master
 
 #: ../../plugin_manager.md:17
 msgid "View permissions"
 msgstr "查看权限"
 
 #: ../../plugin_manager.md:18
+<<<<<<< HEAD
 msgid "You can view the permissions that you have granted to plugins by clicking on the **Permissions** button at the bottom of the **Plugin Manager**."
 msgstr "您可以通过单击**插件管理器**底部的**权限**按钮来查看您授予插件的权限。"
 
@@ -68,12 +106,33 @@ msgstr "将出现如下图所示的对话框，您可以在其中查看和删除
 #: ../../plugin_manager.md:24
 msgid "![](images/a-plugin-manager-modal.png)"
 msgstr "![](images/a-plugin-manager-modal.png)"
+=======
+msgid ""
+"You can view the permissions that you have granted to plugins by clicking"
+" on the **Permissions** button at the bottom of the **Plugin Manager**."
+msgstr ""
+
+#: ../../plugin_manager.md:20
+msgid "![](images/a-plugin-man-permissions.png)"
+msgstr ""
+
+#: ../../plugin_manager.md:22
+msgid ""
+"A modal will appear like the one below where you can view and erase the "
+"granted permission."
+msgstr ""
+
+#: ../../plugin_manager.md:24
+msgid "![](images/a-plugin-manager-modal.png)"
+msgstr ""
+>>>>>>> master
 
 #: ../../plugin_manager.md:26
 msgid "Plugin Devs: Load a local plugin"
 msgstr "插件开发：加载本地插件"
 
 #: ../../plugin_manager.md:28
+<<<<<<< HEAD
 msgid "A plugin in development can be loaded into Remix IDE by clicking the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
 msgstr "单击插件管理器面板顶部的“连接到本地插件”链接，可以将开发中的插件加载到 Remix IDE中。"
 
@@ -84,4 +143,46 @@ msgstr "![](images/a-plugin-man-local.png)"
 #: ../../plugin_manager.md:32
 msgid "To learn more about how to create your own plugin, go to [the README of remix-plugin repo](https://github.com/ethereum/remix-plugin)."
 msgstr "要了解更多有关如何创建自己的插件的信息，请转到 [remix-plugin 代码仓库 的 README](https://github.com/ethereum/remix-plugin)。"
+=======
+msgid ""
+"A plugin in development can be loaded into Remix IDE by clicking the "
+"\"Connect to a Local Plugin\" link at the top of the Plugin Manager "
+"panel."
+msgstr ""
+
+#: ../../plugin_manager.md:30
+msgid "![](images/a-plugin-man-local.png)"
+msgstr ""
+
+#: ../../plugin_manager.md:32
+#, fuzzy
+msgid ""
+"To learn more about how to create your own plugin, go to [the README of "
+"remix-plugin repo](https://github.com/ethereum/remix-plugin)."
+msgstr "要了解有关如何创建自己的插件的更多信息，请转到 remix-plugin repo 的 README。"
+>>>>>>> master
+
+#~ msgid ""
+#~ "In Remix IDE you only load the "
+#~ "functionality you need.  Controlling which "
+#~ "plugins are active or inactive happens"
+#~ " in the Plugin Manager."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Often, the same plugin will want "
+#~ "to do the same action multiple "
+#~ "times.  So when granting permission, its"
+#~ " helpful to click the Remember this"
+#~ " choice box.  If you don't, you "
+#~ "might get this modal repeatedly popping"
+#~ " up."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can view the permissions that "
+#~ "you have granted to plugins by "
+#~ "clicking on the Permissions button at"
+#~ " the bottom of the Plugin Manager."
+#~ msgstr ""
 

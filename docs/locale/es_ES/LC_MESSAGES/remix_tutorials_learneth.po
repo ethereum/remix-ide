@@ -3,12 +3,19 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
+=======
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+>>>>>>> master
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+<<<<<<< HEAD
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: remix-translation\n"
 "X-Crowdin-Project-ID: 431830\n"
@@ -16,6 +23,9 @@ msgstr ""
 "X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_learneth.pot\n"
 "X-Crowdin-File-ID: 7427\n"
 "Language: es_ES\n"
+=======
+"Generated-By: Babel 2.9.1\n"
+>>>>>>> master
 
 #: ../../remix_tutorials_learneth.md:1
 msgid "Remix Tutorials with Learneth"
@@ -27,6 +37,10 @@ msgstr ""
 
 #: ../../remix_tutorials_learneth.md:6
 msgid "Tutorials can contain quizzes for testing students' work.  These quizzes are run by Solidity Unit Tests."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:8
+msgid "![](images/a-learneth.png)"
 msgstr ""
 
 #: ../../remix_tutorials_learneth.md:8
@@ -50,11 +64,23 @@ msgid "Learneth is a plugin - so to access it, you need to activate the Learneth
 msgstr ""
 
 #: ../../remix_tutorials_learneth.md:21
+<<<<<<< HEAD
 msgid "This link will activate Learneth and then will open a specific tutorial - in this case it will load the **proxy contract** tutorial:"
 msgstr ""
 
 #: ../../remix_tutorials_learneth.md:27
 msgid "**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html)."
+=======
+msgid ""
+"This link will activate Learneth and then will open a specific tutorial -"
+" in this case it will load the **proxy contract** tutorial:"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:27
+msgid ""
+"**NOTE:** For other tricks about Remix URLs with parameters, go here: "
+"[locations](locations.html)."
+>>>>>>> master
 msgstr ""
 
 #: ../../remix_tutorials_learneth.md:29
@@ -92,4 +118,29 @@ msgstr ""
 #: ../../remix_tutorials_learneth.md:58
 msgid "Remix maintains and curates this repo of Learneth tutorials: https://github.com/ethereum/remix-workshops"
 msgstr ""
+
+#~ msgid "Learneth is a tutorial platform integrated into Remix."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This link will activate Learneth and "
+#~ "then will open a specific tutorial "
+#~ "- in this case it will load "
+#~ "the proxy contract tutorial:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "NOTE: For other tricks about Remix "
+#~ "URLs with parameters, go here: "
+#~ "locations."
+#~ msgstr ""
+
+#~ msgid "Beginner"
+#~ msgstr ""
+
+#~ msgid "Intermediate"
+#~ msgstr ""
+
+#~ msgid "Advanced"
+#~ msgstr ""
 

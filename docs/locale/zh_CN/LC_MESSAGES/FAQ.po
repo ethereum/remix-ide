@@ -1,21 +1,22 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:45\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:22+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/FAQ.pot\n"
-"X-Crowdin-File-ID: 6454\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../FAQ.md:1
 msgid "FAQ"
@@ -27,6 +28,7 @@ msgstr "支持的设备和浏览器"
 
 #: ../../FAQ.md:5
 msgid "**Q:** What browsers will Remix work on?"
+<<<<<<< HEAD
 msgstr "**问:** Remix可以在哪个浏览器上工作？"
 
 #: ../../FAQ.md:7
@@ -40,10 +42,28 @@ msgstr "**Q:** Remix会在平板电脑或移动设备上工作吗？"
 #: ../../FAQ.md:11
 msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
 msgstr "**答:** 我们不支持在平板电脑或移动设备上使用Remix。"
+=======
+msgstr ""
+
+#: ../../FAQ.md:7
+msgid ""
+"**A:** We support Firefox, Chrome, and Brave.  We do not test or look for"
+" errors in Safari, Edge or other browsers."
+msgstr ""
+
+#: ../../FAQ.md:9
+msgid "**Q:** Will Remix work on a tablet or mobile device?"
+msgstr ""
+
+#: ../../FAQ.md:11
+msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
+msgstr ""
+>>>>>>> master
 
 #: ../../FAQ.md:13
 msgid "General"
 msgstr "常规"
+<<<<<<< HEAD
 
 #: ../../FAQ.md:15
 msgid "**Q:** Are there keyboard shortcuts in Remix?"
@@ -101,11 +121,92 @@ msgstr "**答：**验证工具不会递归地遍历合约中的导入语句。 �
 msgid "There is a plugin called `Flattener` which will stuff all the original code and the imported code into a single file."
 msgstr "有一个名为 `Flattener` 的插件，它可以将所有原始代码和导入的代码压缩到单个文件中。"
 
+=======
+
+#: ../../FAQ.md:15
+msgid "**Q:** Are there keyboard shortcuts in Remix?"
+msgstr ""
+
+#: ../../FAQ.md:17
+msgid "**A:** Yes - here is the list of keyboard shortcuts:"
+msgstr ""
+
+#: ../../FAQ.md:19
+msgid "`Ctrl+Shift+F` : Opens the File Explorer"
+msgstr ""
+
+#: ../../FAQ.md:21
+msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
+msgstr ""
+
+#: ../../FAQ.md:23
+msgid "`Ctrl+S`: Compiles the active Solidity file"
+msgstr ""
+
+#: ../../FAQ.md:25
+msgid ""
+"`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the "
+"script is displayed in the editor.<br>(go "
+"[here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-"
+"the-fly) more info about this functionality)"
+msgstr ""
+
+#: ../../FAQ.md:27
+msgid "Solidity compiler"
+msgstr "Solidity 编译器"
+
+#: ../../FAQ.md:29
+#, fuzzy
+msgid "**Q:** Error: compiler might be in a non-sane state"
+msgstr "问：错误：编译器可能处于非正常状态"
+
+#: ../../FAQ.md:36
+#, fuzzy
+msgid ""
+"**A:** Old versions of solidity compiler had this problem with chrome. "
+"Please change the compiler version in Solidity Plugin to the newer one or"
+" use another browser."
+msgstr ""
+"答：旧版本的solidity 编译器在chrome 中存在这个问题。 请将 Solidity Plugin "
+"中的编译器版本更改为较新的版本或使用其他浏览器。"
+
+#: ../../FAQ.md:39
+#, fuzzy
+msgid ""
+"**Q:** I’m getting an issue with Maximum call stack exceed and various "
+"other errors, can't compile."
+msgstr "问：我遇到了最大调用堆栈超出和其他各种错误的问题，无法编译。"
+
+#: ../../FAQ.md:41
+#, fuzzy
+msgid "**A:**  Try a different browser or a newer solidity compiler version."
+msgstr "答：尝试不同的浏览器或更新的solidity 编译器版本。"
+
+#: ../../FAQ.md:43
+#, fuzzy
+msgid "**Q:** How to verify a contract that imports other contracts?"
+msgstr "问：如何验证导入其他合约的合约？"
+
+#: ../../FAQ.md:45
+msgid ""
+"**A:**  The verification tool does not recursively go through the import "
+"statements in a contract.  So can only verify a 'flattened' contract."
+msgstr ""
+
+#: ../../FAQ.md:47
+#, fuzzy
+msgid ""
+"There is a plugin called `Flattener` which will stuff all the original "
+"code and the imported code into a single file."
+msgstr "有一个名为 Flattener 的插件，它将所有原始代码和导入的代码填充到一个文件中。"
+
+>>>>>>> master
 #: ../../FAQ.md:49
 msgid "Deploy & Run"
 msgstr "部署和运行"
 
 #: ../../FAQ.md:51
+<<<<<<< HEAD
 msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
 msgstr "**问：** 我在我的应用程序中使用Infura节点，但是当我尝试在Remix IDE中选择“外部HTTP provider” 并将我的节点放入以便基于该节点进行部署时，它告诉我无法连接。"
 
@@ -140,12 +241,75 @@ msgstr "**答：** 输入一个结构体，就像一个元组一样，将它作�
 #: ../../FAQ.md:68
 msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
 msgstr "`pragma experimental ABIEncoderV2;` 在solidity文件的顶部。"
+=======
+#, fuzzy
+msgid ""
+"**Q:** I am using an Infura endpoint in my app, but when I try to deploy "
+"against that endpoint in Remix IDE selecting \"External HTTP Provider\" "
+"and putting my endpoint in, it's telling me that it can't connect"
+msgstr ""
+"问：我在我的应用程序中使用 Infura 端点，但是当我尝试在 remix IDE 中选择“web3 "
+"提供程序”并放入我的端点时针对该端点进行部署时，它告诉我它无法连接"
+
+#: ../../FAQ.md:53
+#, fuzzy
+msgid "**A:** If the endpoint you are using is http, it won't work."
+msgstr "答：如果您使用的端点是http，它将无法正常工作。"
+
+#: ../../FAQ.md:55
+#, fuzzy
+msgid "**Q:** Where is deploy button?"
+msgstr "问：部署按钮在哪里？"
+
+#: ../../FAQ.md:57
+#, fuzzy
+msgid ""
+"**A:** Its in the Deploy & Run module. If you haven't activated that "
+"module, you should do that by clicking Deploy & Run module in the Plugin "
+"Manager. You could also activate everything you need to work with "
+"solidity on the landing page ( click the remix logo at the top left for "
+"the screen) and click the \"Solidity\" button in the environment section."
+msgstr ""
+"答: 它在 Deploy & Run 模块中。 如果您尚未激活该模块，则应通过单击插件管理器中的部署和运行模块来执行此操作。 "
+"您还可以在登录页面上激活使用 Solidity 所需的所有内容(单击屏幕左上角的 remix "
+"徽标)，然后单击环境部分中的“Solidity”按钮。"
+
+#: ../../FAQ.md:60
+#, fuzzy
+msgid "**Q:** How to pass a tuple to a public function in Remix?"
+msgstr "问：如何将元组传递给 Remix 中的公共函数？"
+
+#: ../../FAQ.md:62
+#, fuzzy
+msgid "**A:** Pass it as an array []."
+msgstr "答：将其作为数组 [] 传递。"
+
+#: ../../FAQ.md:64
+#, fuzzy
+msgid ""
+"**Q:** How to input a struct as input to a parameter of a function in the"
+" Deploy & Run module?"
+msgstr "问：如何在Deploy & Run模块中输入一个struct作为函数参数的输入？"
+
+#: ../../FAQ.md:66
+#, fuzzy
+msgid ""
+"**A:** For inputting a struct, just like a tuple, pass it in as an array "
+"[].  Also you need to put in the line:"
+msgstr "答：输入一个结构体，就像一个元组一样，将它作为一个数组[] 传入。 您还需要输入以下内容："
+
+#: ../../FAQ.md:68
+#, fuzzy
+msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
+msgstr "pragma 实验性 ABIEncoderV2； 在solidity文件的顶部。"
+>>>>>>> master
 
 #: ../../FAQ.md:70
 msgid "For example, here's a solidity file with a struct is an input parameter."
 msgstr "例如，这里有一个带有 struct 的solidity 文件作为输入参数。"
 
 #: ../../FAQ.md:102
+<<<<<<< HEAD
 msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
 msgstr "initPeepToPeeps的输入需要一个结构体。如果您输入`[1,2]`，交易将会通过。"
 
@@ -160,6 +324,29 @@ msgstr "**问：** 插件开发人员会去哪里解决他们的问题？"
 #: ../../FAQ.md:110
 msgid "**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
 msgstr "**答：** Gitter Remix插件开发者房间 `https://gitter.im/ethereum/remix-dev-plugin`"
+=======
+#, fuzzy
+msgid ""
+"The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the "
+"transaction will go through."
+msgstr "InitPeepToPeeps 的输入采用结构。 如果您输入 [1,2]，则交易将通过。"
+
+#: ../../FAQ.md:106
+msgid "Plugin Developers"
+msgstr ""
+
+#: ../../FAQ.md:108
+#, fuzzy
+msgid "**Q:** Where do plugin developers go with their questions?"
+msgstr "问：插件开发人员会去哪里解决他们的问题？"
+
+#: ../../FAQ.md:110
+#, fuzzy
+msgid ""
+"**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum"
+"/remix-dev-plugin"
+msgstr "答: Gitter Remix 插件开发者室 https://gitter.im/ethereum/remix-dev-plugin"
+>>>>>>> master
 
 #: ../../FAQ.md:112
 msgid "Analytics"
@@ -167,11 +354,19 @@ msgstr "数据分析"
 
 #: ../../FAQ.md:114
 msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
+<<<<<<< HEAD
 msgstr "**问:** 当Matomo Analytics启用时，要保存哪些信息？"
 
 #: ../../FAQ.md:116
 msgid "**A:** We want to know:"
 msgstr "**答:** 我们想知道："
+=======
+msgstr ""
+
+#: ../../FAQ.md:116
+msgid "**A:** We want to know:"
+msgstr ""
+>>>>>>> master
 
 #: ../../FAQ.md:118
 msgid "Which plugins get activated & deactivated"
@@ -195,6 +390,7 @@ msgstr "在主页上使用了哪个文件导入按钮"
 
 #: ../../FAQ.md:124
 msgid "**Q:** Is it opt-in or opt-out?"
+<<<<<<< HEAD
 msgstr "**问:** 是选择加入还是选择退出？"
 
 #: ../../FAQ.md:126
@@ -232,4 +428,120 @@ msgstr "**问:** 在我同意加入后，我能否改变主意？"
 #: ../../FAQ.md:142
 msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr "**答:** 您可以在设置面板中关闭或在 Matomo 上关闭。不选择加入或选择退出不会有任何后果。"
+=======
+msgstr ""
+
+#: ../../FAQ.md:126
+msgid "**A:** We use Matomo as an opt-in analytics platform."
+msgstr ""
+
+#: ../../FAQ.md:128
+msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
+msgstr ""
+
+#: ../../FAQ.md:130
+msgid ""
+"**A:** All data collected through Matomo is stored on our own server. No "
+"data is given to third parties."
+msgstr ""
+
+#: ../../FAQ.md:132
+msgid ""
+"We respect your privacy and do not collect nor store any personally "
+"identifiable information (PII)."
+msgstr ""
+
+#: ../../FAQ.md:134
+msgid "**Q:** What does Remix do with this info?"
+msgstr ""
+
+#: ../../FAQ.md:136
+msgid ""
+"**A:** Our goal is to understand how many users we have, what plugins "
+"people are using, what is not getting used, what is not being used to its"
+" full potential."
+msgstr ""
+
+#: ../../FAQ.md:138
+msgid ""
+"With this understanding, we can make adjustments to the UI as well as "
+"providing more tips and documentation. It's a way of getting constant "
+"anonymous feedback from our users."
+msgstr ""
+
+#: ../../FAQ.md:140
+msgid "**Q:** After I agree opt-in, can I change my mind?"
+msgstr ""
+
+#: ../../FAQ.md:142
+msgid ""
+"**A:** You can turn off or on Matomo in the Settings panel.  There are no"
+" consequences for not opting-in or opting-out."
+msgstr ""
+>>>>>>> master
+
+#~ msgid "Q: What browsers will Remix work on?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: We support Firefox, Chrome, and "
+#~ "Brave.  We do not test or look "
+#~ "for errors in Safari, Edge or "
+#~ "other browsers."
+#~ msgstr ""
+
+#~ msgid "Q: Will Remix work on a tablet or mobile device?"
+#~ msgstr ""
+
+#~ msgid "A: We do not support the use of Remix on tablets or mobile phones."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A:  The verification tool does not "
+#~ "recursively go through the import "
+#~ "statements in a contract.  So can "
+#~ "only verify a 'flattened' contract."
+#~ msgstr ""
+
+#~ msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
+#~ msgstr ""
+
+#~ msgid "A: We want to know:"
+#~ msgstr ""
+
+#~ msgid "Q: Is it opt-in or opt-out?"
+#~ msgstr ""
+
+#~ msgid "A: We use Matomo as an opt-in analytics platform."
+#~ msgstr ""
+
+#~ msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: All data collected through Matomo "
+#~ "is stored on our own server. No"
+#~ " data is given to third parties."
+#~ msgstr ""
+
+#~ msgid "Q: What does Remix do with this info?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: Our goal is to understand how"
+#~ " many users we have, what plugins "
+#~ "people are using, what is not "
+#~ "getting used, what is not being "
+#~ "used to its full potential."
+#~ msgstr ""
+
+#~ msgid "Q: After I agree opt-in, can I change my mind?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A: You can turn off or on "
+#~ "Matomo in the Settings panel.  There "
+#~ "are no consequences for not opting-"
+#~ "in or opting-out."
+#~ msgstr ""
 

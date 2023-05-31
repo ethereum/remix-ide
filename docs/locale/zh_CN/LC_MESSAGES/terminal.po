@@ -1,21 +1,22 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:47\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/terminal.pot\n"
-"X-Crowdin-File-ID: 6500\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../terminal.md:1
 msgid "Terminal"
@@ -23,22 +24,43 @@ msgstr "终端"
 
 #: ../../terminal.md:4
 msgid "![](images/a-terminal-and-more.png)"
+<<<<<<< HEAD
 msgstr "![](images/a-terminal-and-more.png)"
+=======
+msgstr ""
+>>>>>>> master
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
 msgstr "终端中可用的功能："
 
 #: ../../terminal.md:8
+<<<<<<< HEAD
 msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
 msgstr "它集成了JavaScript解释器和`web3`对象。它使得可以执行与当前上下文交互的JavaScript脚本。（请注意，只有在选择`web provider`或`injected provider`模式时才可用`web3`）。"
+=======
+#, fuzzy
+msgid ""
+"It integrates a JavaScript interpreter and the `web3` object. It enables "
+"the execution of the JavaScript script which interacts with the current "
+"context. (note that `web3` is only available if the `web provider` or "
+"`injected provider` mode is selected)."
+msgstr ""
+"它集成了 JavaScript 解释器和 web3 对象。 它可以执行与当前上下文交互的 JavaScript 脚本。(请注意，web3 仅在选择"
+" web 提供程序或注入提供程序模式时可用)。"
+>>>>>>> master
 
 #: ../../terminal.md:12
-msgid "It displays important actions made while interacting with the Remix IDE (i.e. sending a new transaction)."
+msgid ""
+"It displays important actions made while interacting with the Remix IDE "
+"(i.e. sending a new transaction)."
 msgstr "它显示在与 Remix IDE 交互时所做的重要操作(即发送一个新的交易)。"
 
 #: ../../terminal.md:14
-msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
+msgid ""
+"It displays transactions that are mined in the current context. You can "
+"choose to display all transactions or only transactions that refers to "
+"the contracts Remix knows (e.g transaction created from the Remix IDE)."
 msgstr "它显示在当前内容中挖掘的交易。 您可以选择显示所有交易或仅显示引用 Remix 知道的合约的交易(例如从 Remix IDE 创建的交易)。"
 
 #: ../../terminal.md:18
@@ -46,6 +68,12 @@ msgid "It allows searching for the data and clearing the logs from the terminal.
 msgstr "它允许从终端搜索数据并清除日志。"
 
 #: ../../terminal.md:20
+<<<<<<< HEAD
 msgid "You can run scripts by inputting them at the bottom after the `>`."
 msgstr "您可以在底部 `>` 之后输入命令来运行脚本。"
+=======
+#, fuzzy
+msgid "You can run scripts by inputting them at the bottom after the `>`."
+msgstr "您可以通过在 > 之后的底部输入脚本来运行脚本。"
+>>>>>>> master
 

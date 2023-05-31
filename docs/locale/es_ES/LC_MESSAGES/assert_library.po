@@ -1,21 +1,22 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:45\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:22+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: Spanish\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: es-ES\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/assert_library.pot\n"
-"X-Crowdin-File-ID: 6458\n"
 "Language: es_ES\n"
+"Language-Team: Spanish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../assert_library.md:1
 msgid "Remix Assert Library"
@@ -26,6 +27,7 @@ msgid "[Assert.ok(value[, message])](#assert-ok-value-message)"
 msgstr ""
 
 #: ../../assert_library.md:5
+<<<<<<< HEAD
 msgid "[Assert.equal(actual, expected[, message])](#assert-equal-actual-expected-message)"
 msgstr ""
 
@@ -40,6 +42,34 @@ msgstr ""
 #: ../../assert_library.md:8
 msgid "[Assert.lesserThan(value1, value2[, message])](#assert-lesserthan-value1-value2-message)"
 msgstr ""
+=======
+#, fuzzy
+msgid ""
+"[Assert.equal(actual, expected[, message])](#assert-equal-actual-"
+"expected-message)"
+msgstr "Assert.equal(actual, esperado[, mensaje])"
+
+#: ../../assert_library.md:6
+#, fuzzy
+msgid ""
+"[Assert.notEqual(actual, expected[, message])](#assert-notequal-actual-"
+"expected-message)"
+msgstr "Assert.notEqual(actual, esperado[, mensaje])"
+
+#: ../../assert_library.md:7
+#, fuzzy
+msgid ""
+"[Assert.greaterThan(value1, value2[, message])](#assert-greaterthan-"
+"value1-value2-message)"
+msgstr "Assert.mayorque(valor1, valor2[, mensaje])"
+
+#: ../../assert_library.md:8
+#, fuzzy
+msgid ""
+"[Assert.lesserThan(value1, value2[, message])](#assert-lesserthan-"
+"value1-value2-message)"
+msgstr "Assert.menosque(valor1, valor2[, mensaje])"
+>>>>>>> master
 
 #: ../../assert_library.md:11
 msgid "Assert"
@@ -50,25 +80,38 @@ msgid "Assert.ok(value[, message])"
 msgstr ""
 
 #: ../../assert_library.md:14
+<<<<<<< HEAD
 msgid "`value`: \\<bool\\>"
 msgstr ""
+=======
+#, fuzzy
+msgid "`value`: \\<bool\\>"
+msgstr "valor: <bool>"
+>>>>>>> master
 
-#: ../../assert_library.md:15
-#: ../../assert_library.md:30
-#: ../../assert_library.md:50
-#: ../../assert_library.md:66
+#: ../../assert_library.md:15 ../../assert_library.md:30
+#: ../../assert_library.md:50 ../../assert_library.md:66
 #: ../../assert_library.md:85
+<<<<<<< HEAD
 msgid "`message`: \\<string\\>"
 msgstr ""
 
 #: ../../assert_library.md:17
 msgid "Tests if value is truthy. `message` is returned in case of failure."
 msgstr ""
+=======
+#, fuzzy
+msgid "`message`: \\<string\\>"
+msgstr "mensaje: <string>"
 
-#: ../../assert_library.md:19
-#: ../../assert_library.md:34
-#: ../../assert_library.md:54
-#: ../../assert_library.md:70
+#: ../../assert_library.md:17
+#, fuzzy
+msgid "Tests if value is truthy. `message` is returned in case of failure."
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
+>>>>>>> master
+
+#: ../../assert_library.md:19 ../../assert_library.md:34
+#: ../../assert_library.md:54 ../../assert_library.md:70
 #: ../../assert_library.md:89
 msgid "Examples:"
 msgstr "Ejemplos:"
@@ -77,6 +120,7 @@ msgstr "Ejemplos:"
 msgid "Assert.equal(actual, expected[, message])"
 msgstr "Assert.equal(actual, esperado[, mensaje])"
 
+<<<<<<< HEAD
 #: ../../assert_library.md:28
 #: ../../assert_library.md:48
 msgid "`actual`: \\<uint | int | bool | address | bytes32 | string\\>"
@@ -90,12 +134,33 @@ msgstr ""
 #: ../../assert_library.md:32
 msgid "Tests if `actual` & `expected` values are same. `message` is returned in case of failure."
 msgstr ""
+=======
+#: ../../assert_library.md:28 ../../assert_library.md:48
+#, fuzzy
+msgid "`actual`: \\<uint | int | bool | address | bytes32 | string\\>"
+msgstr "actual: <uint | int | bool | address | bytes32 | string>"
+
+#: ../../assert_library.md:29 ../../assert_library.md:49
+#, fuzzy
+msgid "`expected`: \\<uint | int | bool | address | bytes32 | string\\>"
+msgstr "esperado: <uint | int | bool | address | bytes32 | string>"
+
+#: ../../assert_library.md:32
+#, fuzzy
+msgid ""
+"Tests if `actual` & `expected` values are same. `message` is returned in "
+"case of failure."
+msgstr ""
+"Pruebas si los valores reales y esperados son iguales. El mensaje se "
+"devuelve en caso de error."
+>>>>>>> master
 
 #: ../../assert_library.md:47
 msgid "Assert.notEqual(actual, expected[, message])"
 msgstr "Assert.notEqual(actual, esperado[, mensaje])"
 
 #: ../../assert_library.md:52
+<<<<<<< HEAD
 msgid "Tests if `actual` & `expected` values are not same. `message` is returned in case of failure."
 msgstr ""
 
@@ -120,8 +185,50 @@ msgstr ""
 #: ../../assert_library.md:82
 msgid "Assert.lesserThan(value1, value2[, message])"
 msgstr "Assert.menosque(valor1, valor2[, mensaje])"
+=======
+#, fuzzy
+msgid ""
+"Tests if `actual` & `expected` values are not same. `message` is returned"
+" in case of failure."
+msgstr ""
+"Pruebas si los valores reales y esperados no son iguales. El mensaje se "
+"devuelve en caso de error."
+
+#: ../../assert_library.md:63
+msgid "Assert.greaterThan(value1, value2[, message])"
+msgstr "Assert.mayorque(valor1, valor2[, mensaje])"
+
+#: ../../assert_library.md:64 ../../assert_library.md:83
+#, fuzzy
+msgid "`value1`: \\<uint | int\\>"
+msgstr "valor1: <uint | int>"
+
+#: ../../assert_library.md:65 ../../assert_library.md:84
+#, fuzzy
+msgid "`value2`: \\<uint | int\\>"
+msgstr "valor2: <uint | int>"
+
+#: ../../assert_library.md:68
+#, fuzzy
+msgid ""
+"Tests if `value1` is greater than `value2`. `message` is returned in case"
+" of failure."
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
+>>>>>>> master
+
+#: ../../assert_library.md:82
+msgid "Assert.lesserThan(value1, value2[, message])"
+msgstr "Assert.menosque(valor1, valor2[, mensaje])"
 
 #: ../../assert_library.md:87
+<<<<<<< HEAD
 msgid "Tests if `value1` is lesser than `value2`. `message` is returned in case of failure."
 msgstr ""
+=======
+#, fuzzy
+msgid ""
+"Tests if `value1` is lesser than `value2`. `message` is returned in case "
+"of failure."
+msgstr "Prueba si el valor es verdadero. El mensaje se devuelve en caso de error."
+>>>>>>> master
 

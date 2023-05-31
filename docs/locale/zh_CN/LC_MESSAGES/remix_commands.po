@@ -1,28 +1,29 @@
+
 msgid ""
 msgstr ""
-"Project-Id-Version: remix-translation\n"
+"Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2023-05-30 18:46\n"
+=======
+"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+>>>>>>> master
 "Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: remix-translation\n"
-"X-Crowdin-Project-ID: 431830\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_commands.pot\n"
-"X-Crowdin-File-ID: 6484\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese Simplified\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../remix_commands.md:1
-#: ../../remix_commands.md:14
+#: ../../remix_commands.md:1 ../../remix_commands.md:14
 msgid "Remix Commands"
 msgstr "Remix命令"
 
 #: ../../remix_commands.md:4
+<<<<<<< HEAD
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is *auto complete*.  These commands are using the following libraries:"
 msgstr "在控制台中，您可以运行下面列出的命令。一旦开始输入命令，就会自动完成。这些命令使用以下库："
 
@@ -65,24 +66,108 @@ msgstr "**remix.loadgist(id)**：在文件资源管理器中加载一个 gist。
 #: ../../remix_commands.md:26
 msgid "**remix.loadurl(url)**: Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
 msgstr "**remix.loadurl(url)**：在文件资源管理器中加载给定的 url。该 url 可以是 github、swarm 或 ipfs 类型。"
+=======
+msgid ""
+"In the console, you can run the commands listed below.  Once you start to"
+" type a command, there is *auto complete*.  These commands are using the "
+"following libraries:"
+msgstr ""
+
+#: ../../remix_commands.md:6
+msgid ""
+"**remix**:  Remix has a number of CLI commands for loading & executing "
+"file in a workspace.  See the list below."
+msgstr ""
+
+#: ../../remix_commands.md:8
+msgid ""
+"**ethers**: Remix IDE enables the use of ethersjs commands. See the "
+"[Ethers docs](https://docs.ethers.io/) for the full list."
+msgstr ""
+
+#: ../../remix_commands.md:10
+msgid ""
+"**web3**: Remix IDE enable the use of web3js commands. See the [Web3js "
+"docs](https://web3js.readthedocs.io/) for the full list."
+msgstr ""
+
+#: ../../remix_commands.md:12
+#, fuzzy
+msgid ""
+"**swarmgw**: This library can be used to upload/download files to Swarm "
+"via https://swarm-gateways.net/."
+msgstr "swarmgw：该库可用于通过 https://swarm-gateways.net/ 将文件上传/下载到 Swarm。"
+
+#: ../../remix_commands.md:16
+#, fuzzy
+msgid ""
+"**remix.execute(filepath)**: Run the script specified by file path. If "
+"filepath is empty, script currently displayed in the editor is executed."
+msgstr "remix.execute(filepath)：运行文件路径指定的脚本。 如果文件路径为空，则执行当前显示在编辑器中的脚本。"
+
+#: ../../remix_commands.md:18
+#, fuzzy
+msgid "**remix.exeCurrent()**: Run the script currently displayed in the editor."
+msgstr "remix.exeCurrent()：运行编辑器中当前显示的脚本。"
+
+#: ../../remix_commands.md:20
+#, fuzzy
+msgid ""
+"**remix.getFile(path)**: Returns the content of the file located at the "
+"given path"
+msgstr "remix.getFile(path)：返回位于给定路径的文件内容"
+
+#: ../../remix_commands.md:22
+#, fuzzy
+msgid "**remix.help()**: Display this help message."
+msgstr "remix.help()：显示此帮助信息。"
+
+#: ../../remix_commands.md:24
+#, fuzzy
+msgid "**remix.loadgist(id)**: Load a gist in the file explorer."
+msgstr "remix.loadgist(id)：在文件资源管理器中加载一个 gist。"
+
+#: ../../remix_commands.md:26
+#, fuzzy
+msgid ""
+"**remix.loadurl(url)**: Load the given url in the file explorer. The url "
+"can be of type github, swarm or ipfs."
+msgstr "remix.loadurl(url)：在文件资源管理器中加载给定的 url。 url 可以是 github、swarm 或 ipfs 类型。"
+>>>>>>> master
 
 #: ../../remix_commands.md:28
 msgid "A few Ethers JS examples"
 msgstr "一些Ethers JS示例"
 
 #: ../../remix_commands.md:29
+<<<<<<< HEAD
 msgid "**ethers.providers**: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
 msgstr "**ethers.providers**：Provider抽象了与以太坊区块链的连接，用于发出查询和发送状态更改交易。"
 
 #: ../../remix_commands.md:31
 msgid "**ethers.utils**: The utility functions exposed in both the ethers umbrella package and the ethers-utils.  eg ethers.utils.formatBytes32String( text )"
 msgstr "**ethers.utils**：在ether umbrella包和ether-utils中公开的工具函数。例如，ethers.utils.formatBytes32String( text )"
+=======
+#, fuzzy
+msgid ""
+"**ethers.providers**: A Provider abstracts a connection to the Ethereum "
+"blockchain, for issuing queries and sending state changing transactions."
+msgstr "ethers.providers：提供商抽象出于以太坊区块链的连接，用于发出查询和发送状态变化的交易。"
+
+#: ../../remix_commands.md:31
+msgid ""
+"**ethers.utils**: The utility functions exposed in both the ethers "
+"umbrella package and the ethers-utils.  eg "
+"ethers.utils.formatBytes32String( text )"
+msgstr ""
+>>>>>>> master
 
 #: ../../remix_commands.md:33
 msgid "A few Web3 JS examples"
 msgstr "一些Web3 JS示例"
 
 #: ../../remix_commands.md:35
+<<<<<<< HEAD
 msgid "**web3.eth.abi**: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
 msgstr "**web3.eth.abi**：web3.eth.abi函数允许您对ABI（应用程序二进制接口）进行参数解码和编码，以便调用EVM（以太坊虚拟机）的函数。"
 
@@ -93,16 +178,90 @@ msgstr "**web3.providers**：包含当前可用的providers。"
 #: ../../remix_commands.md:39
 msgid "**web3.utils**: This package provides utility functions for Ethereum dapps and other **web3.js packages."
 msgstr "**web3.utils**：此软件包为以太坊dapp和其他web3.js软件包提供工具函数。"
+=======
+#, fuzzy
+msgid ""
+"**web3.eth.abi**: The web3.eth.abi functions let you de- and encode "
+"parameters to ABI (Application Binary Interface) for function calls to "
+"the EVM (Ethereum Virtual Machine)."
+msgstr ""
+"web3.eth.abi：web3.eth.abi 函数让您可以将参数解译和编码为 ABI(应用程序二进制接口)，以便对 "
+"EVM(以太坊虚拟机)进行函数调用。"
+
+#: ../../remix_commands.md:37
+#, fuzzy
+msgid "**web3.providers**: Contains the current available providers."
+msgstr "web3.providers：包含当前可用的供应商。"
+
+#: ../../remix_commands.md:39
+#, fuzzy
+msgid ""
+"**web3.utils**: This package provides utility functions for Ethereum "
+"dapps and other **web3.js packages."
+msgstr "web3.utils：该包为以太坊 dapps 和其他 **web3.js 包提供实用功能。"
+>>>>>>> master
 
 #: ../../remix_commands.md:41
 msgid "A few Swarm examples (these will be updated soon)"
 msgstr ""
 
 #: ../../remix_commands.md:43
+<<<<<<< HEAD
 msgid "**swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/"
 msgstr "**swarmgw.get(url, cb)**: 通过https**://swarm-gateways.net/从Swarm下载文件 "
 
 #: ../../remix_commands.md:45
 msgid "**swarmgw.put(content, cb)**: Upload files to Swarm via https**://swarm-gateways.net/"
 msgstr "**swarmgw.put(content, cb)**: 通过 https**://swarm-gateways.net/ 上传文件到Swarm"
+=======
+#, fuzzy
+msgid ""
+"**swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-"
+"gateways.net/"
+msgstr "swarmgw.get(url, cb): 通过 https**://swarm-gateways.net/ 从 Swarm 下载文件"
+
+#: ../../remix_commands.md:45
+#, fuzzy
+msgid ""
+"**swarmgw.put(content, cb)**: Upload files to Swarm via https**://swarm-"
+"gateways.net/"
+msgstr "swarmgw.put(content, cb): 通过 https**://swarm-gateways.net/ 上传文件到 Swarm"
+>>>>>>> master
+
+#~ msgid ""
+#~ "In the console, you can run the"
+#~ " commands listed below.  Once you "
+#~ "start to type a command, there is"
+#~ " auto complete.  These commands are "
+#~ "using the following libraries:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "remix:  Remix has a number of CLI"
+#~ " commands for loading & executing "
+#~ "file in a workspace.  See the list"
+#~ " below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "ethers: Remix IDE enables the use "
+#~ "of ethersjs commands. See the Ethers "
+#~ "docs for the full list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "web3: Remix IDE enable the use of"
+#~ " web3js commands. See the Web3js docs"
+#~ " for the full list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "ethers.utils: The utility functions exposed"
+#~ " in both the ethers umbrella package"
+#~ " and the ethers-utils.  eg "
+#~ "ethers.utils.formatBytes32String( text )"
+#~ msgstr ""
+
+#~ msgid "A few Swarm examples examples (these will be updated soon)"
+#~ msgstr ""
 
