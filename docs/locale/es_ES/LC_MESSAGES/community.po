@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:45\n"
 "Last-Translator: \n"
 "Language: es_ES\n"
 "Language-Team: Spanish\n"
@@ -19,31 +19,12 @@ msgid "Community Support"
 msgstr "Soporte de la Comunidad"
 
 #: ../../community.md:4
-#, fuzzy
-msgid ""
-"We know that blockchain ecosystem is very new and that lots of "
-"information is scattered around the web. That is why we created a "
-"community support channel where we and other users try to answer your "
-"questions if you get stuck using Remix. Please, join [the "
-"community](https://gitter.im/ethereum/remix) and ask for help."
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
 msgstr ""
-"Sabemos que el ecosistema blockchain es muy nuevo y hay mucha información"
-" dispersa en la web. Por esa razón, hemos creado un canal comunitario de "
-"soporte en donde tratamos de responder todas tus preguntas si te quedas "
-"varado usando Remix. Por favor, únete a nuestra comunidad y pide ayuda."
 
 #: ../../community.md:8
-#, fuzzy
-msgid ""
-"For anyone who is interested in developing a custom plugin for Remix or "
-"who wants to contribute to the codebase, we opened a [contributors' "
-"channel](https://gitter.im/ethereum/remix-dev) especially for developers "
-"working on Remix tools."
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
 msgstr ""
-"Para cualquiera que esté interesado en desarrollar un plugin "
-"personalizado para Remix o quien quiera contribuir al código fuente, "
-"hemos abierto un canal de contribuidores, especialmente para "
-"desarrolladores que trabajen en herramientas para Remix."
 
 #: ../../community.md:11
 msgid ""

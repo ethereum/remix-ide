@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language: ru_RU\n"
 "Language-Team: Russian\n"
@@ -29,11 +29,7 @@ msgid "Features, available in the terminal:"
 msgstr "Функции, доступные в терминале:"
 
 #: ../../terminal.md:8
-msgid ""
-"It integrates a JavaScript interpreter and the `web3` object. It enables "
-"the execution of the JavaScript script which interacts with the current "
-"context. (note that `web3` is only available if the `web provider` or "
-"`injected provider` mode is selected)."
+msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
 msgstr ""
 
 #: ../../terminal.md:12
@@ -54,9 +50,8 @@ msgid "It allows searching for the data and clearing the logs from the terminal.
 msgstr ""
 
 #: ../../terminal.md:20
-#, fuzzy
 msgid "You can run scripts by inputting them at the bottom after the `>`."
-msgstr "Вы можете запускать скрипты, вводя их внизу, после >."
+msgstr ""
 
 #~ msgid ""
 #~ "It integrates a JavaScript interpreter "

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:24+0000\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -27,15 +27,8 @@ msgstr ""
 "tests."
 
 #: ../../unittesting_examples.md:6
-#, fuzzy
-msgid ""
-"**Note:** Examples in this section are intended to give you a push for "
-"development. We don't recommend to rely on them without verifying at your"
-" end."
+msgid "**Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
 msgstr ""
-"Remarque : les exemples dans cette section sont destinés à vous aider "
-"dans le développement. Nous ne recommandons pas d'avoir une totale "
-"confiance en eux sans vérifier."
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
@@ -48,37 +41,28 @@ msgstr ""
 "variables."
 
 #: ../../unittesting_examples.md:11
-#, fuzzy
 msgid "Contract/Program to be tested: `Simple_storage.sol`"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:32
-#, fuzzy
 msgid "Test contract/program: `simple_storage_test.sol`"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:60
-#, fuzzy
 msgid "2. Testing a method involving `msg.sender`"
-msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:61
-msgid ""
-"In Solidity, `msg.sender` plays a great role in access management of a "
-"smart contract methods interaction. Different `msg.sender` can help to "
-"test a contract involving multiple accounts with different roles. Here is"
-" an example for testing such case:"
+msgid "In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
 msgstr ""
 
 #: ../../unittesting_examples.md:63
-#, fuzzy
 msgid "Contract/Program to be tested: `Sender.sol`"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:85
-#, fuzzy
 msgid "Test contract/program: `Sender_test.sol`"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:137
 msgid "3. Testing method execution"
@@ -95,55 +79,40 @@ msgid ""
 msgstr ""
 
 #: ../../unittesting_examples.md:141
-msgid ""
-"To help in such cases, Solidity introduced the `try-catch` statement in "
-"version `0.6.0`. Previously, we had to use low-level calls to track down "
-"what was going on."
+msgid "To help in such cases, Solidity introduced the `try-catch` statement in version `0.6.0`. Previously, we had to use low-level calls to track down what was going on."
 msgstr ""
 
 #: ../../unittesting_examples.md:143
-msgid ""
-"Here is an example test file that use both **try-catch** blocks and **low"
-" level calls**:"
+msgid "Here is an example test file that use both **try-catch** blocks and **low level calls**:"
 msgstr ""
 
 #: ../../unittesting_examples.md:145
-#, fuzzy
 msgid "Contract/Program to be tested: `AttendanceRegister.sol`"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:174
-#, fuzzy
 msgid "Test contract/program: `AttendanceRegister_test.sol`"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:262
-#, fuzzy
 msgid "4. Testing a method involving `msg.value`"
-msgstr "4. Tester une méthode impliquant <code>msg.value</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:263
-msgid ""
-"In Solidity, ether can be passed along with a method call which is "
-"accessed inside contract as `msg.value`. Sometimes, multiple calculations"
-" in a method are performed based on `msg.value` which can be tested with "
-"various values using Remix's Custom transaction context. See the example:"
+msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:"
 msgstr ""
 
 #: ../../unittesting_examples.md:265
-#, fuzzy
 msgid "Contract/Program to be tested: `Value.sol`"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:285
-#, fuzzy
 msgid "Test contract/program: `Value_test.sol`"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:331
-#, fuzzy
 msgid "5. Testing a method involving `msg.sender` and `msg.value`"
-msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:332
 msgid ""
@@ -156,74 +125,10 @@ msgid ""
 msgstr ""
 
 #: ../../unittesting_examples.md:334
-#, fuzzy
 msgid "Contract/Program to be tested: `Donations.sol`"
-msgstr "Contrat/Programme à tester : <code>simple_storage.sol</code>"
+msgstr ""
 
 #: ../../unittesting_examples.md:379
-#, fuzzy
 msgid "Test contract/program: `Donations_test.sol`"
-msgstr "Contrat/programme de test : <code>simple_storage_test.sol</code>"
-
-#~ msgid ""
-#~ "In Solidity, msg.sender plays a great"
-#~ " role in access management of a "
-#~ "smart contract methods interaction. Different"
-#~ " msg.sender can help to test a "
-#~ "contract involving multiple accounts with "
-#~ "different roles. Here is an example "
-#~ "for testing such case:"
-#~ msgstr ""
-
-#~ msgid "Contract/Program to be tested: Sender.sol"
-#~ msgstr ""
-
-#~ msgid "Test contract/program: Sender_test.sol"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To help in such cases, Solidity "
-#~ "introduced the try-catch statement in"
-#~ " version 0.6.0. Previously, we had to"
-#~ " use low-level calls to track "
-#~ "down what was going on."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Here is an example test file that"
-#~ " use both try-catch blocks and "
-#~ "low level calls:"
-#~ msgstr ""
-
-#~ msgid "Contract/Program to be tested: AttendanceRegister.sol"
-#~ msgstr ""
-
-#~ msgid "Test contract/program: AttendanceRegister_test.sol"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In Solidity, ether can be passed "
-#~ "along with a method call which is"
-#~ " accessed inside contract as msg.value. "
-#~ "Sometimes, multiple calculations in a "
-#~ "method are performed based on msg.value"
-#~ " which can be tested with various "
-#~ "values using Remix's Custom transaction "
-#~ "context. See the example:"
-#~ msgstr ""
-
-#~ msgid "Contract/Program to be tested: Value.sol"
-#~ msgstr ""
-
-#~ msgid "Test contract/program: Value_test.sol"
-#~ msgstr ""
-
-#~ msgid "5. Testing a method involving msg.sender and msg.value"
-#~ msgstr ""
-
-#~ msgid "Contract/Program to be tested: Donations.sol"
-#~ msgstr ""
-
-#~ msgid "Test contract/program: Donations_test.sol"
-#~ msgstr ""
+msgstr ""
 

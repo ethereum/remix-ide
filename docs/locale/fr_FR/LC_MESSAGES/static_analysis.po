@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -25,11 +25,7 @@ msgid ""
 msgstr ""
 
 #: ../../static_analysis.md:6
-msgid ""
-"`Solidity Static Analysis` plugin performs static analysis on Solidity "
-"smart contracts once they are compiled. It checks for security "
-"vulnerabilities and bad development practices, among other issues. It can"
-" be activated from Remix `Plugin Manager`."
+msgid "`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
 msgstr ""
 
 #: ../../static_analysis.md:8
@@ -45,10 +41,7 @@ msgid "How to use"
 msgstr ""
 
 #: ../../static_analysis.md:15
-msgid ""
-"If you select this plugin, you will see a number of modules listed along "
-"with checkboxes, one `Auto run` checkbox and a `Run` button. `Run` button"
-" will be disabled as there is no compiled contract for now."
+msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one `Auto run` checkbox and a `Run` button. `Run` button will be disabled as there is no compiled contract for now."
 msgstr ""
 
 #: ../../static_analysis.md:17
@@ -60,17 +53,11 @@ msgid "By default, all modules are selected for analysing a smart contract."
 msgstr ""
 
 #: ../../static_analysis.md:21
-msgid ""
-"One can select/deselect the modules under which contract should be "
-"analyzed and can run the analysis for last compiled contract by clicking "
-"on `Run`."
+msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis for last compiled contract by clicking on `Run`."
 msgstr ""
 
 #: ../../static_analysis.md:23
-msgid ""
-"If `Auto run` checkbox is checked, analysis will be performed each time a"
-" contract is compiled. Uncheck the checkbox if you want to stop this "
-"behaviour."
+msgid "If `Auto run` checkbox is checked, analysis will be performed each time a contract is compiled. Uncheck the checkbox if you want to stop this behaviour."
 msgstr ""
 
 #: ../../static_analysis.md:25
@@ -78,11 +65,7 @@ msgid "Run"
 msgstr ""
 
 #: ../../static_analysis.md:28
-msgid ""
-"If `Auto run` checkbox is checked, analysis will be performed on "
-"compiling a contract and result will be shown as badge to the plugin "
-"icon. This number tells warnings count for the contract (e.g; `12` in "
-"attached image below) ."
+msgid "If `Auto run` checkbox is checked, analysis will be performed on compiling a contract and result will be shown as badge to the plugin icon. This number tells warnings count for the contract (e.g; `12` in attached image below) ."
 msgstr ""
 
 #: ../../static_analysis.md:30
@@ -101,22 +84,20 @@ msgstr ""
 msgid "![](images/a-static-analysis.png)"
 msgstr ""
 
+#: ../../static_analysis.md:35
+msgid "![](images/a-static-analysis.png)"
+msgstr ""
+
 #: ../../static_analysis.md:37
 msgid "Analysis Modules"
 msgstr ""
 
 #: ../../static_analysis.md:40
-msgid ""
-"Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed "
-"under 4 categories. Categories are: `Security`, `Gas & Economy`, `ERC` & "
-"`Miscellaneous`."
+msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
 msgstr ""
 
 #: ../../static_analysis.md:42
-msgid ""
-"Here is the list of modules under each category along with the example "
-"code which **should be avoided or used very carefully while "
-"development**:"
+msgid "Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:"
 msgstr ""
 
 #: ../../static_analysis.md:44
@@ -128,22 +109,29 @@ msgid "**Transaction origin: 'tx.origin' is used**"
 msgstr ""
 
 #: ../../static_analysis.md:47
-msgid ""
-"`tx.origin` is useful only in very exceptional cases. If you use it for "
-"authentication, you usually want to replace it by \"msg.sender\", because"
-" otherwise any contract you call can act on your behalf."
+msgid "`tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
 msgstr ""
 
-#: ../../static_analysis.md:49 ../../static_analysis.md:58
-#: ../../static_analysis.md:71 ../../static_analysis.md:82
-#: ../../static_analysis.md:95 ../../static_analysis.md:104
-#: ../../static_analysis.md:112 ../../static_analysis.md:122
-#: ../../static_analysis.md:136 ../../static_analysis.md:153
-#: ../../static_analysis.md:167 ../../static_analysis.md:185
-#: ../../static_analysis.md:211 ../../static_analysis.md:224
-#: ../../static_analysis.md:234 ../../static_analysis.md:246
-#: ../../static_analysis.md:256 ../../static_analysis.md:264
-#: ../../static_analysis.md:274 ../../static_analysis.md:286
+#: ../../static_analysis.md:49
+#: ../../static_analysis.md:58
+#: ../../static_analysis.md:71
+#: ../../static_analysis.md:82
+#: ../../static_analysis.md:95
+#: ../../static_analysis.md:104
+#: ../../static_analysis.md:112
+#: ../../static_analysis.md:122
+#: ../../static_analysis.md:136
+#: ../../static_analysis.md:153
+#: ../../static_analysis.md:167
+#: ../../static_analysis.md:185
+#: ../../static_analysis.md:211
+#: ../../static_analysis.md:224
+#: ../../static_analysis.md:234
+#: ../../static_analysis.md:246
+#: ../../static_analysis.md:256
+#: ../../static_analysis.md:264
+#: ../../static_analysis.md:274
+#: ../../static_analysis.md:286
 #: ../../static_analysis.md:301
 msgid "_Example:_"
 msgstr ""
@@ -171,10 +159,7 @@ msgid "**Block timestamp: Semantics maybe unclear**"
 msgstr ""
 
 #: ../../static_analysis.md:80
-msgid ""
-"`now` does not mean current time. `now` is an alias for "
-"`block.timestamp`. `block.timestamp` can be influenced by miners to a "
-"certain degree, be careful."
+msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
 msgstr ""
 
 #: ../../static_analysis.md:91
@@ -182,12 +167,7 @@ msgid "**Low level calls: Semantics maybe unclear**"
 msgstr ""
 
 #: ../../static_analysis.md:93
-msgid ""
-"Use of low level `call`, `callcode` or `delegatecall` should be avoided "
-"whenever possible. `send` does not throw an exception when not "
-"successful, make sure you deal with the failure case accordingly. Use "
-"`transfer` whenever failure of the ether transfer should rollback the "
-"whole transaction."
+msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
 msgstr ""
 
 #: ../../static_analysis.md:100
@@ -195,11 +175,7 @@ msgid "**Blockhash usage: Semantics maybe unclear**"
 msgstr ""
 
 #: ../../static_analysis.md:102
-msgid ""
-"`blockhash` is used to access the last 256 block hashes. A miner computes"
-" the block hash by \"summing up\" the information in the current block "
-"mined. By summing up the information in a clever way a miner can try to "
-"influence the outcome of a transaction in the current block."
+msgid "`blockhash` is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
 msgstr ""
 
 #: ../../static_analysis.md:108
@@ -207,11 +183,7 @@ msgid "**Selfdestruct: Beware of caller contracts**"
 msgstr ""
 
 #: ../../static_analysis.md:110
-msgid ""
-"`selfdestruct` can block calling contracts unexpectedly. Be especially "
-"careful if this contract is planned to be used by other contracts (i.e. "
-"library contracts, interactions). Selfdestruction of the callee contract "
-"can leave callers in an inoperable state."
+msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
 msgstr ""
 
 #: ../../static_analysis.md:117
@@ -234,9 +206,7 @@ msgid "**This on local calls: Invocation of local functions via 'this'**"
 msgstr ""
 
 #: ../../static_analysis.md:134
-msgid ""
-"Never use `this` to call functions in the same contract, it only consumes"
-" more gas than normal local calls."
+msgid "Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls."
 msgstr ""
 
 #: ../../static_analysis.md:149
@@ -244,12 +214,7 @@ msgid "**Delete on dynamic Array: Use require/assert appropriately**"
 msgstr ""
 
 #: ../../static_analysis.md:151
-msgid ""
-"The `delete` operation when applied to a dynamically sized array in "
-"Solidity generates code to delete each of the elements contained. If the "
-"array is large, this operation can surpass the block gas limit and raise "
-"an OOG exception. Also nested dynamically sized objects can produce the "
-"same results."
+msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
 msgstr ""
 
 #: ../../static_analysis.md:163
@@ -269,9 +234,7 @@ msgid ""
 msgstr ""
 
 #: ../../static_analysis.md:181
-msgid ""
-"**Ether transfer in loop: Transferring Ether in a for/while/do-while "
-"loop**"
+msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
 msgstr ""
 
 #: ../../static_analysis.md:183
@@ -333,10 +296,7 @@ msgid "**Guard conditions: Use 'require' and 'assert' appropriately**"
 msgstr ""
 
 #: ../../static_analysis.md:254
-msgid ""
-"Use `assert(x)` if you never ever want x to be false, not in any "
-"circumstance (apart from a bug in your code). Use `require(x)` if x can "
-"be false, due to e.g. invalid input or a failing external component."
+msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
 msgstr ""
 
 #: ../../static_analysis.md:260
@@ -365,10 +325,7 @@ msgid "**Delete from dynamic array: 'delete' on an array leaves a gap**"
 msgstr ""
 
 #: ../../static_analysis.md:284
-msgid ""
-"Using `delete` on an array leaves a gap. The length of the array remains "
-"the same. If you want to remove the empty position you need to shift "
-"items manually and update the length property."
+msgid "Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
 msgstr ""
 
 #: ../../static_analysis.md:297
@@ -388,252 +345,10 @@ msgid "Remix-analyzer"
 msgstr ""
 
 #: ../../static_analysis.md:311
-msgid ""
-"`remix-analyzer` is the library which works underneath of remix-ide "
-"`Solidity Static Analysis` plugin."
+msgid "`remix-analyzer` is the library which works underneath of remix-ide `Solidity Static Analysis` plugin."
 msgstr ""
 
 #: ../../static_analysis.md:313
-msgid ""
-"`remix-analyzer` is an [NPM package](https://www.npmjs.com/package"
-"/@remix-project/remix-analyzer). It can be used as a library in a "
-"solution supporting node.js. Find more information about this type of "
-"usage in the [remix-analyzer repository](https://github.com/ethereum"
-"/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
+msgid "`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/@remix-project/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
 msgstr ""
-
-#~ msgid ""
-#~ "Solidity Static Analysis plugin performs "
-#~ "static analysis on Solidity smart "
-#~ "contracts once they are compiled. It "
-#~ "checks for security vulnerabilities and "
-#~ "bad development practices, among other "
-#~ "issues. It can be activated from "
-#~ "Remix Plugin Manager."
-#~ msgstr ""
-
-#~ msgid "This plugin comes with Solidity environment of Remix IDE."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you select this plugin, you "
-#~ "will see a number of modules "
-#~ "listed along with checkboxes, one Auto"
-#~ " run checkbox and a Run button. "
-#~ "Run button will be disabled as "
-#~ "there is no compiled contract for "
-#~ "now."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "One can select/deselect the modules "
-#~ "under which contract should be analyzed"
-#~ " and can run the analysis for "
-#~ "last compiled contract by clicking on"
-#~ " Run."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If Auto run checkbox is checked, "
-#~ "analysis will be performed each time "
-#~ "a contract is compiled. Uncheck the "
-#~ "checkbox if you want to stop this"
-#~ " behaviour."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If Auto run checkbox is checked, "
-#~ "analysis will be performed on compiling"
-#~ " a contract and result will be "
-#~ "shown as badge to the plugin icon."
-#~ " This number tells warnings count for"
-#~ " the contract (e.g; 12 in attached"
-#~ " image below) ."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Currently, with Remix IDE v0.10.1, there"
-#~ " are 21 analysis modules listed under"
-#~ " 4 categories. Categories are: Security,"
-#~ " Gas & Economy, ERC & Miscellaneous."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Here is the list of modules under"
-#~ " each category along with the example"
-#~ " code which should be avoided or "
-#~ "used very carefully while development:"
-#~ msgstr ""
-
-#~ msgid "Transaction origin: 'tx.origin' is used"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "tx.origin is useful only in very "
-#~ "exceptional cases. If you use it "
-#~ "for authentication, you usually want to"
-#~ " replace it by \"msg.sender\", because "
-#~ "otherwise any contract you call can "
-#~ "act on your behalf."
-#~ msgstr ""
-
-#~ msgid "Example:"
-#~ msgstr ""
-
-#~ msgid "Check effects: Potential reentrancy bugs"
-#~ msgstr ""
-
-#~ msgid "Inline assembly: Inline assembly used"
-#~ msgstr ""
-
-#~ msgid "Block timestamp: Semantics maybe unclear"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "now does not mean current time. "
-#~ "now is an alias for block.timestamp. "
-#~ "block.timestamp can be influenced by "
-#~ "miners to a certain degree, be "
-#~ "careful."
-#~ msgstr ""
-
-#~ msgid "Low level calls: Semantics maybe unclear"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use of low level call, callcode or"
-#~ " delegatecall should be avoided whenever"
-#~ " possible. send does not throw an "
-#~ "exception when not successful, make sure"
-#~ " you deal with the failure case "
-#~ "accordingly. Use transfer whenever failure "
-#~ "of the ether transfer should rollback"
-#~ " the whole transaction."
-#~ msgstr ""
-
-#~ msgid "Blockhash usage: Semantics maybe unclear"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "blockhash is used to access the "
-#~ "last 256 block hashes. A miner "
-#~ "computes the block hash by \"summing "
-#~ "up\" the information in the current "
-#~ "block mined. By summing up the "
-#~ "information in a clever way a "
-#~ "miner can try to influence the "
-#~ "outcome of a transaction in the "
-#~ "current block."
-#~ msgstr ""
-
-#~ msgid "Selfdestruct: Beware of caller contracts"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "selfdestruct can block calling contracts "
-#~ "unexpectedly. Be especially careful if "
-#~ "this contract is planned to be "
-#~ "used by other contracts (i.e. library"
-#~ " contracts, interactions). Selfdestruction of "
-#~ "the callee contract can leave callers"
-#~ " in an inoperable state."
-#~ msgstr ""
-
-#~ msgid "Gas costs: Too high gas requirement of functions"
-#~ msgstr ""
-
-#~ msgid "This on local calls: Invocation of local functions via 'this'"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Never use this to call functions "
-#~ "in the same contract, it only "
-#~ "consumes more gas than normal local "
-#~ "calls."
-#~ msgstr ""
-
-#~ msgid "Delete on dynamic Array: Use require/assert appropriately"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The delete operation when applied to "
-#~ "a dynamically sized array in Solidity"
-#~ " generates code to delete each of "
-#~ "the elements contained. If the array "
-#~ "is large, this operation can surpass "
-#~ "the block gas limit and raise an"
-#~ " OOG exception. Also nested dynamically "
-#~ "sized objects can produce the same "
-#~ "results."
-#~ msgstr ""
-
-#~ msgid "For loop over dynamic array: Iterations depend on dynamic array's size"
-#~ msgstr ""
-
-#~ msgid "Ether transfer in loop: Transferring Ether in a for/while/do-while loop"
-#~ msgstr ""
-
-#~ msgid "ERC20: 'decimals' should be 'uint8'"
-#~ msgstr ""
-
-#~ msgid "ERC20 Contracts decimals function should have uint8 as return type."
-#~ msgstr ""
-
-#~ msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
-#~ msgstr ""
-
-#~ msgid "Similar variable names: Variable names are too similar"
-#~ msgstr ""
-
-#~ msgid "No return: Function with 'returns' not returning"
-#~ msgstr ""
-
-#~ msgid "Guard conditions: Use 'require' and 'assert' appropriately"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use assert(x) if you never ever "
-#~ "want x to be false, not in "
-#~ "any circumstance (apart from a bug "
-#~ "in your code). Use require(x) if x"
-#~ " can be false, due to e.g. "
-#~ "invalid input or a failing external "
-#~ "component."
-#~ msgstr ""
-
-#~ msgid "Result not used: The result of an operation not used"
-#~ msgstr ""
-
-#~ msgid "String Length: Bytes length != String length"
-#~ msgstr ""
-
-#~ msgid "Delete from dynamic array: 'delete' on an array leaves a gap"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using delete on an array leaves a"
-#~ " gap. The length of the array "
-#~ "remains the same. If you want to"
-#~ " remove the empty position you need"
-#~ " to shift items manually and update"
-#~ " the length property."
-#~ msgstr ""
-
-#~ msgid "Data Truncated: Division on int/uint values truncates the result"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "remix-analyzer is the library which "
-#~ "works underneath of remix-ide Solidity"
-#~ " Static Analysis plugin."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "remix-analyzer is an NPM package. "
-#~ "It can be used as a library "
-#~ "in a solution supporting node.js. Find"
-#~ " more information about this type of"
-#~ " usage in the remix-analyzer "
-#~ "repository"
-#~ msgstr ""
 

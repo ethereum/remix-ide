@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2022-06-21 15:22+0000\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -27,17 +27,21 @@ msgid "Tour of typical solidity modules"
 msgstr "Aperçu des des modules types de Solidity"
 
 #: ../../index.rst:76
+#: ../../index.rst:76
 msgid "Solidity Unit Testing"
 msgstr "Test unitaire Solidity"
 
+#: ../../index.rst:85
 #: ../../index.rst:85
 msgid "Native External Integrations"
 msgstr ""
 
 #: ../../index.rst:94
+#: ../../index.rst:94
 msgid "Using Remix"
 msgstr "Utiliser Remix"
 
+#: ../../index.rst:111
 #: ../../index.rst:111
 msgid "Miscellaneous"
 msgstr "Divers"
@@ -47,12 +51,7 @@ msgid "Welcome to Remix's documentation!"
 msgstr "Bienvenue sur la documentation de Remix !"
 
 #: ../../index.rst:4
-msgid ""
-"**Remix IDE** is used for the entire journey of smart contract "
-"development by users at every knowledge level. It requires no setup, "
-"fosters a fast development cycle, and has a rich set of plugins with "
-"intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and"
-" as a VSCode extension."
+msgid "**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and as a VSCode extension."
 msgstr ""
 
 #: ../../index.rst:8
@@ -62,9 +61,7 @@ msgid ""
 msgstr ""
 
 #: ../../index.rst:10
-msgid ""
-"Supported browsers: Firefox, Chrome, Brave. We do not support use of "
-"Remix on tablets or mobile devices."
+msgid "Supported browsers: Firefox, Chrome, Brave. We do not support use of Remix on tablets or mobile devices."
 msgstr ""
 
 #: ../../index.rst:12
@@ -74,12 +71,7 @@ msgid ""
 msgstr ""
 
 #: ../../index.rst:14
-msgid ""
-"**Ethereum Remix**, the VSCode extension, see `here "
-"<https://marketplace.visualstudio.com/items?itemName=RemixProject"
-".ethereum-remix>`__. Documentation for the VSCode extension is located "
-"`here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-"
-"extension-for-visual-studio-code>`__."
+msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
 msgstr ""
 
 #: ../../index.rst:18
@@ -87,20 +79,11 @@ msgid "Remix Project"
 msgstr ""
 
 #: ../../index.rst:19
-msgid ""
-"Remix IDE is part of the `Remix Project <https://github.com/ethereum"
-"/remix-project>`__ which also includes the `Remix Plugin Engine "
-"<https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries "
-"<https://github.com/ethereum/remix-project/tree/master/libs#remix-"
-"libraries>`__, which are low-level tools for wider use."
+msgid "Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__, which are low-level tools for wider use."
 msgstr ""
 
 #: ../../index.rst:22
-msgid ""
-"Remix IDE is available at `remix.ethereum.org "
-"<https://remix.ethereum.org>`__ and more information can be found in "
-"these docs. Our IDE tool is available at `our GitHub repository "
-"<https://github.com/ethereum/remix-project>`__."
+msgid "Remix IDE is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs. Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
 msgstr ""
 
 #: ../../index.rst:27
@@ -119,14 +102,11 @@ msgid "Useful links:"
 msgstr "Liens utiles :"
 
 #: ../../index.rst:32
-#, fuzzy
 msgid "`Solidity Documentation <https://solidity.readthedocs.io>`__"
-msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
+msgstr ""
 
 #: ../../index.rst:34
-msgid ""
-"`Remix Alpha <https://remix-alpha.ethereum.org>`__ - The version where we"
-" test new Remix release (not stable!)."
+msgid "`Remix Alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
 msgstr ""
 
 #: ../../index.rst:36

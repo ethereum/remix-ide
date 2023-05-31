@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language: ru_RU\n"
 "Language-Team: Russian\n"
@@ -25,60 +25,39 @@ msgid "Main Remix URLs"
 msgstr ""
 
 #: ../../locations.md:6
-msgid ""
-"Remix IDE Online is located at "
-"[https://remix.ethereum.org](https://remix.ethereum.org)."
+msgid "Remix IDE Online is located at [https://remix.ethereum.org](https://remix.ethereum.org)."
 msgstr ""
 
 #: ../../locations.md:8
-msgid ""
-"The alpha version of remix is located at [https://remix-"
-"alpha.ethereum.org](https://remix-alpha.ethereum.org). This is not a "
-"stable version."
+msgid "The alpha version of remix is located at [https://remix-alpha.ethereum.org](https://remix-alpha.ethereum.org). This is not a stable version."
 msgstr ""
 
 #: ../../locations.md:10
-msgid ""
-"Github repo: [https://github.com/ethereum/remix-"
-"project](https://github.com/ethereum/remix-project). The README contains "
-"instructions for running Remix-IDE locally."
+msgid "Github repo: [https://github.com/ethereum/remix-project](https://github.com/ethereum/remix-project). The README contains instructions for running Remix-IDE locally."
 msgstr ""
 
 #: ../../locations.md:12
-msgid ""
-"Remix Desktop is an Electron App. Here is the [release "
-"page](https://github.com/ethereum/remix-desktop/releases)."
+msgid "Remix Desktop is an Electron App. Here is the [release page](https://github.com/ethereum/remix-desktop/releases)."
 msgstr ""
 
 #: ../../locations.md:14
-msgid ""
-"Remix has a VSCode extension called [Ethereum "
-"Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject"
-".ethereum-remix)."
+msgid "Remix has a VSCode extension called [Ethereum Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix)."
 msgstr ""
 
 #: ../../locations.md:16
-msgid ""
-"The Remix twitter account is "
-"[EthereumRemix](https://twitter.com/EthereumRemix)."
+msgid "The Remix twitter account is [EthereumRemix](https://twitter.com/EthereumRemix)."
 msgstr ""
 
 #: ../../locations.md:18
-msgid ""
-"The Remix Project Medium publication is: [https://medium.com/remix-"
-"ide](https://medium.com/remix-ide)."
+msgid "The Remix Project Medium publication is: [https://medium.com/remix-ide](https://medium.com/remix-ide)."
 msgstr ""
 
 #: ../../locations.md:20
-msgid ""
-"The [Remix Project](https://remix-project.org) website introduces the "
-"different facets of our project."
+msgid "The [Remix Project](https://remix-project.org) website introduces the different facets of our project."
 msgstr ""
 
 #: ../../locations.md:22
-msgid ""
-"The [Remix Gitter Channel](https://gitter.im/ethereum/remix) is a forum "
-"to post your questions about Remix."
+msgid "The [Remix Gitter Channel](https://gitter.im/ethereum/remix) is a forum to post your questions about Remix."
 msgstr ""
 
 #: ../../locations.md:24
@@ -92,23 +71,15 @@ msgid ""
 msgstr ""
 
 #: ../../locations.md:27
-msgid ""
-"Activate or deactivate a **list of plugins to be activated** - and "
-"specify which plugin gains the \"focus\". [SEE MORE](#activating-a-list-"
-"of-plugins)"
+msgid "Activate or deactivate a **list of plugins to be activated** - and specify which plugin gains the \"focus\". [SEE MORE](#activating-a-list-of-plugins)"
 msgstr ""
 
 #: ../../locations.md:28
-msgid ""
-"Send **commands to a plugin** - once the plugin loads. [SEE MORE](#pass-"
-"commands-to-a-plugin-s-api-via-a-url-param)"
+msgid "Send **commands to a plugin** - once the plugin loads. [SEE MORE](#pass-commands-to-a-plugin-s-api-via-a-url-param)"
 msgstr ""
 
 #: ../../locations.md:29
-msgid ""
-"[Load a GIST](#load-a-gist), [a file via a url](#load-a-file-via-a-url-"
-"into-the-editor) or a [base64 encoded string](#load-an-encoded-base64"
-"-string-into-a-sol-file-in-the-editor) into Remix's Editor."
+msgid "[Load a GIST](#load-a-gist), [a file via a url](#load-a-file-via-a-url-into-the-editor) or a [base64 encoded string](#load-an-encoded-base64-string-into-a-sol-file-in-the-editor) into Remix's Editor."
 msgstr ""
 
 #: ../../locations.md:30
@@ -116,23 +87,15 @@ msgid "Specify **the theme** (Dark or Light). [SEE MORE](#specifying-a-theme)"
 msgstr ""
 
 #: ../../locations.md:31
-msgid ""
-"Specify which panels should be **minimized** - useful when embedding "
-"Remix in your site. [SEE MORE](#minimizing-remix-panels)"
+msgid "Specify which panels should be **minimized** - useful when embedding Remix in your site. [SEE MORE](#minimizing-remix-panels)"
 msgstr ""
 
 #: ../../locations.md:32
-msgid ""
-"Select the **version of the Solidity** compiler, enable/disable the "
-"**optimizer**, turn on auto compile or choose the language for the "
-"Solidity compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-"
-"compiler)"
+msgid "Select the **version of the Solidity** compiler, enable/disable the **optimizer**, turn on auto compile or choose the language for the Solidity compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)"
 msgstr ""
 
 #: ../../locations.md:33
-msgid ""
-"Load **verified contracts from Etherscan** using contract address [SEE "
-"MORE](#load-contracts-from-etherscan-via-address)"
+msgid "Load **verified contracts from Etherscan** using contract address [SEE MORE](#load-contracts-from-etherscan-via-address)"
 msgstr ""
 
 #: ../../locations.md:35
@@ -140,9 +103,7 @@ msgid "Activating a list of plugins"
 msgstr ""
 
 #: ../../locations.md:36
-msgid ""
-"The following example contains the url parameter **activate** followed by"
-" **a comma separated list of plugins**."
+msgid "The following example contains the url parameter **activate** followed by **a comma separated list of plugins**."
 msgstr ""
 
 #: ../../locations.md:38
@@ -150,40 +111,23 @@ msgid "The last plugin in the list will gain the focus."
 msgstr ""
 
 #: ../../locations.md:40
-msgid ""
-"When you use the activate list, all other plugins that a user had loaded "
-"will be deactivated.  This does not apply to the file explorer, the "
-"plugin manager, and the settings modules because these are never "
-"deactivated."
+msgid "When you use the activate list, all other plugins that a user had loaded will be deactivated.  This does not apply to the file explorer, the plugin manager, and the settings modules because these are never deactivated."
 msgstr ""
 
 #: ../../locations.md:46
-msgid ""
-"Note: a plugin is called by its **name** as specified in its profile.  "
-"There are 3 types of plugins:"
+msgid "Note: a plugin is called by its **name** as specified in its profile.  There are 3 types of plugins:"
 msgstr ""
 
 #: ../../locations.md:47
-msgid ""
-"**Native Mandatory Plugins** that are always loaded (so you don't need to"
-" activate them using the url parameter **activate**). These include: "
-"**fileManager**, **settings**, **manager** (the plugin manager), and "
-"**udapp** (deploy & run)."
+msgid "**Native Mandatory Plugins** that are always loaded (so you don't need to activate them using the url parameter **activate**). These include: **fileManager**, **settings**, **manager** (the plugin manager), and **udapp** (deploy & run)."
 msgstr ""
 
 #: ../../locations.md:48
-msgid ""
-"**Native Optional Plugins** that are loaded on demand: **debugger**, "
-"**hardhat-provider**, **solidity**, **solidityStaticAnalysis**, "
-"**solidityUnitTesting**, and **vyper**"
+msgid "**Native Optional Plugins** that are loaded on demand: **debugger**, **hardhat-provider**, **solidity**, **solidityStaticAnalysis**, **solidityUnitTesting**, and **vyper**"
 msgstr ""
 
 #: ../../locations.md:49
-msgid ""
-"**External Plugins** to get these plugins' names, please go to "
-"[https://github.com/ethereum/remix-plugins-"
-"directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-"
-"directory/tree/master/plugins)."
+msgid "**External Plugins** to get these plugins' names, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)."
 msgstr ""
 
 #: ../../locations.md:51
@@ -195,9 +139,7 @@ msgid "Minimizing Remix panels"
 msgstr ""
 
 #: ../../locations.md:58
-msgid ""
-"The following URL will **close everything except the main panel & the "
-"icon panel** (the side and terminal are minimized)."
+msgid "The following URL will **close everything except the main panel & the icon panel** (the side and terminal are minimized)."
 msgstr ""
 
 #: ../../locations.md:63
@@ -225,9 +167,7 @@ msgid "To link to Remix with the a list of plugins activated and with:"
 msgstr ""
 
 #: ../../locations.md:82
-msgid ""
-"the Learneth gaining the side panel's focus (because it is the last in "
-"the list)"
+msgid "the Learneth gaining the side panel's focus (because it is the last in the list)"
 msgstr ""
 
 #: ../../locations.md:83
@@ -251,9 +191,7 @@ msgid "Pass commands to a plugin's API via a url param"
 msgstr ""
 
 #: ../../locations.md:93
-msgid ""
-"The URL parameter to issue a command is `call`.  Following the `call` is "
-"a // (double slash) separated list of arguments."
+msgid "The URL parameter to issue a command is `call`.  Following the `call` is a // (double slash) separated list of arguments."
 msgstr ""
 
 #: ../../locations.md:99
@@ -261,10 +199,7 @@ msgid "An example using call"
 msgstr ""
 
 #: ../../locations.md:100
-msgid ""
-"The URL below uses `activate` & `call`.  It **activates** a number of "
-"plugins and **calls** the File Explorers to tell it to load one of the "
-"default Remix files:"
+msgid "The URL below uses `activate` & `call`.  It **activates** a number of plugins and **calls** the File Explorers to tell it to load one of the default Remix files:"
 msgstr ""
 
 #: ../../locations.md:105
@@ -276,15 +211,11 @@ msgid "Make calls to a number of different plugins' APIs"
 msgstr ""
 
 #: ../../locations.md:111
-msgid ""
-"Use the `calls` parameter to call a series of plugins.  Use `///` to "
-"separate the calls."
+msgid "Use the `calls` parameter to call a series of plugins.  Use `///` to separate the calls."
 msgstr ""
 
 #: ../../locations.md:113
-msgid ""
-"For example, this command, after activating a list of plugins, calls the "
-"LearnEth plugin's API and then calls the File Explorer's API."
+msgid "For example, this command, after activating a list of plugins, calls the LearnEth plugin's API and then calls the File Explorer's API."
 msgstr ""
 
 #: ../../locations.md:118
@@ -292,9 +223,7 @@ msgid "Load a file via a URL into the Editor"
 msgstr ""
 
 #: ../../locations.md:119
-msgid ""
-"The `url` parameter takes a URL, loads it into the Editor and saves it "
-"into the code-sample workspace of the File Explorer:"
+msgid "The `url` parameter takes a URL, loads it into the Editor and saves it into the code-sample workspace of the File Explorer:"
 msgstr ""
 
 #: ../../locations.md:124
@@ -302,10 +231,7 @@ msgid "Load an encoded base64 string into a .sol file in the Editor"
 msgstr ""
 
 #: ../../locations.md:125
-msgid ""
-"The `code` parameter takes an encoded base64 string and loads it into the"
-" Editor as a .sol file and saves to the code-sample workspace of the File"
-" Explorer:"
+msgid "The `code` parameter takes an encoded base64 string and loads it into the Editor as a .sol file and saves to the code-sample workspace of the File Explorer:"
 msgstr ""
 
 #: ../../locations.md:129
@@ -313,11 +239,7 @@ msgid "Load contracts from Etherscan via address"
 msgstr ""
 
 #: ../../locations.md:130
-msgid ""
-"The `address` parameter takes an address, loads all the **verified "
-"contracts** found for the address on different Ethereum networks and "
-"saves them into the `etherscan-code-sample` workspace of the File "
-"Explorer:"
+msgid "The `address` parameter takes an address, loads all the **verified contracts** found for the address on different Ethereum networks and saves them into the `etherscan-code-sample` workspace of the File Explorer:"
 msgstr ""
 
 #: ../../locations.md:135
@@ -329,15 +251,11 @@ msgid "With a github url of a Solidity contract like this one:"
 msgstr ""
 
 #: ../../locations.md:142
-msgid ""
-"Then delete the **github** part and type in **remix.ethereum.org** in its"
-" place, like this:"
+msgid "Then delete the **github** part and type in **remix.ethereum.org** in its place, like this:"
 msgstr ""
 
 #: ../../locations.md:148
-msgid ""
-"Remix will fetch the Solidity file and open it up in the File Explorer in"
-" a Workspace named<br> **code-sample**."
+msgid "Remix will fetch the Solidity file and open it up in the File Explorer in a Workspace named<br> **code-sample**."
 msgstr ""
 
 #: ../../locations.md:150

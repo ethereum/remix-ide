@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -20,22 +20,15 @@ msgstr "终端"
 
 #: ../../terminal.md:4
 msgid "![](images/a-terminal-and-more.png)"
-msgstr ""
+msgstr "![](images/a-terminal-and-more.png)"
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
 msgstr "终端中可用的功能："
 
 #: ../../terminal.md:8
-#, fuzzy
-msgid ""
-"It integrates a JavaScript interpreter and the `web3` object. It enables "
-"the execution of the JavaScript script which interacts with the current "
-"context. (note that `web3` is only available if the `web provider` or "
-"`injected provider` mode is selected)."
-msgstr ""
-"它集成了 JavaScript 解释器和 web3 对象。 它可以执行与当前上下文交互的 JavaScript 脚本。(请注意，web3 仅在选择"
-" web 提供程序或注入提供程序模式时可用)。"
+msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
+msgstr "它集成了JavaScript解释器和`web3`对象。它使得可以执行与当前上下文交互的JavaScript脚本。（请注意，只有在选择`web provider`或`injected provider`模式时才可用`web3`）。"
 
 #: ../../terminal.md:12
 msgid ""
@@ -55,7 +48,6 @@ msgid "It allows searching for the data and clearing the logs from the terminal.
 msgstr "它允许从终端搜索数据并清除日志。"
 
 #: ../../terminal.md:20
-#, fuzzy
 msgid "You can run scripts by inputting them at the bottom after the `>`."
-msgstr "您可以通过在 > 之后的底部输入脚本来运行脚本。"
+msgstr "您可以在底部 `>` 之后输入命令来运行脚本。"
 

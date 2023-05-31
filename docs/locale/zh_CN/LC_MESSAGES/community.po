@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -19,25 +19,12 @@ msgid "Community Support"
 msgstr "社区支持"
 
 #: ../../community.md:4
-#, fuzzy
-msgid ""
-"We know that blockchain ecosystem is very new and that lots of "
-"information is scattered around the web. That is why we created a "
-"community support channel where we and other users try to answer your "
-"questions if you get stuck using Remix. Please, join [the "
-"community](https://gitter.im/ethereum/remix) and ask for help."
-msgstr ""
-"我们知道区块链生态系统是非常新的，并且大量信息分散在网络上。 这就是为什么我们创建了一个社区支持频道，如果您在使用 Remix "
-"时遇到问题，我们和其他用户会尝试回答您的问题。 请加入社区并寻求帮助。"
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
+msgstr "我们知道区块链生态系统非常新，并且许多信息分散在网络上。这就是为什么我们创建了一个社区支持渠道，我们和其他用户会尽力回答您的问题，如果您在使用Remix时遇到困难。请加入[社区](https://gitter.im/ethereum/remix)并寻求帮助。"
 
 #: ../../community.md:8
-#, fuzzy
-msgid ""
-"For anyone who is interested in developing a custom plugin for Remix or "
-"who wants to contribute to the codebase, we opened a [contributors' "
-"channel](https://gitter.im/ethereum/remix-dev) especially for developers "
-"working on Remix tools."
-msgstr "对于有兴趣为 Remix 开发自定义插件或想要为代码库做出贡献的任何人，我们都开设了一个贡献者频道，特别是针对使用 Remix 工具的开发人员。"
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
+msgstr "对于任何有兴趣为Remix开发自定义插件或想要为代码库做出贡献的人，我们专门开设了一个[贡献者频道](https://gitter.im/ethereum/remix-dev)，供正在开发Remix工具的开发人员使用。"
 
 #: ../../community.md:11
 msgid ""

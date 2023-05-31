@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2022-06-21 15:24+0000\n"
+"PO-Revision-Date: 2023-05-30 18:47\n"
 "Last-Translator: \n"
 "Language: ru_RU\n"
 "Language-Team: Russian\n"
@@ -21,21 +21,15 @@ msgid "Unit Testing Plugin"
 msgstr ""
 
 #: ../../unittesting.md:4
-msgid ""
-"Click the ![](images/a-user-testing-icon.png) (double check)  icon from "
-"icon bar to move to the `Solidity Unit Testing` plugin."
+msgid "Click the ![](images/a-user-testing-icon.png) (double check)  icon from icon bar to move to the `Solidity Unit Testing` plugin."
 msgstr ""
 
 #: ../../unittesting.md:8
-msgid ""
-"If you haven't used this plugin before and are not seeing `double check` "
-"icon, you have to activate it from Remix plugin manager."
+msgid "If you haven't used this plugin before and are not seeing `double check` icon, you have to activate it from Remix plugin manager."
 msgstr ""
 
 #: ../../unittesting.md:10
-msgid ""
-"Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) "
-"icon and activate `Solidity Unit Testing` plugin."
+msgid "Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) icon and activate `Solidity Unit Testing` plugin."
 msgstr ""
 
 #: ../../unittesting.md:12
@@ -43,17 +37,11 @@ msgid "![](images/a-unit-testing-from-pm.png)"
 msgstr ""
 
 #: ../../unittesting.md:14
-msgid ""
-"Now `double check` icon will appear on the left side icon bar. Clicking "
-"on icon will load the plugin in the side panel."
+msgid "Now `double check` icon will appear on the left side icon bar. Clicking on icon will load the plugin in the side panel."
 msgstr ""
 
 #: ../../unittesting.md:16
-msgid ""
-"<i>Alternatively, just select `Solidity` environment from Remix IDE "
-"`Home` tab. This will activate `Solidity Unit Testing` plugin along with "
-"`Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static "
-"Analysis` plugins.</i>"
+msgid "<i>Alternatively, just select `Solidity` environment from Remix IDE `Home` tab. This will activate `Solidity Unit Testing` plugin along with `Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static Analysis` plugins.</i>"
 msgstr ""
 
 #: ../../unittesting.md:18
@@ -69,10 +57,7 @@ msgid "Test directory"
 msgstr ""
 
 #: ../../unittesting.md:24
-msgid ""
-"Plugin asks you to provide a directory which will be your workspace only "
-"for this plugin. To select directory, as soon as you add `/` to the path,"
-" it shows the possible options."
+msgid "Plugin asks you to provide a directory which will be your workspace only for this plugin. To select directory, as soon as you add `/` to the path, it shows the possible options."
 msgstr ""
 
 #: ../../unittesting.md:26
@@ -94,16 +79,11 @@ msgid "Generate"
 msgstr ""
 
 #: ../../unittesting.md:34
-msgid ""
-"Select a solidity file which you want to test and click on the button "
-"`Generate`. It will generate a test file dedicated to selected file **in "
-"the test directory**."
+msgid "Select a solidity file which you want to test and click on the button `Generate`. It will generate a test file dedicated to selected file **in the test directory**."
 msgstr ""
 
 #: ../../unittesting.md:36
-msgid ""
-"If no file is selected, it will still create a file with generic name as "
-"`newFile_test.sol`."
+msgid "If no file is selected, it will still create a file with generic name as `newFile_test.sol`."
 msgstr ""
 
 #: ../../unittesting.md:38
@@ -127,9 +107,7 @@ msgid ""
 msgstr ""
 
 #: ../../unittesting.md:90
-msgid ""
-"Remix injects a built-in `assert` library which can be used for testing. "
-"You can visit the library documentation [here](./assert_library)."
+msgid "Remix injects a built-in `assert` library which can be used for testing. You can visit the library documentation [here](./assert_library)."
 msgstr ""
 
 #: ../../unittesting.md:92
@@ -155,9 +133,7 @@ msgid "`afterAll()` - Runs after all tests"
 msgstr ""
 
 #: ../../unittesting.md:99
-msgid ""
-"To get started, see [this simple example](./unittesting_examples.html"
-"#simple-example)."
+msgid "To get started, see [this simple example](./unittesting_examples.html#simple-example)."
 msgstr ""
 
 #: ../../unittesting.md:101
@@ -165,11 +141,7 @@ msgid "Run"
 msgstr ""
 
 #: ../../unittesting.md:103
-msgid ""
-"Once you are done with writing tests, select the file(s) and click on "
-"`Run` to execute the tests. The execution will run in a separate "
-"environment. After completing the execution of one file, a test summary "
-"will be shown as below:"
+msgid "Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be shown as below:"
 msgstr ""
 
 #: ../../unittesting.md:105
@@ -188,10 +160,7 @@ msgid "Stop"
 msgstr ""
 
 #: ../../unittesting.md:111
-msgid ""
-"If you have selected multiple files to run the tests and want to stop the"
-" execution, click on `Stop` button. It will stop execution after running "
-"the tests for current file."
+msgid "If you have selected multiple files to run the tests and want to stop the execution, click on `Stop` button. It will stop execution after running the tests for current file."
 msgstr ""
 
 #: ../../unittesting.md:113
@@ -209,12 +178,7 @@ msgid "**1. Custom Compiler Context**"
 msgstr ""
 
 #: ../../unittesting.md:119
-msgid ""
-"`Solidity Unit Testing` refers to the `Solidity Compiler` plugin for "
-"compiler configurations. Configure `Compiler`, `EVM Version`, `Enable "
-"Optimization` & `runs` in the `Solidity Compiler` plugin and this will be"
-" used in the `Solidity Unit Testing` plugin for contract compilation "
-"before running unit tests."
+msgid "`Solidity Unit Testing` refers to the `Solidity Compiler` plugin for compiler configurations. Configure `Compiler`, `EVM Version`, `Enable Optimization` & `runs` in the `Solidity Compiler` plugin and this will be used in the `Solidity Unit Testing` plugin for contract compilation before running unit tests."
 msgstr ""
 
 #: ../../unittesting.md:123
@@ -226,16 +190,11 @@ msgid "**2. Custom Transaction Context**"
 msgstr ""
 
 #: ../../unittesting.md:127
-msgid ""
-"For interacting with a contract's method, the prime parameters of a "
-"transaction are `from` address, `value` & `gas`. Typically, a method's "
-"behaviour is tested with different values of these parameters."
+msgid "For interacting with a contract's method, the prime parameters of a transaction are `from` address, `value` & `gas`. Typically, a method's behaviour is tested with different values of these parameters."
 msgstr ""
 
 #: ../../unittesting.md:129
-msgid ""
-"One can input custom values for `msg.sender` & `msg.value` of transaction"
-" using NatSpec comments, like:"
+msgid "One can input custom values for `msg.sender` & `msg.value` of transaction using NatSpec comments, like:"
 msgstr ""
 
 #: ../../unittesting.md:139
@@ -247,9 +206,7 @@ msgid "Parameters must be defined in the method's NatSpec"
 msgstr ""
 
 #: ../../unittesting.md:142
-msgid ""
-"Each parameter key should be prefixed with a hash (**#**) and end with a "
-"colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `"
+msgid "Each parameter key should be prefixed with a hash (**#**) and end with a colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `"
 msgstr ""
 
 #: ../../unittesting.md:143
@@ -257,44 +214,27 @@ msgid "For now, customization is only available for parameters `sender` & `value
 msgstr ""
 
 #: ../../unittesting.md:144
-msgid ""
-"Sender is the `from` address of a transaction which is accessed using "
-"`msg.sender` inside a contract method. It should be defined in a fixed "
-"format as '**account-**<account_index>'"
+msgid "Sender is the `from` address of a transaction which is accessed using `msg.sender` inside a contract method. It should be defined in a fixed format as '**account-**<account_index>'"
 msgstr ""
 
 #: ../../unittesting.md:145
-msgid ""
-"`<account_index>` varies from `0-2` before remix-ide release v0.10.0 and "
-"`0-9` afterwards"
+msgid "`<account_index>` varies from `0-2` before remix-ide release v0.10.0 and `0-9` afterwards"
 msgstr ""
 
 #: ../../unittesting.md:146
-msgid ""
-"`remix_accounts.sol` must be imported in your test file to use custom "
-"`sender`"
+msgid "`remix_accounts.sol` must be imported in your test file to use custom `sender`"
 msgstr ""
 
 #: ../../unittesting.md:147
-msgid ""
-"Value is `value` sent along with a transaction in `wei` which is accessed"
-" using `msg.value` inside a contract method. It should be a number."
+msgid "Value is `value` sent along with a transaction in `wei` which is accessed using `msg.value` inside a contract method. It should be a number."
 msgstr ""
 
 #: ../../unittesting.md:149
-msgid ""
-"Regarding `gas`, Remix estimates the required gas for each transaction "
-"internally. Still if a contract deployment fails with `Out-of-Gas` error,"
-" it tries to redeploy it by doubling the gas. Deployment failing with "
-"double gas will show error: ```contract deployment failed after trying "
-"twice: The contract code couldn't be stored, please check your gas "
-"limit```"
+msgid "Regarding `gas`, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with `Out-of-Gas` error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: ```contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit```"
 msgstr ""
 
 #: ../../unittesting.md:151
-msgid ""
-"Various test examples can be seen in [examples](./unittesting_examples) "
-"section."
+msgid "Various test examples can be seen in [examples](./unittesting_examples) section."
 msgstr ""
 
 #: ../../unittesting.md:154
@@ -302,231 +242,14 @@ msgid "Points to remember"
 msgstr ""
 
 #: ../../unittesting.md:157
-msgid ""
-"A test contract cannot have a method with parameters. Having one such "
-"method will show error: `Method 'methodname' can not have parameters "
-"inside a test contract`"
+msgid "A test contract cannot have a method with parameters. Having one such method will show error: `Method 'methodname' can not have parameters inside a test contract`"
 msgstr ""
 
 #: ../../unittesting.md:158
-msgid ""
-"Number of test accounts are `3` before remix-ide release v0.10.0 and `10`"
-" afterwards"
+msgid "Number of test accounts are `3` before remix-ide release v0.10.0 and `10` afterwards"
 msgstr ""
 
 #: ../../unittesting.md:159
-msgid ""
-"While a test file which imports `remix_accounts.sol` might not compile "
-"successfully with `Solidity Compiler` plugin, do not worry, this will "
-"have no bearing on its success with `Solidity Unit Testing` plugin."
+msgid "While a test file which imports `remix_accounts.sol` might not compile successfully with `Solidity Compiler` plugin, do not worry, this will have no bearing on its success with `Solidity Unit Testing` plugin."
 msgstr ""
-
-#~ msgid ""
-#~ "Click the  (double check) icon from "
-#~ "icon bar to move to the Solidity"
-#~ " Unit Testing plugin."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you haven't used this plugin "
-#~ "before and are not seeing double "
-#~ "check icon, you have to activate "
-#~ "it from Remix plugin manager."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Go to the plugin manager by "
-#~ "clicking the  (plug) icon and activate"
-#~ " Solidity Unit Testing plugin."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Now double check icon will appear "
-#~ "on the left side icon bar. "
-#~ "Clicking on icon will load the "
-#~ "plugin in the side panel."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "<i>Alternatively, just select Solidity "
-#~ "environment from Remix IDE Home tab. "
-#~ "This will activate Solidity Unit Testing"
-#~ " plugin along with Solidity Compiler, "
-#~ "Deploy & Run Transactions & Solidity "
-#~ "Static Analysis plugins.</i>"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Plugin asks you to provide a "
-#~ "directory which will be your workspace"
-#~ " only for this plugin. To select "
-#~ "directory, as soon as you add /"
-#~ " to the path, it shows the "
-#~ "possible options."
-#~ msgstr ""
-
-#~ msgid "Default test directory is browser/tests."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Select a solidity file which you "
-#~ "want to test and click on the "
-#~ "button Generate. It will generate a "
-#~ "test file dedicated to selected file "
-#~ "in the test directory."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If no file is selected, it will"
-#~ " still create a file with generic "
-#~ "name as newFile_test.sol."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Remix injects a built-in assert "
-#~ "library which can be used for "
-#~ "testing. You can visit the library "
-#~ "documentation here."
-#~ msgstr ""
-
-#~ msgid "beforeEach() - Runs before each test"
-#~ msgstr ""
-
-#~ msgid "beforeAll() - Runs before all tests"
-#~ msgstr ""
-
-#~ msgid "afterEach() - Runs after each test"
-#~ msgstr ""
-
-#~ msgid "afterAll() - Runs after all tests"
-#~ msgstr ""
-
-#~ msgid "To get started, see this simple example."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Once you are done with writing "
-#~ "tests, select the file(s) and click "
-#~ "on Run to execute the tests. The"
-#~ " execution will run in a separate "
-#~ "environment. After completing the execution"
-#~ " of one file, a test summary "
-#~ "will be show as below:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you have selected multiple files "
-#~ "to run the tests and want to "
-#~ "stop the execution, click on Stop "
-#~ "button. It will stop execution after "
-#~ "running the tests for current file."
-#~ msgstr ""
-
-#~ msgid "1. Custom Compiler Context"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Solidity Unit Testing refers to the "
-#~ "Solidity Compiler plugin for compiler "
-#~ "configurations. Configure Compiler, EVM "
-#~ "Version, Enable Optimization & runs in"
-#~ " the Solidity Compiler plugin and "
-#~ "this will be used in the Solidity"
-#~ " Unit Testing plugin for contract "
-#~ "compilation before running unit tests."
-#~ msgstr ""
-
-#~ msgid "2. Custom Transaction Context"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For interacting with a contract's "
-#~ "method, the prime parameters of a "
-#~ "transaction are from address, value &"
-#~ " gas. Typically, a method's behaviour "
-#~ "is tested with different values of "
-#~ "these parameters."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "One can input custom values for "
-#~ "msg.sender & msg.value of transaction "
-#~ "using NatSpec comments, like:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Each parameter key should be prefixed"
-#~ " with a hash (#) and end with"
-#~ " a colon following a space (: )"
-#~ " like #sender:  & #value:"
-#~ msgstr ""
-
-#~ msgid "For now, customization is only available for parameters sender & value"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Sender is the from address of a"
-#~ " transaction which is accessed using "
-#~ "msg.sender inside a contract method. It"
-#~ " should be defined in a fixed "
-#~ "format as 'account-<account_index>'"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "<account_index> varies from 0-2 before "
-#~ "remix-ide release v0.10.0 and 0-9 "
-#~ "afterwards"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "remix_accounts.sol must be imported in "
-#~ "your test file to use custom "
-#~ "sender"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Value is value sent along with a"
-#~ " transaction in wei which is accessed"
-#~ " using msg.value inside a contract "
-#~ "method. It should be a number."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Regarding gas, Remix estimates the "
-#~ "required gas for each transaction "
-#~ "internally. Still if a contract "
-#~ "deployment fails with Out-of-Gas "
-#~ "error, it tries to redeploy it by"
-#~ " doubling the gas. Deployment failing "
-#~ "with double gas will show error: "
-#~ "contract deployment failed after trying "
-#~ "twice: The contract code couldn't be "
-#~ "stored, please check your gas limit"
-#~ msgstr ""
-
-#~ msgid "Various test examples can be seen in examples section."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A test contract cannot have a "
-#~ "method with parameters. Having one such"
-#~ " method will show error: Method "
-#~ "'methodname' can not have parameters "
-#~ "inside a test contract"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Number of test accounts are 3 "
-#~ "before remix-ide release v0.10.0 and "
-#~ "10 afterwards"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "While a test file which imports "
-#~ "remix_accounts.sol might not compile "
-#~ "successfully with Solidity Compiler plugin,"
-#~ " do not worry, this will have "
-#~ "no bearing on its success with "
-#~ "Solidity Unit Testing plugin."
-#~ msgstr ""
 

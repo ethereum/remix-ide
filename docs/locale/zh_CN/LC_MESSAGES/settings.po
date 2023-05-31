@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:23+0000\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -19,182 +19,136 @@ msgid "Settings"
 msgstr "设置"
 
 #: ../../settings.md:4
-msgid ""
-"To get to **Settings** click the gear at the very bottom of the icon "
-"panel."
-msgstr ""
+msgid "To get to **Settings** click the gear at the very bottom of the icon panel."
+msgstr "点击图标面板最下方的齿轮状图标即可进入**设置**。"
 
 #: ../../settings.md:6
 msgid "Reset Button"
-msgstr ""
+msgstr "重置按钮"
 
 #: ../../settings.md:7
-msgid ""
-"The Reset button at the top of the Setting panel will reset all of the "
-"settings back to the default."
-msgstr ""
+msgid "The Reset button at the top of the Setting panel will reset all of the settings back to the default."
+msgstr "在设置面板最上方的重置按钮可以重置所以设置项为默认值。"
 
 #: ../../settings.md:8
 msgid "General Settings"
-msgstr ""
+msgstr "通用设置"
 
 #: ../../settings.md:10
 msgid "![](images/a-settings-general.png)"
-msgstr ""
+msgstr "![](images/a-settings-general.png)"
 
 #: ../../settings.md:12
-msgid ""
-"Generate contract metadata is used for deploying with libraries.  See our"
-" blog post on the subject: [Deploying with Libraries](https://medium.com"
-"/remix-ide/deploying-with-libraries-on-remix-ide-"
-"24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
-msgstr ""
+msgid "Generate contract metadata is used for deploying with libraries.  See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
+msgstr "生成合约元数据是为了部署含有库的合约。看我们的博客: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
 
 #: ../../settings.md:13
-msgid ""
-"Always use Remix VM at Load: will make the Remix VM the selected "
-"**environment** when Remix loads."
-msgstr ""
+msgid "Always use Remix VM at Load: will make the Remix VM the selected **environment** when Remix loads."
+msgstr "加载时始终使用 Remix 虚拟机：会在 Remix 加载时选中 Remix 虚拟机作为**环境**"
 
 #: ../../settings.md:14
 msgid "Text wrap: controls if the text in the editor should be wrapped."
 msgstr "文本换行：控制编辑器中的文本是否应换行。"
 
 #: ../../settings.md:15
-msgid ""
-"Personal mode: can be used when one is connecting to a **local node**.  "
-"It is used to have Remix temporarily save the passphrase - so that you "
-"don't need to **unlock** the account in GETH.  Remix will not persist the"
-" passphrase - so if you refresh your browser the passphrase will be gone."
-msgstr ""
+msgid "Personal mode: can be used when one is connecting to a **local node**.  It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in GETH.  Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone."
+msgstr "个人模式：可以在连接到**本地节点**时使用。它可以让 Remix 临时保存密码 - 这样您就不需要在 GETH 中**解锁**帐户。 Remix 不会保留密码 - 因此，如果您刷新浏览器，密码将消失。"
 
 #: ../../settings.md:16
-msgid ""
-"Matomo Analytics: This is where you can turn off and on your approval for"
-" us to use Matomo.  We do not collect any personally identifiable "
-"information (PII) and our reports are public.  See our [blog post on the "
-"subject](https://medium.com/remix-ide/help-us-improve-remix-ide-"
-"66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
-msgstr ""
+msgid "Matomo Analytics: This is where you can turn off and on your approval for us to use Matomo.  We do not collect any personally identifiable information (PII) and our reports are public.  See our [blog post on the subject](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
+msgstr "Matomo 分析：您可以在此处停用和启用您对我们使用 Matomo 的授权。我们不收集任何个人身份信息 (PII)，我们的报告是公开的。请参阅我们[关于该主题的博客文章](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)。"
 
 #: ../../settings.md:18
 msgid "Github Access Token"
-msgstr ""
+msgstr "Github 访问令牌"
 
 #: ../../settings.md:20
-msgid ""
-"When performing Git operations on Github and when creating GISTs, it may "
-"be necessary to input an access token.  This token has the specific "
-"permissions for your Git commands. Depending on the operation, you may "
-"also need to input your Github username & email address.  Remix does not "
-"save your password info outside of your browser's localstorage.  "
-"[https://github.com/settings/tokens](https://github.com/settings/tokens)"
-msgstr ""
+msgid "When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)"
+msgstr "在 Github 上执行 Git 操作和创建 GIST 时，可能需要输入访问令牌。此令牌具有您的 Git 命令的特定权限。根据操作的不同，您可能还需要输入您的 Github 用户名和电子邮件地址。 Remix 不会将您的密码信息保存在浏览器的本地存储之外。[https://github.com/settings/tokens](https://github.com/settings/tokens)"
 
 #: ../../settings.md:22
 msgid "![](images/a-settings-gh-token.png)"
-msgstr ""
+msgstr "![](images/a-settings-gh-token.png)"
 
 #: ../../settings.md:24
 msgid "Etherscan Access Token"
-msgstr ""
+msgstr "Etherscan 访问令牌"
 
 #: ../../settings.md:26
-msgid ""
-"You need to input your Etherscan access token when debugging verified "
-"contracts with the Remix Debugger.  When verifying a contract with the "
-"Etherscan plugin, you need to put the API key in that plugin and not in "
-"the Settings panel."
-msgstr ""
+msgid "You need to input your Etherscan access token when debugging verified contracts with the Remix Debugger.  When verifying a contract with the Etherscan plugin, you need to put the API key in that plugin and not in the Settings panel."
+msgstr "在使用 Remix Debugger 调试已验证的合约时，您需要输入您的 Etherscan 访问令牌。使用 Etherscan 插件验证合约时，您需要将 API 密钥放在该插件中，而不是在设置面板中。"
 
 #: ../../settings.md:28
 msgid "Click [here](https://etherscan.io/myapikey) to get your Etherscan API key."
-msgstr ""
+msgstr "点击[此处](https://etherscan.io/myapikey)获取您的 Etherscan API 密钥。"
 
 #: ../../settings.md:30
 msgid "![](images/a-settings-etherscan.png)"
-msgstr ""
+msgstr "![](images/a-settings-etherscan.png)"
 
 #: ../../settings.md:32
-#, fuzzy
 msgid "Swarm Settings"
-msgstr "设置"
+msgstr "Swarm 设置"
 
 #: ../../settings.md:34
-msgid ""
-"In the Solidity Compiler, after the compilation is completed, there is a "
-"button to publish to Swarm."
-msgstr ""
+msgid "In the Solidity Compiler, after the compilation is completed, there is a button to publish to Swarm."
+msgstr "在 Solidity 编译器中，编译完成后，有一个发布到 Swarm 的按钮。"
 
 #: ../../settings.md:36
 msgid "![](images/a-settings-pub-swarm.png)"
-msgstr ""
+msgstr "![](images/a-settings-pub-swarm.png)"
 
 #: ../../settings.md:38
-msgid ""
-"Without putting in an address & postage stamp, you'll be using the public"
-" gateway, which may not persist you content as surely as if you put in "
-"your own info."
-msgstr ""
+msgid "Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info."
+msgstr "如果不输入地址和邮票，您将使用公共网关，它可能不会像您输入自己的信息那样可靠地保留您的内容。"
 
 #: ../../settings.md:40
 msgid "![](images/a-settings-swarm.png)"
-msgstr ""
+msgstr "![](images/a-settings-swarm.png)"
 
 #: ../../settings.md:42
-#, fuzzy
 msgid "IPFS Settings"
-msgstr "设置"
+msgstr "IPFS 设置"
 
 #: ../../settings.md:44
-msgid ""
-"Just like the Swarm settings above, IPFS settings are for publishing your"
-" contracts to IPFS from the Solidity Compiler."
-msgstr ""
+msgid "Just like the Swarm settings above, IPFS settings are for publishing your contracts to IPFS from the Solidity Compiler."
+msgstr "就像上面的 Swarm 设置一样，IPFS 设置用于将您的合约从 Solidity 编译器发布到 IPFS。"
 
 #: ../../settings.md:45
-msgid ""
-"If you do not put in any settings here, you will be using the public "
-"INFURA node. This will not guarantee your data will persist."
-msgstr ""
+msgid "If you do not put in any settings here, you will be using the public INFURA node. This will not guarantee your data will persist."
+msgstr "如果您未在此处进行任何设置，您将使用公共 INFURA 节点。这不能保证您的数据将持续存在。"
 
 #: ../../settings.md:47
 msgid "Other options are to:"
-msgstr ""
+msgstr "其他选择是："
 
 #: ../../settings.md:48
-msgid ""
-"Use your own INFURA IPFS node. This requires a subscription. [Learn "
-"more](https://infura.io/product/ipfs)"
-msgstr ""
+msgid "Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)"
+msgstr "使用您自己的 INFURA IPFS 节点。这需要订阅。[了解更多](https://infura.io/product/ipfs)"
 
 #: ../../settings.md:49
 msgid "Use any external IPFS which doesn’t require any authentification."
-msgstr ""
+msgstr "使用任何不需要身份验证的外部 IPFS。"
 
 #: ../../settings.md:50
-msgid ""
-"Use your own local ipfs node (which usually runs under "
-"http://localhost:5001)"
-msgstr ""
+msgid "Use your own local ipfs node (which usually runs under http://localhost:5001)"
+msgstr "使用您自己的本地 ipfs 节点 (通常运行在 http://localhost:5001)"
 
 #: ../../settings.md:52
 msgid "![](images/a-settings-ipfs.png)"
-msgstr ""
+msgstr "![](images/a-settings-ipfs.png)"
 
 #: ../../settings.md:54
 msgid "Themes"
 msgstr "主题"
 
 #: ../../settings.md:55
-msgid ""
-"Choose themes here.  The Dark & Light themes are the themes that the "
-"Remix team actively maintains."
-msgstr ""
+msgid "Choose themes here.  The Dark & Light themes are the themes that the Remix team actively maintains."
+msgstr "在此处选择主题。 Dark & Light 主题是 Remix 团队积极维护的主题。"
 
 #: ../../settings.md:57
 msgid "![](images/a-settings-themes.png)"
-msgstr ""
+msgstr "![](images/a-settings-themes.png)"
 
 #~ msgid "To get to Settings click the gear at the very bottom of the icon panel."
 #~ msgstr ""

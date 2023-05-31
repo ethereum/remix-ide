@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2022-06-21 15:22+0000\n"
+"PO-Revision-Date: 2023-05-30 18:46\n"
 "Last-Translator: \n"
 "Language: ru_RU\n"
 "Language-Team: Russian\n"
@@ -27,10 +27,7 @@ msgid ""
 msgstr ""
 
 #: ../../debugger.md:6
-msgid ""
-"It can be used on transactions created on Remix or by providing a "
-"transaction's hash.  The latter assumes that you have the contract's "
-"source code or that you have input the address of a verified contract."
+msgid "It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
 msgstr ""
 
 #: ../../debugger.md:8
@@ -38,37 +35,23 @@ msgid "To start a debugging session either:"
 msgstr ""
 
 #: ../../debugger.md:9
-msgid ""
-"**Click** the debug button in the Terminal when a successful or failed "
-"transaction appears there. The Debugger will be activated and will gain "
-"the focus in the **Side Panel**."
+msgid "**Click** the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the **Side Panel**."
 msgstr ""
 
 #: ../../debugger.md:11
-msgid ""
-"**Activate** the Debugger in the Plugin Manager and then click the bug in"
-" the icon panel. To start the debugging session, input the address of a "
-"deployed transaction - while having the source code in the editor and "
-"then click the **Start debugging** button."
+msgid "**Activate** the Debugger in the Plugin Manager and then click the bug in the icon panel. To start the debugging session, input the address of a deployed transaction - while having the source code in the editor and then click the **Start debugging** button."
 msgstr ""
 
 #: ../../debugger.md:13
-msgid ""
-"The debugger will highlight the relevant code in the Editor.  If you want"
-" to go back to editing the code without the Debugger's highlights, then "
-"click the **Stop Debugging** button."
+msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
 msgstr ""
 
 #: ../../debugger.md:15
-msgid ""
-"To learn more about how to use this tool go to the [Debugging "
-"Transactions](tutorial_debug.html) page."
+msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
 msgstr ""
 
 #: ../../debugger.md:17
-msgid ""
-"This page will go over the Debugger's *Use generated sources* option, its"
-" navigation and its panels."
+msgid "This page will go over the Debugger's *Use generated sources* option, its navigation and its panels."
 msgstr ""
 
 #: ../../debugger.md:19
@@ -80,18 +63,11 @@ msgid "Use generated sources"
 msgstr ""
 
 #: ../../debugger.md:22
-msgid ""
-"This option is available for contracts using Solidity 0.7.2 or greater. "
-"See the solidity blog for more details about [generated "
-"sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2"
-"-release-announcement/#notable-new-features)."
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
 msgstr ""
 
 #: ../../debugger.md:24
-msgid ""
-"Using **generated sources** will make it easier to audit your contracts."
-"  When the option is checked, you can step into those compiler outputs — "
-"while debugging."
+msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
 msgstr ""
 
 #: ../../debugger.md:26
@@ -121,12 +97,7 @@ msgid "Slider"
 msgstr ""
 
 #: ../../debugger.md:35
-msgid ""
-"Moving the slider will highlight the relevant code in the **Editor**. On "
-"the most granular level, it scrolls through a transaction's opcodes "
-"(**see the opcode section below**). At each opcode, the transaction's "
-"state changes and these changes are reflected in the **Debugger's "
-"panels**."
+msgid "Moving the slider will highlight the relevant code in the **Editor**. On the most granular level, it scrolls through a transaction's opcodes (**see the opcode section below**). At each opcode, the transaction's state changes and these changes are reflected in the **Debugger's panels**."
 msgstr ""
 
 #: ../../debugger.md:37
@@ -134,9 +105,7 @@ msgid "Step over back"
 msgstr ""
 
 #: ../../debugger.md:38
-msgid ""
-"This button goes to the previous opcode.  If the previous step involves a"
-" **function call**, function will not be entered."
+msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
 msgstr ""
 
 #: ../../debugger.md:39
@@ -152,9 +121,7 @@ msgid "Step into"
 msgstr ""
 
 #: ../../debugger.md:42
-msgid ""
-"This button advances to the next opcode. If the next line contains a "
-"function call, **Step into** will go into the function."
+msgid "This button advances to the next opcode. If the next line contains a function call, **Step into** will go into the function."
 msgstr ""
 
 #: ../../debugger.md:43
@@ -162,9 +129,7 @@ msgid "Step over forward"
 msgstr ""
 
 #: ../../debugger.md:44
-msgid ""
-"This button advances to the next opcode.  If the next step involves a "
-"**function call**, function will not be entered."
+msgid "This button advances to the next opcode.  If the next step involves a **function call**, function will not be entered."
 msgstr ""
 
 #: ../../debugger.md:45
@@ -216,6 +181,10 @@ msgstr ""
 msgid "![](images/a-debug-func-stack.png)"
 msgstr ""
 
+#: ../../debugger.md:58
+msgid "![](images/a-debug-func-stack.png)"
+msgstr ""
+
 #: ../../debugger.md:59
 msgid "Solidity Locals"
 msgstr ""
@@ -245,9 +214,7 @@ msgid "Opcodes"
 msgstr ""
 
 #: ../../debugger.md:70
-msgid ""
-"This panel shows the step number and the **opcode** that the debugger is "
-"currently on."
+msgid "This panel shows the step number and the **opcode** that the debugger is currently on."
 msgstr ""
 
 #: ../../debugger.md:72
@@ -255,9 +222,7 @@ msgid "![](images/a-debug-opcodes1.png)"
 msgstr ""
 
 #: ../../debugger.md:74
-msgid ""
-"As you drag the **slider** (which is above the navigation buttons), the "
-"focussed step number & opcode changes."
+msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
 msgstr ""
 
 #: ../../debugger.md:75
@@ -285,9 +250,7 @@ msgid "![](images/a-debugger-panel-stack.png)"
 msgstr ""
 
 #: ../../debugger.md:84
-msgid ""
-"For more info about the "
-"[stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
+msgid "For more info about the [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
 msgstr ""
 
 #: ../../debugger.md:85
@@ -295,10 +258,7 @@ msgid "Memory"
 msgstr ""
 
 #: ../../debugger.md:87
-msgid ""
-"Memory is cleared for each new message call. Memory is linear and can be "
-"addressed at byte level. **Reads** are limited to a width of 256 bits "
-"while **writes** can be either 8 bits or 256 bits wide."
+msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. **Reads** are limited to a width of 256 bits while **writes** can be either 8 bits or 256 bits wide."
 msgstr ""
 
 #: ../../debugger.md:89
@@ -309,10 +269,7 @@ msgid ""
 msgstr ""
 
 #: ../../debugger.md:91
-msgid ""
-"The 1st column is the location in memory.  The 2nd column is the hex "
-"encoded value.  The 3rd column is the decoded value.  If there is "
-"nothing, then the question marks (**?**) will show - like this:"
+msgid "The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (**?**) will show - like this:"
 msgstr ""
 
 #: ../../debugger.md:96
@@ -324,9 +281,7 @@ msgid "![](images/a-debugger-memory.png)"
 msgstr ""
 
 #: ../../debugger.md:100
-msgid ""
-"Some address slots have hex encoded values and those values are then "
-"decoded.  For example, check position **0xa0** and **0x140**."
+msgid "Some address slots have hex encoded values and those values are then decoded.  For example, check position **0xa0** and **0x140**."
 msgstr ""
 
 #: ../../debugger.md:101
@@ -346,9 +301,7 @@ msgid "Call Stack"
 msgstr ""
 
 #: ../../debugger.md:107
-msgid ""
-"All computations are performed on a data array called the **call stack**."
-" It has a maximum size of 1024 elements and contains words of 256 bits."
+msgid "All computations are performed on a data array called the **call stack**. It has a maximum size of 1024 elements and contains words of 256 bits."
 msgstr ""
 
 #: ../../debugger.md:109
@@ -413,157 +366,6 @@ msgid ""
 msgstr ""
 
 #: ../../debugger.md:128
-msgid ""
-"To learn about using the debugger, go to [Debugging "
-"Transactions](tutorial_debug.html)."
+msgid "To learn about using the debugger, go to [Debugging Transactions](tutorial_debug.html)."
 msgstr ""
-
-#~ msgid ""
-#~ "It can be used on transactions "
-#~ "created on Remix or by providing a"
-#~ " transaction's address.  The latter assumes"
-#~ " that you have the contract's source"
-#~ " code or that you have input "
-#~ "the address of a verified contract."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Click the debug button in the "
-#~ "Terminal when a successful or failed "
-#~ "transaction appears there. The Debugger "
-#~ "will be activated and will gain "
-#~ "the focus in the Side Panel."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Activate the Debugger in the Plugin "
-#~ "Manager and then click the bug in"
-#~ " the icon panel. To start the "
-#~ "debugging session, input the address of"
-#~ " a deployed transaction - while "
-#~ "having the source code in the "
-#~ "editor and then click the Start "
-#~ "debugging button."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The debugger will highlight the relevant"
-#~ " code in the Editor.  If you "
-#~ "want to go back to editing the "
-#~ "code without the Debugger's highlights, "
-#~ "then click the Stop Debugging button."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To learn more about how to use "
-#~ "this tool go to the Debugging "
-#~ "Transactions page."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This page will go over the "
-#~ "Debugger's Use generated sources option, "
-#~ "its navigation and its panels."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This option is available for contracts"
-#~ " using Solidity 0.7.2 or greater. See"
-#~ " the solidity blog for more details"
-#~ " about generated sourcess."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using generated sources will make it "
-#~ "easier to audit your contracts.  When"
-#~ " the option is checked, you can "
-#~ "step into those compiler outputs — "
-#~ "while debugging."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Moving the slider will highlight the "
-#~ "relevant code in the Editor. On "
-#~ "the most granular level, it scrolls "
-#~ "through a transaction's opcodes (see the"
-#~ " opcode section below). At each "
-#~ "opcode, the transaction's state changes "
-#~ "and these changes are reflected in "
-#~ "the Debugger's panels."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This button goes to the previous "
-#~ "opcode.  If the previous step involves"
-#~ " a function call, function will not"
-#~ " be entered."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This button advances to the next "
-#~ "opcode. If the next line contains "
-#~ "a function call, Step into will go"
-#~ " into the function."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This button advances to the next "
-#~ "opcode.  If the next step involves "
-#~ "a function call, function will not "
-#~ "be entered."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This panel shows the step number "
-#~ "and the opcode that the debugger "
-#~ "is currently on."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As you drag the slider (which is"
-#~ " above the navigation buttons), the "
-#~ "focussed step number & opcode changes."
-#~ msgstr ""
-
-#~ msgid "For more info about the stack."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Memory is cleared for each new "
-#~ "message call. Memory is linear and "
-#~ "can be addressed at byte level. "
-#~ "Reads are limited to a width of"
-#~ " 256 bits while writes can be "
-#~ "either 8 bits or 256 bits wide."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The 1st column is the location in"
-#~ " memory.  The 2nd column is the "
-#~ "hex encoded value.  The 3rd column "
-#~ "is the decoded value.  If there is"
-#~ " nothing, then the question marks (?)"
-#~ " will show - like this:"
-#~ msgstr ""
-
-#~ msgid "Here is a full example of the Memory panel,"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Some address slots have hex encoded "
-#~ "values and those values are then "
-#~ "decoded.  For example, check position "
-#~ "0xa0 and 0x140."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "All computations are performed on a "
-#~ "data array called the call stack. "
-#~ "It has a maximum size of 1024 "
-#~ "elements and contains words of 256 "
-#~ "bits."
-#~ msgstr ""
-
-#~ msgid "To learn about using the debugger, go to Debugging Transactions."
-#~ msgstr ""
 
