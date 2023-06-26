@@ -1,7 +1,7 @@
 Verifying a contract
 ====================
 
-There are two contract verification services in Remix, Sourcify and Etherscan and the extended Etherscan family of block explorers - like PolygonScan or Optimism Scan.
+There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers - like PolygonScan or Optimism Scan.
 
 Sourcify
 --------
@@ -15,19 +15,19 @@ The Etherscan plugin is called: **Contract Verification Etherscan**.
 
 You can access it from the Plugin Manager.
 
-The plugin has 3 pages, the verification page, the receipts page, and the settings page.
+The plugin has 3 pages, the **verification** page, the **receipts** page, and the **settings** page.
 
-When you go to the plugin for the first time, you'll need to input the Etherscan API key.
+When you go to the plugin for the first time, the settings page will load for inputting the API key.
 
 ![](images/a-cv-etherscan-plugin-api-needed.png)
 
 
-### Etherscan API Key
+### Etherscan API Key - settings page
 Etherscan is a block explorer for Ethereum mainnet and they make block explorers for other chains. 
 
-For Ethereum testnets like Goerli or Sepolia, you can use the same API key. 
+For Ethereum testnets like Goerli or Sepolia, the same API key works. 
 
-If you are trying to verify on L2 chains like Optimism, you'll need a different API key for their Optimism block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key.
+If you are trying to verify on L2 chains like Optimism, a different API key is needed for their Optimism block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key.
 
 Once the API key is input, the plugins homepage is opened for verification.
 
@@ -42,13 +42,20 @@ The prerequisites for verification are:
 1. The address of a deployed contract on a public network
 2. That same contract compiled in Remix
 
-### Receipts
+### Receipts page
 Verification receipts are found on the receipts page.
+
 ![](images/a-cv-etherscan-receipts.png)
+
+### Verification with constructor arguments
+When a contract has arguments in the constructor, a text box will show for inputting the same constructor inputs as the deployed contract.
+
+![](images/a-cv-etherscan-constructor-args.png)
 
 ### Verifying a proxy contract
 Before verifying a proxy contract, the associated implementation contract must already be verified. 
 
+Just for review, the implementation contract is you wrote or adapted and the proxy is, for example, an ERC1967Proxy.
 
 **Do not check the proxy box when verifying the implementation.**
 Then after verifying the implementation contract:
@@ -57,7 +64,16 @@ Then after verifying the implementation contract:
 3. Paste the verified implementation contract's address in the Expected Implementation Address box.
 4. Paste in the proxy contract address into the Contract Address box.
 
-![](images/a-cv-etherscan-implemenation2.png)
+To explain this visually, verify the implmentation contract:
+
+![](images/a-cv-etherscan-verify-implementation.png)
+
+Then check the "It's a proxy contract" checkbox and cut and paste the implementation address from the contract address to the implementation contract box:
+
+![](images/a-cv-etherscan-move-addr.png)
+
+And then paste the address of the proxy contract into the Contract Address box.
+![](images/a-cv-etherscan-verify-proxy2.png)
 
 ### Generate Verfication Scripts
 Clicking the Generate Verification Scripts on the Verification page, will create a folder named etherscan in the Workspace's scripts folder that contains .ts files for verifying and returning the receipt status.
