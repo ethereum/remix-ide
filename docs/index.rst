@@ -101,6 +101,7 @@ Useful links:
    import
    plugin_list
    remix_commands
+   contract_verification
    running_js_scripts
    testing_using_Chai_&_Mocha
    FAS
