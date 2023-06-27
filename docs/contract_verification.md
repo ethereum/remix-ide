@@ -41,6 +41,8 @@ The network is NOT selected Etherscan plugin. The network is chosen in Deploy & 
 The prerequisites for verification are:
 1. The address of a deployed contract on a public network
 2. That same contract compiled in Remix
+3. Constructor parameters same as used during deployment (if required)
+
 
 ### Receipts page
 Verification receipts are found on the receipts page.
