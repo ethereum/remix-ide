@@ -1,13 +1,18 @@
-Solidity Static Analysis
+Solidity Analyzers
 ========================
 
 Static code analysis is a process to debug the code by examining it and without actually executing the code. 
 
-`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
+The `Solidity Analyzers` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
 
-![](images/a-static-analysis-from-pm.png)
+![](images/a-ssa-activate.png)
 
-This plugin comes with `Solidity` environment of Remix IDE. 
+This plugin loads when you click on `Solidity` in the featured plugins section of the home tab of Remix IDE.
+
+The plugin uses 3 analysis tools:
+- Remix Analysis 
+- Solhint linter which uses the 
+- Slither Static Analysis (can only be used when Remix is connected to the local computer's filesystem with Remixd)
 
 How to use
 ------------
