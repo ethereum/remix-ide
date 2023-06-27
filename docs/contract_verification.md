@@ -1,17 +1,17 @@
-Verifying a contract
+Contract Verification
 ====================
 
-There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers - like PolygonScan or Optimism Scan.
+There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers.
 
 Sourcify
 --------
 
-Documentation about Sourcify is found [here](https://github.com/ethereum/sourcify#readme).
+Documentation about Sourcify is found [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin).
 
 Etherscan
 ---------
 
-The Etherscan plugin is called: **Contract Verification Etherscan**.
+The Etherscan plugin is called: **CONTRACT VERIFICATION - ETHERSCAN**.
 
 You can access it from the Plugin Manager.
 
@@ -27,18 +27,17 @@ Etherscan is a block explorer for Ethereum mainnet and they make block explorers
 
 For Ethereum testnets like Goerli or Sepolia, the same API key works. 
 
-If you are trying to verify on L2 chains like Optimism, a different API key is needed for their Optimism block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key.
+If you are trying to verify on L2 chains like Optimism, a different API key is needed for their block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key.
 
-Once the API key is input, the plugins homepage is opened for verification.
+Once the API key is input, the verification page (the homepage) is opened.
 
 ### Verification page
-Once the API key is input, the plugins homepage is opened for verification.  
 
 ![](images/a-cv-etherscan-verify-page1.png)
 
-The network is NOT selected Etherscan plugin. The network is chosen in Deploy & Run and in your browser's wallet (if using). 
+The network is NOT selected in the Etherscan plugin. The network is chosen in the Deploy & Run plugin and in your browser's wallet (if using). 
 
-The prerequisites for verification are:
+#### The prerequisites for verification are:
 1. The address of a deployed contract on a public network
 2. That same contract compiled in Remix
 3. Constructor parameters same as used during deployment (if required)
@@ -62,7 +61,7 @@ Just for review, the implementation contract is you wrote or adapted and the pro
 **Do not check the proxy box when verifying the implementation.**
 Then after verifying the implementation contract:
 1. Cut out the implementation contract's address from the Contract Address box.
-2. Click the "It's a proxy contract" checkbox.
+2. Click the "It's a proxy contract address" checkbox.
 3. Paste the verified implementation contract's address in the Expected Implementation Address box.
 4. Paste in the proxy contract address into the Contract Address box.
 
