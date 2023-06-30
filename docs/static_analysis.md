@@ -7,7 +7,7 @@ The `Solidity Analyzers` plugin performs static analysis on Solidity smart contr
 
 ![](images/a-ssa-activate.png)
 
-This plugin loads when you click on `Solidity` in the featured plugins section of the home tab of Remix IDE.
+This plugin can also be load when you click on `Solidity` in the featured plugins section of the home tab of Remix IDE.  This button loads the following plugins: Solidity Compiler, Soldity Unit Testing, and Static Analyzers.
 
 It uses 3 analysis tools:
 - Remix Analysis: runs a basic analysis 
