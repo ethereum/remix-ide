@@ -12,7 +12,7 @@ This plugin loads when you click on `Solidity` in the featured plugins section o
 It uses 3 analysis tools:
 - Remix Analysis: runs a basic analysis 
 - Solhint linter: a Solidity linter for code and style guide validations
-- Slither Static Analysis: a comprehensive static analysis tool.
+- Slither Static Analysis: a comprehensive static analysis tool
 
 NOTE: Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
 
