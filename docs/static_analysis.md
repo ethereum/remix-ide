@@ -1,29 +1,50 @@
 Solidity Analyzers
 ========================
 
-Static code analysis is a process to debug the code by examining it and without actually executing the code. 
+Static code analysis is a process of debugging code by examining it without executing it. 
 
-The `Solidity Analyzers` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
+The `Solidity Analyzers` plugin gangs three analysis tools together to performs static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
 
 ![](images/a-ssa-activate.png)
 
-This plugin can also be load when you click on `Solidity` in the featured plugins section of the home tab of Remix IDE.  This button loads the following plugins: Solidity Compiler, Soldity Unit Testing, and Static Analyzers.
+`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Soldity Unit Testing, and Static Analyzers.
 
-It uses 3 analysis tools:
-- Remix Analysis: runs a basic analysis 
-- Solhint linter: a Solidity linter for code and style guide validations
+`Solidity Analyzers` uses these tools:
+- [Remix Analysis](#remix-analysis): a basic analysis tool
+- [Solhint linter](): a Solidity linter for code and style guide validations
 - Slither Static Analysis: a comprehensive static analysis tool
 
-NOTE: Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
+**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
 
 How to use
 ------------
 
-A contract must be compiled before analysis can be run.
+**A contract must be compiled before analysis can be run.**
 
 At the top of the panel, check the tools that you want to use.
 
 ![](images/a-ssa-1.png)
+
+### Errors & Warnings
+By default, `Solidity Analyzers` will show both errors and warnings.  The combined number of errors and warnings are shown in the badge in that tools tab.
+
+![](images/a-ssa-err-warn.png)
+
+If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors.
+
+![](images/a-ssa-show-hide-warnings.png)
+
+#### Warnings from external libraries
+
+By default, warnings from external libraries are not show.  If you check the box `Show warings for external libraries`, the tools will also analyse the external libraries for warnings.
+
+Slither
+-------
+To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded. 
+
+Solhint
+-------
+The [Sohint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem.  
 
 Remix Analysis
 ----------------------
