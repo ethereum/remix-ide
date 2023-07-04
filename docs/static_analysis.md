@@ -3,16 +3,16 @@ Solidity Analyzers
 
 Static code analysis is a process of debugging code by examining it without executing it. 
 
-The `Solidity Analyzers` plugin gangs three analysis tools together to performs static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
+The `Solidity Analyzers` plugin gangs three analysis tools together to perform static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`.
 
 ![](images/a-ssa-activate.png)
 
-`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Soldity Unit Testing, and Static Analyzers.
+`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers.
 
 `Solidity Analyzers` uses these tools:
 - [Remix Analysis](#remix-analysis): a basic analysis tool
-- [Solhint linter](): a Solidity linter for code and style guide validations
-- Slither Static Analysis: a comprehensive static analysis tool
+- [Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations
+- [Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool
 
 **NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
 
@@ -30,13 +30,15 @@ By default, `Solidity Analyzers` will show both errors and warnings.  The combin
 
 ![](images/a-ssa-err-warn.png)
 
-If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors.
+If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors. 
+
+**NOTE:** Remix Analysis does not flag error - it only shows warnings so if you check `Hide warnings`, nothing will show in the Remix Analysis tab.
 
 ![](images/a-ssa-show-hide-warnings.png)
 
 #### Warnings from external libraries
 
-By default, warnings from external libraries are not show.  If you check the box `Show warings for external libraries`, the tools will also analyse the external libraries for warnings.
+By default, warnings from external libraries are not shown.  If you check the box `Show warnings for external libraries`, the tools will also analyse the external libraries for warnings.
 
 Slither
 -------
@@ -44,7 +46,7 @@ To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-a
 
 Solhint
 -------
-The [Sohint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem.  
+The [Solhint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem.  
 
 Remix Analysis
 ----------------------
