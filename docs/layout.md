@@ -7,12 +7,12 @@ Remix IDE is comprised of three panels and a terminal.
 1. Icon Panel - click to change which plugins appear in the Side Panel
 2. Side Panel - most but not all plugins have their interface here
 3. Main Panel - for editing files, large format tools, and the home tab
-4. Terminal - where you will see transaction receipts
+4. Terminal - for viewing transaction receipts and various logs
 
 Default Tools
 -----------------------
 
-When you load Remix - the icon panel shows these icons by default.
+When Remix is loaded - the icon panel shows these icons by default.
 
 ![](images/a-icons-at-load.png)
 
@@ -23,7 +23,7 @@ Home tab
 
 ![](images/a-hometab.png)
 
-The home tab is located in the Main Panel.  It can be closed.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
+The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
 The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem. 
 
