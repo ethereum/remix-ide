@@ -56,13 +56,13 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
 **Contract Verification - Etherscan** &nbsp; ![](images/pi-etherscan.png) &nbsp;
-<br>Verify a contract on Etherscan.
+<br>Verify contracts on Etherscan.
 <br>[Profile name](https://github.com/ethereum/remix-project/blob/master/apps/etherscan/src/profile.json): etherscan
 <br>[Documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#etherscan)
 <br>[Make an issue](https://github.com/ethereum/remix-project/tree/master/apps/etherscan)
 
 **Contract Verification - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;
-<br>Verify you contracts and fetch verified contracts
+<br>Verify contracts and fetch verified contracts
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
 <br>[Documentation](https://github.com/ethereum/sourcify)
 <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
