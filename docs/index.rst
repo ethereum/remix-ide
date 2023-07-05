@@ -50,7 +50,7 @@ Useful links:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Layout & Panels
+   :caption: Layout and Panels
 
    layout
 

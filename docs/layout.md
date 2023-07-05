@@ -1,12 +1,12 @@
 Navigating Remix
 ================
-Remix IDE is composed of three panels and a terminal.
+Remix IDE is comprised of three panels and a terminal.
 
 ![](images/a-layout1c.png)
 
-1. Icon Panel - click to change which plugin appears in the Side Panel
+1. Icon Panel - click to change which plugins appear in the Side Panel
 2. Side Panel - most but not all plugins have their interface here
-3. Main Panel - for editing files, for large format tools, and the home tab
+3. Main Panel - for editing files, large format tools, and the home tab
 4. Terminal - where you will see transaction receipts
 
 Default Tools
@@ -44,6 +44,6 @@ The Plugin Manager is also the place you go when you are creating your own plugi
 Themes
 ---------------
 
-Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap based themes.  The Dark and Light theme have been the most customized for Remix.
+Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix.
 
 ![](images/a-themes.png) 
