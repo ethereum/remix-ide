@@ -14,6 +14,8 @@ Supported browsers: Firefox, Chrome, Brave. We do not support use of Remix on ta
 **Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__.  
 Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__.
 
+**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way.
+
 Remix Project
 ~~~~~~~~~~~~~
 Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the
@@ -48,7 +50,7 @@ Useful links:
 
 .. toctree::
    :maxdepth: 2
-   :caption: New Layout Intro
+   :caption: Layout & Panels
 
    layout
 

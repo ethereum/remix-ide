@@ -59,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Remix - Ethereum IDE'
-copyright = u'2019-22, Remix;'
+copyright = u'2019-23, Remix;'
 author = u'Remix Team'
 
 github_doc_root = 'https://github.com/ethereum/remix-ide/tree/master/docs'
