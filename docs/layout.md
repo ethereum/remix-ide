@@ -1,33 +1,33 @@
-Remix-IDE Layout
-==============
+Navigating Remix
+================
+Remix IDE is comprised of three panels and a terminal.
 
-The new structure
---------------------
 ![](images/a-layout1c.png)
 
-1. Icon Panel - click to change which plugin appears in the Side Panel
-2. Side Panel - Most but not all plugins will have their GUI here.
-3. Main Panel - In the old layout this was just for editing files.  In the tabs can be plugins or files for the IDE to compile.
-4. Terminal - where you will see the results of your interactions with the GUI's.  Also you can run scripts here.
+1. Icon Panel - click to change which plugins appear in the Side Panel
+2. Side Panel - most but not all plugins have their interface here
+3. Main Panel - for editing files, large format tools, and the home tab
+4. Terminal - for viewing transaction receipts and various logs
 
-Icon Panel at Page Load
+Default Tools
 -----------------------
-When you load remix - the icon panel show these icons by default.
+
+When Remix is loaded - the icon panel shows these icons by default.
 
 ![](images/a-icons-at-load.png)
 
-Everything in Remix is a plugin...  so the **[Plugin Manager](#plugin-manager)** is very important.
+To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab.
 
 Home tab
 --------
 
 ![](images/a-hometab.png)
 
-The home tab is located in the Main Panel.  It can be closed.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
+The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
-The hometab contains links to resources - including links to these docs as well as our Twitter feed, our Medium blog, gitter chat and more.  There are also shortcuts for loading files into Remix.  
+The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem. 
 
-### Solidity Environment
+### Solidity 
 Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default).
 
 To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel.
@@ -44,6 +44,6 @@ The Plugin Manager is also the place you go when you are creating your own plugi
 Themes
 ---------------
 
-So you want to work on Remix with a dark theme or a light theme or just a different theme than the one you are currently looking at?  At the bottom of the **Settings** plugin is where you can choose a theme. These are bootstrap based themes.  The Dark and Light theme have been the most customized for Remix.
+Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix.
 
 ![](images/a-themes.png) 
