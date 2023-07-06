@@ -92,7 +92,7 @@ Useful links:
 
 .. toctree::
    :maxdepth: 2
-   :caption: External tool integrations
+   :caption: External Tool Integrations
 
    hardhat
    truffle
@@ -101,20 +101,26 @@ Useful links:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Using Remix
+   :caption: Guides
    
-   contract_metadata
    create_deploy
    tutorial_debug
    import
-   remix_commands
    contract_verification
    running_js_scripts
    FAS
 
 .. toctree::
    :maxdepth: 2
+   :caption: Advanced
+
+   contract_metadata
+   remix_commands
+
+.. toctree::
+   :maxdepth: 2
    :caption: Miscellaneous
+
    plugin_list
    remix_as_code_viewer
    code_contribution_guide

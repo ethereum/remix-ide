@@ -1,5 +1,5 @@
-Generate Artifact
-==============
+Compilation Artifacts
+=====================
 
 When a compilation for a Solidity file succeeds, Remix creates three JSON files for each compiled contract. Files can be seen in the `File Explorers plugin` as:
 
