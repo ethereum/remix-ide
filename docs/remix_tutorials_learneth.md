@@ -1,5 +1,5 @@
-Remix Tutorials with Learneth
-=============================
+Tutorials in Remix
+==================
 
 **Learneth** is a tutorial platform integrated into Remix. 
 
