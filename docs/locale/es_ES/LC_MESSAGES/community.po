@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:45\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr "Soporte de la Comunidad"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
-msgstr ""
+msgstr "Sabemos que el ecosistema blockchain es muy nuevo y que hay mucha información dispersa por la web. Por eso hemos creado un canal de soporte comunitario en el que nosotros y otros usuarios tratamos de responder a sus preguntas si se queda atascado utilizando Remix. Por favor, únase a [la comunidad](https://gitter.im/ethereum/remix) y pida ayuda."
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
-msgstr ""
+msgstr "Para cualquiera que esté interesado en desarrollar un plugin personalizado para Remix o que quiera contribuir a la base de código, hemos abierto un [canal de contribuidores](https://gitter.im/ethereum/remix-dev) especialmente para desarrolladores que trabajan en herramientas Remix."
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
