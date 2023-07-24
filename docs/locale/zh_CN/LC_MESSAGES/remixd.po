@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "[![npm 版本](https://badge.fury.io/js/%40remix-project%2Fremixd.svg)](
 
 #: ../../remixd.md:4
 msgid "npm version"
-msgstr ""
+msgstr "npm 版本"
 
 #: ../../remixd.md:6
 msgid "To give the Remix IDE (the web app) access to a folder on your computer, you need to use **Remixd** - the plugin along with **remixd** - the cli/npm module."
@@ -79,7 +79,7 @@ msgstr "**注意：**当安装remixd NPM模块时，它还会安装[Slither](htt
 
 #: ../../remixd.md:33
 msgid "**ALSO NOTE:** `Python3.6+ (pip3)` needs to already be installed on the System. (This packaging of Slither with the remixd module is supported since Remixd v0.6.3). In case of any discrepancy, Slither can also installed along with other dependencies using command `remixd -i slither`"
-msgstr ""
+msgstr "**另外请注意**：Python3.6+ (pip3)需要安装在系统上。(自Remixd v0.6.3以来，已支持将Slither与remixd模块打包)。如果有任何不一致，请使用命令 `remixd -i slither` 安装Slither和其他依赖项。"
 
 #: ../../remixd.md:36
 msgid "Find your version of remixd"
