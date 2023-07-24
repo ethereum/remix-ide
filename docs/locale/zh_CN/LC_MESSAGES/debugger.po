@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -43,11 +43,11 @@ msgstr "**激活** 插件管理器中的Debugger（调试器），然后点击�
 
 #: ../../debugger.md:13
 msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
-msgstr "调试器将在编辑器中高亮显示相关的代码。 如果你想关掉调试器的高亮去编辑代码，请点击**Stop Debugging（停止调试）**按钮。"
+msgstr "调试器将在编辑器中高亮显示相关的代码。 如果你想关掉调试器的高亮去编辑代码，请点击 **Stop Debugging（停止调试）** 按钮。"
 
 #: ../../debugger.md:15
 msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
-msgstr "要了解更多关于如何使用此工具的信息，请前往[调试交易](tutorial_debug.html) 页面。"
+msgstr "要了解更多关于如何使用此工具的信息，请前往 [调试交易](tutorial_debug.html) 页面。"
 
 #: ../../debugger.md:17
 msgid "This page will go over the Debugger's *Use generated sources* option, its navigation and its panels."
@@ -63,7 +63,7 @@ msgstr "使用生成的源代码"
 
 #: ../../debugger.md:22
 msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
-msgstr "此选项适用于使用 Solidity 0.7.2 或更高版本的合约。有关“生成的源代码”的更多详细信息，请参阅 Solidity 博客(https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)。"
+msgstr "此选项适用于使用 Solidity 0.7.2 或更高版本的合约。有关“生成的源代码”的更多详细信息，请参阅 [Solidity 博客](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features) 。"
 
 #: ../../debugger.md:24
 msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
@@ -235,7 +235,7 @@ msgstr "![](images/a-debugger-panel-stack.png)"
 
 #: ../../debugger.md:84
 msgid "For more info about the [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
-msgstr "更多关于 [stack]的信息 (https://en.wikipedia.org/wiki/Stack_(abstract_data_type))。"
+msgstr "更多关于 [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) 的信息。"
 
 #: ../../debugger.md:85
 msgid "Memory"
