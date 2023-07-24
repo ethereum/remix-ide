@@ -271,15 +271,8 @@ msgid "**Result not used: The result of an operation not used**"
 msgstr "**Résultat non utilisé : Le résultat d'une opération non utilisée**"
 
 #: ../../static_analysis.md:262
-<<<<<<< HEAD
-msgid ""
-"A binary operation yields a value that is not used in the following. This"
-" is often caused by confusing assignment (=) and comparison (==)."
-msgstr ""
-=======
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
 msgstr "Une opération binaire produit une valeur qui n'est pas utilisée dans la suite. Cela est souvent dû à une confusion entre l'affectation (=) et la comparaison (==)."
->>>>>>> 6d93c824 (New translations static_analysis.pot (French))
 
 #: ../../static_analysis.md:270
 msgid "**String Length: Bytes length != String length**"

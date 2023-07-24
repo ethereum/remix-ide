@@ -131,16 +131,8 @@ msgid "Jump to the previous breakpoint"
 msgstr "Saltar al punto de interrupción anterior"
 
 #: ../../debugger.md:46
-<<<<<<< HEAD
-msgid ""
-"Breakpoints can be placed in the gutter of the Editor. If the current "
-"step in the call has passed a breakpoint, this button will move the "
-"slider to the most recently passed breakpoint."
-msgstr ""
-=======
 msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
 msgstr "Los puntos de ruptura pueden colocarse en el canalón del Editor. Si el paso actual de la llamada ha superado un punto de interrupción, este botón desplazará el control deslizante hasta el punto de interrupción superado más recientemente."
->>>>>>> 03233e5d (New translations debugger.pot (Spanish))
 
 #: ../../debugger.md:48
 msgid "Jump out"

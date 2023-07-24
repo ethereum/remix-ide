@@ -27,35 +27,16 @@ msgid "In Remix IDE you only load the functionality you need.  Controlling which
 msgstr "Dans Remix IDE, vous ne chargez que les fonctionnalités dont vous avez besoin.  Le contrôle des plugins actifs ou inactifs se fait dans le **Plugin Manager**."
 
 #: ../../plugin_manager.md:8
-<<<<<<< HEAD
-msgid ""
-"This plugin architecture has made it possible to integrate tools made by "
-"the Remix team with tools made by external teams. This architecture also "
-"allows Remix or just parts of Remix to be integrated into other projects."
-msgstr ""
-=======
 msgid "This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects."
 msgstr "Cette architecture de plugins a permis d'intégrer des outils créés par l'équipe Remix avec des outils créés par des équipes externes. Cette architecture permet également d'intégrer Remix ou des parties de Remix dans d'autres projets."
->>>>>>> 9188b182 (New translations plugin_manager.pot (French))
 
 #: ../../plugin_manager.md:10
 msgid "Manage permissions"
 msgstr "Gérer les autorisations"
 
 #: ../../plugin_manager.md:11
-<<<<<<< HEAD
-msgid ""
-"When plugins need to access other plugins for their operation, a modal "
-"will appear to ask you for permission."
-msgstr ""
-
-#: ../../plugin_manager.md:13
-msgid "![](images/a-permission-modal.png)"
-msgstr ""
-=======
 msgid "When plugins need to access other plugins for their operation, a modal will appear to ask you for permission."
 msgstr "Lorsque des plugins doivent accéder à d'autres plugins pour fonctionner, une fenêtre modale apparaît pour vous demander l'autorisation."
->>>>>>> 9188b182 (New translations plugin_manager.pot (French))
 
 #: ../../plugin_manager.md:13
 msgid "![](images/a-permission-modal.png)"
@@ -78,19 +59,8 @@ msgid "![](images/a-plugin-man-permissions.png)"
 msgstr "![](images/a-plugin-man-permissions.png)"
 
 #: ../../plugin_manager.md:22
-<<<<<<< HEAD
-msgid ""
-"A modal will appear like the one below where you can view and erase the "
-"granted permission."
-msgstr ""
-
-#: ../../plugin_manager.md:24
-msgid "![](images/a-plugin-manager-modal.png)"
-msgstr ""
-=======
 msgid "A modal will appear like the one below where you can view and erase the granted permission."
 msgstr "Une fenêtre modale apparaîtra, comme celle ci-dessous, dans laquelle vous pourrez voir et effacer l'autorisation accordée."
->>>>>>> 9188b182 (New translations plugin_manager.pot (French))
 
 #: ../../plugin_manager.md:24
 msgid "![](images/a-plugin-manager-modal.png)"
@@ -101,20 +71,8 @@ msgid "Plugin Devs: Load a local plugin"
 msgstr "Plugin Devs : Charger un plugin local"
 
 #: ../../plugin_manager.md:28
-<<<<<<< HEAD
-msgid ""
-"A plugin in development can be loaded into Remix IDE by clicking the "
-"\"Connect to a Local Plugin\" link at the top of the Plugin Manager "
-"panel."
-msgstr ""
-
-#: ../../plugin_manager.md:30
-msgid "![](images/a-plugin-man-local.png)"
-msgstr ""
-=======
 msgid "A plugin in development can be loaded into Remix IDE by clicking the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
 msgstr "Un plugin en cours de développement peut être chargé dans Remix IDE en cliquant sur le lien \"Connect to a Local Plugin\" en haut du panneau \"Plugin Manager\"."
->>>>>>> 9188b182 (New translations plugin_manager.pot (French))
 
 #: ../../plugin_manager.md:30
 msgid "![](images/a-plugin-man-local.png)"

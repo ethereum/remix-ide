@@ -31,30 +31,12 @@ msgid "Selecting a contract to compile"
 msgstr "Selección de un contrato para compilar"
 
 #: ../../compile.md:9
-<<<<<<< HEAD
-msgid ""
-"To select a contract to compile, choose a file in the File Explorer. Or "
-"if there are several files open, make sure the one you want to compile is"
-" the active file in the Editor."
-msgstr ""
-
-#: ../../compile.md:11
-msgid ""
-"If there is not an active file in the editor or a file has not already "
-"been compiled, then the Solidity compiler will look like this:"
-msgstr ""
-
-#: ../../compile.md:13
-msgid "![](images/a-sol-comp-no-file.png)"
-msgstr ""
-=======
 msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
 msgstr "Para seleccionar un contrato para compilar, elija un archivo en el Explorador de archivos. O si hay varios archivos abiertos, asegúrese de que el que desea compilar es el archivo activo en el Editor."
 
 #: ../../compile.md:11
 msgid "If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:"
 msgstr "Si no hay ningún archivo activo en el editor o aún no se ha compilado ningún archivo, el compilador de Solidity tendrá el siguiente aspecto:"
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:13
 msgid "![](images/a-sol-comp-no-file.png)"
@@ -125,16 +107,8 @@ msgid "Using the publish button, you can upload your contract to  **IPFS** or **
 msgstr "Utilizando el botón publicar, puede subir su contrato a **IPFS** o **Swarm** (sólo los contratos no abstractos pueden publicarse en Swarm)."
 
 #: ../../compile.md:43
-<<<<<<< HEAD
-msgid ""
-"When publishing a contract that imports other contracts, the main "
-"contract and all of its imported contracts will be published - each to "
-"their own address."
-msgstr ""
-=======
 msgid "When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address."
 msgstr "Al publicar un contrato que importa otros contratos, se publicarán el contrato principal y todos sus contratos importados, cada uno a su propia dirección."
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:45
 msgid "**Published data contains the contract's metadata and the solidity source code.**"
