@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:45\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language: es_ES\n"
 "Language-Team: Spanish\n"
@@ -30,9 +30,9 @@ msgstr ""
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` and among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
-msgstr ""
+msgstr "La aplicación Remix está construida con JavaScript y no utiliza ningún framework. Nos basamos en un conjunto seleccionado de módulos npm, como `yo-yo`, `csjs-inject` y entre otros. Eche un vistazo a los archivos `package.json` de los submódulos de Remix para saber más sobre la pila."
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
-msgstr ""
+msgstr "Para obtener más información, visite nuestra [página de GitHub](https://github.com/ethereum/remix-project)."
 
