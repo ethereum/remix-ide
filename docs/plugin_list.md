@@ -55,17 +55,24 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin)
 <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
+**Contract Verification - Etherscan** &nbsp; ![](images/pi-etherscan.png) &nbsp;
+<br>Verify contracts on Etherscan.
+<br>[Profile name](https://github.com/ethereum/remix-project/blob/master/apps/etherscan/src/profile.json): etherscan
+<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#etherscan)
+<br>[Make an issue](https://github.com/ethereum/remix-project/tree/master/apps/etherscan)
+
+**Contract Verification - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;
+<br>Verify contracts and fetch verified contracts
+<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
+<br>[Documentation](https://docs.sourcify.dev/docs/intro/)
+<br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
+
 **Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br>
 Find any smart contract, build your project faster.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev
 <br>[Website](https://www.cookbook.dev)
 <br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin)
 <br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)
-
-**Debug Tools for Remix** &nbsp; ![](images/pi-remix-debug-tools.png) &nbsp; <br>
-Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin
-<br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)
 
 **Defi Explorer** &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br>
 The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers.
@@ -83,35 +90,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
 <br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin)
 <br>[Make an issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)
-
-**EthDoc Documentation Generator** &nbsp; ![](images/pi-ethdoc.png) &nbsp;  
-<br>Creates the documentation of a soldity contract - generated from the Natspec comments in the code. The generated doc is placed in EthDoc viewer - which will be visible in an tab in the editor.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc/profile.json): ethdoc
-<br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/)
-<br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-plugin/issues)
-
-**EthDoc Viewer** &nbsp; (main panel) &nbsp;  
-<br>This plugin work with EthDoc Generator. It is automatically activated.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc-viewer/profile.json): ethdoc-viewer
-<br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/)
-<br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-viewer-plugin/issues)
-
-**Etherscan Contract Verifier** &nbsp; ![](images/pi-etherscan.png) &nbsp;
-<br>Verify a contract on Etherscan.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/etherscan/profile.json): etherscan
-<br>[Documentation](https://remix-etherscan-plugin.readthedocs.io/en/latest/)
-<br>[Make an issue](https://github.com/Machinalabs/remix-etherscan-plugin/issues)
-
-**Flattener** &nbsp; ![](images/pi-flattener.png)
-<br>Flattens compiled contracts
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/flattener/profile.json): flattener
-<br>[Make an issue](https://github.com/bunsenstraat/flattener/issues)
-
-**Gas Profiler** &nbsp; ![](images/pi-gas-profiler.png)
-<br>Profile gas costs for every transaction you execute. Total execution costs as well as per line costs are displayed.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/gas-profiler/profile.json): gasProfiler
-<br>[Documentation](https://github.com/EdsonAlcala/remix-gas-profiler)
-<br>[Make an issue](/issues)
 
 **Klaytn** &nbsp; ![](images/pi-klaytn.png)
 <br>Deploy & interact with smart contracts to the Klaytn public network, local klaytn nodes.
@@ -154,35 +132,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp)
 <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)
 
-**Proveable Oracle Services** &nbsp; ![](images/pi-proveable.png)
-<br>An oracle for the Remix VM environment.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable
-<br>[Documentation](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)
-
-**Quorum Network** &nbsp; ![](images/pi-quorum.png)
-<br>A Connection to Quorum
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/quorum/profile.json): quorum
-<br>[Documentation](https://medium.com/remix-ide/quorum-plugin-for-remix-ee232ebca64c)
-<br>[Make an issue](https://github.com/ConsenSys/quorum-remix/issues)
-
-**Solhint Linter** &nbsp; ![](images/pi-solhint.png)
-<br>Solidity Linter providing both Security and Style Guide validations.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/solhint/profile.json): solhint
-<br>[Documentation](https://protofire.github.io/solhint/docs/rules.html)
-<br>[Make an issue](https://github.com/protofire/remix-solhint-plugin)
-
-**Solidity 2 UML** &nbsp; ![](images/pi-sol2uml.png)
-<br>Generate UML diagrams from a compiled Solidity file
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/sol2uml/profile.json): sol2uml
-<br>[Documentation](https://github.com/aquiladev/remix-sol2uml)
-<br>[Make an issue](https://github.com/aquiladev/remix-sol2uml)
-
-**Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;
-<br>Verify you contracts and fetch verified contracts
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
-<br>[Documentation](https://github.com/ethereum/sourcify)
-<br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
-
 **Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;
 <br>Compile contracts written in Cairo to Starknet
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler
@@ -215,11 +164,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>Approve transactions on your mobile device
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect
 <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)
-
-**YUL++** &nbsp; ![](images/pi-yul-p.png) &nbsp;
-<br>A low level language for Ethereum.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/yulp/profile.json): yulp
-<br>[Make an issue](https://github.com/loredanacirstea/remix-yulp-plugin/issues)
 
 **Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp;
 <br>ZoKrates is a toolbox for zkSNARKs on Ethereum.
