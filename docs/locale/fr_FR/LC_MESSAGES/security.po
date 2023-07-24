@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:48\n"
+"PO-Revision-Date: 2023-07-24 13:47\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,73 +19,73 @@ msgstr ""
 
 #: ../../security.md:1
 msgid "Using Remix Safely"
-msgstr ""
+msgstr "Utiliser Remix en toute sécurité"
 
 #: ../../security.md:4
 msgid "It is dangerous to send transactions on contracts you don't understand (even if it's a get rich quick scheme that you've copied & pasted from a Discord DM or a youtube video and you really really want to get rich)."
-msgstr ""
+msgstr "Il est dangereux d'envoyer des transactions sur des contrats que vous ne comprenez pas (même s'il s'agit d'un plan d'enrichissement rapide que vous avez copié et collé à partir d'un DM Discord ou d'une vidéo youtube et que vous voulez vraiment devenir riche)."
 
 #: ../../security.md:6
 msgid "Check our [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) on a current scam promoting \"liquidity front runner bots\"."
-msgstr ""
+msgstr "Consultez notre site [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) sur une escroquerie actuelle promouvant les \"liquidity front runner bots\"."
 
 #: ../../security.md:8
 msgid "Always check that you are loading Remix over HTTPS unless you have a specific reason for accessing it with HTTP (e.g. for using Remix locally or for a connection you trust)."
-msgstr ""
+msgstr "Vérifiez toujours que vous chargez Remix via HTTPS, sauf si vous avez une raison particulière d'y accéder via HTTP (par exemple, pour utiliser Remix localement ou pour une connexion en laquelle vous avez confiance)."
 
 #: ../../security.md:10
 msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
-msgstr ""
+msgstr "Assurez-vous que tous vos imports incluent le **numéro de version** sinon vous ne savez pas quelle version de fichiers vous obtenez et les builds ne sont pas reproductibles."
 
 #: ../../security.md:12
 msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
-msgstr ""
+msgstr "Donc **n'utilisez pas** un import comme celui-ci :<br> `import \"@openzeppelin/contrats/token/ERC20/ERC20.sol\";`"
 
 #: ../../security.md:15
 msgid "Rather, **use one** like this:<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
-msgstr ""
+msgstr "Au contraire, **utilisez-en un** comme ceci :<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
 
 #: ../../security.md:18
 msgid "When connecting a contract to an existing deployment, ensure that the thing you are connecting to is correct AND is the correct version."
-msgstr ""
+msgstr "Lorsque vous connectez un contrat à un déploiement existant, assurez-vous que l'élément auquel vous vous connectez est correct ET qu'il s'agit de la bonne version."
 
 #: ../../security.md:20
 msgid "Always be sure to address or understand every warning."
-msgstr ""
+msgstr "Veillez toujours à prendre en compte ou à comprendre chaque avertissement."
 
 #: ../../security.md:22
 msgid "Remix is a subdomain of ethereum.org - so the only valid Remix urls are:"
-msgstr ""
+msgstr "Remix est un sous-domaine de ethereum.org - les seules urls Remix valides sont donc :"
 
 #: ../../security.md:23
 msgid "remix.ethereum.org"
-msgstr ""
+msgstr "remix.ethereum.org"
 
 #: ../../security.md:24
 msgid "remix-alpha.ethereum.org"
-msgstr ""
+msgstr "remix-alpha.ethereum.org"
 
 #: ../../security.md:25
 msgid "remix-beta.ethereum.org"
-msgstr ""
+msgstr "remix-beta.ethereum.org"
 
 #: ../../security.md:27
 msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
-msgstr ""
+msgstr "Si vous êtes dirigé vers un site qui ressemble à Remix mais dont l'URL est **similaire mais différente**, il ne s'agit PAS de Remix et il est probable qu'il s'agisse d'une escroquerie."
 
 #: ../../security.md:29
 msgid "Remix's ease makes its users a target"
-msgstr ""
+msgstr "La facilité de Remix fait de ses utilisateurs une cible"
 
 #: ../../security.md:30
 msgid "Because Remix has no setup, it has a large community of noobies to smart contract development. This is great, but it provides a target audience for scammers exploit. Without Remix, the scammers would first need to instruct victims to set up a local dev environment, which would severely limit the success rate of the scam."
-msgstr ""
+msgstr "Parce que Remix n'a pas d'installation, il a une grande communauté de novices dans le développement de contrats intelligents. C'est une bonne chose, mais cela constitue un public cible que les escrocs peuvent exploiter. Sans Remix, les escrocs devraient d'abord demander aux victimes de mettre en place un environnement de développement local, ce qui limiterait considérablement le taux de réussite de l'escroquerie."
 
 #: ../../security.md:32
 msgid "**Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!**"
-msgstr ""
+msgstr "**Les escroqueries perdent leur efficacité lorsque les victimes potentielles sont informées sur les escroqueries et sur la manière de lire et de comprendre le code. Apprenez Solidity et apprenez-le bien !"
 
 #: ../../security.md:34
 msgid "For Solidity Tutorials in Remix, go to the LearnEth plugin."
-msgstr ""
+msgstr "Pour les tutoriels Solidity dans Remix, allez sur le plugin LearnEth."
 
