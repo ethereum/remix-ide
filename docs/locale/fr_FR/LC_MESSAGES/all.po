@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-06-21 15:22\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -220,19 +220,19 @@ msgstr "Lorsqu'une compilation réussit, Remix crée deux fichiers JSON pour cha
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
-msgstr ""
+msgstr "L'autre fichier JSON est nommé contractName.json . Le fichier contractName.json contient l'artefact de compilation nécessaire pour lier une bibliothèque au fichier. Il contient le lien vers les bibliothèques, le bytecode, le bytecode déployé, l'estimation des gaz, les identifiants de méthode et l'ABI."
 
 #: ../../contract_metadata.md:8
 msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
-msgstr ""
+msgstr "Pour générer ces fichiers d'artefacts, vous devez cocher la case Générer les métadonnées du contrat dans la section Paramètres généraux du module Paramètres.  Ces fichiers de métadonnées seront alors générés lorsque vous compilerez un fichier et seront placés dans le dossier des artefacts - que vous pouvez voir dans le plugin Explorateur de fichiers."
 
 #: ../../contract_metadata.md:10
 msgid "You can write scripts that can access either of these files."
-msgstr ""
+msgstr "Vous pouvez écrire des scripts qui peuvent accéder à l'un ou l'autre de ces fichiers."
 
 #: ../../contract_metadata.md:12
 msgid "Library Deployment with filename.json"
-msgstr ""
+msgstr "Déploiement de bibliothèques avec filename.json"
 
 #: ../../contract_metadata.md:15
 msgid "By default Remix automatically deploys needed libraries."
@@ -240,7 +240,7 @@ msgstr "Par défaut, Remix déploie automatiquement les bibliothèques nécessai
 
 #: ../../contract_metadata.md:17
 msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
-msgstr ""
+msgstr "Lorsque vous ouvrez le fichier de métadonnées pour les bibliothèques - artefact/filename.json, vous verrez les sections suivantes :"
 
 #: ../../contract_metadata.md:19
 msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
@@ -252,11 +252,11 @@ msgstr "<code>autoDeployLib</code> définit si les bibliothèques doivent être 
 
 #: ../../contract_metadata.md:24
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
-msgstr ""
+msgstr "Notez que Remix résoudra les adresses correspondant au réseau actuel. Par défaut, une clé de configuration suit la forme : <network_name>:<networkd_id>, mais il est également possible de définir <network_name> ou <network_id> comme clés."
 
 #: ../../contract_metadata.md:28
 msgid "Here is a sample metadata file for linking a library:"
-msgstr ""
+msgstr "Voici un exemple de fichier de métadonnées pour lier une bibliothèque :"
 
 msgid ""
 msgstr ""
@@ -264,43 +264,43 @@ msgstr ""
 
 #: ../../create_deploy.md:1
 msgid "Creating and Deploying a Contract"
-msgstr ""
+msgstr "Création et déploiement d'un contrat"
 
 #: ../../create_deploy.md:4
 msgid "There are 3 type of environments Remix can be plugged to: Javascript VM, Injected provider, or Web3 provider. (for details see Running transactions)"
-msgstr ""
+msgstr "Il y a 3 types d'environnements sur lesquels Remix peut être branché : Javascript VM, fournisseur injecté, ou fournisseur Web3. (pour plus de détails, voir Exécuter des transactions)"
 
 #: ../../create_deploy.md:7
 msgid "Both Web3 provider and Injected provider require the use of an external tool."
-msgstr ""
+msgstr "Le fournisseur Web3 et le fournisseur injecté nécessitent tous deux l'utilisation d'un outil externe."
 
 #: ../../create_deploy.md:10
 msgid "The external tool for Web3 provider is an Ethereum node and for Injected provider Metamask."
-msgstr ""
+msgstr "L'outil externe pour le fournisseur Web3 est un nœud Ethereum et pour le fournisseur injecté Metamask."
 
 #: ../../create_deploy.md:13
 msgid "The JavaScript VM mode is convenient because each execution runs in your browser and you don't need any other software or Ethereum node to run it."
-msgstr ""
+msgstr "Le mode JavaScript VM est pratique car chaque exécution se déroule dans votre navigateur et vous n'avez besoin d'aucun autre logiciel ou nœud Ethereum pour l'exécuter."
 
 #: ../../create_deploy.md:16
 msgid "So, it is the easiest test environment - no setup required!"
-msgstr ""
+msgstr "Il s'agit donc de l'environnement de test le plus simple - aucune installation n'est nécessaire !"
 
 #: ../../create_deploy.md:18
 msgid "But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state."
-msgstr ""
+msgstr "Mais gardez à l'esprit que recharger le navigateur lorsque vous êtes dans la VM Javascript redémarrera Remix dans un état vide."
 
 #: ../../create_deploy.md:20
 msgid "For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it might also be better to use an external node."
-msgstr ""
+msgstr "Pour des raisons de performance (c'est-à-dire pour des tests dans un environnement qui est le plus proche du réseau principal), il peut également être préférable d'utiliser un nœud externe."
 
 #: ../../create_deploy.md:22
 msgid "Selecting the VM mode"
-msgstr ""
+msgstr "Sélection du mode VM"
 
 #: ../../create_deploy.md:25
 msgid "Make sure the VM mode is selected. All accounts displayed in Accounts should have 100 ether."
-msgstr ""
+msgstr "Assurez-vous que le mode VM est sélectionné. Tous les comptes affichés dans Comptes doivent avoir 100 éther."
 
 #: ../../create_deploy.md:28
 msgid "Sample contract"
@@ -316,55 +316,55 @@ msgstr "Déploiement d'une instance"
 
 #: ../../create_deploy.md:63
 msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
-msgstr ""
+msgstr "L'onglet Compiler affiche des informations relatives au contrat en cours (notez qu'il peut y en avoir plusieurs) (voir Compiler)."
 
 #: ../../create_deploy.md:66
 msgid "Moving on, in the Run tab select, JavaScript VM to specify that you are going to deploy an instance of the contract in the JavaScript VM state."
-msgstr ""
+msgstr "Dans l'onglet Exécuter, sélectionnez VM JavaScript pour spécifier que vous allez déployer une instance du contrat dans l'état VM JavaScript."
 
 #: ../../create_deploy.md:72
 msgid "The constructor of Ballot.sol needs a parameter (of type uint8). Give any value and click on Deploy."
-msgstr ""
+msgstr "Le constructeur de Ballot.sol a besoin d'un paramètre (de type uint8). Donnez-lui une valeur quelconque et cliquez sur Deploy."
 
 #: ../../create_deploy.md:75
 msgid "The transaction which deploys the instance of Ballot is created."
-msgstr ""
+msgstr "La transaction qui déploie l'instance de Ballot est créée."
 
 #: ../../create_deploy.md:77
 msgid "In a \"normal\" blockchain, it can take several seconds to execute. This is the time for the transaction to be mined. However, because we are using the JavaScript VM, our execution is immediate."
-msgstr ""
+msgstr "Dans une blockchain \"normale\", l'exécution peut prendre plusieurs secondes. C'est le temps nécessaire pour que la transaction soit minée. Cependant, comme nous utilisons la VM JavaScript, notre exécution est immédiate."
 
 #: ../../create_deploy.md:81
 msgid "The terminal will inform you about the transaction. You can see details there and start debugging."
-msgstr ""
+msgstr "Le terminal vous informe de la transaction. Vous pouvez y voir les détails et commencer le débogage."
 
 #: ../../create_deploy.md:84
 msgid "The newly created instance is displayed in the run tab."
-msgstr ""
+msgstr "L'instance nouvellement créée est affichée dans l'onglet d'exécution."
 
 #: ../../create_deploy.md:88
 msgid "Interacting with an instance"
-msgstr ""
+msgstr "Interagir avec une instance"
 
 #: ../../create_deploy.md:91
 msgid "This new instance contains 3 actions which corresponds to the 3 functions (setP, setPN, get). Clicking on SetP or SetPN will create a new transaction."
-msgstr ""
+msgstr "Cette nouvelle instance contient 3 actions qui correspondent aux 3 fonctions (setP, setPN, get). En cliquant sur SetP ou SetPN, vous créez une nouvelle transaction."
 
 #: ../../create_deploy.md:95
 msgid "Note that SetP is payable (red button) : it is possible to send value (Ether) to the contract."
-msgstr ""
+msgstr "Notez que SetP est payable (bouton rouge) : il est possible d'envoyer de la valeur (Ether) au contrat."
 
 #: ../../create_deploy.md:98
 msgid "SetPN is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract."
-msgstr ""
+msgstr "SetPN n'est pas payable (bouton orange - selon le thème) : il n'est pas possible d'envoyer de la valeur (Ether) au contrat."
 
 #: ../../create_deploy.md:101
 msgid "Clicking on get will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a get does not modify the state (variable value) of this instance."
-msgstr ""
+msgstr "Cliquer sur get n'exécutera pas de transaction (il s'agit généralement d'un bouton bleu - en fonction du thème). Il n'exécute pas de transaction parce qu'un get ne modifie pas l'état (la valeur de la variable) de cette instance."
 
 #: ../../create_deploy.md:104
 msgid "As get is view you can see the return value just below the action."
-msgstr ""
+msgstr "Comme get is view, vous pouvez voir la valeur de retour juste en dessous de l'action."
 
 msgid ""
 msgstr ""
@@ -376,15 +376,15 @@ msgstr "Débogueur"
 
 #: ../../debugger.md:4
 msgid "This module allows you to debug the transaction. It can be used to deploy transactions created from Remix and already mined transactions. (debugging works only if the current environment provides the necessary features)."
-msgstr ""
+msgstr "Ce module vous permet de déboguer la transaction. Il peut être utilisé pour déployer des transactions créées à partir de Remix et des transactions déjà minées. (le débogage ne fonctionne que si l'environnement actuel fournit les fonctionnalités nécessaires)."
 
 #: ../../debugger.md:9
 msgid "To get to the debugger - you can click the debug button in the terminal when a successful or failed transaction appears there.  You can also load the module from the plugin manager and then click the bug in the icon panel.  Or you can get to the debugger by running the debug command in the console."
-msgstr ""
+msgstr "Pour accéder au débogueur, vous pouvez cliquer sur le bouton de débogage dans le terminal lorsqu'une transaction réussie ou échouée y apparaît.  Vous pouvez également charger le module à partir du gestionnaire de plugins, puis cliquer sur le bogue dans le panneau d'icônes.  Vous pouvez également accéder au débogueur en lançant la commande debug dans la console."
 
 #: ../../debugger.md:14
 msgid "To learn more about how to use this tool go to the debugger tutorial."
-msgstr ""
+msgstr "Pour en savoir plus sur l'utilisation de cet outil, consultez le tutoriel sur le débogueur."
 
 msgid ""
 msgstr ""
@@ -400,31 +400,31 @@ msgstr "Compilateur Solidity"
 
 #: ../../FAQ.md:6
 msgid "Q: Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "Q : Erreur : le compilateur n'est peut-être pas dans un état normal."
 
 #: ../../FAQ.md:13
 msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "R : Les anciennes versions du compilateur Solidity avaient ce problème avec Chrome. Veuillez changer la version du compilateur dans Solidity Plugin pour la plus récente ou utiliser un autre navigateur."
 
 #: ../../FAQ.md:16
 msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr ""
+msgstr "Q : J'ai un problème avec Maximum call stack exceed et d'autres erreurs, je ne peux pas compiler."
 
 #: ../../FAQ.md:18
 msgid "A:  Try a different browser or a newer solidity compiler version."
-msgstr ""
+msgstr "R : Essayez un autre navigateur ou une version plus récente du compilateur Solidity."
 
 #: ../../FAQ.md:20
 msgid "Q: How to verify a contract that imports other contracts?"
-msgstr ""
+msgstr "Q : Comment vérifier un contrat qui importe d'autres contrats ?"
 
 #: ../../FAQ.md:22
 msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
-msgstr ""
+msgstr "R : L'outil de vérification ne parcourt pas de manière récursive les déclarations d'importation d'un contrat.  Il ne peut donc vérifier qu'un contrat \"aplati\"."
 
 #: ../../FAQ.md:24
 msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
-msgstr ""
+msgstr "Il existe un plugin appelé Flattener qui regroupe tout le code original et le code importé dans un seul fichier."
 
 #: ../../FAQ.md:26
 msgid "Deploy & Run"
@@ -432,47 +432,47 @@ msgstr "Déployer & Exécuter"
 
 #: ../../FAQ.md:28
 msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
-msgstr ""
+msgstr "Q : J'utilise un point de terminaison Infura dans mon application, mais lorsque j'essaie de déployer contre ce point de terminaison dans Remix IDE en sélectionnant \"web3 provider\" et en mettant mon point de terminaison, il me dit qu'il ne peut pas se connecter."
 
 #: ../../FAQ.md:30
 msgid "A: If the endpoint you are using is http, it won't work."
-msgstr ""
+msgstr "R : Si le point de terminaison que vous utilisez est http, cela ne fonctionnera pas."
 
 #: ../../FAQ.md:32
 msgid "Q: Where is deploy button?"
-msgstr ""
+msgstr "Q : Où se trouve le bouton de déploiement ?"
 
 #: ../../FAQ.md:34
 msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
-msgstr ""
+msgstr "R : C'est dans le module Deploy & Run. Si vous n'avez pas activé ce module, vous devez le faire en cliquant sur le module Deploy & Run dans le Plugin Manager. Vous pouvez également activer tout ce dont vous avez besoin pour travailler avec Solidity sur la page d'accueil (cliquez sur le logo remix en haut à gauche de l'écran) et cliquez sur le bouton \"Solidity\" dans la section environnement."
 
 #: ../../FAQ.md:37
 msgid "Q: How to pass a tuple to a public function in Remix?"
-msgstr ""
+msgstr "Q : Comment passer un tuple à une fonction publique dans Remix ?"
 
 #: ../../FAQ.md:39
 msgid "A: Pass it as an array []."
-msgstr ""
+msgstr "R : Transmettez-le sous la forme d'un tableau []."
 
 #: ../../FAQ.md:41
 msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
-msgstr ""
+msgstr "Q : Comment saisir une structure en tant que paramètre d'une fonction dans le module Deploy & Run ?"
 
 #: ../../FAQ.md:43
 msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
-msgstr ""
+msgstr "R : Pour saisir une structure, tout comme un tuple, passez-la sous la forme d'un tableau [].  Vous devez également ajouter la ligne :"
 
 #: ../../FAQ.md:45
 msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
-msgstr ""
+msgstr "pragma experimental ABIEncoderV2 ; au début du fichier solidity."
 
 #: ../../FAQ.md:47
 msgid "For example, here's a solidity file with a struct is an input parameter."
-msgstr ""
+msgstr "Par exemple, voici un fichier Solidity dont le paramètre d'entrée est une structure."
 
 #: ../../FAQ.md:79
 msgid "The input of initPeepToPeeps takes a struct.  If you input [1,2] the transaction will go through."
-msgstr ""
+msgstr "L'entrée de initPeepToPeeps prend une structure.  Si vous entrez [1,2], la transaction sera effectuée."
 
 #: ../../FAQ.md:83
 msgid "General"
@@ -480,11 +480,11 @@ msgstr "Général"
 
 #: ../../FAQ.md:85
 msgid "Q: Where do plugin developers go with their questions?"
-msgstr ""
+msgstr "Q : Où les développeurs de plugins posent-ils leurs questions ?"
 
 #: ../../FAQ.md:87
 msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
-msgstr ""
+msgstr "R : La salle des développeurs du plugin Gitter Remix https://gitter.im/ethereum/remix-dev-plugin"
 
 msgid ""
 msgstr ""
@@ -508,19 +508,19 @@ msgstr "Remarque importante: le nettoyage du stockage du navigateur supprimera d
 
 #: ../../file_explorer.md:14
 msgid "You can rename, remove or add new files to the file explorer."
-msgstr ""
+msgstr "Vous pouvez renommer, supprimer ou ajouter de nouveaux fichiers dans l'explorateur de fichiers."
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
-msgstr ""
+msgstr "Nous commencerons par examiner les icônes de l'image ci-dessus."
 
 #: ../../file_explorer.md:21
 msgid "The book icon - A. is the link to the module's documentation."
-msgstr ""
+msgstr "L'icône de livre - A. est le lien vers la documentation du module."
 
 #: ../../file_explorer.md:23
 msgid "The icons to the right of the browser file explorer in the image above only appear for browser storage."
-msgstr ""
+msgstr "Les icônes situées à droite de l'explorateur de fichiers du navigateur dans l'image ci-dessus n'apparaissent que pour le stockage dans le navigateur."
 
 #: ../../file_explorer.md:25
 msgid "Create new File"
@@ -528,7 +528,7 @@ msgstr "Créer un nouveau fichier"
 
 #: ../../file_explorer.md:28
 msgid "The icon marked B. above. Creates a new file."
-msgstr ""
+msgstr "L'icône marquée B. ci-dessus. Crée un nouveau fichier."
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
@@ -536,15 +536,15 @@ msgstr "Publier sur le Gist"
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
-msgstr ""
+msgstr "L'icône marquée C. ci-dessus. Publie tous les fichiers du dossier du navigateur dans une gist.  Seuls les fichiers situés à la racine du navigateur seront publiés.  Les fichiers des sous-dossiers ne seront pas publiés dans la Gist. L'API Gist a changé en 2018 et exige que les utilisateurs soient authentifiés pour pouvoir publier une gist."
 
 #: ../../file_explorer.md:36
 msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token."
-msgstr ""
+msgstr "Cliquez sur ce lien vers la configuration des jetons Github et sélectionnez Generate new token (Générer un nouveau jeton). Cochez ensuite la case Créer des gists et générez un nouveau jeton."
 
 #: ../../file_explorer.md:38
 msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save. Now you should be able to use the feature."
-msgstr ""
+msgstr "Prenez le jeton et collez-le dans le module Settings de Remix dans la section Github Access Token. Cliquez ensuite sur Enregistrer. Vous devriez maintenant être en mesure d'utiliser la fonctionnalité."
 
 #: ../../file_explorer.md:40
 msgid "Create a folder"
@@ -552,7 +552,7 @@ msgstr "Créer un dossier"
 
 #: ../../file_explorer.md:43
 msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
-msgstr ""
+msgstr "L'icône marquée D. ci-dessus.  Crée un nouveau dossier dans l'explorateur de fichiers du navigateur."
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
@@ -560,23 +560,23 @@ msgstr "Menu contextuel (Clic droit)"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
-msgstr ""
+msgstr "Cliquez avec le bouton droit de la souris sur un fichier ou un dossier et le menu contextuel apparaît."
 
 #: ../../file_explorer.md:51
 msgid "You can rename or delete a selected file or a folder. You can also create a folder."
-msgstr ""
+msgstr "Vous pouvez renommer ou supprimer un fichier ou un dossier sélectionné. Vous pouvez également créer un dossier."
 
 #: ../../file_explorer.md:53
 msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
-msgstr ""
+msgstr "Pour créer un fichier à l'aide du menu contextuel, cliquez avec le bouton droit de la souris sur un dossier pour obtenir l'option Créer un fichier. Un fichier sera créé dans ce dossier."
 
 #: ../../file_explorer.md:57
 msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
-msgstr ""
+msgstr "La fonctionnalité du menu contextuel fonctionne également avec RemixD (qui vous donne accès à un dossier sur votre disque dur)."
 
 #: ../../file_explorer.md:59
 msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
-msgstr ""
+msgstr "Remarque : lorsque vous travaillez avec RemixD, vous devez ouvrir et fermer le dossier localhost pour rafraîchir la vue."
 
 msgid ""
 msgstr ""
@@ -588,35 +588,35 @@ msgstr "Importation des fichiers sources dans Solidity"
 
 #: ../../import.md:4
 msgid "There are multiple techniques for importing files into Remix."
-msgstr ""
+msgstr "Il existe plusieurs techniques pour importer des fichiers dans Remix."
 
 #: ../../import.md:6
 msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
-msgstr ""
+msgstr "Pour un tutoriel sur l'importation de fichiers, cliquez ici.  Vous pouvez également trouver ce tutoriel dans le plugin Remix Workshops."
 
 #: ../../import.md:8
 msgid "For a detailed explanation of the import keyword see the Solidity documentation"
-msgstr ""
+msgstr "Pour une explication détaillée du mot-clé import, voir la documentation Solidity."
 
 #: ../../import.md:11
 msgid "Here are a some of the main methods of importing a file:"
-msgstr ""
+msgstr "Voici quelques-unes des principales méthodes d'importation d'un fichier :"
 
 #: ../../import.md:13
 msgid "Importing a file from the browser's local storage"
-msgstr ""
+msgstr "Importation d'un fichier à partir de la mémoire locale du navigateur"
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
-msgstr ""
+msgstr "Les fichiers dans Remix peuvent être importés avec le mot-clé import et le chemin d'accès au fichier. Utilisez ./ pour les chemins relatifs afin d'améliorer la portabilité."
 
 #: ../../import.md:24
 msgid "Importing a file from your computer's filesystem"
-msgstr ""
+msgstr "Importation d'un fichier à partir du système de fichiers de votre ordinateur"
 
 #: ../../import.md:27
 msgid "This method uses remixd - the remix daemon.  Please go to the remixd tutorial for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr ""
+msgstr "Cette méthode utilise remixd - le démon remix.  Veuillez consulter le tutoriel remixd pour obtenir des instructions sur la manière de combler le fossé entre le navigateur et le système de fichiers de votre ordinateur."
 
 #: ../../import.md:30
 msgid "Importing from GitHub"
@@ -624,7 +624,7 @@ msgstr "Importation depuis GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "Il est possible d'importer des fichiers directement depuis GitHub.  Vous devez spécifier l'étiquette de la version (lorsqu'elle est disponible), sinon vous obtiendrez le code le plus récent de la branche master.  Pour OpenZeppelin Contracts, vous ne devez utiliser que le code publié dans une version officielle. L'exemple ci-dessous importe OpenZeppelin Contracts v2.5.0."
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
@@ -632,7 +632,7 @@ msgstr "Importation depuis Swarm"
 
 #: ../../import.md:45
 msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
-msgstr ""
+msgstr "Les fichiers peuvent être importés en utilisant toutes les URL supportées par swarm. Si vous n'avez pas de nœud swarm, utilisez swarm-gateways.net."
 
 #: ../../import.md:52
 msgid "Importing from IPFS"
@@ -648,11 +648,11 @@ msgstr "Importation depuis la console"
 
 #: ../../import.md:64
 msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "Vous pouvez également utiliser une commande remix remix.loadurl('<the_url>')dans la console. Vous devez spécifier la balise release (lorsqu'elle est disponible), sinon vous obtiendrez le code le plus récent de la branche master. Pour OpenZeppelin Contracts, vous ne devez utiliser que le code publié dans une version officielle. L'exemple ci-dessous importe OpenZeppelin Contracts v2.5.0."
 
 #: ../../import.md:70
 msgid "Notice that this will create a github folder in the file explorer.  To load a file in the github folder, you would use a command like this:"
-msgstr ""
+msgstr "Notez que cela créera un dossier github dans l'explorateur de fichiers.  Pour charger un fichier dans le dossier github, vous devez utiliser une commande comme celle-ci :"
 
 msgid ""
 msgstr ""
@@ -672,7 +672,7 @@ msgstr "Remix prend également en charge les tests, le débogage, le déploiemen
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr ""
+msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur `remix.ethereum.org <https://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans ces documents.  Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
@@ -688,7 +688,7 @@ msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
 msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr ""
+msgstr "`Remix alpha <https://remix-alpha.ethereum.org>`__ - La version où nous testons les nouvelles versions de Remix (pas stable !)."
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
@@ -768,11 +768,11 @@ msgstr "Lorsque vous chargez remix - le panneau d'icônes affiche ces icônes pa
 
 #: ../../layout.md:19
 msgid "Everything in remix is now a plugin...  so the Plugin Manager is very important. In the old layout, each basic task in remix was separated into the tabs.  Now these tabs are plugins."
-msgstr ""
+msgstr "Tout dans remix est maintenant un plugin... donc le gestionnaire de plugins est très important. Dans l'ancienne présentation, chaque tâche de base dans remix était séparée dans les onglets.  Maintenant, ces onglets sont des plugins."
 
 #: ../../layout.md:22
 msgid "But to activate a half a dozen plugins - (or however many you are using) each time the page load is tedious.  So learn about the Environments."
-msgstr ""
+msgstr "Mais il est fastidieux d'activer une demi-douzaine de plugins (ou le nombre de plugins que vous utilisez) à chaque chargement de page.  Apprenez donc à connaître les environnements."
 
 #: ../../layout.md:24
 msgid "Homepage"
@@ -792,7 +792,7 @@ msgstr "Environnements"
 
 #: ../../layout.md:34
 msgid "Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a Solidity Button and a Vyper button.  In the future you will be able to save your own environment."
-msgstr ""
+msgstr "En cliquant sur l'un des boutons d'environnement, vous accédez à une collection de plugins.  Nous disposons actuellement d'un bouton Solidity et d'un bouton Vyper.  À l'avenir, vous pourrez enregistrer votre propre environnement."
 
 #: ../../layout.md:36
 msgid "To see all the plugins go to the plugin manager - by selecting the plug in the icon panel."
@@ -800,7 +800,7 @@ msgstr "Pour voir tous les plugins, allez dans le gestionnaire de plugin - en s�
 
 #: ../../layout.md:39
 msgid "The environment buttons are time & sanity savers - so you don't need to go to the plugin manager to get started everytime you load the page."
-msgstr ""
+msgstr "Les boutons d'environnement permettent d'économiser du temps et de l'énergie - ainsi, vous n'avez pas besoin d'aller dans le gestionnaire de plugins pour démarrer à chaque fois que vous chargez la page."
 
 #: ../../layout.md:42
 msgid "Plugin Manager"
@@ -808,11 +808,11 @@ msgstr "Gestionnaire de plugin"
 
 #: ../../layout.md:45
 msgid "In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (your's for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the plug manager."
-msgstr ""
+msgstr "Afin de rendre Remix flexible pour l'intégration de changements dans ses fonctionnalités et pour l'intégration de Remix dans d'autres projets (le vôtre par exemple), nous avons maintenant fait en sorte que tout soit un plugin.  Cela signifie que vous ne chargez que les fonctionnalités dont vous avez besoin.  Cela signifie également que vous avez besoin d'un endroit pour activer et désactiver les plugins - en fonction de l'évolution de vos besoins.  Tout cela se passe dans le gestionnaire de plugins."
 
 #: ../../layout.md:47
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr ""
+msgstr "Le Plugin Manager est également l'endroit où vous allez lorsque vous créez votre propre plugin et que vous voulez charger votre plugin local dans Remix. Dans ce cas, vous devez cliquer sur le lien \"Connect to a Local Plugin\" en haut du panneau du Plugin Manager."
 
 #: ../../layout.md:49
 msgid "Themes"
@@ -820,7 +820,7 @@ msgstr "Thèmes"
 
 #: ../../layout.md:52
 msgid "So you want to work on Remix with a dark theme or a gray theme or just a different theme that the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes."
-msgstr ""
+msgstr "Vous voulez travailler sur Remix avec un thème sombre ou un thème gris ou simplement un thème différent de celui que vous regardez actuellement ?  Allez dans l'onglet des paramètres et en bas, vous trouverez un choix de nombreux thèmes basés sur bootstrap."
 
 msgid ""
 msgstr ""
@@ -828,95 +828,95 @@ msgstr ""
 
 #: ../../locations.md:1
 msgid "Remix URLs & Links with Parameters"
-msgstr ""
+msgstr "Remixer des URL et des liens avec des paramètres"
 
 #: ../../locations.md:4
 msgid "Remix URLs"
-msgstr ""
+msgstr "Remix URLs"
 
 #: ../../locations.md:5
 msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
-msgstr ""
+msgstr "Une version en ligne est disponible à l'adresse https://remix.ethereum.org. Cette version est stable et est mise à jour à presque toutes les versions."
 
 #: ../../locations.md:6
 msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
-msgstr ""
+msgstr "Une version alpha en ligne est disponible à l'adresse https://remix-alpha.ethereum.org. Il ne s'agit pas d'une version stable."
 
 #: ../../locations.md:8
 msgid "Github repo: https://github.com/ethereum/remix-project . The README contains instructions for running Remix-IDE locally."
-msgstr ""
+msgstr "Dépôt Github : https://github.com/ethereum/remix-project . Le README contient des instructions pour exécuter Remix-IDE localement."
 
 #: ../../locations.md:10
 msgid "Github release: https://github.com/ethereum/remix-project/releases ."
-msgstr ""
+msgstr "Version Github : https://github.com/ethereum/remix-project/releases ."
 
 #: ../../locations.md:13
 msgid "Embedding & Linking to Remix"
-msgstr ""
+msgstr "Embedding & Linking to Remix"
 
 #: ../../locations.md:15
 msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
-msgstr ""
+msgstr "Les urls de Remix-IDE ont des paramètres - il est donc possible de les spécifier :"
 
 #: ../../locations.md:16
 msgid "the list of plugins you want activated"
-msgstr ""
+msgstr "la liste des plugins que vous souhaitez activer"
 
 #: ../../locations.md:17
 msgid "the theme (Dark or Light)"
-msgstr ""
+msgstr "le thème (Sombre ou Clair)"
 
 #: ../../locations.md:18
 msgid "the panels that should be minimized"
-msgstr ""
+msgstr "les panneaux qui doivent être réduits au minimum"
 
 #: ../../locations.md:19
 msgid "if you want the Solidity compiler to have optimize enabled"
-msgstr ""
+msgstr "si vous voulez que le compilateur Solidity ait activé l'optimisation"
 
 #: ../../locations.md:21
 msgid "In the following example, there is a list of plugins that follows the word plugins will be activated and the last plugin will gain the focus."
-msgstr ""
+msgstr "Dans l'exemple suivant, il y a une liste de plugins qui suit le mot plugins sera activée et le dernier plugin aura la priorité."
 
 #: ../../locations.md:26
 msgid "For the plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
-msgstr ""
+msgstr "Les plugins sont appelés par leur nom dans leur profil.  Pour vérifier le nom du profil d'un plugin - pour les plugins construits par des équipes externes, veuillez vous rendre sur https://github.com/ethereum/remix-plugins-directory/tree/master/plugins."
 
 #: ../../locations.md:28
 msgid "Further Customization with URL parameters"
-msgstr ""
+msgstr "Personnalisation plus poussée avec les paramètres URL"
 
 #: ../../locations.md:30
 msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
-msgstr ""
+msgstr "L'URL suivante fermera tout sauf le panneau principal et le panneau d'icônes (le côté et le terminal sont donc minimisés)."
 
 #: ../../locations.md:32
 msgid "https://remix.ethereum.org/?#embed=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#embed=true"
 
 #: ../../locations.md:34
 msgid "To link with the side panel minimized use this URL:"
-msgstr ""
+msgstr "Pour créer un lien avec le panneau latéral réduit, utilisez cette URL :"
 
 #: ../../locations.md:36
 msgid "https://remix.ethereum.org/?#minimizesidepanel=true"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#minimizesidepanel=true"
 
 #: ../../locations.md:38
 msgid "To link to Remix with the dark theme or the light theme specified use this url:"
-msgstr ""
+msgstr "Pour créer un lien vers Remix avec le thème sombre ou le thème clair spécifié, utilisez cette url :"
 
 #: ../../locations.md:40
 msgid "https://remix.ethereum.org/?#theme=Dark"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#theme=Dark"
 
 #: ../../locations.md:42
 msgid "To link to Remix with the Solidity compiler, the unit testing, and LearnEth plugins activated (with Learneth gaining the side panel's focus) & with the Light theme loaded & with the terminal minimized use this URL & with optimize off:"
-msgstr ""
+msgstr "Pour vous connecter à Remix avec le compilateur Solidity, les tests unitaires et les plugins LearnEth activés (LearnEth étant placé dans le panneau latéral), le thème Light chargé et le terminal minimisé, utilisez cette URL et désactivez l'optimisation :"
 
 #: ../../locations.md:44
 msgid "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
-msgstr ""
+msgstr "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
 
 msgid ""
 msgstr ""
@@ -928,35 +928,35 @@ msgstr "Gestionnaire de plugin"
 
 #: ../../plugin_manager.md:4
 msgid "Everything is a PLUGIN in Remix"
-msgstr ""
+msgstr "Tout est un PLUGIN dans Remix"
 
 #: ../../plugin_manager.md:6
 msgid "In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin. This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example)."
-msgstr ""
+msgstr "Afin d'intégrer de nouveaux outils créés par nous et par ...vous dans Remix, nous avons maintenant fait en sorte que tout soit un plugin. Cette architecture permettra également à Remix ou à des parties de Remix d'être intégrées dans d'autres projets (le vôtre par exemple)."
 
 #: ../../plugin_manager.md:9
 msgid "This means that you only load the functionality you need."
-msgstr ""
+msgstr "Cela signifie que vous ne chargez que les fonctionnalités dont vous avez besoin."
 
 #: ../../plugin_manager.md:11
 msgid "It also means that you can turn off and on plugins - as your needs change."
-msgstr ""
+msgstr "Cela signifie également que vous pouvez activer et désactiver les plugins en fonction de vos besoins."
 
 #: ../../plugin_manager.md:13
 msgid "This all happens in the plug manager."
-msgstr ""
+msgstr "Tout cela se passe dans le gestionnaire de prises."
 
 #: ../../plugin_manager.md:15
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
-msgstr ""
+msgstr "Le gestionnaire de plugins est également l'endroit où vous allez lorsque vous créez votre propre plugin et que vous voulez charger votre plugin local dans Remix."
 
 #: ../../plugin_manager.md:17
 msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr ""
+msgstr "Pour charger votre plugin local, vous devez cliquer sur le lien \"Connect to a Local Plugin\" en haut du panneau du gestionnaire de plugins."
 
 #: ../../plugin_manager.md:21
 msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
-msgstr ""
+msgstr "Pour en savoir plus sur la façon de créer votre propre plugin, consultez le README du repo remix-plugin."
 
 msgid ""
 msgstr ""
@@ -964,191 +964,191 @@ msgstr ""
 
 #: ../../remix_commands.md:1
 msgid "Remix Commands"
-msgstr ""
+msgstr "Commandes Remix"
 
 #: ../../remix_commands.md:4
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto completion.  These commands are using the following libraries:"
-msgstr ""
+msgstr "Dans la console, vous pouvez exécuter les commandes énumérées ci-dessous.  Une fois que vous commencez à taper une commande, elle est complétée automatiquement.  Ces commandes utilisent les bibliothèques suivantes :"
 
 #: ../../remix_commands.md:6
 msgid "ethers: The ethers.js library is a compact and complete JavaScript library for Ethereum."
-msgstr ""
+msgstr "ethers : La bibliothèque ethers.js est une bibliothèque JavaScript compacte et complète pour Ethereum."
 
 #: ../../remix_commands.md:8
 msgid "remix:  Ethereum IDE and tools for the web."
-msgstr ""
+msgstr "remix :  IDE Ethereum et outils pour le web."
 
 #: ../../remix_commands.md:10
 msgid "web3: The web3.js library is a collection of modules which contain specific functionality for the ethereum ecosystem."
-msgstr ""
+msgstr "web3 : La bibliothèque web3.js est une collection de modules qui contiennent des fonctionnalités spécifiques pour l'écosystème ethereum."
 
 #: ../../remix_commands.md:12
 msgid "swarmgw: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
-msgstr ""
+msgstr "swarmgw : Cette bibliothèque peut être utilisée pour télécharger des fichiers vers Swarm via https://swarm-gateways.net/."
 
 #: ../../remix_commands.md:14
 msgid "Here's the list of commands"
-msgstr ""
+msgstr "Voici la liste des commandes"
 
 #: ../../remix_commands.md:15
 msgid "remix.debug(hash): Start debugging a transaction."
-msgstr ""
+msgstr "remix.debug(hash) : Commencez à déboguer une transaction."
 
 #: ../../remix_commands.md:17
 msgid "remix.debugHelp(): Display help message for debugging"
-msgstr ""
+msgstr "remix.debugHelp() : Affiche un message d'aide pour le débogage"
 
 #: ../../remix_commands.md:19
 msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
-msgstr ""
+msgstr "remix.execute(filepath) : Exécute le script spécifié par le chemin d'accès au fichier. Si filepath est vide, le script actuellement affiché dans l'éditeur est exécuté."
 
 #: ../../remix_commands.md:21
 msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
-msgstr ""
+msgstr "remix.exeCurrent() : Exécute le script actuellement affiché dans l'éditeur."
 
 #: ../../remix_commands.md:23
 msgid "remix.getFile(path): Returns the content of the file located at the given path"
-msgstr ""
+msgstr "remix.getFile(path) : Renvoie le contenu du fichier situé dans le chemin donné."
 
 #: ../../remix_commands.md:25
 msgid "remix.help(): Display this help message."
-msgstr ""
+msgstr "remix.help() : Affiche ce message d'aide."
 
 #: ../../remix_commands.md:27
 msgid "remix.loadgist(id): Load a gist in the file explorer."
-msgstr ""
+msgstr "remix.loadgist(id) : Charge un gist dans l'explorateur de fichiers."
 
 #: ../../remix_commands.md:29
 msgid "remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
-msgstr ""
+msgstr "remix.loadurl(url) : Charge l'url donnée dans l'explorateur de fichiers. L'url peut être de type github, swarm ou ipfs."
 
 #: ../../remix_commands.md:31
 msgid "remix.setFile(path, content): set the content of the file located at the given path"
-msgstr ""
+msgstr "remix.setFile(path, content) : définit le contenu du fichier situé au chemin donné"
 
 #: ../../remix_commands.md:33
 msgid "remix.setproviderurl(url): Change the current provider to Web3 provider and set the url endpoint."
-msgstr ""
+msgstr "remix.setproviderurl(url) : Change le fournisseur actuel en fournisseur Web3 et définit le point d'arrivée de l'url."
 
 #: ../../remix_commands.md:35
 msgid "swarmgw.get(url, cb): Download files from Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.get(url, cb) : Téléchargez des fichiers depuis Swarm via https**://swarm-gateways.net/"
 
 #: ../../remix_commands.md:37
 msgid "swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-gateways.net/"
-msgstr ""
+msgstr "swarmgw.put(content, cb) : Téléchargement de fichiers vers Swarm via https**://swarm-gateways.net/"
 
 #: ../../remix_commands.md:39
 msgid "ethers.Contract: This API provides a graceful connection to a contract deployed on the blockchain, simplifying calling and querying its functions and handling all the binary protocol and conversion as necessarily."
-msgstr ""
+msgstr "ethers.Contract : Cette API fournit une connexion gracieuse à un contrat déployé sur la blockchain, simplifiant l'appel et l'interrogation de ses fonctions et gérant tout le protocole binaire et la conversion comme il se doit."
 
 #: ../../remix_commands.md:41
 msgid "ethers.HDNode: A Hierarchical Deterministic Wallet represents a large tree of private keys which can reliably be reproduced from an initial seed."
-msgstr ""
+msgstr "ethers.HDNode : Un portefeuille déterministe hiérarchique représente un grand arbre de clés privées qui peut être reproduit de manière fiable à partir d'une graine initiale."
 
 #: ../../remix_commands.md:43
 msgid "ethers.Interface: The Interface Object is a meta-class that accepts a Solidity (or compatible) Application Binary Interface (ABI) and populates functions to deal with encoding and decoding the parameters to pass in and results returned."
-msgstr ""
+msgstr "ethers.Interface : L'objet interface est une méta-classe qui accepte une interface ABI (Application Binary Interface) de Solidity (ou compatible) et remplit des fonctions pour gérer l'encodage et le décodage des paramètres à transmettre et des résultats renvoyés."
 
 #: ../../remix_commands.md:45
 msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
-msgstr ""
+msgstr "ethers.providers : Un fournisseur abstrait une connexion à la blockchain Ethereum, pour l'émission de requêtes et l'envoi de transactions changeant d'état."
 
 #: ../../remix_commands.md:47
 msgid "ethers.SigningKey: The SigningKey interface provides an abstraction around the secp256k1 elliptic curve cryptography library."
-msgstr ""
+msgstr "ethers.SigningKey : L'interface SigningKey fournit une abstraction autour de la bibliothèque de cryptographie à courbe elliptique secp256k1."
 
 #: ../../remix_commands.md:49
 msgid "ethers.utils: The utility functions exposed in both the ethers umbrella package and the ethers-utils."
-msgstr ""
+msgstr "ethers.utils : Les fonctions utilitaires exposées à la fois dans le paquet ethers umbrella et dans le paquet ethers-utils."
 
 #: ../../remix_commands.md:51
 msgid "ethers.utils.AbiCoder: Create a new ABI Coder object"
-msgstr ""
+msgstr "ethers.utils.AbiCoder : Créer un nouvel objet ABI Coder"
 
 #: ../../remix_commands.md:53
 msgid "ethers.utils.RLP: This encoding method is used internally for several aspects of Ethereum, such as encoding transactions and determining contract addresses."
-msgstr ""
+msgstr "ethers.utils.RLP : Cette méthode d'encodage est utilisée en interne pour plusieurs aspects d'Ethereum, tels que l'encodage des transactions et la détermination des adresses des contrats."
 
 #: ../../remix_commands.md:55
 msgid "ethers.Wallet: A wallet manages a private/public key pair which is used to cryptographically sign transactions and prove ownership on the Ethereum network."
-msgstr ""
+msgstr "ethers.Wallet : Un wallet gère une paire de clés privée/publique qui est utilisée pour signer cryptographiquement les transactions et prouver la propriété sur le réseau Ethereum."
 
 #: ../../remix_commands.md:57
 msgid "ethers.version: Contains the version of the ethers container object."
-msgstr ""
+msgstr "ethers.version : Contient la version de l'objet conteneur ethers."
 
 #: ../../remix_commands.md:59
 msgid "web3.bzz: Bzz module for interacting with the swarm network."
-msgstr ""
+msgstr "web3.bzz : module Bzz pour interagir avec le réseau de l'essaim."
 
 #: ../../remix_commands.md:61
 msgid "web3.eth: Eth module for interacting with the Ethereum network."
-msgstr ""
+msgstr "web3.eth : Module Eth pour interagir avec le réseau Ethereum."
 
 #: ../../remix_commands.md:63
 msgid "web3.eth.accounts: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts : Le site web3.eth.accounts contient des fonctions permettant de générer des comptes Ethereum et de signer des transactions et des données."
 
 #: ../../remix_commands.md:65
 msgid "web3.eth.abi: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
-msgstr ""
+msgstr "web3.eth.abi : Les fonctions web3.eth.abi vous permettent de dé- et d'encoder des paramètres à l'ABI (Application Binary Interface) pour les appels de fonction à l'EVM (Ethereum Virtual Machine)."
 
 #: ../../remix_commands.md:67
 msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
-msgstr ""
+msgstr "web3.eth.ens : Les fonctions web3.eth.ens vous permettent d'interagir avec ENS."
 
 #: ../../remix_commands.md:69
 msgid "web3.eth.Iban: The web3.eth.Iban function lets convert Ethereum addresses from and to IBAN and BBAN."
-msgstr ""
+msgstr "web3.eth.Iban : La fonction web3.eth.Iban permet de convertir les adresses Ethereum de et vers IBAN et BBAN."
 
 #: ../../remix_commands.md:71
 msgid "web3.eth.net: Net module for interacting with network properties."
-msgstr ""
+msgstr "web3.eth.net : Module réseau permettant d'interagir avec les propriétés du réseau."
 
 #: ../../remix_commands.md:73
 msgid "web3.eth.personal: Personal module for interacting with the Ethereum accounts."
-msgstr ""
+msgstr "web3.eth.personal : Module personnel pour interagir avec les comptes Ethereum."
 
 #: ../../remix_commands.md:75
 msgid "web3.eth.subscribe: The web3.eth.subscribe function lets you subscribe to specific events in the blockchain."
-msgstr ""
+msgstr "web3.eth.subscribe : La fonction web3.eth.subscribe vous permet de vous abonner à des événements spécifiques de la blockchain."
 
 #: ../../remix_commands.md:77
 msgid "web3.givenProvider: When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser. Will return the given provider by the (browser) environment, otherwise null."
-msgstr ""
+msgstr "web3.givenProvider : Lorsque vous utilisez web3.js dans un navigateur compatible Ethereum, il sera défini avec le fournisseur natif actuel de ce navigateur. Retourne le fournisseur donné par l'environnement (du navigateur), sinon null."
 
 #: ../../remix_commands.md:79
 msgid "web3.modules: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.modules : Contient la version de l'objet conteneur web3."
 
 #: ../../remix_commands.md:81
 msgid "web3.providers: Contains the current available providers."
-msgstr ""
+msgstr "web3.providers : Contient les fournisseurs actuellement disponibles."
 
 #: ../../remix_commands.md:83
 msgid "web3.shh: Shh module for interacting with the whisper protocol"
-msgstr ""
+msgstr "web3.shh : Module Shh pour interagir avec le protocole whisper"
 
 #: ../../remix_commands.md:85
 msgid "web3.utils: This package provides utility functions for Ethereum dapps and other **web3.js packages."
-msgstr ""
+msgstr "web3.utils : Ce paquet fournit des fonctions utilitaires pour les dapps Ethereum et d'autres **paquets web3.js."
 
 #: ../../remix_commands.md:87
 msgid "web3.version: Contains the version of the web3 container object."
-msgstr ""
+msgstr "web3.version : Contient la version de l'objet conteneur web3."
 
 #: ../../remix_commands.md:89
 msgid "web3.eth.clearSubscriptions();: Resets subscriptions."
-msgstr ""
+msgstr "web3.eth.clearSubscriptions(); : Réinitialise les abonnements."
 
 #: ../../remix_commands.md:91
 msgid "web3.eth.Contract(jsonInterface[, address][, options]): The **web3.eth.Contract object makes it easy to interact with smart contracts on the ethereum blockchain."
-msgstr ""
+msgstr "web3.eth.Contract(jsonInterface[, address][, options]) : L'objet **web3.eth.Contract facilite l'interaction avec les contrats intelligents sur la blockchain ethereum."
 
 #: ../../remix_commands.md:93
 msgid "web3.eth.accounts.create([entropy]);: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
-msgstr ""
+msgstr "web3.eth.accounts.create([entropy]); : Le site web3.eth.accounts contient des fonctions permettant de générer des comptes Ethereum et de signer des transactions et des données."
 
 msgid ""
 msgstr ""
@@ -1156,23 +1156,23 @@ msgstr ""
 
 #: ../../remixd.md:1
 msgid "Remixd: Access your Local Filesystem"
-msgstr ""
+msgstr "Remixd : Accédez à votre système de fichiers local"
 
 #: ../../remixd.md:3
 msgid "To give the Remix-ide (the web app) access to a folder on your local computer, you need to use remixd."
-msgstr ""
+msgstr "Pour donner à Remix-ide (l'application web) l'accès à un dossier sur votre ordinateur local, vous devez utiliser remixd."
 
 #: ../../remixd.md:5
 msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
-msgstr ""
+msgstr "remixd est à la fois le nom d'un module npm et le nom d'un plugin Remix.  Vous devez installer le plugin (à partir du gestionnaire de plugins) et vous devez installer le module npm remixd."
 
 #: ../../remixd.md:8
 msgid "NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin."
-msgstr ""
+msgstr "NOTE : vous devez installer le module npm remixd et exécuter sa commande avant d'activer le plugin remixd."
 
 #: ../../remixd.md:10
 msgid "The code of remixd is here ."
-msgstr ""
+msgstr "Le code de remixd est ici ."
 
 #: ../../remixd.md:13
 msgid "remixd Installation"
@@ -1180,11 +1180,11 @@ msgstr "Installation remixd"
 
 #: ../../remixd.md:14
 msgid "remixd can be globally installed using the following command: npm install -g remixd"
-msgstr ""
+msgstr "remixd peut être installé globalement en utilisant la commande suivante : npm install -g remixd"
 
 #: ../../remixd.md:17
 msgid "Or just install it in the directory of your choice by removing the -g flag: npm install remixd"
-msgstr ""
+msgstr "Vous pouvez également l'installer dans le répertoire de votre choix en supprimant le drapeau -g : npm install remixd"
 
 #: ../../remixd.md:20
 msgid "remixd Command"
@@ -1192,27 +1192,27 @@ msgstr "Commande remixd"
 
 #: ../../remixd.md:21
 msgid "From the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
-msgstr ""
+msgstr "Dans le terminal, la commande remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> lancera remixd et partagera le dossier donné avec remix-ide."
 
 #: ../../remixd.md:23
 msgid "For example, to use remixd with Remix IDE, use this command: remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
-msgstr ""
+msgstr "Par exemple, pour utiliser remixd avec Remix IDE, utilisez la commande suivante : remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
 
 #: ../../remixd.md:26
 msgid "Make sure that if you use https://remix.ethereum.org (secure http) in the remixd command (like in the example above), that you are also pointing your browser to https://remix.ethereum.org and not to http://remix.ethereum.org (plain old insecure http).  Or if you want to use http in the browser use http in the remixd command."
-msgstr ""
+msgstr "Assurez-vous que si vous utilisez https://remix.ethereum.org (http sécurisé) dans la commande remixd (comme dans l'exemple ci-dessus), vous faites également pointer votre navigateur vers https://remix.ethereum.org et non vers http://remix.ethereum.org (http non sécurisé).  Ou si vous voulez utiliser http dans le navigateur, utilisez http dans la commande remixd."
 
 #: ../../remixd.md:28
 msgid "The folder is shared using a websocket connection between Remix IDE and remixd."
-msgstr ""
+msgstr "Le dossier est partagé en utilisant une connexion websocket entre Remix IDE et remixd."
 
 #: ../../remixd.md:31
 msgid "Be sure the user executing remixd has read/write permission on the folder."
-msgstr ""
+msgstr "Assurez-vous que l'utilisateur qui exécute remixd a les droits de lecture/écriture sur le dossier."
 
 #: ../../remixd.md:34
 msgid "There is an option to run remixd in read-only mode, use --read-only flag."
-msgstr ""
+msgstr "Il existe une option pour exécuter remixd en mode lecture seule, utilisez le drapeau --read-only."
 
 #: ../../remixd.md:36
 msgid "Warning!"
@@ -1220,43 +1220,43 @@ msgstr "Attention !"
 
 #: ../../remixd.md:37
 msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
-msgstr ""
+msgstr "remixd fournit un accès complet en lecture et en écriture au dossier donné pour toute application qui peut accéder au port TCP 65520 sur votre hôte local."
 
 #: ../../remixd.md:40
 msgid "After the command is running, activate the remixd plugin."
-msgstr ""
+msgstr "Une fois la commande lancée, activez le plugin remixd."
 
 #: ../../remixd.md:41
 msgid "From Remix IDE, in the Plugin Manager, activate the remixd plugin.  This plugin is a websocket plugin and it has no UI other than a modal dialog box."
-msgstr ""
+msgstr "Depuis Remix IDE, dans le Plugin Manager, activez le plugin remixd.  Ce plugin est un plugin websocket et il n'a pas d'interface utilisateur autre qu'une boîte de dialogue modale."
 
 #: ../../remixd.md:43
 msgid "This modal will ask confirmation"
-msgstr ""
+msgstr "Cette fenêtre modale vous demandera de confirmer"
 
 #: ../../remixd.md:45
 msgid "Accepting this dialog will start a session."
-msgstr ""
+msgstr "En acceptant ce dialogue, vous démarrez une session."
 
 #: ../../remixd.md:47
 msgid "If you do not have remixd running in the background - another modal will open up and it will say:"
-msgstr ""
+msgstr "Si remixd ne tourne pas en arrière-plan, une autre fenêtre modale s'ouvrira :"
 
 #: ../../remixd.md:54
 msgid "Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be available in the file explorer."
-msgstr ""
+msgstr "Si vous n'obtenez pas la deuxième fenêtre modale, votre connexion au démon remixd est réussie. Le dossier partagé sera disponible dans l'explorateur de fichiers."
 
 #: ../../remixd.md:56
 msgid "When you click the activation of remixd is successful - there will NOT be an icon that loads in the icon panel."
-msgstr ""
+msgstr "Lorsque vous cliquez sur l'activation de remixd est réussie - il n'y aura PAS d'icône qui se charge dans le panneau d'icônes."
 
 #: ../../remixd.md:58
 msgid "Click the File Explorers icon and in the swap panel you should now see the folder for localhost."
-msgstr ""
+msgstr "Cliquez sur l'icône de l'explorateur de fichiers et, dans le panneau d'échange, vous devriez maintenant voir le dossier de localhost."
 
 #: ../../remixd.md:60
 msgid "Click on the localhost connection icon:"
-msgstr ""
+msgstr "Cliquez sur l'icône de connexion localhost :"
 
 msgid ""
 msgstr ""
@@ -1264,35 +1264,35 @@ msgstr ""
 
 #: ../../remix_tutorials_github.md:1
 msgid "Remix Github Tutorials"
-msgstr ""
+msgstr "Remixer les tutoriels Github"
 
 #: ../../remix_tutorials_github.md:4
 msgid "There are a series of tutorials in our github repo remix-workshops."
-msgstr ""
+msgstr "Il existe une série de tutoriels dans notre répertoire github remix-workshops."
 
 #: ../../remix_tutorials_github.md:6
 msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
-msgstr ""
+msgstr "Nous sommes en train de mettre à jour ces tutoriels pour qu'ils utilisent la nouvelle mise en page de Remix."
 
 #: ../../remix_tutorials_github.md:8
 msgid "In this repo there tutorials for all levels."
-msgstr ""
+msgstr "Dans ce répertoire, vous trouverez des tutoriels pour tous les niveaux."
 
 #: ../../remix_tutorials_github.md:10
 msgid "There are tutorials for specific remix functionalities like:"
-msgstr ""
+msgstr "Il existe des tutoriels pour des fonctionnalités spécifiques du remix comme :"
 
 #: ../../remix_tutorials_github.md:12
 msgid "Deploying"
-msgstr ""
+msgstr "Déploiement"
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
-msgstr ""
+msgstr "Essais"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
-msgstr ""
+msgstr "Développement du plugin Remix"
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
@@ -1300,7 +1300,7 @@ msgstr "Autre"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr ""
+msgstr "Ateliers externes supplémentaires"
 
 msgid ""
 msgstr ""
@@ -1312,11 +1312,11 @@ msgstr "Déployer & Exécuter"
 
 #: ../../run.md:4
 msgid "The Deploy & Run module allows you to send transactions to the current environment."
-msgstr ""
+msgstr "Le module Deploy & Run vous permet d'envoyer des transactions dans l'environnement actuel."
 
 #: ../../run.md:6
 msgid "To use this module, you need to have a contract compiled.  So, if there is a contract name in the <b>CONTRACT</b> select box (the select box is under the VALUE input field), you can use this module.  If nothing is there or you do not see the contract you want, you need to select a contract in the editor to make it active, go to a compiler module and compile it, and then come back to Deploy & Run."
-msgstr ""
+msgstr "Pour utiliser ce module, vous devez avoir compilé un contrat.  Donc, s'il y a un nom de contrat dans la boîte de sélection <b>CONTRACT</b> (la boîte de sélection se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module.  S'il n'y a rien ou si vous ne voyez pas le contrat que vous voulez, vous devez sélectionner un contrat dans l'éditeur pour le rendre actif, aller dans un module de compilation et le compiler, puis revenir à Deploy & Run."
 
 #: ../../run.md:10
 msgid "Environment"
@@ -1324,71 +1324,71 @@ msgstr "Environnement"
 
 #: ../../run.md:13
 msgid "JavaScript VM: All the transactions will be executed in a sandbox blockchain in the browser. This means nothing will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved."
-msgstr ""
+msgstr "JavaScript VM : Toutes les transactions seront exécutées dans un bac à sable (sandbox blockchain) dans le navigateur. Cela signifie que rien ne sera conservé lorsque vous rechargerez la page. La JsVM est sa propre blockchain et à chaque rechargement, elle démarre une nouvelle blockchain, l'ancienne n'étant pas sauvegardée."
 
 #: ../../run.md:17
 msgid "Injected Provider: Remix will connect to an injected web3 provider. Metamask is an example of a provider that inject web3."
-msgstr ""
+msgstr "Fournisseur injecté : Remix se connectera à un fournisseur web3 injecté. Metamask est un exemple de fournisseur qui injecte web3."
 
 #: ../../run.md:20
 msgid "Web3 Provider: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client."
-msgstr ""
+msgstr "Fournisseur Web3 : Remix se connectera à un nœud distant. Vous devrez fournir l'URL du fournisseur sélectionné : geth, parity ou n'importe quel client Ethereum."
 
 #: ../../run.md:22
 msgid "More about Web3 Provider"
-msgstr ""
+msgstr "Plus d'informations sur Web3 Provider"
 
 #: ../../run.md:24
 msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
-msgstr ""
+msgstr "Si vous utilisez Geth et https://remix.ethereum.org, veuillez utiliser la commande Geth suivante pour autoriser les requêtes provenant de Remix :"
 
 #: ../../run.md:26
 msgid "geth --rpc --rpccorsdomain https://remix.ethereum.org"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain https://remix.ethereum.org"
 
 #: ../../run.md:28
 msgid "Also see Geth Docs about the rpc server"
-msgstr ""
+msgstr "Consultez également la documentation de Geth sur le serveur rpc."
 
 #: ../../run.md:30
 msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
-msgstr ""
+msgstr "Pour exécuter Remix à l'aide de https://remix.ethereum.org et d'un nœud de test local, utilisez cette commande Geth :"
 
 #: ../../run.md:32
 msgid "geth --rpc --rpccorsdomain=\"https://remix.ethereum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain=\"https://remix.ethereum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
 
 #: ../../run.md:34
 msgid "If you are using remix-alpha or a local version of remix - replace the url of the --rpccorsdomain with the url of Remix that you are using."
-msgstr ""
+msgstr "Si vous utilisez remix-alpha ou une version locale de remix, remplacez l'url de --rpccorsdomain par l'url de Remix que vous utilisez."
 
 #: ../../run.md:36
 msgid "To run Remix Desktop & a local test node, use this Geth command:"
-msgstr ""
+msgstr "Pour exécuter Remix Desktop et un nœud de test local, utilisez cette commande Geth :"
 
 #: ../../run.md:38
 msgid "geth --rpc --rpccorsdomain=\"package://a7df6d3c223593f3550b35e90d7b0b1f.mod\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
-msgstr ""
+msgstr "geth --rpc --rpccorsdomain=\"package://a7df6d3c223593f3550b35e90d7b0b1f.mod\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
 
 #: ../../run.md:40
 msgid "Also see Geth Docs on Dev mode"
-msgstr ""
+msgstr "Voir aussi la documentation Geth sur le mode Dev"
 
 #: ../../run.md:42
 msgid "The Web3 Provider Endpoint for a local node is http://localhost:8545"
-msgstr ""
+msgstr "Le point de terminaison du fournisseur Web3 pour un nœud local est http://localhost:8545."
 
 #: ../../run.md:46
 msgid "WARNING: Don't get lazy. It is a bad idea to use the Geth flag <b>--rpccorsdomain</b> with a wildcard: --rpccorsdomain *"
-msgstr ""
+msgstr "AVERTISSEMENT : Ne soyez pas paresseux. C'est une mauvaise idée d'utiliser le drapeau Geth <b>--rpccorsdomain</b> avec un joker : --rpccorsdomain *"
 
 #: ../../run.md:48
 msgid "If you put the wildcard *, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  --rpccorsdomain 'https://remix-alpha.ethereum.org'"
-msgstr ""
+msgstr "Si vous mettez le caractère générique *, cela signifie que tout le monde peut demander le noeud. Par contre, si vous mettez une URL, cela restreint les urls à cette seule URL - par exemple --rpccorsdomain 'https://remix-alpha.ethereum.org'"
 
 #: ../../run.md:50
 msgid "Only use --rpccorsdomain * when using a test chain AND using only test accounts. For real accounts or on the mainchain specify the url."
-msgstr ""
+msgstr "N'utilisez --rpccorsdomain * que lorsque vous utilisez une chaîne de test ET que vous n'utilisez que des comptes de test. Pour les comptes réels ou sur la chaîne principale, spécifiez l'url."
 
 #: ../../run.md:55
 msgid "Account:"
@@ -1396,7 +1396,7 @@ msgstr "Compte :"
 
 #: ../../run.md:57
 msgid "Account: the list of accounts associated with the current environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
-msgstr ""
+msgstr "Compte : la liste des comptes associés à l'environnement actuel (et leurs soldes associés).  Sur la JsVM, vous avez le choix entre 5 comptes.  Si vous utilisez Injected Web3 avec MetaMask, vous devez changer le compte dans MetaMask."
 
 #: ../../run.md:60
 msgid "Gas Limit:"
@@ -1404,7 +1404,7 @@ msgstr "Limite de gaz :"
 
 #: ../../run.md:62
 msgid "This sets the maximum amount of gas that will be allowed for all the transactions created in Remix."
-msgstr ""
+msgstr "Ceci définit la quantité maximale de gaz qui sera autorisée pour toutes les transactions créées dans Remix."
 
 #: ../../run.md:65
 msgid "Value:"
@@ -1412,111 +1412,111 @@ msgstr "Valeur :"
 
 #: ../../run.md:67
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is NOT for gas."
-msgstr ""
+msgstr "Ceci définit le montant d'ETH, WEI, GWEI etc. qui est envoyé à un contrat ou à une fonction payable.  (Note : les fonctions payables ont un bouton rouge). La valeur est toujours remise à 0 après l'exécution de chaque transaction). Le champ Valeur n'est PAS destiné au gaz."
 
 #: ../../run.md:71
 msgid "Initiate Instance"
-msgstr ""
+msgstr "Initier l'instance"
 
 #: ../../run.md:74
 msgid "In the image above, the select box is set to Ballot.  This select box will contain the list of compiled contracts."
-msgstr ""
+msgstr "Dans l'image ci-dessus, la boîte de sélection est définie sur Bulletin de vote.  Cette boîte de sélection contient la liste des contrats compilés."
 
 #: ../../run.md:76
 msgid "Deploy send a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). Note that if the constructor has parameters, you need to specify them."
-msgstr ""
+msgstr "Déployer envoie une transaction qui déploie le contrat sélectionné. Lorsque la transaction est analysée, l'instance nouvellement créée est ajoutée (cela peut prendre plusieurs secondes). Notez que si le constructeur a des paramètres, vous devez les spécifier."
 
 #: ../../run.md:81
 msgid "At Address this is used at access a contract that has already been deployed. It assumes that the given address is an instance of the selected contract.  Note: There's no check at this point, so be careful when using this feature, and be sure you trust the contract at that address."
-msgstr ""
+msgstr "À l'adresse Cette option est utilisée pour accéder à un contrat qui a déjà été déployé. Elle suppose que l'adresse donnée est une instance du contrat sélectionné.  Note : Il n'y a pas de vérification à ce stade, donc soyez prudent lorsque vous utilisez cette fonctionnalité, et assurez-vous que vous avez confiance dans le contrat à cette adresse."
 
 #: ../../run.md:84
 msgid "Pending Instances"
-msgstr ""
+msgstr "Instances en attente"
 
 #: ../../run.md:87
 msgid "Validating a transaction takes several seconds. During this time, the GUI shows it in a pending mode. When the transaction is mined, the number of pending transactions is updated and the transaction is added to the log (see terminal)."
-msgstr ""
+msgstr "La validation d'une transaction prend plusieurs secondes. Pendant ce temps, l'interface graphique l'affiche en mode \"en attente\". Lorsque la transaction est traitée, le nombre de transactions en attente est mis à jour et la transaction est ajoutée au journal (voir le terminal)."
 
 #: ../../run.md:92
 msgid "Using the ABI"
-msgstr ""
+msgstr "Utilisation de l'ABI"
 
 #: ../../run.md:95
 msgid "Using Deploy or At Address is a classic use case of Remix. However, it is possible to interact with a contract by using its ABI. The ABI is a JSON array which describe its interface."
-msgstr ""
+msgstr "L'utilisation de Deploy ou At Address est un cas d'utilisation classique de Remix. Cependant, il est possible d'interagir avec un contrat en utilisant son ABI. L'ABI est un tableau JSON qui décrit son interface."
 
 #: ../../run.md:99
 msgid "To interact with a contract using the ABI, create a new file in Remix with extension *.abi and copy the ABI content to it. Then, in the input next to At Address, put the Address of the contract you want to interact with. Click on At Address, a new \"connection\" with the contract will popup below."
-msgstr ""
+msgstr "Pour interagir avec un contrat à l'aide de l'ABI, créez un nouveau fichier dans Remix avec l'extension *.abi et copiez-y le contenu de l'ABI. Ensuite, dans la zone de saisie située à côté de At Address, indiquez l'adresse du contrat avec lequel vous souhaitez interagir. Cliquez sur At Address, une nouvelle \"connexion\" avec le contrat apparaîtra ci-dessous."
 
 #: ../../run.md:105
 msgid "Using the Recorder"
-msgstr ""
+msgstr "Utilisation de l'enregistreur"
 
 #: ../../run.md:108
 msgid "The Recorder is a tool used to save a bunch of transactions in a JSON file and rerun them later either in the same environment or in another."
-msgstr ""
+msgstr "L'enregistreur est un outil utilisé pour enregistrer un ensemble de transactions dans un fichier JSON et les réexécuter plus tard, soit dans le même environnement, soit dans un autre."
 
 #: ../../run.md:111
 msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
-msgstr ""
+msgstr "L'enregistrement dans le fichier JSON (appelé par défaut scenario.json) permet de vérifier facilement la liste des transactions, d'ajuster les paramètres d'entrée, de changer la bibliothèque liée, etc..."
 
 #: ../../run.md:113
 msgid "There are many use cases for the recorder."
-msgstr ""
+msgstr "L'enregistreur peut être utilisé dans de nombreux cas."
 
 #: ../../run.md:115
 msgid "For instance:"
-msgstr ""
+msgstr "Par exemple :"
 
 #: ../../run.md:117
 msgid "After having coded and tested contracts in a constrained environment (like the JavaScript VM), you could then change the environment and redeploy it to a more realistic environment like a test net with an injected web3 or to a Geth node. By using the generated scenario.json file, you will be using all the same settings that you used in the Javascript VM.  And this mean that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
-msgstr ""
+msgstr "Après avoir codé et testé des contrats dans un environnement contraint (comme la VM JavaScript), vous pouvez changer l'environnement et le redéployer dans un environnement plus réaliste comme un réseau de test avec un web3 injecté ou un nœud Geth. En utilisant le fichier scenario.json généré, vous utiliserez tous les mêmes paramètres que ceux utilisés dans la VM JavaScript.  Cela signifie que vous n'aurez pas besoin de cliquer 100 fois sur l'interface pour obtenir l'état que vous avez obtenu à l'origine.  L'enregistreur pourrait donc être un outil pour protéger votre santé mentale."
 
 #: ../../run.md:120
 msgid "You can also change the settings in the scenario.json file to customize the playback."
-msgstr ""
+msgstr "Vous pouvez également modifier les paramètres du fichier scenario.json pour personnaliser la lecture."
 
 #: ../../run.md:122
 msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
-msgstr ""
+msgstr "Le déploiement d'un contrat nécessite souvent plus que la création d'une transaction et l'enregistreur automatise donc ce déploiement."
 
 #: ../../run.md:125
 msgid "Working in a dev environment often requires to setup the state in a first place."
-msgstr ""
+msgstr "Travailler dans un environnement de développement nécessite souvent de configurer l'état en premier lieu."
 
 #: ../../run.md:130
 msgid "scenario.json"
-msgstr ""
+msgstr "scenario.json"
 
 #: ../../run.md:131
 msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a 0 next to Transactions Recorded.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
-msgstr ""
+msgstr "Pour créer ce fichier dans l'enregistreur, vous devez bien entendu avoir effectué quelques transactions.  Dans l'image ci-dessus, il y a un 0 à côté de Transactions enregistrées.  Ce n'est donc pas le bon moment pour enregistrer des transactions, parce que - eh bien, parce qu'il n'y en a pas.  Chaque fois que vous effectuez une transaction, ce nombre s'incrémente.  Lorsque vous êtes prêt, cliquez sur l'icône de la disquette et le fichier scenario.json sera créé."
 
 #: ../../run.md:133
 msgid "The JSON file below is an example of the scenario.json file."
-msgstr ""
+msgstr "Le fichier JSON ci-dessous est un exemple du fichier scenario.json."
 
 #: ../../run.md:135
 msgid "In it, 3 transactions are executed:"
-msgstr ""
+msgstr "Trois transactions y sont exécutées :"
 
 #: ../../run.md:137
 msgid "The first corresponds to the deployment of the lib testLib."
-msgstr ""
+msgstr "La première correspond au déploiement de la librairie testLib."
 
 #: ../../run.md:139
 msgid "The second corresponds to the deployment of the contract test with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property linkReferences. In that case we use the address of the previously created library : created{1512830014773}. The number is the id (timestamp) of the transaction that led to the creation of the library."
-msgstr ""
+msgstr "Le second correspond au déploiement du contrat test dont le premier paramètre du constructeur est fixé à 11. Ce contrat dépend d'une bibliothèque. Le lien est fait en utilisant la propriété linkReferences. Dans ce cas, nous utilisons l'adresse de la bibliothèque précédemment créée : created{1512830014773}. Le numéro est l'identifiant (horodatage) de la transaction qui a conduit à la création de la bibliothèque."
 
 #: ../../run.md:146
 msgid "The third record corresponds to the call to the function set of the contract test (the property to is set to: created{1512830015080}) . Input parameters are 1 and 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
-msgstr ""
+msgstr "Le troisième enregistrement correspond à l'appel à la fonction set du contrat test (la propriété to est fixée à : created{1512830015080}). Les paramètres d'entrée sont 1 et 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
 
 #: ../../run.md:151
 msgid "All these transactions are created using the value of the accounts account{0}."
-msgstr ""
+msgstr "Toutes ces transactions sont créées en utilisant la valeur du compte{0}."
 
 msgid ""
 msgstr ""
@@ -1528,23 +1528,23 @@ msgstr "Paramètres"
 
 #: ../../settings.md:4
 msgid "To get to Settings click the gear a the very bottom of the icon panel."
-msgstr ""
+msgstr "Pour accéder aux paramètres, cliquez sur la roue dentée située tout en bas du panneau d'icônes."
 
 #: ../../settings.md:6
 msgid "You can find a link to the homepage (if you closed it) as well as a link to our Gitter Channel and for you aesthetes out there, we now have a rather large list of themes."
-msgstr ""
+msgstr "Vous pouvez trouver un lien vers la page d'accueil (si vous l'avez fermée) ainsi qu'un lien vers notre canal Gitter et pour les esthètes, nous avons maintenant une liste assez large de thèmes."
 
 #: ../../settings.md:10
 msgid "Another important settings:"
-msgstr ""
+msgstr "Un autre paramètre important :"
 
 #: ../../settings.md:12
 msgid "Text wrap: controls if the text in the editor should be wrapped."
-msgstr ""
+msgstr "Enveloppe du texte : permet de contrôler si le texte dans l'éditeur doit être enveloppé."
 
 #: ../../settings.md:14
 msgid "Enable optimization: defines if the compiler should enable optimization during compilation. Enabling this option saves execution gas. It is useful to enable optimization for contracts ready to be deployed in production but could lead to some inconsistencies when debugging such a contract."
-msgstr ""
+msgstr "Activer l'optimisation : définit si le compilateur doit activer l'optimisation pendant la compilation. L'activation de cette option permet d'économiser du gaz d'exécution. Il est utile d'activer l'optimisation pour les contrats prêts à être déployés en production, mais cela peut entraîner des incohérences lors du débogage d'un tel contrat."
 
 msgid ""
 msgstr ""
@@ -1552,31 +1552,31 @@ msgstr ""
 
 #: ../../solidity_editor.md:1
 msgid "Solidity Editor"
-msgstr ""
+msgstr "Solidity Editor"
 
 #: ../../solidity_editor.md:4
 msgid "The Remix editor recompiles the code each time the current file is changed or another file is selected. It also provides syntax highlighting mapped to solidity keywords."
-msgstr ""
+msgstr "L'éditeur Remix recompile le code chaque fois que le fichier en cours est modifié ou qu'un autre fichier est sélectionné. Il fournit également une mise en évidence de la syntaxe en fonction des mots-clés de Solidity."
 
 #: ../../solidity_editor.md:10
 msgid "Here's the list of some important features:"
-msgstr ""
+msgstr "Voici la liste de quelques caractéristiques importantes :"
 
 #: ../../solidity_editor.md:12
 msgid "It display opened files as tabs."
-msgstr ""
+msgstr "Il affiche les fichiers ouverts sous forme d'onglets."
 
 #: ../../solidity_editor.md:13
 msgid "Compilation Warning and Error are displayed in the gutter"
-msgstr ""
+msgstr "Les avertissements et les erreurs de compilation sont affichés dans la gouttière."
 
 #: ../../solidity_editor.md:14
 msgid "Remix saves the current file continuously (5s after the last changes)"
-msgstr ""
+msgstr "Remix enregistre le fichier actuel en continu (5s après les dernières modifications)"
 
 #: ../../solidity_editor.md:16
 msgid "+/- on the top left corner enable you to increase/decrease the font size of the editor"
-msgstr ""
+msgstr "Les touches +/- situées dans le coin supérieur gauche vous permettent d'augmenter/diminuer la taille de la police de l'éditeur."
 
 msgid ""
 msgstr ""
@@ -1584,59 +1584,59 @@ msgstr ""
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
-msgstr ""
+msgstr "Analyse statique de Solidity"
 
 #: ../../static_analysis.md:4
 msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
-msgstr ""
+msgstr "L'analyse statique du code est un processus qui permet de déboguer le code en l'examinant sans l'exécuter."
 
 #: ../../static_analysis.md:6
 msgid "Solidity Static Analysis plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. This plugin comes with Solidity environment of Remix IDE. It can also be activated individually from Plugin Manager."
-msgstr ""
+msgstr "Le plugin Solidity Static Analysis effectue une analyse statique des contrats intelligents Solidity une fois qu'ils sont compilés. Il vérifie les vulnérabilités de sécurité et les mauvaises pratiques de développement, entre autres. Ce plugin est fourni avec l'environnement Solidity de l'IDE Remix. Il peut également être activé individuellement à partir du gestionnaire de plugins."
 
 #: ../../static_analysis.md:8
 msgid "How to use"
-msgstr ""
+msgstr "Comment l'utiliser ?"
 
 #: ../../static_analysis.md:11
 msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one Auto run checkbox and a Run button."
-msgstr ""
+msgstr "Si vous sélectionnez ce plugin, vous verrez un certain nombre de modules listés avec des cases à cocher, une case à cocher Exécution automatique et un bouton Exécuter."
 
 #: ../../static_analysis.md:15
 msgid "By default, all modules are selected for analysis and a new analysis is performed at each compilation."
-msgstr ""
+msgstr "Par défaut, tous les modules sont sélectionnés pour l'analyse et une nouvelle analyse est effectuée à chaque compilation."
 
 #: ../../static_analysis.md:17
 msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis again for last compiled contract by clicking on Run."
-msgstr ""
+msgstr "Vous pouvez sélectionner/désélectionner les modules sous lesquels le contrat doit être analysé et vous pouvez relancer l'analyse pour le dernier contrat compilé en cliquant sur Exécuter."
 
 #: ../../static_analysis.md:19
 msgid "If you don't want to run analysis each time you compile a contract, just uncheck the checkbox near to Auto run."
-msgstr ""
+msgstr "Si vous ne souhaitez pas exécuter l'analyse à chaque fois que vous compilez un contrat, il vous suffit de décocher la case située à côté de Exécution automatique."
 
 #: ../../static_analysis.md:21
 msgid "Analysis Modules"
-msgstr ""
+msgstr "Modules d'analyse"
 
 #: ../../static_analysis.md:23
 msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: Security, Gas & Economy, ERC & Miscellaneous."
-msgstr ""
+msgstr "Actuellement, avec Remix IDE v0.10.1, il y a 21 modules d'analyse répertoriés dans 4 catégories. Ces catégories sont les suivantes : Sécurité, Gaz et économie, ERC et Divers."
 
 #: ../../static_analysis.md:25
 msgid "Here is the list of modules under each category along with the example code which should be avoided or used very carefully while development:"
-msgstr ""
+msgstr "Voici la liste des modules de chaque catégorie ainsi que l'exemple de code à éviter ou à utiliser avec précaution lors du développement :"
 
 #: ../../static_analysis.md:27
 msgid "Category: Security"
-msgstr ""
+msgstr "Catégorie : Sécurité"
 
 #: ../../static_analysis.md:28
 msgid "Transaction origin: 'tx.origin' is used"
-msgstr ""
+msgstr "Origine de la transaction : \"tx.origin\" est utilisé"
 
 #: ../../static_analysis.md:30
 msgid "tx.origin is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
-msgstr ""
+msgstr "tx.origin n'est utile que dans des cas très exceptionnels. Si vous l'utilisez pour l'authentification, vous souhaitez généralement le remplacer par \"msg.sender\", car sinon tout contrat que vous appelez peut agir en votre nom."
 
 #: ../../static_analysis.md:32
 #: ../../static_analysis.md:41
@@ -1660,191 +1660,191 @@ msgstr ""
 #: ../../static_analysis.md:269
 #: ../../static_analysis.md:284
 msgid "Example:"
-msgstr ""
+msgstr "Exemple :"
 
 #: ../../static_analysis.md:37
 msgid "Check effects: Potential reentrancy bugs"
-msgstr ""
+msgstr "Vérifier les effets : Bogues de réentrance potentiels"
 
 #: ../../static_analysis.md:39
 msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
-msgstr ""
+msgstr "La violation potentielle du modèle Checks-Effects-Interaction peut entraîner une vulnérabilité de réentrance."
 
 #: ../../static_analysis.md:50
 msgid "Inline assembly: Inline assembly used"
-msgstr ""
+msgstr "Assemblage en ligne : Assemblage en ligne utilisé"
 
 #: ../../static_analysis.md:52
 msgid "Use of inline assembly is advised only in rare cases."
-msgstr ""
+msgstr "L'utilisation de l'assemblage en ligne n'est conseillée que dans de rares cas."
 
 #: ../../static_analysis.md:61
 msgid "Block timestamp: Semantics maybe unclear"
-msgstr ""
+msgstr "Horodatage du bloc : La sémantique n'est peut-être pas claire"
 
 #: ../../static_analysis.md:63
 msgid "now does not mean current time. now is an alias for block.timestamp. block.timestamp can be influenced by miners to a certain degree, be careful."
-msgstr ""
+msgstr "now ne signifie pas l'heure actuelle. now est un alias de block.timestamp. block.timestamp peut être influencé par les mineurs dans une certaine mesure, soyez prudent."
 
 #: ../../static_analysis.md:74
 msgid "Low level calls: Semantics maybe unclear"
-msgstr ""
+msgstr "Appels de bas niveau : La sémantique n'est peut-être pas claire"
 
 #: ../../static_analysis.md:76
 msgid "Use of low level call, callcode or delegatecall should be avoided whenever possible. send does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use transfer whenever failure of the ether transfer should rollback the whole transaction."
-msgstr ""
+msgstr "L'utilisation d'un appel de bas niveau, d'un callcode ou d'un delegatecall doit être évitée dans la mesure du possible. send ne lève pas d'exception en cas d'échec, assurez-vous de traiter le cas d'échec en conséquence. Utilisez transfer lorsque l'échec du transfert d'éther doit annuler l'ensemble de la transaction."
 
 #: ../../static_analysis.md:83
 msgid "Blockhash usage: Semantics maybe unclear"
-msgstr ""
+msgstr "Utilisation de Blockhash : La sémantique n'est peut-être pas claire"
 
 #: ../../static_analysis.md:85
 msgid "blockhash is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
-msgstr ""
+msgstr "blockhash est utilisé pour accéder aux 256 derniers hashs de blocs. Un mineur calcule le hachage du bloc en \"résumant\" les informations contenues dans le bloc en cours de minage. En résumant les informations de manière intelligente, un mineur peut tenter d'influencer le résultat d'une transaction dans le bloc en cours."
 
 #: ../../static_analysis.md:91
 msgid "Selfdestruct: Beware of caller contracts"
-msgstr ""
+msgstr "Autodestruction : Méfiez-vous des contrats d'appel"
 
 #: ../../static_analysis.md:93
 msgid "selfdestruct can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
-msgstr ""
+msgstr "L'autodestruction peut bloquer les contrats appelants de manière inattendue. Soyez particulièrement vigilant si ce contrat est prévu pour être utilisé par d'autres contrats (par exemple, des contrats de bibliothèque, des interactions). L'autodestruction du contrat de l'appelant peut laisser les appelants dans un état inopérant."
 
 #: ../../static_analysis.md:100
 msgid "Category: Gas & Economy"
-msgstr ""
+msgstr "Catégorie : Gaz et économie"
 
 #: ../../static_analysis.md:101
 msgid "Gas costs: Too high gas requirement of functions"
-msgstr ""
+msgstr "Coûts du gaz : Besoins en gaz trop élevés pour les fonctions"
 
 #: ../../static_analysis.md:103
 msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
-msgstr ""
+msgstr "Si le besoin en gaz d'une fonction est supérieur à la limite de gaz du bloc, elle ne peut pas être exécutée. Veuillez éviter les boucles dans vos fonctions ou les actions qui modifient de grandes zones de stockage."
 
 #: ../../static_analysis.md:115
 msgid "This on local calls: Invocation of local functions via 'this'"
-msgstr ""
+msgstr "This sur les appels locaux : Invocation de fonctions locales via \"this"
 
 #: ../../static_analysis.md:117
 msgid "Never use this to call functions in the same contract, it only consumes more gas than normal local calls."
-msgstr ""
+msgstr "Ne l'utilisez jamais pour appeler des fonctions dans le même contrat, cela ne fait que consommer plus de gaz que les appels locaux normaux."
 
 #: ../../static_analysis.md:132
 msgid "Delete on dynamic Array: Use require/assert appropriately"
-msgstr ""
+msgstr "Supprimez les tableaux dynamiques : Utilisez require/assert de manière appropriée"
 
 #: ../../static_analysis.md:134
 msgid "The delete operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
-msgstr ""
+msgstr "L'opération de suppression appliquée à un tableau de taille dynamique dans Solidity génère du code pour supprimer chacun des éléments qu'il contient. Si le tableau est de grande taille, cette opération peut dépasser la limite de gaz du bloc et soulever une exception OOG. Des objets imbriqués de taille dynamique peuvent également produire les mêmes résultats."
 
 #: ../../static_analysis.md:146
 msgid "For loop over dynamic array: Iterations depend on dynamic array's size"
-msgstr ""
+msgstr "Boucle For sur un tableau dynamique : Les itérations dépendent de la taille du tableau dynamique"
 
 #: ../../static_analysis.md:148
 msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
-msgstr ""
+msgstr "Les boucles qui n'ont pas un nombre fixe d'itérations, par exemple les boucles qui dépendent des valeurs de stockage, doivent être utilisées avec précaution : En raison de la limite de gaz par bloc, les transactions ne peuvent consommer qu'une certaine quantité de gaz. Le nombre d'itérations dans une boucle peut dépasser la limite de gaz par bloc, ce qui peut bloquer le contrat complet à un certain moment. En outre, l'utilisation de boucles non bornées peut entraîner de nombreux coûts de gaz qui pourraient être évités. Testez soigneusement le nombre maximum d'éléments que vous pouvez transmettre à ces fonctions pour qu'elles soient efficaces."
 
 #: ../../static_analysis.md:164
 msgid "Ether transfer in loop: Transferring Ether in a for/while/do-while loop"
-msgstr ""
+msgstr "Transfert d'Ether dans une boucle : Transfert d'Ether dans une boucle for/while/do-while"
 
 #: ../../static_analysis.md:166
 msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
-msgstr ""
+msgstr "Le paiement des éthers ne doit pas être effectué en boucle. En raison de la limite de gaz par bloc, les transactions ne peuvent consommer qu'une certaine quantité de gaz. Le nombre d'itérations dans une boucle peut dépasser la limite de gaz par bloc, ce qui peut entraîner le blocage du contrat complet à un certain moment. Le cas échéant, assurez-vous que le nombre d'itérations est faible et que vous faites confiance à chaque adresse concernée."
 
 #: ../../static_analysis.md:189
 msgid "Category: ERC"
-msgstr ""
+msgstr "Catégorie : ERC"
 
 #: ../../static_analysis.md:190
 msgid "ERC20: 'decimals' should be 'uint8'"
-msgstr ""
+msgstr "ERC20 : \"decimals\" devrait être \"uint8\"."
 
 #: ../../static_analysis.md:192
 msgid "ERC20 Contracts decimals function should have uint8 as return type."
-msgstr ""
+msgstr "La fonction decimals de l'ERC20 Contracts devrait avoir uint8 comme type de retour."
 
 #: ../../static_analysis.md:202
 msgid "Category: Miscellaneous"
-msgstr ""
+msgstr "Catégorie : Divers"
 
 #: ../../static_analysis.md:203
 msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
-msgstr ""
+msgstr "Fonctions constantes/vues/pures : Fonctions potentiellement constantes/vues/pures"
 
 #: ../../static_analysis.md:205
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
-msgstr ""
+msgstr "Il met en garde contre les méthodes qui devraient potentiellement être constantes/visibles/pures mais qui ne le sont pas."
 
 #: ../../static_analysis.md:213
 msgid "Similar variable names: Variable names are too similar"
-msgstr ""
+msgstr "Noms de variables similaires : Les noms de variables sont trop similaires"
 
 #: ../../static_analysis.md:215
 msgid "It warns on the usage of similar variable names."
-msgstr ""
+msgstr "Il met en garde contre l'utilisation de noms de variables similaires."
 
 #: ../../static_analysis.md:225
 msgid "No return: Function with 'returns' not returning"
-msgstr ""
+msgstr "Pas de retour : La fonction avec des \"retours\" n'est pas retournée"
 
 #: ../../static_analysis.md:227
 msgid "It warns for the methods which define a return type but never explicitly return a value."
-msgstr ""
+msgstr "Il met en garde contre les méthodes qui définissent un type de retour mais ne renvoient jamais explicitement une valeur."
 
 #: ../../static_analysis.md:235
 msgid "Guard conditions: Use 'require' and 'assert' appropriately"
-msgstr ""
+msgstr "Protégez les conditions : Utilisez les termes \"exiger\" et \"affirmer\" de manière appropriée."
 
 #: ../../static_analysis.md:237
 msgid "Use assert(x) if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use require(x) if x can be false, due to e.g. invalid input or a failing external component."
-msgstr ""
+msgstr "Utilisez assert(x) si vous ne voulez jamais que x soit faux, en aucune circonstance (à l'exception d'un bogue dans votre code). Utilisez require(x) si x peut être faux, par exemple à cause d'une entrée invalide ou d'un composant externe défaillant."
 
 #: ../../static_analysis.md:243
 msgid "Result not used: The result of an operation not used"
-msgstr ""
+msgstr "Résultat non utilisé : Le résultat d'une opération n'est pas utilisé"
 
 #: ../../static_analysis.md:245
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
-msgstr ""
+msgstr "Une opération binaire produit une valeur qui n'est pas utilisée dans la suite. Cela est souvent dû à une confusion entre l'affectation (=) et la comparaison (==)."
 
 #: ../../static_analysis.md:253
 msgid "String Length: Bytes length != String length"
-msgstr ""
+msgstr "Longueur de la chaîne : Longueur des octets != Longueur de la chaîne"
 
 #: ../../static_analysis.md:255
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
-msgstr ""
+msgstr "Les octets et la longueur de la chaîne ne sont pas les mêmes puisque les chaînes sont supposées être encodées en UTF-8 (selon la définition de l'ABI) et qu'un caractère n'est donc pas nécessairement encodé dans un octet de données."
 
 #: ../../static_analysis.md:265
 msgid "Delete from dynamic array: 'delete' on an array leaves a gap"
-msgstr ""
+msgstr "Suppression d'un tableau dynamique : La fonction 'delete' sur un tableau laisse un vide"
 
 #: ../../static_analysis.md:267
 msgid "Using delete on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
-msgstr ""
+msgstr "L'utilisation de la fonction delete sur un tableau laisse un vide. La longueur du tableau reste la même. Si vous souhaitez supprimer la position vide, vous devez décaler les éléments manuellement et mettre à jour la propriété length."
 
 #: ../../static_analysis.md:280
 msgid "Data Truncated: Division on int/uint values truncates the result"
-msgstr ""
+msgstr "Données tronquées : La division sur des valeurs int/uint tronque le résultat."
 
 #: ../../static_analysis.md:282
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr ""
+msgstr "La division de valeurs entières donne à nouveau une valeur entière. Cela signifie que, par exemple, 10 / 100 = 0 au lieu de 0,1 puisque le résultat est à nouveau un nombre entier. Ce n'est pas le cas pour la division de valeurs littérales (uniquement), qui donnent des constantes rationnelles."
 
 #: ../../static_analysis.md:292
 msgid "Remix-analyzer"
-msgstr ""
+msgstr "Analyseur de remix"
 
 #: ../../static_analysis.md:294
 msgid "remix-analyzer is the library which works underneath of remix-ide Solidity Static Analysis plugin."
-msgstr ""
+msgstr "remix-analyzer est la bibliothèque qui fonctionne sous le plugin d'analyse statique de remix-ide Solidity."
 
 #: ../../static_analysis.md:296
 msgid "remix-analyzer is an NPM package. It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the remix-analyzer repository"
-msgstr ""
+msgstr "remix-analyzer est un paquet NPM. Il peut être utilisé comme bibliothèque dans une solution supportant node.js. Vous trouverez plus d'informations sur ce type d'utilisation dans le dépôt remix-analyzer."
 
 msgid ""
 msgstr ""
@@ -1852,15 +1852,15 @@ msgstr ""
 
 #: ../../support.md:1
 msgid "Support chat"
-msgstr ""
+msgstr "Support chat"
 
 #: ../../support.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
-msgstr ""
+msgstr "Nous savons que l'écosystème de la blockchain est très récent et que beaucoup d'informations sont dispersées sur le web. C'est pourquoi nous avons créé un chat d'assistance communautaire où nous et d'autres utilisateurs essayons de répondre à vos questions si vous êtes bloqué dans l'utilisation de Remix. Rejoignez le canal Remix et demandez de l'aide à la communauté."
 
 #: ../../support.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
-msgstr ""
+msgstr "Pour tous ceux qui sont intéressés par le développement d'un plugin personnalisé pour Remix ou qui veulent contribuer à la base de code, nous avons ouvert un autre canal spécialement pour les développeurs travaillant sur l'outil Remix."
 
 msgid ""
 msgstr ""
@@ -1868,31 +1868,31 @@ msgstr ""
 
 #: ../../terminal.md:1
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
-msgstr ""
+msgstr "Caractéristiques, disponibles dans le terminal :"
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the web3 object. It enables the execution of the JavaScript script which interacts with the current context. (note that web3 is only available if the web provider or injected provider mode is selected)."
-msgstr ""
+msgstr "Il intègre un interpréteur JavaScript et l'objet web3. Il permet l'exécution du script JavaScript qui interagit avec le contexte actuel. (notez que web3 n'est disponible que si le mode fournisseur web ou fournisseur injecté est sélectionné)."
 
 #: ../../terminal.md:12
 msgid "It displays important actions made while interacting with the Remix IDE (i.e. sending a new transaction)."
-msgstr ""
+msgstr "Il affiche les actions importantes effectuées lors de l'interaction avec l'IDE Remix (par exemple, l'envoi d'une nouvelle transaction)."
 
 #: ../../terminal.md:14
 msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
-msgstr ""
+msgstr "Il affiche les transactions qui sont minées dans le contexte actuel. Vous pouvez choisir d'afficher toutes les transactions ou seulement celles qui se réfèrent aux contrats que Remix connaît (par exemple les transactions créées à partir de l'IDE Remix)."
 
 #: ../../terminal.md:18
 msgid "It allows searching for the data and clearing the logs from the terminal."
-msgstr ""
+msgstr "Il permet de rechercher les données et d'effacer les journaux du terminal."
 
 #: ../../terminal.md:20
 msgid "You can run scripts by inputting them at the bottom after the >."
-msgstr ""
+msgstr "Vous pouvez exécuter des scripts en les saisissant en bas après le >."
 
 msgid ""
 msgstr ""
@@ -1900,303 +1900,303 @@ msgstr ""
 
 #: ../../tutorial_debug.md:1
 msgid "Debugging Transactions"
-msgstr ""
+msgstr "Débogage des transactions"
 
 #: ../../tutorial_debug.md:4
 msgid "There are two ways to start debugging, each one corresponds to a different use case."
-msgstr ""
+msgstr "Il y a deux façons de commencer le débogage, chacune correspondant à un cas d'utilisation différent."
 
 #: ../../tutorial_debug.md:5
 msgid "from the transaction log in the Terminal - use this when you want to debug a transaction."
-msgstr ""
+msgstr "à partir du journal des transactions dans le terminal - à utiliser lorsque vous souhaitez déboguer une transaction."
 
 #: ../../tutorial_debug.md:6
 msgid "from the Debugger - use this if you have a transaction hash."
-msgstr ""
+msgstr "à partir du débogueur - à utiliser si vous avez un hachage de transaction."
 
 #: ../../tutorial_debug.md:8
 msgid "Initiate Debugging from the transaction log in the Terminal"
-msgstr ""
+msgstr "Lancez le débogage à partir du journal des transactions dans le terminal."
 
 #: ../../tutorial_debug.md:9
 msgid "Let's start with a basic contract ( or replace this one by your own ) :"
-msgstr ""
+msgstr "Commençons par un contrat de base (ou remplacez celui-ci par le vôtre) :"
 
 #: ../../tutorial_debug.md:10
 msgid "create a blank file in the file explorer (by clicking the + icon) and give it a name."
-msgstr ""
+msgstr "créez un fichier vierge dans l'explorateur de fichiers (en cliquant sur l'icône +) et donnez-lui un nom."
 
 #: ../../tutorial_debug.md:11
 msgid "copy the code below."
-msgstr ""
+msgstr "copiez le code ci-dessous."
 
 #: ../../tutorial_debug.md:12
 msgid "compile the code."
-msgstr ""
+msgstr "compiler le code."
 
 #: ../../tutorial_debug.md:13
 msgid "click the Run & Deploy icon in the icon panel."
-msgstr ""
+msgstr "cliquez sur l'icône Exécuter et déployer dans le panneau d'icônes."
 
 #: ../../tutorial_debug.md:53
 msgid "For the purpose of this tutorial, we will run the JavaScript VM. This simulates a custom blockchain. You could do the same using a proper backend node."
-msgstr ""
+msgstr "Pour les besoins de ce tutoriel, nous exécuterons la VM JavaScript. Celle-ci simule une blockchain personnalisée. Vous pouvez faire la même chose en utilisant un nœud de backend approprié."
 
 #: ../../tutorial_debug.md:56
 msgid "Let's deploy the contract:"
-msgstr ""
+msgstr "Déployons le contrat :"
 
 #: ../../tutorial_debug.md:58
 msgid "Click the Deploy button"
-msgstr ""
+msgstr "Cliquez sur le bouton Déployer"
 
 #: ../../tutorial_debug.md:62
 msgid "You'll see the deployed instance (AKA the udapp)."
-msgstr ""
+msgstr "Vous verrez l'instance déployée (AKA l'udapp)."
 
 #: ../../tutorial_debug.md:66
 msgid "Then open it up (by clicking the caret)."
-msgstr ""
+msgstr "Ensuite, ouvrez-le (en cliquant sur le caret)."
 
 #: ../../tutorial_debug.md:71
 msgid "We are going to call the Donate function and will send it ether."
-msgstr ""
+msgstr "Nous allons appeler la fonction Donate et lui envoyer de l'éther."
 
 #: ../../tutorial_debug.md:73
 msgid "To do this: in the value input box put in 2 and select Ether as the unit (and not wei like I did in the image below - well you could - it won't really change anything)."
-msgstr ""
+msgstr "Pour ce faire : dans le champ de saisie de la valeur, mettez 2 et sélectionnez Ether comme unité (et non pas wei comme je l'ai fait dans l'image ci-dessous - vous pourriez le faire, mais cela ne changera pas grand-chose)."
 
 #: ../../tutorial_debug.md:77
 msgid "Then click the Donate button."
-msgstr ""
+msgstr "Cliquez ensuite sur le bouton Faire un don."
 
 #: ../../tutorial_debug.md:79
 msgid "This will send Ether to the this function."
-msgstr ""
+msgstr "Cela enverra de l'Ether à cette fonction."
 
 #: ../../tutorial_debug.md:81
 msgid "Because we are using the JavaScript VM, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr ""
+msgstr "Comme nous utilisons la VM JavaScript, tout se passe presque instantanément.  (Si nous avions utilisé Injected Web 3, nous aurions dû approuver la transaction, payer l'essence et attendre que la transaction soit traitée)."
 
 #: ../../tutorial_debug.md:83
 msgid "Remix displays information related to each transaction result in the terminal."
-msgstr ""
+msgstr "Remix affiche les informations relatives à chaque résultat de transaction dans le terminal."
 
 #: ../../tutorial_debug.md:85
 msgid "Check in the terminal where the transaction you just made is logged."
-msgstr ""
+msgstr "Vérifiez dans le terminal où la transaction que vous venez d'effectuer est enregistrée."
 
 #: ../../tutorial_debug.md:87
 msgid "Click the debug button to start debugging it."
-msgstr ""
+msgstr "Cliquez sur le bouton de débogage pour lancer le débogage."
 
 #: ../../tutorial_debug.md:91
 msgid "Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger."
-msgstr ""
+msgstr "Avant de passer à l'outil de débogage proprement dit, la section suivante montre comment démarrer une session de débogage directement à partir du débogueur."
 
 #: ../../tutorial_debug.md:93
 msgid "Initiate Debugging from the Debugger"
-msgstr ""
+msgstr "Lancer le débogage à partir du débogueur"
 
 #: ../../tutorial_debug.md:95
 msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
-msgstr ""
+msgstr "Cliquez sur l'icône de bogue dans le panneau d'icônes pour accéder au débogueur dans le panneau latéral."
 
 #: ../../tutorial_debug.md:97
 msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
-msgstr ""
+msgstr "Si vous ne voyez pas l'icône de bogue, allez dans le gestionnaire de plugins et activez le débogueur."
 
 #: ../../tutorial_debug.md:99
 msgid "You can start a debug session by providing a transaction hash."
-msgstr ""
+msgstr "Vous pouvez démarrer une session de débogage en fournissant un hachage de transaction."
 
 #: ../../tutorial_debug.md:101
 msgid "To find a transaction hash:"
-msgstr ""
+msgstr "Pour trouver un hachage de transaction :"
 
 #: ../../tutorial_debug.md:102
 msgid "Go to a transaction in the terminal."
-msgstr ""
+msgstr "Accédez à une transaction dans le terminal."
 
 #: ../../tutorial_debug.md:103
 msgid "Click a line with a transaction - to exand the log."
-msgstr ""
+msgstr "Cliquez sur une ligne comportant une transaction - pour ouvrir le journal."
 
 #: ../../tutorial_debug.md:104
 msgid "The transaction hash is there - copy it."
-msgstr ""
+msgstr "Le hachage de la transaction est là - copiez-le."
 
 #: ../../tutorial_debug.md:108
 msgid "Then click in the debugger paste the hash and click on the Start debugging button."
-msgstr ""
+msgstr "Cliquez ensuite dans le débogueur, collez le hachage et cliquez sur le bouton Démarrer le débogage."
 
 #: ../../tutorial_debug.md:112
 msgid "Using the debugger"
-msgstr ""
+msgstr "Utilisation du débogueur"
 
 #: ../../tutorial_debug.md:117
 msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
-msgstr ""
+msgstr "Le débogueur permet de voir des informations détaillées sur l'exécution de la transaction. Il utilise l'éditeur pour afficher l'endroit du code source où se trouve l'exécution en cours."
 
 #: ../../tutorial_debug.md:121
 msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
-msgstr ""
+msgstr "La partie navigation contient un curseur et des boutons qui peuvent être utilisés pour avancer dans l'exécution de la transaction."
 
 #: ../../tutorial_debug.md:125
 msgid "More explaination of what these buttons do."
-msgstr ""
+msgstr "Plus d'explications sur le rôle de ces boutons."
 
 #: ../../tutorial_debug.md:126
 msgid "Step Into"
-msgstr ""
+msgstr "Entrez dans"
 
 #: ../../tutorial_debug.md:127
 msgid "Step Over Into"
-msgstr ""
+msgstr "Passer à l'étape suivante"
 
 #: ../../tutorial_debug.md:130
 msgid "11 panels give detailed information about the execution:"
-msgstr ""
+msgstr "11 panneaux donnent des informations détaillées sur l'exécution :"
 
 #: ../../tutorial_debug.md:132
 msgid "Instructions"
-msgstr ""
+msgstr "Instructions"
 
 #: ../../tutorial_debug.md:134
 msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
-msgstr ""
+msgstr "Le panneau Instructions affiche le bytecode du contrat en cours d'exécution, l'étape en cours étant mise en évidence."
 
 #: ../../tutorial_debug.md:137
 msgid "Important note: When this panel is hidden, the slider will have a courser granularity and only stop at expression boundaries, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
-msgstr ""
+msgstr "Remarque importante : lorsque ce panneau est masqué, le curseur a une granularité plus fine et ne s'arrête qu'aux limites des expressions, même si elles sont compilées en plusieurs instructions EVM. Lorsque le panneau est affiché, il est possible d'enjamber toutes les instructions, même celles qui se réfèrent à la même expression."
 
 #: ../../tutorial_debug.md:143
 msgid "Solidity Locals"
-msgstr ""
+msgstr "Solidité Locale"
 
 #: ../../tutorial_debug.md:145
 msgid "The Solidity Locals panel displays local variables associated with the current context."
-msgstr ""
+msgstr "Le panneau Solidity Locals affiche les variables locales associées au contexte actuel."
 
 #: ../../tutorial_debug.md:148
 msgid "Solidity State"
-msgstr ""
+msgstr "État de Solidité"
 
 #: ../../tutorial_debug.md:150
 msgid "The Solidity State panel displays state variables of the current executing contract."
-msgstr ""
+msgstr "Le panneau Solidity State affiche les variables d'état du contrat en cours d'exécution."
 
 #: ../../tutorial_debug.md:153
 msgid "Low level panels"
-msgstr ""
+msgstr "Panneaux de bas niveau"
 
 #: ../../tutorial_debug.md:155
 msgid "These panels display low level informations about the execution:"
-msgstr ""
+msgstr "Ces panneaux affichent des informations de bas niveau sur l'exécution :"
 
 #: ../../tutorial_debug.md:157
 msgid "Stack"
-msgstr ""
+msgstr "Pile"
 
 #: ../../tutorial_debug.md:158
 msgid "Storages Changes"
-msgstr ""
+msgstr "Changements dans les entrepôts"
 
 #: ../../tutorial_debug.md:159
 msgid "Memory"
-msgstr ""
+msgstr "Mémoire"
 
 #: ../../tutorial_debug.md:160
 msgid "Call Data"
-msgstr ""
+msgstr "Données d'appel"
 
 #: ../../tutorial_debug.md:161
 msgid "Call Stack"
-msgstr ""
+msgstr "Pile d'appels"
 
 #: ../../tutorial_debug.md:162
 msgid "Return Value (only if the current step is a RETURN opcode)"
-msgstr ""
+msgstr "Valeur de retour (uniquement si l'étape en cours est un opcode RETURN)"
 
 #: ../../tutorial_debug.md:163
 msgid "Full Storages Changes (only at the end of the execution - display every storage change of every modified contract)"
-msgstr ""
+msgstr "Changements de stockage complets (uniquement à la fin de l'exécution - affichage de tous les changements de stockage de chaque contrat modifié)"
 
 #: ../../tutorial_debug.md:166
 msgid "Reverted Transaction"
-msgstr ""
+msgstr "Transaction annulée"
 
 #: ../../tutorial_debug.md:168
 msgid "A transaction can be reverted (because of an out of gas exception or Solidity revert statement or because of a low level exception)."
-msgstr ""
+msgstr "Une transaction peut être annulée (en raison d'une exception \"out of gas\" ou d'une déclaration d'annulation de Solidity, ou en raison d'une exception de bas niveau)."
 
 #: ../../tutorial_debug.md:171
 msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
-msgstr ""
+msgstr "Il est important d'être conscient de l'exception et de localiser l'endroit où elle se trouve dans le code source."
 
 #: ../../tutorial_debug.md:174
 msgid "Remix will warn you when the execution throws an exception. The warning button will jump to the last opcode before the exception happened."
-msgstr ""
+msgstr "Remix vous avertira lorsque l'exécution lancera une exception. Le bouton d'avertissement vous renvoie au dernier opcode avant que l'exception ne se produise."
 
 #: ../../tutorial_debug.md:178
 msgid "Breakpoints"
-msgstr ""
+msgstr "Points d'arrêt"
 
 #: ../../tutorial_debug.md:180
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
-msgstr ""
+msgstr "Les deux derniers boutons de la zone de navigation permettent de revenir au point d'arrêt précédent ou d'avancer au point d'arrêt suivant."
 
 #: ../../tutorial_debug.md:183
 msgid "Breakpoints can be added and removed by clicking on the line number in the Editor."
-msgstr ""
+msgstr "Des points d'arrêt peuvent être ajoutés et supprimés en cliquant sur le numéro de ligne dans l'éditeur."
 
 #: ../../tutorial_debug.md:185
 msgid "When using debug session with breakpoints, the execution will jump to the first encountered breakpoint."
-msgstr ""
+msgstr "Lorsque vous utilisez une session de débogage avec des points d'arrêt, l'exécution sautera au premier point d'arrêt rencontré."
 
 #: ../../tutorial_debug.md:188
 msgid "Important note: If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and second time for assigning the actual value. As an example, assume you are debugging the following contract:"
-msgstr ""
+msgstr "Remarque importante : si vous ajoutez un point d'arrêt à une ligne qui déclare une variable, il risque d'être déclenché deux fois : une première fois pour initialiser la variable à zéro et une seconde fois pour lui assigner sa valeur réelle. À titre d'exemple, supposons que vous déboguiez le contrat suivant :"
 
 #: ../../tutorial_debug.md:206
 msgid "And let's says that breakpoints are set for the lines"
-msgstr ""
+msgstr "Et disons que des points d'arrêt sont définis pour les lignes"
 
 #: ../../tutorial_debug.md:208
 msgid "uint p = 45;"
-msgstr ""
+msgstr "uint p = 45 ;"
 
 #: ../../tutorial_debug.md:210
 msgid "m = 89;"
-msgstr ""
+msgstr "m = 89 ;"
 
 #: ../../tutorial_debug.md:212
 msgid "uint l = 34;"
-msgstr ""
+msgstr "uint l = 34 ;"
 
 #: ../../tutorial_debug.md:214
 msgid "then clicking on Jump to next breakpoint will stop at the following lines in the given order:"
-msgstr ""
+msgstr "puis en cliquant sur Sauter au point d'arrêt suivant, vous vous arrêterez aux lignes suivantes dans l'ordre indiqué :"
 
 #: ../../tutorial_debug.md:217
 msgid "uint p = 45; (declaration of p)"
-msgstr ""
+msgstr "uint p = 45 ; (déclaration de p)"
 
 #: ../../tutorial_debug.md:219
 msgid "uint l = 34; (declaration of l)"
-msgstr ""
+msgstr "uint l = 34 ; (déclaration de l)"
 
 #: ../../tutorial_debug.md:221
 msgid "uint p = 45; (45 assigned to p)"
-msgstr ""
+msgstr "uint p = 45 ; (45 attribué à p)"
 
 #: ../../tutorial_debug.md:223
 msgid "m = 89; (89 assigned to m)"
-msgstr ""
+msgstr "m = 89 ; (89 attribué à m)"
 
 #: ../../tutorial_debug.md:225
 msgid "uint l = 34; (34 assigned to l)"
-msgstr ""
+msgstr "uint l = 34 ; (34 assigné à l)"
 
 msgid ""
 msgstr ""
@@ -2204,171 +2204,171 @@ msgstr ""
 
 #: ../../udapp.md:1
 msgid "Run & Deploy (part 2)"
-msgstr ""
+msgstr "Exécuter et déployer (partie 2)"
 
 #: ../../udapp.md:4
 msgid "Deployed contracts"
-msgstr ""
+msgstr "Contrats déployés"
 
 #: ../../udapp.md:6
 msgid "This section in the Run tab contains a list of deployed contracts to interact with through autogenerated UI of the deployed contract (also called udapp)."
-msgstr ""
+msgstr "Cette section de l'onglet Exécuter contient une liste de contrats déployés avec lesquels il est possible d'interagir grâce à l'interface utilisateur autogénérée du contrat déployé (également appelée udapp)."
 
 #: ../../udapp.md:8
 msgid "The deployed contract appears but is in its collapsed form."
-msgstr ""
+msgstr "Le contrat déployé apparaît mais sous sa forme réduite."
 
 #: ../../udapp.md:12
 msgid "Click the sideways caret to open it up."
-msgstr ""
+msgstr "Cliquez sur la flèche latérale pour l'ouvrir."
 
 #: ../../udapp.md:16
 msgid "You will see the functions in the contract.  The functions buttons can have different color buttons."
-msgstr ""
+msgstr "Vous verrez les fonctions dans le contrat.  Les boutons des fonctions peuvent être de couleurs différentes."
 
 #: ../../udapp.md:18
 msgid "Functions that are constant or pure functions in Solidity have a blue buttons. Clicking one of this type does not create a new transaction. So clicking will not cause state changes - it will only return a value stored in the contract - so it won't cost you anything in gas fees."
-msgstr ""
+msgstr "Les fonctions qui sont des fonctions constantes ou pures dans Solidity ont un bouton bleu. Cliquer sur un bouton de ce type ne crée pas de nouvelle transaction. Le clic ne provoque donc pas de changement d'état - il ne fait que renvoyer une valeur stockée dans le contrat - et ne vous coûte donc rien en frais de gaz."
 
 #: ../../udapp.md:20
 msgid "Functions that change the state of the contract AND that do not accept Ether are called non-payable functions and have an orange button. Clicking on them will create a transaction and thus cost gas."
-msgstr ""
+msgstr "Les fonctions qui modifient l'état du contrat ET qui n'acceptent pas d'Ether sont appelées fonctions non payantes et ont un bouton orange. En cliquant sur ces fonctions, vous créez une transaction et vous payez donc du gaz."
 
 #: ../../udapp.md:22
 msgid "Functions that have red buttons are payable functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a value.  The value is put in in the Value field which is under the Gas Limit field."
-msgstr ""
+msgstr "Les fonctions qui ont des boutons rouges sont des fonctions payables dans Solidity. En cliquant sur l'une d'entre elles, vous créez une nouvelle transaction qui peut accepter une valeur.  La valeur est inscrite dans le champ Valeur qui se trouve sous le champ Limite de gaz."
 
 #: ../../udapp.md:27
 msgid "See more information about Solidity modifiers in the Solidity docs. ."
-msgstr ""
+msgstr "Vous trouverez plus d'informations sur les modificateurs de Solidity dans la documentation de Solidity. ."
 
 #: ../../udapp.md:31
 msgid "If a function requires input parameters, well.. you gotta put them in."
-msgstr ""
+msgstr "Si une fonction nécessite des paramètres d'entrée, vous devez les introduire."
 
 #: ../../udapp.md:33
 msgid "Inputting parameters"
-msgstr ""
+msgstr "Saisie des paramètres"
 
 #: ../../udapp.md:37
 msgid "Inputting parameters in the collapsed view"
-msgstr ""
+msgstr "Saisie de paramètres dans la vue réduite"
 
 #: ../../udapp.md:39
 msgid "(Inputting all the parameters in a single input box)"
-msgstr ""
+msgstr "(saisie de tous les paramètres dans un seul champ de saisie)"
 
 #: ../../udapp.md:40
 msgid "The input box tells you what type each parameter needs to be."
-msgstr ""
+msgstr "La zone de saisie vous indique le type de chaque paramètre."
 
 #: ../../udapp.md:41
 msgid "Numbers and addresses do not need to be wrapped in double quotes."
-msgstr ""
+msgstr "Les nombres et les adresses ne doivent pas être placés entre guillemets."
 
 #: ../../udapp.md:42
 msgid "Strings need to be wrapped."
-msgstr ""
+msgstr "Les chaînes doivent être enveloppées."
 
 #: ../../udapp.md:43
 msgid "Parameters are separated by commas."
-msgstr ""
+msgstr "Les paramètres sont séparés par des virgules."
 
 #: ../../udapp.md:45
 msgid "In the example above the \"delegate\" function has 3 parameters."
-msgstr ""
+msgstr "Dans l'exemple ci-dessus, la fonction \"delegate\" a 3 paramètres."
 
 #: ../../udapp.md:47
 msgid "Inputting parameters in the expanded view"
-msgstr ""
+msgstr "Saisie de paramètres dans la vue élargie"
 
 #: ../../udapp.md:48
 msgid "Clicking the 'down' caret brings you to the Multi-param Manager - where you can input the parameters one at a time. Much less confusing!"
-msgstr ""
+msgstr "En cliquant sur la flèche \"vers le bas\", vous accédez au gestionnaire multi-paramètres, où vous pouvez saisir les paramètres un par un. C'est beaucoup moins déroutant !"
 
 #: ../../udapp.md:52
 msgid "In the expanded view, strings do not need to be wrapped."
-msgstr ""
+msgstr "Dans la vue développée, les chaînes n'ont pas besoin d'être enveloppées."
 
 #: ../../udapp.md:54
 msgid "Clicking the clipboard icon will encode the inputs and will copy them.  Only a valid set of inputs can be encoded."
-msgstr ""
+msgstr "En cliquant sur l'icône du presse-papiers, vous encoderez les entrées et les copierez.  Seul un ensemble valide d'entrées peut être encodé."
 
 #: ../../udapp.md:56
 msgid "So if you made a mistake and put a uint8 where an address should have been, clicking the clipboard here will give you an error."
-msgstr ""
+msgstr "Ainsi, si vous avez fait une erreur et que vous avez mis un uint8 à la place d'une adresse, cliquer sur le presse-papiers ici vous donnera un message d'erreur."
 
 #: ../../udapp.md:58
 msgid "Low level interactions"
-msgstr ""
+msgstr "Interactions de bas niveau"
 
 #: ../../udapp.md:60
 msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the recieve() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
-msgstr ""
+msgstr "Les interactions de bas niveau sont utilisées pour envoyer des fonds ou des données d'appel ou des fonds et des données d'appel à un contrat par l'intermédiaire de la fonction recieve() ou fallback().  En règle générale, vous ne devez implémenter la fonction fallback que si vous suivez un modèle de mise à niveau ou de procuration."
 
 #: ../../udapp.md:62
 msgid "The low level interactions section is below the functions in each deployed contract."
-msgstr ""
+msgstr "La section des interactions de bas niveau se trouve sous les fonctions de chaque contrat déployé."
 
 #: ../../udapp.md:67
 msgid "Please note the following:"
-msgstr ""
+msgstr "Veuillez noter ce qui suit :"
 
 #: ../../udapp.md:69
 msgid "If you are executing a plain Ether transfer to a contract, you need to have the receive() function in your contract.  If your contract has been deployed and you want to send it funds, you would input the amount of Ether or Wei etc. (see A in graphic below), and then input NOTHING in the calldata field of Low level interactions (see B in graphic) and click the Transact button (see C in graphic below)."
-msgstr ""
+msgstr "Si vous exécutez un simple transfert d'Ether vers un contrat, vous devez avoir la fonction receive() dans votre contrat.  Si votre contrat a été déployé et que vous souhaitez lui envoyer des fonds, vous devez saisir le montant en Ether ou Wei, etc. (voir A dans le graphique ci-dessous), puis NE RIEN saisir dans le champ calldata des interactions de bas niveau (voir B dans le graphique) et cliquer sur le bouton Transact (voir C dans le graphique ci-dessous)."
 
 #: ../../udapp.md:73
 msgid "If you are sending calldata to your contract with Ether, then you need to use the fallback() function and have it with the state mutability of payable."
-msgstr ""
+msgstr "Si vous envoyez des données à votre contrat avec l'Ether, alors vous devez utiliser la fonction fallback() et l'avoir avec la mutabilité de l'état de payable."
 
 #: ../../udapp.md:75
 msgid "If you are not sending ether to the contract but are sending call data then you need to use the fallback() function."
-msgstr ""
+msgstr "Si vous n'envoyez pas d'éther au contrat mais des données d'appel, vous devez utiliser la fonction fallback()."
 
 #: ../../udapp.md:77
 msgid "If you break the rules when using the Low level interactions you will be slapped with a warning."
-msgstr ""
+msgstr "Si vous enfreignez les règles lors de l'utilisation des interactions de bas niveau, vous recevrez un avertissement."
 
 #: ../../udapp.md:79
 msgid "Please see the solidity docs for more specifics about using the fallback and receive functions."
-msgstr ""
+msgstr "Veuillez consulter la documentation de Solidity pour plus de détails sur l'utilisation des fonctions fallback et receive."
 
 #: ../../udapp.md:81
 msgid "Passing in a tuple or a struct to a function"
-msgstr ""
+msgstr "Transmettre un tuple ou une structure à une fonction"
 
 #: ../../udapp.md:82
 msgid "To pass a tuple in, you need to put in an array []."
-msgstr ""
+msgstr "Pour passer un tuple, vous devez mettre un tableau []."
 
 #: ../../udapp.md:84
 msgid "Similarly, to pass in a struct as a parameter of a function, it needs to be put in as an array [].  Also note that the line pragma experimental ABIEncoderV2; needs to put in at the top of the solidity file."
-msgstr ""
+msgstr "De même, pour passer une structure en tant que paramètre d'une fonction, elle doit être placée dans un tableau [].  Notez également que la ligne pragma experimental ABIEncoderV2 ; doit être placée au début du fichier solidity."
 
 #: ../../udapp.md:88
 msgid "Example of passing nested struct to a function"
-msgstr ""
+msgstr "Exemple de passage d'une structure imbriquée à une fonction"
 
 #: ../../udapp.md:89
 msgid "Consider a nested struct defined like this:"
-msgstr ""
+msgstr "Considérez une structure imbriquée définie comme suit :"
 
 #: ../../udapp.md:101
 msgid "If a function has the signature fertilizer(Garden memory gardenPlot) then the correct syntax is:"
-msgstr ""
+msgstr "Si une fonction a pour signature fertilizer(Garden memory gardenPlot), la syntaxe correcte est la suivante :"
 
 #: ../../udapp.md:106
 msgid "To continue on this example, here's a sample contract:"
-msgstr ""
+msgstr "Pour poursuivre cet exemple, voici un exemple de contrat :"
 
 #: ../../udapp.md:133
 msgid "After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named fertilizer :"
-msgstr ""
+msgstr "Après avoir compilé, déployé le contrat et ouvert l'instance déployée, nous pouvons ajouter les paramètres d'entrée suivants à la fonction nommée fertilizer :"
 
 #: ../../udapp.md:139
 msgid "The function fertilizer accepts a single parameter of the type Garden. The type Garden is a struct. Structs are wrapped in square brackets.  Inside Garden is an array that is an array of structs named theFlowers. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
-msgstr ""
+msgstr "La fonction fertiliser accepte un seul paramètre de type Jardin. Le type Jardin est une structure. Les structures sont placées entre crochets.  À l'intérieur de Garden se trouve un tableau qui est un tableau de structures nommé theFlowers. Il y a un ensemble de crochets pour le tableau et un autre pour la structure. D'où les doubles crochets."
 
 msgid ""
 msgstr ""
@@ -2408,39 +2408,39 @@ msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
-msgstr ""
+msgstr "Dans Solidity, msg.sender joue un rôle important dans la gestion de l'accès à l'interaction des méthodes d'un contrat intelligent. Différents msg.sender peuvent aider à tester un contrat impliquant plusieurs comptes avec différents rôles. Voici un exemple pour tester un tel cas :"
 
 #: ../../unittesting_examples.md:63
 msgid "Contract/Program to be tested: Sender.sol"
-msgstr ""
+msgstr "Contrat/Programme à tester : Sender.sol"
 
 #: ../../unittesting_examples.md:85
 msgid "Test contract/program: Sender_test.sol"
-msgstr ""
+msgstr "Contrat/programme de test : Sender_test.sol"
 
 #: ../../unittesting_examples.md:137
 msgid "3. Testing method execution"
-msgstr ""
+msgstr "3. Exécution de la méthode d'essai"
 
 #: ../../unittesting_examples.md:139
 msgid "With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed."
-msgstr ""
+msgstr "Avec Solidity, on peut directement vérifier les changements effectués par une méthode dans le stockage en récupérant ces variables à partir d'un contrat. Mais tester l'exécution d'une méthode avec succès demande une certaine stratégie. Ce n'est pas tout à fait vrai, lorsqu'un test est réussi, il est généralement évident de comprendre pourquoi il l'a été. Cependant, lorsqu'un test échoue, il est essentiel de comprendre pourquoi il a échoué."
 
 #: ../../unittesting_examples.md:141
 msgid "To help in such cases, Solidity introduced the try-catch statement in version 0.6.0. Previously, we had to use low-level calls to track down what was going on."
-msgstr ""
+msgstr "Pour aider dans de tels cas, Solidity a introduit l'instruction try-catch dans la version 0.6.0. Auparavant, nous devions utiliser des appels de bas niveau pour comprendre ce qui se passait."
 
 #: ../../unittesting_examples.md:143
 msgid "Here is an example test file that use both try-catch blocks and low level calls:"
-msgstr ""
+msgstr "Voici un exemple de fichier de test qui utilise à la fois des blocs try-catch et des appels de bas niveau :"
 
 #: ../../unittesting_examples.md:145
 msgid "Contract/Program to be tested: AttendanceRegister.sol"
-msgstr ""
+msgstr "Contrat/Programme à tester : AttendanceRegister.sol"
 
 #: ../../unittesting_examples.md:174
 msgid "Test contract/program: AttendanceRegister_test.sol"
-msgstr ""
+msgstr "Contrat/programme de test : AttendanceRegister_test.sol"
 
 #: ../../unittesting_examples.md:262
 msgid "4. Testing a method involving msg.value"
@@ -2448,15 +2448,15 @@ msgstr "4. Tester une méthode impliquant <code>msg.value</code>"
 
 #: ../../unittesting_examples.md:263
 msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as msg.value. Sometimes, multiple calculations in a method are performed based on msg.value which can be tested with various values using Remix's Custom transaction context. See the example:"
-msgstr ""
+msgstr "Dans Solidity, l'éther peut être passé avec un appel de méthode qui est accessible à l'intérieur du contrat en tant que msg.value. Parfois, plusieurs calculs dans une méthode sont effectués sur la base de msg.value qui peut être testé avec différentes valeurs en utilisant le contexte de transaction personnalisé de Remix. Voyez l'exemple :"
 
 #: ../../unittesting_examples.md:265
 msgid "Contract/Program to be tested: Value.sol"
-msgstr ""
+msgstr "Contrat/Programme à tester : Value.sol"
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: Value_test.sol"
-msgstr ""
+msgstr "Contrat/programme de test : Value_test.sol"
 
 msgid ""
 msgstr ""
@@ -2464,181 +2464,181 @@ msgstr ""
 
 #: ../../unittesting.md:1
 msgid "Unit Testing Plugin"
-msgstr ""
+msgstr "Plugin de test unitaire"
 
 #: ../../unittesting.md:4
 msgid "Click the double check icon to get to the Solidity Unit Testing plugin."
-msgstr ""
+msgstr "Cliquez sur l'icône de la double vérification pour accéder au plugin Solidity Unit Testing."
 
 #: ../../unittesting.md:8
 msgid "If you haven't used this plugin before and are not seeing double check icon, you have to activate it from Remix plugin manager."
-msgstr ""
+msgstr "Si vous n'avez pas utilisé ce plugin auparavant et que vous ne voyez pas l'icône de double vérification, vous devez l'activer à partir du gestionnaire de plugins Remix."
 
 #: ../../unittesting.md:10
 msgid "Go to the plugin manager (by click the plug icon) and load up the unit testing plugin."
-msgstr ""
+msgstr "Allez dans le gestionnaire de plugins (en cliquant sur l'icône du plugin) et chargez le plugin de test unitaire."
 
 #: ../../unittesting.md:14
 msgid "Now double check icon will appear on the left side icon bar. Clicking on icon will load the unit testing module in the side panel."
-msgstr ""
+msgstr "L'icône de double vérification apparaît alors dans la barre d'icônes de gauche. En cliquant sur l'icône, le module de test unitaire sera chargé dans le panneau latéral."
 
 #: ../../unittesting.md:16
 msgid "Alternatively, just select Solidity environment from remix IDE home page. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
-msgstr ""
+msgstr "Vous pouvez également sélectionner l'environnement Solidity à partir de la page d'accueil de l'IDE remix. Cela activera le plugin Solidity Unit Testing ainsi que les plugins Solidity Compiler, Deploy & Run Transactions et Solidity Static Analysis."
 
 #: ../../unittesting.md:20
 msgid "Generate"
-msgstr ""
+msgstr "Générer"
 
 #: ../../unittesting.md:22
 msgid "Select a solidity file which you want to test and click on the button Generate. It will generate a new sample solidity test file in the current folder suffixed with _test. This file contains the minimum you need for running unit testing."
-msgstr ""
+msgstr "Sélectionnez un fichier Solidity que vous souhaitez tester et cliquez sur le bouton Générer. Un nouveau fichier de test Solidity sera généré dans le dossier courant avec l'extension _test. Ce fichier contient le minimum dont vous avez besoin pour effectuer des tests unitaires."
 
 #: ../../unittesting.md:24
 msgid "Write Tests"
-msgstr ""
+msgstr "Rédiger des tests"
 
 #: ../../unittesting.md:26
 msgid "Write tests to check the functionality of your contract. Remix injects a built-in assert library which can be used for testing. Visit the library documentation here."
-msgstr ""
+msgstr "Ecrivez des tests pour vérifier la fonctionnalité de votre contrat. Remix injecte une bibliothèque d'assertions intégrée qui peut être utilisée pour les tests. Consultez la documentation de la bibliothèque ici."
 
 #: ../../unittesting.md:28
 msgid "Apart from this, Remix allows usage of some special functions to make testing more structural. They are:"
-msgstr ""
+msgstr "En outre, Remix permet d'utiliser certaines fonctions spéciales pour rendre les tests plus structurés. Ces fonctions sont les suivantes :"
 
 #: ../../unittesting.md:30
 msgid "beforeEach() - Runs before each test"
-msgstr ""
+msgstr "beforeEach() - S'exécute avant chaque test"
 
 #: ../../unittesting.md:31
 msgid "beforeAll() - Runs before all tests"
-msgstr ""
+msgstr "beforeAll() - S'exécute avant tous les tests"
 
 #: ../../unittesting.md:32
 msgid "afterEach() - Runs after each test"
-msgstr ""
+msgstr "afterEach() - S'exécute après chaque test"
 
 #: ../../unittesting.md:33
 msgid "afterAll() - Runs after all tests"
-msgstr ""
+msgstr "afterAll() - S'exécute après tous les tests"
 
 #: ../../unittesting.md:35
 msgid "To get started, see this simple example."
-msgstr ""
+msgstr "Pour commencer, voyez cet exemple simple."
 
 #: ../../unittesting.md:37
 msgid "Run"
-msgstr ""
+msgstr "Exécuter"
 
 #: ../../unittesting.md:39
 msgid "Once you are done with writing tests, select the _test.sol files in the list and click on the button Run to execute the tests in the selected files. The execution will run in a separate environment and the result will be displayed below."
-msgstr ""
+msgstr "Une fois que vous avez terminé la rédaction des tests, sélectionnez les fichiers _test.sol dans la liste et cliquez sur le bouton Exécuter pour exécuter les tests dans les fichiers sélectionnés. L'exécution se fera dans un environnement séparé et le résultat sera affiché ci-dessous."
 
 #: ../../unittesting.md:43
 msgid "Stop"
-msgstr ""
+msgstr "Arrêter"
 
 #: ../../unittesting.md:45
 msgid "If you have selected multiple files to run the tests and want to stop the execution, click on Stop button. It will stop execution after running the tests for current file."
-msgstr ""
+msgstr "Si vous avez sélectionné plusieurs fichiers pour exécuter les tests et que vous souhaitez arrêter l'exécution, cliquez sur le bouton Arrêter. L'exécution s'arrêtera après l'exécution des tests pour le fichier en cours."
 
 #: ../../unittesting.md:47
 msgid "Customization"
-msgstr ""
+msgstr "Personnalisation"
 
 #: ../../unittesting.md:49
 msgid "Remix facilitates users with various types of customizations to test a contract properly."
-msgstr ""
+msgstr "Remix offre aux utilisateurs différents types de personnalisation pour tester correctement un contrat."
 
 #: ../../unittesting.md:51
 msgid "1. Custom Compiler Context"
-msgstr ""
+msgstr "1. Contexte du compilateur personnalisé"
 
 #: ../../unittesting.md:53
 msgid "Solidity Unit Testing refers Solidity Compiler plugin for compiler configurations. One can provide customized inputs for Compiler, EVM Version & Enable Optimization and these will be the configuration settings used for contract compilation before running unit tests."
-msgstr ""
+msgstr "Solidity Unit Testing fait référence au plugin Solidity Compiler pour les configurations du compilateur. Vous pouvez fournir des entrées personnalisées pour le compilateur, la version EVM et l'activation de l'optimisation. Ces paramètres de configuration seront utilisés pour la compilation du contrat avant l'exécution des tests unitaires."
 
 #: ../../unittesting.md:57
 msgid "2. Custom Transaction Context"
-msgstr ""
+msgstr "2. Contexte de transaction personnalisé"
 
 #: ../../unittesting.md:59
 msgid "For a contract method interaction, prime parameters of transaction are from address, value & gas. Usually, we need to test a method's behaviour under different values of these parameters."
-msgstr ""
+msgstr "Pour l'interaction d'une méthode contractuelle, les principaux paramètres de la transaction sont l'adresse, la valeur et le gaz. En général, nous devons tester le comportement d'une méthode en fonction de différentes valeurs de ces paramètres."
 
 #: ../../unittesting.md:61
 msgid "Remix provides the functionality of custom msg.sender & msg.value of transaction using method devdoc like:"
-msgstr ""
+msgstr "Remix fournit la fonctionnalité de personnaliser msg.sender & msg.value de la transaction en utilisant la méthode devdoc comme :"
 
 #: ../../unittesting.md:71
 msgid "Things to keep in mind while using custom transaction context:"
-msgstr ""
+msgstr "Ce qu'il faut garder à l'esprit lors de l'utilisation d'un contexte de transaction personnalisé :"
 
 #: ../../unittesting.md:73
 msgid "Parameters must be defined in devdoc of related method"
-msgstr ""
+msgstr "Les paramètres doivent être définis dans la devdoc de la méthode concernée."
 
 #: ../../unittesting.md:74
 msgid "Each parameter key should be prefixed with a hash (#) and end with a colon following a space (: ) like #sender:  & #value:"
-msgstr ""
+msgstr "Chaque clé de paramètre doit être précédée d'un dièse (#) et se terminer par deux points après un espace ( : ), comme #sender : & #value :"
 
 #: ../../unittesting.md:75
 msgid "For now, customization is available for parameters sender & value only"
-msgstr ""
+msgstr "Pour l'instant, la personnalisation n'est disponible que pour les paramètres \"sender\" et \"value\"."
 
 #: ../../unittesting.md:76
 msgid "Sender is from address of a transaction which is accessed using msg.sender inside a contract method. It should be defined in a fixed format as 'account-<account_index>'"
-msgstr ""
+msgstr "L'expéditeur est l'adresse d'une transaction à laquelle on accède en utilisant msg.sender dans une méthode de contrat. Il doit être défini dans un format fixe comme \"account-<account_index>\"."
 
 #: ../../unittesting.md:77
 msgid "<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 afterwards"
-msgstr ""
+msgstr "<account_index> varie de 0-2 avant la sortie de la version 0.10.0 de remix-ide et de 0-9 après."
 
 #: ../../unittesting.md:78
 msgid "remix_accounts.sol must be imported in your test file to use custom sender"
-msgstr ""
+msgstr "remix_accounts.sol doit être importé dans votre fichier de test pour utiliser l'expéditeur personnalisé."
 
 #: ../../unittesting.md:79
 msgid "Value is value sent along with a transaction in wei which is accessed using msg.value inside a contract method. It should be a number."
-msgstr ""
+msgstr "La valeur est la valeur envoyée lors d'une transaction dans l'UEO, à laquelle on accède en utilisant msg.value à l'intérieur d'une méthode de contrat. Il doit s'agir d'un nombre."
 
 #: ../../unittesting.md:81
 msgid "Regarding gas, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with Out-of-Gas error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit"
-msgstr ""
+msgstr "En ce qui concerne le gaz, Remix estime en interne le gaz nécessaire pour chaque transaction. Toutefois, si le déploiement d'un contrat échoue avec l'erreur \"Out-of-Gas\", il tente de le redéployer en doublant la quantité de gaz. Un déploiement qui échoue avec une double quantité de gaz affichera l'erreur suivante : le déploiement du contrat a échoué après deux tentatives : le code du contrat n'a pas pu être stocké, veuillez vérifier votre limite de gaz."
 
 #: ../../unittesting.md:83
 msgid "Various test examples can be seen in examples section."
-msgstr ""
+msgstr "Vous trouverez divers exemples de tests dans la section des exemples."
 
 #: ../../unittesting.md:86
 msgid "Points to remember"
-msgstr ""
+msgstr "Points à retenir"
 
 #: ../../unittesting.md:89
 msgid "A test contract cannot have a method with parameters. Having one such method will show error: Method 'methodname' can not have parameters inside a test contract"
-msgstr ""
+msgstr "Un contrat de test ne peut pas avoir de méthode avec des paramètres. L'existence d'une telle méthode entraînera une erreur : La méthode \"nom de la méthode\" ne peut pas avoir de paramètres à l'intérieur d'un contrat de test."
 
 #: ../../unittesting.md:90
 msgid "Number of test accounts are 3 before remix-ide release v0.10.0 and 10 afterwards"
-msgstr ""
+msgstr "Le nombre de comptes de test est de 3 avant la sortie de la version 0.10.0 de remix-ide et de 10 après."
 
 #: ../../unittesting.md:91
 msgid "A test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin but it will work fine with Solidity Unit Testing plugin."
-msgstr ""
+msgstr "Un fichier de test qui importe remix_accounts.sol peut ne pas se compiler avec le plugin Solidity Compiler mais fonctionnera parfaitement avec le plugin Solidity Unit Testing."
 
 #: ../../unittesting.md:93
 msgid "Remix-tests"
-msgstr ""
+msgstr "Remix-tests"
 
 #: ../../unittesting.md:96
 msgid "remix-tests is the module which works underneath of remix-ide Solidity Unit Testing plugin."
-msgstr ""
+msgstr "remix-tests est le module qui fonctionne sous le plugin remix-ide Solidity Unit Testing."
 
 #: ../../unittesting.md:98
 msgid "remix-tests is an NPM package. It can also be used as  a CLI/CI solution, supporting node.js. Find more information about this type of usage in the remix-tests repository"
-msgstr ""
+msgstr "remix-tests est un paquet NPM. Il peut également être utilisé comme une solution CLI/CI, supportant node.js. Vous trouverez plus d'informations sur ce type d'utilisation dans le dépôt remix-tests."
 
 #: ../../unittesting.md:100
 msgid "For CI implementation example, see Su Squares contract and Travis build that uses remix-tests for continuous integration testing."
-msgstr ""
+msgstr "Pour un exemple de mise en œuvre de l'intégration continue, voir le contrat Su Squares et la construction Travis qui utilise remix-tests pour les tests d'intégration continue."
 
