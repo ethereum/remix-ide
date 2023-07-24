@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-06-21 15:22\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr "message: <string>"
 
 #: ../../assert_library.md:17
 msgid "Tests if value is truthy. message is returned in case of failure."
-msgstr "测试 值是否真实。 失败则返回消息。"
+msgstr "测试`value`是否正确。 失败则返回对应的`message`。"
 
 #: ../../assert_library.md:19
 #: ../../assert_library.md:34
@@ -86,11 +86,11 @@ msgstr "expected: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
-msgstr "测试实际值和预期值是否相同。 失败则返回消息。"
+msgstr "测试实际值和预期值是否相同。 失败则返回对应的`message`。"
 
 #: ../../assert_library.md:52
 msgid "Tests if actual & expected values are not same. message is returned in case of failure."
-msgstr "测试实际值和预期值是否不同。 失败则返回消息。"
+msgstr "测试实际值和预期值是否不同。 失败则返回对应的`message`。"
 
 #: ../../assert_library.md:64
 #: ../../assert_library.md:83
@@ -104,7 +104,7 @@ msgstr "value2: <uint | int>"
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
-msgstr "测试 value1 是否大于 value2。 失败时返回消息。"
+msgstr "测试 value1 是否大于 value2。 失败时返回对应的`message`。"
 
 #: ../../assert_library.md:87
 msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
@@ -120,11 +120,11 @@ msgstr "代码贡献指南"
 
 #: ../../code_contribution_guide.md:4
 msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr "Remix 是一个开源工具，我们鼓励大家帮助我们改进它。 请打开问题、提供反馈或通过拉取请求向我们的代码库做出贡献。"
+msgstr "Remix 是一个开源工具，我们鼓励大家帮助我们改进它。 请开启issue、提供反馈或通过pull request向我们的代码库做出贡献。"
 
 #: ../../code_contribution_guide.md:8
 msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
-msgstr "Remix 应用程序是用 JavaScript 构建的，它不使用任何框架。 我们依赖一组选定的 npm 模块，例如 yo-yo、csjs-inject 等。 查看 Remix 子模块中的 package.json 文件以了解有关堆栈的更多信息。"
+msgstr "Remix 应用程序是基于 JavaScript 构建的，它不使用任何框架。 我们依赖一组选定的 npm 模块，例如 yo-yo、csjs-inject 等。 查看 Remix 子模块中的 package.json 文件以了解有关技术栈的更多信息。"
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our GitHub page."
