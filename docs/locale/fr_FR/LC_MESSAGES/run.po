@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,317 +19,317 @@ msgstr ""
 
 #: ../../run.md:1
 msgid "Deploy & Run"
-msgstr ""
+msgstr "Déployer et exécuter"
 
 #: ../../run.md:4
 msgid "![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**."
-msgstr ""
+msgstr "![](images/a-run-icon.png) Le module Deploy & Run permet d'envoyer des transactions à l'**Environnement** actuel."
 
 #: ../../run.md:6
 msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
-msgstr ""
+msgstr "Pour le déploiement, vous devez disposer d'un contrat compilé.  Pour vérifier qu'il existe un contrat compilé, trouvez la boîte de sélection <b>CONTRACT</b> (qui se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module."
 
 #: ../../run.md:8
 msgid "![](images/a-contract.png)"
-msgstr ""
+msgstr "![](images/a-contrat.png)"
 
 #: ../../run.md:10
 msgid "If nothing is there, you need to compile a file. If you do not see the contract you want, you need to select a contract in the editor to make it active."
-msgstr ""
+msgstr "S'il n'y a rien, vous devez compiler un fichier. Si vous ne voyez pas le contrat que vous souhaitez, vous devez sélectionner un contrat dans l'éditeur pour le rendre actif."
 
 #: ../../run.md:12
 msgid "Environment"
-msgstr ""
+msgstr "Environnement"
 
 #: ../../run.md:15
 msgid "`Remix VM (Merge)` : Connects to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own \"blockchain\" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  Merge refers to the fork of Ethereum when the Merge occurred. This fork is also known as the **Paris** fork."
-msgstr ""
+msgstr "`Remix VM (Merge)` : Se connecte à une blockchain sandbox dans le navigateur. La Remix VM (précédemment appelée JavaScript VM) est sa propre \"blockchain\" et à chaque rechargement, l'ancienne chaîne sera effacée et une nouvelle blockchain sera démarrée. **L'ancienne blockchain ne sera pas sauvegardée.  Merge fait référence à la fourche d'Ethereum lorsque la fusion s'est produite. Cette fourche est également connue sous le nom de **Paris** fork."
 
 #: ../../run.md:17
 msgid "`Remix VM (London)` : Same as above except this chain is using the London fork of Ethereum."
-msgstr ""
+msgstr "`Remix VM (London)` : Identique à la précédente, sauf que cette chaîne utilise la fourchette de Londres d'Ethereum."
 
 #: ../../run.md:19
 msgid "`Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum."
-msgstr ""
+msgstr "`Remix VM (Berlin)` : Même chose que ci-dessus, mais cette chaîne utilise la version berlinoise d'Ethereum."
 
 #: ../../run.md:21
 msgid "`Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and will load it into the Remix VM.  It is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Mainnet fork` : Ceci forkera le mainnet Ethereum et le chargera dans la Remix VM.  C'est utile pour développer des contrats qui ont besoin d'accéder à des contrats mainnet déployés. (Voir ci-dessous pour plus d'informations sur le Forking)"
 
 #: ../../run.md:23
 msgid "`Remix VM - Goerli fork` : Same as above except this forks the Goerli testnet. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Goerli fork` : Identique au précédent, sauf qu'il s'agit d'un fork du réseau de test Goerli. (Voir ci-dessous pour plus d'informations sur le forkage)"
 
 #: ../../run.md:25
 msgid "`Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Sepolia fork` : Identique à ce qui précède, sauf qu'il s'agit d'un fork du réseau de test Sepolia. (Voir ci-dessous pour plus d'informations sur le Forking)"
 
 #: ../../run.md:27
 msgid "`Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Custom fork` : Forks une chaîne, au numéro de bloc, et dans une version EVM de votre choix. (Voir ci-dessous pour plus d'informations sur le Forking)"
 
 #: ../../run.md:29
 msgid "`Injected Provider - provider name`: Connects Remix to an injected web3 provider. The most common injected provider is `Metamask`."
-msgstr ""
+msgstr "`Fournisseur injecté - nom du fournisseur` : Connecte Remix à un fournisseur web3 injecté. Le fournisseur injecté le plus courant est `Metamask`."
 
 #: ../../run.md:31
 msgid "`Custom - External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**. (See below for more info about External HTTP Provider)"
-msgstr ""
+msgstr "`Custom - External HTTP Provider` : Remix se connectera à un nœud distant. Vous devrez fournir l'URL du fournisseur sélectionné : geth, parity ou n'importe quel client Ethereum. Cette option était auparavant appelée **Web3 Provider**. (Voir ci-dessous pour plus d'informations sur External HTTP Provider)"
 
 #: ../../run.md:33
 msgid "`Dev - Hardhat Provider`: Connects Remix to a local Hardhat test chain."
-msgstr ""
+msgstr "`Dev - Hardhat Provider` : Connecte Remix à une chaîne de test Hardhat locale."
 
 #: ../../run.md:35
 msgid "`Dev - Ganache Provider`: Connects Remix to a local Truffle Ganache test chain."
-msgstr ""
+msgstr "`Dev - Ganache Provider` : Connecte Remix à une chaîne de test Truffle Ganache locale."
 
 #: ../../run.md:37
 msgid "`Dev - Foundry Provider`: Connects Remix to a local Foundry Anvil test chain."
-msgstr ""
+msgstr "`Dev - Foundry Provider` : Connecte Remix à une chaîne de test Foundry Anvil locale."
 
 #: ../../run.md:39
 msgid "`L2 - Optimism Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the mainnet of Optimism."
-msgstr ""
+msgstr "`L2 - Optimism Provider` : Connecte Remix à un fournisseur injecté (habituellement Metamask) avec les paramètres du réseau principal d'Optimism."
 
 #: ../../run.md:41
 msgid "`L2 - Arbitrum One Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network."
-msgstr ""
+msgstr "`L2 - Fournisseur Arbitrum One` : Connecte Remix à un fournisseur injecté (habituellement Metamask) avec les paramètres du réseau Arbitrum One."
 
 #: ../../run.md:43
 msgid "`WalletConnect`: Connects Remix to a wallet on a mobile device."
-msgstr ""
+msgstr "`WalletConnect` : Connecte Remix à un portefeuille sur un appareil mobile."
 
 #: ../../run.md:45
 msgid "Forking chains in Remix"
-msgstr ""
+msgstr "Chaînes de bifurcation dans Remix"
 
 #: ../../run.md:47
 msgid "Forking is a great technique for developing a contract that interacts with deployed contracts on a specific chain. By bringing in a chain to the Remix VM, you'll have the 10 accounts loaded with 100ETH."
-msgstr ""
+msgstr "Le forçage est une excellente technique pour développer un contrat qui interagit avec les contrats déployés sur une chaîne spécifique. En apportant une chaîne à la VM Remix, vous aurez les 10 comptes chargés avec 100ETH."
 
 #: ../../run.md:49
 msgid "Careful though, if you refresh the browser, you’ll lose the forked chain."
-msgstr ""
+msgstr "Attention cependant, si vous actualisez le navigateur, vous perdrez la chaîne bifurquée."
 
 #: ../../run.md:51
 msgid "Custom Fork"
-msgstr ""
+msgstr "Fourche sur mesure"
 
 #: ../../run.md:52
 msgid "The Custom fork option allows you to specify a chain's RPC server, a block number, and an EVM version."
-msgstr ""
+msgstr "L'option Custom fork vous permet de spécifier le serveur RPC d'une chaîne, un numéro de bloc et une version EVM."
 
 #: ../../run.md:54
 msgid "![](images/a-custom-fork.png)"
-msgstr ""
+msgstr "![](images/a-custom-fork.png)"
 
 #: ../../run.md:56
 msgid "You can get the **Node URL** from chainlist.org. If the chain does not load, you may need to choose a different RPC server. You will also need to choose an EVM version appropriate to the block number. So, if you choose a very low block number, the EVM with the Merge “flavor” won’t work because this version of the EVM came out later."
-msgstr ""
+msgstr "Vous pouvez obtenir l'**URL du nœud** à partir de chainlist.org. Si la chaîne ne se charge pas, vous devrez peut-être choisir un autre serveur RPC. Vous devrez également choisir une version d'EVM adaptée au numéro de bloc. Ainsi, si vous choisissez un numéro de bloc très bas, l'EVM avec la \"saveur\" Merge ne fonctionnera pas parce que cette version de l'EVM est sortie plus tard."
 
 #: ../../run.md:58
 msgid "More about External HTTP Provider"
-msgstr ""
+msgstr "En savoir plus sur le fournisseur HTTP externe"
 
 #: ../../run.md:60
 msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
-msgstr ""
+msgstr "Si vous utilisez Geth et https://remix.ethereum.org, veuillez utiliser la commande Geth suivante pour autoriser les requêtes provenant de Remix :"
 
 #: ../../run.md:66
 msgid "Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/rpc/server)"
-msgstr ""
+msgstr "Voir aussi [Geth Docs about the http server] (https://geth.ethereum.org/docs/rpc/server)"
 
 #: ../../run.md:68
 msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
-msgstr ""
+msgstr "Pour exécuter Remix à l'aide de https://remix.ethereum.org et d'un nœud de test local, utilisez cette commande Geth :"
 
 #: ../../run.md:74
 msgid "If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using."
-msgstr ""
+msgstr "Si vous utilisez remix-alpha ou une version locale de remix, remplacez l'url de --http.corsdomain par l'url de Remix que vous utilisez."
 
 #: ../../run.md:76
 msgid "To run Remix Desktop & a local test node, use this Geth command:"
-msgstr ""
+msgstr "Pour exécuter Remix Desktop et un nœud de test local, utilisez cette commande Geth :"
 
 #: ../../run.md:82
 msgid "Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode)"
-msgstr ""
+msgstr "Voir aussi [Geth Docs on Dev mode] (https://geth.ethereum.org/getting-started/dev-mode)"
 
 #: ../../run.md:84
 msgid "The Web3 Provider Endpoint for a local node is **http://localhost:8545**"
-msgstr ""
+msgstr "Le point de terminaison du fournisseur Web3 pour un nœud local est **http://localhost:8545**."
 
 #: ../../run.md:88
 msgid "**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: `--http.corsdomain *`"
-msgstr ""
+msgstr "**AVERTISSEMENT:** Ne soyez pas paresseux. C'est une mauvaise idée d'utiliser le drapeau Geth <b>--http.corsdomain</b> avec un joker : `--http.corsdomain *`"
 
 #: ../../run.md:90
 msgid "If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--http.corsdomain 'https://remix-alpha.ethereum.org'`"
-msgstr ""
+msgstr "Si vous mettez le joker `*`, cela signifie que tout le monde peut demander le noeud. Par contre, si vous mettez une URL, cela restreint les urls à cette seule URL - par exemple `--http.corsdomain 'https://remix-alpha.ethereum.org'`"
 
 #: ../../run.md:92
 msgid "Only use `--http.corsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**."
-msgstr ""
+msgstr "N'utilisez `--http.corsdomain *` que lorsque vous utilisez une **chaîne de test** ET que vous n'utilisez que des **comptes de test**. Pour les comptes réels ou sur la chaîne principale **spécifiez l'url**."
 
 #: ../../run.md:97
 msgid "Account:"
-msgstr ""
+msgstr "Compte :"
 
 #: ../../run.md:99
 msgid "Account: the list of accounts associated with the current  environment (and their associated balances).  On the Remix VM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
-msgstr ""
+msgstr "Compte : la liste des comptes associés à l'environnement actuel (et leurs soldes associés).  Sur la VM Remix, vous avez le choix entre 5 comptes.  Si vous utilisez Injected Web3 avec MetaMask, vous devez changer le compte dans MetaMask."
 
 #: ../../run.md:102
 msgid "Gas Limit:"
-msgstr ""
+msgstr "Limite de gaz :"
 
 #: ../../run.md:104
 msgid "This sets the maximum amount of gas that will be allowed for all the  transactions created in Remix."
-msgstr ""
+msgstr "Ceci définit la quantité maximale de gaz qui sera autorisée pour toutes les transactions créées dans Remix."
 
 #: ../../run.md:107
 msgid "Value:"
-msgstr ""
+msgstr "Valeur :"
 
 #: ../../run.md:109
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br>  **Note:** payable functions have a red button."
-msgstr ""
+msgstr "Ceci définit le montant d'ETH, WEI, GWEI etc. qui est envoyé à un contrat ou à une fonction de paiement. <br>  **Les fonctions payables ont un bouton rouge."
 
 #: ../../run.md:112
 msgid "The **Value** field is always reset to 0 after each transaction execution. <br> The **Value** field is **NOT** for gas."
-msgstr ""
+msgstr "Le champ **Valeur** est toujours remis à 0 après l'exécution de chaque transaction. <br> Le champ **Valeur** est **NOT** pour le gaz."
 
 #: ../../run.md:115
 msgid "![](images/a-Runtab-deploy-atAddress.png)"
-msgstr ""
+msgstr "![](images/a-Runtab-deploy-atAddress.png)"
 
 #: ../../run.md:117
 msgid "Deploy & AtAddress"
-msgstr ""
+msgstr "Déployer et AtAddress"
 
 #: ../../run.md:120
 msgid "In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts."
-msgstr ""
+msgstr "Dans l'image ci-dessus, la boîte de sélection est définie sur **Ballot**.  Cette boîte de sélection contient la liste des contrats compilés."
 
 #: ../../run.md:122
 msgid "`Deploy` sends a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them."
-msgstr ""
+msgstr "`Deploy` envoie une transaction qui déploie le contrat sélectionné. Lorsque la transaction est analysée, l'instance nouvellement créée est ajoutée (cela peut prendre plusieurs secondes). <br>**Note:** Si la fonction de construction du contrat a des paramètres, vous devez les spécifier."
 
 #: ../../run.md:126
 msgid "`At Address` is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with **AtAddress** does not cost gas."
-msgstr ""
+msgstr "`At Address` est utilisé pour accéder à un contrat qui a déjà été déployé. Comme le contrat est déjà déployé, l'accès à un contrat avec **AtAddress** ne coûte pas de gaz."
 
 #: ../../run.md:128
 msgid "**Note:** When using AtAddress, be sure you trust the contract at that address."
-msgstr ""
+msgstr "**Note:** Lorsque vous utilisez AtAddress, assurez-vous que vous avez confiance dans le contrat à cette adresse."
 
 #: ../../run.md:130
 msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
-msgstr ""
+msgstr "Pour utiliser **AtAddress**, vous devez avoir le **code source** ou **ABI** du contrat déployé **dans l'onglet actif** de l'éditeur.  Lorsque vous utilisez le code source, il doit être compilé avec les mêmes paramètres de compilation que le contrat déployé auquel vous essayez d'accéder."
 
 #: ../../run.md:132
 msgid "Using the ABI with AtAddress"
-msgstr ""
+msgstr "Utilisation de l'ABI avec AtAddress"
 
 #: ../../run.md:135
 msgid "The **ABI** is a JSON array which describes the contract's interface."
-msgstr ""
+msgstr "Le **ABI** est un tableau JSON qui décrit l'interface du contrat."
 
 #: ../../run.md:137
 msgid "To interact with a contract using the ABI, create a new file in Remix with extension ***.abi** and copy the ABI content to it."
-msgstr ""
+msgstr "Pour interagir avec un contrat à l'aide de l'ABI, créez un nouveau fichier dans Remix avec l'extension ***.abi** et copiez-y le contenu de l'ABI."
 
 #: ../../run.md:140
 msgid "Make sure this file is the active tab in the editor. Then, in the field next to `At Address`, input the contract's address and click on `At Address`. If successful, an instance of the contract will appear below - in the list of **Deployed Contracts**."
-msgstr ""
+msgstr "Assurez-vous que ce fichier est l'onglet actif dans l'éditeur. Ensuite, dans le champ à côté de `At Address`, entrez l'adresse du contrat et cliquez sur `At Address`. Si vous réussissez, une instance du contrat apparaîtra ci-dessous - dans la liste des **Contrats déployés**."
 
 #: ../../run.md:142
 msgid "**Note:** To generate the ABI, in the Solidity compiler, after a contract is compiled, click on the **Compilation Details** button.  A modal will come up with that contains the ABI among other info."
-msgstr ""
+msgstr "**Note:** Pour générer l'ABI, dans le compilateur Solidity, après la compilation d'un contrat, cliquez sur le bouton **Détails de compilation**.  Une fenêtre modale contenant l'ABI parmi d'autres informations apparaîtra."
 
 #: ../../run.md:144
 msgid "Pending Instances"
-msgstr ""
+msgstr "Instances en attente"
 
 #: ../../run.md:147
 msgid "Validating a transaction takes several seconds. During this time, the GUI shows it in a pending mode. When the transaction is mined, the number of pending transactions is updated and the transaction is added to the log ([see terminal](terminal.html))."
-msgstr ""
+msgstr "La validation d'une transaction prend plusieurs secondes. Pendant ce temps, l'interface graphique l'affiche en mode \"pending\" (en attente). Lorsque la transaction est traitée, le nombre de transactions en attente est mis à jour et la transaction est ajoutée au journal ([voir terminal](terminal.html))."
 
 #: ../../run.md:152
 msgid "Using the Recorder"
-msgstr ""
+msgstr "Utilisation de l'enregistreur"
 
 #: ../../run.md:155
 msgid "The Recorder is a tool used to save a bunch of transactions in a JSON file and re-run them later either in the same environment or in another."
-msgstr ""
+msgstr "L'enregistreur est un outil utilisé pour enregistrer un ensemble de transactions dans un fichier JSON et les réexécuter plus tard, soit dans le même environnement, soit dans un autre."
 
 #: ../../run.md:158
 msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
-msgstr ""
+msgstr "L'enregistrement dans le fichier JSON (appelé par défaut scenario.json) permet de vérifier facilement la liste des transactions, d'ajuster les paramètres d'entrée, de changer la bibliothèque liée, etc..."
 
 #: ../../run.md:160
 msgid "There are many use cases for the recorder."
-msgstr ""
+msgstr "L'enregistreur peut être utilisé dans de nombreux cas."
 
 #: ../../run.md:162
 msgid "For instance:"
-msgstr ""
+msgstr "Par exemple :"
 
 #: ../../run.md:164
 msgid "After having coded and tested contracts in a constrained environment (like the Remix VM), you could then change the environment and redeploy it to a more realistic environment like a public testnet or to a Geth node. By using the generated **scenario.json** file, you will be using all the same settings that you used in the Remix VM.  And this means that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
-msgstr ""
+msgstr "Après avoir codé et testé des contrats dans un environnement contraint (comme la VM Remix), vous pouvez changer l'environnement et le redéployer dans un environnement plus réaliste comme un réseau de test public ou un nœud Geth. En utilisant le fichier **scenario.json** généré, vous utiliserez tous les mêmes paramètres que ceux utilisés dans la VM Remix.  Cela signifie que vous n'aurez pas besoin de cliquer sur l'interface 100 fois ou autre pour obtenir l'état que vous avez atteint à l'origine.  L'enregistreur pourrait donc être un outil pour protéger votre santé mentale."
 
 #: ../../run.md:167
 msgid "You can also change the settings in the scenario.json file to customize the playback."
-msgstr ""
+msgstr "Vous pouvez également modifier les paramètres du fichier scenario.json pour personnaliser la lecture."
 
 #: ../../run.md:169
 msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
-msgstr ""
+msgstr "Le déploiement d'un contrat nécessite souvent plus que la création d'une transaction et l'enregistreur automatise donc ce déploiement."
 
 #: ../../run.md:172
 msgid "Working in a dev environment often requires setting up the state in a first place."
-msgstr ""
+msgstr "Pour travailler dans un environnement de développement, il faut souvent commencer par mettre en place l'état."
 
 #: ../../run.md:175
 msgid "![](images/a-recorder.png)"
-msgstr ""
+msgstr "![](images/a-recorder.png)"
 
 #: ../../run.md:177
 msgid "When checked, the option `Run transactions using the last compilation result` allows you to develop a contract and easily set the state using **the latest compiled versions of the contracts.**"
-msgstr ""
+msgstr "Lorsqu'elle est cochée, l'option `Exécuter les transactions en utilisant le dernier résultat de compilation` vous permet de développer un contrat et d'en définir facilement l'état en utilisant **les dernières versions compilées des contrats**."
 
 #: ../../run.md:179
 msgid "scenario.json"
-msgstr ""
+msgstr "scenario.json"
 
 #: ../../run.md:180
 msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a `0` next to **Transactions Recorded**.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
-msgstr ""
+msgstr "Pour créer ce fichier dans l'enregistreur, vous devez bien sûr avoir effectué quelques transactions.  Dans l'image ci-dessus - il y a un `0` à côté de **Transactions enregistrées**.  Ce n'est donc pas le bon moment pour enregistrer des transactions parce que - eh bien, parce qu'il n'y en a pas.  Chaque fois que vous effectuez une transaction, ce nombre s'incrémente.  Lorsque vous êtes prêt, cliquez sur l'icône de la disquette et le fichier scenario.json sera créé."
 
 #: ../../run.md:182
 msgid "The JSON file below is an example of the scenario.json file."
-msgstr ""
+msgstr "Le fichier JSON ci-dessous est un exemple du fichier scenario.json."
 
 #: ../../run.md:184
 msgid "In it, 3 transactions are executed:"
-msgstr ""
+msgstr "Trois transactions y sont exécutées :"
 
 #: ../../run.md:186
 msgid "The first corresponds to the deployment of the lib `testLib`."
-msgstr ""
+msgstr "Le premier correspond au déploiement de la librairie `testLib`."
 
 #: ../../run.md:188
 msgid "The second corresponds to the deployment of the contract `test` with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property `linkReferences`. In that case we use the address of the previously created library : `created{1512830014773}`. The number is the id (timestamp) of the transaction that led to the creation of the library."
-msgstr ""
+msgstr "Le second correspond au déploiement du contrat `test` dont le premier paramètre du constructeur est fixé à 11. Ce contrat dépend d'une bibliothèque. Le lien est fait en utilisant la propriété `linkReferences`. Dans ce cas, nous utilisons l'adresse de la bibliothèque précédemment créée : `created{1512830014773}`. Le numéro est l'identifiant (timestamp) de la transaction qui a conduit à la création de la bibliothèque."
 
 #: ../../run.md:195
 msgid "The third record corresponds to the call to the function `set` of the contract `test` (the property to is set to: `created{1512830015080}`) . Input parameters are `1` and `0xca35b7d915458ef540ade6068dfe2f44e8fa733c`"
-msgstr ""
+msgstr "Le troisième enregistrement correspond à l'appel à la fonction `set` du contrat `test` (la propriété to est fixée à : `created{1512830015080}`). Les paramètres d'entrée sont `1` et `xca35b7d915458ef540ade6068dfe2f44e8fa733c`"
 
 #: ../../run.md:200
 msgid "All these transactions are created using the value of the accounts `account{0}`."
-msgstr ""
+msgstr "Toutes ces transactions sont créées en utilisant la valeur des comptes `compte{0}`."
 
