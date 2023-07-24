@@ -19,15 +19,8 @@ msgid "Debugger"
 msgstr "Débogueur"
 
 #: ../../debugger.md:4
-<<<<<<< HEAD
-msgid ""
-"The Debugger shows the contract's state while stepping through a "
-"transaction."
-msgstr ""
-=======
 msgid "The Debugger shows the contract's state while stepping through a transaction."
 msgstr "Le débogueur montre l'état du contrat lors de l'exécution d'une transaction."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:6
 msgid "It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
@@ -78,15 +71,8 @@ msgid "![](images/a-debug-use-gen-sources.png)"
 msgstr "![](images/a-debug-use-gen-sources.png)"
 
 #: ../../debugger.md:28
-<<<<<<< HEAD
-msgid ""
-"These compiler outputs will appear in a separate .yul file in the Remix "
-"editor."
-msgstr ""
-=======
 msgid "These compiler outputs will appear in a separate .yul file in the Remix editor."
 msgstr "Ces sorties du compilateur apparaîtront dans un fichier .yul séparé dans l'éditeur Remix."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:30
 msgid "The Debugger's Navigation"
@@ -145,46 +131,24 @@ msgid "Jump to the previous breakpoint"
 msgstr "Sauter au point d'arrêt précédent"
 
 #: ../../debugger.md:46
-<<<<<<< HEAD
-msgid ""
-"Breakpoints can be placed in the gutter of the Editor. If the current "
-"step in the call has passed a breakpoint, this button will move the "
-"slider to the most recently passed breakpoint."
-msgstr ""
-=======
 msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
 msgstr "Les points d'arrêt peuvent être placés dans la gouttière de l'éditeur. Si l'étape actuelle de l'appel a passé un point d'arrêt, ce bouton déplacera le curseur vers le dernier point d'arrêt passé."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:48
 msgid "Jump out"
 msgstr "Sauter"
 
 #: ../../debugger.md:49
-<<<<<<< HEAD
-msgid ""
-"When you are in a call and click on this button, the slider will be moved"
-" to the end of the call."
-msgstr ""
-=======
 msgid "When you are in a call and click on this button, the slider will be moved to the end of the call."
 msgstr "Lorsque vous êtes en communication et que vous cliquez sur ce bouton, le curseur est déplacé à la fin de la communication."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:51
 msgid "Jump to the next breakpoint"
 msgstr "Sauter au point d'arrêt suivant"
 
 #: ../../debugger.md:52
-<<<<<<< HEAD
-msgid ""
-"If a breakpoint is ahead in the code, this button will advance to that "
-"point."
-msgstr ""
-=======
 msgid "If a breakpoint is ahead in the code, this button will advance to that point."
 msgstr "Si un point d'arrêt est avancé dans le code, ce bouton permet d'avancer jusqu'à ce point."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:54
 msgid "The Debugger's Panels"
@@ -195,19 +159,8 @@ msgid "Function Stack"
 msgstr "Pile de fonctions"
 
 #: ../../debugger.md:56
-<<<<<<< HEAD
-msgid ""
-"The Function stack lists the functions that the transaction is "
-"interacting with."
-msgstr ""
-
-#: ../../debugger.md:58
-msgid "![](images/a-debug-func-stack.png)"
-msgstr ""
-=======
 msgid "The Function stack lists the functions that the transaction is interacting with."
 msgstr "La pile de fonctions répertorie les fonctions avec lesquelles la transaction interagit."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:58
 msgid "![](images/a-debug-func-stack.png)"
@@ -290,16 +243,8 @@ msgid "Memory is cleared for each new message call. Memory is linear and can be 
 msgstr "La mémoire est vidée à chaque nouvel appel de message. La mémoire est linéaire et peut être adressée au niveau de l'octet. Les **lectures** sont limitées à une largeur de 256 bits tandis que les **écritures** peuvent avoir une largeur de 8 bits ou de 256 bits."
 
 #: ../../debugger.md:89
-<<<<<<< HEAD
-msgid ""
-"The Memory panel consists of 3 columns.  You might need to make Remix's "
-"side panel a bit wider to get the formatting to be correct. (Drag the "
-"border between the main panel and the side panel to the right)."
-msgstr ""
-=======
 msgid "The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right)."
 msgstr "Le panneau \"Mémoire\" se compose de 3 colonnes.  Il se peut que vous deviez élargir un peu le panneau latéral de Remix pour que le formatage soit correct. (Faites glisser la bordure entre le panneau principal et le panneau latéral vers la droite)."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:91
 msgid "The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (**?**) will show - like this:"
@@ -382,31 +327,16 @@ msgid "Breakpoints"
 msgstr "Points d'arrêt"
 
 #: ../../debugger.md:123
-<<<<<<< HEAD
-msgid ""
-"Breakpoints can be placed in the gutter of the Editor to pause the "
-"debugger."
-msgstr ""
-=======
 msgid "Breakpoints can be placed in the gutter of the Editor to pause the debugger."
 msgstr "Des points d'arrêt peuvent être placés dans la gouttière de l'éditeur pour mettre le débogueur en pause."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:125
 msgid "Additional Info"
 msgstr "Informations complémentaires"
 
 #: ../../debugger.md:126
-<<<<<<< HEAD
-msgid ""
-"The debugger's granular information gives users detailed information "
-"about what is happening in a transaction - so not only is the debugger "
-"good for debugging, it is also an excellent teaching tool."
-msgstr ""
-=======
 msgid "The debugger's granular information gives users detailed information about what is happening in a transaction - so not only is the debugger good for debugging, it is also an excellent teaching tool."
 msgstr "Les informations granulaires du débogueur donnent aux utilisateurs des informations détaillées sur ce qui se passe dans une transaction. Le débogueur n'est donc pas seulement utile pour le débogage, c'est aussi un excellent outil d'enseignement."
->>>>>>> 2c84023b (New translations debugger.pot (French))
 
 #: ../../debugger.md:128
 msgid "To learn about using the debugger, go to [Debugging Transactions](tutorial_debug.html)."
