@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -19,91 +19,91 @@ msgstr ""
 
 #: ../../static_analysis.md:1
 msgid "Solidity Static Analysis"
-msgstr ""
+msgstr "Análisis estático Solidity"
 
 #: ../../static_analysis.md:4
 msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
-msgstr ""
+msgstr "El análisis estático de código es un proceso para depurar el código examinándolo y sin ejecutar realmente el código."
 
 #: ../../static_analysis.md:6
 msgid "`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
-msgstr ""
+msgstr "El complemento `Solidity Static Analysis` realiza un análisis estático de los contratos inteligentes Solidity una vez compilados. Comprueba si existen vulnerabilidades de seguridad y malas prácticas de desarrollo, entre otras cuestiones. Puede activarse desde el `Administrador de plugins` de Remix."
 
 #: ../../static_analysis.md:8
 msgid "![](images/a-static-analysis-from-pm.png)"
-msgstr ""
+msgstr "![](images/a-static-analysis-from-pm.png)"
 
 #: ../../static_analysis.md:10
 msgid "This plugin comes with `Solidity` environment of Remix IDE."
-msgstr ""
+msgstr "Este plugin viene con el entorno `Solidity` de Remix IDE."
 
 #: ../../static_analysis.md:12
 msgid "How to use"
-msgstr ""
+msgstr "Cómo utilizarlo"
 
 #: ../../static_analysis.md:15
 msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one `Auto run` checkbox and a `Run` button. `Run` button will be disabled as there is no compiled contract for now."
-msgstr ""
+msgstr "Si selecciona este plugin, verá una serie de módulos listados junto con casillas de verificación, una casilla `Auto run` y un botón `Run`. El botón `Ejecutar` estará desactivado ya que por ahora no hay ningún contrato compilado."
 
 #: ../../static_analysis.md:17
 msgid "![](images/a-static-analysis-onload.png)"
-msgstr ""
+msgstr "![](images/a-static-analysis-onload.png)"
 
 #: ../../static_analysis.md:19
 msgid "By default, all modules are selected for analysing a smart contract."
-msgstr ""
+msgstr "Por defecto, se seleccionan todos los módulos para analizar un contrato inteligente."
 
 #: ../../static_analysis.md:21
 msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis for last compiled contract by clicking on `Run`."
-msgstr ""
+msgstr "Uno puede seleccionar/deseleccionar los módulos bajo los que se debe analizar el contrato y puede ejecutar el análisis para el último contrato compilado pulsando en `Ejecutar`."
 
 #: ../../static_analysis.md:23
 msgid "If `Auto run` checkbox is checked, analysis will be performed each time a contract is compiled. Uncheck the checkbox if you want to stop this behaviour."
-msgstr ""
+msgstr "Si la casilla `Ejecución automática` está marcada, el análisis se realizará cada vez que se compile un contrato. Desmarque la casilla si desea detener este comportamiento."
 
 #: ../../static_analysis.md:25
 msgid "Run"
-msgstr ""
+msgstr "Ejecute"
 
 #: ../../static_analysis.md:28
 msgid "If `Auto run` checkbox is checked, analysis will be performed on compiling a contract and result will be shown as badge to the plugin icon. This number tells warnings count for the contract (e.g; `12` in attached image below) ."
-msgstr ""
+msgstr "Si la casilla `Ejecución automática` está marcada, el análisis se realizará al compilar un contrato y el resultado se mostrará como un distintivo en el icono del complemento. Este número indica el recuento de advertencias para el contrato (por ejemplo, `12` en la imagen adjunta a continuación) ."
 
 #: ../../static_analysis.md:30
 msgid "By visiting the plugin UI, the details of the warning can be seen along with the category name for each warning."
-msgstr ""
+msgstr "Si visita la interfaz de usuario del complemento, podrá ver los detalles de la advertencia junto con el nombre de la categoría de cada advertencia."
 
 #: ../../static_analysis.md:32
 msgid "Clicking on warning details will highlight the relevant code in the editor."
-msgstr ""
+msgstr "Al hacer clic en los detalles de la advertencia se resaltará el código correspondiente en el editor."
 
 #: ../../static_analysis.md:35
 msgid "![](images/a-static-analysis.png)"
-msgstr ""
+msgstr "![](images/a-static-analysis.png)"
 
 #: ../../static_analysis.md:37
 msgid "Analysis Modules"
-msgstr ""
+msgstr "Módulos de análisis"
 
 #: ../../static_analysis.md:40
 msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
-msgstr ""
+msgstr "Actualmente, con Remix IDE v0.10.1, hay 21 módulos de análisis listados bajo 4 categorías. Las categorías son: `Seguridad`, `Gas y Economía`, `ERC` y `Varios`."
 
 #: ../../static_analysis.md:42
 msgid "Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:"
-msgstr ""
+msgstr "He aquí la lista de módulos de cada categoría junto con el código de ejemplo que **debe evitarse o utilizarse con mucho cuidado durante el desarrollo**:"
 
 #: ../../static_analysis.md:44
 msgid "Category: Security"
-msgstr ""
+msgstr "Categoría: Seguridad"
 
 #: ../../static_analysis.md:45
 msgid "**Transaction origin: 'tx.origin' is used**"
-msgstr ""
+msgstr "**Origen de la transacción: se utiliza 'tx.origin'**"
 
 #: ../../static_analysis.md:47
 msgid "`tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
-msgstr ""
+msgstr "`tx.origin` sólo es útil en casos muy excepcionales. Si lo utiliza para la autenticación, normalmente querrá sustituirlo por `msg.sender`, porque de lo contrario cualquier contrato al que llame podrá actuar en su nombre."
 
 #: ../../static_analysis.md:49
 #: ../../static_analysis.md:58
@@ -127,189 +127,189 @@ msgstr ""
 #: ../../static_analysis.md:286
 #: ../../static_analysis.md:301
 msgid "_Example:_"
-msgstr ""
+msgstr "_Ejemplo:_"
 
 #: ../../static_analysis.md:54
 msgid "**Check effects: Potential reentrancy bugs**"
-msgstr ""
+msgstr "**Comprobar efectos: Posibles fallos de reentrada**"
 
 #: ../../static_analysis.md:56
 msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
-msgstr ""
+msgstr "La violación potencial del patrón Comprobaciones-Efectos-Interacción puede conducir a una vulnerabilidad de reentrada."
 
 #: ../../static_analysis.md:67
 msgid "**Inline assembly: Inline assembly used**"
-msgstr ""
+msgstr "**Montaje en línea: Montaje en línea utilizado**"
 
 #: ../../static_analysis.md:69
 msgid "Use of inline assembly is advised only in rare cases."
-msgstr ""
+msgstr "Se aconseja utilizar el montaje en línea sólo en casos excepcionales."
 
 #: ../../static_analysis.md:78
 msgid "**Block timestamp: Semantics maybe unclear**"
-msgstr ""
+msgstr "**Sello de tiempo del bloque: Semántica quizá poco clara**"
 
 #: ../../static_analysis.md:80
 msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
-msgstr ""
+msgstr "`now` no significa hora actual. `now` es un alias de `block.timestamp`. `block.timestamp` puede estar influenciado por los mineros hasta cierto punto, tenga cuidado."
 
 #: ../../static_analysis.md:91
 msgid "**Low level calls: Semantics maybe unclear**"
-msgstr ""
+msgstr "**Llamadas de bajo nivel: Semántica quizá poco clara**"
 
 #: ../../static_analysis.md:93
 msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
-msgstr ""
+msgstr "El uso de `call`, `callcode` o `delegatecall` de bajo nivel debe evitarse siempre que sea posible. `send` no lanza una excepción cuando no tiene éxito, asegúrese de tratar el caso de fallo como corresponda. Utilice `transfer` siempre que el fallo de la transferencia de éter deba hacer retroceder toda la transacción."
 
 #: ../../static_analysis.md:100
 msgid "**Blockhash usage: Semantics maybe unclear**"
-msgstr ""
+msgstr "**Uso del bloqueo: Semántica quizá poco clara**"
 
 #: ../../static_analysis.md:102
 msgid "`blockhash` is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
-msgstr ""
+msgstr "`blockhash` se utiliza para acceder a los últimos 256 hashes de bloque. Un minero calcula el hash del bloque \"sumando\" la información del bloque actual minado. Al sumar la información de forma inteligente, un minero puede intentar influir en el resultado de una transacción en el bloque actual."
 
 #: ../../static_analysis.md:108
 msgid "**Selfdestruct: Beware of caller contracts**"
-msgstr ""
+msgstr "**Autodestrucción: Cuidado con los contratos de llamadas**"
 
 #: ../../static_analysis.md:110
 msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
-msgstr ""
+msgstr "`selfdestruct` puede bloquear contratos de llamada inesperadamente. Tenga especial cuidado si está previsto que este contrato sea utilizado por otros contratos (por ejemplo, contratos de biblioteca, interacciones). La autodestrucción del contrato llamante puede dejar a los contratos llamantes en un estado inoperativo."
 
 #: ../../static_analysis.md:117
 msgid "Category: Gas & Economy"
-msgstr ""
+msgstr "Categoría: Gas y economía"
 
 #: ../../static_analysis.md:118
 msgid "**Gas costs: Too high gas requirement of functions**"
-msgstr ""
+msgstr "**Costes de gas: Demasiado alto requerimiento de gas de las funciones**"
 
 #: ../../static_analysis.md:120
 msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
-msgstr ""
+msgstr "Si la necesidad de gas de una función es superior al límite de gas del bloque, no podrá ejecutarse. Por favor, evite bucles en sus funciones o acciones que modifiquen grandes áreas de almacenamiento"
 
 #: ../../static_analysis.md:132
 msgid "**This on local calls: Invocation of local functions via 'this'**"
-msgstr ""
+msgstr "**This en llamadas locales: Invocación de funciones locales a través de 'this'**"
 
 #: ../../static_analysis.md:134
 msgid "Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls."
-msgstr ""
+msgstr "Nunca utilice `this` para llamar a funciones en el mismo contrato, sólo consume más gas que las llamadas locales normales."
 
 #: ../../static_analysis.md:149
 msgid "**Delete on dynamic Array: Use require/assert appropriately**"
-msgstr ""
+msgstr "**Borrar en array dinámico: Utilice require/assert adecuadamente**"
 
 #: ../../static_analysis.md:151
 msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
-msgstr ""
+msgstr "La operación `delete` cuando se aplica a un array de tamaño dinámico en Solidity genera código para borrar cada uno de los elementos contenidos. Si el array es grande, esta operación puede sobrepasar el límite de gas del bloque y lanzar una excepción OOG. También los objetos anidados de tamaño dinámico pueden producir los mismos resultados."
 
 #: ../../static_analysis.md:163
 msgid "**For loop over dynamic array: Iterations depend on dynamic array's size**"
-msgstr ""
+msgstr "**Bucle for sobre matriz dinámica: Las iteraciones dependen del tamaño del array dinámico**"
 
 #: ../../static_analysis.md:165
 msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
-msgstr ""
+msgstr "Los bucles que no tienen un número fijo de iteraciones, por ejemplo, los bucles que dependen de valores de almacenamiento, deben utilizarse con cuidado: Debido al límite de gas en bloque, las transacciones sólo pueden consumir una determinada cantidad de gas. El número de iteraciones de un bucle puede crecer más allá del límite de gas de bloque, lo que puede paralizar el contrato completo en un momento dado. Además, utilizar bucles no limitados puede acarrear muchos gastos de gas evitables. Pruebe cuidadosamente cuántos elementos como máximo puede pasar a dichas funciones para que tenga éxito."
 
 #: ../../static_analysis.md:181
 msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
-msgstr ""
+msgstr "**Transferencia de éter en un bucle: Transferencia de éter en un bucle for/while/do-while**"
 
 #: ../../static_analysis.md:183
 msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
-msgstr ""
+msgstr "El pago de éter no debe realizarse en bucle. Debido al límite de gas en bloque, las transacciones sólo pueden consumir una determinada cantidad de gas. El número de iteraciones en un bucle puede crecer más allá del límite de gas de bloque, lo que puede provocar que el contrato completo se paralice en un momento determinado. Si es necesario, asegúrese de que el número de iteraciones es bajo y de que confía en cada una de las direcciones implicadas."
 
 #: ../../static_analysis.md:206
 msgid "Category: ERC"
-msgstr ""
+msgstr "Categoría: ERC"
 
 #: ../../static_analysis.md:207
 msgid "**ERC20: 'decimals' should be 'uint8'**"
-msgstr ""
+msgstr "**ERC20: 'decimales' debería ser 'uint8'**"
 
 #: ../../static_analysis.md:209
 msgid "ERC20 Contracts `decimals` function should have `uint8` as return type."
-msgstr ""
+msgstr "Los contratos ERC20 La función `decimals` debe tener `uint8` como tipo de retorno."
 
 #: ../../static_analysis.md:219
 msgid "Category: Miscellaneous"
-msgstr ""
+msgstr "Categoría: Varios"
 
 #: ../../static_analysis.md:220
 msgid "**Constant/View/Pure functions: Potentially constant/view/pure functions**"
-msgstr ""
+msgstr "**Funciones constantes/vistas/puras: Funciones potencialmente constantes/vistas/puras**"
 
 #: ../../static_analysis.md:222
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
-msgstr ""
+msgstr "Advierte de los métodos que potencialmente deberían ser constantes/vistos/puros pero no lo son."
 
 #: ../../static_analysis.md:230
 msgid "**Similar variable names: Variable names are too similar**"
-msgstr ""
+msgstr "**Nombres de variables similares: Los nombres de las variables son demasiado similares**"
 
 #: ../../static_analysis.md:232
 msgid "It warns on the usage of similar variable names."
-msgstr ""
+msgstr "Advierte sobre el uso de nombres de variables similares."
 
 #: ../../static_analysis.md:242
 msgid "**No return: Function with 'returns' not returning**"
-msgstr ""
+msgstr "**Sin retorno: Función con 'returns' no retorna**"
 
 #: ../../static_analysis.md:244
 msgid "It warns for the methods which define a return type but never explicitly return a value."
-msgstr ""
+msgstr "Advierte de los métodos que definen un tipo de retorno pero nunca devuelven explícitamente un valor."
 
 #: ../../static_analysis.md:252
 msgid "**Guard conditions: Use 'require' and 'assert' appropriately**"
-msgstr ""
+msgstr "**Guarde las condiciones: Utilice 'require' y 'assert' adecuadamente**"
 
 #: ../../static_analysis.md:254
 msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
-msgstr ""
+msgstr "Utilice `assert(x)` si nunca jamás desea que x sea falso, en ninguna circunstancia (aparte de un error en su código). Utilice `require(x)` si x puede ser falso, debido, por ejemplo, a una entrada no válida o a un componente externo que falle."
 
 #: ../../static_analysis.md:260
 msgid "**Result not used: The result of an operation not used**"
-msgstr ""
+msgstr "**Resultado no utilizado: El resultado de una operación no utilizada**"
 
 #: ../../static_analysis.md:262
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
-msgstr ""
+msgstr "Una operación binaria produce un valor que no se utiliza en la siguiente. Esto suele deberse a la confusión entre asignación (=) y comparación (==)."
 
 #: ../../static_analysis.md:270
 msgid "**String Length: Bytes length != String length**"
-msgstr ""
+msgstr "**Longitud de la cadena: Longitud de bytes != Longitud de cadena**"
 
 #: ../../static_analysis.md:272
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
-msgstr ""
+msgstr "Los bytes y la longitud de la cadena no son lo mismo, ya que se supone que las cadenas están codificadas en UTF-8 (según la definición de la ABI), por lo que un carácter no está necesariamente codificado en un byte de datos."
 
 #: ../../static_analysis.md:282
 msgid "**Delete from dynamic array: 'delete' on an array leaves a gap**"
-msgstr ""
+msgstr "**Borrar de un array dinámico: 'borrar' en un array deja un hueco**"
 
 #: ../../static_analysis.md:284
 msgid "Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
-msgstr ""
+msgstr "Utilizar `delete` en un array deja un hueco. La longitud del array sigue siendo la misma. Si desea eliminar la posición vacía, deberá desplazar los elementos manualmente y actualizar la propiedad de longitud."
 
 #: ../../static_analysis.md:297
 msgid "**Data Truncated: Division on int/uint values truncates the result**"
-msgstr ""
+msgstr "**Datos truncados: La división en valores int/uint trunca el resultado**"
 
 #: ../../static_analysis.md:299
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr ""
+msgstr "La división de valores enteros vuelve a dar como resultado un valor entero. Esto significa, por ejemplo, 10 / 100 = 0 en lugar de 0,1, ya que el resultado vuelve a ser un número entero. Esto no es válido para la división de (sólo) valores literales ya que esos dan constantes racionales."
 
 #: ../../static_analysis.md:309
 msgid "Remix-analyzer"
-msgstr ""
+msgstr "Analizador de remezclas"
 
 #: ../../static_analysis.md:311
 msgid "`remix-analyzer` is the library which works underneath of remix-ide `Solidity Static Analysis` plugin."
-msgstr ""
+msgstr "`remix-analyzer` es la librería que funciona por debajo del plugin remix-ide `Solidity Static Analysis`."
 
 #: ../../static_analysis.md:313
 msgid "`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/@remix-project/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
-msgstr ""
+msgstr "`remix-analyzer` es un [paquete NPM](https://www.npmjs.com/package/@remix-project/remix-analyzer). Puede utilizarse como biblioteca en una solución que soporte node.js. Encontrará más información sobre este tipo de uso en el [repositorio remix-analyzer](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
 
