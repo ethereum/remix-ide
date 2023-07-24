@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language: es_ES\n"
 "Language-Team: Spanish\n"
@@ -19,14 +19,12 @@ msgid "Creating and Deploying a Contract"
 msgstr "Crear y desplegar un contrato"
 
 #: ../../create_deploy.md:4
-msgid ""
-"This page contains the process of creating a contract, compiling it, "
-"deploying and then interacting with it."
-msgstr ""
+msgid "This page contains the process of creating a contract, compiling it, deploying and then interacting with it."
+msgstr "Esta página contiene el proceso de creación de un contrato, su compilación, despliegue y posterior interacción con él."
 
 #: ../../create_deploy.md:6
 msgid "A sample contract"
-msgstr ""
+msgstr "Un modelo de contrato"
 
 #: ../../create_deploy.md:8
 msgid ""
@@ -42,154 +40,145 @@ msgstr ""
 
 #: ../../create_deploy.md:11
 msgid "![](images/a-file-explorer-new-file2.png)"
-msgstr ""
+msgstr "![](images/a-file-explorer-new-file2.png)"
 
 #: ../../create_deploy.md:13
-msgid ""
-"Go to the File Explorer, create a new file, name it and in the editor "
-"paste the contract below."
-msgstr ""
+msgid "Go to the File Explorer, create a new file, name it and in the editor paste the contract below."
+msgstr "Vaya al Explorador de archivos, cree un nuevo archivo, póngale un nombre y en el editor pegue el contrato que aparece a continuación."
 
 #: ../../create_deploy.md:43
 msgid "Compile the Contract"
-msgstr ""
+msgstr "Redactar el contrato"
 
 #: ../../create_deploy.md:45
-msgid ""
-"With the contract above as the active tab in the Editor, compile the "
-"contract."
-msgstr ""
+msgid "With the contract above as the active tab in the Editor, compile the contract."
+msgstr "Con el contrato anterior como pestaña activa en el Editor, compile el contrato."
 
 #: ../../create_deploy.md:47
 msgid "**For More Info** see the docs on the ([Solidity Compiler](compile.html))."
-msgstr ""
+msgstr "**Para más información** consulte la documentación del ([Solidity Compiler](compile.html))."
 
 #: ../../create_deploy.md:49
 msgid "Deploy the contract"
-msgstr ""
+msgstr "Desplegar el contrato"
 
 #: ../../create_deploy.md:51
 msgid "Go to the **Deploy & Run Transactions** plugin."
-msgstr ""
+msgstr "Vaya al plugin **Desplegar y ejecutar transacciones**."
 
 #: ../../create_deploy.md:53
 msgid "There are 3 type of environments Remix can be plugged to:"
-msgstr ""
+msgstr "Hay 3 tipos de entornos a los que se puede conectar Remix:"
 
 #: ../../create_deploy.md:54
 msgid "Javascript VM"
-msgstr ""
+msgstr "Javascript VM"
 
 #: ../../create_deploy.md:55
 msgid "Injected Web3"
-msgstr ""
+msgstr "Web3 inyectada"
 
 #: ../../create_deploy.md:56
 msgid "Web3 Provider"
-msgstr ""
+msgstr "Proveedor de Web3"
 
 #: ../../create_deploy.md:58
 msgid "(For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))"
-msgstr ""
+msgstr "(Para más detalles, consulte [Transacciones en curso](https://remix-ide.readthedocs.io/en/latest/run.html))"
 
 #: ../../create_deploy.md:60
 msgid "Both **Injected Web3** and **Web3 Provider** require the use of an external tool."
-msgstr ""
+msgstr "Tanto **Web3 inyectado** como **Proveedor Web3** requieren el uso de una herramienta externa."
 
 #: ../../create_deploy.md:62
 msgid "An external tool for **Injected provider** is Metamask.  Some external tools used with **Web3 provider** are a Truffle Ganache-CLI, Hardhat node, or an Ethereum node itself."
-msgstr ""
+msgstr "Una herramienta externa para el **proveedor inyectado** es Metamask.  Algunas herramientas externas utilizadas con **Proveedor Web3** son un Ganache-CLI de Truffle, un nodo Hardhat o un nodo Ethereum propiamente dicho."
 
 #: ../../create_deploy.md:64
 msgid "The **JavaScript VM** is convenient because it is a blockchain that runs in your browser and you don't need any other software or Ethereum node to run it."
-msgstr ""
+msgstr "El **JavaScript VM** es conveniente porque es un blockchain que se ejecuta en su navegador y no necesita ningún otro software o nodo Ethereum para ejecutarlo."
 
 #: ../../create_deploy.md:67
 msgid "**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart to its fresh & default state."
-msgstr ""
+msgstr "**NOTA:** Cuando esté en la **VM de Javascript** y recargue el navegador - la **VM de Javascript** se reiniciará a su estado fresco y por defecto."
 
 #: ../../create_deploy.md:69
-msgid ""
-"For performance purposes ( which is to say - for testing in an "
-"environment that is closest to the mainnet), it can be better to use an "
-"external node."
-msgstr ""
+msgid "For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it can be better to use an external node."
+msgstr "A efectos de rendimiento (es decir, para realizar pruebas en un entorno lo más cercano posible a la red principal), puede ser mejor utilizar un nodo externo."
 
 #: ../../create_deploy.md:71
 msgid "Select the VM environment"
-msgstr ""
+msgstr "Seleccione el entorno VM"
 
 #: ../../create_deploy.md:74
 msgid "Make sure the VM mode is selected. All accounts displayed in **ACCOUNT** should have 100 ether."
-msgstr ""
+msgstr "Asegúrese de que está seleccionado el modo VM. Todas las cuentas mostradas en **ACCOUNT** deben tener 100 ether."
 
 #: ../../create_deploy.md:76
 msgid "![](images/a-run-jsvm-accounts.png)"
-msgstr ""
+msgstr "![](images/a-run-jsvm-accounts.png)"
 
 #: ../../create_deploy.md:78
 msgid "Deploying a contract"
-msgstr ""
+msgstr "Desplegar un contrato"
 
 #: ../../create_deploy.md:81
 msgid "![](images/a-run-testContract.png)"
-msgstr ""
+msgstr "![](images/a-run-testContract.png)"
 
 #: ../../create_deploy.md:83
 msgid "The constructor of `testContract` needs a parameter (of type `uint256`). Input a uint256 and click on `Deploy`."
-msgstr ""
+msgstr "El constructor de `testContract` necesita un parámetro (de tipo `uint256`). Introduzca un uint256 y haga clic en `Deploy`."
 
 #: ../../create_deploy.md:86
 msgid "The transaction is created which deploys the instance of `testContract` ."
-msgstr ""
+msgstr "Se crea la transacción que despliega la instancia de `testContract` ."
 
 #: ../../create_deploy.md:88
 msgid "In a \"normal\" blockchain, you would have to wait for the transaction to be mined. However, because we are using the `JavaScript VM`, our execution is immediate."
-msgstr ""
+msgstr "En una blockchain \"normal\", habría que esperar a que se minara la transacción. Sin embargo, como estamos utilizando la `JavaScript VM`, nuestra ejecución es inmediata."
 
 #: ../../create_deploy.md:90
 msgid "The terminal will give information about the transaction."
-msgstr ""
+msgstr "El terminal dará información sobre la transacción."
 
 #: ../../create_deploy.md:92
 msgid "The newly created instance is displayed in the **Deployed Contracts** section."
-msgstr ""
+msgstr "La instancia recién creada aparece en la sección **Contratos desplegados**."
 
 #: ../../create_deploy.md:94
 msgid "![](images/a-jvm-instance.png)"
-msgstr ""
+msgstr "![](images/a-jvm-instance.png)"
 
 #: ../../create_deploy.md:96
 msgid "Interacting with an instance"
-msgstr ""
+msgstr "Interactuar con una instancia"
 
 #: ../../create_deploy.md:98
-msgid ""
-"Clicking on the caret to the left of the instance of TESTCONTRACT will "
-"open it up so you can see its function."
-msgstr ""
+msgid "Clicking on the caret to the left of the instance of TESTCONTRACT will open it up so you can see its function."
+msgstr "Si hace clic en el signo de intercalación situado a la izquierda de la instancia de TESTCONTRACT, se abrirá para que pueda ver su función."
 
 #: ../../create_deploy.md:100
 msgid "This new instance contains 3 actions which corresponds to the 3 functions (`setP`, `setPN`, `get`). Clicking on `setP` or `setPN` will create a new transaction."
-msgstr ""
+msgstr "Esta nueva instancia contiene 3 acciones que corresponden a las 3 funciones (`setP`, `setPN`, `get`). Al hacer clic en `setP` o `setPN` se creará una nueva transacción."
 
 #: ../../create_deploy.md:104
 msgid "Note that `setP` is `payable` (red button) : it is possible to send value (Ether) to the contract."
-msgstr ""
+msgstr "Observe que `setP` es `pagable` (botón rojo) : es posible enviar valor (Ether) al contrato."
 
 #: ../../create_deploy.md:107
 msgid "`setPN` is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract."
-msgstr ""
+msgstr "`setPN` no es pagable (botón naranja - según el tema) : no es posible enviar valor (Ether) al contrato."
 
 #: ../../create_deploy.md:109
 msgid "Clicking on `get` will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance."
-msgstr ""
+msgstr "Al hacer clic en `get` no se ejecuta una transacción (normalmente es un botón azul - dependiendo del tema). No ejecuta una transacción porque `get` no modifica el estado (la variable `value`) de esta instancia."
 
 #: ../../create_deploy.md:111
 msgid "Because `get` is a **view function**, you can see the return value just below the `get` button."
-msgstr ""
+msgstr "Como `get` es una **función vista**, puede ver el valor de retorno justo debajo del botón `get`."
 
 #: ../../create_deploy.md:114
 msgid "![](images/a-jvm-calling-instance.png)"
-msgstr ""
+msgstr "![](images/a-jvm-calling-instance.png)"
 
