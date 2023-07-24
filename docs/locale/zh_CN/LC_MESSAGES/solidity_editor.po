@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -16,283 +16,283 @@ msgstr ""
 
 #: ../../solidity_editor.md:1
 msgid "Editor"
-msgstr ""
+msgstr "编辑器"
 
 #: ../../solidity_editor.md:4
 msgid "Remix uses the Monaco editor. This is the same editor used by VSCode."
-msgstr ""
+msgstr "Remix使用Monaco编辑器。VSCode也使用相同的编辑器。"
 
 #: ../../solidity_editor.md:5
 msgid "Remix saves the current file every 5 seconds."
-msgstr ""
+msgstr "Remix每5秒保存一次当前文件。"
 
 #: ../../solidity_editor.md:6
 msgid "The Remix Editor will highlight keywords in Soldiity, JS, and TS."
-msgstr ""
+msgstr "Remix编辑器将突出显示Soldiity、JS和TS中的关键字。"
 
 #: ../../solidity_editor.md:8
 msgid "Editor displays information from other plugins"
-msgstr ""
+msgstr "编辑器会显示来自其他插件的信息。"
 
 #: ../../solidity_editor.md:9
 msgid "The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Soldity Compiler and the Debugger."
-msgstr ""
+msgstr "当然，编辑代码是Editor的主要目的。但它还可以与其他插件配合工作，特别是Solidity编译器和调试器。"
 
 #: ../../solidity_editor.md:11
 msgid "The Solidity Compiler will display warnings and errors in the Editor's gutter at the problematic line."
-msgstr ""
+msgstr "Solidity编译器将在有问题行时，在Editor边栏中显示警告和错误信息。"
 
 #: ../../solidity_editor.md:12
 msgid "Breakpoints for the Debugger are input in the Editor's gutter."
-msgstr ""
+msgstr "调试程序时，可在Editor边栏打上断点。"
 
 #: ../../solidity_editor.md:13
 msgid "When stepping through code in the Debugger, the relevant code will be highlighted in the Editor."
-msgstr ""
+msgstr "在Debugger中逐步执行代码时，相关代码将在Editor中突出显示。"
 
 #: ../../solidity_editor.md:15
 msgid "![](images/a-editor-general.png)"
-msgstr ""
+msgstr "![](images/a-editor-general.png)"
 
 #: ../../solidity_editor.md:17
 msgid "General Operations"
-msgstr ""
+msgstr "常规操作"
 
 #: ../../solidity_editor.md:18
 msgid "Files are open as tabs. When there are too many tabs to display, scrolling with a mouse wheel will horizontally scroll the tabs."
-msgstr ""
+msgstr "文件以选项卡形式打开。当选项卡太多无法显示时，使用鼠标滚轮可以水平滚动选项卡。"
 
 #: ../../solidity_editor.md:20
 msgid "![](images/a-editor-tabs.png)"
-msgstr ""
+msgstr "![](images/a-editor-tabs.png)"
 
 #: ../../solidity_editor.md:22
 msgid "The Play button works on the active tab. If a Solidity file is active, clicking Play will compile it. If a TS or JS file is active, Play will run the script."
-msgstr ""
+msgstr "播放按钮在活动选项卡上可以工作。如果当前激活的是Solidity文件，则单击“播放”将对其进行编译。如果当前激活的是TS或JS文件，则单击“播放”将运行脚本。"
 
 #: ../../solidity_editor.md:23
 msgid "The magnifying glass icons (+/-) on the top left corner are to increase/decrease the font size."
-msgstr ""
+msgstr "左上角的放大镜图标（+/-）可增加/减小字体大小。"
 
 #: ../../solidity_editor.md:24
 msgid "The small type on the far right of the Editor is clickable to jump to a section."
-msgstr ""
+msgstr "编辑器最右侧的小型文本可点击跳转到某个部分。"
 
 #: ../../solidity_editor.md:26
 msgid "TypeScript"
-msgstr ""
+msgstr "TypeScript"
 
 #: ../../solidity_editor.md:28
 msgid "The Editor and Script Runner support TypeScript, which means that you can write TypeScript, have some auto-completion, and run it straight from Remix. As stated above, there is syntax highlighting in TS."
-msgstr ""
+msgstr "编辑器和脚本运行程序支持TypeScript，这意味着您可以编写TypeScript代码，并在Remix中进行自动完成和直接运行。如上所述，TS具有语法高亮功能。"
 
 #: ../../solidity_editor.md:30
 msgid "The default Workspace contains example TypeScript files."
-msgstr ""
+msgstr "默认工作区包含示例TypeScript文件。"
 
 #: ../../solidity_editor.md:32
 msgid "Editor & Autocompile"
-msgstr ""
+msgstr "编辑器和自动编译"
 
 #: ../../solidity_editor.md:33
 msgid "When autocompile is enabled (in the Settings panel), compilation will occur each time the current file is changed, or another file is selected."
-msgstr ""
+msgstr "当启用自动编译（在设置面板中）时，每次更改当前文件或选择另一个文件时都会进行编译。"
 
 #: ../../solidity_editor.md:35
 msgid "![](images/a-editor-settings.png)"
-msgstr ""
+msgstr "![](images/a-editor-settings.png)"
 
 #: ../../solidity_editor.md:36
 msgid "Autocomplete"
-msgstr ""
+msgstr "自动补全"
 
 #: ../../solidity_editor.md:37
 msgid "Autocompleting Solidity code happens when you start typing in the Editor. The Compiler will run in the background, and process any imports you have. You will see these imports appear in the .deps directory in the File Explorer."
-msgstr ""
+msgstr "在编辑器中开始输入时，Solidity代码的自动补全会发生。编译器将在后台运行，并处理您拥有的任何导入。您将看到这些导入出现在文件资源管理器中的.deps目录中。"
 
 #: ../../solidity_editor.md:39
 msgid "![](images/a-editor-autocomplete1.png)"
-msgstr ""
+msgstr "![](images/a-editor-autocomplete1.png)"
 
 #: ../../solidity_editor.md:41
 msgid "**Tip:** If you start with a Solidity file that contains errors, the Compiler might not be able to compile it. In that case, the Editor's autocomplete features will not fully work until after the file is successfully compiled. After that, autocomplete will work even if there are errors, but only for the elements the Compiler already understands. For example, if you add a new function in a file that contains errors, autocomplete will not be able to find that function because it can’t compile the file."
-msgstr ""
+msgstr "提示：如果您开始就使用有错误的Solidity文件，则编译器可能无法对其进行编译。在这种情况下，编辑器的自动补全功能直到成功编译该文件后才能完全工作。之后，即使存在错误，自动补全也仅适用于编译器已经理解的元素。例如，在包含错误的文件中添加新函数时，自动完成将无法找到该函数，因为它无法编译该文件。"
 
 #: ../../solidity_editor.md:43
 msgid "![](images/a-editor-autocomplete.png)"
-msgstr ""
+msgstr "![](images/a-editor-autocomplete.png)"
 
 #: ../../solidity_editor.md:45
 msgid "Auto complete on imports"
-msgstr ""
+msgstr "导入自动补全"
 
 #: ../../solidity_editor.md:46
 msgid "The Editor's autocomplete will offer the option to bring in OpenZeppelin contracts, Uniswap contracts, and the paths to all the files in the current Workspace."
-msgstr ""
+msgstr "编辑器的自动补全功能将提供引入OpenZeppelin合约、Uniswap合约以及当前工作区中所有文件路径的选项。"
 
 #: ../../solidity_editor.md:48
 msgid "![](images/a-editor-auto-import1.png)"
-msgstr ""
+msgstr "![](images/a-editor-auto-import1.png)"
 
 #: ../../solidity_editor.md:50
 msgid "So, when choosing @openzeppelin, you’ll get this:"
-msgstr ""
+msgstr "因此，当选择@openzeppelin时，您将会得到以下内容："
 
 #: ../../solidity_editor.md:52
 msgid "![](images/a-editor-auto-oz-import2.png)"
-msgstr ""
+msgstr "![](images/a-editor-auto-oz-import2.png)"
 
 #: ../../solidity_editor.md:54
 msgid "And the same with Uniswap:"
-msgstr ""
+msgstr "Uniswap也一样"
 
 #: ../../solidity_editor.md:56
 msgid "![](images/a-editor-auto-uni-import3.png)"
-msgstr ""
+msgstr "![](images/a-editor-auto-uni-import3.png)"
 
 #: ../../solidity_editor.md:58
 msgid "Errors and Warnings"
-msgstr ""
+msgstr "错误和警告"
 
 #: ../../solidity_editor.md:59
 msgid "You can tell the file was successfully compiled if no errors or warnings are displayed in the Editor. Errors are displayed using squiggly lines. A red line indicates an error, a yellow line is a warning."
-msgstr ""
+msgstr "如果编辑器中没有显示任何错误或警告，那么您可以确定文件已经成功编译。使用波浪线来显示错误信息。红色的波浪线表示有一个错误，黄色的波浪线则是一个警告。"
 
 #: ../../solidity_editor.md:61
 msgid "![](images/a-editor-error-red-squiggles.png)"
-msgstr ""
+msgstr "![](images/a-editor-error-red-squiggles.png)"
 
 #: ../../solidity_editor.md:63
 msgid "Hovering over the squiggly line shows you the message from the Compiler."
-msgstr ""
+msgstr "将鼠标悬停在波浪线上会显示编译器的消息。"
 
 #: ../../solidity_editor.md:65
 msgid "![](images/a-editor-error-hover.png)"
-msgstr ""
+msgstr "![](images/a-editor-error-hover.png)"
 
 #: ../../solidity_editor.md:67
 msgid "Tabs and the File Explorer will also will also display whether a file contains errors or warnings."
-msgstr ""
+msgstr "选项卡和文件资源管理器还会显示文件是否包含错误或警告。"
 
 #: ../../solidity_editor.md:69
 msgid "![](images/a-editor-errors-tabs-fe.png)"
-msgstr ""
+msgstr "![](images/a-editor-errors-tabs-fe.png)"
 
 #: ../../solidity_editor.md:71
 msgid "Errors on Imported Files"
-msgstr ""
+msgstr "导入的文件中出现错误"
 
 #: ../../solidity_editor.md:73
 msgid "A file with errors in one of the files that it imports will also trigger an error in the Editor. Your main file might not compile, but you will see there is a problem immediately."
-msgstr ""
+msgstr "如果文件中导入的其中一个文件存在错误，编辑器也会触发一个错误。你的主要文件可能无法编译，但是你将立即看到有问题。"
 
 #: ../../solidity_editor.md:75
 msgid "Hovering over an Error Number in the File Explorer"
-msgstr ""
+msgstr "在文件资源管理器中悬停在错误编号上"
 
 #: ../../solidity_editor.md:76
 msgid "The number of errors in a file is also reported in the File Explorer. Hovering over the number, which indicates the amount of errors/warnings, will display the information from the Compiler."
-msgstr ""
+msgstr "一个文件中的错误数量也报告在了 文件资源管理器 中。悬停在数字上，它表示 错误/警告 的数量，并且将显示来自编译器的信息。"
 
 #: ../../solidity_editor.md:78
 msgid "![](images/a-editor-error-fe-num.png)"
-msgstr ""
+msgstr "![](images/a-editor-error-fe-num.png)"
 
 #: ../../solidity_editor.md:81
 msgid "Gas Estimates"
-msgstr ""
+msgstr "Gas 估算"
 
 #: ../../solidity_editor.md:83
 msgid "Gas estimates are displayed on the same line where a function is declared."
-msgstr ""
+msgstr "Gas估算显示在声明函数的同一行。"
 
 #: ../../solidity_editor.md:85
 msgid "![](images/a-editor-i-got-gas.png)"
-msgstr ""
+msgstr "![](images/a-editor-i-got-gas.png)"
 
 #: ../../solidity_editor.md:87
 msgid "Constructor gas estimates are also displayed, and consist of two components: creation cost and code deposit cost."
-msgstr ""
+msgstr "构造函数的Gas估算也会被显示，包括两个组成部分：创建成本和代码存储成本。"
 
 #: ../../solidity_editor.md:90
 msgid "Go to Definition and References"
-msgstr ""
+msgstr "转到定义和引用"
 
 #: ../../solidity_editor.md:92
 msgid "Definitions"
-msgstr ""
+msgstr "定义"
 
 #: ../../solidity_editor.md:93
 msgid "By right-clicking, you can go to a definition. You can also use the shortcut displayed."
-msgstr ""
+msgstr "通过右键单击，您可以转到定义。您还可以使用快捷方式进行操作。"
 
 #: ../../solidity_editor.md:95
 msgid "You can also right-click on the filename of an import statement and jump to that file."
-msgstr ""
+msgstr "您还可以右键单击导入语句的文件名并跳转到该文件。"
 
 #: ../../solidity_editor.md:97
 msgid "![](images/a-editor-goto-def.png)"
-msgstr ""
+msgstr "![](images/a-editor-goto-def.png)"
 
 #: ../../solidity_editor.md:99
 msgid "You can also ‘peek’ at the definition inline in the Editor. You can then jump to a definition by double-clicking on the right hand side of the line."
-msgstr ""
+msgstr "您还可以在编辑器中“查看”内联定义。然后，通过双击行右侧来跳转到定义。"
 
 #: ../../solidity_editor.md:101
 msgid "References"
-msgstr ""
+msgstr "引用"
 
 #: ../../solidity_editor.md:102
 msgid "By right-clicking, you can display all the references. You can also use the shortcut displayed."
-msgstr ""
+msgstr "通过右键单击，您可以显示所有的引用。您也可以使用快捷方式进行操作。"
 
 #: ../../solidity_editor.md:104
 msgid "![](images/a-editor-refs1.png)"
-msgstr ""
+msgstr "![](images/a-editor-refs1.png)"
 
 #: ../../solidity_editor.md:106
 msgid "You can jump to a reference by double-clicking on the right hand side of the line."
-msgstr ""
+msgstr "双击行右侧即可跳转到相应的引用。"
 
 #: ../../solidity_editor.md:108
 msgid "![](images/a-editor-ref2.png)"
-msgstr ""
+msgstr "![](images/a-editor-ref2.png)"
 
 #: ../../solidity_editor.md:109
 msgid "Highlighted References"
-msgstr ""
+msgstr "突出显示的引用"
 
 #: ../../solidity_editor.md:111
 msgid "References are highlighted in the Editor."
-msgstr ""
+msgstr "在编辑器中，引用会被突出显示。"
 
 #: ../../solidity_editor.md:113
 msgid "![](images/a-editor-ref-highlight.png)"
-msgstr ""
+msgstr "![](images/a-editor-ref-highlight.png)"
 
 #: ../../solidity_editor.md:114
 msgid "Hovering"
-msgstr ""
+msgstr "悬停提示"
 
 #: ../../solidity_editor.md:116
 msgid "When you hover over a term with a definition, the definition will pop up. Hovering over code that has triggered an error (underlined with a red squiggly line) will show the error message."
-msgstr ""
+msgstr "当您将鼠标悬停在带有定义的术语上时，定义将弹出。当您将鼠标悬停在触发错误（下划线为红色波浪线）的代码上时，会显示错误消息。"
 
 #: ../../solidity_editor.md:118
 msgid "![](images/a-editor-hover.png)"
-msgstr ""
+msgstr "![](images/a-editor-hover.png)"
 
 #: ../../solidity_editor.md:119
 msgid "Files with Errors turn Red"
-msgstr ""
+msgstr "文件出现错误时会变成红色"
 
 #: ../../solidity_editor.md:121
 msgid "When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor."
-msgstr ""
+msgstr "当一个文件包含错误时，它的名称将在“文件资源管理器”中和编辑器顶部的选项卡上变为红色。"
 
 #: ../../solidity_editor.md:123
 msgid "More about the Editor updates in this article: Major Updates to Remix Editor"
-msgstr ""
+msgstr "有关编辑器更新的更多信息，请参阅此文章：Remix 编辑器的重大更新"
 
 #: ../../solidity_editor.md:24
 msgid ""
