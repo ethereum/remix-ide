@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2019-22, Remix;
+# Copyright (C) 2019-23, Remix;
 # This file is distributed under the same license as the Remix - Ethereum IDE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 00:02-0400\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,38 +16,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:49
-#: ../../index.rst:49
-msgid "New Layout Intro"
+#: ../../index.rst:51
+#: ../../index.rst:51
+msgid "Introduction"
 msgstr ""
 
-#: ../../index.rst:55
-#: ../../index.rst:55
-msgid "Tour of default modules"
+#: ../../index.rst:61
+#: ../../index.rst:61
+msgid "Core Modules"
 msgstr ""
 
-#: ../../index.rst:65
-#: ../../index.rst:65
-msgid "Tour of typical solidity modules"
+#: ../../index.rst:72
+#: ../../index.rst:72
+msgid "Solidity modules"
 msgstr ""
 
-#: ../../index.rst:76
-#: ../../index.rst:76
-msgid "Solidity Unit Testing"
+#: ../../index.rst:83
+#: ../../index.rst:83
+msgid "Unit Testing"
 msgstr ""
 
-#: ../../index.rst:85
-#: ../../index.rst:85
-msgid "Native External Integrations"
+#: ../../index.rst:93
+#: ../../index.rst:93
+msgid "External Tool Integrations"
 msgstr ""
 
-#: ../../index.rst:94
-#: ../../index.rst:94
-msgid "Using Remix"
+#: ../../index.rst:102
+#: ../../index.rst:102
+msgid "Guides"
 msgstr ""
 
-#: ../../index.rst:111
-#: ../../index.rst:111
+#: ../../index.rst:113
+#: ../../index.rst:113
+msgid "Advanced"
+msgstr ""
+
+#: ../../index.rst:120
+#: ../../index.rst:120
 msgid "Miscellaneous"
 msgstr ""
 
@@ -75,54 +80,58 @@ msgstr ""
 msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
 msgstr ""
 
-#: ../../index.rst:18
+#: ../../index.rst:17
+msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
+msgstr ""
+
+#: ../../index.rst:20
 msgid "Remix Project"
 msgstr ""
 
-#: ../../index.rst:19
+#: ../../index.rst:21
 msgid "Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__, which are low-level tools for wider use."
 msgstr ""
 
-#: ../../index.rst:22
+#: ../../index.rst:24
 msgid "Remix IDE is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs. Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
 msgstr ""
 
-#: ../../index.rst:27
+#: ../../index.rst:29
 msgid "This set of documents covers instructions on how to use Remix. Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE."
 msgstr ""
 
-#: ../../index.rst:30
+#: ../../index.rst:32
 msgid "Useful links:"
 msgstr ""
 
-#: ../../index.rst:32
+#: ../../index.rst:34
 msgid "`Solidity Documentation <https://solidity.readthedocs.io>`__"
 msgstr ""
 
-#: ../../index.rst:34
+#: ../../index.rst:36
 msgid "`Remix Alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
 msgstr ""
 
-#: ../../index.rst:36
+#: ../../index.rst:38
 msgid "`Remix Desktop <https://github.com/ethereum/remix-desktop/releases>`__ - Remix Desktop's release page."
 msgstr ""
 
-#: ../../index.rst:38
+#: ../../index.rst:40
 msgid "`Remix on Github <https://github.com/ethereum/remix-project>`__"
 msgstr ""
 
-#: ../../index.rst:40
+#: ../../index.rst:42
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
 msgstr ""
 
-#: ../../index.rst:42
+#: ../../index.rst:44
 msgid "`Remix on Twitter <https://twitter.com/EthereumRemix>`__"
 msgstr ""
 
-#: ../../index.rst:44
+#: ../../index.rst:46
 msgid "`Our Discord support channel <https://discord.gg/ZZSGegD7jm>`__"
 msgstr ""
 
-#: ../../index.rst:46
+#: ../../index.rst:48
 msgid "`Ethereum.org's Developer resources <https://ethereum.org/en/developers/>`__"
 msgstr ""
