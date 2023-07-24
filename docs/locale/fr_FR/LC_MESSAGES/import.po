@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,153 +19,153 @@ msgstr ""
 
 #: ../../import.md:1
 msgid "Importing & Loading Source Files in Solidity"
-msgstr ""
+msgstr "Importer et charger des fichiers sources dans Solidity"
 
 #: ../../import.md:4
 msgid "There are two main reasons for loading external files into Remix:"
-msgstr ""
+msgstr "Il y a deux raisons principales de charger des fichiers externes dans Remix :"
 
 #: ../../import.md:5
 msgid "**to import a library or dependency** (for files you will NOT be editing)"
-msgstr ""
+msgstr "**pour importer une bibliothèque ou une dépendance** (pour les fichiers que vous ne modifierez PAS)"
 
 #: ../../import.md:6
 msgid "**to load some files for manipulation, editing and play** (for files you might want to edit)"
-msgstr ""
+msgstr "**pour charger des fichiers à manipuler, à éditer et à lire** (pour les fichiers que vous pourriez vouloir éditer)"
 
 #: ../../import.md:8
 msgid "Importing a library or dependency"
-msgstr ""
+msgstr "Importation d'une bibliothèque ou d'une dépendance"
 
 #: ../../import.md:10
 msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
-msgstr ""
+msgstr "Lorsque vous importez depuis NPM, ou une URL (comme github, une passerelle IPFS, ou une passerelle Swarm), vous n'avez rien d'autre à faire que d'utiliser l'instruction `import` dans votre contrat. Les dépendances n'ont pas besoin d'être \"préchargées\" dans l'espace de travail actuel de l'explorateur de fichiers avant que le contrat ne soit compilé."
 
 #: ../../import.md:12
 msgid "Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder."
-msgstr ""
+msgstr "Les fichiers chargés à partir de l'instruction d'importation sont placés dans le dossier `.deps` de l'explorateur de fichiers** de l'espace de travail actuel."
 
 #: ../../import.md:14
 msgid "Under the hood, Remix checks to see if the files are already loaded in the **.deps** directory.  If not, it gets them via unpkg if it is an NPM lib."
-msgstr ""
+msgstr "Sous le capot, Remix vérifie si les fichiers sont déjà chargés dans le répertoire **.deps**.  Si ce n'est pas le cas, il les récupère via unpkg s'il s'agit d'une librairie NPM."
 
 #: ../../import.md:16
 msgid "Here are some example import statements:"
-msgstr ""
+msgstr "Voici quelques exemples de déclarations d'importation :"
 
 #: ../../import.md:18
 msgid "Import from NPM"
-msgstr ""
+msgstr "Importer de NPM"
 
 #: ../../import.md:27
 msgid "**Note:** In the example above, **@openzeppelin** is the name of the npm library.  In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name."
-msgstr ""
+msgstr "**Note:** Dans l'exemple ci-dessus, **@openzeppelin** est le nom de la bibliothèque npm.  Dans l'exemple suivant, le nom de la bibliothèque ne commence pas par un @ - mais Remix ira chercher dans npm une bibliothèque de ce nom."
 
 #: ../../import.md:33
 msgid "Import from a Github URL"
-msgstr ""
+msgstr "Importer à partir d'une URL Github"
 
 #: ../../import.md:37
 msgid "You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example above imports from OpenZeppelin Contracts v2.5.0."
-msgstr ""
+msgstr "Vous devez spécifier l'étiquette de la version (lorsqu'elle est disponible), sinon vous obtiendrez le code le plus récent de la branche master.  Pour les contrats OpenZeppelin, vous ne devez utiliser que le code publié dans une version officielle. L'exemple ci-dessus importe les contrats OpenZeppelin v2.5.0."
 
 #: ../../import.md:39
 msgid "Import from Swarm"
-msgstr ""
+msgstr "Importer depuis Swarm"
 
 #: ../../import.md:45
 msgid "Import from IPFS"
-msgstr ""
+msgstr "Importation à partir d'IPFS"
 
 #: ../../import.md:51
 msgid "Importing a local file not in .deps"
-msgstr ""
+msgstr "Importer un fichier local qui n'est pas dans .deps"
 
 #: ../../import.md:53
 msgid "To import a file NOT in the **.deps** folder, use a relative path (**./**). For example:"
-msgstr ""
+msgstr "Pour importer un fichier qui ne se trouve PAS dans le dossier **.deps**, utilisez un chemin relatif (**./**). Par exemple, vous pouvez utiliser un chemin relatif (**./**) :"
 
 #: ../../import.md:59
 msgid "**Note:** It is not possible to import across Workspaces."
-msgstr ""
+msgstr "**Note:** Il n'est pas possible d'importer entre les espaces de travail."
 
 #: ../../import.md:61
 msgid "Importing a file from your computer's filesystem"
-msgstr ""
+msgstr "Importation d'un fichier à partir du système de fichiers de votre ordinateur"
 
 #: ../../import.md:63
 msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr ""
+msgstr "Cette méthode utilise **remixd** - le démon remix.  Veuillez consulter la [docs remixd](remixd.html) pour savoir comment combler le fossé entre le navigateur et le système de fichiers de votre ordinateur."
 
 #: ../../import.md:65
 msgid "More about the import keyword"
-msgstr ""
+msgstr "En savoir plus sur le mot-clé import"
 
 #: ../../import.md:66
 msgid "For a detailed explanation of the `import` keyword see the [Solidity documentation](https://docs.soliditylang.org/en/latest/layout-of-source-files.html?highlight=import#importing-other-source-files)"
-msgstr ""
+msgstr "Pour une explication détaillée du mot-clé `import`, voir la [documentation Solidity] (https://docs.soliditylang.org/en/latest/layout-of-source-files.html?highlight=import#importing-other-source-files)."
 
 #: ../../import.md:70
 msgid "Importing a files for manipulation"
-msgstr ""
+msgstr "Importer un fichier pour le manipuler"
 
 #: ../../import.md:71
 msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder the shows their source - eg github or gists."
-msgstr ""
+msgstr "Lors de l'importation depuis les widgets de l'onglet d'accueil ou avec une commande remix dans la console, les fichiers sont placés dans la **racine de l'espace de travail actuel** à l'intérieur d'un dossier qui montre leur source - par exemple github ou gists."
 
 #: ../../import.md:73
 msgid "Import buttons on the Remix home tab"
-msgstr ""
+msgstr "Boutons d'importation dans l'onglet d'accueil de Remix"
 
 #: ../../import.md:74
 msgid "The Gist, Github, Swarm, IPFS, & HTTPS buttons are to assist in getting files into Remix so you can explore."
-msgstr ""
+msgstr "Les boutons Gist, Github, Swarm, IPFS, et HTTPS sont là pour vous aider à obtenir des fichiers dans Remix afin que vous puissiez les explorer."
 
 #: ../../import.md:76
 msgid "![](images/a-import-from.png)"
-msgstr ""
+msgstr "![](images/a-import-from.png)"
 
 #: ../../import.md:78
 msgid "Clicking on any of the Import buttons will bring up a modal like this one:"
-msgstr ""
+msgstr "En cliquant sur l'un des boutons d'importation, vous ferez apparaître une fenêtre modale comme celle-ci :"
 
 #: ../../import.md:80
 msgid "![](images/a-gist-modal.png)"
-msgstr ""
+msgstr "![](images/a-gist-modal.png)"
 
 #: ../../import.md:82
 msgid "No need to wrap the input in quotes."
-msgstr ""
+msgstr "Il n'est pas nécessaire de mettre les données entre guillemets."
 
 #: ../../import.md:83
 msgid "Loading with a remix command in the console"
-msgstr ""
+msgstr "Chargement avec une commande remix dans la console"
 
 #: ../../import.md:84
 msgid "The 2 remix commands for loading are:"
-msgstr ""
+msgstr "Les 2 commandes remix pour le chargement sont :"
 
 #: ../../import.md:85
 msgid "remix.loadurl(url)"
-msgstr ""
+msgstr "remix.loadurl(url)"
 
 #: ../../import.md:86
 msgid "remix.loadgist(id)"
-msgstr ""
+msgstr "remix.loadgist(id)"
 
 #: ../../import.md:95
 msgid "Accessing files loaded from the Home tab or from a remix command"
-msgstr ""
+msgstr "Accès aux fichiers chargés à partir de l'onglet Accueil ou d'une commande de remixage"
 
 #: ../../import.md:97
 msgid "When you load from github, a folder named `github` folder is created in the root of your current workspace.  To import a file from the `github` folder, you would use a command like this:"
-msgstr ""
+msgstr "Lorsque vous chargez depuis github, un dossier nommé `github` est créé à la racine de votre espace de travail actuel.  Pour importer un fichier depuis le dossier `github`, vous devez utiliser une commande comme celle-ci :"
 
 #: ../../import.md:103
 msgid "Notice that this import statement doesn't include the version information that was in the remix.load(url) command.  So it is recommended that you use the methods described at the top of this page for importing dependencies that you are not intending to edit."
-msgstr ""
+msgstr "Notez que cette déclaration d'importation n'inclut pas les informations de version qui se trouvaient dans la commande remix.load(url).  Il est donc recommandé d'utiliser les méthodes décrites en haut de cette page pour importer des dépendances que vous n'avez pas l'intention de modifier."
 
 #: ../../import.md:105
 msgid "Assume the .sol file that contained the import statement above is in the contracts folder. Notice that this import statement didn't need to traverse back to the github folder with a relative path like: **../github**."
-msgstr ""
+msgstr "Supposons que le fichier .sol contenant la déclaration d'importation ci-dessus se trouve dans le dossier contracts. Remarquez que cette instruction d'importation n'a pas besoin de remonter jusqu'au dossier github avec un chemin relatif comme : **../github**."
 
