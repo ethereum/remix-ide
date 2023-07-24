@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,73 +19,73 @@ msgstr ""
 
 #: ../../remix_as_code_viewer.md:1
 msgid "Remix as code viewer"
-msgstr ""
+msgstr "Remix comme visualiseur de code"
 
 #: ../../remix_as_code_viewer.md:4
 msgid "Through Etherscan"
-msgstr ""
+msgstr "Grâce à l'Etherscan"
 
 #: ../../remix_as_code_viewer.md:7
 msgid "Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a mutiple part contract verification, Remix provides a quick way to load all the contracts."
-msgstr ""
+msgstr "Les contrats vérifiés sur Etherscan peuvent être visualisés dans Remix en modifiant simplement l'URL. Remix est un moyen rapide de charger tous les contrats, surtout dans le cas d'une vérification d'un contrat à plusieurs parties."
 
 #: ../../remix_as_code_viewer.md:9
 msgid "A typical Etherscan URL for a contract address looks like this:"
-msgstr ""
+msgstr "Une URL Etherscan typique pour une adresse de contrat ressemble à ceci :"
 
 #: ../../remix_as_code_viewer.md:11
 msgid "`https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
-msgstr ""
+msgstr "`https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
 
 #: ../../remix_as_code_viewer.md:13
 msgid "In the URL, change `etherscan.io` to `remix.ethereum.org`"
-msgstr ""
+msgstr "Dans l'URL, remplacez `etherscan.io` par `remix.ethereum.org`"
 
 #: ../../remix_as_code_viewer.md:15
 msgid "`https://remix.ethereum.org/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
-msgstr ""
+msgstr "`https://remix.ethereum.org/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
 
 #: ../../remix_as_code_viewer.md:17
 msgid "and reload. It will fetch the contracts verified on Etherscan."
-msgstr ""
+msgstr "et rechargez. Il récupérera les contrats vérifiés sur Etherscan."
 
 #: ../../remix_as_code_viewer.md:19
 msgid "Contracts verified on Ethereum mainnnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace."
-msgstr ""
+msgstr "Les contrats vérifiés sur le réseau principal Ethereum et sur d'autres réseaux de test (Ropsten, Rinkeby, Kovan & Goerli) seront chargés dans les répertoires respectifs sous l'espace de travail `etherscan-code-sample`."
 
 #: ../../remix_as_code_viewer.md:21
 msgid "![](images/a-code-viewer-etherscan.png)"
-msgstr ""
+msgstr "![](images/a-code-viewer-etherscan.png)"
 
 #: ../../remix_as_code_viewer.md:23
 msgid "Tihs works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix."
-msgstr ""
+msgstr "Cela fonctionne pour les URLs Etherscan testnet `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. Si elles sont mises à jour de manière similaire, les contrats seront chargés dans Remix."
 
 #: ../../remix_as_code_viewer.md:25
 msgid "Through GitHub"
-msgstr ""
+msgstr "Par l'intermédiaire de GitHub"
 
 #: ../../remix_as_code_viewer.md:28
 msgid "Solidity files in GitHub can be loaded on Remix with a similar tweak. For a file with URL like:"
-msgstr ""
+msgstr "Les fichiers Solidity dans GitHub peuvent être chargés sur Remix avec une modification similaire. Pour un fichier avec une URL comme :"
 
 #: ../../remix_as_code_viewer.md:30
 msgid "`https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
-msgstr ""
+msgstr "`https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
 
 #: ../../remix_as_code_viewer.md:32
 msgid "change `github.com` to `remix.ethereum.org` like:"
-msgstr ""
+msgstr "changez `github.com` en `remix.ethereum.org` comme :"
 
 #: ../../remix_as_code_viewer.md:34
 msgid "`https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
-msgstr ""
+msgstr "`https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
 
 #: ../../remix_as_code_viewer.md:36
 msgid "and reload. It will open the same file in Remix IDE."
-msgstr ""
+msgstr "et rechargez. Le même fichier sera ouvert dans Remix IDE."
 
 #: ../../remix_as_code_viewer.md:38
 msgid "![](images/a-code-viewer-github.png)"
-msgstr ""
+msgstr "![](images/a-code-viewer-github.png)"
 
