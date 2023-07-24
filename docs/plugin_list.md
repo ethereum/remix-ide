@@ -64,7 +64,7 @@ Deploy a contract to multiple chains (1 at a time) with the same address.
 **Contract Verification - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;
 <br>Verify contracts and fetch verified contracts
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
-<br>[Documentation](https://github.com/ethereum/sourcify)
+<br>[Documentation](https://docs.sourcify.dev/docs/intro/)
 <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
 
 **Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br>
