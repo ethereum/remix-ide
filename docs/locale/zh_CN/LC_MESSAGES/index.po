@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -52,7 +52,7 @@ msgstr "欢迎使用 Remix 文档！"
 
 #: ../../index.rst:4
 msgid "**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and as a VSCode extension."
-msgstr ""
+msgstr "**Remix IDE（集成开发环境）** 适用于所有知识水平的用户在智能合约开发过程中的整个过程。它不需要任何设置，促进快速开发周期，并具有直观GUI的丰富插件集。该IDE有两种版本（Web应用程序或桌面应用程序），并可作为VSCode扩展。"
 
 #: ../../index.rst:8
 msgid "**Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__"
@@ -60,7 +60,7 @@ msgstr "**Remix IDE** 线上地址是： `https://remix.ethereum.org <https://re
 
 #: ../../index.rst:10
 msgid "Supported browsers: Firefox, Chrome, Brave. We do not support use of Remix on tablets or mobile devices."
-msgstr ""
+msgstr "支持的浏览器：Firefox，Chrome，Brave。我们不支持在平板电脑或移动设备上使用Remix。"
 
 #: ../../index.rst:12
 msgid "**Remix Desktop IDE**, see releases: `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__"
@@ -68,7 +68,7 @@ msgstr "**Remix Desktop IDE** ，请参阅版本： `https://github.com/ethereum
 
 #: ../../index.rst:14
 msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
-msgstr ""
+msgstr "**Ethereum Remix** 是VSCode的扩展程序，可以在 `这里 <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__ 找到。有关VSCode扩展程序的文档位于 `这里 <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__ 。"
 
 #: ../../index.rst:18
 msgid "Remix Project"
@@ -76,11 +76,11 @@ msgstr "Remix项目"
 
 #: ../../index.rst:19
 msgid "Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__, which are low-level tools for wider use."
-msgstr ""
+msgstr "Remix IDE是 `Remix Project <https://github.com/ethereum/remix-project>`__ 的一部分，该项目还包括 `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ 和 `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__ ，这些都是广泛使用的低级工具。"
 
 #: ../../index.rst:22
 msgid "Remix IDE is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs. Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-project>`__."
-msgstr ""
+msgstr "Remix IDE 可在 `remix.ethereum.org <https://remix.ethereum.org>`__ 上使用，更多信息可以在这些文档中找到。我们的 IDE 工具可在 `我们的 GitHub 存储库 <https://github.com/ethereum/remix-project>`__ 中获取。"
 
 #: ../../index.rst:27
 msgid "This set of documents covers instructions on how to use Remix. Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE."
@@ -92,11 +92,11 @@ msgstr "实用链接："
 
 #: ../../index.rst:32
 msgid "`Solidity Documentation <https://solidity.readthedocs.io>`__"
-msgstr ""
+msgstr "`Solidity 文档 <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:34
 msgid "`Remix Alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr ""
+msgstr "`Remix Alpha <https://remix-alpha.ethereum.org>`__ - 这个版本是我们测试新的 Remix 发布版（不稳定！）。"
 
 #: ../../index.rst:36
 msgid "`Remix Desktop <https://github.com/ethereum/remix-desktop/releases>`__ - Remix Desktop's release page."
@@ -116,7 +116,7 @@ msgstr "`Twitter上的Remix <https://twitter.com/EthereumRemix>`__"
 
 #: ../../index.rst:44
 msgid "`Our Discord support channel <https://discord.gg/ZZSGegD7jm>`__"
-msgstr ""
+msgstr "`我们的Discord支持频道 <https://discord.gg/ZZSGegD7jm>`__"
 
 #: ../../index.rst:46
 msgid "`Ethereum.org's Developer resources <https://ethereum.org/en/developers/>`__"
