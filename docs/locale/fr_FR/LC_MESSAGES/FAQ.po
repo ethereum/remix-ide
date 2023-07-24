@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:45\n"
+"PO-Revision-Date: 2023-07-24 13:44\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -20,23 +20,23 @@ msgstr "FAQ"
 
 #: ../../FAQ.md:3
 msgid "Supported devices & Browsers"
-msgstr ""
+msgstr "Appareils et navigateurs pris en charge"
 
 #: ../../FAQ.md:5
 msgid "**Q:** What browsers will Remix work on?"
-msgstr ""
+msgstr "**Q:** Quels sont les navigateurs sur lesquels Remix fonctionne ?"
 
 #: ../../FAQ.md:7
 msgid "**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
-msgstr ""
+msgstr "**A:** Nous prenons en charge Firefox, Chrome et Brave.  Nous ne testons pas et ne recherchons pas les erreurs dans Safari, Edge ou d'autres navigateurs."
 
 #: ../../FAQ.md:9
 msgid "**Q:** Will Remix work on a tablet or mobile device?"
-msgstr ""
+msgstr "**Q:** Remix fonctionnera-t-il sur une tablette ou un appareil mobile ?"
 
 #: ../../FAQ.md:11
 msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
-msgstr ""
+msgstr "**A:** Nous n'encourageons pas l'utilisation de Remix sur les tablettes ou les téléphones portables."
 
 #: ../../FAQ.md:13
 msgid "General"
@@ -44,27 +44,27 @@ msgstr "Général"
 
 #: ../../FAQ.md:15
 msgid "**Q:** Are there keyboard shortcuts in Remix?"
-msgstr ""
+msgstr "**Q:** Y a-t-il des raccourcis clavier dans Remix ?"
 
 #: ../../FAQ.md:17
 msgid "**A:** Yes - here is the list of keyboard shortcuts:"
-msgstr ""
+msgstr "**A:** Oui - voici la liste des raccourcis clavier :"
 
 #: ../../FAQ.md:19
 msgid "`Ctrl+Shift+F` : Opens the File Explorer"
-msgstr ""
+msgstr "Ctrl+Shift+F` : Ouvre l'explorateur de fichiers"
 
 #: ../../FAQ.md:21
 msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
-msgstr ""
+msgstr "`Ctrl+Shift+A` : Ouvre le gestionnaire de plugins"
 
 #: ../../FAQ.md:23
 msgid "`Ctrl+S`: Compiles the active Solidity file"
-msgstr ""
+msgstr "`Ctrl+S` : Compile le fichier Solidity actif"
 
 #: ../../FAQ.md:25
 msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)"
-msgstr ""
+msgstr "Ctrl+Shift+S` : Compile un fichier Solidity et exécute un script lorsque le script est affiché dans l'éditeur.<br>(allez sur [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) pour plus d'informations sur cette fonctionnalité)"
 
 #: ../../FAQ.md:27
 msgid "Solidity compiler"
@@ -72,31 +72,31 @@ msgstr "Compilateur Solidity"
 
 #: ../../FAQ.md:29
 msgid "**Q:** Error: compiler might be in a non-sane state"
-msgstr ""
+msgstr "**Q:** Erreur : le compilateur n'est peut-être pas dans un état normal."
 
 #: ../../FAQ.md:36
 msgid "**A:** Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr ""
+msgstr "**A:** Les anciennes versions du compilateur Solidity avaient ce problème avec Chrome. Veuillez changer la version du compilateur dans Solidity Plugin pour la plus récente ou utiliser un autre navigateur."
 
 #: ../../FAQ.md:39
 msgid "**Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
-msgstr ""
+msgstr "**Q:** J'ai un problème avec Maximum call stack exceed et d'autres erreurs, je ne peux pas compiler."
 
 #: ../../FAQ.md:41
 msgid "**A:**  Try a different browser or a newer solidity compiler version."
-msgstr ""
+msgstr "**A:** Essayez un autre navigateur ou une version plus récente du compilateur Solidity."
 
 #: ../../FAQ.md:43
 msgid "**Q:** How to verify a contract that imports other contracts?"
-msgstr ""
+msgstr "**Q:** Comment vérifier un contrat qui importe d'autres contrats ?"
 
 #: ../../FAQ.md:45
 msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
-msgstr ""
+msgstr "**A:** L'outil de vérification ne parcourt pas de manière récursive les déclarations d'importation d'un contrat.  Il ne peut donc vérifier qu'un contrat \"aplati\"."
 
 #: ../../FAQ.md:47
 msgid "There is a plugin called `Flattener` which will stuff all the original code and the imported code into a single file."
-msgstr ""
+msgstr "Il existe un plugin appelé `Flattener` qui va regrouper tout le code original et le code importé dans un seul fichier."
 
 #: ../../FAQ.md:49
 msgid "Deploy & Run"
@@ -104,131 +104,131 @@ msgstr "Déployer & Exécuter"
 
 #: ../../FAQ.md:51
 msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
-msgstr ""
+msgstr "**Q:** J'utilise un point de terminaison Infura dans mon application, mais lorsque j'essaie de déployer contre ce point de terminaison dans Remix IDE en sélectionnant \"External HTTP Provider\" et en mettant mon point de terminaison, il me dit qu'il ne peut pas se connecter."
 
 #: ../../FAQ.md:53
 msgid "**A:** If the endpoint you are using is http, it won't work."
-msgstr ""
+msgstr "**A:** Si le point de terminaison que vous utilisez est http, cela ne fonctionnera pas."
 
 #: ../../FAQ.md:55
 msgid "**Q:** Where is deploy button?"
-msgstr ""
+msgstr "**Q:** Où se trouve le bouton de déploiement ?"
 
 #: ../../FAQ.md:57
 msgid "**A:** Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
-msgstr ""
+msgstr "**A:** C'est dans le module Deploy & Run. Si vous n'avez pas activé ce module, vous devriez le faire en cliquant sur le module Deploy & Run dans le Plugin Manager. Vous pouvez également activer tout ce dont vous avez besoin pour travailler avec Solidity sur la page d'accueil (cliquez sur le logo remix en haut à gauche de l'écran) et cliquez sur le bouton \"Solidity\" dans la section environnement."
 
 #: ../../FAQ.md:60
 msgid "**Q:** How to pass a tuple to a public function in Remix?"
-msgstr ""
+msgstr "**Q:** Comment passer un tuple à une fonction publique dans Remix ?"
 
 #: ../../FAQ.md:62
 msgid "**A:** Pass it as an array []."
-msgstr ""
+msgstr "**A:** Passez-la sous forme de tableau []."
 
 #: ../../FAQ.md:64
 msgid "**Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?"
-msgstr ""
+msgstr "**Q:** Comment saisir une structure en tant que paramètre d'une fonction dans le module Deploy & Run ?"
 
 #: ../../FAQ.md:66
 msgid "**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
-msgstr ""
+msgstr "**A:** Pour saisir une structure, tout comme un tuple, passez-la sous la forme d'un tableau [].  Vous devez également ajouter la ligne :"
 
 #: ../../FAQ.md:68
 msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
-msgstr ""
+msgstr "`pragma experimental ABIEncoderV2;` au début du fichier solidity."
 
 #: ../../FAQ.md:70
 msgid "For example, here's a solidity file with a struct is an input parameter."
-msgstr ""
+msgstr "Par exemple, voici un fichier Solidity dont le paramètre d'entrée est une structure."
 
 #: ../../FAQ.md:102
 msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
-msgstr ""
+msgstr "L'entrée de initPeepToPeeps prend une structure.  Si vous entrez `[1,2]`, la transaction sera effectuée."
 
 #: ../../FAQ.md:106
 msgid "Plugin Developers"
-msgstr ""
+msgstr "Développeurs de plugins"
 
 #: ../../FAQ.md:108
 msgid "**Q:** Where do plugin developers go with their questions?"
-msgstr ""
+msgstr "**Q:** Où les développeurs de plugins posent-ils leurs questions ?"
 
 #: ../../FAQ.md:110
 msgid "**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
-msgstr ""
+msgstr "**A:** La salle des développeurs du plugin Gitter Remix https://gitter.im/ethereum/remix-dev-plugin"
 
 #: ../../FAQ.md:112
 msgid "Analytics"
-msgstr ""
+msgstr "Analyse"
 
 #: ../../FAQ.md:114
 msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
-msgstr ""
+msgstr "**Q:** Quelles informations Remix enregistre-t-il lorsque Matomo Analytics est activé ?"
 
 #: ../../FAQ.md:116
 msgid "**A:** We want to know:"
-msgstr ""
+msgstr "**A:** Nous voulons savoir :"
 
 #: ../../FAQ.md:118
 msgid "Which plugins get activated & deactivated"
-msgstr ""
+msgstr "Quels plugins sont activés et désactivés"
 
 #: ../../FAQ.md:119
 msgid "If users check the box to publish a contract's metadata when deploying"
-msgstr ""
+msgstr "Si les utilisateurs cochent la case pour publier les métadonnées d'un contrat lors de son déploiement"
 
 #: ../../FAQ.md:120
 msgid "Which themes are used/used most/not used at all"
-msgstr ""
+msgstr "Quels sont les thèmes utilisés, les plus utilisés et les moins utilisés ?"
 
 #: ../../FAQ.md:121
 msgid "The usage of the links to documentation"
-msgstr ""
+msgstr "L'utilisation des liens vers la documentation"
 
 #: ../../FAQ.md:122
 msgid "On the homepage, which file importing buttons are used"
-msgstr ""
+msgstr "Sur la page d'accueil, quels sont les boutons d'importation de fichiers utilisés ?"
 
 #: ../../FAQ.md:124
 msgid "**Q:** Is it opt-in or opt-out?"
-msgstr ""
+msgstr "**Q:** S'agit-il d'un opt-in ou d'un opt-out ?"
 
 #: ../../FAQ.md:126
 msgid "**A:** We use Matomo as an opt-in analytics platform."
-msgstr ""
+msgstr "**A:** Nous utilisons Matomo comme plateforme d'analyse opt-in."
 
 #: ../../FAQ.md:128
 msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
-msgstr ""
+msgstr "**Q:** Où les informations sont-elles stockées ?  Les informations sont-elles partagées avec des tiers ?"
 
 #: ../../FAQ.md:130
 msgid "**A:** All data collected through Matomo is stored on our own server. No data is given to third parties."
-msgstr ""
+msgstr "**Toutes les données collectées par Matomo sont stockées sur notre propre serveur.Aucune donnée n'est transmise à des tiers."
 
 #: ../../FAQ.md:132
 msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
-msgstr ""
+msgstr "Nous respectons votre vie privée et ne collectons ni ne conservons aucune information personnelle identifiable (IPI)."
 
 #: ../../FAQ.md:134
 msgid "**Q:** What does Remix do with this info?"
-msgstr ""
+msgstr "**Q:** Que fait Remix avec ces informations ?"
 
 #: ../../FAQ.md:136
 msgid "**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
-msgstr ""
+msgstr "**A:** Notre objectif est de comprendre combien d'utilisateurs nous avons, quels plugins les gens utilisent, ce qui n'est pas utilisé, ce qui n'est pas utilisé à son plein potentiel."
 
 #: ../../FAQ.md:138
 msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
-msgstr ""
+msgstr "Grâce à cette compréhension, nous pouvons apporter des ajustements à l'interface utilisateur et fournir davantage de conseils et de documentation. C'est un moyen d'obtenir un retour d'information anonyme et constant de la part de nos utilisateurs."
 
 #: ../../FAQ.md:140
 msgid "**Q:** After I agree opt-in, can I change my mind?"
-msgstr ""
+msgstr "**Q:** Après avoir accepté l'opt-in, puis-je changer d'avis ?"
 
 #: ../../FAQ.md:142
 msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
-msgstr ""
+msgstr "**Vous pouvez activer ou désactiver Matomo dans le panneau des paramètres.  Il n'y a pas de conséquences à l'absence d'opt-in ou d'opt-out."
 
 #: ../../FAQ.md:134
 msgid "**Q:** What does Remix do with this info?"

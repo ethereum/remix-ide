@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -19,13 +19,13 @@ msgstr ""
 
 #: ../../support.md:1
 msgid "Support chat"
-msgstr ""
+msgstr "Chat de apoyo"
 
 #: ../../support.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
-msgstr ""
+msgstr "Sabemos que el ecosistema blockchain es muy nuevo y que hay mucha información dispersa por la web. Por eso hemos creado un chat de apoyo a la comunidad en el que nosotros y otros usuarios tratamos de responder a sus preguntas si se queda atascado utilizando Remix. Por favor, únase al canal Remix y pida ayuda a la comunidad."
 
 #: ../../support.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
-msgstr ""
+msgstr "Para cualquiera que esté interesado en desarrollar un plugin personalizado para Remix o que quiera contribuir a la base de código, hemos abierto otro canal especialmente para los desarrolladores que trabajan en la herramienta Remix."
 

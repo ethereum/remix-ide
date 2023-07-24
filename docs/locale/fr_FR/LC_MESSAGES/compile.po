@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language: fr_FR\n"
 "Language-Team: French\n"
@@ -16,259 +16,233 @@ msgstr ""
 
 #: ../../compile.md:1
 msgid "Solidity Compiler"
-msgstr ""
+msgstr "Compilateur Solidity"
 
 #: ../../compile.md:4
 msgid "Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.  The default view of the Solidity Compiler shows the basic configuration.  To open the Advanced Configuration panel, click the **Advanced Configuration** button (**C. in fig. 1**). For details on advanced features - see below."
-msgstr ""
+msgstr "En cliquant sur l'icône Solidity dans le panneau d'icônes, vous accédez au Compilateur Solidity.  La vue par défaut du Compilateur Solidity montre la configuration de base.  Pour ouvrir le panneau de configuration avancée, cliquez sur le bouton **Configuration avancée** (**C. dans la fig. 1**). Pour plus de détails sur les fonctions avancées, voir ci-dessous."
 
 #: ../../compile.md:6
 msgid "Solidity Compiler Basics"
-msgstr ""
+msgstr "Les bases du compilateur Solidity"
 
 #: ../../compile.md:8
 msgid "Selecting a contract to compile"
-msgstr ""
+msgstr "Sélection d'un contrat à compiler"
 
 #: ../../compile.md:9
-msgid ""
-"To select a contract to compile, choose a file in the File Explorer. Or "
-"if there are several files open, make sure the one you want to compile is"
-" the active file in the Editor."
-msgstr ""
+msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
+msgstr "Pour sélectionner un contrat à compiler, choisissez un fichier dans l'explorateur de fichiers. Ou, si plusieurs fichiers sont ouverts, assurez-vous que celui que vous souhaitez compiler est le fichier actif dans l'éditeur."
 
 #: ../../compile.md:11
-msgid ""
-"If there is not an active file in the editor or a file has not already "
-"been compiled, then the Solidity compiler will look like this:"
-msgstr ""
+msgid "If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:"
+msgstr "S'il n'y a pas de fichier actif dans l'éditeur ou si un fichier n'a pas encore été compilé, le compilateur Solidity ressemblera à ceci :"
 
 #: ../../compile.md:13
 msgid "![](images/a-sol-comp-no-file.png)"
-msgstr ""
-
-#: ../../compile.md:13
-msgid "![](images/a-sol-comp-no-file.png)"
-msgstr ""
+msgstr "![](images/a-sol-comp-no-file.png)"
 
 #: ../../compile.md:15
 msgid "Triggering compilation"
-msgstr ""
+msgstr "Déclenchement de la compilation"
 
 #: ../../compile.md:16
 msgid "Compiling is triggered when you:"
-msgstr ""
+msgstr "La compilation est déclenchée lorsque vous :"
 
 #: ../../compile.md:17
 msgid "click the compile button (**D. in fig. 1 below**)"
-msgstr ""
+msgstr "cliquez sur le bouton de compilation (**D. dans la fig. 1 ci-dessous**)"
 
 #: ../../compile.md:18
 msgid "use the shortcut `control + s`."
-msgstr ""
+msgstr "utilisez le raccourci `contrôle + s`."
 
 #: ../../compile.md:19
 msgid "right click on a file in the File Explorer and selecting **Compile** option"
-msgstr ""
+msgstr "cliquez avec le bouton droit de la souris sur un fichier dans l'explorateur de fichiers et sélectionnez l'option **Compiler**."
 
 #: ../../compile.md:21
 msgid "![](images/a-sol-comp-basic.png)"
-msgstr ""
+msgstr "![](images/a-sol-comp-basic.png)"
 
 #: ../../compile.md:23
 msgid "Auto Compile"
-msgstr ""
+msgstr "Compilation automatique"
 
 #: ../../compile.md:24
 msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
-msgstr ""
+msgstr "Si la case de compilation automatique (**B. dans la figure 1 ci-dessus**) est cochée, la compilation aura lieu toutes les quelques secondes (lorsque le fichier est sauvegardé automatiquement) ainsi que lorsqu'un autre fichier est sélectionné.  Si un contrat comporte de nombreuses dépendances, la compilation peut prendre un certain temps - c'est pourquoi vous pouvez utiliser la compilation automatique à votre discrétion."
 
 #: ../../compile.md:27
 msgid "Solidity versions & Remix functionality"
-msgstr ""
+msgstr "Versions de Solidity et fonctionnalité Remix"
 
 #: ../../compile.md:28
 msgid "The compiler version is selected in the **COMPILER** dropdown list (**A. in fig. 1 above**)."
-msgstr ""
+msgstr "La version du compilateur est sélectionnée dans la liste déroulante **COMPILATEUR** (**A. dans la fig. 1 ci-dessus**)."
 
 #: ../../compile.md:30
 msgid "You can compile (and deploy) contracts with versions of Solidity **older than 0.4.12**. However, the older compilers use a legacy AST — which we no longer support. Consequently, some plugins may not work and some functionality - e.g. source highlighting in the Editor may only be partially working."
-msgstr ""
+msgstr "Vous pouvez compiler (et déployer) des contrats avec des versions de Solidity **antérieures à 0.4.12**. Cependant, les anciens compilateurs utilisent un AST hérité - que nous ne supportons plus. Par conséquent, certains plugins peuvent ne pas fonctionner et certaines fonctionnalités - par exemple la mise en évidence des sources dans l'éditeur - peuvent ne fonctionner que partiellement."
 
 #: ../../compile.md:34
 msgid "Using the Contract select box"
-msgstr ""
+msgstr "Utiliser la boîte de sélection Contrat"
 
 #: ../../compile.md:36
 msgid "Because a Solidity file can include multiple contracts and because contracts can import other contracts,  multiple contracts are often compiled.  **However**, only 1 contract's compilation details can be retrieved at a time."
-msgstr ""
+msgstr "Comme un fichier Solidity peut inclure plusieurs contrats et comme les contrats peuvent importer d'autres contrats, plusieurs contrats sont souvent compilés.  **Cependant, les détails de la compilation d'un seul contrat peuvent être récupérés à la fois."
 
 #: ../../compile.md:38
 msgid "To select the desired contract, use the **Contract** select box (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected."
-msgstr ""
+msgstr "Pour sélectionner le contrat souhaité, utilisez la boîte de sélection **Contrat** (**F. dans la fig. 1**). Oublier de sélectionner le bon contrat est une erreur fréquente - n'oubliez donc pas de vérifier que le contrat que vous souhaitez est sélectionné."
 
 #: ../../compile.md:40
 msgid "Compilation Details and Publishing"
-msgstr ""
+msgstr "Détails de la compilation et publication"
 
 #: ../../compile.md:41
 msgid "Using the publish button, you can upload your contract to  **IPFS** or **Swarm** (only non abstract contracts can be published to Swarm)."
-msgstr ""
+msgstr "En cliquant sur le bouton \"Publier\", vous pouvez télécharger votre contrat vers **IPFS** ou **Swarm** (seuls les contrats non abstraits peuvent être publiés sur Swarm)."
 
 #: ../../compile.md:43
-msgid ""
-"When publishing a contract that imports other contracts, the main "
-"contract and all of its imported contracts will be published - each to "
-"their own address."
-msgstr ""
+msgid "When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address."
+msgstr "Lorsque vous publiez un contrat qui importe d'autres contrats, le contrat principal et tous les contrats importés sont publiés - chacun à sa propre adresse."
 
 #: ../../compile.md:45
 msgid "**Published data contains the contract's metadata and the solidity source code.**"
-msgstr ""
+msgstr "**Les données publiées contiennent les métadonnées du contrat et le code source de Solidity."
 
 #: ../../compile.md:47
 msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**."
-msgstr ""
+msgstr "Après avoir cliqué sur **Publish on IPFS** ou **Publish on Swarm**, une fenêtre modale s'ouvre.  Cette fenêtre contient l'adresse du contrat ainsi que les adresses des contrats importés et l'adresse des **métadonnées** du contrat."
 
 #: ../../compile.md:49
 msgid "When the \"Compilation Details\" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract."
-msgstr ""
+msgstr "Lorsque vous cliquez sur le bouton \"Détails de la compilation\" (**G. dans la fig. 1**), une fenêtre modale s'ouvre et affiche des informations détaillées sur le contrat sélectionné."
 
 #: ../../compile.md:51
 msgid "If you just want to get the **ABI** or the **Bytecode** - click the appropriate button see **H. in fig. 1**."
-msgstr ""
+msgstr "Si vous souhaitez simplement obtenir l'**ABI** ou le **Bytecode** - cliquez sur le bouton approprié voir **H. dans la fig. 1**."
 
 #: ../../compile.md:53
 msgid "Passive Contract Verification"
-msgstr ""
+msgstr "Vérification passive des contrats"
 
 #: ../../compile.md:54
 msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything."
-msgstr ""
+msgstr "Lorsque vous publiez vos métadonnées sur IPFS et que vous déployez votre code sur le réseau principal ou sur un réseau de test public, le service de vérification des contrats **[Sourcify](https://sourcify.dev/)**, vérifiera vos contrats sans que vous ayez à faire quoi que ce soit."
 
 #: ../../compile.md:56
 msgid "Compile and Run script"
-msgstr ""
+msgstr "Compiler et exécuter le script"
 
 #: ../../compile.md:57
 msgid "The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
-msgstr ""
+msgstr "Le bouton Compiler et exécuter le script (**E. dans la fig. 1**) permet de compiler et d'exécuter immédiatement un script.  C'est un gain de temps qui vous permet d'écrire du code et d'exécuter automatiquement le script qui définit l'état du contrat, ce qui vous permet de comprendre rapidement le fonctionnement du code.  ([en savoir plus sur Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
 
 #: ../../compile.md:59
 msgid "Compilation Errors and Warning"
-msgstr ""
+msgstr "Erreurs de compilation et avertissements"
 
 #: ../../compile.md:60
-msgid ""
-"Compilation Errors and Warning are displayed below the contract section. "
-"At each compilation, the static analysis tab builds a report."
-msgstr ""
+msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report."
+msgstr "Les erreurs de compilation et les avertissements sont affichés sous la section du contrat. À chaque compilation, l'onglet d'analyse statique établit un rapport."
 
 #: ../../compile.md:63
 msgid "It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))"
-msgstr ""
+msgstr "Il est important de traiter les problèmes signalés, même si le compilateur ne s'en plaint pas. ([en savoir plus sur l'analyse statique](static_analysis.html))"
 
 #: ../../compile.md:65
 msgid "Advanced Compiler Configurations"
-msgstr ""
+msgstr "Configurations avancées du compilateur"
 
 #: ../../compile.md:66
 msgid "Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 2 below**)."
-msgstr ""
+msgstr "Cliquez sur Configurations avancées du compilateur pour ouvrir ce panneau (**M. dans la fig. 2 ci-dessous**)."
 
 #: ../../compile.md:68
 msgid "![](images/a-sol-comp-adv.png)"
-msgstr ""
+msgstr "![](images/a-sol-comp-adv.png)"
 
 #: ../../compile.md:70
 msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**)."
-msgstr ""
+msgstr "Un bouton radio vous permet de choisir de configurer le compilateur via l'interface (**N. dans la fig. 2**) ou d'utiliser un fichier JSON pour la configuration (**R. dans la fig. 2**)."
 
 #: ../../compile.md:72
 msgid "Solidity or YUL"
-msgstr ""
+msgstr "Solidité ou YUL"
 
 #: ../../compile.md:73
 msgid "Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples. You can use the language dropdown (**O. in fig 2**) to switch the language. **This dropdown list is only available for versions greater than or equal to `0.5.7`.**"
-msgstr ""
+msgstr "Depuis la version `0.5.7` de Solidity, il est possible de compiler des fichiers `Yul`. Veuillez lire la ([documentation de Solidity sur Yul](https://docs.soliditylang.org/en/latest/yul.html)) qui contient des exemples de code. Vous pouvez utiliser la liste déroulante des langues (**O. dans la fig 2**) pour changer de langue. **Cette liste déroulante n'est disponible que pour les versions supérieures ou égales à `0.5.7`."
 
 #: ../../compile.md:76
 msgid "Select an EVM version"
-msgstr ""
+msgstr "Sélectionnez une version de l'EVM"
 
 #: ../../compile.md:77
 msgid "The EVM dropdown list (**P. in fig 2**) allows to compile code against a specific **Ethereum hard fork**. The `compiler default` corresponds to the default hard fork used by a specific version."
-msgstr ""
+msgstr "La liste déroulante EVM (**P. dans la fig 2**) permet de compiler le code contre une **fourche dure d'Ethereum** spécifique. Le `compiler default` correspond au hard fork par défaut utilisé par une version spécifique."
 
 #: ../../compile.md:80
 msgid "To see the name of the hard fork used in the current compilation, click the \"Compilation Details\" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name."
-msgstr ""
+msgstr "Pour voir le nom du hard fork utilisé dans la compilation actuelle, cliquez sur le bouton \"Compilation Details\" et dans la section `Metadata` il y aura une sous-section appelée **settings**.  Ouvrez les **réglages** pour voir le nom de la version de l'EVM."
 
 #: ../../compile.md:82
 msgid "Enable optimization"
-msgstr ""
+msgstr "Activer l'optimisation"
 
 #: ../../compile.md:83
-msgid ""
-"According to the the Solidity Docs, \"the optimizer tries to simplify "
-"complicated expressions, which reduces both code size and execution cost,"
-" i.e., it can reduce gas needed for contract deployment as well as for "
-"external calls made to the contract.\""
-msgstr ""
+msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgstr "Selon la documentation de Solidity, \"l'optimiseur tente de simplifier les expressions compliquées, ce qui réduit à la fois la taille du code et le coût d'exécution, c'est-à-dire qu'il peut réduire le gaz nécessaire au déploiement du contrat ainsi qu'aux appels externes faits au contrat\"."
 
 #: ../../compile.md:85
 msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
-msgstr ""
+msgstr "Pour les versions récentes de Solidity, il est [recommandé d'activer l'optimisation] (https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)."
 
 #: ../../compile.md:87
 msgid "To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html)."
-msgstr ""
+msgstr "Pour en savoir plus sur l'optimisation, (**Q. dans la fig 2**) visitez le [Solidity docs on the optimizer] (https://docs.soliditylang.org/en/latest/internals/optimizer.html)."
 
 #: ../../compile.md:89
 msgid "To the right of the **Enable optimization** checkbox is the box to input the number of Optimization runs.  The default value is 200."
-msgstr ""
+msgstr "À droite de la case à cocher **Activer l'optimisation** se trouve la case permettant de saisir le nombre de cycles d'optimisation.  La valeur par défaut est de 200."
 
 #: ../../compile.md:91
-msgid ""
-"You may ask — \"What is the right number of runs for my contract?\" And "
-"the Solidity docs say:"
-msgstr ""
+msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
+msgstr "Vous pouvez vous demander : \"Quel est le bon nombre d'exécutions pour mon contrat ?\" La documentation de Solidity répond à cette question :"
 
 #: ../../compile.md:93
-msgid ""
-"If you want the initial contract deployment to be cheaper and the later "
-"function executions to be more expensive, set it to --optimize-runs=1. If"
-" you expect many transactions and do not care for higher deployment cost "
-"and output size, set --optimize-runs to a high number."
-msgstr ""
+msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
+msgstr "Si vous souhaitez que le déploiement initial du contrat soit moins coûteux et que les exécutions ultérieures de la fonction soient plus coûteuses, définissez --optimize-runs=1. Si vous prévoyez de nombreuses transactions et que vous ne vous souciez pas du coût de déploiement et de la taille de sortie, fixez --optimize-runs à un nombre élevé."
 
 #: ../../compile.md:95
 msgid "To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)."
-msgstr ""
+msgstr "Pour en savoir plus sur les cycles d'optimisation, visitez le site [Solidity docs about Optimizer options] (https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)."
 
 #: ../../compile.md:97
 msgid "JSON file for Compiler configuration"
-msgstr ""
+msgstr "Fichier JSON pour la configuration du compilateur"
 
 #: ../../compile.md:98
 msgid "Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   When you switch to **compile with a config file**, a sample compiler config file is created. This file can be edited with all the available options."
-msgstr ""
+msgstr "En sélectionnant le bouton radio à côté de **Utiliser le fichier de configuration**, vous pourrez définir la configuration à l'aide d'un fichier JSON (**T. dans la fig. 2**).   Lorsque vous passez à **compiler avec un fichier de configuration**, un exemple de fichier de configuration du compilateur est créé. Ce fichier peut être édité avec toutes les options disponibles."
 
 #: ../../compile.md:100
 msgid "Clicking the config file's name will open it up in the Editor.  To change the config file click the **Change** button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents."
-msgstr ""
+msgstr "Cliquez sur le nom du fichier de configuration pour l'ouvrir dans l'éditeur.  Pour modifier le fichier de configuration, cliquez sur le bouton **Modifier**.  Si vous mettez à jour la zone de texte avec un nom de fichier qui n'existe pas, un nouveau fichier sera créé avec le contenu du fichier par défaut."
 
 #: ../../compile.md:103
-msgid ""
-"There is no error checking when using the .json file for configuration "
-"settings, so make sure your config file is correct."
-msgstr ""
+msgid "There is no error checking when using the .json file for configuration settings, so make sure your config file is correct."
+msgstr "Il n'y a pas de contrôle d'erreur lors de l'utilisation du fichier .json pour les paramètres de configuration, assurez-vous donc que votre fichier de configuration est correct."
 
 #: ../../compile.md:105
 msgid "Use a Custom Solidity Compiler"
-msgstr ""
+msgstr "Utiliser un compilateur Solidity personnalisé"
 
 #: ../../compile.md:106
 msgid "For those writing your own custom solidity compiler, you can import that by clicking the **+** button (**X. in fig 1**) to open a modal where you can input the url of the compiler to be loaded."
-msgstr ""
+msgstr "Pour ceux qui écrivent leur propre compilateur Solidity, vous pouvez l'importer en cliquant sur le bouton **+** (**X. dans la fig 1**) pour ouvrir une fenêtre modale dans laquelle vous pouvez entrer l'url du compilateur à charger."
 

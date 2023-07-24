@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2022-05-19 13:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,41 +19,41 @@ msgstr ""
 
 #: ../../remix_tutorials_github.md:1
 msgid "Remix Github Tutorials"
-msgstr ""
+msgstr "Remixer les tutoriels Github"
 
 #: ../../remix_tutorials_github.md:4
 msgid "There are a series of tutorials in our github repo remix-workshops."
-msgstr ""
+msgstr "Il existe une série de tutoriels dans notre répertoire github remix-workshops."
 
 #: ../../remix_tutorials_github.md:6
 msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
-msgstr ""
+msgstr "Nous sommes en train de mettre à jour ces tutoriels pour qu'ils utilisent la nouvelle mise en page de Remix."
 
 #: ../../remix_tutorials_github.md:8
 msgid "In this repo there tutorials for all levels."
-msgstr ""
+msgstr "Dans ce répertoire, vous trouverez des tutoriels pour tous les niveaux."
 
 #: ../../remix_tutorials_github.md:10
 msgid "There are tutorials for specific remix functionalities like:"
-msgstr ""
+msgstr "Il existe des tutoriels pour des fonctionnalités spécifiques du remix comme :"
 
 #: ../../remix_tutorials_github.md:12
 msgid "Deploying"
-msgstr ""
+msgstr "Déploiement"
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
-msgstr ""
+msgstr "Essais"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
-msgstr ""
+msgstr "Développement du plugin Remix"
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr ""
+msgstr "Autre"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr ""
+msgstr "Ateliers externes supplémentaires"
 

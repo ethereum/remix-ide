@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,77 +19,77 @@ msgstr ""
 
 #: ../../remix_tutorials_learneth.md:1
 msgid "Remix Tutorials with Learneth"
-msgstr ""
+msgstr "Remixer des tutoriels avec Learneth"
 
 #: ../../remix_tutorials_learneth.md:4
 msgid "**Learneth** is a tutorial platform integrated into Remix."
-msgstr ""
+msgstr "**Learneth** est une plateforme de tutorat intégrée à Remix."
 
 #: ../../remix_tutorials_learneth.md:6
 msgid "Tutorials can contain quizzes for testing students' work.  These quizzes are run by Solidity Unit Tests."
-msgstr ""
+msgstr "Les tutoriels peuvent contenir des quiz pour tester le travail des étudiants.  Ces quiz sont exécutés par Solidity Unit Tests."
 
 #: ../../remix_tutorials_learneth.md:8
 msgid "![](images/a-learneth.png)"
-msgstr ""
+msgstr "![](images/a-learneth.png)"
 
 #: ../../remix_tutorials_learneth.md:10
 msgid "We have a growing set of tutorials on our repo- but anyone can build tutorials on their own repos and have their students load them up!"
-msgstr ""
+msgstr "Nous disposons d'un ensemble croissant de tutoriels sur notre dépôt, mais n'importe qui peut créer des tutoriels sur son propre dépôt et demander à ses étudiants de les charger !"
 
 #: ../../remix_tutorials_learneth.md:12
 msgid "The tutorials contain .md files for instructions and can also contain example files, Solidity Unit Test files for quizzes, as well as answer files for quizzes."
-msgstr ""
+msgstr "Les tutoriels contiennent des fichiers .md pour les instructions et peuvent également contenir des fichiers d'exemples, des fichiers de tests unitaires de Solidity pour les quiz, ainsi que des fichiers de réponses pour les quiz."
 
 #: ../../remix_tutorials_learneth.md:14
 msgid "Opening Learneth & associated links"
-msgstr ""
+msgstr "Ouverture de l'apprentissage et des liens associés"
 
 #: ../../remix_tutorials_learneth.md:15
 msgid "Learneth is a plugin - so to access it, you need to activate the Learneth plugin in the Plugin Manager.   Alternatively - this link will active it: click this link."
-msgstr ""
+msgstr "Learneth est un plugin - pour y accéder, vous devez donc activer le plugin Learneth dans le gestionnaire de plugins.   Sinon, ce lien l'activera : cliquez sur ce lien."
 
 #: ../../remix_tutorials_learneth.md:21
 msgid "This link will activate Learneth and then will open a specific tutorial - in this case it will load the **proxy contract** tutorial:"
-msgstr ""
+msgstr "Ce lien activera Learneth et ouvrira un tutoriel spécifique - dans ce cas, il chargera le tutoriel **contrat de mandataire** :"
 
 #: ../../remix_tutorials_learneth.md:27
 msgid "**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html)."
-msgstr ""
+msgstr "**NOTE:** Pour d'autres astuces concernant les URL Remix avec des paramètres, cliquez ici : [locations](locations.html)."
 
 #: ../../remix_tutorials_learneth.md:29
 msgid "Learneth Tutorials"
-msgstr ""
+msgstr "Tutoriels Learneth"
 
 #: ../../remix_tutorials_learneth.md:31
 msgid "Here is the current list of Learneth Tutorials"
-msgstr ""
+msgstr "Voici la liste actuelle des tutoriels Learneth"
 
 #: ../../remix_tutorials_learneth.md:33
 msgid "***Beginner***"
-msgstr ""
+msgstr "***Débutant***"
 
 #: ../../remix_tutorials_learneth.md:38
 msgid "***Intermediate***"
-msgstr ""
+msgstr "***Intermédiaire***"
 
 #: ../../remix_tutorials_learneth.md:43
 msgid "***Advanced***"
-msgstr ""
+msgstr "***Avancé***"
 
 #: ../../remix_tutorials_learneth.md:50
 msgid "Learneth & Tutorial Repos"
-msgstr ""
+msgstr "Dépôts d'apprentissage et de didacticiels"
 
 #: ../../remix_tutorials_learneth.md:52
 msgid "The code for the Learneth plugin is located here: https://github.com/bunsenstraat/remix-learneth-plugin/blob/master/docs/index.rst"
-msgstr ""
+msgstr "Le code du plugin Learneth se trouve ici : https://github.com/bunsenstraat/remix-learneth-plugin/blob/master/docs/index.rst"
 
 #: ../../remix_tutorials_learneth.md:55
 msgid "Documentation for creating your own tutorials is located here: https://remix-learneth-plugin.readthedocs.io/en/latest/index.html"
-msgstr ""
+msgstr "La documentation relative à la création de vos propres tutoriels se trouve à l'adresse suivante : https://remix-learneth-plugin.readthedocs.io/en/latest/index.html"
 
 #: ../../remix_tutorials_learneth.md:58
 msgid "Remix maintains and curates this repo of Learneth tutorials: https://github.com/ethereum/remix-workshops"
-msgstr ""
+msgstr "Remix maintient et entretient ce répertoire de tutoriels Learneth : https://github.com/ethereum/remix-workshops"
 

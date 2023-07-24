@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:46\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -20,19 +20,19 @@ msgstr "部署 & 运行"
 
 #: ../../run.md:4
 msgid "![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**."
-msgstr ""
+msgstr "![](images/a-run-icon.png) 部署与运行模块是为了将交易发送到当前的**环境**中。"
 
 #: ../../run.md:6
 msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
-msgstr ""
+msgstr "为了部署，你需要有一个已编译的合同。  要检查是否有一个已编译的合同，找到 <b>CONTRACT</b> 选择框（它在VALUE输入字段下），你可以使用这个模块。"
 
 #: ../../run.md:8
 msgid "![](images/a-contract.png)"
-msgstr ""
+msgstr "![](images/a-contract.png)"
 
 #: ../../run.md:10
 msgid "If nothing is there, you need to compile a file. If you do not see the contract you want, you need to select a contract in the editor to make it active."
-msgstr ""
+msgstr "如果什么都没有，你需要编译一个文件。如果你没有看到你想要的合约，你需要在编辑器中选择一个合约，使其活跃起来。"
 
 #: ../../run.md:12
 msgid "Environment"
@@ -40,91 +40,91 @@ msgstr "环境"
 
 #: ../../run.md:15
 msgid "`Remix VM (Merge)` : Connects to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own \"blockchain\" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  Merge refers to the fork of Ethereum when the Merge occurred. This fork is also known as the **Paris** fork."
-msgstr ""
+msgstr "`Remix VM (Merge)`：连接到浏览器中的一个沙盒区块链。Remix VM（以前称为JavaScript VM）是它自己的 \"区块链\"，在每次重新加载时，旧的链将被清除，新的区块链将被启动。**旧的将不会被保存**。  合并指的是合并发生时以太坊的分叉。这个分叉也被称为**巴黎**分叉。"
 
 #: ../../run.md:17
 msgid "`Remix VM (London)` : Same as above except this chain is using the London fork of Ethereum."
-msgstr ""
+msgstr "`Remix VM (London)`：与上述相同，只是该链使用的是Ethereum的伦敦分叉。"
 
 #: ../../run.md:19
 msgid "`Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum."
-msgstr "`Remix VM (Berlin)` : 和上面一样，只不过这里用的额是以太坊的柏林分叉。"
+msgstr "`Remix VM (Berlin)` : 和上面一样，只不过这里用的是以太坊的柏林分叉。"
 
 #: ../../run.md:21
 msgid "`Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and will load it into the Remix VM.  It is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Mainnet fork`：这将分叉Ethereum主网并将其加载到Remix VM中。  这对于开发需要访问已部署的主网合约的合约很有用。(关于分叉的更多信息，见下文）"
 
 #: ../../run.md:23
 msgid "`Remix VM - Goerli fork` : Same as above except this forks the Goerli testnet. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Goerli fork`：与上述相同，只是它分叉了Goerli测试网。(关于分叉的更多信息见下文）"
 
 #: ../../run.md:25
 msgid "`Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Sepolia fork`：与上述相同，只是它分叉了Sepolia的测试网。(关于分叉的更多信息，见下文)"
 
 #: ../../run.md:27
 msgid "`Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)"
-msgstr ""
+msgstr "`Remix VM - Custom fork`：在您选择的EVM版本中，以区块号分叉一条链。(关于分叉的更多信息见下文）"
 
 #: ../../run.md:29
 msgid "`Injected Provider - provider name`: Connects Remix to an injected web3 provider. The most common injected provider is `Metamask`."
-msgstr ""
+msgstr "`Injected Provider - provider name`：将Remix连接到一个注入的web3提供者。最常见的注入提供者是 \"Metamask\"。"
 
 #: ../../run.md:31
 msgid "`Custom - External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**. (See below for more info about External HTTP Provider)"
-msgstr ""
+msgstr "`Custom- External HTTP Provider`：Remix将连接到一个远程节点。您需要提供所选提供者的URL：geth、parity或任何Ethereum客户端。这在以前被称为**Web3 Provider**。(关于外部HTTP提供方的更多信息，见下文）"
 
 #: ../../run.md:33
 msgid "`Dev - Hardhat Provider`: Connects Remix to a local Hardhat test chain."
-msgstr ""
+msgstr "`Dev - Hardhat Provider`：将Remix连接到本地Hardhat测试链。"
 
 #: ../../run.md:35
 msgid "`Dev - Ganache Provider`: Connects Remix to a local Truffle Ganache test chain."
-msgstr ""
+msgstr "`Dev - Ganache Provider`：将Remix连接到本地Truffle Ganache测试链。"
 
 #: ../../run.md:37
 msgid "`Dev - Foundry Provider`: Connects Remix to a local Foundry Anvil test chain."
-msgstr ""
+msgstr "`Dev - Foundry Provider`：将Remix连接到本地Foundry Anvil测试链。"
 
 #: ../../run.md:39
 msgid "`L2 - Optimism Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the mainnet of Optimism."
-msgstr ""
+msgstr "`L2 - Optimism Provider`：将Remix连接到一个注入的提供者（通常是Metamask），并为Optimism的主网设置。"
 
 #: ../../run.md:41
 msgid "`L2 - Arbitrum One Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network."
-msgstr ""
+msgstr "`L2 - Arbitrum One Provider`：将Remix连接到具有Arbitrum One网络设置的Injected Provider（通常是Metamask）。"
 
 #: ../../run.md:43
 msgid "`WalletConnect`: Connects Remix to a wallet on a mobile device."
-msgstr ""
+msgstr "`WalletConnect`：将Remix连接到移动设备上的钱包。"
 
 #: ../../run.md:45
 msgid "Forking chains in Remix"
-msgstr ""
+msgstr "Remix中的分叉链"
 
 #: ../../run.md:47
 msgid "Forking is a great technique for developing a contract that interacts with deployed contracts on a specific chain. By bringing in a chain to the Remix VM, you'll have the 10 accounts loaded with 100ETH."
-msgstr ""
+msgstr "分叉是一种很好的技术，可以开发一个与特定链上部署的合约互动的合约。将一个链引入Remix VM，你会有10个账户加载100ETH。"
 
 #: ../../run.md:49
 msgid "Careful though, if you refresh the browser, you’ll lose the forked chain."
-msgstr ""
+msgstr "不过要小心，如果你刷新浏览器，你会失去分叉的链。"
 
 #: ../../run.md:51
 msgid "Custom Fork"
-msgstr ""
+msgstr "定制Fork"
 
 #: ../../run.md:52
 msgid "The Custom fork option allows you to specify a chain's RPC server, a block number, and an EVM version."
-msgstr ""
+msgstr "自定义分叉选项允许你指定一个链的RPC服务器，一个区块号码和一个EVM版本。"
 
 #: ../../run.md:54
 msgid "![](images/a-custom-fork.png)"
-msgstr ""
+msgstr "![](images/a-custom-fork.png)"
 
 #: ../../run.md:56
 msgid "You can get the **Node URL** from chainlist.org. If the chain does not load, you may need to choose a different RPC server. You will also need to choose an EVM version appropriate to the block number. So, if you choose a very low block number, the EVM with the Merge “flavor” won’t work because this version of the EVM came out later."
-msgstr ""
+msgstr "你可以从chainlist.org获得**节点的URL**。如果链不加载，你可能需要选择一个不同的RPC服务器。你还需要选择一个与区块编号相适应的EVM版本。因此，如果你选择了一个非常低的区块号码，带有Merge \"味道 \"的EVM将无法工作，因为这个版本的EVM是后来才出现的。"
 
 #: ../../run.md:58
 msgid "More about External HTTP Provider"
