@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgstr "Remix有一个名为[Ethereum Remix](https://marketplace.visualstudio.co
 
 #: ../../locations.md:16
 msgid "The Remix twitter account is [EthereumRemix](https://twitter.com/EthereumRemix)."
-msgstr "Remix的Twitter账号是[EthereumRemix](https://twitter.com/EthereumRemix)。"
+msgstr "Remix的Twitter账号是 [EthereumRemix](https://twitter.com/EthereumRemix)。"
 
 #: ../../locations.md:18
 msgid "The Remix Project Medium publication is: [https://medium.com/remix-ide](https://medium.com/remix-ide)."
