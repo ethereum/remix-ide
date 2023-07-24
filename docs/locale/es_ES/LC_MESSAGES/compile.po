@@ -173,15 +173,8 @@ msgid "Compilation Errors and Warning"
 msgstr "Errores de compilación y advertencias"
 
 #: ../../compile.md:60
-<<<<<<< HEAD
-msgid ""
-"Compilation Errors and Warning are displayed below the contract section. "
-"At each compilation, the static analysis tab builds a report."
-msgstr ""
-=======
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report."
 msgstr "Los errores de compilación y las advertencias aparecen debajo de la sección de contratos. En cada compilación, la pestaña de análisis estático elabora un informe."
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:63
 msgid "It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))"
@@ -228,17 +221,8 @@ msgid "Enable optimization"
 msgstr "Activar la optimización"
 
 #: ../../compile.md:83
-<<<<<<< HEAD
-msgid ""
-"According to the the Solidity Docs, \"the optimizer tries to simplify "
-"complicated expressions, which reduces both code size and execution cost,"
-" i.e., it can reduce gas needed for contract deployment as well as for "
-"external calls made to the contract.\""
-msgstr ""
-=======
 msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
 msgstr "Según la documentación de Solidity, \"el optimizador intenta simplificar las expresiones complicadas, lo que reduce tanto el tamaño del código como el coste de ejecución, es decir, puede reducir el gas necesario para la implementación del contrato, así como para las llamadas externas realizadas al contrato.\""
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:85
 msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
@@ -253,27 +237,12 @@ msgid "To the right of the **Enable optimization** checkbox is the box to input 
 msgstr "A la derecha de la casilla **Habilitar optimización** se encuentra la casilla para introducir el número de ejecuciones de optimización.  El valor por defecto es 200."
 
 #: ../../compile.md:91
-<<<<<<< HEAD
-msgid ""
-"You may ask — \"What is the right number of runs for my contract?\" And "
-"the Solidity docs say:"
-msgstr ""
-
-#: ../../compile.md:93
-msgid ""
-"If you want the initial contract deployment to be cheaper and the later "
-"function executions to be more expensive, set it to --optimize-runs=1. If"
-" you expect many transactions and do not care for higher deployment cost "
-"and output size, set --optimize-runs to a high number."
-msgstr ""
-=======
 msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
 msgstr "Se preguntará: \"¿Cuál es el número correcto de ejecuciones para mi contrato?\". Y los documentos de Solidity dicen"
 
 #: ../../compile.md:93
 msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
 msgstr "Si desea que el despliegue inicial del contrato sea más barato y que las ejecuciones posteriores de la función sean más caras, ajústelo a --optimize-runs=1. Si espera muchas transacciones y no le importa que el coste de despliegue y el tamaño de la salida sean mayores, establezca --optimize-runs en un número alto."
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:95
 msgid "To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)."
@@ -292,15 +261,8 @@ msgid "Clicking the config file's name will open it up in the Editor.  To change
 msgstr "Al hacer clic en el nombre del archivo de configuración se abrirá en el Editor.  Para cambiar el archivo de configuración pulse el botón **Cambiar**.  Si actualiza el cuadro de texto con el nombre de un archivo que no existe, se creará un nuevo archivo con el contenido del archivo predeterminado."
 
 #: ../../compile.md:103
-<<<<<<< HEAD
-msgid ""
-"There is no error checking when using the .json file for configuration "
-"settings, so make sure your config file is correct."
-msgstr ""
-=======
 msgid "There is no error checking when using the .json file for configuration settings, so make sure your config file is correct."
 msgstr "No hay comprobación de errores cuando se utiliza el archivo .json para los ajustes de configuración, así que asegúrese de que su archivo de configuración es correcto."
->>>>>>> 1e61595c (New translations compile.pot (Spanish))
 
 #: ../../compile.md:105
 msgid "Use a Custom Solidity Compiler"
