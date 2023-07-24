@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr "**web3.utils**：此软件包为以太坊dapp和其他web3.js软件包�
 
 #: ../../remix_commands.md:41
 msgid "A few Swarm examples (these will be updated soon)"
-msgstr ""
+msgstr "一些Swarm示例(这些示例将很快更新)"
 
 #: ../../remix_commands.md:43
 msgid "**swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/"
