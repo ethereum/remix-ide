@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version:  remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"PO-Revision-Date: 2023-07-24 13:45\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
@@ -20,23 +20,23 @@ msgstr "文件管理器"
 
 #: ../../file_explorer.md:3
 msgid "The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right-click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin."
-msgstr ""
+msgstr "文件浏览器用于管理工作区和文件。此插件还包含许多快捷方式和命令。要进行快速导览，请右键单击文件以获取弹出菜单，并检查插件右上角的汉堡菜单。"
 
 #: ../../file_explorer.md:5
 msgid "To find the File Explorer module - click the File Explorer icon."
-msgstr ""
+msgstr "要找到“文件浏览器”模块-请点击“文件浏览器”图标。"
 
 #: ../../file_explorer.md:7
 msgid "![](images/a-file-explorer1a.png)"
-msgstr ""
+msgstr "![](images/a-file-explorer1a.png)"
 
 #: ../../file_explorer.md:9
 msgid "The green checkmark at the top of the page means that this plugin is maintained by Remix Team.  When the caret is clicked, more info about the plugin will be shown -including a link to this documentation."
-msgstr ""
+msgstr "页面顶部的绿色勾号表示此插件由Remix团队维护。单击符号时，将显示有关该插件的更多信息-包括指向本文档的链接。"
 
 #: ../../file_explorer.md:11
 msgid "![](images/a-fe-top-caret.png)"
-msgstr ""
+msgstr "![](images/a-fe-top-caret.png)"
 
 #: ../../file_explorer.md:13
 msgid "File Storage"
@@ -48,83 +48,83 @@ msgstr "Remix IDE 默认把文件储存在 **IndexedDB** 中。"
 
 #: ../../file_explorer.md:17
 msgid "Coding in Remix IDE Online is different from writing in a Google doc."
-msgstr ""
+msgstr "在Remix IDE Online中编码与在Google doc中写作是不同的。"
 
 #: ../../file_explorer.md:18
 msgid "A Google doc saves your work to your account on Google’s servers."
-msgstr ""
+msgstr "谷歌文档将你的工作保存到你在谷歌服务器上的账户。"
 
 #: ../../file_explorer.md:19
 msgid "Remix has no user accounts. By default, files are ONLY saved locally in the browser’s storage. So tread carefully, browser storage is not permanent!"
-msgstr ""
+msgstr "Remix没有用户账户。默认情况下，文件只保存在浏览器的本地存储中。因此，要小心谨慎，浏览器的存储不是永久性的！"
 
 #: ../../file_explorer.md:21
 msgid "It is very important to have a file backup & file saving strategy."
-msgstr ""
+msgstr "有一个文件备份和文件保存策略是非常重要的。"
 
 #: ../../file_explorer.md:23
 msgid "**Check the following techniques for:**"
-msgstr ""
+msgstr "**检查以下技术：**。"
 
 #: ../../file_explorer.md:24
 msgid "[saving to your hard drive](#file-storage-on-your-hard-drive)"
-msgstr ""
+msgstr "[保存到你的硬盘上](#file-storage-on-your-hard-drive)"
 
 #: ../../file_explorer.md:25
 msgid "using [remote Git repos](#connecting-remix-to-remote-git-repos)"
-msgstr ""
+msgstr "使用[远程 Git 仓库](#connecting-remix-to-remote-git-repos)"
 
 #: ../../file_explorer.md:26
 msgid "[backing up workspaces](#backup)."
-msgstr ""
+msgstr "[备份工作空间](#backup)。"
 
 #: ../../file_explorer.md:28
 msgid "**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. It is prudent to backup your workspaces before deleting them...just in case."
-msgstr ""
+msgstr "**重要提示：** 清除浏览器存储空间和IndexedDB将 **永久地删除** 存储在那里的所有文件。为谨慎起见，在删除你的工作区之前，先备份你的工作区......以防万一。"
 
 #: ../../file_explorer.md:30
 msgid "File Storage on your hard drive"
-msgstr ""
+msgstr "文件存储在你的硬盘上"
 
 #: ../../file_explorer.md:31
 msgid "Remixd"
-msgstr ""
+msgstr "remixd"
 
 #: ../../file_explorer.md:32
 msgid "For storing files on your computer's hard drive when using Remix Online IDE, use **[Remixd](remixd.html)**"
-msgstr ""
+msgstr "在使用Remix Online IDE时，要将文件存储在计算机硬盘上，请使用 **[Remixd](remixd.html)** 。"
 
 #: ../../file_explorer.md:33
 msgid "Remixd is an NPM module that runs on your computer. It allows you to share a specified folder on your computer with Remix IDE."
-msgstr ""
+msgstr "Remixd是一个在电脑上运行的NPM模块。它允许你与Remix IDE共享你电脑上的指定文件夹。"
 
 #: ../../file_explorer.md:35
 msgid "Remix Desktop"
-msgstr ""
+msgstr "Remix桌面"
 
 #: ../../file_explorer.md:36
 msgid "Remix Desktop is a version of Remix IDE in an Electron app. Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  To connect to public networks, you need to use service like Infura and then use the WalletConnect plugin to approve transactions on your mobile device."
-msgstr ""
+msgstr "Remix Desktop是Remix IDE在Electron应用程序中的一个版本。请注意，使用Remix Desktop时，您不能使用MetaMask这样的浏览器钱包，因为Remix Desktop不在浏览器中运行。要连接到公共网络，你需要使用像Infura这样的服务，然后使用WalletConnect插件来批准移动设备上的交易。"
 
 #: ../../file_explorer.md:38
 msgid "Connecting Remix to remote Git repos"
-msgstr ""
+msgstr "将Remix连接到远程Git仓库"
 
 #: ../../file_explorer.md:39
 msgid "**If you are not using Remixd, it is highly recommended that you save to a remote repo.**  (Browsers do crash causing localstorage & indexedDB to be corrupted)"
-msgstr ""
+msgstr "**如果你没有使用Remixd，强烈建议你保存到远程repo。**（浏览器确实会崩溃，导致本地存储和indexedDB被破坏。）"
 
 #: ../../file_explorer.md:42
 msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT)."
-msgstr ""
+msgstr "Remix IDE可以连接到托管在GitHub（或类似服务）的远程Git仓库或IPFS。大部分的Git操作都是在**DGit**库中完成的。(DGit代表分散式GIT）。"
 
 #: ../../file_explorer.md:45
 msgid "[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized."
-msgstr ""
+msgstr "当工作区被Git初始化时，[分支管理](#branch-management)也可以在文件资源管理器的底部找到。"
 
 #: ../../file_explorer.md:47
 msgid "Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)"
-msgstr "您也可以阅读这篇关于[在 Remix 中保护您的文件](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)的文章"
+msgstr "您也可以阅读这篇关于 [在 Remix 中保护您的文件](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)的文章"
 
 #: ../../file_explorer.md:49
 msgid "Workspaces"
@@ -132,112 +132,112 @@ msgstr "工作区"
 
 #: ../../file_explorer.md:52
 msgid "Workspaces in Remix are special folders that separate projects.  Files in one workspace cannot import or access files in different workspace.  Choosing a workspace is done with the **Workspaces** select box."
-msgstr ""
+msgstr "Remix中的工作空间是分隔项目的特殊文件夹。 一个工作区的文件不能导入或访问不同工作区的文件。  选择一个工作区是通过**工作区**选择框完成的。"
 
 #: ../../file_explorer.md:54
 msgid "![](images/a-fe-workspaces1.png)"
-msgstr ""
+msgstr "![](images/a-fe-workspaces1.png)"
 
 #: ../../file_explorer.md:56
 msgid "New Workspace"
-msgstr ""
+msgstr "新工作区"
 
 #: ../../file_explorer.md:57
 msgid "Workspaces are created by clicking the + button or by going to the hamburger menu in the upper right side of the File Explorer."
-msgstr ""
+msgstr "通过点击 \"+\"按钮或进入文件资源管理器右上方的汉堡包菜单，可以创建工作空间。"
 
 #: ../../file_explorer.md:59
 msgid "![](images/a-fe-workspaces-new.png)"
-msgstr ""
+msgstr "![](images/a-fe-workspaces-new.png)"
 
 #: ../../file_explorer.md:61
 msgid "When making a new workspace, Remix offers the following templates:"
-msgstr ""
+msgstr "在制作一个新的工作空间时，Remix提供了以下模板："
 
 #: ../../file_explorer.md:63
 msgid "Blank"
-msgstr ""
+msgstr "空白"
 
 #: ../../file_explorer.md:64
 msgid "Remix Default"
-msgstr ""
+msgstr "Remix默认"
 
 #: ../../file_explorer.md:65
 msgid "OpenZeppelin ERC20"
-msgstr ""
+msgstr "OpenZeppelin ERC20"
 
 #: ../../file_explorer.md:66
 msgid "OpenZeppelin ERC721"
-msgstr ""
+msgstr "OpenZeppelin ERC721"
 
 #: ../../file_explorer.md:67
 msgid "OpenZeppelin ERC1155"
-msgstr ""
+msgstr "OpenZeppelin ERC1155"
 
 #: ../../file_explorer.md:68
 msgid "0xProject ERC20"
-msgstr ""
+msgstr "0xProject ERC20"
 
 #: ../../file_explorer.md:69
 msgid "Gnosis MultiSig"
-msgstr ""
+msgstr "Gnosis MultiSig"
 
 #: ../../file_explorer.md:71
 msgid "When choosing an OpenZeppelin template, additional functionality can be added. ![](images/a-fe-modal-oz.png)"
-msgstr ""
+msgstr "当选择一个OpenZeppelin模板时，可以添加额外的功能。![](images/a-fe-modal-oz.png)"
 
 #: ../../file_explorer.md:74
 msgid "Workspace operations"
-msgstr ""
+msgstr "工作区操作"
 
 #: ../../file_explorer.md:76
 msgid "The **Workspace hamburger menu** is for operations that work on an entire workspace."
-msgstr ""
+msgstr "工作区汉堡包菜单**是用于对整个工作区进行操作的。"
 
 #: ../../file_explorer.md:78
 msgid "![](images/a-fe-hamburger.png)"
-msgstr ""
+msgstr "![](images/a-fe-hamburger.png)"
 
 #: ../../file_explorer.md:80
 #: ../../file_explorer.md:167
 msgid "Clone"
-msgstr ""
+msgstr "克隆"
 
 #: ../../file_explorer.md:81
 msgid "When clicking Clone, you’ll be asked for the url of a remote repo. A new workspace will be created that will contain the cloned repo. To manage the Git repo, go to the Dgit plugin."
-msgstr ""
+msgstr "当点击克隆时，你会被要求提供一个远程版本库的网址。一个新的工作空间将被创建，它将包含克隆的 repo。要管理这个Git repo，请到Dgit插件。"
 
 #: ../../file_explorer.md:82
 msgid "Backup"
-msgstr ""
+msgstr "备份"
 
 #: ../../file_explorer.md:83
 msgid "Backup is for downloading all the Workspaces in a .zip file. The zip file will have a folder called **.workspaces** that will contain a folder of each Workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible."
-msgstr ""
+msgstr "备份是在一个.zip文件中下载所有的工作区。该压缩文件将有一个名为 **.workspaces** 的文件夹，它将包含每个工作区的文件夹。  根据你的操作系统，你可能需要改变.workspaces文件夹的设置，使其可见。"
 
 #: ../../file_explorer.md:85
 msgid "Restore"
-msgstr ""
+msgstr "恢复"
 
 #: ../../file_explorer.md:86
 msgid "Restore is only for uploading the backup zip file."
-msgstr ""
+msgstr "恢复只是为了上传备份压缩文件。"
 
 #: ../../file_explorer.md:88
 msgid "Create GitHub Actions"
-msgstr ""
+msgstr "创建GitHub Actions"
 
 #: ../../file_explorer.md:89
 msgid "The Workspace operations to create **Solidity Test Workflow**,  **Mocha Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file is created in the .workflows folder of the active Workspace."
-msgstr ""
+msgstr "创建**Solidity Test Workflow**、**Mocha Chai Test Workflow**和**Slither Workflow**的工作区操作是为了创建GitHub Actions。当点击时，在活动工作区的.workflows文件夹中会创建一个.yml文件。"
 
 #: ../../file_explorer.md:91
 msgid "Workspaces initialized with Git"
-msgstr ""
+msgstr "用Git初始化的工作空间"
 
 #: ../../file_explorer.md:92
 msgid "Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box."
-msgstr ""
+msgstr "在**工作空间**选择框中，已启用Git的工作空间旁边会有Git图标。"
 
 #: ../../file_explorer.md:94
 msgid "![](images/a-fe-select-git.png)"
@@ -245,43 +245,43 @@ msgstr "![](images/a-fe-select-git.png)"
 
 #: ../../file_explorer.md:96
 msgid "To initialize a new Workspace for GIT, check the box at the bottom of the Create Workspace modal. ![](images/a-fe-create-ws-modal.png)"
-msgstr ""
+msgstr "要为GIT初始化一个新的工作区，请勾选创建工作区模式底部的方框。![](images/a-fe-create-ws-modal.png)"
 
 #: ../../file_explorer.md:99
 msgid "Working with Files"
-msgstr ""
+msgstr "使用文件的工作"
 
 #: ../../file_explorer.md:101
 msgid "When a file is clicked on it will appear in the Editor."
-msgstr ""
+msgstr "当一个文件被点击时，它将出现在编辑器中。"
 
 #: ../../file_explorer.md:103
 msgid "Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right-clicking on a file or folder ([see below](#right-click-on-a-file-or-folder))."
-msgstr ""
+msgstr "在**工作区**选择框下有许多对文件进行操作的图标。  更多的操作可以通过右键点击一个文件或文件夹（[见下文](#right-click-on-a-file-or-folder)）。"
 
 #: ../../file_explorer.md:105
 msgid "![](images/a-fe-file-icons2.png)"
-msgstr ""
+msgstr "![](images/a-fe-file-icons2.png)"
 
 #: ../../file_explorer.md:107
 msgid "**A.** Create a file  <br>"
-msgstr ""
+msgstr "**A.**创建一个文件  <br>"
 
 #: ../../file_explorer.md:108
 msgid "**B.** Create a folder  <br>"
-msgstr ""
+msgstr "**B.**创建一个文件夹  <br>"
 
 #: ../../file_explorer.md:109
 msgid "**C.** Publish all the file in this Workspace to a GIST<br>"
-msgstr ""
+msgstr "**C.**将该工作区的所有文件发布到GIST<br>。"
 
 #: ../../file_explorer.md:110
 msgid "**D.** Upload a file into the current Workspace<br>"
-msgstr ""
+msgstr "**D.**上传一个文件到当前的工作区<br>"
 
 #: ../../file_explorer.md:111
 msgid "**E.** Upload a folder into the current Workspace<br>"
-msgstr ""
+msgstr "**E.**将一个文件夹上传到当前工作区<br>。"
 
 #: ../../file_explorer.md:113
 msgid "Creating new files"
@@ -301,7 +301,7 @@ msgstr "![](images/a-file-explorer-new-file2.png)"
 
 #: ../../file_explorer.md:120
 msgid "The second way of creating a file is to right-click on a file or folder to get a popup menu."
-msgstr ""
+msgstr "创建文件的第二种方式是在文件或文件夹上点击右键，得到一个弹出菜单。"
 
 #: ../../file_explorer.md:122
 msgid "The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
@@ -321,19 +321,19 @@ msgstr "点击[这个链接](https://github.com/settings/tokens)去到 Github �
 
 #: ../../file_explorer.md:131
 msgid "Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save."
-msgstr "复制这个访问令牌，黏贴到 Remix **设置**模块中的 **Github 访问令牌**那一栏。然后点击保存。"
+msgstr "复制这个访问令牌，粘贴到 Remix **设置**模块中的 **Github 访问令牌**那一栏。然后点击保存。"
 
 #: ../../file_explorer.md:133
 msgid "You can also publish by right-clicking on the file or folder."
-msgstr ""
+msgstr "你也可以通过右键单击文件或文件夹来发布。"
 
 #: ../../file_explorer.md:135
 msgid "Right-Click popup menu"
-msgstr ""
+msgstr "右键弹出菜单"
 
 #: ../../file_explorer.md:137
 msgid "Right-Click on a folder"
-msgstr ""
+msgstr "在一个文件夹上点击右键"
 
 #: ../../file_explorer.md:138
 msgid "![](images/a-fe-rtclick-file.png)"
@@ -341,11 +341,11 @@ msgstr "![](images/a-fe-rtclick-file.png)"
 
 #: ../../file_explorer.md:140
 msgid "Right-clicking on a folder will bring a popup menu for operations you can do on that folder."
-msgstr ""
+msgstr "在一个文件夹上点击右键，会出现一个弹出菜单，你可以对该文件夹进行操作。"
 
 #: ../../file_explorer.md:142
 msgid "The right-click popup menu also works with Remixd (which gives you access to a folder on your hard drive)."
-msgstr ""
+msgstr "右键弹出菜单也适用于Remixd（让你访问硬盘上的一个文件夹）。"
 
 #: ../../file_explorer.md:144
 msgid "**Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view."
@@ -357,7 +357,7 @@ msgstr "右键点击一个 Solidity 文件"
 
 #: ../../file_explorer.md:148
 msgid "Right-clicking on a file with a .sol extension will bring up a popup menu - which includes options for compiling & flattening, creating UML diagrams, and generating documentation."
-msgstr ""
+msgstr "右键单击扩展名为.sol的文件，会弹出一个菜单--其中包括编译和扁平化的选项，创建UML图，以及生成文档。"
 
 #: ../../file_explorer.md:150
 msgid "![](images/a-fe-rtclick-sol-file.png)"
@@ -373,63 +373,63 @@ msgstr "![](images/a-fe-rtclick-script.png)"
 
 #: ../../file_explorer.md:156
 msgid "Right-click on any file with a .js or .ts extension to get the **Run** option in the popup menu to run the script."
-msgstr ""
+msgstr "右击任何带有.js或.ts扩展名的文件，在弹出的菜单中获得**运行**选项，以运行该脚本。"
 
 #: ../../file_explorer.md:158
 msgid "If the script you want to run is the active file in the Editor, you can also run it by using play button at the top left of the Editor or by inputting the command `remix.exeCurrent()` in the console."
-msgstr ""
+msgstr "如果你想运行的脚本是编辑器中的活动文件，你也可以通过使用编辑器左上方的运行按钮或在控制台输入`remix.exeCurrent()`命令来运行它。"
 
 #: ../../file_explorer.md:160
 msgid "Git in the File Explorer"
-msgstr ""
+msgstr "文件资源管理器中的Git"
 
 #: ../../file_explorer.md:162
 msgid "In Remix, a workspace can be initialized with Git.  The Git commands then operate on the workspace."
-msgstr ""
+msgstr "在Remix中，一个工作空间可以用Git来初始化。  然后，Git命令在工作空间上进行操作。"
 
 #: ../../file_explorer.md:164
 msgid "Initialize"
-msgstr ""
+msgstr "初始化"
 
 #: ../../file_explorer.md:165
 msgid "For information about initializing a workspace, see this [section](#workspaces-initialized-with-git)."
-msgstr ""
+msgstr "关于初始化工作区的信息，请看这个 [section](#workspaces-initialized-with-git)。"
 
 #: ../../file_explorer.md:168
 msgid "The clone command is located in the **Workspace hamburger menu**.  For more information, see the section about [workspace operations](#workspace-operations)"
-msgstr ""
+msgstr "克隆命令位于**工作区汉堡包菜单中**。  更多信息，请参见有关[工作区操作](#workspace-operations)一节。"
 
 #: ../../file_explorer.md:169
 msgid "Branch Management"
-msgstr ""
+msgstr "分支管理"
 
 #: ../../file_explorer.md:170
 msgid "When you are in a workspace that is initialized with Git, at the bottom of the File Explorer, you’ll see the place for managing branches."
-msgstr ""
+msgstr "当你在一个用 Git 初始化的工作空间里，在文件资源管理器的底部，你会看到管理分支的地方。"
 
 #: ../../file_explorer.md:172
 msgid "![](images/a-fe-branch-man1.png)"
-msgstr ""
+msgstr "![](images/a-fe-branch-man1.png)"
 
 #: ../../file_explorer.md:174
 msgid "Then when you click on the branch name, this section will expand with an interface for switching branches and for creating a new branch."
-msgstr ""
+msgstr "然后，当你点击分支名称时，这部分就会展开，有一个切换分支和创建新分支的界面。"
 
 #: ../../file_explorer.md:176
 msgid "![](images/a-fe-branch-man2.png)"
-msgstr ""
+msgstr "![](images/a-fe-branch-man2.png)"
 
 #: ../../file_explorer.md:178
 msgid "For the rest of the Git commands, go to the DGit plugin."
-msgstr ""
+msgstr "其余的Git命令，请到DGit插件中查看。"
 
 #: ../../file_explorer.md:180
 msgid "For more info about the DGit plugin, see ![this article](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da)."
-msgstr ""
+msgstr "关于DGit插件的更多信息，见 [本文](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da) 。"
 
 #: ../../file_explorer.md:180
 msgid "this article"
-msgstr ""
+msgstr "本文"
 
 #: ../../file_explorer.md:103
 msgid ""
