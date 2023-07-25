@@ -1,1 +1,2 @@
 myst-parser
+furo
