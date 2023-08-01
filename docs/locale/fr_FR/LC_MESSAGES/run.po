@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-07-24 13:46\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:01\n"
 "Last-Translator: \n"
-"Language: fr_FR\n"
 "Language-Team: French\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/run.pot\n"
+"X-Crowdin-File-ID: 6490\n"
+"Language: fr_FR\n"
 
 #: ../../run.md:1
 msgid "Deploy & Run"
@@ -24,7 +27,7 @@ msgstr "![](images/a-run-icon.png) Le module Deploy & Run permet d'envoyer des t
 
 #: ../../run.md:6
 msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
-msgstr "Pour le déploiement, vous devez disposer d'un contrat compilé.  Pour vérifier qu'il existe un contrat compilé, trouvez la boîte de sélection <b>CONTRACT</b> (qui se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module."
+msgstr "Pour le déploiement, vous devez disposer d'un contrat compilé.  Pour vérifier qu'il existe un contrat compilé, trouvez la boîte de sélection <b>CONTRACT</b> (qui se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module ci."
 
 #: ../../run.md:8
 msgid "![](images/a-contract.png)"
