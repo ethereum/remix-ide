@@ -1,312 +1,355 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-07-24 13:46\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:01\n"
 "Last-Translator: \n"
-"Language: fr_FR\n"
 "Language-Team: French\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/static_analysis.pot\n"
+"X-Crowdin-File-ID: 6496\n"
+"Language: fr_FR\n"
 
 #: ../../static_analysis.md:1
-msgid "Solidity Static Analysis"
-msgstr "Analyse statique de Solidity"
+msgid "Solidity Analyzers"
+msgstr "Analyseurs de solidité"
 
 #: ../../static_analysis.md:4
-msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
-msgstr "L'analyse statique du code est un processus qui permet de déboguer le code en l'examinant sans l'exécuter."
+msgid "Static code analysis is a process of debugging code by examining it without executing it."
+msgstr "L'analyse statique du code est un processus de débogage du code en l'examinant sans l'exécuter."
 
 #: ../../static_analysis.md:6
-msgid "`Solidity Static Analysis` plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
-msgstr "Le plugin `Solidity Static Analysis` effectue une analyse statique des contrats intelligents Solidity une fois qu'ils sont compilés. Il vérifie les vulnérabilités de sécurité et les mauvaises pratiques de développement, entre autres. Il peut être activé à partir du Remix `Plugin Manager`."
+msgid "The `Solidity Analyzers` plugin gangs three analysis tools together to perform static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
+msgstr "Le plugin `Solidity Analyzers` regroupe trois outils d'analyse pour effectuer des analyses statiques sur les smart contracts Solidity. Chaque outil vérifie les vulnérabilités de sécurité et les mauvaises pratiques de développement, entre autres. Il peut être activé à partir du Remix `Plugin Manager`."
 
 #: ../../static_analysis.md:8
-msgid "![](images/a-static-analysis-from-pm.png)"
-msgstr "![](images/a-static-analysis-from-pm.png)"
+msgid "![](images/a-ssa-activate.png)"
+msgstr "![](images/a-ssa-activate.png)"
 
 #: ../../static_analysis.md:10
-msgid "This plugin comes with `Solidity` environment of Remix IDE."
-msgstr "Ce plugin est livré avec l'environnement `Solidity` de l'IDE Remix."
+msgid "`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgstr "`Solidity Analyzers` peut également être chargé en cliquant sur l'icône `Solidity` dans la section featured plugins de l'onglet home de Remix.  Ce bouton charge les plugins suivants : Solidity Compiler, Solidity Unit Testing, et Static Analyzers."
 
 #: ../../static_analysis.md:12
+msgid "`Solidity Analyzers` uses these tools:"
+msgstr "`Solidity Analyzers` utilise ces outils :"
+
+#: ../../static_analysis.md:13
+msgid "[Remix Analysis](#remix-analysis): a basic analysis tool"
+msgstr "[Remix Analysis](#remix-analysis) : un outil d'analyse de base"
+
+#: ../../static_analysis.md:14
+msgid "[Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations"
+msgstr "[Solhint linter](https://github.com/protofire/solhint#rules) : un linter Solidity pour les validations de code et de guide de style"
+
+#: ../../static_analysis.md:15
+msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool"
+msgstr "[Slither Static Analysis] (https://github.com/crytic/slither#slither-the-solidity-source-analyzer) : un outil complet d'analyse statique"
+
+#: ../../static_analysis.md:17
+msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
+msgstr "**NOTE:** Slither ne peut être utilisé que lorsque Remix est connecté au système de fichiers de l'ordinateur local avec [Remixd](remix.html)."
+
+#: ../../static_analysis.md:19
 msgid "How to use"
 msgstr "Comment l'utiliser ?"
 
-#: ../../static_analysis.md:15
-msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one `Auto run` checkbox and a `Run` button. `Run` button will be disabled as there is no compiled contract for now."
-msgstr "Si vous sélectionnez ce plugin, vous verrez un certain nombre de modules listés avec des cases à cocher, une case à cocher \"Auto run\" et un bouton \"Run\". Le bouton `Run` sera désactivé car il n'y a pas de contrat compilé pour l'instant."
+#: ../../static_analysis.md:22
+msgid "**A contract must be compiled before analysis can be run.**"
+msgstr "**Un contrat doit être compilé avant qu'une analyse puisse être effectuée.**"
 
-#: ../../static_analysis.md:17
-msgid "![](images/a-static-analysis-onload.png)"
-msgstr "![](images/a-static-analysis-onload.png)"
+#: ../../static_analysis.md:24
+msgid "At the top of the panel, check the tools that you want to use."
+msgstr "En haut du panneau, cochez les outils que vous souhaitez utiliser."
 
-#: ../../static_analysis.md:19
-msgid "By default, all modules are selected for analysing a smart contract."
-msgstr "Par défaut, tous les modules sont sélectionnés pour l'analyse d'un contrat intelligent."
-
-#: ../../static_analysis.md:21
-msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis for last compiled contract by clicking on `Run`."
-msgstr "Vous pouvez sélectionner/désélectionner les modules sous lesquels le contrat doit être analysé et lancer l'analyse pour le dernier contrat compilé en cliquant sur \"Exécuter\"."
-
-#: ../../static_analysis.md:23
-msgid "If `Auto run` checkbox is checked, analysis will be performed each time a contract is compiled. Uncheck the checkbox if you want to stop this behaviour."
-msgstr "Si la case `Auto run` est cochée, l'analyse sera effectuée à chaque fois qu'un contrat est compilé. Décochez la case si vous voulez arrêter ce comportement."
-
-#: ../../static_analysis.md:25
-msgid "Run"
-msgstr "Exécuter"
+#: ../../static_analysis.md:26
+msgid "![](images/a-ssa-1.png)"
+msgstr "![](images/a-ssa-1.png)"
 
 #: ../../static_analysis.md:28
-msgid "If `Auto run` checkbox is checked, analysis will be performed on compiling a contract and result will be shown as badge to the plugin icon. This number tells warnings count for the contract (e.g; `12` in attached image below) ."
-msgstr "Si la case `Auto run` est cochée, l'analyse sera effectuée lors de la compilation d'un contrat et le résultat sera affiché sous forme de badge sur l'icône du plugin. Ce nombre indique le nombre d'avertissements pour le contrat (par exemple, `12` dans l'image jointe ci-dessous)."
+msgid "Errors & Warnings"
+msgstr "Erreurs et avertissements"
 
-#: ../../static_analysis.md:30
-msgid "By visiting the plugin UI, the details of the warning can be seen along with the category name for each warning."
-msgstr "En visitant l'interface utilisateur du plugin, vous pouvez voir les détails de l'avertissement ainsi que le nom de la catégorie pour chaque avertissement."
+#: ../../static_analysis.md:29
+msgid "By default, `Solidity Analyzers` will show both errors and warnings.  The combined number of errors and warnings are shown in the badge in that tools tab."
+msgstr "Par défaut, `Solidity Analyzers` affiche à la fois les erreurs et les avertissements.  Le nombre combiné d'erreurs et d'avertissements est affiché dans le badge de l'onglet des outils."
 
-#: ../../static_analysis.md:32
-msgid "Clicking on warning details will highlight the relevant code in the editor."
-msgstr "En cliquant sur les détails de l'avertissement, le code correspondant apparaît en surbrillance dans l'éditeur."
+#: ../../static_analysis.md:31
+msgid "![](images/a-ssa-err-warn.png)"
+msgstr "![](images/a-ssa-err-warn.png)"
+
+#: ../../static_analysis.md:33
+msgid "If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors."
+msgstr "Si vous cochez la case `Cacher les avertissements`, les avertissements seront cachés et vous ne verrez que les erreurs."
 
 #: ../../static_analysis.md:35
-msgid "![](images/a-static-analysis.png)"
-msgstr "![](images/a-static-analysis.png)"
+msgid "**NOTE:** Remix Analysis does not flag error - it only shows warnings so if you check `Hide warnings`, nothing will show in the Remix Analysis tab."
+msgstr "**REMARQUE:** L'analyse des remixes ne signale pas les erreurs - elle n'affiche que les avertissements. Si vous cochez la case \"Masquer les avertissements\", rien n'apparaîtra dans l'onglet \"Analyse des remixes\"."
 
 #: ../../static_analysis.md:37
-msgid "Analysis Modules"
-msgstr "Modules d'analyse"
+msgid "![](images/a-ssa-show-hide-warnings.png)"
+msgstr "![](images/a-ssa-show-hide-warnings.png)"
 
-#: ../../static_analysis.md:40
-msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
-msgstr "Actuellement, avec Remix IDE v0.10.1, il y a 21 modules d'analyse répertoriés dans 4 catégories. Les catégories sont : `Sécurité`, `Gaz & Economie`, `ERC` et `Divers`."
+#: ../../static_analysis.md:39
+msgid "Warnings from external libraries"
+msgstr "Avertissements provenant de bibliothèques externes"
 
-#: ../../static_analysis.md:42
+#: ../../static_analysis.md:41
+msgid "By default, warnings from external libraries are not shown.  If you check the box `Show warnings for external libraries`, the tools will also analyse the external libraries for warnings."
+msgstr "Par défaut, les avertissements des bibliothèques externes ne sont pas affichés.  Si vous cochez la case `Afficher les avertissements pour les bibliothèques externes`, les outils analyseront également les bibliothèques externes à la recherche d'avertissements."
+
+#: ../../static_analysis.md:43
+msgid "Slither"
+msgstr "Slither"
+
+#: ../../static_analysis.md:45
+msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded."
+msgstr "Pour exécuter [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) avec ce plugin, vous devez connecter Remix IDE à votre système de fichiers avec [Remixd](remix.html).  Une fois Remixd lancé, Slither est automatiquement chargé."
+
+#: ../../static_analysis.md:47
+msgid "Solhint"
+msgstr "Solhint"
+
+#: ../../static_analysis.md:49
+msgid "The [Solhint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem."
+msgstr "Le programme [Solhint](https://github.com/protofire/solhint#rules) peut être exécuté sans connecter Remix à votre système de fichiers."
+
+#: ../../static_analysis.md:51
+msgid "Remix Analysis"
+msgstr "Analyse des remix"
+
+#: ../../static_analysis.md:54
+msgid "Remix Analysis has 4 categories: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
+msgstr "Remix Analysis comporte 4 catégories : `Sécurité`, `Gaz & Economie`, `ERC` et `Divers`."
+
+#: ../../static_analysis.md:56
 msgid "Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:"
 msgstr "Voici la liste des modules de chaque catégorie ainsi que l'exemple de code qui **doit être évité ou utilisé avec précaution lors du développement** :"
 
-#: ../../static_analysis.md:44
+#: ../../static_analysis.md:58
 msgid "Category: Security"
 msgstr "Catégorie : Sécurité"
 
-#: ../../static_analysis.md:45
+#: ../../static_analysis.md:59
 msgid "**Transaction origin: 'tx.origin' is used**"
 msgstr "**Origine de la transaction : 'tx.origin' est utilisé**"
 
-#: ../../static_analysis.md:47
+#: ../../static_analysis.md:61
 msgid "`tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
 msgstr "`tx.origin` n'est utile que dans des cas très exceptionnels. Si vous l'utilisez pour l'authentification, vous voulez généralement le remplacer par \"msg.sender\", parce que sinon n'importe quel contrat que vous appelez peut agir en votre nom."
 
-#: ../../static_analysis.md:49
-#: ../../static_analysis.md:58
-#: ../../static_analysis.md:71
-#: ../../static_analysis.md:82
-#: ../../static_analysis.md:95
-#: ../../static_analysis.md:104
-#: ../../static_analysis.md:112
-#: ../../static_analysis.md:122
+#: ../../static_analysis.md:63
+#: ../../static_analysis.md:72
+#: ../../static_analysis.md:85
+#: ../../static_analysis.md:96
+#: ../../static_analysis.md:109
+#: ../../static_analysis.md:118
+#: ../../static_analysis.md:126
 #: ../../static_analysis.md:136
-#: ../../static_analysis.md:153
+#: ../../static_analysis.md:150
 #: ../../static_analysis.md:167
-#: ../../static_analysis.md:185
-#: ../../static_analysis.md:211
-#: ../../static_analysis.md:224
-#: ../../static_analysis.md:234
-#: ../../static_analysis.md:246
-#: ../../static_analysis.md:256
-#: ../../static_analysis.md:264
-#: ../../static_analysis.md:274
-#: ../../static_analysis.md:286
-#: ../../static_analysis.md:301
+#: ../../static_analysis.md:181
+#: ../../static_analysis.md:199
+#: ../../static_analysis.md:225
+#: ../../static_analysis.md:238
+#: ../../static_analysis.md:248
+#: ../../static_analysis.md:260
+#: ../../static_analysis.md:270
+#: ../../static_analysis.md:278
+#: ../../static_analysis.md:288
+#: ../../static_analysis.md:300
+#: ../../static_analysis.md:315
 msgid "_Example:_"
 msgstr "Exemple:________________."
 
-#: ../../static_analysis.md:54
+#: ../../static_analysis.md:68
 msgid "**Check effects: Potential reentrancy bugs**"
 msgstr "**Vérifiez les effets : Bogues potentiels de réentrance**"
 
-#: ../../static_analysis.md:56
+#: ../../static_analysis.md:70
 msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
 msgstr "La violation potentielle du modèle Checks-Effects-Interaction peut entraîner une vulnérabilité de réentrance."
 
-#: ../../static_analysis.md:67
+#: ../../static_analysis.md:81
 msgid "**Inline assembly: Inline assembly used**"
 msgstr "**Assemblage en ligne : Assemblage en ligne utilisé**"
 
-#: ../../static_analysis.md:69
+#: ../../static_analysis.md:83
 msgid "Use of inline assembly is advised only in rare cases."
 msgstr "L'utilisation de l'assemblage en ligne n'est conseillée que dans de rares cas."
 
-#: ../../static_analysis.md:78
+#: ../../static_analysis.md:92
 msgid "**Block timestamp: Semantics maybe unclear**"
 msgstr "**Heure du bloc : La sémantique n'est peut-être pas claire**"
 
-#: ../../static_analysis.md:80
+#: ../../static_analysis.md:94
 msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
 msgstr "`now` ne signifie pas l'heure actuelle. `now` est un alias de `block.timestamp`. `block.timestamp` peut être influencé par les mineurs dans une certaine mesure, soyez prudent."
 
-#: ../../static_analysis.md:91
+#: ../../static_analysis.md:105
 msgid "**Low level calls: Semantics maybe unclear**"
 msgstr "**Appels de bas niveau : La sémantique n'est peut-être pas claire**"
 
-#: ../../static_analysis.md:93
+#: ../../static_analysis.md:107
 msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
 msgstr "L'utilisation de `call`, `callcode` ou `delegatecall` de bas niveau doit être évitée autant que possible. `send` ne lève pas d'exception en cas d'échec, assurez-vous de traiter le cas d'échec en conséquence. Utilisez `transfer` lorsque l'échec du transfert d'éther doit annuler toute la transaction."
 
-#: ../../static_analysis.md:100
+#: ../../static_analysis.md:114
 msgid "**Blockhash usage: Semantics maybe unclear**"
 msgstr "**Utilisation de Blockhash : La sémantique n'est peut-être pas claire**"
 
-#: ../../static_analysis.md:102
+#: ../../static_analysis.md:116
 msgid "`blockhash` is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
 msgstr "`blockhash` est utilisé pour accéder aux 256 derniers hashs de blocs. Un mineur calcule le hachage du bloc en \"résumant\" les informations contenues dans le bloc en cours de minage. En résumant les informations de manière intelligente, un mineur peut essayer d'influencer le résultat d'une transaction dans le bloc en cours."
 
-#: ../../static_analysis.md:108
+#: ../../static_analysis.md:122
 msgid "**Selfdestruct: Beware of caller contracts**"
 msgstr "**L'autodestruction : Méfiez-vous des contrats d'appel**"
 
-#: ../../static_analysis.md:110
+#: ../../static_analysis.md:124
 msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
 msgstr "`selfdestruct` peut bloquer les contrats appelants de manière inattendue. Soyez particulièrement prudent si ce contrat est prévu pour être utilisé par d'autres contrats (par exemple, des contrats de bibliothèque, des interactions). L'autodestruction du contrat de l'appelant peut laisser les appelants dans un état inopérant."
 
-#: ../../static_analysis.md:117
+#: ../../static_analysis.md:131
 msgid "Category: Gas & Economy"
 msgstr "Catégorie : Gaz et économie"
 
-#: ../../static_analysis.md:118
+#: ../../static_analysis.md:132
 msgid "**Gas costs: Too high gas requirement of functions**"
 msgstr "**Coûts du gaz : Besoins en gaz trop élevés pour les fonctions**"
 
-#: ../../static_analysis.md:120
+#: ../../static_analysis.md:134
 msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
 msgstr "Si le besoin en gaz d'une fonction est supérieur à la limite de gaz du bloc, elle ne peut pas être exécutée. Veuillez éviter les boucles dans vos fonctions ou les actions qui modifient de grandes zones de stockage."
 
-#: ../../static_analysis.md:132
+#: ../../static_analysis.md:146
 msgid "**This on local calls: Invocation of local functions via 'this'**"
 msgstr "**Ceci sur les appels locaux : Invocation de fonctions locales via 'this'**."
 
-#: ../../static_analysis.md:134
+#: ../../static_analysis.md:148
 msgid "Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls."
 msgstr "N'utilisez jamais `this` pour appeler des fonctions dans le même contrat, cela ne fait que consommer plus de gaz que les appels locaux normaux."
 
-#: ../../static_analysis.md:149
+#: ../../static_analysis.md:163
 msgid "**Delete on dynamic Array: Use require/assert appropriately**"
 msgstr "**Suppression d'un tableau dynamique : Utilisez require/assert de manière appropriée**"
 
-#: ../../static_analysis.md:151
+#: ../../static_analysis.md:165
 msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
 msgstr "L'opération `delete` lorsqu'elle est appliquée à un tableau de taille dynamique dans Solidity génère du code pour supprimer chacun des éléments contenus. Si le tableau est grand, cette opération peut dépasser la limite de gaz du bloc et soulever une exception OOG. Des objets imbriqués de taille dynamique peuvent également produire les mêmes résultats."
 
-#: ../../static_analysis.md:163
+#: ../../static_analysis.md:177
 msgid "**For loop over dynamic array: Iterations depend on dynamic array's size**"
 msgstr "**Boucle de forçage sur un tableau dynamique : Les itérations dépendent de la taille du tableau dynamique**"
 
-#: ../../static_analysis.md:165
+#: ../../static_analysis.md:179
 msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
 msgstr "Les boucles qui n'ont pas un nombre fixe d'itérations, par exemple les boucles qui dépendent des valeurs de stockage, doivent être utilisées avec précaution : En raison de la limite de gaz par bloc, les transactions ne peuvent consommer qu'une certaine quantité de gaz. Le nombre d'itérations dans une boucle peut dépasser la limite de gaz par bloc, ce qui peut bloquer le contrat complet à un certain moment. En outre, l'utilisation de boucles non bornées peut entraîner de nombreux coûts de gaz qui pourraient être évités. Testez soigneusement le nombre maximum d'éléments que vous pouvez transmettre à ces fonctions pour qu'elles soient efficaces."
 
-#: ../../static_analysis.md:181
+#: ../../static_analysis.md:195
 msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
 msgstr "**Transfert d'Ether dans une boucle : Transfert d'Ether dans une boucle for/while/do-while**."
 
-#: ../../static_analysis.md:183
+#: ../../static_analysis.md:197
 msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
 msgstr "Le paiement des éthers ne doit pas être effectué en boucle. En raison de la limite de gaz par bloc, les transactions ne peuvent consommer qu'une certaine quantité de gaz. Le nombre d'itérations dans une boucle peut dépasser la limite de gaz par bloc, ce qui peut entraîner le blocage du contrat complet à un certain moment. Le cas échéant, assurez-vous que le nombre d'itérations est faible et que vous faites confiance à chaque adresse concernée."
 
-#: ../../static_analysis.md:206
+#: ../../static_analysis.md:220
 msgid "Category: ERC"
 msgstr "Catégorie : ERC"
 
-#: ../../static_analysis.md:207
+#: ../../static_analysis.md:221
 msgid "**ERC20: 'decimals' should be 'uint8'**"
 msgstr "**ERC20 : \"decimals\" doit être remplacé par \"uint8\"**."
 
-#: ../../static_analysis.md:209
+#: ../../static_analysis.md:223
 msgid "ERC20 Contracts `decimals` function should have `uint8` as return type."
 msgstr "Contrats ERC20 La fonction `decimals` devrait avoir `uint8` comme type de retour."
 
-#: ../../static_analysis.md:219
+#: ../../static_analysis.md:233
 msgid "Category: Miscellaneous"
 msgstr "Catégorie : Divers"
 
-#: ../../static_analysis.md:220
+#: ../../static_analysis.md:234
 msgid "**Constant/View/Pure functions: Potentially constant/view/pure functions**"
 msgstr "**Fonctions constantes/vues/pures : Fonctions potentiellement constantes/vues/pures**"
 
-#: ../../static_analysis.md:222
+#: ../../static_analysis.md:236
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
 msgstr "Il met en garde contre les méthodes qui devraient potentiellement être constantes/visibles/pures mais qui ne le sont pas."
 
-#: ../../static_analysis.md:230
+#: ../../static_analysis.md:244
 msgid "**Similar variable names: Variable names are too similar**"
 msgstr "**Noms de variables similaires : Les noms de variables sont trop similaires**"
 
-#: ../../static_analysis.md:232
+#: ../../static_analysis.md:246
 msgid "It warns on the usage of similar variable names."
 msgstr "Il met en garde contre l'utilisation de noms de variables similaires."
 
-#: ../../static_analysis.md:242
+#: ../../static_analysis.md:256
 msgid "**No return: Function with 'returns' not returning**"
 msgstr "**Pas de retour : La fonction avec des \"retours\" ne renvoie pas d'information**"
 
-#: ../../static_analysis.md:244
+#: ../../static_analysis.md:258
 msgid "It warns for the methods which define a return type but never explicitly return a value."
 msgstr "Il met en garde contre les méthodes qui définissent un type de retour mais ne renvoient jamais explicitement une valeur."
 
-#: ../../static_analysis.md:252
+#: ../../static_analysis.md:266
 msgid "**Guard conditions: Use 'require' and 'assert' appropriately**"
 msgstr "**Respectez les conditions : Utilisez les termes \"exiger\" et \"affirmer\" de manière appropriée**."
 
-#: ../../static_analysis.md:254
+#: ../../static_analysis.md:268
 msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
 msgstr "Utilisez `assert(x)` si vous ne voulez jamais que x soit faux, en aucune circonstance (à part un bug dans votre code). Utilisez `require(x)` si x peut être faux, à cause par exemple d'une entrée invalide ou d'un composant externe défaillant."
 
-#: ../../static_analysis.md:260
+#: ../../static_analysis.md:274
 msgid "**Result not used: The result of an operation not used**"
 msgstr "**Résultat non utilisé : Le résultat d'une opération non utilisée**"
 
-#: ../../static_analysis.md:262
+#: ../../static_analysis.md:276
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
 msgstr "Une opération binaire produit une valeur qui n'est pas utilisée dans la suite. Cela est souvent dû à une confusion entre l'affectation (=) et la comparaison (==)."
 
-#: ../../static_analysis.md:270
+#: ../../static_analysis.md:284
 msgid "**String Length: Bytes length != String length**"
 msgstr "**Longueur de la chaîne : Longueur des octets != Longueur de la chaîne**"
 
-#: ../../static_analysis.md:272
+#: ../../static_analysis.md:286
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
 msgstr "Les octets et la longueur de la chaîne ne sont pas les mêmes puisque les chaînes sont supposées être encodées en UTF-8 (selon la définition de l'ABI) et qu'un caractère n'est donc pas nécessairement encodé dans un octet de données."
 
-#: ../../static_analysis.md:282
+#: ../../static_analysis.md:296
 msgid "**Delete from dynamic array: 'delete' on an array leaves a gap**"
 msgstr "**Suppression d'un tableau dynamique : 'delete' sur un tableau laisse un vide**"
 
-#: ../../static_analysis.md:284
+#: ../../static_analysis.md:298
 msgid "Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
 msgstr "L'utilisation de `delete` sur un tableau laisse un vide. La longueur du tableau reste la même. Si vous souhaitez supprimer la position vide, vous devez décaler les éléments manuellement et mettre à jour la propriété length."
 
-#: ../../static_analysis.md:297
+#: ../../static_analysis.md:311
 msgid "**Data Truncated: Division on int/uint values truncates the result**"
 msgstr "**Données tronquées : La division sur des valeurs int/uint tronque le résultat**"
 
-#: ../../static_analysis.md:299
+#: ../../static_analysis.md:313
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
 msgstr "La division de valeurs entières donne à nouveau une valeur entière. Cela signifie que, par exemple, 10 / 100 = 0 au lieu de 0,1 puisque le résultat est à nouveau un nombre entier. Ce n'est pas le cas pour la division de valeurs littérales (uniquement), qui donnent des constantes rationnelles."
 
-#: ../../static_analysis.md:309
+#: ../../static_analysis.md:323
 msgid "Remix-analyzer"
 msgstr "Analyseur de remix"
 
-#: ../../static_analysis.md:311
-msgid "`remix-analyzer` is the library which works underneath of remix-ide `Solidity Static Analysis` plugin."
-msgstr "`remix-analyzer` est la bibliothèque qui fonctionne sous le plugin `Solidity Static Analysis` de remix-ide."
+#: ../../static_analysis.md:325
+msgid "`remix-analyzer` is the library which works underneath the Remix Analysis tool."
+msgstr "`remix-analyzer` est la bibliothèque qui fonctionne sous l'outil Remix Analysis."
 
-#: ../../static_analysis.md:313
+#: ../../static_analysis.md:327
 msgid "`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/@remix-project/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
 msgstr "`remix-analyzer` est un [paquet NPM] (https://www.npmjs.com/package/@remix-project/remix-analyzer). Il peut être utilisé comme bibliothèque dans une solution supportant node.js. Vous trouverez plus d'informations sur ce type d'utilisation dans le [dépôt remix-analyzer](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
 
