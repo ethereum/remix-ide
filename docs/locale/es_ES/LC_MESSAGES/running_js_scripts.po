@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-07-24 13:47\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:02\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -56,10 +56,6 @@ msgstr "Ejecutándolo utilizando una de las opciones mencionadas anteriormente m
 #: ../../running_js_scripts.md:31
 msgid "![](images/a-running-scripts-run.png)"
 msgstr "![](images/a-running-scripts-run.png)"
-
-#: ../../running_js_scripts.md:31
-msgid "![](images/a-running-scripts-run.png)"
-msgstr ""
 
 #: ../../running_js_scripts.md:33
 msgid "Why run JavaScript Scripts in Remix?"
