@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-06-20 17:14-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"PO-Revision-Date: 2023-08-01 13:02\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,53 +19,53 @@ msgstr ""
 
 #: ../../hardhat_console.md:1
 msgid "Hardhat console.log Integration"
-msgstr ""
+msgstr "Интеграция консоли Hardhat console.log"
 
 #: ../../hardhat_console.md:4
 msgid "(Supported since Remix IDE v0.17.0)"
-msgstr ""
+msgstr "(Поддерживается начиная с Remix IDE v0.17.0)"
 
 #: ../../hardhat_console.md:6
 msgid "Prologue"
-msgstr ""
+msgstr "Пролог"
 
 #: ../../hardhat_console.md:8
 msgid "Hardhat Network allows you to print logging messages and contract variables by calling console.log() from your Solidity code. To use it, you simply import hardhat/console.sol and call it."
-msgstr ""
+msgstr "Hardhat Network позволяет Вам печатать сообщения протоколирования и контрактные переменные, вызывая console.log() из Вашего Solidity-кода. Чтобы воспользоваться этой функцией, Вы просто импортируете файл hardhat/console.sol и вызываете его."
 
 #: ../../hardhat_console.md:10
 msgid "For more: https://hardhat.org/hardhat-network/reference/#console-log"
-msgstr ""
+msgstr "Подробнее: https://hardhat.org/hardhat-network/reference/#console-log"
 
 #: ../../hardhat_console.md:12
 msgid "console.log in Remix IDE"
-msgstr ""
+msgstr "console.log в Remix IDE"
 
 #: ../../hardhat_console.md:15
 msgid "Remix IDE supports hardhat console library while using JavaScript VM. It can be used while making a transaction or running unit tests."
-msgstr ""
+msgstr "Remix IDE поддерживает консольную библиотеку hardhat при использовании JavaScript VM. Ее можно использовать при выполнении транзакции или при выполнении модульных тестов."
 
 #: ../../hardhat_console.md:17
 msgid "Deploy and Run Transactions"
-msgstr ""
+msgstr "Развертывание и выполнение транзакций"
 
 #: ../../hardhat_console.md:19
 msgid "To try it out, you need to put an import statement and use console.log to print the value as shown in image."
-msgstr ""
+msgstr "Чтобы опробовать его, Вам нужно поместить оператор импорта и использовать console.log для печати значения, как показано на рисунке."
 
 #: ../../hardhat_console.md:23
 msgid "Further, once you execute the changeOwner method, value from console statement will be shown in Remix terminal after transaction details as below:"
-msgstr ""
+msgstr "Далее, когда Вы выполните метод changeOwner, значение из консольного оператора будет показано в терминале Remix после деталей транзакции, как показано ниже:"
 
 #: ../../hardhat_console.md:27
 msgid "Solidity Unit Testing"
-msgstr ""
+msgstr "Модульное тестирование Solidity"
 
 #: ../../hardhat_console.md:29
 msgid "Similarly, console.log can be used while running unit tests using Remix Solidity Unit Testing plugin. See image below."
-msgstr ""
+msgstr "Аналогично, console.log можно использовать при выполнении модульных тестов с помощью плагина Remix Solidity Unit Testing. См. рисунок ниже."
 
 #: ../../hardhat_console.md:33
 msgid "For the tests including logging message, it will display in the Remix Terminal corresponding to test name."
-msgstr ""
+msgstr "Для тестов, включающих сообщение о регистрации, оно будет отображаться в Ремикс Терминале, соответствующем названию теста."
 
