@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2023-08-01 13:28\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../run.md:1
 msgid "Deploy & Run"
-msgstr "Déployer et exécuter"
+msgstr "Déployer & Exécuter"
 
 #: ../../run.md:4
 msgid "![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**."
@@ -27,7 +27,7 @@ msgstr "![](images/a-run-icon.png) Le module Deploy & Run permet d'envoyer des t
 
 #: ../../run.md:6
 msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
-msgstr "Pour le déploiement, vous devez disposer d'un contrat compilé.  Pour vérifier qu'il existe un contrat compilé, trouvez la boîte de sélection <b>CONTRACT</b> (qui se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module ci."
+msgstr "Pour le déploiement, vous devez disposer d'un contrat compilé.  Pour vérifier qu'il existe un contrat compilé, trouvez la boîte de sélection <b>CONTRACT</b> (qui se trouve sous le champ de saisie VALUE), vous pouvez utiliser ce module."
 
 #: ../../run.md:8
 msgid "![](images/a-contract.png)"
