@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:03\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_verification.pot\n"
+"X-Crowdin-File-ID: 7943\n"
+"Language: fr_FR\n"
+
+#: ../../contract_verification.md:1
+msgid "Contract Verification"
+msgstr "Vérification des contrats"
+
+#: ../../contract_verification.md:4
+msgid "There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers."
+msgstr "Remix comprend deux services de vérification des contrats, Sourcify et Etherscan, ainsi que la [famille Etherscan] étendue (https://etherscan.io/eaas) d'explorateurs de blocs."
+
+#: ../../contract_verification.md:6
+msgid "Sourcify"
+msgstr "Sourcify"
+
+#: ../../contract_verification.md:9
+msgid "Documentation about Sourcify is found [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)."
+msgstr "Vous trouverez de la documentation sur Sourcify à l'adresse suivante : [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)."
+
+#: ../../contract_verification.md:11
+msgid "Etherscan"
+msgstr "Etherscan"
+
+#: ../../contract_verification.md:14
+msgid "The Etherscan plugin is called: **CONTRACT VERIFICATION - ETHERSCAN**."
+msgstr "Le plugin Etherscan s'appelle **VÉRIFICATION DES CONTRATS - ETHERSCAN**."
+
+#: ../../contract_verification.md:16
+msgid "You can access it from the Plugin Manager."
+msgstr "Vous pouvez y accéder à partir du gestionnaire de plugins."
+
+#: ../../contract_verification.md:18
+msgid "The plugin has 3 pages, the **verification** page, the **receipts** page, and the **settings** page."
+msgstr "Le plugin comporte 3 pages, la page **vérification**, la page **recettes** et la page **réglages**."
+
+#: ../../contract_verification.md:20
+msgid "When you go to the plugin for the first time, the settings page will load for inputting the API key."
+msgstr "Lorsque vous accédez au plugin pour la première fois, la page de configuration s'affiche pour vous permettre d'entrer la clé API."
+
+#: ../../contract_verification.md:22
+msgid "![](images/a-cv-etherscan-plugin-api-needed.png)"
+msgstr "![](images/a-cv-etherscan-plugin-api-need.png)"
+
+#: ../../contract_verification.md:25
+msgid "Etherscan API Key - settings page"
+msgstr "Etherscan API Key - page de configuration"
+
+#: ../../contract_verification.md:26
+msgid "Etherscan is a block explorer for Ethereum mainnet and they make block explorers for other chains."
+msgstr "Etherscan est un explorateur de blocs pour le réseau principal Ethereum et fabrique des explorateurs de blocs pour d'autres chaînes."
+
+#: ../../contract_verification.md:28
+msgid "For Ethereum testnets like Goerli or Sepolia, the same API key works."
+msgstr "Pour les testnets Ethereum comme Goerli ou Sepolia, la même clé API fonctionne."
+
+#: ../../contract_verification.md:30
+msgid "If you are trying to verify on L2 chains like Optimism, a different API key is needed for their block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key."
+msgstr "Si vous essayez de vérifier sur des chaînes L2 comme Optimism, une clé API différente est nécessaire pour leur explorateur de blocs. Tous les explorateurs de blocs fabriqués par Etherscan n'ont pas de clé API. Le plugin Remix Contract Verification - Etherscan ne fonctionne que si vous pouvez vous connecter à cet explorateur de blocs pour obtenir la clé API."
+
+#: ../../contract_verification.md:32
+msgid "Once the API key is input, the verification page (the homepage) is opened."
+msgstr "Une fois la clé API saisie, la page de vérification (la page d'accueil) s'ouvre."
+
+#: ../../contract_verification.md:34
+msgid "Verification page"
+msgstr "Page de vérification"
+
+#: ../../contract_verification.md:36
+msgid "![](images/a-cv-etherscan-verify-page1.png)"
+msgstr "![](images/a-cv-etherscan-verify-page1.png)"
+
+#: ../../contract_verification.md:38
+msgid "The network is NOT selected in the Etherscan plugin. The network is chosen in the Deploy & Run plugin and in your browser's wallet (if using)."
+msgstr "Le réseau n'est PAS sélectionné dans le plugin Etherscan. Le réseau est choisi dans le plugin Deploy & Run et dans le portefeuille de votre navigateur (si vous l'utilisez)."
+
+#: ../../contract_verification.md:40
+msgid "The prerequisites for verification are:"
+msgstr "Les conditions préalables à la vérification sont les suivantes :"
+
+#: ../../contract_verification.md:41
+msgid "The address of a deployed contract on a public network"
+msgstr "L'adresse d'un contrat déployé sur un réseau public"
+
+#: ../../contract_verification.md:42
+msgid "That same contract compiled in Remix"
+msgstr "Ce même contrat compilé dans Remix"
+
+#: ../../contract_verification.md:43
+msgid "Constructor parameters same as used during deployment (if required)"
+msgstr "Paramètres du constructeur identiques à ceux utilisés lors du déploiement (si nécessaire)"
+
+#: ../../contract_verification.md:46
+msgid "Receipts page"
+msgstr "Page des reçus"
+
+#: ../../contract_verification.md:47
+msgid "Verification receipts are found on the receipts page."
+msgstr "Les reçus de vérification se trouvent sur la page des reçus."
+
+#: ../../contract_verification.md:49
+msgid "![](images/a-cv-etherscan-receipts.png)"
+msgstr "![](images/a-cv-etherscan-receipts.png)"
+
+#: ../../contract_verification.md:51
+msgid "Verification with constructor arguments"
+msgstr "Vérification des arguments du constructeur"
+
+#: ../../contract_verification.md:52
+msgid "When a contract has arguments in the constructor, a text box will show for inputting the same constructor inputs as the deployed contract."
+msgstr "Lorsqu'un contrat a des arguments dans le constructeur, une zone de texte s'affiche pour saisir les mêmes entrées de constructeur que le contrat déployé."
+
+#: ../../contract_verification.md:54
+msgid "![](images/a-cv-etherscan-constructor-args.png)"
+msgstr "![](images/a-cv-etherscan-constructeur-args.png)"
+
+#: ../../contract_verification.md:56
+msgid "Verifying a proxy contract"
+msgstr "Vérification d'un contrat de mandataire"
+
+#: ../../contract_verification.md:57
+msgid "Before verifying a proxy contract, the associated implementation contract must already be verified."
+msgstr "Avant de vérifier un contrat de procuration, le contrat de mise en œuvre associé doit déjà être vérifié."
+
+#: ../../contract_verification.md:59
+msgid "Just for review, the implementation contract is you wrote or adapted and the proxy is, for example, an ERC1967Proxy."
+msgstr "Pour rappel, le contrat d'implémentation est celui que vous avez écrit ou adapté et le proxy est, par exemple, un ERC1967Proxy."
+
+#: ../../contract_verification.md:61
+msgid "**Do not check the proxy box when verifying the implementation.** Then after verifying the implementation contract:"
+msgstr "**Ne cochez pas la case proxy lors de la vérification de la mise en œuvre ** Puis, après avoir vérifié le contrat de mise en œuvre :"
+
+#: ../../contract_verification.md:63
+msgid "Cut out the implementation contract's address from the Contract Address box."
+msgstr "Découpez l'adresse du contrat d'exécution dans la case Adresse du contrat."
+
+#: ../../contract_verification.md:64
+msgid "Click the \"It's a proxy contract address\" checkbox."
+msgstr "Cochez la case \"C'est une adresse de contrat proxy\"."
+
+#: ../../contract_verification.md:65
+msgid "Paste the verified implementation contract's address in the Expected Implementation Address box."
+msgstr "Collez l'adresse du contrat de mise en œuvre vérifié dans le champ Adresse de mise en œuvre attendue."
+
+#: ../../contract_verification.md:66
+msgid "Paste in the proxy contract address into the Contract Address box."
+msgstr "Collez l'adresse du contrat de procuration dans le champ Adresse du contrat."
+
+#: ../../contract_verification.md:68
+msgid "To explain this visually, verify the implmentation contract:"
+msgstr "Pour l'expliquer visuellement, vérifiez le contrat d'implémentation :"
+
+#: ../../contract_verification.md:70
+msgid "![](images/a-cv-etherscan-verify-implementation.png)"
+msgstr "![](images/a-cv-etherscan-verify-implementation.png)"
+
+#: ../../contract_verification.md:72
+msgid "Then check the \"It's a proxy contract\" checkbox and cut and paste the implementation address from the contract address to the implementation contract box:"
+msgstr "Cochez ensuite la case \"Il s'agit d'un contrat de mandataire\" et faites un copier-coller de l'adresse de mise en œuvre depuis l'adresse du contrat jusqu'à la case du contrat de mise en œuvre :"
+
+#: ../../contract_verification.md:74
+msgid "![](images/a-cv-etherscan-move-addr.png)"
+msgstr "![](images/a-cv-etherscan-move-addr.png)"
+
+#: ../../contract_verification.md:76
+msgid "And then paste the address of the proxy contract into the Contract Address box. ![](images/a-cv-etherscan-verify-proxy2.png)"
+msgstr "Collez ensuite l'adresse du contrat de procuration dans le champ Adresse du contrat. ![](images/a-cv-etherscan-verify-proxy2.png)"
+
+#: ../../contract_verification.md:79
+msgid "Generate Verfication Scripts"
+msgstr "Générer des scripts de vérification"
+
+#: ../../contract_verification.md:80
+msgid "Clicking the Generate Verification Scripts on the Verification page, will create a folder named etherscan in the Workspace's scripts folder that contains .ts files for verifying and returning the receipt status."
+msgstr "En cliquant sur Générer des scripts de vérification sur la page de vérification, vous créez un dossier nommé etherscan dans le dossier scripts de l'espace de travail, qui contient des fichiers .ts pour la vérification et le renvoi de l'état de réception."
+
+#: ../../contract_verification.md:82
+msgid "![](images/a-cv-etherscan-gen-scripts.png)"
+msgstr "![](images/a-cv-etherscan-gen-scripts.png)"
+
