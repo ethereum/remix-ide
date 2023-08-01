@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:02\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,65 +19,65 @@ msgstr ""
 
 #: ../../foundry.md:1
 msgid "Foundry"
-msgstr ""
+msgstr "Foundry"
 
 #: ../../foundry.md:4
 msgid "_(Supported since Remix IDE v0.25.0)_"
-msgstr ""
+msgstr "_(Поддерживается начиная с Remix IDE v0.25.0)_."
 
 #: ../../foundry.md:6
 msgid "Foundry Provider"
-msgstr ""
+msgstr "Провайдер литейного производства"
 
 #: ../../foundry.md:9
 msgid "**Foundry Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Foundry's built-in **Anvil** blockchain. `Foundry Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."
-msgstr ""
+msgstr "**Foundry Provider** - это плагин для Remix IDE, который позволяет пользователям развернуть контракт на встроенном в Foundry блокчейне **Anvil**. `Foundry Provider` может быть выбран из списка сред в плагине `Deploy & Run Transactions`."
 
 #: ../../foundry.md:11
 msgid "![](images/a-foundry-provider.png)"
-msgstr ""
+msgstr "![](images/a-foundry-provider.png)"
 
 #: ../../foundry.md:13
 msgid "As soon as you select `Foundry Provider`, a modal is opened asking for the `Anvil JSON-RPC Endpoint`."
-msgstr ""
+msgstr "Как только Вы выберете `Foundry Provider`, откроется модальное окно, запрашивающее `Anvil JSON-RPC Endpoint`."
 
 #: ../../foundry.md:15
 msgid "![](images/a-foundry-provider-modal.png)"
-msgstr ""
+msgstr "![](images/a-foundry-provider-modal.png)"
 
 #: ../../foundry.md:17
 msgid "If Foundry Anvil node is running with default options, the default endpoint value in modal will not need any change. In case, Anvil node host and port are different, JSON-RPC endpoint should be updated in the modal text box."
-msgstr ""
+msgstr "Если узел Foundry Anvil работает с опциями по умолчанию, значение конечной точки по умолчанию в модальном окне менять не нужно. В случае, если хост и порт узла Anvil отличаются, конечную точку JSON-RPC следует обновить в текстовом поле модального окна."
 
 #: ../../foundry.md:19
 msgid "Once the correct endpoint is filled in the modal, just click on `OK` and the accounts from the Anvil node will be loaded in the `ACCOUNT` section. Network id will also be shown."
-msgstr ""
+msgstr "После того, как в модальном окне будет заполнена правильная конечная точка, просто нажмите `OK`, и учетные записи из узла Anvil будут загружены в раздел `ACCOUNT`. Также будет показан идентификатор сети."
 
 #: ../../foundry.md:21
 msgid "![](images/a-foundry-provider-connected.png)"
-msgstr ""
+msgstr "![](images/a-foundry-provider-connected.png)"
 
 #: ../../foundry.md:23
 msgid "Now, one can start deploying the contract from Remix IDE to the local Anvil node as usual."
-msgstr ""
+msgstr "Теперь можно приступить к развертыванию контракта из Remix IDE на локальном узле Anvil, как обычно."
 
 #: ../../foundry.md:25
 msgid "Foundry Remappings"
-msgstr ""
+msgstr "Ремаппинг литейного производства"
 
 #: ../../foundry.md:28
 msgid "Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can have compilation errors on Remix IDE."
-msgstr ""
+msgstr "Foundry управляет зависимостями с помощью git-подмодулей и может перемапировать зависимости, чтобы облегчить их импорт. Поэтому импорт, определенный с помощью ремаппинга, может приводить к ошибкам компиляции в Remix IDE."
 
 #: ../../foundry.md:30
 msgid "To support such compilation, Remix suggests running [compilation using a compiler config file](https://remix-ide.readthedocs.io/en/latest/compile.html#json-file-for-compiler-configuration). Remix adds some default Forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd."
-msgstr ""
+msgstr "Для поддержки такой компиляции Ремикс предлагает выполнить команду [compilation using a compiler config file](https://remix-ide.readthedocs.io/en/latest/compile.html#json-file-for-compiler-configuration). Remix добавляет некоторые стандартные ремаппинги Forge в файл конфигурации компилятора, когда проект Foundry загружается в Remix IDE с помощью remixd."
 
 #: ../../foundry.md:32
 msgid "![](images/a-foundry-cc.png)"
-msgstr ""
+msgstr "![](images/a-foundry-cc.png)"
 
 #: ../../foundry.md:34
 msgid "Further, more remappings can be added manually, if required."
-msgstr ""
+msgstr "Далее, при необходимости, можно вручную добавить большее количество ремаппингов."
 
