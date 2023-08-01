@@ -1,456 +1,303 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:01\n"
 "Last-Translator: \n"
-"Language: ru_RU\n"
 "Language-Team: Russian\n"
-"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= "
-"2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 "
-">= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3))\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/locations.pot\n"
+"X-Crowdin-File-ID: 6480\n"
+"Language: ru_RU\n"
 
 #: ../../locations.md:1
 msgid "Remix URLs & Links with Parameters"
-msgstr ""
+msgstr "Ремикс URL и ссылок с параметрами"
 
 #: ../../locations.md:4
 msgid "Main Remix URLs"
-msgstr ""
+msgstr "Основные URL-адреса ремиксов"
 
 #: ../../locations.md:6
 msgid "Remix IDE Online is located at [https://remix.ethereum.org](https://remix.ethereum.org)."
-msgstr ""
+msgstr "Remix IDE Online находится по адресу [https://remix.ethereum.org](https://remix.ethereum.org)."
 
 #: ../../locations.md:8
 msgid "The alpha version of remix is located at [https://remix-alpha.ethereum.org](https://remix-alpha.ethereum.org). This is not a stable version."
-msgstr ""
+msgstr "Альфа-версия ремикса находится по адресу [https://remix-alpha.ethereum.org](https://remix-alpha.ethereum.org). Это не стабильная версия."
 
 #: ../../locations.md:10
 msgid "Github repo: [https://github.com/ethereum/remix-project](https://github.com/ethereum/remix-project). The README contains instructions for running Remix-IDE locally."
-msgstr ""
+msgstr "Github repo: [https://github.com/ethereum/remix-project](https://github.com/ethereum/remix-project). В README содержатся инструкции по локальному запуску Remix-IDE."
 
 #: ../../locations.md:12
 msgid "Remix Desktop is an Electron App. Here is the [release page](https://github.com/ethereum/remix-desktop/releases)."
-msgstr ""
+msgstr "Remix Desktop - это приложение для Electron. Здесь находится [страница релиза](https://github.com/ethereum/remix-desktop/releases)."
 
 #: ../../locations.md:14
 msgid "Remix has a VSCode extension called [Ethereum Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix)."
-msgstr ""
+msgstr "Remix имеет расширение VSCode под названием [Ethereum Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix)."
 
 #: ../../locations.md:16
 msgid "The Remix twitter account is [EthereumRemix](https://twitter.com/EthereumRemix)."
-msgstr ""
+msgstr "Твиттер-аккаунт Remix - [EthereumRemix](https://twitter.com/EthereumRemix)."
 
 #: ../../locations.md:18
 msgid "The Remix Project Medium publication is: [https://medium.com/remix-ide](https://medium.com/remix-ide)."
-msgstr ""
+msgstr "Средняя публикация проекта Ремикс: [https://medium.com/remix-ide](https://medium.com/remix-ide)."
 
 #: ../../locations.md:20
 msgid "The [Remix Project](https://remix-project.org) website introduces the different facets of our project."
-msgstr ""
+msgstr "Веб-сайт [Remix Project](https://remix-project.org) знакомит с различными аспектами нашего проекта."
 
 #: ../../locations.md:22
 msgid "The [Remix Gitter Channel](https://gitter.im/ethereum/remix) is a forum to post your questions about Remix."
-msgstr ""
+msgstr "[Remix Gitter Channel](https://gitter.im/ethereum/remix) - это форум для размещения Ваших вопросов о Ремиксе."
 
 #: ../../locations.md:24
 msgid "Customize Remix with URL Parameters"
-msgstr ""
+msgstr "Настройка Ремикса с помощью параметров URL"
 
 #: ../../locations.md:26
-msgid ""
-"There are many ways to customize Remix IDE by using url parameters. Here "
-"are some options:"
-msgstr ""
+msgid "There are many ways to customize Remix IDE by using url parameters. Here are some options:"
+msgstr "Существует множество способов настройки Remix IDE с помощью url-параметров. Вот некоторые варианты:"
 
 #: ../../locations.md:27
 msgid "Activate or deactivate a **list of plugins to be activated** - and specify which plugin gains the \"focus\". [SEE MORE](#activating-a-list-of-plugins)"
-msgstr ""
+msgstr "Активируйте или деактивируйте **список плагинов, которые должны быть активированы** - и укажите, какой плагин получит \"фокус\". [SEE MORE](#activating-a-list-of-plugins)"
 
 #: ../../locations.md:28
 msgid "Send **commands to a plugin** - once the plugin loads. [SEE MORE](#pass-commands-to-a-plugin-s-api-via-a-url-param)"
-msgstr ""
+msgstr "Передайте **команды плагину** - как только плагин загрузится. [SEE MORE](#pass-commands-to-a-plugin-s-api-via-a-url-param)"
 
 #: ../../locations.md:29
 msgid "[Load a GIST](#load-a-gist), [a file via a url](#load-a-file-via-a-url-into-the-editor) or a [base64 encoded string](#load-an-encoded-base64-string-into-a-sol-file-in-the-editor) into Remix's Editor."
-msgstr ""
+msgstr "[Загрузить GIST](#load-a-gist), [файл по url](#load-a-file-via-a-url-into-the-editor) или [base64-кодированную строку](#load-an-encoded-base64-string-into-a-sol-file-in-the-editor) в Редактор Ремикса."
 
 #: ../../locations.md:30
 msgid "Specify **the theme** (Dark or Light). [SEE MORE](#specifying-a-theme)"
-msgstr ""
+msgstr "Укажите **тему** (Темная или Светлая). [SEE MORE](#specifying-a-theme)"
 
 #: ../../locations.md:31
 msgid "Specify which panels should be **minimized** - useful when embedding Remix in your site. [SEE MORE](#minimizing-remix-panels)"
-msgstr ""
+msgstr "Укажите, какие панели должны быть **минимизированы** - полезно при встраивании Remix на Ваш сайт. [SEE MORE](#minimizing-remix-panels)"
 
 #: ../../locations.md:32
 msgid "Select the **version of the Solidity** compiler, enable/disable the **optimizer**, turn on auto compile or choose the language for the Solidity compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)"
-msgstr ""
+msgstr "Выберите **версию компилятора Solidity**, включите/выключите **оптимизатор**, включите автоматическую компиляцию или выберите язык для компилятора Solidity. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)"
 
 #: ../../locations.md:33
 msgid "Load **verified contracts from Etherscan** using contract address [SEE MORE](#load-contracts-from-etherscan-via-address)"
-msgstr ""
+msgstr "Загрузите **проверенные контракты из Etherscan**, используя адрес контракта [SEE MORE](#load-contracts-from-etherscan-via-address)."
 
 #: ../../locations.md:35
 msgid "Activating a list of plugins"
-msgstr ""
+msgstr "Активация списка плагинов"
 
 #: ../../locations.md:36
 msgid "The following example contains the url parameter **activate** followed by **a comma separated list of plugins**."
-msgstr ""
+msgstr "Следующий пример содержит url-параметр **activate**, за которым следует **разделенный запятыми список плагинов**."
 
 #: ../../locations.md:38
 msgid "The last plugin in the list will gain the focus."
-msgstr ""
+msgstr "Последний плагин в списке получит фокус."
 
 #: ../../locations.md:40
 msgid "When you use the activate list, all other plugins that a user had loaded will be deactivated.  This does not apply to the file explorer, the plugin manager, and the settings modules because these are never deactivated."
-msgstr ""
+msgstr "Когда Вы используете список activate, все остальные плагины, которые были загружены пользователем, будут деактивированы.  Это не относится к файловому проводнику, менеджеру плагинов и модулям настроек, поскольку они никогда не деактивируются."
 
 #: ../../locations.md:46
 msgid "Note: a plugin is called by its **name** as specified in its profile.  There are 3 types of plugins:"
-msgstr ""
+msgstr "Примечание: плагин называется по его **имени**, указанному в его профиле.  Существует 3 типа плагинов:"
 
 #: ../../locations.md:47
 msgid "**Native Mandatory Plugins** that are always loaded (so you don't need to activate them using the url parameter **activate**). These include: **fileManager**, **settings**, **manager** (the plugin manager), and **udapp** (deploy & run)."
-msgstr ""
+msgstr "**Нативные обязательные плагины**, которые всегда загружены (поэтому Вам не нужно активировать их с помощью url-параметра **activate**). К ним относятся: **fileManager**, **settings**, **manager** (менеджер плагинов) и **udapp** (развертывание и запуск)."
 
 #: ../../locations.md:48
 msgid "**Native Optional Plugins** that are loaded on demand: **debugger**, **hardhat-provider**, **solidity**, **solidityStaticAnalysis**, **solidityUnitTesting**, and **vyper**"
-msgstr ""
+msgstr "**Нативные дополнительные плагины**, которые загружаются по требованию: **debugger**, **hardhat-provider**, **solidity**, **solidityStaticAnalysis**, **solidityUnitTesting** и **vyper**."
 
 #: ../../locations.md:49
 msgid "**External Plugins** to get these plugins' names, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)."
-msgstr ""
+msgstr "**Внешние плагины** Чтобы узнать названия этих плагинов, пожалуйста, зайдите на [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)."
 
 #: ../../locations.md:51
 msgid "Deactiving a list of plugins"
-msgstr ""
+msgstr "Отключение списка подключаемых модулей"
 
 #: ../../locations.md:56
 msgid "Minimizing Remix panels"
-msgstr ""
+msgstr "Минимизация панелей Remix"
 
 #: ../../locations.md:58
 msgid "The following URL will **close everything except the main panel & the icon panel** (the side and terminal are minimized)."
-msgstr ""
+msgstr "Следующий URL **закроет все, кроме главной панели и панели пиктограмм** (боковая панель и терминал будут свернуты)."
 
 #: ../../locations.md:63
 msgid "To minimize just the side panel, use this URL:"
-msgstr ""
+msgstr "Чтобы свернуть только боковую панель, используйте этот URL:"
 
 #: ../../locations.md:68
 msgid "To minimize just the terminal, use this URL:"
-msgstr ""
+msgstr "Чтобы свернуть только терминал, используйте этот URL:"
 
 #: ../../locations.md:73
 msgid "Specifying a theme"
-msgstr ""
+msgstr "Определение темы"
 
 #: ../../locations.md:74
 msgid "To link to Remix with a theme specified use this url:"
-msgstr ""
+msgstr "Чтобы сделать ссылку на Ремикс с указанной темой, используйте этот url:"
 
 #: ../../locations.md:79
 msgid "A URL example combining multiple parameters"
-msgstr ""
+msgstr "Пример URL, объединяющего несколько параметров"
 
 #: ../../locations.md:80
 msgid "To link to Remix with the a list of plugins activated and with:"
-msgstr ""
+msgstr "Чтобы установить ссылку на Remix со списком активированных плагинов и с:"
 
 #: ../../locations.md:82
 msgid "the Learneth gaining the side panel's focus (because it is the last in the list)"
-msgstr ""
+msgstr "Learneth получает фокус боковой панели (поскольку он последний в списке)"
 
 #: ../../locations.md:83
 msgid "the Light theme loaded"
-msgstr ""
+msgstr "загружена тема Light"
 
 #: ../../locations.md:84
 msgid "the terminal minimized"
-msgstr ""
+msgstr "терминал минимизирован"
 
 #: ../../locations.md:85
 msgid "optimize off"
-msgstr ""
+msgstr "оптимизация отключена"
 
 #: ../../locations.md:87
 msgid "use this url:"
-msgstr ""
+msgstr "используйте этот url:"
 
 #: ../../locations.md:92
 msgid "Pass commands to a plugin's API via a url param"
-msgstr ""
+msgstr "Передавайте команды в API плагина через url-параметр"
 
 #: ../../locations.md:93
 msgid "The URL parameter to issue a command is `call`.  Following the `call` is a // (double slash) separated list of arguments."
-msgstr ""
+msgstr "Параметром URL для выдачи команды является `call`.  За `call` следует список аргументов, разделенных // (двойной косой чертой)."
 
 #: ../../locations.md:99
 msgid "An example using call"
-msgstr ""
+msgstr "Пример с использованием вызова"
 
 #: ../../locations.md:100
 msgid "The URL below uses `activate` & `call`.  It **activates** a number of plugins and **calls** the File Explorers to tell it to load one of the default Remix files:"
-msgstr ""
+msgstr "В приведенном ниже URL используются `activate` и `call`.  Он **активирует** ряд плагинов и **вызывает** File Explorers, чтобы сообщить ему о необходимости загрузить один из файлов Remix по умолчанию:"
 
 #: ../../locations.md:105
 msgid "Load a specific tutorial in the **LearnEth** plugin:"
-msgstr ""
+msgstr "Загрузите определенный учебник в плагине **LearnEth**:"
 
 #: ../../locations.md:110
 msgid "Make calls to a number of different plugins' APIs"
-msgstr ""
+msgstr "Выполняйте вызовы API различных плагинов"
 
 #: ../../locations.md:111
 msgid "Use the `calls` parameter to call a series of plugins.  Use `///` to separate the calls."
-msgstr ""
+msgstr "Используйте параметр `calls` для вызова серии плагинов.  Используйте `///` для разделения вызовов."
 
 #: ../../locations.md:113
 msgid "For example, this command, after activating a list of plugins, calls the LearnEth plugin's API and then calls the File Explorer's API."
-msgstr ""
+msgstr "Например, эта команда, после активации списка плагинов, вызывает API плагина LearnEth, а затем вызывает API File Explorer."
 
 #: ../../locations.md:118
 msgid "Load a file via a URL into the Editor"
-msgstr ""
+msgstr "Загрузка файла по URL в Редактор"
 
 #: ../../locations.md:119
 msgid "The `url` parameter takes a URL, loads it into the Editor and saves it into the code-sample workspace of the File Explorer:"
-msgstr ""
+msgstr "Параметр `url` принимает URL, загружает его в Редактор и сохраняет в рабочей области \"Образец кода\" в Проводнике файлов:"
 
 #: ../../locations.md:124
 msgid "Load an encoded base64 string into a .sol file in the Editor"
-msgstr ""
+msgstr "Загрузите закодированную строку base64 в файл .sol в Редакторе"
 
 #: ../../locations.md:125
 msgid "The `code` parameter takes an encoded base64 string and loads it into the Editor as a .sol file and saves to the code-sample workspace of the File Explorer:"
-msgstr ""
+msgstr "Параметр `code` принимает закодированную base64 строку и загружает ее в Редактор в виде .sol файла, а также сохраняет в рабочую область Code-sample в Проводнике файлов:"
 
 #: ../../locations.md:129
 msgid "Load contracts from Etherscan via address"
-msgstr ""
+msgstr "Загрузка контрактов из Etherscan через адрес"
 
 #: ../../locations.md:130
 msgid "The `address` parameter takes an address, loads all the **verified contracts** found for the address on different Ethereum networks and saves them into the `etherscan-code-sample` workspace of the File Explorer:"
-msgstr ""
+msgstr "Параметр `address` принимает адрес, загружает все **проверенные контракты**, найденные для этого адреса в различных сетях Ethereum, и сохраняет их в рабочую область `etherscan-code-sample` в Проводнике файлов:"
 
 #: ../../locations.md:135
 msgid "Load a Solidity contract from Github"
-msgstr ""
+msgstr "Загрузите контракт Solidity с Github"
 
 #: ../../locations.md:136
 msgid "With a github url of a Solidity contract like this one:"
-msgstr ""
+msgstr "С помощью github url контракта Solidity, подобного этому:"
 
 #: ../../locations.md:142
 msgid "Then delete the **github** part and type in **remix.ethereum.org** in its place, like this:"
-msgstr ""
+msgstr "Затем удалите часть **github** и впишите вместо нее **remix.ethereum.org**, примерно так:"
 
 #: ../../locations.md:148
 msgid "Remix will fetch the Solidity file and open it up in the File Explorer in a Workspace named<br> **code-sample**."
-msgstr ""
+msgstr "Remix получит файл Solidity и откроет его в Проводнике файлов в рабочей области с именем<br> **code-sample**."
 
 #: ../../locations.md:150
 msgid "Load a GIST"
-msgstr ""
+msgstr "Загрузить GIST"
 
 #: ../../locations.md:151
 msgid "The URL parameter here is `gist`."
-msgstr ""
+msgstr "Параметром URL здесь является `gist`."
 
 #: ../../locations.md:156
 msgid "Load a GIST and have it be visible in the Editor:"
-msgstr ""
+msgstr "Загрузите GIST и сделайте его видимым в Редакторе:"
 
 #: ../../locations.md:157
 msgid "Using both `gist` & `call`"
-msgstr ""
+msgstr "Используя одновременно `gist` и `call`"
 
 #: ../../locations.md:162
 msgid "Load a GIST, have it be visible in the Editor & load a list of plugins:"
-msgstr ""
+msgstr "Загрузите GIST, сделайте его видимым в редакторе и загрузите список плагинов:"
 
 #: ../../locations.md:167
 msgid "Load a specific version of the Solidity compiler:"
-msgstr ""
+msgstr "Загрузите определенную версию компилятора Solidity:"
 
 #: ../../locations.md:171
 msgid "**Note:** you need to specify both the Solidity version and the commit."
-msgstr ""
+msgstr "**Примечание:** Вам необходимо указать как версию Solidity, так и коммит."
 
 #: ../../locations.md:173
 msgid "Load a custom Solidity compiler:"
-msgstr ""
+msgstr "Загрузите пользовательский компилятор Solidity:"
 
 #: ../../locations.md:178
 msgid "Turn on autoCompile:"
-msgstr ""
+msgstr "Включите функцию autoCompile:"
 
 #: ../../locations.md:183
 msgid "Select the language for the Solidity Compiler"
-msgstr ""
+msgstr "Выберите язык для компилятора Solidity"
 
 #: ../../locations.md:184
 msgid "Choose YUL or Solidity with the language parameter."
-msgstr ""
-
-#~ msgid "Remix IDE Online is located at https://remix.ethereum.org."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The alpha version of remix is "
-#~ "located at https://remix-alpha.ethereum.org. "
-#~ "This is not a stable version."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Github repo: https://github.com/ethereum/remix-"
-#~ "project. The README contains instructions "
-#~ "for running Remix-IDE locally."
-#~ msgstr ""
-
-#~ msgid "Remix Desktop is an Electron App. Here is the release page."
-#~ msgstr ""
-
-#~ msgid "Remix has a VSCode extension called Ethereum Remix."
-#~ msgstr ""
-
-#~ msgid "The Remix twitter account is EthereumRemix."
-#~ msgstr ""
-
-#~ msgid "The Remix Project Medium publication is: https://medium.com/remix-ide."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Remix Project website introduces the"
-#~ " different facets of our project."
-#~ msgstr ""
-
-#~ msgid "The Remix Gitter Channel is a forum to post your questions about Remix."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Activate or deactivate a list of "
-#~ "plugins to be activated - and "
-#~ "specify which plugin gains the "
-#~ "\"focus\". SEE MORE"
-#~ msgstr ""
-
-#~ msgid "Send commands to a plugin - once the plugin loads. SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Load a GIST, a file via a "
-#~ "url or a base64 encoded string "
-#~ "into Remix's Editor."
-#~ msgstr ""
-
-#~ msgid "Specify the theme (Dark or Light). SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Specify which panels should be minimized"
-#~ " - useful when embedding Remix in "
-#~ "your site. SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Select the version of the Solidity "
-#~ "compiler, enable/disable the optimizer, turn"
-#~ " on auto compile or choose the "
-#~ "language for the Solidity compiler. SEE"
-#~ " MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following example contains the url"
-#~ " parameter activate followed by a "
-#~ "comma separated list of plugins."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note: a plugin is called by its"
-#~ " name as specified in its profile."
-#~ "  There are 3 types of plugins:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Native Mandatory Plugins that are always"
-#~ " loaded (so you don't need to "
-#~ "activate them using the url parameter"
-#~ " activate). These include: fileManager, "
-#~ "settings, manager (the plugin manager), "
-#~ "and udapp (deploy & run)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Native Optional Plugins that are loaded"
-#~ " on demand: debugger, hardhat-provider, "
-#~ "solidity, solidityStaticAnalysis, solidityUnitTesting, "
-#~ "and vyper"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "External Plugins to get these plugins'"
-#~ " names, please go to "
-#~ "https://github.com/ethereum/remix-plugins-"
-#~ "directory/tree/master/plugins."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following URL will close everything"
-#~ " except the main panel & the "
-#~ "icon panel (the side and terminal "
-#~ "are minimized)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The URL parameter to issue a "
-#~ "command is call.  Following the call "
-#~ "is a // (double slash) separated "
-#~ "list of arguments."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The URL below uses activate & "
-#~ "call.  It activates a number of "
-#~ "plugins and calls the File Explorers "
-#~ "to tell it to load one of "
-#~ "the default Remix files:"
-#~ msgstr ""
-
-#~ msgid "Load a specific tutorial in the LearnEth plugin:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The url parameter takes a URL, "
-#~ "loads it into the Editor and saves"
-#~ " it into the code-sample workspace"
-#~ " of the File Explorer:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The code parameter takes an encoded "
-#~ "base64 string and loads it into "
-#~ "the Editor as a .sol file and "
-#~ "saves to the code-sample workspace "
-#~ "of the File Explorer:"
-#~ msgstr ""
-
-#~ msgid "The URL parameter here is gist."
-#~ msgstr ""
-
-#~ msgid "Using both gist & call"
-#~ msgstr ""
-
-#~ msgid "Note: you need to specify both the Solidity version and the commit."
-#~ msgstr ""
+msgstr "Выберите YUL или Solidity с параметром языка."
 
