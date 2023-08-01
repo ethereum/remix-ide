@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:48\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:02\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,149 +19,149 @@ msgstr ""
 
 #: ../../running_js_scripts.md:1
 msgid "Running Scripts"
-msgstr ""
+msgstr "Выполнение сценариев"
 
 #: ../../running_js_scripts.md:4
 msgid "_JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._"
-msgstr ""
+msgstr "_JavaScript (JS) - это легкий, интерпретируемый или только что скомпилированный язык программирования с первоклассными функциями._"
 
 #: ../../running_js_scripts.md:6
 msgid "Remix IDE supports execution of JS scripts."
-msgstr ""
+msgstr "Remix IDE поддерживает выполнение JS-скриптов."
 
 #: ../../running_js_scripts.md:8
 msgid "Write & Run a script"
-msgstr ""
+msgstr "Написать и запустить скрипт"
 
 #: ../../running_js_scripts.md:10
 msgid "Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:"
-msgstr ""
+msgstr "Создайте файл с расширением `.js` и поместите в него Вашу логику. После того, как скрипт готов, его можно запустить двумя способами:"
 
 #: ../../running_js_scripts.md:12
 msgid "Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal"
-msgstr ""
+msgstr "Сделайте скрипт активным файлом в редакторе и запустите `remix.exeCurrent()` из терминала Remix"
 
 #: ../../running_js_scripts.md:13
 msgid "Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor."
-msgstr ""
+msgstr "Просто щелкните правой кнопкой мыши на имени скрипта в плагине `Files Explorers` и щелкните на опции **Run**. **ShortCut**: `Ctrl+Shift+S`, когда скрипт отображается в редакторе."
 
 #: ../../running_js_scripts.md:15
 msgid "Here is a sample script:"
-msgstr ""
+msgstr "Ниже приведен пример сценария:"
 
 #: ../../running_js_scripts.md:29
 msgid "Running it using one of options mentioned above will show result in Remix terminal"
-msgstr ""
+msgstr "Запустив его с помощью одной из вышеуказанных опций, Вы увидите результат в терминале Remix"
 
 #: ../../running_js_scripts.md:31
 msgid "![](images/a-running-scripts-run.png)"
-msgstr ""
+msgstr "![](images/a-running-scripts-run.png)"
 
 #: ../../running_js_scripts.md:33
 msgid "Why run JavaScript Scripts in Remix?"
-msgstr ""
+msgstr "Зачем выполнять сценарии JavaScript в Ремиксе?"
 
 #: ../../running_js_scripts.md:34
 msgid "To mimic how the front-end of your dapp will use web3.js or ethers.js"
-msgstr ""
+msgstr "Для имитации того, как front-end Вашей dapp будет использовать web3.js или ethers.js"
 
 #: ../../running_js_scripts.md:35
 msgid "To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI."
-msgstr ""
+msgstr "Для быстрого развертывания и взаимодействия с кучей экземпляров контракта без использования графического интерфейса Remix."
 
 #: ../../running_js_scripts.md:36
 msgid "To run some tests on a previous deployed contract."
-msgstr ""
+msgstr "Чтобы выполнить некоторые тесты на предыдущем развернутом контракте."
 
 #: ../../running_js_scripts.md:38
 msgid "Script to deploy a contract"
-msgstr ""
+msgstr "Сценарий для развертывания контракта"
 
 #: ../../running_js_scripts.md:40
 msgid "Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function."
-msgstr ""
+msgstr "Remix принимает сценарии async/await для выполнения команд [web3.js](https://web3js.readthedocs.io/) или [ethers.js](https://docs.ethers.io/). Сценарий должен быть обернут в самоисполняющуюся функцию."
 
 #: ../../running_js_scripts.md:42
 msgid "Setup"
-msgstr ""
+msgstr "Настройка"
 
 #: ../../running_js_scripts.md:43
 msgid "These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**."
-msgstr ""
+msgstr "Эти скрипты должны будут получить доступ к ABI контракта.  ABI находится в файле метаданных контракта. Убедитесь, что этот файл метаданных будет создан, перейдя в модуль **Settings** и проверив, что опция **Generate contract metadata** действительно **отмечена**."
 
 #: ../../running_js_scripts.md:45
 msgid "Compile a Solidity file - to generate the contract metadata."
-msgstr ""
+msgstr "Скомпилируйте файл Solidity - для генерации метаданных контракта."
 
 #: ../../running_js_scripts.md:47
 msgid "In the Deploy & Run plugin, choose the Environment."
-msgstr ""
+msgstr "В плагине Deploy & Run выберите Environment."
 
 #: ../../running_js_scripts.md:48
 msgid "Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider."
-msgstr ""
+msgstr "Сценарии Async/await работают во всех окружениях: в Remix VM, в инжектируемом провайдере (обычно MetaMask) и во внешнем HTTP-провайдере."
 
 #: ../../running_js_scripts.md:50
 msgid "JS Scripts in the File Explorers"
-msgstr ""
+msgstr "JS-скрипты в Проводниках файлов"
 
 #: ../../running_js_scripts.md:51
 msgid "In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**."
-msgstr ""
+msgstr "В папке **scripts** папки **workspace** находятся 2 файла примеров: один с использованием **web3.js**, а другой с использованием **ethers.js**."
 
 #: ../../running_js_scripts.md:53
 msgid "Compile a contract and run a script on the fly"
-msgstr ""
+msgstr "Компилируйте контракт и выполняйте скрипт на лету"
 
 #: ../../running_js_scripts.md:54
 msgid "It is often convenient when drafting a contract to run a script just after the compilation succeeded."
-msgstr ""
+msgstr "При составлении контракта часто бывает удобно запустить скрипт сразу после того, как компиляция прошла успешно."
 
 #: ../../running_js_scripts.md:56
 msgid "That way one can quickly deploy and call several contracts in order to set them in a desired state for testing purpose."
-msgstr ""
+msgstr "Таким образом, можно быстро развернуть и вызвать несколько контрактов, чтобы установить их в нужное состояние для тестирования."
 
 #: ../../running_js_scripts.md:58
 msgid "Also if the script contains Mocha tests, those will also be run."
-msgstr ""
+msgstr "Также, если скрипт содержит тесты Mocha, они также будут запущены."
 
 #: ../../running_js_scripts.md:60
 msgid "In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:"
-msgstr ""
+msgstr "Для этого добавьте в контракт тег NatSpec `@custom:dev-run-script`, за которым следует абсолютный путь к файлу, например:"
 
 #: ../../running_js_scripts.md:71
 msgid "**ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling."
-msgstr ""
+msgstr "**ShortCut**: `Ctrl+Shift+S`, при редактировании файла solidity, скомпилирует этот файл, а затем запустит скрипт. В отличие от этого, Ctrl+S только запустит компиляцию."
 
 #: ../../running_js_scripts.md:73
 msgid "An Example Script"
-msgstr ""
+msgstr "Пример сценария"
 
 #: ../../running_js_scripts.md:74
 msgid "The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library.  Ethers.js could also be used."
-msgstr ""
+msgstr "В приведенном ниже примере развертывается контракт solidity с именем **CustomERC20.sol**. В этом примере используется библиотека web3.js.  Можно также использовать библиотеку Ethers.js."
 
 #: ../../running_js_scripts.md:76
 msgid "For more information about this example, please see: [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)"
-msgstr ""
+msgstr "Более подробную информацию об этом примере см: [выполнение скриптов async/await](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)"
 
 #: ../../running_js_scripts.md:106
 msgid "For more script examples, please see [Frequently Asked Scripts](FAS.html)."
-msgstr ""
+msgstr "Дополнительные примеры скриптов см. в разделе [Часто задаваемые скрипты](FAS.html)."
 
 #: ../../running_js_scripts.md:108
 msgid "`require` in scripts at Remix"
-msgstr ""
+msgstr "`require` в скриптах в Remix"
 
 #: ../../running_js_scripts.md:110
 msgid "`require` statement is supported in a limited manner for Remix supported modules with Remix Scripts."
-msgstr ""
+msgstr "Оператор `require` ограниченно поддерживается для модулей, поддерживаемых Remix, с помощью Remix Scripts."
 
 #: ../../running_js_scripts.md:112
 msgid "For now, modules supported by Remix are ethers, web3, swarmgw, chai, remix and hardhat only for hardhat.ethers object/plugin."
-msgstr ""
+msgstr "На данный момент модули, поддерживаемые Remix, - это ethers, web3, swarmgw, chai, remix и hardhat только для объекта/плагина hardhat.ethers."
 
 #: ../../running_js_scripts.md:114
 msgid "For unsupported modules, this error `<module_name> module require is not supported by Remix IDE` will be shown."
-msgstr ""
+msgstr "Для неподдерживаемых модулей будет показана эта ошибка `<module_name> модуль require не поддерживается Remix IDE`."
 
