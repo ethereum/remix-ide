@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:45\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-08-01 13:00\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/FAQ.pot\n"
+"X-Crowdin-File-ID: 6454\n"
+"Language: zh_CN\n"
 
 #: ../../FAQ.md:1
 msgid "FAQ"
@@ -229,69 +232,4 @@ msgstr "**问:** 在我同意加入后，我能否改变主意？"
 #: ../../FAQ.md:142
 msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr "**答:** 您可以在设置面板中关闭或在 Matomo 上关闭。不选择加入或选择退出不会有任何后果。"
-
-#~ msgid "Q: What browsers will Remix work on?"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A: We support Firefox, Chrome, and "
-#~ "Brave.  We do not test or look "
-#~ "for errors in Safari, Edge or "
-#~ "other browsers."
-#~ msgstr ""
-
-#~ msgid "Q: Will Remix work on a tablet or mobile device?"
-#~ msgstr ""
-
-#~ msgid "A: We do not support the use of Remix on tablets or mobile phones."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A:  The verification tool does not "
-#~ "recursively go through the import "
-#~ "statements in a contract.  So can "
-#~ "only verify a 'flattened' contract."
-#~ msgstr ""
-
-#~ msgid "Q: What information does Remix save when Matomo Analytics is enabled?"
-#~ msgstr ""
-
-#~ msgid "A: We want to know:"
-#~ msgstr ""
-
-#~ msgid "Q: Is it opt-in or opt-out?"
-#~ msgstr ""
-
-#~ msgid "A: We use Matomo as an opt-in analytics platform."
-#~ msgstr ""
-
-#~ msgid "Q: Where is the info stored?  Is the info shared with 3rd parties?"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A: All data collected through Matomo "
-#~ "is stored on our own server. No"
-#~ " data is given to third parties."
-#~ msgstr ""
-
-#~ msgid "Q: What does Remix do with this info?"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A: Our goal is to understand how"
-#~ " many users we have, what plugins "
-#~ "people are using, what is not "
-#~ "getting used, what is not being "
-#~ "used to its full potential."
-#~ msgstr ""
-
-#~ msgid "Q: After I agree opt-in, can I change my mind?"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A: You can turn off or on "
-#~ "Matomo in the Settings panel.  There "
-#~ "are no consequences for not opting-"
-#~ "in or opting-out."
-#~ msgstr ""
 
