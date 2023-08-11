@@ -63,6 +63,7 @@ Useful links:
    :caption: Core Modules
 
    file_explorer
+   search_in_fe
    plugin_manager
    settings
    solidity_editor
