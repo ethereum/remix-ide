@@ -158,7 +158,7 @@ msgid "**Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;  <br>Verify you co
 msgstr ""
 
 #: ../../plugin_list.md:180
-msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;  <br>Compile contracts written in Cairo to Starknet <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin) <br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)"
+msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;  <br>Compile contracts written in Cairo to Starknet <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler <br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin) <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
 msgstr ""
 
 #: ../../plugin_list.md:186

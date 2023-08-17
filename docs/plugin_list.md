@@ -134,9 +134,9 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 
 **Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;
 <br>Compile contracts written in Cairo to Starknet
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler
-<br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin)
-<br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)
+<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler
+<br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin)
+<br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)
 
 **Tenderly** &nbsp; ![](images/pi-tenderly.png)
 <br>Verify Contracts. Import To Remix From your Tenderly project.
