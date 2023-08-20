@@ -106,7 +106,7 @@ value (Ether) to the contract.
 
 `setPN` is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract.
 
-Clicking on `get` will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance.
+Clicking on `get` will not execute a transaction (usually it's a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance.
 
 Because `get` is a **view function**, you can see the return value just below the
 `get` button.
