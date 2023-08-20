@@ -98,13 +98,13 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Make an issue](https://github.com/klaytn-ozys/plug-and-klay/issues)
 
 **Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials
-<br>Tutorials that contain quizes that teach users Solidity and Remix features.
+<br>Tutorials that contain quizzes that teach users Solidity and Remix features.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth
 <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html)
 <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)
 
 **Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp;
-<br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allow you to take Lexon code and to
+<br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allows you to take Lexon code and to
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon
 <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix)
 <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)
