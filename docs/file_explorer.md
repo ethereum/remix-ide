@@ -40,7 +40,7 @@ Remix Desktop is a version of Remix IDE in an Electron app. Note that when using
 (Browsers do crash causing localstorage & indexedDB to be corrupted)
 
 Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.  
-Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT).
+Most of the Git operations are done in the **DGit** plugin. (DGit stands for Decentralized GIT).
 
 [Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized.
 
@@ -89,7 +89,7 @@ Restore is only for uploading the backup zip file.
 The Workspace operations to create **Solidity Test Workflow**,  **Mocha Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file is created in the .workflows folder of the active Workspace.
 
 ### Workspaces initialized with Git
-Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box.
+Git initialized workspaces will have the Git icon next to them in the **Workspaces** select box.
 
 ![](images/a-fe-select-git.png)
 
