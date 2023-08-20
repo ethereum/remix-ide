@@ -127,7 +127,7 @@ Deploy & AtAddress
 
 **Note:** When using AtAddress, be sure you trust the contract at that address.
 
-To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access.
+To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access.
 
 Using the ABI with AtAddress
 ----------------------------
@@ -155,7 +155,7 @@ Using the Recorder
 The Recorder is a tool used to save a bunch of transactions in a JSON file and
 re-run them later either in the same environment or in another.
 
-Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc...
+Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc...
 
 There are many use cases for the recorder.  
 
@@ -170,7 +170,7 @@ For instance:
     transaction and so the recorder will automate this deployment.
 
 -   Working in a dev environment often requires setting up the
-    state in a first place.  
+    state in the first place.  
 
 ![](images/a-recorder.png)
 
