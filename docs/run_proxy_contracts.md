@@ -1,15 +1,15 @@
 Deploy & Run Proxy Contracts
 ============================
 
-Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern.
+Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern.
 
 A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967).  
 
-Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address.  
+Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address.  
 
 To interact with the functions in the **implementation contract**, use the deployed instance of the **ERC1967 instance** not on the implementation contract.  
 
-When its time to upgrade you contract, Remix has a UI for this.  
+When it's time to upgrade your contract, Remix has a UI for this.  
 
 To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy & Run.
 
