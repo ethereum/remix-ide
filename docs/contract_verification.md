@@ -65,7 +65,7 @@ Then after verifying the implementation contract:
 3. Paste the verified implementation contract's address in the Expected Implementation Address box.
 4. Paste in the proxy contract address into the Contract Address box.
 
-To explain this visually, verify the implmentation contract:
+To explain this visually, verify the implementation contract:
 
 ![](images/a-cv-etherscan-verify-implementation.png)
 
@@ -76,7 +76,7 @@ Then check the "It's a proxy contract" checkbox and cut and paste the implementa
 And then paste the address of the proxy contract into the Contract Address box.
 ![](images/a-cv-etherscan-verify-proxy2.png)
 
-### Generate Verfication Scripts
+### Generate Verification Scripts
 Clicking the Generate Verification Scripts on the Verification page, will create a folder named etherscan in the Workspace's scripts folder that contains .ts files for verifying and returning the receipt status.
 
 ![](images/a-cv-etherscan-gen-scripts.png)
