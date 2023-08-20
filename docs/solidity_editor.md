@@ -3,10 +3,10 @@ Editor
 
 - Remix uses the Monaco editor. This is the same editor used by VSCode.
 - Remix saves the current file every 5 seconds. 
-- The Remix Editor will highlight keywords in Soldiity, JS, and TS.
+- The Remix Editor will highlight keywords in Solidity, JS, and TS.
 
 ## Editor displays information from other plugins
-The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Soldity Compiler and the Debugger. 
+The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Solidity Compiler and the Debugger. 
 
 - The Solidity Compiler will display warnings and errors in the Editor's gutter at the problematic line.
 - Breakpoints for the Debugger are input in the Editor's gutter. 
