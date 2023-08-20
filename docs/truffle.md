@@ -37,7 +37,7 @@ If a truffle project is shared through remixd and `localhost` workspace is loade
 
 ![](images/a-truffle-compilation.png)
 
-There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation.
+There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation.
 
 One can check the `Enable Truffle Compilation` box to run the compilation for Truffle along with the Remix using the compiler configuration in `Solidity Compiler` plugin.
 
