@@ -19,7 +19,7 @@ This page will go over the Debugger's *Use generated sources* option, its naviga
 ![](images/a-debugger-overview.png)
 
 ### Use generated sources
-This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features).
+This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features).
 
 Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging. 
 
@@ -99,7 +99,7 @@ Here is a full example of the **Memory** panel,
 
 Some address slots have hex encoded values and those values are then decoded.  For example, check position **0xa0** and **0x140**.
 ### Storage
-This is the persistant storage.
+This is the persistent storage.
 
 ![](images/a-debug-storage.png)
 
@@ -116,7 +116,7 @@ The refers to the value that the function will return.
 
 ![](images/a-debug-return.png)
 ### Full Storage Changes
-This shows the persistant storage at the end of the function.
+This shows the persistent storage at the end of the function.
 
 ![](images/a-debug-full-store-change.png)
 ## Breakpoints
