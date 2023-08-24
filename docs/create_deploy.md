@@ -10,7 +10,7 @@ Let's go through a basic workflow:
 
 Creating a new file
 -------------------
-![](images/a-file-explorer-new-file2.png)
+![](images/a-file-explorer-new-file2a.png)
 
 In the File Explorer, create a new file by clicking on the new file icon, and name it and add a .sol extension.
 
@@ -46,10 +46,6 @@ contract testContract {
 
 ```
 
-There are inherent dangers in copying code that you don't understand into Remix.
-
-There are many scams that have tell people to copy some malicious code into Remix.  See the docs about [security](security.html).
-
 Compile the Contract
 --------------------
 With the contract above as the active tab in the Editor, compile the contract.  
@@ -80,49 +76,49 @@ the browser and nothing else needs to be installed to run it.
 
 **NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will restart to its fresh & default state.
 
-For a more realistic testing environment, it can be better to use a public testnet.
+For a more realistic testing environment, use a public testnet.
 
-Select the VM environment
+Select the top Remix VM environment
 -------------------------
 
-Make sure the VM mode is selected. All accounts displayed in **ACCOUNT** should have 100 ether.
+There are a number Remix VM flavors - for the purpose of this tutorial, choose the first one. In the Remix VM, there are 10 accounts funded with 100 ether.
 
-![](images/a-run-jsvm-accounts.png)
+![](images/a-run-remix-vm-accounts.png)
 
 Deploying a contract
 ---------------------
 
 ![](images/a-run-testContract.png)
 
-The constructor of `testContract` needs a parameter (of type `uint256`).
+The constructor of `testContract` needs a parameter of the type `uint256`.
 Input a uint256 and click on `Deploy`.
 
 The transaction is created which deploys the instance of `testContract` .
 
-In a "normal" blockchain, you would have to wait for the transaction to be mined. However, because we are using the `Remix VM`, the execution is immediate.
+In a more realistic blockchain, you would have to approve the transaction and then wait for the transaction to be mined. However, because we are using the `Remix VM`, the execution is immediate.
 
 The terminal will give information about the transaction.
 
 The newly created instance is displayed in the **Deployed Contracts** section.
 
-![](images/a-jvm-instance.png)
+![](images/a-remix-vm-instance.png)
 
 Interacting with the deployed instance
 --------------------------------------
 Clicking on the caret to the left of the instance of TESTCONTRACT will expand it so its functions are visible.
 
-This new instance contains 3 actions which corresponds to the 3
-functions (`setP`, `setPN`, `get`). Clicking on `setP` or `setPN` will
-create a new transaction.
+This new instance contains the 3 functions (`setP`, `setPN`, `get`). 
 
-Note that `setP` is `payable` (red button) : it is possible to send
-value (Ether) to the contract.
+Clicking on `setP` or `setPN` will create a new transaction.
 
-`setPN` is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract.
+`setP` is a `payable` function (payable functions have red buttons). With a payable function, value (ETH) can be sent to the contract. The amount of ETH is chosen in the VALUE input field and the unit of ETH is selected in the box to the right.
 
-Clicking on `get` will not execute a transaction (usually it's a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance.
+![](images/a-remix-vm-value.png)
 
-Because `get` is a **view function**, you can see the return value just below the
-`get` button.
+`setPN` is not payable (an orange button - depending on the theme). It is not possible to send value (Ether) to this function.
 
-![](images/a-jvm-calling-instance.png)
+`get` is a **view function** (a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (it is only returning the value of the variable `value`).
+
+The value that gets returned appears just below the `get` button.
+
+![](images/a-remix-vm-view.png)
