@@ -37,7 +37,7 @@ If a hardhat project is shared through remixd and `localhost` workspace is loade
 
 ![](images/a-hardhat-compilation.png)
 
-There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation.
+There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation.
 
 One can check the `Enable Hardhat Compilation` box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin.
 

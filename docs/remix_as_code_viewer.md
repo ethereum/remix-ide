@@ -16,7 +16,7 @@ In the URL, change `etherscan.io` to `remix.ethereum.org`
 
 and reload. It will fetch the contracts verified on Etherscan.
 
-Contracts verified on Ethereum mainnnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace. 
+Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace. 
 
 ![](images/a-code-viewer-etherscan.png)
 

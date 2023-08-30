@@ -7,7 +7,7 @@ In the console, you can run the commands listed below.  Once you start to type a
  
 **ethers**: Remix IDE enables the use of ethersjs commands. See the [Ethers docs](https://docs.ethers.io/) for the full list.
 
-**web3**: Remix IDE enable the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list.
+**web3**: Remix IDE enables the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list.
 
 **swarmgw**: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/.
 

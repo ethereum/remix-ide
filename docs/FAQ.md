@@ -22,7 +22,7 @@ FAQ
 
 `Ctrl+S`: Compiles the active Solidity file 
 
-`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)
+`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)
 
 ### Solidity compiler
 
@@ -54,8 +54,8 @@ There is a plugin called `Flattener` which will stuff all the original code and 
 
 **Q:** Where is deploy button?
 
-**A:** Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager.
-You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the "Solidity" button in the environment section.
+**A:** It's in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager.
+You could also activate everything you need to work with solidity on the landing page (click the remix logo at the top left of the screen) and click the "Solidity" button in the environment section.
 
 **Q:** How to pass a tuple to a public function in Remix?
 
@@ -67,7 +67,7 @@ You could also activate everything you need to work with solidity on the landing
 
 `pragma experimental ABIEncoderV2;` at the top of the solidity file.
 
-For example, here's a solidity file with a struct is an input parameter.
+For example, here's a solidity file with a struct as an input parameter.
 
 ```
 pragma solidity >=0.4.22 <0.6.0;

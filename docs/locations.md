@@ -48,7 +48,7 @@ Note: a plugin is called by its **name** as specified in its profile.  There are
 2. **Native Optional Plugins** that are loaded on demand: **debugger**, **hardhat-provider**, **solidity**, **solidityStaticAnalysis**, **solidityUnitTesting**, and **vyper** 
 3. **External Plugins** to get these plugins' names, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins).
 
-### Deactiving a list of plugins
+### Deactivating a list of plugins
 ```
 https://remix.ethereum.org/?#deactivate=debugger
 ```
@@ -77,7 +77,7 @@ To link to Remix with a theme specified use this url:
 ```
 
 ### A URL example combining multiple parameters
-To link to Remix with the a list of plugins activated and with:
+To link to Remix with the list of plugins activated and with:
 
  * the Learneth gaining the side panel's focus (because it is the last in the list)
  * the Light theme loaded 

@@ -80,7 +80,7 @@ Then click the `Donate` button.
 
 This will send the Ether to the function.
 
-Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)
+Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)
 
 Remix displays information related to each transaction result in the terminal.
 
@@ -175,7 +175,7 @@ These panels display low level informations about the execution:
 > -   Call Data
 > -   Call Stack
 > -   Return Value (only if the current step is a RETURN opcode)
-> -   Full Storages Changes (only at the end of the execution & it displays the all the storage changes)
+> -   Full Storages Changes (only at the end of the execution & it displays all the storage changes)
 
 ### Reverted Transaction
 

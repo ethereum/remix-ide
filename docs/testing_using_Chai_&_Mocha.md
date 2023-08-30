@@ -11,7 +11,7 @@ _Mocha is a feature-rich JavaScript test framework running on Node.js and in the
 
 ## Write tests
 
-Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`.
+Create a js file in your project workspace. Better to create it inside `scripts` folder. Let's name it `sample.test.js`.
 
 Write your tests in the file. Here is a sample:
 

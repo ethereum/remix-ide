@@ -35,7 +35,7 @@ In the Solidity Compiler, after the compilation is completed, there is a button 
 
 ![](images/a-settings-pub-swarm.png)
 
-Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info.
+Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist your content as surely as if you put in your own info.
 
 ![](images/a-settings-swarm.png)
 

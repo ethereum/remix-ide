@@ -12,7 +12,7 @@ When plugins need to access other plugins for their operation, a modal will appe
 
 ![](images/a-permission-modal.png)
 
-Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up.
+Often, the same plugin will want to do the same action multiple times.  So when granting permission, it's helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up.
 
 ## View permissions
 You can view the permissions that you have granted to plugins by clicking on the **Permissions** button at the bottom of the **Plugin Manager**.

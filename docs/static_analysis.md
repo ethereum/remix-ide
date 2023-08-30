@@ -7,7 +7,7 @@ The `Solidity Analyzers` plugin gangs three analysis tools together to perform s
 
 ![](images/a-ssa-activate.png)
 
-`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers.
+`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers.
 
 `Solidity Analyzers` uses these tools:
 - [Remix Analysis](#remix-analysis): a basic analysis tool
@@ -89,7 +89,7 @@ assembly {
             let size := extcodesize(_addr)
 }
 ```
--   **Block timestamp: Semantics maybe unclear**
+-   **Block timestamp: Semantics may be unclear**
 
 `now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful.
 
@@ -102,7 +102,7 @@ if(startDate > now)
 // using block.timestamp
 uint c = block.timestamp;
 ```
--   **Low level calls: Semantics maybe unclear**
+-   **Low level calls: Semantics may be unclear**
 
 Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction.
 

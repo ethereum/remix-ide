@@ -16,12 +16,12 @@ If there is not an active file in the editor or a file has not already been comp
 Compiling is triggered when you:
 - click the compile button (**D. in fig. 1 below**) 
 - use the shortcut `control + s`.  
-- right click on a file in the File Explorer and selecting **Compile** option 
+- right click on a file in the File Explorer and select the **Compile** option 
 
 ![](images/a-sol-comp-basic.png)
 
 ### Auto Compile
-If the auto compile checkbox (**B. in fig. 1 above**) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected. 
+If the auto compile checkbox (**B. in fig. 1 above**) is checked, compilation will occur every few seconds (when the file is auto-saved) as well as when another file is selected. 
 If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion.
 
 ### Solidity versions & Remix functionality
@@ -44,14 +44,14 @@ When publishing a contract that imports other contracts, the main contract and a
 
 **Published data contains the contract's metadata and the solidity source code.**
 
-After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**.
+After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addresses of the contracts that it imported and the address of the contract's **metadata**.
 
 When the "Compilation Details" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract.
 
 If you just want to get the **ABI** or the **Bytecode** - click the appropriate button see **H. in fig. 1**.
 
 ### Passive Contract Verification
-When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything.
+When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verify your contracts without you needing to do anything.
 
 ### Compile and Run script
 The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))
@@ -67,7 +67,7 @@ Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 
 
 ![](images/a-sol-comp-adv.png)
 
-There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**). 
+There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**). 
 
 ### Solidity or YUL
 Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples.
@@ -80,9 +80,9 @@ The `compiler default` corresponds to the default hard fork used by a specific v
 To see the name of the hard fork used in the current compilation, click the "Compilation Details" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name.
 
 ### Enable optimization
-According to the the Solidity Docs, "the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract."
+According to the Solidity Docs, "the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract."
 
-For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) .
+For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be).
 
 To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html).
 

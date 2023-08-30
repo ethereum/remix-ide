@@ -37,7 +37,7 @@ You can also get there by clicking the **More** button in the featured plugin li
 Plugin Manager
 ---------------
 
-In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on.
+In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on.
 
 The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
 

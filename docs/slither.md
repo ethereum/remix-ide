@@ -10,7 +10,7 @@ Remixd and Slither
 
 When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html).
 
-`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_
+`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepancy, Slither can also be installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_
 
 
  when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)
@@ -60,7 +60,7 @@ To only run Slither Analysis, deselect `Select all` checkbox and click on `Run`.
 
 ![](images/a-slither-analysis-only.png)
 
-By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look on them, check the box with label `Show warnings for external libraries`.
+By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look at them, check the box with label `Show warnings for external libraries`.
 
 ![](images/a-slither-analysis-ext-libs.png)
 
