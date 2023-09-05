@@ -3,20 +3,20 @@ Creating and Deploying a Contract
 
 Let's go through a basic workflow:
 - create a new file
-- paste some code into it
+- code a contract in the file
 - compile the contract
-- deploy it to the local simpulated blockchain 
-- interact with the deployed contract's functions.
+- deploy it to the local simulated blockchain (Remix VM)
+- interact with the deployed contract's functions
 
 Creating a new file
 -------------------
 ![](images/a-file-explorer-new-file2a.png)
 
-In the File Explorer, create a new file by clicking on the new file icon, and name it and add a .sol extension.
+In the File Explorer, create a new file by clicking on the new file icon, and name it. The `.sol` is default extension in Remix, if a file is named without an extension, `.sol` will appended.
 
-**NOTE:** this page does not go into templates or workspaces - for info about these topics, see the [File Explorer docs](file_explorer.html)
+**NOTE:** For information about templates or workspaces, see the [File Explorer docs](file_explorer.html).
 
-Then in the editor, paste in the following contract into the empty file:
+In the editor, paste in the following contract into the empty file:
 
 ``` 
 // SPDX-License-Identifier: GPL-3.0
@@ -46,16 +46,18 @@ contract testContract {
 
 ```
 
+When pasting in code, make sure you understand it before deploying or interacting with it. Don't get scammed!
+
 Compile the Contract
 --------------------
 With the contract above as the active tab in the Editor, compile the contract.  
-A quick way to compile is to by hitting **ctrl + s**. You can also compile by going to the Solidity compiler and clicking the compile button, or by right clicking a file in the File Explorer, or by clicking the play button at the top of the Editor.
+A quick way to compile is to hit **ctrl + s**. You can also compile by going to the Solidity compiler and clicking the compile button, or by right clicking a file in the File Explorer, or by clicking the play button at the top of the Editor.
 
 **For More Info** see the docs on the [Solidity Compiler](compile.html).
 
 Deploy the contract
 -------------------
-Go to the **Deploy & Run** plugin.
+Go to the **Deploy & Run Transactions** plugin.
 
 At the top of this plugin is the Environment select box.  Here you can choose where you want to deploy your contract.  There are many choices.  For more info about these options see [this section](run.html#environment) of the docs.
 
@@ -63,7 +65,9 @@ For a brief synopsis:
 
 **Injected Provider** is used to connect Remix with a Browser Wallet (e.g. Metamask) which is generally for deploying to a public network.
 
-**Remix VM** is a test blockchain in the browser.  There are quite a few flavors of the Remix VM. For this guide, choose the first version of the RemixVM.
+**Remix VM** is a test blockchain in the browser.  There are quite a few "flavors" of the Remix VM. Each "flavor" is associated with a different hard fork with the name in parathesies - e.g. Remix VM (Shanghai) or for the choice of a chain to fork into the Remix VM.  
+
+The **Remix VM** is convenient because it is a blockchain that runs in the browser and nothing else needs to be installed in order to run it. 
 
 **Dev** is for connecting Remix to a local chain running on your computer.
 
@@ -71,17 +75,14 @@ For a brief synopsis:
 
 (For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
 
-The **Remix VM** is convenient because it is a blockchain that runs in
-the browser and nothing else needs to be installed to run it. 
-
-**NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will restart to its fresh & default state.
-
-For a more realistic testing environment, use a public testnet.
-
 Select the top Remix VM environment
 -------------------------
 
-There are a number Remix VM flavors - for the purpose of this tutorial, choose the first one. In the Remix VM, there are 10 accounts funded with 100 ether.
+Choose the top first Remix VM in the dropdown list. 
+
+The Remix VM comes with 10 accounts funded with 100 ether.
+
+**NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will also restart to its fresh & default state.  For a more realistic testing environment, use a public testnet.
 
 ![](images/a-run-remix-vm-accounts.png)
 
