@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/solidity_editor.pot\n"
+"X-Crowdin-File-ID: 6494\n"
+"Language: it_IT\n"
+
+#: ../../solidity_editor.md:1
+msgid "Editor"
+msgstr "Editor"
+
+#: ../../solidity_editor.md:4
+msgid "Remix uses the Monaco editor. This is the same editor used by VSCode."
+msgstr "Remix utilizza l'editor Monaco. È lo stesso editor utilizzato da VSCode."
+
+#: ../../solidity_editor.md:5
+msgid "Remix saves the current file every 5 seconds."
+msgstr "Remix salva il file corrente ogni 5 secondi."
+
+#: ../../solidity_editor.md:6
+msgid "The Remix Editor will highlight keywords in Soldiity, JS, and TS."
+msgstr "L'editor Remix evidenzierà le parole chiave in Soldiity, JS e TS."
+
+#: ../../solidity_editor.md:8
+msgid "Editor displays information from other plugins"
+msgstr "L'editor mostra informazioni da altri plugin"
+
+#: ../../solidity_editor.md:9
+msgid "The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Soldity Compiler and the Debugger."
+msgstr "Lo scopo principale dell'Editor è, ovviamente, quello di modificare il codice. Ma funziona anche con altri plugin, in particolare con il compilatore Soldity e il debugger."
+
+#: ../../solidity_editor.md:11
+msgid "The Solidity Compiler will display warnings and errors in the Editor's gutter at the problematic line."
+msgstr "Il compilatore Solidity visualizzerà gli avvertimenti e gli errori nel riquadro dell'editor in corrispondenza della riga problematica."
+
+#: ../../solidity_editor.md:12
+msgid "Breakpoints for the Debugger are input in the Editor's gutter."
+msgstr "I punti di interruzione per il Debugger vengono inseriti nel riquadro dell'editor."
+
+#: ../../solidity_editor.md:13
+msgid "When stepping through code in the Debugger, the relevant code will be highlighted in the Editor."
+msgstr "Quando si scorre il codice nel Debugger, il codice pertinente viene evidenziato nell'Editor."
+
+#: ../../solidity_editor.md:15
+msgid "![](images/a-editor-general.png)"
+msgstr "![](images/a-editor-general.png)"
+
+#: ../../solidity_editor.md:17
+msgid "General Operations"
+msgstr "Operazioni Generali"
+
+#: ../../solidity_editor.md:18
+msgid "Files are open as tabs. When there are too many tabs to display, scrolling with a mouse wheel will horizontally scroll the tabs."
+msgstr "I file vengono aperti come schede. Quando ci sono troppe schede da visualizzare, lo scorrimento con la rotella del mouse fa scorrere orizzontalmente le schede."
+
+#: ../../solidity_editor.md:20
+msgid "![](images/a-editor-tabs.png)"
+msgstr "![](images/a-editor-tabs.png)"
+
+#: ../../solidity_editor.md:22
+msgid "The Play button works on the active tab. If a Solidity file is active, clicking Play will compile it. If a TS or JS file is active, Play will run the script."
+msgstr "Il pulsante Riproduci funziona sulla scheda attiva. Se è attivo un file Solidity, facendo clic su Play lo si compila. Se è attivo un file TS o JS, Play eseguirà lo script."
+
+#: ../../solidity_editor.md:23
+msgid "The magnifying glass icons (+/-) on the top left corner are to increase/decrease the font size."
+msgstr "Le icone a forma di lente d'ingrandimento (+/-) nell'angolo in alto a sinistra servono ad aumentare/diminuire la dimensione dei caratteri."
+
+#: ../../solidity_editor.md:24
+msgid "The small type on the far right of the Editor is clickable to jump to a section."
+msgstr "Il carattere piccolo all'estrema destra dell'editor è cliccabile per passare a una sezione."
+
+#: ../../solidity_editor.md:26
+msgid "TypeScript"
+msgstr "TypeScript"
+
+#: ../../solidity_editor.md:28
+msgid "The Editor and Script Runner support TypeScript, which means that you can write TypeScript, have some auto-completion, and run it straight from Remix. As stated above, there is syntax highlighting in TS."
+msgstr "L'editor e lo script runner supportano TypeScript, il che significa che è possibile scrivere TypeScript, avere un completamento automatico ed eseguirlo direttamente da Remix. Come già detto, in TS è presente l'evidenziazione della sintassi."
+
+#: ../../solidity_editor.md:30
+msgid "The default Workspace contains example TypeScript files."
+msgstr "L'area di lavoro predefinita contiene file TypeScript di esempio."
+
+#: ../../solidity_editor.md:32
+msgid "Editor & Autocompile"
+msgstr "Editor & Compilazione Automatica"
+
+#: ../../solidity_editor.md:33
+msgid "When autocompile is enabled (in the Settings panel), compilation will occur each time the current file is changed, or another file is selected."
+msgstr "Quando la compilazione automatica è attivata (nel pannello Impostazioni), la compilazione avverrà ogni volta che il file corrente viene modificato o viene selezionato un altro file."
+
+#: ../../solidity_editor.md:35
+msgid "![](images/a-editor-settings.png)"
+msgstr "![](images/a-editor-settings.png)"
+
+#: ../../solidity_editor.md:36
+msgid "Autocomplete"
+msgstr "Completamento automatico"
+
+#: ../../solidity_editor.md:37
+msgid "Autocompleting Solidity code happens when you start typing in the Editor. The Compiler will run in the background, and process any imports you have. You will see these imports appear in the .deps directory in the File Explorer."
+msgstr "Il completamento automatico del codice Solidity avviene quando si inizia a digitare nell'editor. Il compilatore viene eseguito in background ed elabora tutte le importazioni presenti. Queste importazioni appariranno nella cartella .deps nell'Esplora File."
+
+#: ../../solidity_editor.md:39
+msgid "![](images/a-editor-autocomplete1.png)"
+msgstr "![](images/a-editor-autocomplete1.png)"
+
+#: ../../solidity_editor.md:41
+msgid "**Tip:** If you start with a Solidity file that contains errors, the Compiler might not be able to compile it. In that case, the Editor's autocomplete features will not fully work until after the file is successfully compiled. After that, autocomplete will work even if there are errors, but only for the elements the Compiler already understands. For example, if you add a new function in a file that contains errors, autocomplete will not be able to find that function because it can’t compile the file."
+msgstr "**Consiglio:** Se si inizia con un file Solidity che contiene errori, il compilatore potrebbe non essere in grado di compilarlo. In questo caso, le funzioni di completamento automatico dell'editor non funzioneranno in modo completo fino a quando il file non sarà compilato correttamente. In seguito, il completamento automatico funzionerà anche in presenza di errori, ma solo per gli elementi già compresi dal compilatore. Ad esempio, se si aggiunge una nuova funzione in un file che contiene errori, il completamento automatico non sarà in grado di trovare quella funzione perché non può compilare il file."
+
+#: ../../solidity_editor.md:43
+msgid "![](images/a-editor-autocomplete.png)"
+msgstr "![](images/a-editor-autocomplete.png)"
+
+#: ../../solidity_editor.md:45
+msgid "Auto complete on imports"
+msgstr "Completamento automatico sulle importazioni"
+
+#: ../../solidity_editor.md:46
+msgid "The Editor's autocomplete will offer the option to bring in OpenZeppelin contracts, Uniswap contracts, and the paths to all the files in the current Workspace."
+msgstr "Il completamento automatico dell'editor offrirà l'opzione di inserire i contratti OpenZeppelin, i contratti Uniswap e i percorsi di tutti i file nell'area di lavoro corrente."
+
+#: ../../solidity_editor.md:48
+msgid "![](images/a-editor-auto-import1.png)"
+msgstr "![](images/a-editor-auto-import1.png)"
+
+#: ../../solidity_editor.md:50
+msgid "So, when choosing @openzeppelin, you’ll get this:"
+msgstr "Quindi, scegliendo @openzeppelin, si otterrà questo:"
+
+#: ../../solidity_editor.md:52
+msgid "![](images/a-editor-auto-oz-import2.png)"
+msgstr "![](images/a-editor-auto-oz-import2.png)"
+
+#: ../../solidity_editor.md:54
+msgid "And the same with Uniswap:"
+msgstr "E lo stesso vale per Uniswap:"
+
+#: ../../solidity_editor.md:56
+msgid "![](images/a-editor-auto-uni-import3.png)"
+msgstr "![](images/a-editor-auto-uni-import3.png)"
+
+#: ../../solidity_editor.md:58
+msgid "Errors and Warnings"
+msgstr "Errori e Avvisi"
+
+#: ../../solidity_editor.md:59
+msgid "You can tell the file was successfully compiled if no errors or warnings are displayed in the Editor. Errors are displayed using squiggly lines. A red line indicates an error, a yellow line is a warning."
+msgstr "Si può dire che la compilazione del file è avvenuta correttamente se nell'editor non vengono visualizzati errori o avvertimenti. Gli errori vengono visualizzati con linee ondulate. Una linea rossa indica un errore, una linea gialla un avvertimento."
+
+#: ../../solidity_editor.md:61
+msgid "![](images/a-editor-error-red-squiggles.png)"
+msgstr "![](images/a-editor-error-red-squiggles.png)"
+
+#: ../../solidity_editor.md:63
+msgid "Hovering over the squiggly line shows you the message from the Compiler."
+msgstr "Passando il mouse sulla linea ondulata si visualizza il messaggio del compilatore."
+
+#: ../../solidity_editor.md:65
+msgid "![](images/a-editor-error-hover.png)"
+msgstr "![](images/a-editor-error-hover.png)"
+
+#: ../../solidity_editor.md:67
+msgid "Tabs and the File Explorer will also will also display whether a file contains errors or warnings."
+msgstr "Le schede e l'Esplora File mostrano anche se un file contiene errori o avvertimenti."
+
+#: ../../solidity_editor.md:69
+msgid "![](images/a-editor-errors-tabs-fe.png)"
+msgstr "![](images/a-editor-errors-tabs-fe.png)"
+
+#: ../../solidity_editor.md:71
+msgid "Errors on Imported Files"
+msgstr "Errori nei file importati"
+
+#: ../../solidity_editor.md:73
+msgid "A file with errors in one of the files that it imports will also trigger an error in the Editor. Your main file might not compile, but you will see there is a problem immediately."
+msgstr "Un file che presenta errori in uno dei file che importa genera un errore anche nell'editor. Il vostro file principale potrebbe non essere compilato, ma vi accorgerete subito che c'è un problema."
+
+#: ../../solidity_editor.md:75
+msgid "Hovering over an Error Number in the File Explorer"
+msgstr "Passare sopra un Numero di Errore nell'Esplora File"
+
+#: ../../solidity_editor.md:76
+msgid "The number of errors in a file is also reported in the File Explorer. Hovering over the number, which indicates the amount of errors/warnings, will display the information from the Compiler."
+msgstr "Il numero di errori in un file è riportato anche nell'Esplora File. Passando il mouse sul numero, che indica la quantità di errori/avvertimenti, si visualizzeranno le informazioni del compilatore."
+
+#: ../../solidity_editor.md:78
+msgid "![](images/a-editor-error-fe-num.png)"
+msgstr "![](images/a-editor-error-fe-num.png)"
+
+#: ../../solidity_editor.md:81
+msgid "Gas Estimates"
+msgstr "Stime del Carburante"
+
+#: ../../solidity_editor.md:83
+msgid "Gas estimates are displayed on the same line where a function is declared."
+msgstr "Le stime del carburante sono visualizzate sulla stessa linea in cui viene dichiarata una funzione."
+
+#: ../../solidity_editor.md:85
+msgid "![](images/a-editor-i-got-gas.png)"
+msgstr "![](images/a-editor-i-got-gas.png)"
+
+#: ../../solidity_editor.md:87
+msgid "Constructor gas estimates are also displayed, and consist of two components: creation cost and code deposit cost."
+msgstr "Vengono visualizzate anche le stime del carburante del costruttore, che consistono in due componenti: costo di creazione e costo di deposito del codice."
+
+#: ../../solidity_editor.md:90
+msgid "Go to Definition and References"
+msgstr "Vai a Definizione e Riferimenti"
+
+#: ../../solidity_editor.md:92
+msgid "Definitions"
+msgstr "Definizioni"
+
+#: ../../solidity_editor.md:93
+msgid "By right-clicking, you can go to a definition. You can also use the shortcut displayed."
+msgstr "Facendo clic con il tasto destro del mouse, è possibile accedere a una definizione. È anche possibile utilizzare la scorciatoia visualizzata."
+
+#: ../../solidity_editor.md:95
+msgid "You can also right-click on the filename of an import statement and jump to that file."
+msgstr "È anche possibile fare clic con il pulsante destro del mouse sul nome del file di un'istruzione di importazione e passare a quel file."
+
+#: ../../solidity_editor.md:97
+msgid "![](images/a-editor-goto-def.png)"
+msgstr "![](images/a-editor-goto-def.png)"
+
+#: ../../solidity_editor.md:99
+msgid "You can also ‘peek’ at the definition inline in the Editor. You can then jump to a definition by double-clicking on the right hand side of the line."
+msgstr "È anche possibile \"sbirciare\" la definizione in linea nell'editor. È possibile passare a una definizione facendo doppio clic sul lato destro della riga."
+
+#: ../../solidity_editor.md:101
+msgid "References"
+msgstr "Riferimenti"
+
+#: ../../solidity_editor.md:102
+msgid "By right-clicking, you can display all the references. You can also use the shortcut displayed."
+msgstr "Facendo clic con il tasto destro del mouse, è possibile visualizzare tutti i riferimenti. È anche possibile utilizzare la scorciatoia visualizzata."
+
+#: ../../solidity_editor.md:104
+msgid "![](images/a-editor-refs1.png)"
+msgstr "![](images/a-editor-refs1.png)"
+
+#: ../../solidity_editor.md:106
+msgid "You can jump to a reference by double-clicking on the right hand side of the line."
+msgstr "È possibile passare a un riferimento facendo doppio clic sul lato destro della riga."
+
+#: ../../solidity_editor.md:108
+msgid "![](images/a-editor-ref2.png)"
+msgstr "![](images/a-editor-ref2.png)"
+
+#: ../../solidity_editor.md:109
+msgid "Highlighted References"
+msgstr "Riferimenti Evidenziati"
+
+#: ../../solidity_editor.md:111
+msgid "References are highlighted in the Editor."
+msgstr "I riferimenti sono evidenziati nell'Editor."
+
+#: ../../solidity_editor.md:113
+msgid "![](images/a-editor-ref-highlight.png)"
+msgstr "![](images/a-editor-ref-highlight.png)"
+
+#: ../../solidity_editor.md:114
+msgid "Hovering"
+msgstr "Passare sopra"
+
+#: ../../solidity_editor.md:116
+msgid "When you hover over a term with a definition, the definition will pop up. Hovering over code that has triggered an error (underlined with a red squiggly line) will show the error message."
+msgstr "Quando si passa il mouse su un termine con una definizione, viene visualizzata la definizione. Se si passa il mouse sul codice che ha generato un errore (sottolineato da una linea rossa), viene visualizzato il messaggio di errore."
+
+#: ../../solidity_editor.md:118
+msgid "![](images/a-editor-hover.png)"
+msgstr "![](images/a-editor-hover.png)"
+
+#: ../../solidity_editor.md:119
+msgid "Files with Errors turn Red"
+msgstr "I file con Errori diventano Rossi"
+
+#: ../../solidity_editor.md:121
+msgid "When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor."
+msgstr "Quando un file contiene un errore, il suo nome diventa rosso, sia nell'Esplora File che nella sua scheda in alto nell'Editor."
+
+#: ../../solidity_editor.md:123
+msgid "More about the Editor updates in this article: Major Updates to Remix Editor"
+msgstr "Maggiori informazioni sugli aggiornamenti dell'editor in questo articolo: Aggiornamenti Importanti dell'Editor Remix"
+
