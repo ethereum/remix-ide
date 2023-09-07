@@ -1,21 +1,27 @@
 Creating and Deploying a Contract
-================================
+=================================
 
-This page contains the process of creating a contract, compiling it, deploying and then interacting with it.
+Let's go through a basic workflow:
+- create a new file
+- code a contract in the file
+- compile the contract
+- deploy it to the local simulated blockchain (Remix VM)
+- interact with the deployed contract's functions
 
-A sample contract
----------------
-This contract is very basic. The goal is to quickly start to create and
-to interact with a sample contract.
+Creating a new file
+-------------------
+![](images/a-file-explorer-new-file2a.png)
 
-![](images/a-file-explorer-new-file2.png)
+In the File Explorer, create a new file by clicking on the new file icon, and name it. The `.sol` is default extension in Remix, if a file is named without an extension, `.sol` will appended.
 
-Go to the File Explorer, create a new file, name it and in the editor paste the contract below.
+**NOTE:** For information about templates or workspaces, see the [File Explorer docs](file_explorer.html).
+
+In the editor, paste in the following contract into the empty file:
 
 ``` 
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.7.6;
+pragma solidity ^0.8.18;
 
 contract testContract {
 
@@ -40,75 +46,80 @@ contract testContract {
 
 ```
 
+When pasting in code, make sure you understand it before deploying or interacting with it. Don't get scammed!
+
 Compile the Contract
 --------------------
 With the contract above as the active tab in the Editor, compile the contract.  
+A quick way to compile is to hit **ctrl + s**. You can also compile by going to the Solidity compiler and clicking the compile button, or by right clicking a file in the File Explorer, or by clicking the play button at the top of the Editor.
 
-**For More Info** see the docs on the ([Solidity Compiler](compile.html)).
+**For More Info** see the docs on the [Solidity Compiler](compile.html).
 
 Deploy the contract
 -------------------
 Go to the **Deploy & Run Transactions** plugin.
 
-There are 3 type of environments Remix can be plugged to:
-* Javascript VM
-* Injected Web3
-* Web3 Provider
+At the top of this plugin is the Environment select box.  Here you can choose where you want to deploy your contract.  There are many choices.  For more info about these options see [this section](run.html#environment) of the docs.
 
- (For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
+For a brief synopsis:
 
-Both **Injected Web3** and **Web3 Provider** require the use of an external tool.
+**Injected Provider** is used to connect Remix with a Browser Wallet (e.g. Metamask) which is generally for deploying to a public network.
 
-An external tool for **Injected provider** is Metamask.  Some external tools used with **Web3 provider** are a Truffle Ganache-CLI, Hardhat node, or an Ethereum node itself.
+**Remix VM** is a test blockchain in the browser.  There are quite a few "flavors" of the Remix VM. Each "flavor" is associated with a different hard fork with the name in parathesies - e.g. Remix VM (Shanghai) or for the choice of a chain to fork into the Remix VM.  
 
-The **JavaScript VM** is convenient because it is a blockchain that runs in
-your browser and you don't need any other software or Ethereum node to run it. 
+The **Remix VM** is convenient because it is a blockchain that runs in the browser and nothing else needs to be installed in order to run it. 
 
-**NOTE:** When you are in the **Javascript VM** and you reload the browser - the **Javascript VM** will restart to its fresh & default state.
+**Dev** is for connecting Remix to a local chain running on your computer.
 
-For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it can be better to use an external node.
+**L2** is for connecting Remix to Optimism or Abritrum via a browser wallet.  Its essentially the same as Injected Provider, but it sets the wallet with the configuration of the specified L2.
 
-Select the VM environment
+(For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
+
+Select the top Remix VM environment
 -------------------------
 
-Make sure the VM mode is selected. All accounts displayed in **ACCOUNT** should have 100 ether.
+Choose the top first Remix VM in the dropdown list. 
 
-![](images/a-run-jsvm-accounts.png)
+The Remix VM comes with 10 accounts funded with 100 ether.
+
+**NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will also restart to its fresh & default state.  For a more realistic testing environment, use a public testnet.
+
+![](images/a-run-remix-vm-accounts.png)
 
 Deploying a contract
 ---------------------
 
 ![](images/a-run-testContract.png)
 
-The constructor of `testContract` needs a parameter (of type `uint256`).
+The constructor of `testContract` needs a parameter of the type `uint256`.
 Input a uint256 and click on `Deploy`.
 
 The transaction is created which deploys the instance of `testContract` .
 
-In a "normal" blockchain, you would have to wait for the transaction to be mined. However, because we are using the `JavaScript VM`, our execution is immediate.
+In a more realistic blockchain, you would have to approve the transaction and then wait for the transaction to be mined. However, because we are using the `Remix VM`, the execution is immediate.
 
 The terminal will give information about the transaction.
 
 The newly created instance is displayed in the **Deployed Contracts** section.
 
-![](images/a-jvm-instance.png)
+![](images/a-remix-vm-instance.png)
 
-Interacting with an instance
-----------------------------
-Clicking on the caret to the left of the instance of TESTCONTRACT will open it up so you can see its function.
+Interacting with the deployed instance
+--------------------------------------
+Clicking on the caret to the left of the instance of TESTCONTRACT will expand it so its functions are visible.
 
-This new instance contains 3 actions which corresponds to the 3
-functions (`setP`, `setPN`, `get`). Clicking on `setP` or `setPN` will
-create a new transaction.
+This new instance contains the 3 functions (`setP`, `setPN`, `get`). 
 
-Note that `setP` is `payable` (red button) : it is possible to send
-value (Ether) to the contract.
+Clicking on `setP` or `setPN` will create a new transaction.
 
-`setPN` is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract.
+`setP` is a `payable` function (payable functions have red buttons). With a payable function, value (ETH) can be sent to the contract. The amount of ETH is chosen in the VALUE input field and the unit of ETH is selected in the box to the right.
 
-Clicking on `get` will not execute a transaction (usually it's a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (the variable `value`) of this instance.
+![](images/a-remix-vm-value.png)
 
-Because `get` is a **view function**, you can see the return value just below the
-`get` button.
+`setPN` is not payable (an orange button - depending on the theme). It is not possible to send value (Ether) to this function.
 
-![](images/a-jvm-calling-instance.png)
+`get` is a **view function** (a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (it is only returning the value of the variable `value`).
+
+The value that gets returned appears just below the `get` button.
+
+![](images/a-remix-vm-view.png)
