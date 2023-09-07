@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/plugin_manager.pot\n"
+"X-Crowdin-File-ID: 6482\n"
+"Language: it_IT\n"
+
+#: ../../plugin_manager.md:1
+msgid "Plugin Manager"
+msgstr "Gestore dei plugin"
+
+#: ../../plugin_manager.md:4
+msgid "![](images/a-plugin-man-overview.png)"
+msgstr "![](images/a-plugin-man-overview.png)"
+
+#: ../../plugin_manager.md:6
+msgid "In Remix IDE you only load the functionality you need.  Controlling which plugins are active or inactive happens in the **Plugin Manager**."
+msgstr "Nell'IDE di Remix si caricano solo le funzionalità di cui hai bisogno. Il controllo dei plugin attivi o disattivi avviene nel **Plugin Manager** (Gestore di Plugin)."
+
+#: ../../plugin_manager.md:8
+msgid "This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects."
+msgstr "Questa architettura a plugin ha reso possibile l'integrazione di strumenti realizzati dal team di Remix con strumenti realizzati da team esterni. Questa architettura permette anche di integrare Remix o solo parti di Remix in altri progetti."
+
+#: ../../plugin_manager.md:10
+msgid "Manage permissions"
+msgstr "Gestire i permessi"
+
+#: ../../plugin_manager.md:11
+msgid "When plugins need to access other plugins for their operation, a modal will appear to ask you for permission."
+msgstr "Quando i plugin devono accedere ad altri plugin per il loro funzionamento, apparirà una finestra per chiedere l'autorizzazione."
+
+#: ../../plugin_manager.md:13
+msgid "![](images/a-permission-modal.png)"
+msgstr "![](images/a-permission-modal.png)"
+
+#: ../../plugin_manager.md:15
+msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
+msgstr "Spesso, lo stesso plugin vuole eseguire la stessa azione più volte. Per questo motivo, quando si concede l'autorizzazione, è utile cliccare sulla casella **Remember this choice** (Ricorda questa scelta).  In caso contrario, potrebbe comparire ripetutamente questa finestra."
+
+#: ../../plugin_manager.md:17
+msgid "View permissions"
+msgstr "Visualizzare i permessi"
+
+#: ../../plugin_manager.md:18
+msgid "You can view the permissions that you have granted to plugins by clicking on the **Permissions** button at the bottom of the **Plugin Manager**."
+msgstr "È possibile visualizzare le autorizzazioni concesse ai plugin cliccando sul pulsante **Permissions** (Permessi) in fondo al **Plugin Manager** (Gestore dei permessi)."
+
+#: ../../plugin_manager.md:20
+msgid "![](images/a-plugin-man-permissions.png)"
+msgstr "![](images/a-plugin-man-permissions.png)"
+
+#: ../../plugin_manager.md:22
+msgid "A modal will appear like the one below where you can view and erase the granted permission."
+msgstr "Verrà visualizzata una finestra di dialogo come quella riportata di seguito, dove è possibile visualizzare e cancellare l'autorizzazione concessa."
+
+#: ../../plugin_manager.md:24
+msgid "![](images/a-plugin-manager-modal.png)"
+msgstr "![](images/a-plugin-manager-modal.png)"
+
+#: ../../plugin_manager.md:26
+msgid "Plugin Devs: Load a local plugin"
+msgstr "Sviluppatori di Plugin: caricare un plugin locale"
+
+#: ../../plugin_manager.md:28
+msgid "A plugin in development can be loaded into Remix IDE by clicking the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr "Un plugin in fase di sviluppo può essere caricato nell'IDE Remix cliccando sul collegamento \"Connect to a Local Plugin\" (Connetti ad un plugin locale) nella parte superiore del pannello del Gestore dei Plugin."
+
+#: ../../plugin_manager.md:30
+msgid "![](images/a-plugin-man-local.png)"
+msgstr "![](images/a-plugin-man-local.png)"
+
+#: ../../plugin_manager.md:32
+msgid "To learn more about how to create your own plugin, go to [the README of remix-plugin repo](https://github.com/ethereum/remix-plugin)."
+msgstr "Per saperne di più su come creare il proprio plugin, consultare [il README del repository remix-plugin](https://github.com/ethereum/remix-plugin)."
+

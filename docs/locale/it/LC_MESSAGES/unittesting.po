@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittesting.pot\n"
+"X-Crowdin-File-ID: 6506\n"
+"Language: it_IT\n"
+
+#: ../../unittesting.md:1
+msgid "Unit Testing Plugin"
+msgstr "Plugin Unit Testing"
+
+#: ../../unittesting.md:4
+msgid "Click the ![](images/a-user-testing-icon.png) (double check)  icon from icon bar to move to the `Solidity Unit Testing` plugin."
+msgstr "Clicca l' ![](images/a-user-testing-icon.png) (ricontrolla)  icona dalla barra delle icone per spostarti al plugin `Solidity Unit Testing`."
+
+#: ../../unittesting.md:8
+msgid "If you haven't used this plugin before and are not seeing `double check` icon, you have to activate it from Remix plugin manager."
+msgstr "Se non hai mai usato questo plugin e non vedi l'icona della `doppia spunta`, devi attivarlo dal gestore dei plugin di Remix."
+
+#: ../../unittesting.md:10
+msgid "Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) icon and activate `Solidity Unit Testing` plugin."
+msgstr "Vai al plugin manager cliccando sull'icona ![](images/a-plug.png) (plug) e attiva il plugin `Solidity Unit Testing`."
+
+#: ../../unittesting.md:12
+msgid "![](images/a-unit-testing-from-pm.png)"
+msgstr "![](images/a-unit-testing-from-pm.png)"
+
+#: ../../unittesting.md:14
+msgid "Now `double check` icon will appear on the left side icon bar. Clicking on icon will load the plugin in the side panel."
+msgstr "A questo punto, nella barra delle icone di sinistra apparirà l'icona della ` doppia spunta `. Facendo clic sull'icona si caricherà il plugin nel pannello laterale."
+
+#: ../../unittesting.md:16
+msgid "<i>Alternatively, just select `Solidity` environment from Remix IDE `Home` tab. This will activate `Solidity Unit Testing` plugin along with `Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static Analysis` plugins.</i>"
+msgstr "<i>In alternativa, basta selezionare l'ambiente `Solidity` dalla `Pagina Iniziale` di remix IDE. Questo attiverà il plugin `Solidity Unit Testing` insieme ai plugin `Compilatore di Solidity`, `Distribuisci & Esegui Transazioni` e `Analisi Statica di Solidity`.</i>"
+
+#: ../../unittesting.md:18
+msgid "After successful loading, plugin looks like this:"
+msgstr "Dopo averlo caricato con successo, il plugin ha questo aspetto:"
+
+#: ../../unittesting.md:20
+msgid "![](images/a-unit-testing-feature.png)"
+msgstr "![](images/a-unit-testing-feature.png)"
+
+#: ../../unittesting.md:22
+msgid "Test directory"
+msgstr "Cartella dei test"
+
+#: ../../unittesting.md:24
+msgid "Plugin asks you to provide a directory which will be your workspace only for this plugin. To select directory, as soon as you add `/` to the path, it shows the possible options."
+msgstr "Il plugin ti chiede di fornire una cartella che sarà l'area di lavoro solo per questo plugin. Per selezionare la cartella, non appena si aggiunge `/` al percorso, vengono mostrate le possibili opzioni."
+
+#: ../../unittesting.md:26
+msgid "![](images/a-unit-testing-test-directory.png)"
+msgstr "![](images/a-unit-testing-test-directory.png)"
+
+#: ../../unittesting.md:28
+msgid "Once selected, this directory will be used to load test files and to store newly generated test files."
+msgstr "Una volta selezionata, questa cartella verrà utilizzata per caricare i file di test e per archiviare i file di test appena generati."
+
+#: ../../unittesting.md:30
+msgid "Default test directory is `browser/tests`."
+msgstr "La directory di test predefinita è `browser/tests`."
+
+#: ../../unittesting.md:32
+msgid "Generate"
+msgstr "Genera"
+
+#: ../../unittesting.md:34
+msgid "Select a solidity file which you want to test and click on the button `Generate`. It will generate a test file dedicated to selected file **in the test directory**."
+msgstr "Selezionare un file di solidity che si desidera testare e fare clic sul pulsante `Genera`. Genererà un file di test dedicato al file selezionato **nella directory dei test**."
+
+#: ../../unittesting.md:36
+msgid "If no file is selected, it will still create a file with generic name as `newFile_test.sol`."
+msgstr "Se nessun file è selezionato, verrà comunque creato un file con nome generico come `newFile_test.sol`."
+
+#: ../../unittesting.md:38
+msgid "This file contains sufficient information to give better understanding about developing tests for a contract."
+msgstr "Questo file contiene informazioni sufficienti per comprendere meglio lo sviluppo di test per un contratto."
+
+#: ../../unittesting.md:40
+msgid "Generic file looks as:"
+msgstr "Il file generico sembra come:"
+
+#: ../../unittesting.md:86
+msgid "Write Tests"
+msgstr "Scrivi dei Test"
+
+#: ../../unittesting.md:88
+msgid "Write sufficient unit tests to ensure that your contract works as expected under different scenarios."
+msgstr "Scrivi un numero sufficiente di test unitari per garantire che il contratto funzioni come previsto in diversi scenari."
+
+#: ../../unittesting.md:90
+msgid "Remix injects a built-in `assert` library which can be used for testing. You can visit the library documentation [here](./assert_library)."
+msgstr "Remix inietta una libreria `assert` integrata che può essere usata per i test. Puoi visitare la documentazione della libreria [here](./assert_library)."
+
+#: ../../unittesting.md:92
+msgid "Apart from this, Remix allows usage of some special functions in the test file to make testing more structural. They are as:"
+msgstr "Oltre a questo, Remix permette di utilizzare alcune funzioni speciali per rendere i test più strutturali. Esse sono:"
+
+#: ../../unittesting.md:94
+msgid "`beforeEach()` - Runs before each test"
+msgstr "`beforeEach()` - Eseguita prima di ogni test"
+
+#: ../../unittesting.md:95
+msgid "`beforeAll()` - Runs before all tests"
+msgstr "`beforeAll()` - Eseguita prima di tutti i test"
+
+#: ../../unittesting.md:96
+msgid "`afterEach()` - Runs after each test"
+msgstr "`afterEach()` - Eseguita dopo ogni test"
+
+#: ../../unittesting.md:97
+msgid "`afterAll()` - Runs after all tests"
+msgstr "`afterAll()` - Eseguita dopo tutti i test"
+
+#: ../../unittesting.md:99
+msgid "To get started, see [this simple example](./unittesting_examples.html#simple-example)."
+msgstr "Per iniziare, vedere [questo semplice esempio](./unittesting_examples.html#simple-example)."
+
+#: ../../unittesting.md:101
+msgid "Run"
+msgstr "Esegui"
+
+#: ../../unittesting.md:103
+msgid "Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be shown as below:"
+msgstr "Una volta terminata la scrittura dei test, selezionare i file e fare clic su `Esegui` per eseguirli. L'esecuzione avverrà in un ambiente separato. Dopo aver completato l'esecuzione di un file, verrà mostrato un riepilogo dei test come di seguito riportato:"
+
+#: ../../unittesting.md:105
+msgid "![](images/a-unit-testing-run-result.png)"
+msgstr "![](images/a-unit-testing-run-result.png)"
+
+#: ../../unittesting.md:107
+msgid "For failed tests, there will be more assertion details to analyze the issue. Clicking on failed test will highlight the relevant line of code in the editor."
+msgstr "Per i test falliti, ci saranno più dettagli sull'asserzione per analizzare il problema. Facendo clic su un test fallito, si evidenzierà la relativa riga di codice nell'editor."
+
+#: ../../unittesting.md:109
+msgid "Stop"
+msgstr "Interrompi"
+
+#: ../../unittesting.md:111
+msgid "If you have selected multiple files to run the tests and want to stop the execution, click on `Stop` button. It will stop execution after running the tests for current file."
+msgstr "Se hai selezionato più file per eseguire i test e vuoi interrompere l'esecuzione, fai clic sul pulsante `Interrompi`. L'esecuzione verrà interrotta dopo aver eseguito i test per il file attuale."
+
+#: ../../unittesting.md:113
+msgid "Customization"
+msgstr "Personalizzazione"
+
+#: ../../unittesting.md:115
+msgid "Remix facilitates users with various types of customizations to test a contract properly."
+msgstr "Remix agevola gli utenti con vari tipi di personalizzazioni per testare correttamente un contratto."
+
+#: ../../unittesting.md:117
+msgid "**1. Custom Compiler Context**"
+msgstr "**1. Contesto del Compilatore Personalizzato**"
+
+#: ../../unittesting.md:119
+msgid "`Solidity Unit Testing` refers to the `Solidity Compiler` plugin for compiler configurations. Configure `Compiler`, `EVM Version`, `Enable Optimization` & `runs` in the `Solidity Compiler` plugin and this will be used in the `Solidity Unit Testing` plugin for contract compilation before running unit tests."
+msgstr "`Solidity Unit Testing` si riferisce al plugin `Compilatori di Solidity` per le configurazioni del compilatore. Configurare `Compilatore`, `Versione EMV`, `Abilita ottimizzazione` & `Esegui` nel plugin `Compilatore di Solidity` e questo sarà usato nel plugin `Solidity Unit Testing` per la compilazione del contratto prima di eseguire i test unitari."
+
+#: ../../unittesting.md:123
+msgid "![](images/a-unit-testing-custom-compiler-config.png)"
+msgstr "![](images/a-unit-testing-custom-compiler-config.png)"
+
+#: ../../unittesting.md:125
+msgid "**2. Custom Transaction Context**"
+msgstr "**2. Contesto della Transazione Personalizzata**"
+
+#: ../../unittesting.md:127
+msgid "For interacting with a contract's method, the prime parameters of a transaction are `from` address, `value` & `gas`. Typically, a method's behaviour is tested with different values of these parameters."
+msgstr "Per interagire con il metodo di un contratto, i parametri principali di una transazione sono l'indirizzo `da` cui proviene, il `valore` e il `carburante`. In genere, il comportamento di un metodo viene testato con diversi valori di questi parametri."
+
+#: ../../unittesting.md:129
+msgid "One can input custom values for `msg.sender` & `msg.value` of transaction using NatSpec comments, like:"
+msgstr "È possibile inserire valori personalizzati per `msg.sender` e `msg.value` della transazione utilizzando i commenti NatSpec, come ad esempio:"
+
+#: ../../unittesting.md:139
+msgid "<b>Instructions to use:</b>"
+msgstr "<b>Istruzioni da usare:</b>"
+
+#: ../../unittesting.md:141
+msgid "Parameters must be defined in the method's NatSpec"
+msgstr "I parametri devono essere definiti nella NatSpec del metodo"
+
+#: ../../unittesting.md:142
+msgid "Each parameter key should be prefixed with a hash (**#**) and end with a colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `"
+msgstr "Ogni chiave di parametro deve essere preceduta da un cancelletto (**#**) e terminare con i due punti seguiti da un spazio (**:&nbsp;**), come `#mittente: ` e `#valore: `"
+
+#: ../../unittesting.md:143
+msgid "For now, customization is only available for parameters `sender` & `value`"
+msgstr "Per il momento, la personalizzazione è disponibile solo per i parametri `mittente` e `valore`"
+
+#: ../../unittesting.md:144
+msgid "Sender is the `from` address of a transaction which is accessed using `msg.sender` inside a contract method. It should be defined in a fixed format as '**account-**<account_index>'"
+msgstr "Il mittente è l'indirizzo `da` cui arriva una transazione e vi si accede utilizzando msg.sender all'interno di un metodo di contratto. Deve essere definito in un formato prestabilito come '**account-**<account_index>'"
+
+#: ../../unittesting.md:145
+msgid "`<account_index>` varies from `0-2` before remix-ide release v0.10.0 and `0-9` afterwards"
+msgstr "`<account_index> varia da 0-2 prima della release di remix-ide v0.10.0 e da 0-9 in avanti"
+
+#: ../../unittesting.md:146
+msgid "`remix_accounts.sol` must be imported in your test file to use custom `sender`"
+msgstr "`remix_accounts.sol deve essere importato nel file di prova per utilizzare il \"mittente\" personalizzato"
+
+#: ../../unittesting.md:147
+msgid "Value is `value` sent along with a transaction in `wei` which is accessed using `msg.value` inside a contract method. It should be a number."
+msgstr "Il valore è il `valore` inviato con una transazione in `wei`, a cui si accede usando `msg.value` all'interno di un metodo di contratto. Dovrebbe essere un numero."
+
+#: ../../unittesting.md:149
+msgid "Regarding `gas`, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with `Out-of-Gas` error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: ```contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit```"
+msgstr "Per quanto riguarda il `carburante`, Remix stima internamente il carburante necessario per ogni transazione. Tuttavia, se la distribuzione di un contratto fallisce con un errore di `carburante esaurito`, tenta di distribuirlo nuovamente raddoppiando il carburante. Se la distribuzione fallisce con il doppio del carburante, viene visualizzato l'errore: ```distribuzione del contratto fallita dopo aver provato due volte: Il codice del contratto non ha potuto essere archiviato, si prega di controllare il limite di carburante```"
+
+#: ../../unittesting.md:151
+msgid "Various test examples can be seen in [examples](./unittesting_examples) section."
+msgstr "Vari esempi di test possono essere consultati nella sezione [examples](./unittesting_examples)."
+
+#: ../../unittesting.md:154
+msgid "Points to remember"
+msgstr "Punti da ricordare"
+
+#: ../../unittesting.md:157
+msgid "A test contract cannot have a method with parameters. Having one such method will show error: `Method 'methodname' can not have parameters inside a test contract`"
+msgstr "Un contratto di test non può avere un metodo con parametri. Se si ha un metodo di questo tipo, viene mostrato l'errore: `Il metodo 'methodname' non può avere parametri all'interno di un contratto di test`"
+
+#: ../../unittesting.md:158
+msgid "Number of test accounts are `3` before remix-ide release v0.10.0 and `10` afterwards"
+msgstr "Il numero di account di prova è di `3` prima del rilascio di remix-ide v0.10.0 e di `10` dopo"
+
+#: ../../unittesting.md:159
+msgid "While a test file which imports `remix_accounts.sol` might not compile successfully with `Solidity Compiler` plugin, do not worry, this will have no bearing on its success with `Solidity Unit Testing` plugin."
+msgstr "Anche se un file di prova che importa `remix_accounts.sol` non dovesse compilare con successo con il plugin `Compilatore di Solidity`, non preoccuparti, questo non avrà alcun impatto sul suo successo con il plugin `Solidity Unit Testing`."
+

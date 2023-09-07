@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/truffle.pot\n"
+"X-Crowdin-File-ID: 7439\n"
+"Language: it_IT\n"
+
+#: ../../truffle.md:1
+msgid "Truffle"
+msgstr "Truffle"
+
+#: ../../truffle.md:4
+msgid "_(Supported since Remix IDE v0.23.0 and Remixd v0.6.0)_"
+msgstr "_(Supportato a partire dalla versione Remix IDE v0.23.0 e Remixd v0.6.0)_"
+
+#: ../../truffle.md:6
+msgid "Remixd and Truffle"
+msgstr "Remixd e Truffle"
+
+#: ../../truffle.md:9
+msgid "**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)"
+msgstr "**Nota:** Se non si è mai usato `remixd` prima d'ora, leggi di più su di esso [qui](./remixd.html)"
+
+#: ../../truffle.md:11
+msgid "If `remixd` is running locally on your device and shared folder is a **Truffle project**, an additional websocket plugin will be listening on port `65524`. According to its documentation,"
+msgstr "Se `remixd` è in esecuzione localmente sul tuo dispositivo e la cartella condivisa è un **progetto Truffle**, un plugin websocket aggiuntivo sarà in ascolto sulla porta `65524`. Secondo la sua documentazione,"
+
+#: ../../truffle.md:13
+msgid "_Truffle projects are projects with a truffle-config.js file._"
+msgstr "_I progetti Truffle sono progetti con un file truffle-config.js._"
+
+#: ../../truffle.md:15
+msgid "Remixd looks for the `truffle-config.js` file in shared folder. If found, the Truffle websocket listener will run."
+msgstr "Remixd cerca il file `truffle-config.js` nella cartella condivisa. Se lo trova, esegue il processo websocket di Truffle."
+
+#: ../../truffle.md:17
+msgid "The Truffle websocket listener is a websocket plugin similar to `remixd` and is used to perform Truffle specific actions with Remix IDE."
+msgstr "Il processo websocket di Truffle è un plugin websocket simile a `remixd` e viene usato per eseguire azioni specifiche di Truffle con l'IDE Remix."
+
+#: ../../truffle.md:19
+msgid "It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module."
+msgstr "Non ha bisogno di alcuna installazione separata, poiché viene fornito con il modulo [NPM remixd] (https://www.npmjs.com/package/@remix-project/remixd)."
+
+#: ../../truffle.md:21
+msgid "![](images/a-truffle-remixd.png)"
+msgstr "![](images/a-truffle-remixd.png)"
+
+#: ../../truffle.md:23
+msgid "Enable Truffle Compilation"
+msgstr "Abilita la Compilazione Truffle"
+
+#: ../../truffle.md:26
+msgid "Prerequisites"
+msgstr "Prerequisiti"
+
+#: ../../truffle.md:28
+msgid "To use Truffle compilation with Remix IDE efficiently:"
+msgstr "Per utilizzare in modo efficiente la compilazione di Truffle con l'IDE Remix:"
+
+#: ../../truffle.md:30
+msgid "**Truffle** should be installed locally on the system [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)"
+msgstr "**Truffle** deve essere installato localmente sul sistema [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)"
+
+#: ../../truffle.md:31
+msgid "Shared folder should be a Truffle project containing `truffle-config.js`"
+msgstr "La cartella condivisa dovrebbe essere un progetto Truffle contenente `truffle-config.js`"
+
+#: ../../truffle.md:32
+msgid "`Remixd` Truffle websocket listener should be running at `65524`"
+msgstr "Il processo websocket di `Truffle per Remixd` dovrebbe essere in esecuzione alla porta `65524`"
+
+#: ../../truffle.md:34
+msgid "How to use"
+msgstr "Come usare"
+
+#: ../../truffle.md:36
+msgid "If a truffle project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Truffle Compilation`."
+msgstr "Se un progetto truffle è condiviso tramite remixd e l'area di lavoro `localhost` è caricato nell'IDE Remix, nel plugin `Solidity Compiler` (Compilatore Solidity) sarà visualizzata una casella di controllo aggiuntiva con l'etichetta `Enable Truffle Compilation` (abilita la compilazione Truffle)."
+
+#: ../../truffle.md:38
+msgid "![](images/a-truffle-compilation.png)"
+msgstr "![](images/a-truffle-compilation.png)"
+
+#: ../../truffle.md:40
+msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation."
+msgstr "C'è un'icona informativa accanto all'etichetta che reindirizza a una sezione specifica della documentazione ufficiale di Remix che spiega come usare la compilazione Truffle."
+
+#: ../../truffle.md:42
+msgid "One can check the `Enable Truffle Compilation` box to run the compilation for Truffle along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
+msgstr "Si può selezionare la casella `Enable Truffle Compilation` (Abilita la compilazione Truffle) per eseguire la compilazione di Truffle insieme a Remix usando la configurazione del compilatore nel plugin `Solidity Compiler` (Compilatore Solidity)."
+
+#: ../../truffle.md:44
+msgid "On clicking `Compile` button, a file named as `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Truffle for compilation."
+msgstr "Cliccando sul pulsante `Compile` (Compila), viene creato un file dal nome `remix-compiler.config.js` nella radice del progetto, che memorizza la configurazione del compilatore impostata nel plugin `Solidity Compiler` (Compilatore Solidity) di Remix. Esso viene passato a Truffle per la compilazione."
+
+#: ../../truffle.md:46
+msgid "The result of the compilation will be shown in the Remix IDE terminal"
+msgstr "Il risultato della compilazione sarà mostrato nel terminale dell'IDE Remix"
+
+#: ../../truffle.md:48
+msgid "![](images/a-truffle-compilation-success.png)"
+msgstr "![](images/a-truffle-compilation-success.png)"
+
+#: ../../truffle.md:50
+msgid "and also in the **remixd** terminal."
+msgstr "ed anche nel terminale **remixd**."
+
+#: ../../truffle.md:52
+msgid "Ganache Provider"
+msgstr "Fornitore Ganache"
+
+#: ../../truffle.md:55
+msgid "_In Truffle, contracts are deployed by connecting to a built-in personal blockchain, i.e. Ganache. Read more about it in [Truffle documentation](https://trufflesuite.com/docs/truffle/quickstart/#migrating-with-truffle-develop)_"
+msgstr "_In Truffle, i contratti vengono distribuiti collegandosi a una blockchain personale integrata, per esempio, Ganache. Per saperne di più, consultare la [Documentazione Truffle](https://trufflesuite.com/docs/truffle/quickstart/#migrating-with-truffle-develop)_"
+
+#: ../../truffle.md:57
+msgid "**Ganache Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Truffle's built-in Ganache blockchain. `Ganache Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."
+msgstr "Il **Ganache Provider** (Fornitore di Ganache) è un plugin dell'IDE Remix che consente agli utenti di distribuire il contratto sulla blockchain **Ganache** integrata di Truffle. Il `Ganache Provider` può essere selezionato dall'elenco degli ambienti nel plugin `Deploy & Run Transactions` (Distribuisci e avvia le transazioni)."
+
+#: ../../truffle.md:59
+msgid "![](images/a-truffle-provider.png)"
+msgstr "![](images/a-truffle-provider.png)"
+
+#: ../../truffle.md:61
+msgid "As soon as you select `Ganache Provider`, a modal is opened asking for the `Ganache JSON-RPC Endpoint`."
+msgstr "Non appena si seleziona `Ganache Provider` (Fornitore Ganache), si apre una finestra che chiede lo `Ganache JSON-RPC Endpoint`(Endpoint JSON-RPC di Ganache)."
+
+#: ../../truffle.md:63
+msgid "![](images/a-truffle-provider-modal.png)"
+msgstr "![](images/a-truffle-provider-modal.png)"
+
+#: ../../truffle.md:65
+msgid "If Ganache node is running with default options, the default endpoint value in modal will not need any change. In case, Ganache node host and port are different, JSON-RPC endpoint should be updated in the modal text box."
+msgstr "Se il nodo Ganache è in esecuzione con le opzioni predefinite, il valore dell'endpoint predefinito nella maschera non necessita di modifiche. Se l'host e la porta del nodo Ganache sono diversi, l'endpoint JSON-RPC deve essere aggiornato nella casella di testo."
+
+#: ../../truffle.md:67
+msgid "Once the correct endpoint is filled in the modal, just click on `OK` and the accounts from the Ganache node will be loaded in the `ACCOUNT` section. Network id will also be shown."
+msgstr "Una volta inserito l'endpoint corretto nella maschera, è sufficiente cliccare su `OK` e gli account del nodo Ganache verranno caricati nella sezione `ACCOUNT`. Inoltre verrà mostrato anche l'identificativo (id) della rete."
+
+#: ../../truffle.md:69
+msgid "![](images/a-truffle-provider-connected.png)"
+msgstr "![](images/a-truffle-provider-connected.png)"
+
+#: ../../truffle.md:71
+msgid "Now, one can start deploying the contract from Remix IDE to the local Ganache node as usual."
+msgstr "A questo punto, si può iniziare a distribuire il contratto dall'IDE Remix al nodo locale di Ganache come di consueto."
+

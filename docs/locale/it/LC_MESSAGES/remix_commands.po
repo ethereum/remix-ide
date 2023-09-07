@@ -1,0 +1,108 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_commands.pot\n"
+"X-Crowdin-File-ID: 6484\n"
+"Language: it_IT\n"
+
+#: ../../remix_commands.md:1
+#: ../../remix_commands.md:14
+msgid "Remix Commands"
+msgstr "Comandi Remix"
+
+#: ../../remix_commands.md:4
+msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is *auto complete*.  These commands are using the following libraries:"
+msgstr "Nella console è possibile eseguire i comandi elencati di seguito.  Quando si inizia a digitare un comando, c'è il *completamento automatico*.  Questi comandi utilizzano le seguenti librerie:"
+
+#: ../../remix_commands.md:6
+msgid "**remix**:  Remix has a number of CLI commands for loading & executing file in a workspace.  See the list below."
+msgstr "**remix**:  Remix dispone di una serie di comandi CLI per caricare ed eseguire i file in un'area di lavoro.  Vedere l'elenco seguente."
+
+#: ../../remix_commands.md:8
+msgid "**ethers**: Remix IDE enables the use of ethersjs commands. See the [Ethers docs](https://docs.ethers.io/) for the full list."
+msgstr "**ethers**: l'IDE di Remix consente l'uso dei comandi ethersjs. Vedere i [documenti di Ethers] (https://docs.ethers.io/) per l'elenco completo."
+
+#: ../../remix_commands.md:10
+msgid "**web3**: Remix IDE enable the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
+msgstr "**web3**: l'IDE Remix abilita l'uso dei comandi web3js. Vedere i [documenti Web3js](https://web3js.readthedocs.io/) per l'elenco completo."
+
+#: ../../remix_commands.md:12
+msgid "**swarmgw**: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
+msgstr "**swarmgw**: questa libreria può essere usata per caricare/scaricare file su Swarm tramite https://swarm-gateways.net/."
+
+#: ../../remix_commands.md:16
+msgid "**remix.execute(filepath)**: Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
+msgstr "**remix.execute(filepath)**: esegue lo script specificato dal percorso del file. Se il percorso del file è vuoto, viene eseguito lo script attualmente visualizzato nell'editor."
+
+#: ../../remix_commands.md:18
+msgid "**remix.exeCurrent()**: Run the script currently displayed in the editor."
+msgstr "**remix.exeCurrent()**: esegue lo script attualmente visualizzato nell'editor."
+
+#: ../../remix_commands.md:20
+msgid "**remix.getFile(path)**: Returns the content of the file located at the given path"
+msgstr "**remix.getFile(path)**: restituisce il contenuto del file che si trova nel percorso indicato"
+
+#: ../../remix_commands.md:22
+msgid "**remix.help()**: Display this help message."
+msgstr "**remix.help()**: visualizza questo messaggio di aiuto."
+
+#: ../../remix_commands.md:24
+msgid "**remix.loadgist(id)**: Load a gist in the file explorer."
+msgstr "**remix.loadgist(id)**: Caricare un gist nell'esplora file."
+
+#: ../../remix_commands.md:26
+msgid "**remix.loadurl(url)**: Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
+msgstr "**remix.loadurl(url)**: carica l'url dato nell'esplora file. L'url può essere di tipo github, swarm o ipfs."
+
+#: ../../remix_commands.md:28
+msgid "A few Ethers JS examples"
+msgstr "Alcuni esempi di Ethers JS"
+
+#: ../../remix_commands.md:29
+msgid "**ethers.providers**: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
+msgstr "**ethers.providers**: un fornitore realizza una connessione alla blockchain di Ethereum, per emettere query e inviare transazioni che cambiano lo stato."
+
+#: ../../remix_commands.md:31
+msgid "**ethers.utils**: The utility functions exposed in both the ethers umbrella package and the ethers-utils.  eg ethers.utils.formatBytes32String( text )"
+msgstr "**ethers.utils**: le funzioni utili esposte sia nel pacchetto ethers umbrella che in ethers-utils. Per esempio: ethers.utils.formatBytes32String( text )"
+
+#: ../../remix_commands.md:33
+msgid "A few Web3 JS examples"
+msgstr "Alcuni esempi di Web3 JS"
+
+#: ../../remix_commands.md:35
+msgid "**web3.eth.abi**: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
+msgstr "**web3.eth.abi**: le funzioni web3.eth.abi consentono di decodificate e codificare i parametri in ABI (Application Binary Interface) per le chiamate di funzione alla EVM (Macchina Virtuale di Ethereum)."
+
+#: ../../remix_commands.md:37
+msgid "**web3.providers**: Contains the current available providers."
+msgstr "**web3.providers**: contiene i fornitori attualmente disponibili."
+
+#: ../../remix_commands.md:39
+msgid "**web3.utils**: This package provides utility functions for Ethereum dapps and other **web3.js packages."
+msgstr "**web3.utils**: questo pacchetto fornisce funzioni utili per le dapps Ethereum e altri pacchetti **web3.js."
+
+#: ../../remix_commands.md:41
+msgid "A few Swarm examples (these will be updated soon)"
+msgstr "Alcuni esempi di Swarm (saranno presto aggiornati)"
+
+#: ../../remix_commands.md:43
+msgid "**swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/"
+msgstr "**swarmgw.get(url, cb)**: scarica i file da Swarm tramite https**://swarm-gateways.net/"
+
+#: ../../remix_commands.md:45
+msgid "**swarmgw.put(content, cb)**: Upload files to Swarm via https**://swarm-gateways.net/"
+msgstr "**swarmgw.put(content, cb)**: caricare i file su Swarm tramite https**://swarm-gateways.net/"
+

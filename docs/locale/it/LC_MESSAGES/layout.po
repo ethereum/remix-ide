@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 18:12\n"
+"Last-Translator: \n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/layout.pot\n"
+"X-Crowdin-File-ID: 6478\n"
+"Language: it_IT\n"
+
+#: ../../layout.md:1
+msgid "Navigating Remix"
+msgstr "Navigare Remix"
+
+#: ../../layout.md:3
+msgid "Remix IDE is comprised of three panels and a terminal."
+msgstr "L'IDE Remix è composto da tre pannelli e da un terminale."
+
+#: ../../layout.md:5
+msgid "![](images/a-layout1c.png)"
+msgstr "![](images/a-layout1c.png)"
+
+#: ../../layout.md:7
+msgid "Icon Panel - click to change which plugins appear in the Side Panel"
+msgstr "Icon Panel (Pannello delle icone): cliccare per modificare quale plugin visualizzare nel pannello laterale"
+
+#: ../../layout.md:8
+msgid "Side Panel - most but not all plugins have their interface here"
+msgstr "Side Panel (Pannello laterale) - la maggior parte dei plugin, ma non tutti, hanno qui la loro interfaccia"
+
+#: ../../layout.md:9
+msgid "Main Panel - for editing files, large format tools, and the home tab"
+msgstr "Main Panel (Pannello principale): per la modifica dei file, gli strumenti di grande formato e la scheda Home"
+
+#: ../../layout.md:10
+msgid "Terminal - for viewing transaction receipts and various logs"
+msgstr "Terminal (Terminale) - per visualizzare le ricevute delle transazioni e i vari registri"
+
+#: ../../layout.md:12
+msgid "Default Tools"
+msgstr "Strumenti predefiniti"
+
+#: ../../layout.md:15
+msgid "When Remix is loaded - the icon panel shows these icons by default."
+msgstr "Quando Remix viene caricato - il pannello delle icone mostra queste icone per impostazione predefinita."
+
+#: ../../layout.md:17
+msgid "![](images/a-icons-at-load.png)"
+msgstr "![](images/a-icons-at-load.png)"
+
+#: ../../layout.md:19
+msgid "To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab."
+msgstr "Per caricare altri plugin, andare al **[Gestore dei Plugin](#plugin-manager)** o cliccare su uno dei plugin in evidenza nella scheda iniziale."
+
+#: ../../layout.md:21
+msgid "Home tab"
+msgstr "Scheda Home"
+
+#: ../../layout.md:24
+msgid "![](images/a-hometab.png)"
+msgstr "![](images/a-hometab.png)"
+
+#: ../../layout.md:26
+msgid "The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel."
+msgstr "La scheda Home si trova nel Pannello principale. Essa può essere chiusa, come tutte le schede del pannello principale. È anche possibile accedervi (anche se chiusa) cliccando sul logo di Remix nella parte superiore del pannello delle icone."
+
+#: ../../layout.md:28
+msgid "The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem."
+msgstr "La scheda home contiene io collegamenti a risorse, annunci, tutorial, plugin in evidenza e metodi per caricare i file in Remix e comandi di scelta rapida per collegare Remix al filesystem locale."
+
+#: ../../layout.md:30
+msgid "Solidity"
+msgstr "Solidity"
+
+#: ../../layout.md:31
+msgid "Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default)."
+msgstr "Facendo clic sul pulsante **Solidity** nella sezione dei plugin in evidenza della scheda home, si attiveranno **Analisi Statica di Solidity** e **Unit Test di Solidity**, oltre al Compilatore Solidity e Distribuisci&Esegui (che sono presenti per impostazione predefinita)."
+
+#: ../../layout.md:33
+msgid "To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. ![](images/a-plug.png) <br> You can also get there by clicking the **More** button in the featured plugin list."
+msgstr "Per vedere tutti i plugin, accedere al **Gestore di Plugin** - selezionando la spina nel pannello delle icone. ![](images/a-plug.png) <br> È anche possibile accedervi cliccando sul pulsante **Altro** nell'elenco dei plugin in evidenza."
+
+#: ../../layout.md:37
+msgid "Plugin Manager"
+msgstr "Gestore di Plugin"
+
+#: ../../layout.md:40
+msgid "In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on."
+msgstr "In Remix, è necessario caricare solo le funzionalità necessarie - e il Gestore di Plugin è il luogo in cui si gestiscono quali plugin sono disattivati o attivati."
+
+#: ../../layout.md:42
+msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr "Il Gestore di Plugin è anche il posto dove andare quando vuoi creare i tuoi plugin e vuoi caricare i tuoi plugin locali in Remix. In quel caso dovrai cliccare su link \"Connetti a un Plugin Locale\" sopra al pannello del Gestore di Plugin."
+
+#: ../../layout.md:44
+msgid "Themes"
+msgstr "Temi"
+
+#: ../../layout.md:47
+msgid "Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix."
+msgstr "I temi si scelgono in fondo al plugin **Impostazioni**. Si tratta di temi basati su Bootstrap. I temi Dark (Scuro) e Light (Chiaro) sono i più personalizzati per Remix."
+
+#: ../../layout.md:49
+msgid "![](images/a-themes.png)"
+msgstr "![](images/a-themes.png)"
+
