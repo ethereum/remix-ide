@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
 "Last-Translator: \n"
-"Language: es_ES\n"
 "Language-Team: Spanish\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/compile.pot\n"
+"X-Crowdin-File-ID: 6464\n"
+"Language: es_ES\n"
 
 #: ../../compile.md:1
 msgid "Solidity Compiler"
@@ -28,7 +31,7 @@ msgstr "Conceptos básicos del compilador Solidity"
 
 #: ../../compile.md:8
 msgid "Selecting a contract to compile"
-msgstr "Selección de un contrato para compilar"
+msgstr "Seleccionar un contrato para compilar"
 
 #: ../../compile.md:9
 msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
@@ -212,7 +215,7 @@ msgstr "A la derecha de la casilla **Habilitar optimización** se encuentra la c
 
 #: ../../compile.md:91
 msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
-msgstr "Se preguntará: \"¿Cuál es el número correcto de ejecuciones para mi contrato?\". Y los documentos de Solidity dicen"
+msgstr "Se preguntará: \"¿Cuál es el número correcto de ejecuciones para mi contrato?\". Y los documentos de Solidity lo dicen:"
 
 #: ../../compile.md:93
 msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
