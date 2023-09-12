@@ -22,7 +22,7 @@ FAQ
 
 `Ctrl+Shift+F` : Opens the File Explorer
 
-`CTRL+Alt+F` : Format the code in the current file
+`CTRL+Alt+F` : Formats the code in the current file
 
 `Ctrl+Shift+A` : Opens the Plugin Manager
 
