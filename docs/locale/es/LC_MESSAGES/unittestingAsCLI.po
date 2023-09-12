@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittestingAsCLI.pot\n"
+"X-Crowdin-File-ID: 7441\n"
+"Language: es_ES\n"
+
+#: ../../unittestingAsCLI.md:1
+msgid "Command Line Interface"
+msgstr "Interfaz de línea de comandos"
+
+#: ../../unittestingAsCLI.md:3
+msgid "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+msgstr "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+
+#: ../../unittestingAsCLI.md:6
+msgid "`remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`."
+msgstr "`remix-tests` es una herramienta que puede ser utilizada como una solución CLI (Command Line Interface) para ejecutar las pruebas unitarias de solidity. Esta es la misma herramienta que funciona como una librería bajo el plugin `Solidity Unit Testing` de Remix. Está disponible en NPM como `@remix-project/remix-tests`."
+
+#: ../../unittestingAsCLI.md:8
+msgid "Get started"
+msgstr "Empezar"
+
+#: ../../unittestingAsCLI.md:11
+msgid "You can install it using NPM:"
+msgstr "Puede instalarlo utilizando NPM:"
+
+#: ../../unittestingAsCLI.md:13
+msgid "As a dev dependency:"
+msgstr "Como dependencia dev:"
+
+#: ../../unittestingAsCLI.md:15
+msgid "`npm install --save-dev @remix-project/remix-tests`"
+msgstr "`npm install --save-dev @remix-project/remix-tests`"
+
+#: ../../unittestingAsCLI.md:17
+msgid "As a global NPM module:"
+msgstr "Como módulo NPM global:"
+
+#: ../../unittestingAsCLI.md:19
+msgid "`npm install -g @remix-project/remix-tests`"
+msgstr "`npm install -g @remix-project/remix-tests`"
+
+#: ../../unittestingAsCLI.md:21
+msgid "To confirm installation, run:"
+msgstr "Para confirmar la instalación, ejecute:"
+
+#: ../../unittestingAsCLI.md:26
+msgid "Version should be same as on NPM."
+msgstr "La versión debe ser la misma que en NPM."
+
+#: ../../unittestingAsCLI.md:28
+msgid "How to use"
+msgstr "Cómo utilizarlo"
+
+#: ../../unittestingAsCLI.md:31
+msgid "You can see all available options using `help` command."
+msgstr "Puede ver todas las opciones disponibles utilizando el comando `help`."
+
+#: ../../unittestingAsCLI.md:51
+msgid "General structure of a command is as:"
+msgstr "La estructura general de un comando es la siguiente"
+
+#: ../../unittestingAsCLI.md:53
+msgid "`$ remix-tests <options> <file/directory path>`"
+msgstr "`$ remix-tests <options> <file/directory path>`"
+
+#: ../../unittestingAsCLI.md:55
+msgid "To run all test files inside `examples` directory"
+msgstr "Para ejecutar todos los archivos de prueba dentro del directorio `examples"
+
+#: ../../unittestingAsCLI.md:59
+msgid "To run single test file named `simple_storage_test.sol` inside `examples` directory"
+msgstr "Para ejecutar un único archivo de prueba llamado `simple_storage_test.sol` dentro del directorio `examples"
+
+#: ../../unittestingAsCLI.md:63
+msgid "**NOTE:** `remix-tests` will assume that name of test(s) file ends with `\"_test.sol\"`. e.g `simple_storage_test.sol`"
+msgstr "**NOTA:** `remix-tests` asumirá que el nombre del archivo de la(s) prueba(s) termina en `\"_prueba.sol\"`. por ejemplo `simple_almacenamiento_prueba.sol`."
+
+#: ../../unittestingAsCLI.md:65
+msgid "Example"
+msgstr "Ejemplo"
+
+#: ../../unittestingAsCLI.md:67
+msgid "Consider for a simple storage contract named `simple_storage.sol`:"
+msgstr "Considere para un contrato de almacenamiento simple llamado `simple_storage.sol`:"
+
+#: ../../unittestingAsCLI.md:89
+msgid "Test file `simple_storage_test.sol` can be as:"
+msgstr "Archivo de prueba `simple_storage_test.sol` puede ser como:"
+
+#: ../../unittestingAsCLI.md:123
+msgid "Running `simple_storage_test.sol` file will output as:"
+msgstr "Si ejecuta el archivo `simple_storage_test.sol` obtendrá el siguiente resultado:"
+
+#: ../../unittestingAsCLI.md:149
+msgid "Custom compiler context"
+msgstr "Contexto de compilador personalizado"
+
+#: ../../unittestingAsCLI.md:152
+msgid "Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:"
+msgstr "La mayoría de las opciones de `remix-tests` están ahí para definir un contexto de compilador personalizado. Con un contexto de compilador personalizado extendido, la ejecución del archivo de prueba anterior irá como:"
+
+#: ../../unittestingAsCLI.md:183
+msgid "Rememeber, custom compiler version will require internet connection to load compiler."
+msgstr "Recuerde, la versión personalizada del compilador requerirá conexión a Internet para cargar el compilador."
+
+#: ../../unittestingAsCLI.md:185
+msgid "As a CI solution"
+msgstr "Como solución de IC"
+
+#: ../../unittestingAsCLI.md:188
+msgid "`remix-tests` can also be used for continuous integration (CI) testing."
+msgstr "`remix-tests` también puede utilizarse para pruebas de integración continua (CI)."
+
+#: ../../unittestingAsCLI.md:190
+msgid "For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration."
+msgstr "Para ver un ejemplo de implementación, consulte [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) y [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) que utiliza `remix-tests` para la integración continua."
+

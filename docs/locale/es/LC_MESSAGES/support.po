@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/support.pot\n"
+"X-Crowdin-File-ID: 6498\n"
+"Language: es_ES\n"
+
+#: ../../support.md:1
+msgid "Support chat"
+msgstr "Chat de apoyo"
+
+#: ../../support.md:4
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
+msgstr "Sabemos que el ecosistema blockchain es muy nuevo y que hay mucha información dispersa por la web. Por eso hemos creado un chat de apoyo a la comunidad en el que nosotros y otros usuarios tratamos de responder a sus preguntas si se queda atascado utilizando Remix. Por favor, únase al canal Remix y pida ayuda a la comunidad."
+
+#: ../../support.md:8
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
+msgstr "Para cualquiera que esté interesado en desarrollar un plugin personalizado para Remix o que quiera contribuir a la base de código, hemos abierto otro canal especialmente para los desarrolladores que trabajan en la herramienta Remix."
+

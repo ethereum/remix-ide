@@ -1,0 +1,347 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/debugger.pot\n"
+"X-Crowdin-File-ID: 6470\n"
+"Language: es_ES\n"
+
+#: ../../debugger.md:1
+msgid "Debugger"
+msgstr "Depurador"
+
+#: ../../debugger.md:4
+msgid "The Debugger shows the contract's state while stepping through a transaction."
+msgstr "El depurador muestra el estado del contrato mientras recorre una transacción."
+
+#: ../../debugger.md:6
+msgid "It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
+msgstr "Puede utilizarse en transacciones creadas en Remix o proporcionando el hash de una transacción.  Esto último supone que usted dispone del código fuente del contrato o que ha introducido la dirección de un contrato verificado."
+
+#: ../../debugger.md:8
+msgid "To start a debugging session either:"
+msgstr "Para iniciar una sesión de depuración"
+
+#: ../../debugger.md:9
+msgid "**Click** the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the **Side Panel**."
+msgstr "**Haga clic** en el botón de depuración en el Terminal cuando aparezca allí una transacción exitosa o fallida. El depurador se activará y ganará el foco en el **panel lateral**."
+
+#: ../../debugger.md:11
+msgid "**Activate** the Debugger in the Plugin Manager and then click the bug in the icon panel. To start the debugging session, input the address of a deployed transaction - while having the source code in the editor and then click the **Start debugging** button."
+msgstr "**Active** el depurador en el Gestor de complementos y, a continuación, haga clic en el error del panel de iconos. Para iniciar la sesión de depuración, introduzca la dirección de una operación desplegada -mientras tiene el código fuente en el editor y, a continuación, haga clic en el botón **Iniciar depuración**."
+
+#: ../../debugger.md:13
+msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
+msgstr "El depurador resaltará el código relevante en el Editor.  Si desea volver a editar el código sin que el depurador lo resalte, haga clic en el botón **Detener depuración**."
+
+#: ../../debugger.md:15
+msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
+msgstr "Para saber más sobre cómo utilizar esta herramienta vaya a la página [Depuración de transacciones](tutorial_debug.html)."
+
+#: ../../debugger.md:17
+msgid "This page will go over the Debugger's *Use generated sources* option, its navigation and its panels."
+msgstr "Esta página repasará la opción *Usar fuentes generadas* del depurador, su navegación y sus paneles."
+
+#: ../../debugger.md:19
+msgid "![](images/a-debugger-overview.png)"
+msgstr "![](images/a-debugger-overview.png)"
+
+#: ../../debugger.md:21
+msgid "Use generated sources"
+msgstr "Utilizar fuentes generadas"
+
+#: ../../debugger.md:22
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgstr "Esta opción está disponible para contratos que utilicen Solidity 0.7.2 o superior. Consulte el blog de solidity para obtener más detalles sobre [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+
+#: ../../debugger.md:24
+msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
+msgstr "Utilizar **fuentes generadas** facilitará la auditoría de sus contratos.  Cuando la opción está marcada, puede entrar en esas salidas del compilador - mientras depura."
+
+#: ../../debugger.md:26
+msgid "![](images/a-debug-use-gen-sources.png)"
+msgstr "![](images/a-debug-use-gen-sources.png)"
+
+#: ../../debugger.md:28
+msgid "These compiler outputs will appear in a separate .yul file in the Remix editor."
+msgstr "Estas salidas del compilador aparecerán en un archivo .yul separado en el editor Remix."
+
+#: ../../debugger.md:30
+msgid "The Debugger's Navigation"
+msgstr "La navegación del depurador"
+
+#: ../../debugger.md:31
+msgid "Slider & buttons"
+msgstr "Deslizador y botones"
+
+#: ../../debugger.md:32
+msgid "![](images/a-debug-nav.png)"
+msgstr "![](images/a-debug-nav.png)"
+
+#: ../../debugger.md:34
+msgid "Slider"
+msgstr "Deslizador"
+
+#: ../../debugger.md:35
+msgid "Moving the slider will highlight the relevant code in the **Editor**. On the most granular level, it scrolls through a transaction's opcodes (**see the opcode section below**). At each opcode, the transaction's state changes and these changes are reflected in the **Debugger's panels**."
+msgstr "Al mover el control deslizante se resaltará el código correspondiente en el **Editor**. En el nivel más granular, se desplaza por los opcodes de una transacción (**véase la sección de opcodes más abajo**). En cada opcode, el estado de la transacción cambia y estos cambios se reflejan en los **paneles del depurador**."
+
+#: ../../debugger.md:37
+msgid "Step over back"
+msgstr "Paso atrás"
+
+#: ../../debugger.md:38
+msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
+msgstr "Este botón va al opcode anterior.  Si el paso anterior implica una **llamada a función**, no se introducirá la función."
+
+#: ../../debugger.md:39
+msgid "Step back"
+msgstr "Paso atrás"
+
+#: ../../debugger.md:40
+msgid "This button steps back to the previous opcode."
+msgstr "Este botón retrocede al opcode anterior."
+
+#: ../../debugger.md:41
+msgid "Step into"
+msgstr "Entre en"
+
+#: ../../debugger.md:42
+msgid "This button advances to the next opcode. If the next line contains a function call, **Step into** will go into the function."
+msgstr "Este botón avanza al siguiente opcode. Si la siguiente línea contiene una llamada a una función, **Step into** entrará en la función."
+
+#: ../../debugger.md:43
+msgid "Step over forward"
+msgstr "Paso adelante"
+
+#: ../../debugger.md:44
+msgid "This button advances to the next opcode.  If the next step involves a **function call**, function will not be entered."
+msgstr "Este botón avanza al siguiente opcode.  Si el siguiente paso implica una **llamada a función**, no se introducirá la función."
+
+#: ../../debugger.md:45
+msgid "Jump to the previous breakpoint"
+msgstr "Saltar al punto de interrupción anterior"
+
+#: ../../debugger.md:46
+msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
+msgstr "Los puntos de ruptura pueden colocarse en el canalón del Editor. Si el paso actual de la llamada ha superado un punto de interrupción, este botón desplazará el control deslizante hasta el punto de interrupción superado más recientemente."
+
+#: ../../debugger.md:48
+msgid "Jump out"
+msgstr "Salte"
+
+#: ../../debugger.md:49
+msgid "When you are in a call and click on this button, the slider will be moved to the end of the call."
+msgstr "Cuando esté en una llamada y pulse este botón, el deslizador se desplazará al final de la llamada."
+
+#: ../../debugger.md:51
+msgid "Jump to the next breakpoint"
+msgstr "Saltar al siguiente punto de interrupción"
+
+#: ../../debugger.md:52
+msgid "If a breakpoint is ahead in the code, this button will advance to that point."
+msgstr "Si hay un punto de ruptura por delante en el código, este botón avanzará hasta ese punto."
+
+#: ../../debugger.md:54
+msgid "The Debugger's Panels"
+msgstr "Los paneles del depurador"
+
+#: ../../debugger.md:55
+msgid "Function Stack"
+msgstr "Pila de funciones"
+
+#: ../../debugger.md:56
+msgid "The Function stack lists the functions that the transaction is interacting with."
+msgstr "La pila de funciones enumera las funciones con las que interactúa la transacción."
+
+#: ../../debugger.md:58
+msgid "![](images/a-debug-func-stack.png)"
+msgstr "![](images/a-debug-func-stack.png)"
+
+#: ../../debugger.md:59
+msgid "Solidity Locals"
+msgstr "Locales Solidarios"
+
+#: ../../debugger.md:60
+msgid "The Solidity Locals are the local variables inside a function."
+msgstr "Las Solidity Locals son las variables locales dentro de una función."
+
+#: ../../debugger.md:62
+msgid "![](images/a-debug-sol-locals.png)"
+msgstr "![](images/a-debug-sol-locals.png)"
+
+#: ../../debugger.md:64
+msgid "Solidity State"
+msgstr "Estado de solidez"
+
+#: ../../debugger.md:65
+msgid "These are the state variables of the contract."
+msgstr "Estas son las variables de estado del contrato."
+
+#: ../../debugger.md:67
+msgid "![](images/a-debug-sol-state.png)"
+msgstr "![](images/a-debug-sol-state.png)"
+
+#: ../../debugger.md:69
+msgid "Opcodes"
+msgstr "Opcodes"
+
+#: ../../debugger.md:70
+msgid "This panel shows the step number and the **opcode** that the debugger is currently on."
+msgstr "Este panel muestra el número de paso y el **código de operación** en el que se encuentra actualmente el depurador."
+
+#: ../../debugger.md:72
+msgid "![](images/a-debug-opcodes1.png)"
+msgstr "![](images/a-debug-opcodes1.png)"
+
+#: ../../debugger.md:74
+msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
+msgstr "Al arrastrar el **deslizador** (que está encima de los botones de navegación), el número de paso enfocado y el opcode cambian."
+
+#: ../../debugger.md:75
+msgid "Step details"
+msgstr "Detalles del paso"
+
+#: ../../debugger.md:76
+msgid "Step details shows more info about the opcode step."
+msgstr "Detalles del paso muestra más información sobre el paso opcode."
+
+#: ../../debugger.md:78
+msgid "![](images/a-debug-step-detail.png)"
+msgstr "![](images/a-debug-step-detail.png)"
+
+#: ../../debugger.md:79
+msgid "Stack"
+msgstr "Pila"
+
+#: ../../debugger.md:80
+msgid "This panel shows the EVM Stack."
+msgstr "Este panel muestra la pila EVM."
+
+#: ../../debugger.md:82
+msgid "![](images/a-debugger-panel-stack.png)"
+msgstr "![](images/a-debugger-panel-stack.png)"
+
+#: ../../debugger.md:84
+msgid "For more info about the [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
+msgstr "Para más información sobre el [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
+
+#: ../../debugger.md:85
+msgid "Memory"
+msgstr "Memoria"
+
+#: ../../debugger.md:87
+msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. **Reads** are limited to a width of 256 bits while **writes** can be either 8 bits or 256 bits wide."
+msgstr "La memoria se vacía para cada nueva llamada de mensaje. La memoria es lineal y puede direccionarse a nivel de byte. Las **lecturas** están limitadas a un ancho de 256 bits, mientras que las **escrituras** pueden tener un ancho de 8 bits o de 256 bits."
+
+#: ../../debugger.md:89
+msgid "The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right)."
+msgstr "El panel Memoria consta de 3 columnas.  Puede que necesite hacer el panel lateral de Remix un poco más ancho para que el formato sea correcto. (Arrastre el borde entre el panel principal y el panel lateral hacia la derecha)."
+
+#: ../../debugger.md:91
+msgid "The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (**?**) will show - like this:"
+msgstr "La 1ª columna es la ubicación en memoria.  La 2ª columna es el valor codificado hexadecimal.  La 3ª columna es el valor descodificado.  Si no hay nada, aparecerán los signos de interrogación (**?**) - así:"
+
+#: ../../debugger.md:96
+msgid "Here is a full example of the **Memory** panel,"
+msgstr "Aquí tiene un ejemplo completo del panel **Memoria**,"
+
+#: ../../debugger.md:98
+msgid "![](images/a-debugger-memory.png)"
+msgstr "![](images/a-debugger-memory.png)"
+
+#: ../../debugger.md:100
+msgid "Some address slots have hex encoded values and those values are then decoded.  For example, check position **0xa0** and **0x140**."
+msgstr "Algunas posiciones de dirección tienen valores codificados en hexadecimal y esos valores se descodifican a continuación.  Por ejemplo, compruebe la posición **0xa0** y **0x140**."
+
+#: ../../debugger.md:101
+msgid "Storage"
+msgstr "Almacenamiento"
+
+#: ../../debugger.md:102
+msgid "This is the persistant storage."
+msgstr "Se trata del almacenamiento persistente."
+
+#: ../../debugger.md:104
+msgid "![](images/a-debug-storage.png)"
+msgstr "![](images/a-debug-storage.png)"
+
+#: ../../debugger.md:106
+msgid "Call Stack"
+msgstr "Pila de llamadas"
+
+#: ../../debugger.md:107
+msgid "All computations are performed on a data array called the **call stack**. It has a maximum size of 1024 elements and contains words of 256 bits."
+msgstr "Todos los cálculos se realizan en una matriz de datos denominada **pila de llamadas**. Tiene un tamaño máximo de 1024 elementos y contiene palabras de 256 bits."
+
+#: ../../debugger.md:109
+msgid "![](images/a-debug-call-stack.png)"
+msgstr "![](images/a-debug-call-stack.png)"
+
+#: ../../debugger.md:110
+msgid "Call Data"
+msgstr "Datos de llamada"
+
+#: ../../debugger.md:111
+msgid "The call data contains the functions parameters."
+msgstr "Los datos de la llamada contienen los parámetros de las funciones."
+
+#: ../../debugger.md:113
+msgid "![](images/a-debug-call-data.png)"
+msgstr "![](images/a-debug-call-data.png)"
+
+#: ../../debugger.md:114
+msgid "Return Value"
+msgstr "Valor de retorno"
+
+#: ../../debugger.md:115
+msgid "The refers to the value that the function will return."
+msgstr "Se refiere al valor que devolverá la función."
+
+#: ../../debugger.md:117
+msgid "![](images/a-debug-return.png)"
+msgstr "![](images/a-debug-return.png)"
+
+#: ../../debugger.md:118
+msgid "Full Storage Changes"
+msgstr "Cambios en el almacenamiento completo"
+
+#: ../../debugger.md:119
+msgid "This shows the persistant storage at the end of the function."
+msgstr "Esto muestra el almacenamiento persistente al final de la función."
+
+#: ../../debugger.md:121
+msgid "![](images/a-debug-full-store-change.png)"
+msgstr "![](images/a-debug-full-store-change.png)"
+
+#: ../../debugger.md:122
+msgid "Breakpoints"
+msgstr "Puntos de interrupción"
+
+#: ../../debugger.md:123
+msgid "Breakpoints can be placed in the gutter of the Editor to pause the debugger."
+msgstr "Se pueden colocar puntos de interrupción en el canalón del Editor para pausar el depurador."
+
+#: ../../debugger.md:125
+msgid "Additional Info"
+msgstr "Información adicional"
+
+#: ../../debugger.md:126
+msgid "The debugger's granular information gives users detailed information about what is happening in a transaction - so not only is the debugger good for debugging, it is also an excellent teaching tool."
+msgstr "La información granular del depurador ofrece a los usuarios información detallada sobre lo que ocurre en una transacción, por lo que no sólo es bueno para depurar, sino que también es una excelente herramienta de enseñanza."
+
+#: ../../debugger.md:128
+msgid "To learn about using the debugger, go to [Debugging Transactions](tutorial_debug.html)."
+msgstr "Para aprender a utilizar el depurador, vaya a [Depuración de transacciones](tutorial_debug.html)."
+

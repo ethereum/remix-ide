@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/code_contribution_guide.pot\n"
+"X-Crowdin-File-ID: 6460\n"
+"Language: es_ES\n"
+
+#: ../../code_contribution_guide.md:1
+msgid "Code Contribution Guide"
+msgstr "Guía de Contribución de Código"
+
+#: ../../code_contribution_guide.md:4
+msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
+msgstr "Remix es una herramienta de código abierto y estamos animando a todos a ayudarnos a mejorarlo. Puedes abrir un issue, dar un feedback o contribuir con un pull request en nuestro código fuente."
+
+#: ../../code_contribution_guide.md:8
+msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` and among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
+msgstr "La aplicación Remix está construida con JavaScript y no utiliza ningún framework. Nos basamos en un conjunto seleccionado de módulos npm, como `yo-yo`, `csjs-inject` y entre otros. Eche un vistazo a los archivos `package.json` de los submódulos de Remix para saber más sobre la pila."
+
+#: ../../code_contribution_guide.md:10
+msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
+msgstr "Para obtener más información, visite nuestra [página de GitHub](https://github.com/ethereum/remix-project)."
+

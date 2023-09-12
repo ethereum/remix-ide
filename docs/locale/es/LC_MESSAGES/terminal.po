@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/terminal.pot\n"
+"X-Crowdin-File-ID: 6500\n"
+"Language: es_ES\n"
+
+#: ../../terminal.md:1
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../../terminal.md:4
+msgid "![](images/a-terminal-and-more.png)"
+msgstr "![](images/a-terminal-and-more.png)"
+
+#: ../../terminal.md:6
+msgid "Features, available in the terminal:"
+msgstr "Funciones, disponibles en el terminal:"
+
+#: ../../terminal.md:8
+msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
+msgstr "Integra un intérprete de JavaScript y el objeto `web3`. Permite la ejecución del script JavaScript que interactúa con el contexto actual. (Tenga en cuenta que `web3` sólo está disponible si se selecciona el modo `web provider` o `injected provider`)."
+
+#: ../../terminal.md:12
+msgid "It displays important actions made while interacting with the Remix IDE (i.e. sending a new transaction)."
+msgstr "Muestra las acciones importantes realizadas al interactuar con el IDE Remix (por ejemplo, el envío de una nueva transacción)."
+
+#: ../../terminal.md:14
+msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
+msgstr "Muestra las transacciones que se minan en el contexto actual. Puede elegir mostrar todas las transacciones o sólo las transacciones que se refieren a los contratos que Remix conoce (por ejemplo, transacciones creadas desde el IDE de Remix)."
+
+#: ../../terminal.md:18
+msgid "It allows searching for the data and clearing the logs from the terminal."
+msgstr "Permite buscar los datos y borrar los registros del terminal."
+
+#: ../../terminal.md:20
+msgid "You can run scripts by inputting them at the bottom after the `>`."
+msgstr "Puede ejecutar scripts introduciéndolos en la parte inferior después del `>`."
+

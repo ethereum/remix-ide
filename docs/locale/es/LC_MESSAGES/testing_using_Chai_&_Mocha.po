@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/testing_using_Chai_&_Mocha.pot\n"
+"X-Crowdin-File-ID: 7437\n"
+"Language: es_ES\n"
+
+#: ../../testing_using_Chai_&_Mocha.md:1
+msgid "Testing using Chai & Mocha"
+msgstr "Pruebas con Chai y Mocha"
+
+#: ../../testing_using_Chai_&_Mocha.md:4
+msgid "_(Supported since Remix IDE v0.22.0)_"
+msgstr "_(Soportado desde Remix IDE v0.22.0)_"
+
+#: ../../testing_using_Chai_&_Mocha.md:6
+msgid "Remix supports testing of your files in JavaScript using assertion library [Chai](https://www.chaijs.com/) & test framework [Mocha](https://mochajs.org/)"
+msgstr "Remix admite la comprobación de sus archivos en JavaScript mediante la biblioteca de aserción [Chai](https://www.chaijs.com/) y el marco de pruebas [Mocha](https://mochajs.org/)"
+
+#: ../../testing_using_Chai_&_Mocha.md:8
+msgid "_Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework._"
+msgstr "_Chai es una librería de aserción BDD / TDD para node y el navegador que puede ser deliciosamente emparejada con cualquier framework de pruebas javascript._"
+
+#: ../../testing_using_Chai_&_Mocha.md:10
+msgid "_Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun._"
+msgstr "_Mocha es un marco de pruebas JavaScript rico en funciones que se ejecuta en Node.js y en el navegador, haciendo que las pruebas asíncronas sean sencillas y divertidas._"
+
+#: ../../testing_using_Chai_&_Mocha.md:12
+msgid "Write tests"
+msgstr "Escribir pruebas"
+
+#: ../../testing_using_Chai_&_Mocha.md:14
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`."
+msgstr "Cree un archivo js en el espacio de trabajo de su proyecto. Es mejor crearlo dentro de la carpeta `scripts`. Llamémoslo `sample.test.js`."
+
+#: ../../testing_using_Chai_&_Mocha.md:16
+msgid "Write your tests in the file. Here is a sample:"
+msgstr "Escriba sus pruebas en el archivo. Aquí tiene un ejemplo:"
+
+#: ../../testing_using_Chai_&_Mocha.md:33
+msgid "Run tests"
+msgstr "Ejecutar pruebas"
+
+#: ../../testing_using_Chai_&_Mocha.md:35
+msgid "Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JS scripts"
+msgstr "Una vez que haya terminado de escribir las pruebas, haga clic con el botón derecho del ratón sobre el nombre del archivo en el plugin `Explorador de archivos`. Mostrará algunas opciones junto con la opción de `Ejecutar`. Esta opción `Run` se utiliza para ejecutar los scripts JS"
+
+#: ../../testing_using_Chai_&_Mocha.md:37
+msgid "![](images/run_with_mocha_option.png)"
+msgstr "![](images/run_with_mocha_option.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:39
+msgid "Click on `Run`, tests will be executed and result will be shown on Terminal."
+msgstr "Haga clic en `Ejecutar`, las pruebas se ejecutarán y el resultado se mostrará en el Terminal."
+
+#: ../../testing_using_Chai_&_Mocha.md:41
+msgid "![](images/run_with_mocha_result.png)"
+msgstr "![](images/run_with_mocha_result.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:43
+msgid "Test a contract"
+msgstr "Probar un contrato"
+
+#: ../../testing_using_Chai_&_Mocha.md:45
+msgid "Similarly unit tests can be written to test the functionality of a smart contract. An example to test default `1_Storage.sol` contract can be as:"
+msgstr "De forma similar se pueden escribir pruebas unitarias para probar la funcionalidad de un contrato inteligente. Un ejemplo para probar el contrato por defecto `1_Storage.sol` puede ser como:"
+
+#: ../../testing_using_Chai_&_Mocha.md:86
+#: ../../testing_using_Chai_&_Mocha.md:158
+msgid "Result will be as:"
+msgstr "El resultado será el siguiente:"
+
+#: ../../testing_using_Chai_&_Mocha.md:88
+msgid "![](images/run_with_mocha_storage_test.png)"
+msgstr "![](images/run_with_mocha_storage_test.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:90
+msgid "Debugging a test transaction"
+msgstr "Depuración de una transacción de prueba"
+
+#: ../../testing_using_Chai_&_Mocha.md:92
+msgid "To debug a transaction in one of the tests, print the transaction hash and input that in the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html)."
+msgstr "Para depurar una transacción en una de las pruebas, imprima el hash de la transacción e introdúzcalo en el [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html)."
+
+#: ../../testing_using_Chai_&_Mocha.md:94
+msgid "![](images/run_with_mocha_print_hash.png)"
+msgstr "![](images/run_with_mocha_print_hash.png)"
+
+#: ../../testing_using_Chai_&_Mocha.md:96
+msgid "Hardhat-ethers support"
+msgstr "Soporte para cascos"
+
+#: ../../testing_using_Chai_&_Mocha.md:98
+msgid "Remix also supports methods of [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:"
+msgstr "Remix también soporta métodos del plugin [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) del framework Hardhat. Los métodos disponibles bajo este plugin son:"
+
+#: ../../testing_using_Chai_&_Mocha.md:131
+msgid "With this, one can run the tests for a hardhat project easily using Remix."
+msgstr "Con esto, uno puede ejecutar las pruebas para un proyecto hardhat fácilmente usando Remix."
+
+#: ../../testing_using_Chai_&_Mocha.md:133
+msgid "Example to test `Storage` contract with this plugin methods can be as:"
+msgstr "Ejemplo para probar el contrato `Storage` con este plugin los métodos pueden ser como:"
+
+#: ../../testing_using_Chai_&_Mocha.md:160
+msgid "![](images/run_with_mocha_hhethers.png)"
+msgstr "![](images/run_with_mocha_hhethers.png)"
+

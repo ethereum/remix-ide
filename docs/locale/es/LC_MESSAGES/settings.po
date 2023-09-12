@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/settings.pot\n"
+"X-Crowdin-File-ID: 6492\n"
+"Language: es_ES\n"
+
+#: ../../settings.md:1
+msgid "Settings"
+msgstr "Ajustes"
+
+#: ../../settings.md:4
+msgid "To get to **Settings** click the gear at the very bottom of the icon panel."
+msgstr "Para llegar a **Configuración** haga clic en el engranaje situado en la parte inferior del panel de iconos."
+
+#: ../../settings.md:6
+msgid "Reset Button"
+msgstr "Botón de reinicio"
+
+#: ../../settings.md:7
+msgid "The Reset button at the top of the Setting panel will reset all of the settings back to the default."
+msgstr "El botón Restablecer situado en la parte superior del panel Configuración restablecerá todos los ajustes a los valores predeterminados."
+
+#: ../../settings.md:8
+msgid "General Settings"
+msgstr "Ajustes generales"
+
+#: ../../settings.md:10
+msgid "![](images/a-settings-general.png)"
+msgstr "![](images/a-settings-general.png)"
+
+#: ../../settings.md:12
+msgid "Generate contract metadata is used for deploying with libraries.  See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
+msgstr "Generar metadatos de contrato se utiliza para el despliegue con bibliotecas.  Consulte nuestra entrada de blog sobre el tema: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)"
+
+#: ../../settings.md:13
+msgid "Always use Remix VM at Load: will make the Remix VM the selected **environment** when Remix loads."
+msgstr "Utilizar siempre Remix VM al cargar: hará que Remix VM sea el **entorno** seleccionado cuando se cargue Remix."
+
+#: ../../settings.md:14
+msgid "Text wrap: controls if the text in the editor should be wrapped."
+msgstr "Ajuste de texto: controla si el texto en el editor debe ser ajustado."
+
+#: ../../settings.md:15
+msgid "Personal mode: can be used when one is connecting to a **local node**.  It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in GETH.  Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone."
+msgstr "Modo personal: puede utilizarse cuando uno se está conectando a un **nodo local**.  Se utiliza para que Remix guarde temporalmente la frase de contraseña - de forma que no sea necesario **desbloquear** la cuenta en GETH.  Remix no persistirá la frase de contraseña - por lo que si actualiza su navegador la frase de contraseña habrá desaparecido."
+
+#: ../../settings.md:16
+msgid "Matomo Analytics: This is where you can turn off and on your approval for us to use Matomo.  We do not collect any personally identifiable information (PII) and our reports are public.  See our [blog post on the subject](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
+msgstr "Matomo Analytics: Aquí es donde puede activar y desactivar su aprobación para que utilicemos Matomo.  No recogemos ninguna información personal identificable (IPI) y nuestros informes son públicos.  Consulte nuestra [entrada de blog sobre el tema](https://medium.com/remix-ide/help-us-improve-remix-ide-66ef69e14931?source=friends_link&sk=cf9c62fbe1270543eb4bd912e567e2d6)."
+
+#: ../../settings.md:18
+msgid "Github Access Token"
+msgstr "Token de acceso a Github"
+
+#: ../../settings.md:20
+msgid "When performing Git operations on Github and when creating GISTs, it may be necessary to input an access token.  This token has the specific permissions for your Git commands. Depending on the operation, you may also need to input your Github username & email address.  Remix does not save your password info outside of your browser's localstorage.  [https://github.com/settings/tokens](https://github.com/settings/tokens)"
+msgstr "Al realizar operaciones Git en Github y al crear GISTs, puede ser necesario introducir un token de acceso.  Este token tiene los permisos específicos para sus comandos Git. Dependiendo de la operación, puede que también necesite introducir su nombre de usuario y dirección de correo electrónico de Github.  Remix no guarda la información de su contraseña fuera del almacenamiento local de su navegador.  [https://github.com/settings/tokens](https://github.com/settings/tokens)"
+
+#: ../../settings.md:22
+msgid "![](images/a-settings-gh-token.png)"
+msgstr "![](images/a-settings-gh-token.png)"
+
+#: ../../settings.md:24
+msgid "Etherscan Access Token"
+msgstr "Token de acceso Etherscan"
+
+#: ../../settings.md:26
+msgid "You need to input your Etherscan access token when debugging verified contracts with the Remix Debugger.  When verifying a contract with the Etherscan plugin, you need to put the API key in that plugin and not in the Settings panel."
+msgstr "Necesita introducir su token de acceso a Etherscan cuando depure contratos verificados con el depurador Remix.  Cuando verifique un contrato con el plugin Etherscan, necesita poner la clave API en ese plugin y no en el panel de Configuración."
+
+#: ../../settings.md:28
+msgid "Click [here](https://etherscan.io/myapikey) to get your Etherscan API key."
+msgstr "Haga clic en [here](https://etherscan.io/myapikey) para obtener su clave API Etherscan."
+
+#: ../../settings.md:30
+msgid "![](images/a-settings-etherscan.png)"
+msgstr "![](images/a-settings-etherscan.png)"
+
+#: ../../settings.md:32
+msgid "Swarm Settings"
+msgstr "Configuración del enjambre"
+
+#: ../../settings.md:34
+msgid "In the Solidity Compiler, after the compilation is completed, there is a button to publish to Swarm."
+msgstr "En el compilador de Solidity, una vez finalizada la compilación, hay un botón para publicar en Swarm."
+
+#: ../../settings.md:36
+msgid "![](images/a-settings-pub-swarm.png)"
+msgstr "![](images/a-settings-pub-swarm.png)"
+
+#: ../../settings.md:38
+msgid "Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info."
+msgstr "Si no pone una dirección y un sello de correos, estará utilizando el portal público, que puede no perseguirle el contenido con tanta seguridad como si pusiera su propia información."
+
+#: ../../settings.md:40
+msgid "![](images/a-settings-swarm.png)"
+msgstr "![](images/a-settings-swarm.png)"
+
+#: ../../settings.md:42
+msgid "IPFS Settings"
+msgstr "Ajustes IPFS"
+
+#: ../../settings.md:44
+msgid "Just like the Swarm settings above, IPFS settings are for publishing your contracts to IPFS from the Solidity Compiler."
+msgstr "Al igual que los ajustes de Swarm anteriores, los ajustes de IPFS sirven para publicar sus contratos en IPFS desde Solidity Compiler."
+
+#: ../../settings.md:45
+msgid "If you do not put in any settings here, you will be using the public INFURA node. This will not guarantee your data will persist."
+msgstr "Si no introduce ninguna configuración aquí, utilizará el nodo público INFURA. Esto no garantizará que sus datos persistan."
+
+#: ../../settings.md:47
+msgid "Other options are to:"
+msgstr "Otras opciones son"
+
+#: ../../settings.md:48
+msgid "Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)"
+msgstr "Utilice su propio nodo INFURA IPFS. Esto requiere una suscripción. [Más información](https://infura.io/product/ipfs)"
+
+#: ../../settings.md:49
+msgid "Use any external IPFS which doesn’t require any authentification."
+msgstr "Utilice cualquier IPFS externo que no requiera autentificación."
+
+#: ../../settings.md:50
+msgid "Use your own local ipfs node (which usually runs under http://localhost:5001)"
+msgstr "Utilice su propio nodo local ipfs (que normalmente se ejecuta bajo http://localhost:5001)"
+
+#: ../../settings.md:52
+msgid "![](images/a-settings-ipfs.png)"
+msgstr "![](images/a-settings-ipfs.png)"
+
+#: ../../settings.md:54
+msgid "Themes"
+msgstr "Temas"
+
+#: ../../settings.md:55
+msgid "Choose themes here.  The Dark & Light themes are the themes that the Remix team actively maintains."
+msgstr "Elija los temas aquí.  Los temas Oscuro y Claro son los temas que el equipo Remix mantiene activamente."
+
+#: ../../settings.md:57
+msgid "![](images/a-settings-themes.png)"
+msgstr "![](images/a-settings-themes.png)"
+

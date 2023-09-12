@@ -1,0 +1,436 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/file_explorer.pot\n"
+"X-Crowdin-File-ID: 6472\n"
+"Language: es_ES\n"
+
+#: ../../file_explorer.md:1
+msgid "File Explorer"
+msgstr "Explorador de archivos"
+
+#: ../../file_explorer.md:3
+msgid "The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right-click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin."
+msgstr "El Explorador de archivos sirve para gestionar espacios de trabajo y archivos.  Este plugin también contiene muchos accesos directos y comandos.  Para una visita rápida, haga clic con el botón derecho en un archivo para obtener un menú emergente y consulte también el menú hamburguesa situado en la parte superior derecha del plugin."
+
+#: ../../file_explorer.md:5
+msgid "To find the File Explorer module - click the File Explorer icon."
+msgstr "Para encontrar el módulo Explorador de archivos - haga clic en el icono Explorador de archivos."
+
+#: ../../file_explorer.md:7
+msgid "![](images/a-file-explorer1a.png)"
+msgstr "![](images/a-file-explorer1a.png)"
+
+#: ../../file_explorer.md:9
+msgid "The green checkmark at the top of the page means that this plugin is maintained by Remix Team.  When the caret is clicked, more info about the plugin will be shown -including a link to this documentation."
+msgstr "La marca verde en la parte superior de la página significa que este plugin está mantenido por Remix Team.  Al hacer clic en la marca, aparecerá más información sobre el complemento, incluido un enlace a esta documentación."
+
+#: ../../file_explorer.md:11
+msgid "![](images/a-fe-top-caret.png)"
+msgstr "![](images/a-fe-top-caret.png)"
+
+#: ../../file_explorer.md:13
+msgid "File Storage"
+msgstr "Almacenamiento de archivos"
+
+#: ../../file_explorer.md:15
+msgid "By default, Remix IDE stores files in **IndexedDB**."
+msgstr "Por defecto, Remix IDE almacena los archivos en **IndexedDB**."
+
+#: ../../file_explorer.md:17
+msgid "Coding in Remix IDE Online is different from writing in a Google doc."
+msgstr "Codificar en Remix IDE Online es diferente a escribir en un documento de Google."
+
+#: ../../file_explorer.md:18
+msgid "A Google doc saves your work to your account on Google’s servers."
+msgstr "Un documento de Google guarda su trabajo en su cuenta en los servidores de Google."
+
+#: ../../file_explorer.md:19
+msgid "Remix has no user accounts. By default, files are ONLY saved locally in the browser’s storage. So tread carefully, browser storage is not permanent!"
+msgstr "Remix no tiene cuentas de usuario. Por defecto, los archivos SÓLO se guardan localmente en el almacenamiento del navegador. Así que tenga cuidado, ¡el almacenamiento del navegador no es permanente!"
+
+#: ../../file_explorer.md:21
+msgid "It is very important to have a file backup & file saving strategy."
+msgstr "Es muy importante contar con una estrategia de copia de seguridad y guardado de archivos."
+
+#: ../../file_explorer.md:23
+msgid "**Check the following techniques for:**"
+msgstr "**Compruebe las siguientes técnicas para:**"
+
+#: ../../file_explorer.md:24
+msgid "[saving to your hard drive](#file-storage-on-your-hard-drive)"
+msgstr "[guardar en su disco duro](#almacenamiento-de-archivos-en-su-disco-duro)"
+
+#: ../../file_explorer.md:25
+msgid "using [remote Git repos](#connecting-remix-to-remote-git-repos)"
+msgstr "utilizando [repos Git remotos](#connecting-remix-to-remote-git-repos)"
+
+#: ../../file_explorer.md:26
+msgid "[backing up workspaces](#backup)."
+msgstr "[copia de seguridad de los espacios de trabajo](#backup)."
+
+#: ../../file_explorer.md:28
+msgid "**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. It is prudent to backup your workspaces before deleting them...just in case."
+msgstr "**Nota Importante:** Borrar el almacenamiento del navegador & IndexedDB borrará **permanentemente** todos los archivos allí almacenados. Es prudente hacer una copia de seguridad de sus espacios de trabajo antes de borrarlos... por si acaso."
+
+#: ../../file_explorer.md:30
+msgid "File Storage on your hard drive"
+msgstr "Almacenamiento de archivos en su disco duro"
+
+#: ../../file_explorer.md:31
+msgid "Remixd"
+msgstr "Remixd"
+
+#: ../../file_explorer.md:32
+msgid "For storing files on your computer's hard drive when using Remix Online IDE, use **[Remixd](remixd.html)**"
+msgstr "Para almacenar archivos en el disco duro de su ordenador cuando utilice Remix Online IDE, utilice **[Remixd](remixd.html)**."
+
+#: ../../file_explorer.md:33
+msgid "Remixd is an NPM module that runs on your computer. It allows you to share a specified folder on your computer with Remix IDE."
+msgstr "Remixd es un módulo NPM que se ejecuta en su ordenador. Le permite compartir una carpeta específica de su ordenador con Remix IDE."
+
+#: ../../file_explorer.md:35
+msgid "Remix Desktop"
+msgstr "Remix Desktop"
+
+#: ../../file_explorer.md:36
+msgid "Remix Desktop is a version of Remix IDE in an Electron app. Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  To connect to public networks, you need to use service like Infura and then use the WalletConnect plugin to approve transactions on your mobile device."
+msgstr "Remix Desktop es una versión de Remix IDE en una aplicación Electron. Tenga en cuenta que cuando utilice Remix Desktop, no podrá utilizar una cartera de navegador como MetaMask, porque Remix Desktop no se ejecuta en un navegador.  Para conectarse a redes públicas, necesita utilizar un servicio como Infura y después utilizar el complemento WalletConnect para aprobar las transacciones en su dispositivo móvil."
+
+#: ../../file_explorer.md:38
+msgid "Connecting Remix to remote Git repos"
+msgstr "Conexión de Remix a repos remotos Git"
+
+#: ../../file_explorer.md:39
+msgid "**If you are not using Remixd, it is highly recommended that you save to a remote repo.**  (Browsers do crash causing localstorage & indexedDB to be corrupted)"
+msgstr "**Si no está utilizando Remixd, es muy recomendable que guarde en un repositorio remoto.** (Los navegadores se bloquean causando que localstorage & indexedDB se corrompan)"
+
+#: ../../file_explorer.md:42
+msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT)."
+msgstr "Remix IDE puede conectarse a repositorios Git remotos alojados en GitHub (o servicio similar) o en IPFS.   La mayoría de las operaciones Git se realizan en el pluin **DGit**. (DGit significa GIT descentralizado)."
+
+#: ../../file_explorer.md:45
+msgid "[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized."
+msgstr "La [Gestión de ramas](#gestión-de-ramas) también está disponible en la parte inferior del Explorador de archivos cuando se inicializa el Espacio de trabajo Git."
+
+#: ../../file_explorer.md:47
+msgid "Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)"
+msgstr "Consulte también este artículo sobre [la seguridad de sus archivos en Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)"
+
+#: ../../file_explorer.md:49
+msgid "Workspaces"
+msgstr "Espacios de trabajo"
+
+#: ../../file_explorer.md:52
+msgid "Workspaces in Remix are special folders that separate projects.  Files in one workspace cannot import or access files in different workspace.  Choosing a workspace is done with the **Workspaces** select box."
+msgstr "Los espacios de trabajo en Remix son carpetas especiales que separan los proyectos.  Los archivos de un espacio de trabajo no pueden importar archivos de otro espacio de trabajo ni acceder a ellos.  La elección de un espacio de trabajo se realiza con la casilla de selección **Espacios de trabajo**."
+
+#: ../../file_explorer.md:54
+msgid "![](images/a-fe-workspaces1.png)"
+msgstr "![](images/a-fe-workspaces1.png)"
+
+#: ../../file_explorer.md:56
+msgid "New Workspace"
+msgstr "Nuevo espacio de trabajo"
+
+#: ../../file_explorer.md:57
+msgid "Workspaces are created by clicking the + button or by going to the hamburger menu in the upper right side of the File Explorer."
+msgstr "Los espacios de trabajo se crean pulsando el botón + o yendo al menú hamburguesa de la parte superior derecha del Explorador de archivos."
+
+#: ../../file_explorer.md:59
+msgid "![](images/a-fe-workspaces-new.png)"
+msgstr "![](images/a-fe-workspaces-new.png)"
+
+#: ../../file_explorer.md:61
+msgid "When making a new workspace, Remix offers the following templates:"
+msgstr "Al crear un nuevo espacio de trabajo, Remix ofrece las siguientes plantillas:"
+
+#: ../../file_explorer.md:63
+msgid "Blank"
+msgstr "En blanco"
+
+#: ../../file_explorer.md:64
+msgid "Remix Default"
+msgstr "Remezcla por defecto"
+
+#: ../../file_explorer.md:65
+msgid "OpenZeppelin ERC20"
+msgstr "OpenZeppelin ERC20"
+
+#: ../../file_explorer.md:66
+msgid "OpenZeppelin ERC721"
+msgstr "OpenZeppelin ERC721"
+
+#: ../../file_explorer.md:67
+msgid "OpenZeppelin ERC1155"
+msgstr "OpenZeppelin ERC1155"
+
+#: ../../file_explorer.md:68
+msgid "0xProject ERC20"
+msgstr "0xProyecto ERC20"
+
+#: ../../file_explorer.md:69
+msgid "Gnosis MultiSig"
+msgstr "Gnosis MultiSig"
+
+#: ../../file_explorer.md:71
+msgid "When choosing an OpenZeppelin template, additional functionality can be added. ![](images/a-fe-modal-oz.png)"
+msgstr "Al elegir una plantilla OpenZeppelin, se pueden añadir funciones adicionales. ![](images/a-fe-modal-oz.png)"
+
+#: ../../file_explorer.md:74
+msgid "Workspace operations"
+msgstr "Operaciones en el espacio de trabajo"
+
+#: ../../file_explorer.md:76
+msgid "The **Workspace hamburger menu** is for operations that work on an entire workspace."
+msgstr "El **menú hamburguesa del espacio de trabajo** es para las operaciones que funcionan en todo un espacio de trabajo."
+
+#: ../../file_explorer.md:78
+msgid "![](images/a-fe-hamburger.png)"
+msgstr "![](images/a-fe-hamburger.png)"
+
+#: ../../file_explorer.md:80
+#: ../../file_explorer.md:167
+msgid "Clone"
+msgstr "Clone"
+
+#: ../../file_explorer.md:81
+msgid "When clicking Clone, you’ll be asked for the url of a remote repo. A new workspace will be created that will contain the cloned repo. To manage the Git repo, go to the Dgit plugin."
+msgstr "Al hacer clic en Clonar, se le pedirá la url de un repo remoto. Se creará un nuevo espacio de trabajo que contendrá el repositorio clonado. Para gestionar el repositorio Git, vaya al plugin Dgit."
+
+#: ../../file_explorer.md:82
+msgid "Backup"
+msgstr "Copia de seguridad"
+
+#: ../../file_explorer.md:83
+msgid "Backup is for downloading all the Workspaces in a .zip file. The zip file will have a folder called **.workspaces** that will contain a folder of each Workspace.  Depending on your OS, you may need to change the preferences on .workspaces folder to make it visible."
+msgstr "La copia de seguridad sirve para descargar todos los Espacios de trabajo en un archivo .zip. El archivo zip tendrá una carpeta llamada **.workspaces** que contendrá una carpeta de cada Espacio de trabajo.  Dependiendo de su sistema operativo, puede que tenga que cambiar las preferencias de la carpeta .workspaces para hacerla visible."
+
+#: ../../file_explorer.md:85
+msgid "Restore"
+msgstr "Restaurar"
+
+#: ../../file_explorer.md:86
+msgid "Restore is only for uploading the backup zip file."
+msgstr "Restaurar sólo sirve para cargar el archivo zip de copia de seguridad."
+
+#: ../../file_explorer.md:88
+msgid "Create GitHub Actions"
+msgstr "Crear acciones GitHub"
+
+#: ../../file_explorer.md:89
+msgid "The Workspace operations to create **Solidity Test Workflow**,  **Mocha Chai Test Workflow**, and **Slither Workflow** are for creating GitHub actions. When clicked, a .yml file is created in the .workflows folder of the active Workspace."
+msgstr "Las operaciones del Espacio de trabajo para crear **Flujo de trabajo de prueba de solidez**, **Flujo de trabajo de prueba de Mocha Chai** y **Flujo de trabajo de Slither** son para crear acciones de GitHub. Al hacer clic, se crea un archivo .yml en la carpeta .workflows del Espacio de trabajo activo."
+
+#: ../../file_explorer.md:91
+msgid "Workspaces initialized with Git"
+msgstr "Espacios de trabajo inicializados con Git"
+
+#: ../../file_explorer.md:92
+msgid "Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box."
+msgstr "Los espacios de trabajo inicializados con Git tendrán el icono Git junto a ellos en la casilla de selección **Espacios de trabajo**."
+
+#: ../../file_explorer.md:94
+msgid "![](images/a-fe-select-git.png)"
+msgstr "![](images/a-fe-select-git.png)"
+
+#: ../../file_explorer.md:96
+msgid "To initialize a new Workspace for GIT, check the box at the bottom of the Create Workspace modal. ![](images/a-fe-create-ws-modal.png)"
+msgstr "Para inicializar un nuevo espacio de trabajo para GIT, marque la casilla situada en la parte inferior del modal Crear espacio de trabajo. ![](images/a-fe-create-ws-modal.png)"
+
+#: ../../file_explorer.md:99
+msgid "Working with Files"
+msgstr "Trabajar con archivos"
+
+#: ../../file_explorer.md:101
+msgid "When a file is clicked on it will appear in the Editor."
+msgstr "Al hacer clic sobre un archivo, éste aparecerá en el Editor."
+
+#: ../../file_explorer.md:103
+msgid "Under the **Workspaces** select box are a number of icons that perform operations on files.  More operations can be accessed by right-clicking on a file or folder ([see below](#right-click-on-a-file-or-folder))."
+msgstr "Debajo de la casilla de selección **Espacios de trabajo** hay una serie de iconos que realizan operaciones sobre los archivos.  Puede acceder a más operaciones haciendo clic con el botón derecho en un archivo o carpeta ([véase más abajo](#clic-derecho-en-un-archivo-o-carpeta))."
+
+#: ../../file_explorer.md:105
+msgid "![](images/a-fe-file-icons2.png)"
+msgstr "![](images/a-fe-file-icons2.png)"
+
+#: ../../file_explorer.md:107
+msgid "**A.** Create a file  <br>"
+msgstr "**A.** Cree un archivo  <br>"
+
+#: ../../file_explorer.md:108
+msgid "**B.** Create a folder  <br>"
+msgstr "**B.** Crear una carpeta  <br>"
+
+#: ../../file_explorer.md:109
+msgid "**C.** Publish all the file in this Workspace to a GIST<br>"
+msgstr "**C.** Publique todos los archivos de este espacio de trabajo en un GIST<br>"
+
+#: ../../file_explorer.md:110
+msgid "**D.** Upload a file into the current Workspace<br>"
+msgstr "**D.** Cargar un archivo en el espacio de trabajo actual<br>"
+
+#: ../../file_explorer.md:111
+msgid "**E.** Upload a folder into the current Workspace<br>"
+msgstr "**E.** Cargar una carpeta en el espacio de trabajo actual<br>"
+
+#: ../../file_explorer.md:113
+msgid "Creating new files"
+msgstr "Creación de nuevos archivos"
+
+#: ../../file_explorer.md:115
+msgid "There are 2 ways of creating files:"
+msgstr "Hay dos formas de crear archivos:"
+
+#: ../../file_explorer.md:116
+msgid "The first is to click on the new file icon (**H.** in fig.1), then an input for the new file’s name will appear in the **File Explorer**. Once a name is entered, a new empty file will open in the Editor.  If the file's name is entered **without** a file extension, the extension **.sol** will be appended by default."
+msgstr "La primera es hacer clic en el icono de nuevo archivo (**H.** en la fig.1), entonces aparecerá una entrada para el nombre del nuevo archivo en el **Explorador de archivos**. Una vez introducido el nombre, se abrirá un nuevo archivo vacío en el Editor.  Si el nombre del archivo se introduce **sin** una extensión de archivo, la extensión **.sol** se añadirá por defecto."
+
+#: ../../file_explorer.md:118
+msgid "![](images/a-file-explorer-new-file2.png)"
+msgstr "![](images/a-file-explorer-new-file2.png)"
+
+#: ../../file_explorer.md:120
+msgid "The second way of creating a file is to right-click on a file or folder to get a popup menu."
+msgstr "La segunda forma de crear un archivo es hacer clic con el botón derecho en un archivo o carpeta para obtener un menú emergente."
+
+#: ../../file_explorer.md:122
+msgid "The new file will be placed in **the currently selected folder** of the Workspace. If a file and not a folder is selected, then the new file will be placed in that file’s folder. And if nothing is selected, then the file will be placed in the root of the current workspace's folder. Or to be brief — just be mindful of what folder it lands in."
+msgstr "El nuevo archivo se colocará en **la carpeta actualmente seleccionada** del Espacio de trabajo. Si se selecciona un archivo y no una carpeta, entonces el nuevo archivo se colocará en la carpeta de ese archivo. Y si no se selecciona nada, entonces el archivo se colocará en la raíz de la carpeta del espacio de trabajo actual. O para ser breve - sólo tenga en cuenta en qué carpeta se coloca."
+
+#: ../../file_explorer.md:124
+msgid "Publish to Gist"
+msgstr "Publicar en Gist"
+
+#: ../../file_explorer.md:127
+msgid "The icon (marked **J.** in fig.1) publishes all files from the current Workspace to a gist. **The Gist API requires users to be authenticated** to be able to publish a gist."
+msgstr "El icono (marcado **J.** en la fig.1) publica todos los archivos del espacio de trabajo actual en un gist. **La API de Gist requiere que los usuarios estén autenticados** para poder publicar un gist."
+
+#: ../../file_explorer.md:129
+msgid "Click [this link](https://github.com/settings/tokens) to Github tokens setup and select Generate new token. Then check the **Create gists** checkbox and generate a new token. Also make sure you check the box to enable the creation of Gists with this token."
+msgstr "Haga clic en [este enlace](https://github.com/settings/tokens) a Configuración de tokens de Github y seleccione Generar nuevo token. Luego marque la casilla **Crear gists** y genere un nuevo token. Asegúrese también de marcar la casilla para habilitar la creación de Gists con este token."
+
+#: ../../file_explorer.md:131
+msgid "Take the token and paste it in Remix's **Settings** module in the **Github Access Token** section. And then click Save."
+msgstr "Tome el token y péguelo en el módulo **Configuración** de Remix en la sección **Token de acceso a Github**. Y luego haga clic en Guardar."
+
+#: ../../file_explorer.md:133
+msgid "You can also publish by right-clicking on the file or folder."
+msgstr "También puede publicar haciendo clic con el botón derecho del ratón sobre el archivo o la carpeta."
+
+#: ../../file_explorer.md:135
+msgid "Right-Click popup menu"
+msgstr "Menú emergente del botón derecho"
+
+#: ../../file_explorer.md:137
+msgid "Right-Click on a folder"
+msgstr "Haga clic con el botón derecho en una carpeta"
+
+#: ../../file_explorer.md:138
+msgid "![](images/a-fe-rtclick-file.png)"
+msgstr "![](images/a-fe-rtclick-file.png)"
+
+#: ../../file_explorer.md:140
+msgid "Right-clicking on a folder will bring a popup menu for operations you can do on that folder."
+msgstr "Si hace clic con el botón derecho en una carpeta, aparecerá un menú emergente con las operaciones que puede realizar en esa carpeta."
+
+#: ../../file_explorer.md:142
+msgid "The right-click popup menu also works with Remixd (which gives you access to a folder on your hard drive)."
+msgstr "El menú emergente del botón derecho también funciona con Remixd (que le da acceso a una carpeta de su disco duro)."
+
+#: ../../file_explorer.md:144
+msgid "**Note:** When working with RemixD, and when adding files to the shared folder from your computer (and not from Remix), you'll need to open and close the containing folder or switch in and out of **localhost** workspace to refresh the view."
+msgstr "**Nota:** Cuando trabaje con RemixD, y cuando añada archivos a la carpeta compartida desde su ordenador (y no desde Remix), tendrá que abrir y cerrar la carpeta contenedora o entrar y salir del espacio de trabajo **localhost** para refrescar la vista."
+
+#: ../../file_explorer.md:146
+msgid "Right-Click on a Solidity file"
+msgstr "Haga clic con el botón derecho en un archivo Solidity"
+
+#: ../../file_explorer.md:148
+msgid "Right-clicking on a file with a .sol extension will bring up a popup menu - which includes options for compiling & flattening, creating UML diagrams, and generating documentation."
+msgstr "Si hace clic con el botón derecho en un archivo con extensión .sol, aparecerá un menú emergente que incluye opciones para compilar y aplanar, crear diagramas UML y generar documentación."
+
+#: ../../file_explorer.md:150
+msgid "![](images/a-fe-rtclick-sol-file.png)"
+msgstr "![](images/a-fe-rtclick-sol-file.png)"
+
+#: ../../file_explorer.md:152
+msgid "Right-Click on a Script"
+msgstr "Haga clic con el botón derecho en un guión"
+
+#: ../../file_explorer.md:154
+msgid "![](images/a-fe-rtclick-script.png)"
+msgstr "![](images/a-fe-rtclick-script.png)"
+
+#: ../../file_explorer.md:156
+msgid "Right-click on any file with a .js or .ts extension to get the **Run** option in the popup menu to run the script."
+msgstr "Haga clic con el botón derecho en cualquier archivo con extensión .js o .ts para obtener la opción **Ejecutar** en el menú emergente y ejecutar el script."
+
+#: ../../file_explorer.md:158
+msgid "If the script you want to run is the active file in the Editor, you can also run it by using play button at the top left of the Editor or by inputting the command `remix.exeCurrent()` in the console."
+msgstr "Si el script que desea ejecutar es el archivo activo en el Editor, también puede ejecutarlo utilizando el botón de reproducción situado en la parte superior izquierda del Editor o introduciendo el comando `remix.exeCurrent()` en la consola."
+
+#: ../../file_explorer.md:160
+msgid "Git in the File Explorer"
+msgstr "Git en el Explorador de archivos"
+
+#: ../../file_explorer.md:162
+msgid "In Remix, a workspace can be initialized with Git.  The Git commands then operate on the workspace."
+msgstr "En Remix, se puede inicializar un espacio de trabajo con Git.  Los comandos Git operan entonces sobre el espacio de trabajo."
+
+#: ../../file_explorer.md:164
+msgid "Initialize"
+msgstr "Inicialice"
+
+#: ../../file_explorer.md:165
+msgid "For information about initializing a workspace, see this [section](#workspaces-initialized-with-git)."
+msgstr "Para obtener información sobre cómo inicializar un espacio de trabajo, consulte este [section](#workspaces-initialized-with-git)."
+
+#: ../../file_explorer.md:168
+msgid "The clone command is located in the **Workspace hamburger menu**.  For more information, see the section about [workspace operations](#workspace-operations)"
+msgstr "El comando clonar se encuentra en el **menú hamburguesa del espacio de trabajo**.  Para más información, consulte la sección sobre [operaciones en el espacio de trabajo](#operaciones en el espacio de trabajo)"
+
+#: ../../file_explorer.md:169
+msgid "Branch Management"
+msgstr "Gestión de sucursales"
+
+#: ../../file_explorer.md:170
+msgid "When you are in a workspace that is initialized with Git, at the bottom of the File Explorer, you’ll see the place for managing branches."
+msgstr "Cuando se encuentre en un espacio de trabajo inicializado con Git, en la parte inferior del Explorador de archivos, verá el lugar para la gestión de ramas."
+
+#: ../../file_explorer.md:172
+msgid "![](images/a-fe-branch-man1.png)"
+msgstr "![](images/a-fe-branch-man1.png)"
+
+#: ../../file_explorer.md:174
+msgid "Then when you click on the branch name, this section will expand with an interface for switching branches and for creating a new branch."
+msgstr "A continuación, cuando haga clic en el nombre de la sucursal, esta sección se ampliará con una interfaz para cambiar de sucursal y para crear una nueva."
+
+#: ../../file_explorer.md:176
+msgid "![](images/a-fe-branch-man2.png)"
+msgstr "![](images/a-fe-branch-man2.png)"
+
+#: ../../file_explorer.md:178
+msgid "For the rest of the Git commands, go to the DGit plugin."
+msgstr "Para el resto de comandos Git, vaya al plugin DGit."
+
+#: ../../file_explorer.md:180
+msgid "For more info about the DGit plugin, see ![this article](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da)."
+msgstr "Para más información sobre el plugin DGit, consulte ![este artículo](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da)."
+
+#: ../../file_explorer.md:180
+msgid "this article"
+msgstr "este artículo"
+

@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_github.pot\n"
+"X-Crowdin-File-ID: 6486\n"
+"Language: es_ES\n"
+
+#: ../../remix_tutorials_github.md:1
+msgid "Remix Github Tutorials"
+msgstr "Remezclar tutoriales de Github"
+
+#: ../../remix_tutorials_github.md:4
+msgid "There are a series of tutorials in our github repo remix-workshops."
+msgstr "Hay una serie de tutoriales en nuestro repo de github remix-workshops."
+
+#: ../../remix_tutorials_github.md:6
+msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
+msgstr "Estamos actualizando estos tutoriales para que utilicen el nuevo diseño de Remix."
+
+#: ../../remix_tutorials_github.md:8
+msgid "In this repo there tutorials for all levels."
+msgstr "En este repo hay tutoriales para todos los niveles."
+
+#: ../../remix_tutorials_github.md:10
+msgid "There are tutorials for specific remix functionalities like:"
+msgstr "Hay tutoriales para funcionalidades específicas de la remezcla como:"
+
+#: ../../remix_tutorials_github.md:12
+msgid "Deploying"
+msgstr "Desplegando"
+
+#: ../../remix_tutorials_github.md:18
+msgid "Testing"
+msgstr "Pruebas"
+
+#: ../../remix_tutorials_github.md:23
+msgid "Remix Plugin Development"
+msgstr "Desarrollo de plugins Remix"
+
+#: ../../remix_tutorials_github.md:27
+msgid "Other"
+msgstr "Otros"
+
+#: ../../remix_tutorials_github.md:35
+msgid "Additional external workshops"
+msgstr "Talleres externos adicionales"
+
