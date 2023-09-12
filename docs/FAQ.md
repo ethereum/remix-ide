@@ -16,13 +16,15 @@ FAQ
 
 **A:** Yes - here is the list of keyboard shortcuts:
 
-`Ctrl+Shift+F` : Opens the File Explorer
-
-`Ctrl+Shift+A` : Opens the Plugin Manager
-
 `Ctrl+S`: Compiles the active Solidity file 
 
 `Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)
+
+`Ctrl+Shift+F` : Opens the File Explorer
+
+`CTRL+Alt+F` : Format the code in the current file
+
+`Ctrl+Shift+A` : Opens the Plugin Manager
 
 ### Solidity compiler
 
@@ -44,7 +46,7 @@ Please change the compiler version in Solidity Plugin to the newer one or use an
 
 **A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract.  
 
-There is a plugin called `Flattener` which will stuff all the original code and the imported code into a single file.
+A contracts can be 'flattened' by right-clicking on in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file.
 
 ### Deploy & Run
 
@@ -54,8 +56,7 @@ There is a plugin called `Flattener` which will stuff all the original code and 
 
 **Q:** Where is deploy button?
 
-**A:** It's in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager.
-You could also activate everything you need to work with solidity on the landing page (click the remix logo at the top left of the screen) and click the "Solidity" button in the environment section.
+**A:** It's in the **Deploy & Run Transactions** module. 
 
 **Q:** How to pass a tuple to a public function in Remix?
 
@@ -127,7 +128,7 @@ The input of initPeepToPeeps takes a struct.  If you input
 
 **Q:** Where is the info stored?  Is the info shared with 3rd parties? 
 
-**A:** All data collected through Matomo is stored on our own server. No data is given to third parties.
+**A:** All data collected through Matomo is stored on our server. No data is given to third parties.
 
 We respect your privacy and do not collect nor store any personally identifiable information (PII).
 
