@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
 "Last-Translator: \n"
-"Language: es_ES\n"
 "Language-Team: Spanish\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/debugger.pot\n"
+"X-Crowdin-File-ID: 6470\n"
+"Language: es_ES\n"
 
 #: ../../debugger.md:1
 msgid "Debugger"
@@ -40,7 +43,7 @@ msgstr "**Active** el depurador en el Gestor de complementos y, a continuación,
 
 #: ../../debugger.md:13
 msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
-msgstr "El depurador resaltará el código relevante en el Editor.  Si desea volver a editar el código sin que el depurador lo resalte, pulse el botón **Detener depuración**."
+msgstr "El depurador resaltará el código relevante en el Editor.  Si desea volver a editar el código sin que el depurador lo resalte, haga clic en el botón **Detener depuración**."
 
 #: ../../debugger.md:15
 msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
@@ -100,7 +103,7 @@ msgstr "Paso atrás"
 
 #: ../../debugger.md:38
 msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
-msgstr "Este botón pasa al opcode anterior.  Si el paso anterior implica una **llamada a función**, no se introducirá la función."
+msgstr "Este botón va al opcode anterior.  Si el paso anterior implica una **llamada a función**, no se introducirá la función."
 
 #: ../../debugger.md:39
 msgid "Step back"
@@ -204,7 +207,7 @@ msgstr "![](images/a-debug-opcodes1.png)"
 
 #: ../../debugger.md:74
 msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
-msgstr "A medida que arrastra el **deslizador** (que está encima de los botones de navegación), el número de paso enfocado y el opcode cambian."
+msgstr "Al arrastrar el **deslizador** (que está encima de los botones de navegación), el número de paso enfocado y el opcode cambian."
 
 #: ../../debugger.md:75
 msgid "Step details"
@@ -292,7 +295,7 @@ msgstr "Datos de llamada"
 
 #: ../../debugger.md:111
 msgid "The call data contains the functions parameters."
-msgstr "Los datos de llamada contienen los parámetros de las funciones."
+msgstr "Los datos de la llamada contienen los parámetros de las funciones."
 
 #: ../../debugger.md:113
 msgid "![](images/a-debug-call-data.png)"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"PO-Revision-Date: 2023-09-07 19:38\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -624,7 +624,7 @@ msgstr "Importar desde GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr "Es posible importar archivos directamente desde GitHub.  Debe especificar la etiqueta de versión (cuando esté disponible), de lo contrario obtendrá el código más reciente de la rama maestra.  Para OpenZeppelin Contracts sólo debe utilizar código publicado en una versión oficial, el ejemplo siguiente importa de OpenZeppelin Contracts v2.5.0."
+msgstr "Es posible importar archivos directamente desde GitHub.  Debe especificar la etiqueta de versión (cuando esté disponible), de lo contrario obtendrá el último código de la rama maestra.  Para OpenZeppelin Contracts sólo debe utilizar código publicado en una versión oficial, el ejemplo siguiente importa de OpenZeppelin Contracts v2.5.0."
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
@@ -768,7 +768,7 @@ msgstr "Cuando cargue Remix, el panel de iconos mostrará estos iconos por defec
 
 #: ../../layout.md:19
 msgid "Everything in remix is now a plugin...  so the Plugin Manager is very important. In the old layout, each basic task in remix was separated into the tabs.  Now these tabs are plugins."
-msgstr "Todo en remix es ahora un plugin... por lo que el Gestor de Plugins es muy importante. En el antiguo diseño, cada tarea básica en remix estaba separada en las pestañas.  Ahora estas pestañas son plugins."
+msgstr "Todo en remix es ahora un plugin... así que el Gestor de Plugins es muy importante. En el antiguo diseño, cada tarea básica en remix estaba separada en las pestañas.  Ahora estas pestañas son plugins."
 
 #: ../../layout.md:22
 msgid "But to activate a half a dozen plugins - (or however many you are using) each time the page load is tedious.  So learn about the Environments."
@@ -792,7 +792,7 @@ msgstr "Entornos"
 
 #: ../../layout.md:34
 msgid "Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a Solidity Button and a Vyper button.  In the future you will be able to save your own environment."
-msgstr "Al hacer clic en uno de los botones de entorno se carga una colección de plugins.  Actualmente tenemos un botón Solidity y un botón Vyper.  En el futuro podrá guardar su propio entorno."
+msgstr "Al hacer clic en uno de los botones de entorno, se carga una colección de plugins.  Actualmente tenemos un botón Solidity y un botón Vyper.  En el futuro podrá guardar su propio entorno."
 
 #: ../../layout.md:36
 msgid "To see all the plugins go to the plugin manager - by selecting the plug in the icon panel."
@@ -952,7 +952,7 @@ msgstr "El Gestor de Plugins es también el lugar al que debe acudir cuando est�
 
 #: ../../plugin_manager.md:17
 msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr "Para cargar su plugin local, haga clic en el enlace \"Conectar con un plugin local\" en la parte superior del panel del Gestor de Plugins."
+msgstr "Para cargar su plugin local, haga clic en el enlace \"Conectar con un plugin local\" en la parte superior del panel del Gestor de plugins."
 
 #: ../../plugin_manager.md:21
 msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
@@ -1040,7 +1040,7 @@ msgstr "swarmgw.put(contenido, cb): Subir archivos a Swarm a través de https**:
 
 #: ../../remix_commands.md:39
 msgid "ethers.Contract: This API provides a graceful connection to a contract deployed on the blockchain, simplifying calling and querying its functions and handling all the binary protocol and conversion as necessarily."
-msgstr "ethers.Contract: Esta API proporciona una conexión elegante a un contrato desplegado en la blockchain, simplificando la llamada y consulta de sus funciones y manejando todo el protocolo binario y la conversión como es necesario."
+msgstr "ethers.Contract: Esta API proporciona una conexión elegante a un contrato desplegado en la blockchain, simplificando la llamada y consulta de sus funciones y manejando todo el protocolo binario y la conversión como sea necesario."
 
 #: ../../remix_commands.md:41
 msgid "ethers.HDNode: A Hierarchical Deterministic Wallet represents a large tree of private keys which can reliably be reproduced from an initial seed."
@@ -1232,7 +1232,7 @@ msgstr "Desde el IDE Remix, en el Gestor de plugins, active el plugin remixd.  E
 
 #: ../../remixd.md:43
 msgid "This modal will ask confirmation"
-msgstr "Este modal pedirá confirmación"
+msgstr "Este modal le pedirá confirmación"
 
 #: ../../remixd.md:45
 msgid "Accepting this dialog will start a session."
@@ -1412,7 +1412,7 @@ msgstr "Valor:"
 
 #: ../../run.md:67
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is NOT for gas."
-msgstr "Establece la cantidad de ETH, WEI, GWEI etc que se envía a un contrato o a una función pagadera.  ( Nota: las funciones pagaderas tienen un botón rojo). El valor siempre se restablece a 0 después de cada ejecución de transacción). El campo Valor NO es para el gas."
+msgstr "Establece la cantidad de ETH, WEI, GWEI etc que se envía a un contrato o a una función pagadera.  ( Nota: las funciones pagaderas tienen un botón rojo). El valor siempre se pone a 0 después de cada ejecución de transacción). El campo Valor NO es para el gas."
 
 #: ../../run.md:71
 msgid "Initiate Instance"
@@ -1440,7 +1440,7 @@ msgstr "La validación de una transacción tarda varios segundos. Durante este t
 
 #: ../../run.md:92
 msgid "Using the ABI"
-msgstr "Uso del ABI"
+msgstr "Utilización del ABI"
 
 #: ../../run.md:95
 msgid "Using Deploy or At Address is a classic use case of Remix. However, it is possible to interact with a contract by using its ABI. The ABI is a JSON array which describe its interface."
@@ -1544,7 +1544,7 @@ msgstr "Ajuste de texto: controla si el texto en el editor debe ser ajustado."
 
 #: ../../settings.md:14
 msgid "Enable optimization: defines if the compiler should enable optimization during compilation. Enabling this option saves execution gas. It is useful to enable optimization for contracts ready to be deployed in production but could lead to some inconsistencies when debugging such a contract."
-msgstr "Activar optimización: define si el compilador debe activar la optimización durante la compilación. Activar esta opción ahorra gas de ejecución. Es útil habilitar la optimización para contratos listos para ser desplegados en producción, pero podría dar lugar a algunas incoherencias al depurar un contrato de este tipo."
+msgstr "Activar optimización: define si el compilador debe activar la optimización durante la compilación. Activar esta opción ahorra gas de ejecución. Es útil habilitar la optimización para los contratos listos para ser desplegados en producción, pero podría dar lugar a algunas incoherencias al depurar un contrato de este tipo."
 
 msgid ""
 msgstr ""
@@ -1772,7 +1772,7 @@ msgstr "Categoría: Varios"
 
 #: ../../static_analysis.md:203
 msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
-msgstr "Funciones constantes/vistas/puras: Funciones potencialmente constantes/visibles/puras"
+msgstr "Funciones constantes/vistas/puras: Funciones potencialmente constantes/vistas/puras"
 
 #: ../../static_analysis.md:205
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
@@ -1832,7 +1832,7 @@ msgstr "Datos truncados: La división en valores int/uint trunca el resultado"
 
 #: ../../static_analysis.md:282
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr "La división de valores enteros vuelve a dar como resultado un valor entero. Esto significa, por ejemplo, 10 / 100 = 0 en lugar de 0,1, ya que el resultado vuelve a ser un número entero. Esto no es válido para la división de (sólo) valores literales ya que esos dan constantes racionales."
+msgstr "La división de valores enteros vuelve a dar como resultado un valor entero. Esto significa, por ejemplo, que 10 / 100 = 0 en lugar de 0,1, ya que el resultado vuelve a ser un número entero. Esto no es válido para la división de (sólo) valores literales ya que esos dan constantes racionales."
 
 #: ../../static_analysis.md:292
 msgid "Remix-analyzer"
@@ -1856,7 +1856,7 @@ msgstr "Chat de apoyo"
 
 #: ../../support.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
-msgstr "Sabemos que el ecosistema blockchain es muy nuevo y que hay mucha información dispersa por la web. Por eso hemos creado un chat de apoyo a la comunidad en el que nosotros y otros usuarios tratamos de responder a sus preguntas si se queda atascado utilizando Remix. Por favor, únase al canal Remix y pida ayuda a la comunidad."
+msgstr "Sabemos que el ecosistema blockchain es muy nuevo y que hay mucha información dispersa por la web. Por eso hemos creado un chat de apoyo a la comunidad en el que nosotros y otros usuarios intentamos responder a sus preguntas si se queda atascado utilizando Remix. Por favor, únase al canal Remix y pida ayuda a la comunidad."
 
 #: ../../support.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
@@ -1884,7 +1884,7 @@ msgstr "Muestra las acciones importantes realizadas al interactuar con el IDE Re
 
 #: ../../terminal.md:14
 msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
-msgstr "Muestra las transacciones que se minan en el contexto actual. Puede elegir mostrar todas las transacciones o sólo las transacciones que se refieran a los contratos que Remix conoce (por ejemplo, transacciones creadas desde el IDE de Remix)."
+msgstr "Muestra las transacciones que se minan en el contexto actual. Puede elegir mostrar todas las transacciones o sólo las transacciones que se refieren a los contratos que Remix conoce (por ejemplo, transacciones creadas desde el IDE de Remix)."
 
 #: ../../terminal.md:18
 msgid "It allows searching for the data and clearing the logs from the terminal."
@@ -1928,7 +1928,7 @@ msgstr "cree un archivo en blanco en el explorador de archivos (haciendo clic en
 
 #: ../../tutorial_debug.md:11
 msgid "copy the code below."
-msgstr "copie el código siguiente."
+msgstr "copie el siguiente código."
 
 #: ../../tutorial_debug.md:12
 msgid "compile the code."
@@ -2144,7 +2144,7 @@ msgstr "Puntos de interrupción"
 
 #: ../../tutorial_debug.md:180
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
-msgstr "Los dos últimos botones del área de navegación se utilizan para saltar hacia atrás al punto de interrupción anterior o hacia adelante al siguiente punto de interrupción."
+msgstr "Los dos últimos botones del área de navegación se utilizan para saltar hacia atrás al punto de ruptura anterior o hacia adelante al siguiente punto de ruptura."
 
 #: ../../tutorial_debug.md:183
 msgid "Breakpoints can be added and removed by clicking on the line number in the Editor."
@@ -2332,7 +2332,7 @@ msgstr "Si incumple las normas al utilizar las interacciones de bajo nivel recib
 
 #: ../../udapp.md:79
 msgid "Please see the solidity docs for more specifics about using the fallback and receive functions."
-msgstr "Consulte la documentación de solidity para obtener más información sobre el uso de las funciones de retroceso y recepción."
+msgstr "Consulte la documentación de solidity para obtener más información sobre el uso de las funciones fallback y receive."
 
 #: ../../udapp.md:81
 msgid "Passing in a tuple or a struct to a function"
@@ -2484,7 +2484,7 @@ msgstr "Ahora aparecerá el icono de doble comprobación en la barra de iconos l
 
 #: ../../unittesting.md:16
 msgid "Alternatively, just select Solidity environment from remix IDE home page. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
-msgstr "Alternativamente, sólo tiene que seleccionar el entorno Solidity en la página de inicio de remix IDE. Esto activará el plugin Solidity Unit Testing junto con los plugins Solidity Compiler, Deploy & Run Transactions y Solidity Static Analysis."
+msgstr "Alternativamente, sólo tiene que seleccionar el entorno Solidity en la página de inicio del IDE remix. Esto activará el plugin Solidity Unit Testing junto con los plugins Solidity Compiler, Deploy & Run Transactions y Solidity Static Analysis."
 
 #: ../../unittesting.md:20
 msgid "Generate"
@@ -2504,7 +2504,7 @@ msgstr "Escriba pruebas para comprobar la funcionalidad de su contrato. Remix in
 
 #: ../../unittesting.md:28
 msgid "Apart from this, Remix allows usage of some special functions to make testing more structural. They are:"
-msgstr "Aparte de esto, Remix permite el uso de algunas funciones especiales para hacer las pruebas más estructurales. Éstas son:"
+msgstr "Aparte de esto, Remix permite utilizar algunas funciones especiales para hacer las pruebas más estructurales. Éstas son:"
 
 #: ../../unittesting.md:30
 msgid "beforeEach() - Runs before each test"
