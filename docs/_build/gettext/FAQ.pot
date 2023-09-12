@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"POT-Creation-Date: 2023-09-12 15:35-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,7 @@ msgid "**Q:** Where do plugin developers go with their questions?"
 msgstr ""
 
 #: ../../FAQ.md:111
-msgid "**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
+msgid "**A:** First, join our [Discord server](https://discord.gg/zUNteAzJs3) and then go to the development-plugin channel."
 msgstr ""
 
 #: ../../FAQ.md:113
