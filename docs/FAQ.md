@@ -46,7 +46,7 @@ Please change the compiler version in Solidity Plugin to the newer one or use an
 
 **A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract.  
 
-A contracts can be 'flattened' by right-clicking on in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file.
+A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file.
 
 ### Deploy & Run
 
