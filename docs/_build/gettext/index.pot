@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,42 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../index.rst:51
-#: ../../index.rst:51
 msgid "Introduction"
 msgstr ""
 
 #: ../../index.rst:61
-#: ../../index.rst:61
 msgid "Core Modules"
 msgstr ""
 
-#: ../../index.rst:72
-#: ../../index.rst:72
+#: ../../index.rst:73
 msgid "Solidity modules"
 msgstr ""
 
-#: ../../index.rst:83
-#: ../../index.rst:83
+#: ../../index.rst:84
 msgid "Unit Testing"
 msgstr ""
 
-#: ../../index.rst:93
-#: ../../index.rst:93
+#: ../../index.rst:94
 msgid "External Tool Integrations"
 msgstr ""
 
-#: ../../index.rst:102
-#: ../../index.rst:102
+#: ../../index.rst:103
 msgid "Guides"
 msgstr ""
 
-#: ../../index.rst:113
-#: ../../index.rst:113
+#: ../../index.rst:114
 msgid "Advanced"
 msgstr ""
 
-#: ../../index.rst:120
-#: ../../index.rst:120
+#: ../../index.rst:121
 msgid "Miscellaneous"
 msgstr ""
 
@@ -81,7 +73,7 @@ msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.
 msgstr ""
 
 #: ../../index.rst:17
-msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
+msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
 msgstr ""
 
 #: ../../index.rst:20

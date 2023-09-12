@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,7 +129,7 @@ msgid "**External Plugins** to get these plugins' names, please go to [https://g
 msgstr ""
 
 #: ../../locations.md:51
-msgid "Deactiving a list of plugins"
+msgid "Deactivating a list of plugins"
 msgstr ""
 
 #: ../../locations.md:56
@@ -161,7 +161,7 @@ msgid "A URL example combining multiple parameters"
 msgstr ""
 
 #: ../../locations.md:80
-msgid "To link to Remix with the a list of plugins activated and with:"
+msgid "To link to Remix with the list of plugins activated and with:"
 msgstr ""
 
 #: ../../locations.md:82

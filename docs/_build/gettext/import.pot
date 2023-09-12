@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgid "Importing a library or dependency"
 msgstr ""
 
 #: ../../import.md:10
-msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
+msgid "When importing from NPM, or a URL (like github, an IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
 msgstr ""
 
 #: ../../import.md:12
@@ -93,7 +93,7 @@ msgid "Importing a file from your computer's filesystem"
 msgstr ""
 
 #: ../../import.md:63
-msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computers filesystem."
+msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computer's filesystem."
 msgstr ""
 
 #: ../../import.md:65
@@ -105,11 +105,11 @@ msgid "For a detailed explanation of the `import` keyword see the [Solidity docu
 msgstr ""
 
 #: ../../import.md:70
-msgid "Importing a files for manipulation"
+msgid "Importing files for manipulation"
 msgstr ""
 
 #: ../../import.md:71
-msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder the shows their source - eg github or gists."
+msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder that shows their source - eg github or gists."
 msgstr ""
 
 #: ../../import.md:73

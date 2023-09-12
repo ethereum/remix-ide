@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgid "![](images/a-ssa-activate.png)"
 msgstr ""
 
 #: ../../static_analysis.md:10
-msgid "`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgid "`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
 msgstr ""
 
 #: ../../static_analysis.md:12
@@ -185,7 +185,7 @@ msgid "Use of inline assembly is advised only in rare cases."
 msgstr ""
 
 #: ../../static_analysis.md:92
-msgid "**Block timestamp: Semantics maybe unclear**"
+msgid "**Block timestamp: Semantics may be unclear**"
 msgstr ""
 
 #: ../../static_analysis.md:94
@@ -193,7 +193,7 @@ msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`
 msgstr ""
 
 #: ../../static_analysis.md:105
-msgid "**Low level calls: Semantics maybe unclear**"
+msgid "**Low level calls: Semantics may be unclear**"
 msgstr ""
 
 #: ../../static_analysis.md:107

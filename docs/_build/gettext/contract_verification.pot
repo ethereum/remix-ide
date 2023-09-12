@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -161,7 +161,7 @@ msgid "Paste in the proxy contract address into the Contract Address box."
 msgstr ""
 
 #: ../../contract_verification.md:68
-msgid "To explain this visually, verify the implmentation contract:"
+msgid "To explain this visually, verify the implementation contract:"
 msgstr ""
 
 #: ../../contract_verification.md:70
@@ -181,7 +181,7 @@ msgid "And then paste the address of the proxy contract into the Contract Addres
 msgstr ""
 
 #: ../../contract_verification.md:79
-msgid "Generate Verfication Scripts"
+msgid "Generate Verification Scripts"
 msgstr ""
 
 #: ../../contract_verification.md:80

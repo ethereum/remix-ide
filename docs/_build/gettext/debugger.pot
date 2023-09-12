@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgid "Use generated sources"
 msgstr ""
 
 #: ../../debugger.md:22
-msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
 msgstr ""
 
 #: ../../debugger.md:24
@@ -269,7 +269,7 @@ msgid "Storage"
 msgstr ""
 
 #: ../../debugger.md:102
-msgid "This is the persistant storage."
+msgid "This is the persistent storage."
 msgstr ""
 
 #: ../../debugger.md:104
@@ -317,7 +317,7 @@ msgid "Full Storage Changes"
 msgstr ""
 
 #: ../../debugger.md:119
-msgid "This shows the persistant storage at the end of the function."
+msgid "This shows the persistent storage at the end of the function."
 msgstr ""
 
 #: ../../debugger.md:121

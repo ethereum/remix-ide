@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,7 +109,7 @@ msgid "This will send the Ether to the function."
 msgstr ""
 
 #: ../../tutorial_debug.md:83
-msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
 msgstr ""
 
 #: ../../tutorial_debug.md:85
@@ -289,7 +289,7 @@ msgid "Return Value (only if the current step is a RETURN opcode)"
 msgstr ""
 
 #: ../../tutorial_debug.md:178
-msgid "Full Storages Changes (only at the end of the execution & it displays the all the storage changes)"
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
 msgstr ""
 
 #: ../../tutorial_debug.md:180
