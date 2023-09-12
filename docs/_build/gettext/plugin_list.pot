@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,11 +101,11 @@ msgid "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>Deploy & interact with sm
 msgstr ""
 
 #: ../../plugin_list.md:100
-msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizes that teach users Solidity and Remix features. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
+msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizzes that teach users Solidity and Remix features. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
 msgstr ""
 
 #: ../../plugin_list.md:106
-msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allow you to take Lexon code and to <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
+msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allows you to take Lexon code and to <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
 msgstr ""
 
 #: ../../plugin_list.md:112
@@ -125,7 +125,7 @@ msgid "**One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>Makes a basic fro
 msgstr ""
 
 #: ../../plugin_list.md:135
-msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compile contracts written in Cairo to Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin) <br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)"
+msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compile contracts written in Cairo to Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler <br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin) <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
 msgstr ""
 
 #: ../../plugin_list.md:141

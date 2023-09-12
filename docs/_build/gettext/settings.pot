@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,7 +101,7 @@ msgid "![](images/a-settings-pub-swarm.png)"
 msgstr ""
 
 #: ../../settings.md:38
-msgid "Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist you content as surely as if you put in your own info."
+msgid "Without putting in an address & postage stamp, you'll be using the public gateway, which may not persist your content as surely as if you put in your own info."
 msgstr ""
 
 #: ../../settings.md:40

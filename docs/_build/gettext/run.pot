@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,7 +225,7 @@ msgid "**Note:** When using AtAddress, be sure you trust the contract at that ad
 msgstr ""
 
 #: ../../run.md:130
-msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
+msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access."
 msgstr ""
 
 #: ../../run.md:132
@@ -265,7 +265,7 @@ msgid "The Recorder is a tool used to save a bunch of transactions in a JSON fil
 msgstr ""
 
 #: ../../run.md:158
-msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgid "Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
 msgstr ""
 
 #: ../../run.md:160
@@ -289,7 +289,7 @@ msgid "Deploying contract does often require more than creating one transaction 
 msgstr ""
 
 #: ../../run.md:172
-msgid "Working in a dev environment often requires setting up the state in a first place."
+msgid "Working in a dev environment often requires setting up the state in the first place."
 msgstr ""
 
 #: ../../run.md:175

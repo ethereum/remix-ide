@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgid "**ethers**: Remix IDE enables the use of ethersjs commands. See the [Ethe
 msgstr ""
 
 #: ../../remix_commands.md:10
-msgid "**web3**: Remix IDE enable the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
+msgid "**web3**: Remix IDE enables the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
 msgstr ""
 
 #: ../../remix_commands.md:12

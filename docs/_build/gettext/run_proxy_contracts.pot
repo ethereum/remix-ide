@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Deploy & Run Proxy Contracts"
 msgstr ""
 
 #: ../../run_proxy_contracts.md:4
-msgid "Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern."
+msgid "Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern."
 msgstr ""
 
 #: ../../run_proxy_contracts.md:6
@@ -29,7 +29,7 @@ msgid "A UUPS proxy contract is the implementation side of an [ERC1967Proxy](htt
 msgstr ""
 
 #: ../../run_proxy_contracts.md:8
-msgid "Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address."
+msgid "Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address."
 msgstr ""
 
 #: ../../run_proxy_contracts.md:10
@@ -37,7 +37,7 @@ msgid "To interact with the functions in the **implementation contract**, use th
 msgstr ""
 
 #: ../../run_proxy_contracts.md:12
-msgid "When its time to upgrade you contract, Remix has a UI for this."
+msgid "When it's time to upgrade your contract, Remix has a UI for this."
 msgstr ""
 
 #: ../../run_proxy_contracts.md:14
