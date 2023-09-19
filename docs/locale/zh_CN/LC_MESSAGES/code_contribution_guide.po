@@ -31,5 +31,5 @@ msgstr "Remix 应用程序是基于 JavaScript 构建的，它不使用任何框
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
-msgstr "若要了解更多信息，请访问我们的 [GitHub 页面](https://github.com/etherum/remix-project)。"
+msgstr "若要了解更多信息，请访问我们的 [GitHub 页面](https://github.com/ethereum/remix-project)。"
 
