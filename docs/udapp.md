@@ -88,7 +88,7 @@ needs to put in at the top of the solidity file.
 ### Example of passing nested struct to a function
 Consider a nested struct defined like this:
 ```
-struct gardenPlot {
+struct Garden {
     uint slugCount;  
     uint wormCount;
     Flower[] theFlowers;
