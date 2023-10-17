@@ -77,8 +77,8 @@ The number of errors in a file is also reported in the File Explorer. Hovering o
 
 ![](images/a-editor-error-fe-num.png)
 
-## Quick Fixes for commonly forgotten code
-The Remix editor offers solutions to the following missing code:
+## Quick Fixes for common mistakes
+The Remix editor offers solutions to the following missing keywords & code:
 - License
 - Pragma
 - Visibility
@@ -87,17 +87,17 @@ The Remix editor offers solutions to the following missing code:
 - Add virtual or override
 - Marking a contract abstract
 
-In the image below, the license has been left out.  After compilation, a warning is triggered and a blue dot appears. 
+A Quick Fix option is available when there is a blue dot in Editor - like in the image below. 
+
+In this example, the license has been left out.  After compilation, a warning is triggered and a Quick Fix blue dot appears. 
 
 ![](images/a-editor-qf-license.png)
 
-When you click on the blue dot, there are a few options:
+When you click on the blue dot, a popup menu appears.  In this case of a missing license, these are the options:
 
 ![](images/a-editor-qf-license-options5.png)
 
 If you can’t get the Quick Fix blue dot to appear, try clicking on the number for the line where the error occurs.
-
-
 
 ## Gas Estimates
 
