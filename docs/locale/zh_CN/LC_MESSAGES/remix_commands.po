@@ -1,20 +1,24 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 00:02-0400\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_commands.pot\n"
+"X-Crowdin-File-ID: 6484\n"
+"Language: zh_CN\n"
 
-#: ../../remix_commands.md:1 ../../remix_commands.md:14
+#: ../../remix_commands.md:1
+#: ../../remix_commands.md:14
 msgid "Remix Commands"
 msgstr "Remix命令"
 
@@ -31,8 +35,8 @@ msgid "**ethers**: Remix IDE enables the use of ethersjs commands. See the [Ethe
 msgstr "**ethers**：Remix IDE 可以使用 ethersjs 命令。请查看 [Ethers 文档](https://docs.ethers.io/)获取完整列表。"
 
 #: ../../remix_commands.md:10
-msgid "**web3**: Remix IDE enable the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
-msgstr "**web3**：Remix IDE 可以使用 web3js 命令。请查看 [Web3js 文档](https://web3js.readthedocs.io/)获取完整列表。"
+msgid "**web3**: Remix IDE enables the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
+msgstr "**Web3**：Remix IDE 可以使用 web3js 的命令。请查看 [Web3js 的文档](https://docs.ethers.io/)获取完整命令列表。"
 
 #: ../../remix_commands.md:12
 msgid "**swarmgw**: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
@@ -101,41 +105,4 @@ msgstr "**swarmgw.get(url, cb)**: 通过https**://swarm-gateways.net/从Swarm下
 #: ../../remix_commands.md:45
 msgid "**swarmgw.put(content, cb)**: Upload files to Swarm via https**://swarm-gateways.net/"
 msgstr "**swarmgw.put(content, cb)**: 通过 https**://swarm-gateways.net/ 上传文件到Swarm"
-
-#~ msgid ""
-#~ "In the console, you can run the"
-#~ " commands listed below.  Once you "
-#~ "start to type a command, there is"
-#~ " auto complete.  These commands are "
-#~ "using the following libraries:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "remix:  Remix has a number of CLI"
-#~ " commands for loading & executing "
-#~ "file in a workspace.  See the list"
-#~ " below."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "ethers: Remix IDE enables the use "
-#~ "of ethersjs commands. See the Ethers "
-#~ "docs for the full list."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "web3: Remix IDE enable the use of"
-#~ " web3js commands. See the Web3js docs"
-#~ " for the full list."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "ethers.utils: The utility functions exposed"
-#~ " in both the ethers umbrella package"
-#~ " and the ethers-utils.  eg "
-#~ "ethers.utils.formatBytes32String( text )"
-#~ msgstr ""
-
-#~ msgid "A few Swarm examples examples (these will be updated soon)"
-#~ msgstr ""
 

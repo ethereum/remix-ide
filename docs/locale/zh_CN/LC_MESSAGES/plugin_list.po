@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -57,135 +57,99 @@ msgstr "**Solidity Unit Testing** &nbsp; ![](images/pi-sut.png)<br> 运行用Sol
 msgid "**Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br> Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html). <br>profile name: **solidityStaticAnalysis** <br>[Documentation](static_analysis.html)"
 msgstr "**Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br> 静态代码分析是一种通过检查代码而不实际执行代码来调试代码的过程。该插件还与[Slither](slither.html)集成。<br>配置文件名称：**solidityStaticAnalysis** <br>[文档](static_analysis.html)"
 
-#: ../../plugin_list.md:43
+#: ../../plugin_list.md:42
 msgid "Additional Plugins"
 msgstr "其他插件"
 
-#: ../../plugin_list.md:45
+#: ../../plugin_list.md:44
 msgid "(sorted alphabetically)"
 msgstr "按字母顺序排序"
 
-#: ../../plugin_list.md:47
-msgid "**Celo Compiler / Deployer** &nbsp; ![](images/pi-celo.png)<br> Compile & Deploy to the Celo blockchain.  <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/dexfair/celo-remix-plugin) <br>[Make an issue](https://github.com/dexfair/celo-remix-plugin/issues)"
-msgstr "**Celo Compiler / Deployer** &nbsp; ![](images/pi-celo.png)<br> 编译并部署到Celo区块链。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[文档](https://github.com/dexfair/celo-remix-plugin) <br>[提交issue](https://github.com/dexfair/celo-remix-plugin/issues)"
+#: ../../plugin_list.md:46
+msgid "**Celo Compiler / Deployer** &nbsp; ![](images/pi-celo.png)<br> Compile & Deploy to the Celo blockchain. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/dexfair/celo-remix-plugin) <br>[Make an issue](https://github.com/dexfair/celo-remix-plugin/issues)"
+msgstr "**Celo 编译器/部署器** &nbsp; ![](images/pi-celo.png)<br> 编译并部署到 Celo 区块链。 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/dexfair/celo-remix-plugin) <br>[Make an issue](https://github.com/dexfair/celo-remix-plugin/issues)"
 
-#: ../../plugin_list.md:53
-msgid "**Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br> Deploy a contract to multiple chains (1 at a time) with the same address.  <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin) <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)"
-msgstr "**Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br> 使用相同的地址将合约部署到多个链（一次一个）。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[文档](https://github.com/hexdivision/remix-contract-deployer-plugin) <br>[提交issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)"
+#: ../../plugin_list.md:52
+msgid "**Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br> Deploy a contract to multiple chains (1 at a time) with the same address. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin) <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)"
+msgstr "** 合约部署器** &nbsp; ![](images/pi-deployer.png)<br> 将一个合约部署到具有相同地址的多个链上（一次 1 个）。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin <br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin) <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)"
 
-#: ../../plugin_list.md:59
-msgid "**Debug Tools for Remix** &nbsp;   ![](images/pi-remix-debug-tools.png) &nbsp; <br> Not to be confused with the Debugger, this tool is for plugin devs to help test their plugins & their plugin's API. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin <br>[Documentation](https://github.com/pldespaigne/remix-debug-plugin#-instalation)"
-msgstr "**Debug Tools for Remix** &nbsp; ![](images/pi-remix-debug-tools.png) &nbsp; <br> 不要与调试器混淆，此工具是为插件开发人员提供的，以帮助测试其插件及其插件的API。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/remix-plugin-debug/profile.json): debugPlugin <br>[文档](https://github.com/pldespaigne/remix-debug-plugin#-instalation)"
+#: ../../plugin_list.md:58
+msgid "**Contract Verification - Etherscan** &nbsp; ![](images/pi-etherscan.png) &nbsp; <br>Verify contracts on Etherscan. <br>[Profile name](https://github.com/ethereum/remix-project/blob/master/apps/etherscan/src/profile.json): etherscan <br>[Documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#etherscan) <br>[Make an issue](https://github.com/ethereum/remix-project/tree/master/apps/etherscan)"
+msgstr "** 合同验证 - Etherscan** &nbsp; ![](images/pi-etherscan.png) &nbsp; <br>在 Etherscan 上验证合同。 <br>[配置文件名称](https://github.com/ethereum/remix-project/blob/master/apps/etherscan/src/profile.json): etherscan <br>[Documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#etherscan) <br>[提出问题](https://github.com/ethereum/remix-project/tree/master/apps/etherscan)"
 
 #: ../../plugin_list.md:64
-msgid "**Defi Explorer**  &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br> The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer <br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/) <br>[Make an issue](https://github.com/Machinalabs/remix-defi-explorer-plugin/issues)"
-msgstr "**Defi Explorer** &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br> Defi Explorer 将 Uniswap V2 协议加载到文件浏览器中。 <br>[配置文件名](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer <br>[文档](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/) <br>[提交issue](https://github.com/Machinalabs/remix-defi-explorer-plugin/issues)"
+msgid "**Contract Verification - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp; <br>Verify contracts and fetch verified contracts <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify <br>[Documentation](https://docs.sourcify.dev/docs/intro/) <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)"
+msgstr "** 合同验证 - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp; <br>验证合同并获取已验证的合同 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify <br>[Documentation](https://docs.sourcify.dev/docs/intro/) <br>[提出问题](https://github.com/sourcifyeth/remix-sourcify/issues)"
 
 #: ../../plugin_list.md:70
-msgid "**Defi Tutorials**  &nbsp; (main panel) &nbsp; ![](images/pi-defi-tut.png) <br> Learn about UMA. This plugin works with the UMA tutorials plugin.  <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-tutorials/profile.json): defiTutorials <br>[Make an issue](https://github.com/Machinalabs/remix-defi-tutorials-plugin/issues)"
-msgstr "**Defi Tutorials** &nbsp; (主面板) &nbsp; ![](images/pi-defi-tut.png) <br> 学习 UMA。此插件与 UMA 教程插件配合使用。<br>[配置文件名](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-tutorials/profile.json): defiTutorials <br>[创建issue](https://github.com/Machinalabs/remix-defi-tutorials-plugin/issues)"
+msgid "**Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br> Find any smart contract, build your project faster. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev <br>[Website](https://www.cookbook.dev) <br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin) <br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)"
+msgstr "**Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br> Find any smart contract, build your project faster. <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev <br>[Website](https://www.cookbook.dev) <br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin) <br>[提出问题](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)"
 
-#: ../../plugin_list.md:75
-msgid "**DGIT**  &nbsp; ![](images/pi-dgit.png) &nbsp;  Version Control  <br> Clone repos from github & create GIT repos & use standard git commands. Also export/import to IPFS. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit <br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin) <br>[Make an issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)"
-msgstr "**DGIT** &nbsp; ![](images/pi-dgit.png) &nbsp; 版本控制 <br> 从Github克隆存储库并创建GIT存储库，使用标准的Git命令。还可以导出/导入到IPFS。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit <br>[文档](https://github.com/bunsenstraat/remix-storage-plugin) <br>[提出issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)"
+#: ../../plugin_list.md:77
+msgid "**Defi Explorer** &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br> The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer <br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/) <br>[Make an issue](https://github.com/Machinalabs/remix-defi-explorer-plugin/issues)"
+msgstr "**Defi Explorer** &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br> Defi Explorer 可将 Uniswap V2 协议加载到文件浏览器中。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): Defiexplorer <br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/) <br>[提出问题](https://github.com/Machinalabs/remix-defi-explorer-plugin/issues)"
 
-#: ../../plugin_list.md:81
-msgid "**EthDoc Documentation Generator** &nbsp; ![](images/pi-ethdoc.png) &nbsp;   <br>Creates the documentation of a soldity contract - generated from the Natspec comments in the code. The generated doc is placed in EthDoc viewer - which will be visible in an tab in the editor. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc/profile.json): ethdoc <br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/) <br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-plugin/issues)"
-msgstr "**EthDoc Documentation Generator** &nbsp; ![](images/pi-ethdoc.png) &nbsp; <br>创建一个Solidity合约的文档 - 从代码中的Natspec注释生成。生成的文档将放置在EthDoc查看器中 - 可以在编辑器中的选项卡中查看。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc/profile.json): ethdoc <br>[文档](https://remix-ethdoc-plugin.readthedocs.io/en/latest/) <br>[提交issue](https://github.com/Machinalabs/remix-ethdoc-plugin/issues)"
+#: ../../plugin_list.md:83
+msgid "**Defi Tutorials** &nbsp; (main panel) &nbsp; ![](images/pi-defi-tut.png) <br> Learn about UMA. This plugin works with the UMA tutorials plugin. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-tutorials/profile.json): defiTutorials <br>[Make an issue](https://github.com/Machinalabs/remix-defi-tutorials-plugin/issues)"
+msgstr "**Defi 教程** &nbsp; （主面板） &nbsp; ![](images/pi-defi-tut.png) <br> 了解 UMA。此插件可与 UMA 教程插件一起使用。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-tutorials/profile.json): defiTutorials <br>[提出问题](https://github.com/Machinalabs/remix-defi-tutorials-plugin/issues)"
 
-#: ../../plugin_list.md:87
-msgid "**EthDoc Viewer** &nbsp; (main panel) &nbsp;   <br>This plugin work with EthDoc Generator.  It is automatically activated. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc-viewer/profile.json): ethdoc-viewer <br>[Documentation](https://remix-ethdoc-plugin.readthedocs.io/en/latest/) <br>[Make an issue](https://github.com/Machinalabs/remix-ethdoc-viewer-plugin/issues)"
-msgstr "**EthDoc Viewer** &nbsp; (主面板) &nbsp; <br>该插件与 EthDoc Generator 配合使用，会自动激活。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/ethdoc-viewer/profile.json): ethdoc-viewer <br>[文档](https://remix-ethdoc-plugin.readthedocs.io/en/latest/) <br>[提交issue](https://github.com/Machinalabs/remix-ethdoc-viewer-plugin/issues)"
+#: ../../plugin_list.md:88
+msgid "**DGIT** &nbsp; ![](images/pi-dgit.png) &nbsp; Version Control <br> Clone repos from github & create GIT repos & use standard git commands. Also export/import to IPFS. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit <br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin) <br>[Make an issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)"
+msgstr "**DGIT** &nbsp; ![](images/pi-dgit.png) &nbsp; 版本控制 <br> 从 github 克隆 repos 并创建 GIT repos，使用标准 git 命令。还可导出/导入到 IPFS。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit <br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin) <br>[提交问题](https://github.com/bunsenstraat/remix-storage-plugin/issues)"
 
-#: ../../plugin_list.md:93
-msgid "**Etherscan Contract Verifier** &nbsp; ![](images/pi-etherscan.png) &nbsp; <br>Verify a contract on Etherscan. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/etherscan/profile.json): etherscan <br>[Documentation](https://remix-etherscan-plugin.readthedocs.io/en/latest/) <br>[Make an issue](https://github.com/Machinalabs/remix-etherscan-plugin/issues)"
-msgstr "**Etherscan Contract Verifier** &nbsp; ![](images/pi-etherscan.png) &nbsp; <br>在Etherscan上验证一个合约。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/etherscan/profile.json): etherscan <br>[文档](https://remix-etherscan-plugin.readthedocs.io/en/latest/) <br>[提交issue](https://github.com/Machinalabs/remix-etherscan-plugin/issues)"
+#: ../../plugin_list.md:94
+msgid "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>Deploy & interact with smart contracts to the Klaytn public network, local klaytn nodes. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin <br>[Documentation](https://github.com/klaytn-ozys/plug-and-klay) <br>[Make an issue](https://github.com/klaytn-ozys/plug-and-klay/issues)"
+msgstr "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>向 Klaytn 公共网络、本地 klaytn 节点部署智能合约并与之交互。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin <br>[Documentation](https://github.com/klaytn-ozys/plug-and-klay) <br>[提出问题](https://github.com/klaytn-ozys/plug-and-klay/issues)"
 
-#: ../../plugin_list.md:99
-msgid "**Flattener** &nbsp; ![](images/pi-flattener.png) <br>Flattens compiled contracts <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/flattener/profile.json): flattener <br>[Make an issue](https://github.com/bunsenstraat/flattener/issues)"
-msgstr "**Flattener** &nbsp; ![](images/pi-flattener.png) <br>将编译的合约展开为单个文件 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/flattener/profile.json): flattener <br>[提交issue](https://github.com/bunsenstraat/flattener/issues)"
+#: ../../plugin_list.md:100
+msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizzes that teach users Solidity and Remix features. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
+msgstr "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; 教授 Remix 和 Solidity <br>包含了一些测验，提供了教授 Solidity 和 Remix 特性的教程。<br>[插件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[文档](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[提交 issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
 
-#: ../../plugin_list.md:104
-msgid "**Gas Profiler** &nbsp; ![](images/pi-gas-profiler.png) <br>Profile gas costs for every transaction you execute.  Total execution costs as well as per line costs are displayed. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/gas-profiler/profile.json): gasProfiler <br>[Documentation](https://github.com/EdsonAlcala/remix-gas-profiler) <br>[Make an issue](/issues)"
-msgstr "**Gas Profiler** &nbsp; ![](images/pi-gas-profiler.png) <br>为您执行的每个交易分析GAS成本。显示总执行成本以及每行成本。<br>[插件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/gas-profiler/profile.json): gasProfiler <br>[文档](https://github.com/EdsonAlcala/remix-gas-profiler) <br>[提交issue](/issues)"
-
-#: ../../plugin_list.md:110
-msgid "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>Deploy & interact with smart contracts to the Klaytn public network, local klaytn nodes. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin <br>[Documentation](https://github.com/klaytn-ozys/plug-and-klay) <br>[Make an issue](https://github.com/klaytn-ozys/plug-and-klay/issues)"
-msgstr "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>部署并与 Klaytn 公共网络、本地 klaytn 节点上的智能合约进行交互。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin <br>[文档](https://github.com/klaytn-ozys/plug-and-klay) <br>[提交issue](https://github.com/klaytn-ozys/plug-and-klay/issues)"
-
-#: ../../plugin_list.md:116
-msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizes that teach users Solidity and Remix features. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
-msgstr "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity教程 <br>包含测验的教程，向用户讲解Solidity和Remix功能。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[文档](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[提出issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
-
-#: ../../plugin_list.md:122
-msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allow you to take Lexon code and to <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
+#: ../../plugin_list.md:106
+msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allows you to take Lexon code and to <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
 msgstr "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon 是一种读起来像法律合同的语言，并编译成 Solidity（然后是字节码）。此插件允许您获取 Lexon 代码并进行以下操作：<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[文档](https://gitlab.com/lexon-foundation/lexon-remix) <br>[创建issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
 
-#: ../../plugin_list.md:128
-msgid "**Moonbeam** &nbsp; ![](images/pi-moonbeam.png) <br>Compile and Deploy to the Moonbeam network <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin <br>[Documentation](https://github.com/purestake/moonbeam-remix-plugin) <br>[Make an issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)"
-msgstr "**Moonbeam** &nbsp; ![](images/pi-moonbeam.png) <br>编译并部署到 Moonbeam 网络 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin <br>[文档](https://github.com/purestake/moonbeam-remix-plugin) <br>[提交issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)"
+#: ../../plugin_list.md:112
+msgid "**Moonbeam** &nbsp; ![](images/pi-moonbeam.png) <br>Compile and Deploy to the Moonbeam network <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin <br>[Documentation](https://github.com/purestake/moonbeam-remix-plugin) <br>[Make an issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)"
+msgstr "**Moonbeam** &nbsp; ![](images/pi-moonbeam.png) <br>编译并部署到 Moonbeam 网络 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin <br>[Documentation](https://github.com/purestake/moonbeam-remix-plugin) <br>[Make an issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)"
 
-#: ../../plugin_list.md:134
-msgid "**Mythx Security Verification** &nbsp; ![](images/pi-mythx.png)  <br>Free version and paid version for Mythx analysis. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json): mythx <br>[Documentation](https://docs.mythx.io/tools-integrations/remix) <br>[Make an issue](https://github.com/aquiladev/remix-mythx-plugin/issues)"
-msgstr "**Mythx Security Verification** &nbsp; ![](images/pi-mythx.png) <br>Mythx分析有免费版和付费版。 <br>[配置文件名](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json): mythx <br>[文档](https://docs.mythx.io/tools-integrations/remix) <br>[提交issue](https://github.com/aquiladev/remix-mythx-plugin/issues)"
+#: ../../plugin_list.md:118
+msgid "**Mythx Security Verification** &nbsp; ![](images/pi-mythx.png) <br>Free version and paid version for Mythx analysis. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json): mythx <br>[Documentation](https://docs.mythx.io/tools-integrations/remix) <br>[Make an issue](https://github.com/aquiladev/remix-mythx-plugin/issues)"
+msgstr "** Mythx 安全验证** &nbsp; ![](images/pi-mythx.png) <br>Mythx 分析的免费版和付费版。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json)： mythx <br>[Documentation](https://docs.mythx.io/tools-integrations/remix) <br>[提出问题](https://github.com/aquiladev/remix-mythx-plugin/issues)"
 
-#: ../../plugin_list.md:140
-msgid "**Nahmii compiler** &nbsp; ![](images/pi-moonbeam.png) <br>Compile solidity contracts for the Nahmii network <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/nahmii/profile.json): nahmii-compiler <br>[Make an issue](https://github.com/nahmii-community/remix-nahmii-compiler-plugin/issues)"
-msgstr "**Nahmii compiler** &nbsp; ![](images/pi-moonbeam.png) <br>为Nahmii网络编译Solidity合约 <br>[个人资料名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/nahmii/profile.json): nahmii-compiler <br>[提出issue](https://github.com/nahmii-community/remix-nahmii-compiler-plugin/issues)"
+#: ../../plugin_list.md:124
+msgid "**Nahmii compiler** &nbsp; ![](images/pi-moonbeam.png) <br>Compile solidity contracts for the Nahmii network <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/nahmii/profile.json): nahmii-compiler <br>[Make an issue](https://github.com/nahmii-community/remix-nahmii-compiler-plugin/issues)"
+msgstr "**Nahmii 编译器** &nbsp; ![](images/pi-moonbeam.png) <br>为 Nahmii 网络编译 solidity 合约 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/nahmii/profile.json): nahmii-compiler <br>[提出问题](https://github.com/nahmii-community/remix-nahmii-compiler-plugin/issues)"
 
-#: ../../plugin_list.md:145
-msgid "**One Click Dapp** &nbsp; ![](images/pi-1click.png)  <br>Makes a basic front end for your contract once it is deployed on a public testnet.   [profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp) <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)"
-msgstr "**One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>在公共测试网络上部署合约后，为其创建一个基本的前端。 [配置文件名](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp <br>[文档](https://github.com/oneclickdapp/remix-plugin-one-click-dapp) <br>[提交issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)"
+#: ../../plugin_list.md:129
+msgid "**One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>Makes a basic front end for your contract once it is deployed on a public testnet.   [Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp) <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)"
+msgstr "** One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>在公共测试网络上部署后，为您的合同制作一个基本的前端。   [配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp) <br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)"
 
-#: ../../plugin_list.md:151
-msgid "**Proveable Oracle Services** &nbsp; ![](images/pi-proveable.png)  <br>An oracle for the Remix VM environment. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable <br>[Documentation](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)"
-msgstr "**Proveable Oracle Services** &nbsp; ![](images/pi-proveable.png) <br>Remix VM 环境下的 Oracle。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/provable/profile.json): provable <br>[文档](https://docs.provable.xyz/#development-tools-remix-ide-provable-plugin)"
+#: ../../plugin_list.md:135
+msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compile contracts written in Cairo to Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler <br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin) <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
+msgstr "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>使用Cairo编写的合约编译到StarkNet中。 <br>[文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): StarkNet-Cairo1编译器 <br>[文档](https://github.com/NethermindEth/starknet-remix-plugin) <br>[提交issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
 
-#: ../../plugin_list.md:156
-msgid "**Quorum Network** &nbsp; ![](images/pi-quorum.png) <br>A Connection to Quorum  <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/quorum/profile.json): quorum <br>[Documentation](https://medium.com/remix-ide/quorum-plugin-for-remix-ee232ebca64c) <br>[Make an issue](https://github.com/ConsenSys/quorum-remix/issues)"
-msgstr "**Quorum Network** &nbsp; ![](images/pi-quorum.png) <br>连接到Quorum <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/quorum/profile.json): quorum <br>[文档](https://medium.com/remix-ide/quorum-plugin-for-remix-ee232ebca64c) <br>[提交issue](https://github.com/ConsenSys/quorum-remix/issues)网络"
+#: ../../plugin_list.md:141
+msgid "**Tenderly** &nbsp; ![](images/pi-tenderly.png) <br>Verify Contracts. Import To Remix From your Tenderly project. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json): tenderly <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix) <br>[Make an issue](/issues)"
+msgstr "**Tenderly** &nbsp; ![](images/pi-tenderly.png) <br>验证合同。从您的 Tenderly 项目导入 Remix。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json)： tenderly <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix) <br>[创建问题](/issues)"
 
-#: ../../plugin_list.md:162
-msgid "**Solhint Linter** &nbsp; ![](images/pi-solhint.png) <br>Solidity Linter providing both Security and Style Guide validations. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/solhint/profile.json): solhint <br>[Documentation](https://protofire.github.io/solhint/docs/rules.html) <br>[Make an issue](https://github.com/protofire/remix-solhint-plugin)"
-msgstr "**Solhint Linter** &nbsp; ![](images/pi-solhint.png) <br>提供安全性和代码风格验证的Solidity代码检查工具。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/solhint/profile.json): solhint <br>[文档](https://protofire.github.io/solhint/docs/rules.html) <br>[提交issue](https://github.com/protofire/remix-solhint-plugin)"
+#: ../../plugin_list.md:147
+msgid "**UMA Playground** &nbsp; (main panel) <br>Learn about the UMA protocol. This plugin is loaded from the DEFI Tutorial plugin. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground <br>[Make an issue](https://github.com/Machinalabs/remix-uma-playground/issues)"
+msgstr "**UMA Playground** &nbsp; （主面板） <br>了解 UMA 协议。此插件从 DEFI Tutorial 插件加载。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground <br>[提出问题](https://github.com/Machinalabs/remix-uma-playground/issues)"
+
+#: ../../plugin_list.md:152
+msgid "**UMA Tutorials** &nbsp; (main panel) <br>This plugin is activated by the DEFI Tutorials <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials <br>[Make an issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)"
+msgstr "**UMA Tutorials** &nbsp; （主面板） <br>此插件由 DEFI Tutorials 激活 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials <br>[Make an issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)"
+
+#: ../../plugin_list.md:157
+msgid "**Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp; <br>Compile vyper code using local or remote Vyper compiler. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper <br>[Documentation](https://github.com/GrandSchtroumpf/vyper-remix) <br>[Make an issue](https://github.com/GrandSchtroumpf/vyper-remix)"
+msgstr "**Vyper 编译器** &nbsp; ![](images/pi-vyper.png) &nbsp; <br>使用本地或远程 Vyper 编译器编译 vyper 代码。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper <br>[Documentation](https://github.com/GrandSchtroumpf/vyper-remix) <br>[Make an issue](https://github.com/GrandSchtroumpf/vyper-remix)"
+
+#: ../../plugin_list.md:163
+msgid "**Wallet Connect** &nbsp; (main panel) <br>Approve transactions on your mobile device <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)"
+msgstr "** 钱包连接** &nbsp; （主面板） <br>批准移动设备上的交易 <br>[个人资料名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect <br>[提出问题](https://github.com/yann300/remix-walletconnect/issues)"
 
 #: ../../plugin_list.md:168
-msgid "**Solidity 2 UML** &nbsp; ![](images/pi-sol2uml.png)  <br>Generate UML diagrams from a compiled Solidity file <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/sol2uml/profile.json): sol2uml <br>[Documentation](https://github.com/aquiladev/remix-sol2uml) <br>[Make an issue](https://github.com/aquiladev/remix-sol2uml)"
-msgstr "**Solidity 2 UML** &nbsp; ![](images/pi-sol2uml.png) <br>从已编译的 Solidity 文件生成 UML 图表 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/sol2uml/profile.json): sol2uml <br>[文档](https://github.com/aquiladev/remix-sol2uml) <br>[提交issue](https://github.com/aquiladev/remix-sol2uml)"
-
-#: ../../plugin_list.md:174
-msgid "**Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;  <br>Verify you contracts and fetch verified contracts <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify <br>[Documentation](https://github.com/ethereum/sourcify) <br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)"
-msgstr "**Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp; <br>验证您的合约并获取已验证的合约 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify <br>[文档](https://github.com/ethereum/sourcify) <br>[提交issue](https://github.com/sourcifyeth/remix-sourcify/issues)"
-
-#: ../../plugin_list.md:180
-msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;  <br>Compile contracts written in Cairo to Starknet <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin) <br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)"
-msgstr "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>将使用Cairo编写的合约编译到Starknet上 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[文档](https://github.com/hexdivision/starkware-remix-plugin) <br>[提交issue](https://github.com/hexdivision/starkware-remix-plugin/issues)"
-
-#: ../../plugin_list.md:186
-msgid "**Tenderly** &nbsp; ![](images/pi-tenderly.png)  <br>Verify Contracts. Import To Remix From your Tenderly project. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json): tenderly <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix) <br>[Make an issue](/issues)"
-msgstr "** Tenderly** &nbsp; ![](images/pi-tenderly.png) <br>验证合约。从您的 Tenderly 项目导入到 Remix 中。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json): tenderly <br>[文档](https://docs.tenderly.co/monitoring/integrations#remix) <br>[创建issue](/issues)"
-
-#: ../../plugin_list.md:192
-msgid "**UMA Playground** &nbsp; (main panel)  <br>Learn about the UMA protocol.  This plugin is loaded from the DEFI Tutorial plugin. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground <br>[Make an issue](https://github.com/Machinalabs/remix-uma-playground/issues)"
-msgstr "**UMA Playground** &nbsp; (主面板) <br>了解 UMA 协议。此插件从 DEFI 教程插件中加载。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground <br>[提交issue](https://github.com/Machinalabs/remix-uma-playground/issues)"
-
-#: ../../plugin_list.md:197
-msgid "**UMA Tutorials** &nbsp; (main panel)  <br>This plugin is activated by the DEFI Tutorials <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials <br>[Make an issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)"
-msgstr "**UMA Tutorials** &nbsp; (主面板) <br>此插件由DEFI教程激活 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials <br>[创建issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)"
-
-#: ../../plugin_list.md:202
-msgid "**Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;  <br>Compile vyper code using local or remote Vyper compiler. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper <br>[Documentation](https://github.com/GrandSchtroumpf/vyper-remix) <br>[Make an issue](https://github.com/GrandSchtroumpf/vyper-remix)"
-msgstr "**Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp; <br>使用本地或远程Vyper编译器编译vyper代码。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper <br>[文档](https://github.com/GrandSchtroumpf/vyper-remix) <br>[提交issue](https://github.com/GrandSchtroumpf/vyper-remix)"
-
-#: ../../plugin_list.md:208
-msgid "**Wallet Connect** &nbsp; (main panel)  <br>Approve transactions on your mobile device <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)"
-msgstr "**Wallet Connect** &nbsp; (主面板) <br>在您的移动设备上批准交易 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect <br>[提交issue](https://github.com/yann300/remix-walletconnect/issues)"
-
-#: ../../plugin_list.md:213
-msgid "**YUL++** &nbsp; ![](images/pi-yul-p.png) &nbsp;  <br>A low level language for Ethereum. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/yulp/profile.json): yulp <br>[Make an issue](https://github.com/loredanacirstea/remix-yulp-plugin/issues)"
-msgstr "**YUL++** &nbsp; ![](images/pi-yul-p.png) &nbsp; <br>一种适用于以太坊的低级语言。 <br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/yulp/profile.json): yulp <br>[创建issue](https://github.com/loredanacirstea/remix-yulp-plugin/issues)"
-
-#: ../../plugin_list.md:218
-msgid "**Zokrates** &nbsp; ![](images/pi-zok.png)  &nbsp;  <br>ZoKrates is a toolbox for zkSNARKs on Ethereum. <br>[profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zokrates/profile.json): ZoKrates <br>[Documentation](https://zokrates.github.io/) <br>[Make an issue](https://github.com/Zokrates/zokrates-remix-plugin/issues)"
-msgstr "**Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp; <br>ZoKrates 是一个在以太坊上使用 zkSNARKs 的工具箱。<br>[配置文件名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zokrates/profile.json): ZoKrates <br>[文档](https://zokrates.github.io/) <br>[提交issue](https://github.com/Zokrates/zokrates-remix-plugin/issues)"
+msgid "**Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp; <br>ZoKrates is a toolbox for zkSNARKs on Ethereum. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zokrates/profile.json): ZoKrates <br>[Documentation](https://zokrates.github.io/) <br>[Make an issue](https://github.com/Zokrates/zokrates-remix-plugin/issues)"
+msgstr "**Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp; <br>ZoKrates 是以太坊上的 zkSNARKs 工具箱。 <br>[资料名称](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zokrates/profile.json)：ZoKrates <br>[Documentation](https://zokrates.github.io/) <br>[提出问题](https://github.com/Zokrates/zokrates-remix-plugin/issues)"
 

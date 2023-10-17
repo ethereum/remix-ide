@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:48\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -42,8 +42,8 @@ msgid "Write tests"
 msgstr "编写测试"
 
 #: ../../testing_using_Chai_&_Mocha.md:14
-msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`."
-msgstr "在您的项目工作区中创建一个js文件。最好将其创建在`scripts`文件夹内。我们来命名它为`sample.test.js`。"
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Let's name it `sample.test.js`."
+msgstr "在您的项目工作区创建一个 js 文件。最好将其创建在 `scripts` 文件夹中。我们给它命名为 `sample.test.js`。"
 
 #: ../../testing_using_Chai_&_Mocha.md:16
 msgid "Write your tests in the file. Here is a sample:"

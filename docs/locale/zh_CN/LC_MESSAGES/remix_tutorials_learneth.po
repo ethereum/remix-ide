@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Language: zh_CN\n"
 
 #: ../../remix_tutorials_learneth.md:1
-msgid "Remix Tutorials with Learneth"
-msgstr "Remix Learneth教程"
+msgid "Tutorials in Remix"
+msgstr "Remix 教程"
 
 #: ../../remix_tutorials_learneth.md:4
 msgid "**Learneth** is a tutorial platform integrated into Remix."

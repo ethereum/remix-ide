@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/import.pot\n"
+"X-Crowdin-File-ID: 6474\n"
+"Language: zh_CN\n"
 
 #: ../../import.md:1
 msgid "Importing & Loading Source Files in Solidity"
@@ -35,8 +38,8 @@ msgid "Importing a library or dependency"
 msgstr "导入库或依赖项"
 
 #: ../../import.md:10
-msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
-msgstr "当从NPM或URL（如github、IPFS网关或Swarm网关）进行导入时，您只需在合约中使用import语句即可。在编译合约之前，不需要将依赖项“预加载”到File Explorer当前工作区。"
+msgid "When importing from NPM, or a URL (like github, an IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
+msgstr "当从NPM 或 URL (如 GitHub、IPFS 网关或 Swarm 网关) 导入时，您只需要在合约中使用 `import语句，无需在合约编译之前将依赖项预加载到文件资源管理器的当前工作空间中。"
 
 #: ../../import.md:12
 msgid "Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder."
@@ -91,8 +94,8 @@ msgid "Importing a file from your computer's filesystem"
 msgstr "从计算机的文件系统导入文件"
 
 #: ../../import.md:63
-msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr "此方法使用**remixd** - remix守护程序。请前往[remixd文档](remixd.html) ，了解如何在浏览器和计算机文件系统之间建立连接。"
+msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computer's filesystem."
+msgstr "这种方法使用 remix的 **remixd ** 守护进程。请访问 remixd(remixd.html)文档查看有关如何在浏览器和计算机文件系统之间建立桥梁的说明。"
 
 #: ../../import.md:65
 msgid "More about the import keyword"
@@ -103,12 +106,12 @@ msgid "For a detailed explanation of the `import` keyword see the [Solidity docu
 msgstr "关于`import`关键字的详细解释，见[Solidity documentation](https://docs.soliditylang.org/enarage/layout-source-files.html?highlight=importing-other-source-files)"
 
 #: ../../import.md:70
-msgid "Importing a files for manipulation"
-msgstr "导入文件以进行操作"
+msgid "Importing files for manipulation"
+msgstr "导入文件以进行操作。"
 
 #: ../../import.md:71
-msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder the shows their source - eg github or gists."
-msgstr "从主页小部件导入或在控制台中使用remix命令时，文件将放置在当前工作区的根目录下，其中包含显示它们来源（例如github或gists）的文件夹。"
+msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder that shows their source - eg github or gists."
+msgstr "当从主页小部件或通过控制台中的 remix 命令导入时，文件将被放置在**当前工作空间的根目录**中的一个文件夹内，该文件夹显示它们的来源，如 GitHub 或 Gists。"
 
 #: ../../import.md:73
 msgid "Import buttons on the Remix home tab"
@@ -129,10 +132,6 @@ msgstr "点击任何一个导入按钮都会弹出类似于这个的模态框：
 #: ../../import.md:80
 msgid "![](images/a-gist-modal.png)"
 msgstr "![](images/a-gist-modal.png)"
-
-#: ../../import.md:80
-msgid "![](images/a-gist-modal.png)"
-msgstr ""
 
 #: ../../import.md:82
 msgid "No need to wrap the input in quotes."

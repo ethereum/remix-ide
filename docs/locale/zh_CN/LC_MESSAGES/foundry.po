@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../foundry.md:1
 msgid "Foundry"
-msgstr "Foundry"
+msgstr "铸造厂"
 
 #: ../../foundry.md:4
 msgid "_(Supported since Remix IDE v0.25.0)_"
@@ -27,7 +27,7 @@ msgstr "_(从 Remix IDE v0.25.0以来支持)_"
 
 #: ../../foundry.md:6
 msgid "Foundry Provider"
-msgstr "Foundry Provider"
+msgstr "铸造供应商"
 
 #: ../../foundry.md:9
 msgid "**Foundry Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Foundry's built-in **Anvil** blockchain. `Foundry Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."

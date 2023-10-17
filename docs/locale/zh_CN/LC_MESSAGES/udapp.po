@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/udapp.pot\n"
+"X-Crowdin-File-ID: 6504\n"
+"Language: zh_CN\n"
 
 #: ../../udapp.md:1
 msgid "Deploy & Run (part 2)"
@@ -34,10 +37,6 @@ msgstr "已部署的合约如下图展示，默认处于折叠状态。"
 msgid "![](images/a-debug2-udapp1a.png)"
 msgstr "![](images/a-debug2-udapp1a.png)"
 
-#: ../../udapp.md:10
-msgid "![](images/a-debug2-udapp1a.png)"
-msgstr ""
-
 #: ../../udapp.md:12
 msgid "Click the sideways caret to open it up."
 msgstr "单击左侧的小图标可以把它打开。"
@@ -46,10 +45,6 @@ msgstr "单击左侧的小图标可以把它打开。"
 #: ../../udapp.md:64
 msgid "![](images/a-udapp1.png)"
 msgstr "![](images/a-udapp1.png)"
-
-#: ../../udapp.md:14 ../../udapp.md:64
-msgid "![](images/a-udapp1.png)"
-msgstr ""
 
 #: ../../udapp.md:16
 msgid "You will see the functions in the contract.  The functions buttons can have different color buttons."
@@ -126,10 +121,6 @@ msgstr "单击 'down' 图标会展开**多参数交互界面** - 您可以一次
 #: ../../udapp.md:50
 msgid "![](images/a-udapp-multi-param-man.png)"
 msgstr "![](images/a-udapp-multi-param-man.png)"
-
-#: ../../udapp.md:50
-msgid "![](images/a-udapp-multi-param-man.png)"
-msgstr ""
 
 #: ../../udapp.md:52
 msgid "In the expanded view, strings do not need to be wrapped."

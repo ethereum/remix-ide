@@ -1,66 +1,65 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/layout.pot\n"
+"X-Crowdin-File-ID: 6478\n"
+"Language: zh_CN\n"
 
 #: ../../layout.md:1
-msgid "Remix-IDE Layout"
-msgstr "Remix-IDE 布局"
+msgid "Navigating Remix"
+msgstr "导航混音"
 
-#: ../../layout.md:4
-msgid "The new structure"
-msgstr "新结构"
+#: ../../layout.md:3
+msgid "Remix IDE is comprised of three panels and a terminal."
+msgstr "Remix IDE 由三个面板和一个终端组成。"
 
-#: ../../layout.md:6
+#: ../../layout.md:5
 msgid "![](images/a-layout1c.png)"
 msgstr "![](images/a-layout1c.png)"
 
+#: ../../layout.md:7
+msgid "Icon Panel - click to change which plugins appear in the Side Panel"
+msgstr "图标面板 - 点击可更改侧面板中显示的插件"
+
 #: ../../layout.md:8
-msgid "Icon Panel - click to change which plugin appears in the Side Panel"
-msgstr "图标面板 - 单击以更改侧面板中显示的插件"
+msgid "Side Panel - most but not all plugins have their interface here"
+msgstr "侧面板--大多数插件（并非所有插件）的界面都在这里"
 
 #: ../../layout.md:9
-msgid "Side Panel - Most but not all plugins will have their GUI here."
-msgstr "侧面板 - 大多数但不是所有的插件都会在这里有它们的 GUI。"
+msgid "Main Panel - for editing files, large format tools, and the home tab"
+msgstr "主面板 - 用于编辑文件、大幅面工具和主页选项卡"
 
 #: ../../layout.md:10
-msgid ""
-"Main Panel - In the old layout this was just for editing files.  In the "
-"tabs can be plugins or files for the IDE to compile."
-msgstr "主面板 - 在旧布局中，这仅用于编辑文件。 选项卡中可以是 IDE 编译的插件或文件。"
+msgid "Terminal - for viewing transaction receipts and various logs"
+msgstr "终端 - 用于查看交易收据和各种日志"
 
-#: ../../layout.md:11
-msgid ""
-"Terminal - where you will see the results of your interactions with the "
-"GUI's.  Also you can run scripts here."
-msgstr "终端 - 您将在其中看到与 GUI 交互的结果。 您也可以在此处运行脚本。"
-
-#: ../../layout.md:13
-msgid "Icon Panel at Page Load"
-msgstr "页面加载时的图标面板"
+#: ../../layout.md:12
+msgid "Default Tools"
+msgstr "默认工具"
 
 #: ../../layout.md:15
-msgid "When you load remix - the icon panel show these icons by default."
-msgstr "当您加载 Remix - 图标面板默认显示这些图标。"
+msgid "When Remix is loaded - the icon panel shows these icons by default."
+msgstr "加载 Remix 时，图标面板默认显示这些图标。"
 
 #: ../../layout.md:17
 msgid "![](images/a-icons-at-load.png)"
 msgstr "![](images/a-icons-at-load.png)"
 
 #: ../../layout.md:19
-msgid "Everything in Remix is a plugin...  so the **[Plugin Manager](#plugin-manager)** is very important."
-msgstr "Remix 中的一切都是插件……所以**[插件管理器](#plugin-manager)** 非常重要。"
+msgid "To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab."
+msgstr "要加载更多插件，请访问 **[插件管理器](#plugin-manager)**，或点击主页标签中的特色插件。"
 
 #: ../../layout.md:21
 msgid "Home tab"
@@ -71,16 +70,16 @@ msgid "![](images/a-hometab.png)"
 msgstr "![](images/a-hometab.png)"
 
 #: ../../layout.md:26
-msgid "The home tab is located in the Main Panel.  It can be closed.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel."
-msgstr "主页标签位于主面板，可以关闭它。  <br> 您也可以通过点击图标面板顶部的 Remix 图标访问它(即使主页已关闭)。"
+msgid "The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel."
+msgstr "主页选项卡位于主面板中。  它可以关闭，就像主面板上的其他选项卡一样。  <br> 你也可以通过点击图标面板顶部的 Remix 徽标来访问它（即使已关闭）。"
 
 #: ../../layout.md:28
-msgid "The hometab contains links to resources - including links to these docs as well as our Twitter feed, our Medium blog, gitter chat and more.  There are also shortcuts for loading files into Remix."
-msgstr "主页选项卡包含资源链接，包括这些文档的链接以及我们的 Twitter 动态、Medium 博客、Gitter 聊天等。还有快捷方式可用于将文件加载到 Remix 中。"
+msgid "The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem."
+msgstr "主页标签包含资源链接、公告、教程、特色插件、将文件加载到 Remix 的方法以及将 Remix 连接到本地文件系统的快捷方式。"
 
 #: ../../layout.md:30
-msgid "Solidity Environment"
-msgstr "Solidity 环境"
+msgid "Solidity"
+msgstr "Solidity"
 
 #: ../../layout.md:31
 msgid "Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default)."
@@ -95,8 +94,8 @@ msgid "Plugin Manager"
 msgstr "插件管理器"
 
 #: ../../layout.md:40
-msgid "In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on."
-msgstr "在 Remix 中，你只需要加载你所需的功能 - 插件管理器用来管理哪些插件被关闭或打开。"
+msgid "In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on."
+msgstr "在Remix中，您只需加载所需的功能 - 而插件管理器是您管理哪些插件启用或禁用的地方。"
 
 #: ../../layout.md:42
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
@@ -107,87 +106,10 @@ msgid "Themes"
 msgstr "主题"
 
 #: ../../layout.md:47
-msgid "So you want to work on Remix with a dark theme or a light theme or just a different theme than the one you are currently looking at?  At the bottom of the **Settings** plugin is where you can choose a theme. These are bootstrap based themes.  The Dark and Light theme have been the most customized for Remix."
-msgstr "你想在 Remix 上使用深色主题、浅色主题或者与当前正在查看的不同的主题吗？在**设置**插件的底部，你可以选择一个主题。这些都是基于 Bootstrap 的主题。在定制的 Remix 主题中，深色和浅色主题最为流行。"
+msgid "Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix."
+msgstr "可在**设置**插件底部选择主题。这些都是基于 Bootstrap 的主题。深色和浅色主题最适合 Remix。"
 
 #: ../../layout.md:49
 msgid "![](images/a-themes.png)"
 msgstr "![](images/a-themes.png)"
-
-#: ../../layout.md:49
-msgid "![](images/a-themes.png)"
-msgstr ""
-
-#~ msgid ""
-#~ "Everything in remix is now a "
-#~ "plugin...  so the Plugin Manager is "
-#~ "very important. In the old layout, "
-#~ "each basic task in remix was "
-#~ "separated into the tabs.  Now these "
-#~ "tabs are plugins."
-#~ msgstr ""
-#~ "Remix 中的所有内容现在都是插件...... 所以插件管理器非常重要。 在旧布局中，Remix"
-#~ " 中的每个基本任务都被分成选项卡。 现在这些选项卡是插件。"
-
-#~ msgid ""
-#~ "But to activate a half a dozen "
-#~ "plugins - (or however many you are"
-#~ " using) each time the page load "
-#~ "is tedious.  So learn about the "
-#~ "Environments."
-#~ msgstr "但是每次页面加载时要激活六个插件(或您正在使用的插件) 是很乏味的。 所以要了解环境。"
-
-#~ msgid "Homepage"
-#~ msgstr "主页"
-
-#~ msgid "The homepage is located in a tab in the Main Panel."
-#~ msgstr "主页位于主面板中的选项卡中。"
-
-#~ msgid ""
-#~ "Clicking on one of the environment "
-#~ "buttons loads up a collection of "
-#~ "plugins.  We currently have a Solidity"
-#~ " Button and a Vyper button.  In "
-#~ "the future you will be able to "
-#~ "save your own environment."
-#~ msgstr "单击其中一个环境按钮会加载一组插件。 我们目前有一个 Solidity 按钮和一个 Vyper 按钮。 将来，您将能够保存自己的环境。"
-
-#~ msgid ""
-#~ "To see all the plugins go to "
-#~ "the Plugin Manager - by selecting "
-#~ "the plug in the icon panel."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The environment buttons are time & "
-#~ "sanity savers - so you don't need"
-#~ " to go to the Plugin Manager to"
-#~ " get started everytime you load the"
-#~ " page."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In order to make Remix flexible "
-#~ "for integrating changes into its "
-#~ "functionality and for integrating remix "
-#~ "into other projects (yours for example),"
-#~ " we've now made everything a plugin."
-#~ "  This means that you only load "
-#~ "the functionality you need.  It also "
-#~ "means that you need a place to "
-#~ "turn off and on plugins - as "
-#~ "your needs change.  This all happens "
-#~ "in the Plugin Manager."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "So you want to work on Remix "
-#~ "with a dark theme or a gray "
-#~ "theme or just a different theme "
-#~ "than the one you are currently "
-#~ "looking at?  Go to the settings "
-#~ "tab and at the bottom is a "
-#~ "choice of lots of bootstrap based "
-#~ "themes."
-#~ msgstr ""
 
