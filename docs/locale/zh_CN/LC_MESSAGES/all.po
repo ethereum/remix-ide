@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -86,11 +86,11 @@ msgstr "expected: <uint | int | bool | address | bytes32 | string>"
 
 #: ../../assert_library.md:32
 msgid "Tests if actual & expected values are same. message is returned in case of failure."
-msgstr "测试实际值和预期值是否相同。 失败则返回对应的`message`。"
+msgstr "测试实际值和预期值是否相同。 失败则返回对应的消息。"
 
 #: ../../assert_library.md:52
 msgid "Tests if actual & expected values are not same. message is returned in case of failure."
-msgstr "测试实际值和预期值是否不同。 失败则返回对应的`message`。"
+msgstr "测试实际值和预期值是否不同。 如果失败则返回对应的消息。"
 
 #: ../../assert_library.md:64
 #: ../../assert_library.md:83
@@ -104,7 +104,7 @@ msgstr "value2: <uint | int>"
 
 #: ../../assert_library.md:68
 msgid "Tests if value1 is greater than value2. message is returned in case of failure."
-msgstr "测试 value1 是否大于 value2。 失败时返回对应的`message`。"
+msgstr "测试 value1 是否大于 value2。 失败时返回对应的消息。"
 
 #: ../../assert_library.md:87
 msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
@@ -172,7 +172,7 @@ msgstr "从 Solidity 版本 0.5.7 开始，可以编译 Yul 文件。 请阅读�
 
 #: ../../compile.md:11
 msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
-msgstr "分叉选择下拉列表(下图中的 C.) 允许针对特定的以太坊硬分叉编译代码。 编译器默认对应于特定版本使用的默认硬分叉。 请到 Metadata 部分设置中的“编译详细信息”(下图中的 G.) 查看当前编译使用的 harfork 名称。"
+msgstr "分叉选择下拉列表(下图中的 C.) 允许针对特定的以太坊硬分叉编译代码。 编译器默认对应于特定版本使用的默认硬分叉。 请到 Metadata 部分设置中的“编译详细信息”(下图中的 G.) 查看当前编译使用的硬分叉名称。"
 
 #: ../../compile.md:14
 msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
@@ -192,7 +192,7 @@ msgstr "对于那些编写自己的自定义solidity编译器的人，您可以�
 
 #: ../../compile.md:25
 msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
-msgstr "从 Solidity Compiler 模块，您还可以将合约发布到 Swarm(只能发布非抽象合约) 和 IPFS。"
+msgstr "从 Solidity 编译器模块，您还可以将合约发布到 Swarm(只能发布非抽象合约) 和 IPFS。"
 
 #: ../../compile.md:28
 msgid "Published data notably contains the abi and the solidity source code."
@@ -204,7 +204,7 @@ msgstr "合约发布后，您可以使用位于详细模式对话框 SWARM LOCAT
 
 #: ../../compile.md:33
 msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
-msgstr "编译错误和警告显示在合约部分下方。 在每次编译时，静态分析选项卡都会生成一份报告。 即使编译器没有报错，解决报告的问题也很重要。(看更多)"
+msgstr "编译错误和警告显示在合约部分下方。 在每次编译时，静态分析选项卡都会生成一份报告。 即使编译器没有报错，解决报告的问题也很重要。(了解更多)"
 
 msgid ""
 msgstr ""
@@ -212,7 +212,7 @@ msgstr ""
 
 #: ../../contract_metadata.md:1
 msgid "Build Artifact"
-msgstr "Build Artifact"
+msgstr "构建成果"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
@@ -220,15 +220,15 @@ msgstr "当编译成功时，Remix 为每个编译的合约创建两个 JSON 文
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
-msgstr "另一个 JSON 文件名为 contractName.json 。 contractName.json 文件包含将库链接到文件所需的编译工件。 它包含库的链接、字节码、部署的字节码、气体估计、方法标识符和 ABI。"
+msgstr "另一个 JSON 文件名为 contractName.json 。 contractName.json 文件包含将库链接到文件所需的编译工件。 它包含库的链接、字节码、部署的字节码、gas估算、方法标识符和 ABI。"
 
 #: ../../contract_metadata.md:8
 msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
-msgstr "为了生成这些artifact文件，需要选中设置模块的常规设置部分中的生成合同元数据框。 这些元数据文件将在您编译文件时生成，并将放置在 artifacts 文件夹中 - 您可以在 Files Explorers 插件中看到该文件夹。"
+msgstr "为了生成这些artifact文件，需要选中设置模块的常规设置部分中的生成合约元数据框。 这些元数据文件将在您编译文件时生成，并将放置在 artifacts 文件夹中 - 您可以在 Files Explorers 插件中看到该文件夹。"
 
 #: ../../contract_metadata.md:10
 msgid "You can write scripts that can access either of these files."
-msgstr "您可以编写可以访问其中任何一个文件的脚本。"
+msgstr "你可以编写脚本来访问这两个文件中的任何一个。"
 
 #: ../../contract_metadata.md:12
 msgid "Library Deployment with filename.json"

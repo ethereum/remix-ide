@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/locations.pot\n"
+"X-Crowdin-File-ID: 6480\n"
+"Language: zh_CN\n"
 
 #: ../../locations.md:1
 msgid "Remix URLs & Links with Parameters"
@@ -127,8 +130,8 @@ msgid "**External Plugins** to get these plugins' names, please go to [https://g
 msgstr "**外部插件**要获取这些插件的名称，请转到[https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)。"
 
 #: ../../locations.md:51
-msgid "Deactiving a list of plugins"
-msgstr "禁用插件列表"
+msgid "Deactivating a list of plugins"
+msgstr "禁用一系列插件"
 
 #: ../../locations.md:56
 msgid "Minimizing Remix panels"
@@ -159,8 +162,8 @@ msgid "A URL example combining multiple parameters"
 msgstr "一个包含多个参数的URL示例"
 
 #: ../../locations.md:80
-msgid "To link to Remix with the a list of plugins activated and with:"
-msgstr "要链接到带有激活插件列表的Remix，并且："
+msgid "To link to Remix with the list of plugins activated and with:"
+msgstr "使用已激活的插件列表链接到 Remix："
 
 #: ../../locations.md:82
 msgid "the Learneth gaining the side panel's focus (because it is the last in the list)"
@@ -297,156 +300,4 @@ msgstr "选择Solidity编译器的语言"
 #: ../../locations.md:184
 msgid "Choose YUL or Solidity with the language parameter."
 msgstr "使用language参数选择YUL或Solidity。"
-
-#~ msgid "Remix IDE Online is located at https://remix.ethereum.org."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The alpha version of remix is "
-#~ "located at https://remix-alpha.ethereum.org. "
-#~ "This is not a stable version."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Github repo: https://github.com/ethereum/remix-"
-#~ "project. The README contains instructions "
-#~ "for running Remix-IDE locally."
-#~ msgstr ""
-
-#~ msgid "Remix Desktop is an Electron App. Here is the release page."
-#~ msgstr ""
-
-#~ msgid "Remix has a VSCode extension called Ethereum Remix."
-#~ msgstr ""
-
-#~ msgid "The Remix twitter account is EthereumRemix."
-#~ msgstr ""
-
-#~ msgid "The Remix Project Medium publication is: https://medium.com/remix-ide."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The Remix Project website introduces the"
-#~ " different facets of our project."
-#~ msgstr ""
-
-#~ msgid "The Remix Gitter Channel is a forum to post your questions about Remix."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Activate or deactivate a list of "
-#~ "plugins to be activated - and "
-#~ "specify which plugin gains the "
-#~ "\"focus\". SEE MORE"
-#~ msgstr ""
-
-#~ msgid "Send commands to a plugin - once the plugin loads. SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Load a GIST, a file via a "
-#~ "url or a base64 encoded string "
-#~ "into Remix's Editor."
-#~ msgstr ""
-
-#~ msgid "Specify the theme (Dark or Light). SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Specify which panels should be minimized"
-#~ " - useful when embedding Remix in "
-#~ "your site. SEE MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Select the version of the Solidity "
-#~ "compiler, enable/disable the optimizer, turn"
-#~ " on auto compile or choose the "
-#~ "language for the Solidity compiler. SEE"
-#~ " MORE"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following example contains the url"
-#~ " parameter activate followed by a "
-#~ "comma separated list of plugins."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note: a plugin is called by its"
-#~ " name as specified in its profile."
-#~ "  There are 3 types of plugins:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Native Mandatory Plugins that are always"
-#~ " loaded (so you don't need to "
-#~ "activate them using the url parameter"
-#~ " activate). These include: fileManager, "
-#~ "settings, manager (the plugin manager), "
-#~ "and udapp (deploy & run)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Native Optional Plugins that are loaded"
-#~ " on demand: debugger, hardhat-provider, "
-#~ "solidity, solidityStaticAnalysis, solidityUnitTesting, "
-#~ "and vyper"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "External Plugins to get these plugins'"
-#~ " names, please go to "
-#~ "https://github.com/ethereum/remix-plugins-"
-#~ "directory/tree/master/plugins."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following URL will close everything"
-#~ " except the main panel & the "
-#~ "icon panel (the side and terminal "
-#~ "are minimized)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The URL parameter to issue a "
-#~ "command is call.  Following the call "
-#~ "is a // (double slash) separated "
-#~ "list of arguments."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The URL below uses activate & "
-#~ "call.  It activates a number of "
-#~ "plugins and calls the File Explorers "
-#~ "to tell it to load one of "
-#~ "the default Remix files:"
-#~ msgstr ""
-
-#~ msgid "Load a specific tutorial in the LearnEth plugin:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The url parameter takes a URL, "
-#~ "loads it into the Editor and saves"
-#~ " it into the code-sample workspace"
-#~ " of the File Explorer:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The code parameter takes an encoded "
-#~ "base64 string and loads it into "
-#~ "the Editor as a .sol file and "
-#~ "saves to the code-sample workspace "
-#~ "of the File Explorer:"
-#~ msgstr ""
-
-#~ msgid "The URL parameter here is gist."
-#~ msgstr ""
-
-#~ msgid "Using both gist & call"
-#~ msgstr ""
-
-#~ msgid "Note: you need to specify both the Solidity version and the commit."
-#~ msgstr ""
 

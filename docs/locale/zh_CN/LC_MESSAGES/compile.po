@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:46\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/compile.pot\n"
+"X-Crowdin-File-ID: 6464\n"
+"Language: zh_CN\n"
 
 #: ../../compile.md:1
 msgid "Solidity Compiler"
@@ -59,8 +62,8 @@ msgid "use the shortcut `control + s`."
 msgstr "使用快捷键 `control + s`."
 
 #: ../../compile.md:19
-msgid "right click on a file in the File Explorer and selecting **Compile** option"
-msgstr "在文件管理器中右键点击一个文件并且选择**编译**选项"
+msgid "right click on a file in the File Explorer and select the **Compile** option"
+msgstr "在文件管理器中右键单击文件并选择编译选项"
 
 #: ../../compile.md:21
 msgid "![](images/a-sol-comp-basic.png)"
@@ -71,8 +74,8 @@ msgid "Auto Compile"
 msgstr "自动编译"
 
 #: ../../compile.md:24
-msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
-msgstr "如果自动编译选项框 (**见上图1中的B.**) 是选中状态，编译会在几秒内进行(文件自动保存后)，当另一个文件被选中时也一样。如果一个合约有很多依赖，编译多会花一点时间 - 所以，您可以自行判断是否需要使用自动编译。"
+msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compilation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
+msgstr "如果自动编译复选框被选中 (**见上图1中的B**) ，编译将每隔几秒 (当文件自动保存时) 以及选择另一个文件时进行。 如果合约具有很多依赖项，编译可能需要一些时间，因此您可以自行判断是否需要自动编译。"
 
 #: ../../compile.md:27
 msgid "Solidity versions & Remix functionality"
@@ -115,8 +118,8 @@ msgid "**Published data contains the contract's metadata and the solidity source
 msgstr "**发布的数据包含合约的元数据和 solidity 源码。**"
 
 #: ../../compile.md:47
-msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**."
-msgstr "点击 **Publish on IPFS** 或 **Publish on Swarm** 按钮后，会弹出一个对话框。对话框内包含了主合约和引用合约的地址，还有合约**元数据**的地址。"
+msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addresses of the contracts that it imported and the address of the contract's **metadata**."
+msgstr "点击 **在IPFS上发布** 或 **在Swarm上发布** 按钮后，会弹出一个窗口。这个窗口包含了合约地址和引用的合约的地址，还有合约**元数据**的地址。"
 
 #: ../../compile.md:49
 msgid "When the \"Compilation Details\" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract."
@@ -131,8 +134,8 @@ msgid "Passive Contract Verification"
 msgstr "被动合约验证"
 
 #: ../../compile.md:54
-msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything."
-msgstr "当你把你的元数据发布到 IPFS 且部署你的代码到主网络或者公共测试网络，合约验证服务 **[Sourcify](https://sourcify.dev/)** 会验证你的合约，而你自己不需要做任何事情。"
+msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verify your contracts without you needing to do anything."
+msgstr "当你把你的元数据发布到 IPFS 并且部署你的代码到主网或公共测试网络，合约验证服务 **[Sourcify](https://sourcify.dev/)** 将会验证你的合约，你将不需做任何事情。"
 
 #: ../../compile.md:56
 msgid "Compile and Run script"
@@ -167,8 +170,8 @@ msgid "![](images/a-sol-comp-adv.png)"
 msgstr "![](images/a-sol-comp-adv.png)"
 
 #: ../../compile.md:70
-msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**)."
-msgstr "有一个单选按钮可以选择使用交互界面配置 (**见图2中的N.**) 还是 JSON 文件配置 (**见图2中的R.**)。"
+msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**)."
+msgstr "这里有一个单选按钮可以选择通过交互界面配置编译器 (**见图2中的N**) 还是用JSON 文件进行配置 (**见图2中的R**)。"
 
 #: ../../compile.md:72
 msgid "Solidity or YUL"
@@ -195,12 +198,12 @@ msgid "Enable optimization"
 msgstr "启用优化"
 
 #: ../../compile.md:83
-msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
-msgstr "根据 Solidity 文档，“优化器会试图简化复杂的表达式，这会减少代码体积和执行消耗，也就是说这可以减少部署合约和外部调用合约的油费。”"
+msgid "According to the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgstr "根据Solidity的文档，“优化器试图简化复杂的表达式，从而减少代码大小和执行成本，也就是说，它可以减少合约部署所需的gas，以及对该合约进行外部调用所需的gas。”"
 
 #: ../../compile.md:85
-msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
-msgstr "对于最近的 Solidity 版本，[推荐启用优化](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
+msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)."
+msgstr "对于最近的Solidity版本，[建议启用优化](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-thyou-people are generally suspensous-of-the-ye-they-they-to-be)."
 
 #: ../../compile.md:87
 msgid "To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html)."

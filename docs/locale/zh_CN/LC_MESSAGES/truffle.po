@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:48\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -94,8 +94,8 @@ msgid "![](images/a-truffle-compilation.png)"
 msgstr "![](images/a-truffle-compilation.png)"
 
 #: ../../truffle.md:40
-msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation."
-msgstr "标签旁边有一个信息图标，点击后会跳转到 Remix 官方文档的特定部分，其中解释了如何使用 Truffle 编译。"
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation."
+msgstr "在标签旁边有一个信息图标，可重定向到 Remix 官方文档的特定部分，该部分说明了如使用Truffle编译。"
 
 #: ../../truffle.md:42
 msgid "One can check the `Enable Truffle Compilation` box to run the compilation for Truffle along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
@@ -119,7 +119,7 @@ msgstr "在 **remixd** 终端中也会显示编译结果。"
 
 #: ../../truffle.md:52
 msgid "Ganache Provider"
-msgstr "Ganache Provider"
+msgstr "Ganache 提供商"
 
 #: ../../truffle.md:55
 msgid "_In Truffle, contracts are deployed by connecting to a built-in personal blockchain, i.e. Ganache. Read more about it in [Truffle documentation](https://trufflesuite.com/docs/truffle/quickstart/#migrating-with-truffle-develop)_"

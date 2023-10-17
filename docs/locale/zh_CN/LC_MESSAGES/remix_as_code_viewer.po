@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -50,8 +50,8 @@ msgid "and reload. It will fetch the contracts verified on Etherscan."
 msgstr "并重新加载。它将获取在Etherscan上验证的合同。"
 
 #: ../../remix_as_code_viewer.md:19
-msgid "Contracts verified on Ethereum mainnnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace."
-msgstr "在以太坊主网和其他测试网络（Ropsten、Rinkeby、Kovan和Goerli）上验证的合约将加载到相应目录下的`etherscan-code-sample`工作区中。"
+msgid "Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace."
+msgstr "在以太坊主网和其他测试网络 (Ropsten、Rinkeby、Kovan和Goerli) 上验证的合约将加载到 `etherscan-code-sample` 工作空间的相应目录下。"
 
 #: ../../remix_as_code_viewer.md:21
 msgid "![](images/a-code-viewer-etherscan.png)"

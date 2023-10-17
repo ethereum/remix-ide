@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../hardhat.md:1
 msgid "Hardhat"
-msgstr "Hardhat"
+msgstr "安全帽"
 
 #: ../../hardhat.md:4
 msgid "_(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_"
@@ -94,8 +94,8 @@ msgid "![](images/a-hardhat-compilation.png)"
 msgstr "![](images/a-hardhat-compilation.png)"
 
 #: ../../hardhat.md:40
-msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
-msgstr "标签旁边有一个信息图标，点击后会跳转到 Remix 官方文档的特定部分，其中解释了如何使用 Hardhat 编译。"
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
+msgstr "在标签旁边有一个信息图标，可以重定向到 Remix 官方文档中的一个特定部分，该部分说明了如何使用 Hardhat 编译。"
 
 #: ../../hardhat.md:42
 msgid "One can check the `Enable Hardhat Compilation` box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
@@ -123,7 +123,7 @@ msgstr "![](images/a-hardhat-compilation-success-remixd.png)"
 
 #: ../../hardhat.md:54
 msgid "Hardhat Provider"
-msgstr "Hardhat Provider"
+msgstr "硬头盔供应商"
 
 #: ../../hardhat.md:57
 msgid "_In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_"

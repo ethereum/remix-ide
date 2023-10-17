@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  remix-translation\n"
+"Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
-"Language: zh_CN\n"
 "Language-Team: Chinese Simplified\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/tutorial_debug.pot\n"
+"X-Crowdin-File-ID: 6502\n"
+"Language: zh_CN\n"
 
 #: ../../tutorial_debug.md:1
 msgid "Debugging Transactions"
@@ -70,10 +73,6 @@ msgstr "点击`Deploy`按钮。"
 msgid "![](images/a-debug1-deploy.png)"
 msgstr "![](images/a-debug1-deploy.png)"
 
-#: ../../tutorial_debug.md:62
-msgid "![](images/a-debug1-deploy.png)"
-msgstr ""
-
 #: ../../tutorial_debug.md:64
 msgid "You'll see the deployed instance (AKA the udapp)."
 msgstr "您将看到已部署的实例(又名 udapp)。"
@@ -111,13 +110,11 @@ msgid "This will send the Ether to the function."
 msgstr "这会将ETH发送到这个合约。"
 
 #: ../../tutorial_debug.md:83
-msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr "因为我们使用的是`Remix VM`，所以一切都几乎瞬间发生。（如果我们使用了Injected Web 3，则需要批准交易、支付gas费用并等待交易上链。）"
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr "因为我们使用的是 “Remix虚拟机”，所以一切都几乎瞬时发生。(如果我们使用的是 “Injected Web 3”，那么我们需要批准交易、支付燃料费，并等待交易被挖掘。)"
 
 #: ../../tutorial_debug.md:85
-msgid ""
-"Remix displays information related to each transaction result in the "
-"terminal."
+msgid "Remix displays information related to each transaction result in the terminal."
 msgstr "Remix 在终端中显示与每个交易结果相关的信息。"
 
 #: ../../tutorial_debug.md:87
@@ -141,15 +138,11 @@ msgid "Initiate Debugging from the Debugger"
 msgstr "从调试器启动调试"
 
 #: ../../tutorial_debug.md:97
-msgid ""
-"Click the bug icon in the icon panel to get to the debugger in the side "
-"panel."
+msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
 msgstr "单击图标面板中的错误图标以访问侧面板中的调试器。"
 
 #: ../../tutorial_debug.md:99
-msgid ""
-"If you don't see the bug icon, go to the plugin manager and activate the "
-"debugger."
+msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
 msgstr "如果您没有看到错误图标，请转到插件管理器并激活调试器。"
 
 #: ../../tutorial_debug.md:101
@@ -184,10 +177,6 @@ msgstr "然后在调试器中粘贴**哈希**并点击`开始调试`按钮。"
 msgid "![](images/a-debug7-debugger.png)"
 msgstr "![](images/a-debug7-debugger.png)"
 
-#: ../../tutorial_debug.md:112
-msgid "![](images/a-debug7-debugger.png)"
-msgstr ""
-
 #: ../../tutorial_debug.md:114
 msgid "Using the debugger"
 msgstr "使用调试器"
@@ -197,16 +186,11 @@ msgid "![](images/a-debug8-top3.png)"
 msgstr "![](images/a-debug8-top3.png)"
 
 #: ../../tutorial_debug.md:119
-msgid ""
-"The debugger allows one to see detailed informations about the "
-"transaction's execution. It uses the editor to display the location in "
-"the source code where the current execution is."
+msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
 msgstr "调试器允许人们查看有关事务执行的详细信息。 它使用编辑器在源代码中显示当前执行的位置。"
 
 #: ../../tutorial_debug.md:123
-msgid ""
-"The navigation part contains a slider and buttons that can be used to "
-"step through the transaction execution."
+msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
 msgstr "导航部分包含一个滑块和按钮，可用于逐步执行事务。"
 
 #: ../../tutorial_debug.md:127
@@ -306,8 +290,8 @@ msgid "Return Value (only if the current step is a RETURN opcode)"
 msgstr "Return Valu(仅当当前步骤是返回操作码时)"
 
 #: ../../tutorial_debug.md:178
-msgid "Full Storages Changes (only at the end of the execution & it displays the all the storage changes)"
-msgstr "完整存储更改（仅在执行结束时显示所有存储更改）"
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
+msgstr "完整存储更改(仅在执行结束时，并显示所有存储更改)"
 
 #: ../../tutorial_debug.md:180
 msgid "Reverted Transaction"
@@ -388,85 +372,4 @@ msgstr "`m = 89; (m赋值89)"
 #: ../../tutorial_debug.md:237
 msgid "`uint l = 34;` (34 assigned to l)"
 msgstr "`uint l = 34； (l赋值34)"
-
-#~ msgid "(also see this page's companion: the Debugger Tour)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use Case 1: for debugging a "
-#~ "transaction made in Remix - click "
-#~ "the Debug button in the transaction "
-#~ "log in Remix's Terminal."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Use Case 2: for debugging a "
-#~ "transaction where you have a txn "
-#~ "hash from verified contract or where "
-#~ "you have the txn hash and the "
-#~ "compiled source code with the same "
-#~ "compilation settings as the deployed "
-#~ "contract."
-#~ msgstr ""
-
-#~ msgid "For the purpose of this tutorial, we will run the JavaScript VM."
-#~ msgstr ""
-
-#~ msgid "We are going to call the Donate function and will send 2 Ethers."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To do this: in the value input "
-#~ "box put in 2 and select Ether "
-#~ "as the unit (DO NOT LEAVE THE "
-#~ "DEFAULT unit as gwei or the change"
-#~ " will be hard to detect)."
-#~ msgstr ""
-
-#~ msgid "Click the debug button."
-#~ msgstr ""
-
-#~ msgid "More explaination of what these buttons do."
-#~ msgstr "更多解释这些按钮的作用。"
-
-#~ msgid "Step Into"
-#~ msgstr "进入"
-
-#~ msgid "Step Over Into"
-#~ msgstr "跨步进入"
-
-#~ msgid ""
-#~ "Important note: When this panel is "
-#~ "hidden, the slider will have a "
-#~ "coarser granularity and only stop at "
-#~ "expression boundaries, even if they are"
-#~ " compiled into multiple EVM instructions."
-#~ " When the panel is displayed, it "
-#~ "will be possible to step over "
-#~ "every instruction, even those that "
-#~ "refers to the same expression."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A transaction can be reverted (because"
-#~ " of an out of gas exception, a"
-#~ " Solidity revert statement or a low"
-#~ " level exception)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Important note: If you add a "
-#~ "breakpoint to a line that declares "
-#~ "a variable, it might be triggered "
-#~ "twice: Once for initializing the "
-#~ "variable to zero and a second time"
-#~ " for assigning the actual value."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "then clicking on the Jump to the"
-#~ " next breakpoint button will stop at"
-#~ " the following lines in the given "
-#~ "order:"
-#~ msgstr ""
 

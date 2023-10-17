@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/contract_verification.pot\n"
+"X-Crowdin-File-ID: 7943\n"
+"Language: zh_CN\n"
+
+#: ../../contract_verification.md:1
+msgid "Contract Verification"
+msgstr "合同核查"
+
+#: ../../contract_verification.md:4
+msgid "There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers."
+msgstr "Remix 中有两种合约验证服务，即 Sourcify 和 Etherscan 以及扩展的区块探索者 [Etherscan 系列](https://etherscan.io/eaas)。"
+
+#: ../../contract_verification.md:6
+msgid "Sourcify"
+msgstr "Sourcify"
+
+#: ../../contract_verification.md:9
+msgid "Documentation about Sourcify is found [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)."
+msgstr "有关 Sourcify 的文档可查阅 [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)。"
+
+#: ../../contract_verification.md:11
+msgid "Etherscan"
+msgstr "Etherscan"
+
+#: ../../contract_verification.md:14
+msgid "The Etherscan plugin is called: **CONTRACT VERIFICATION - ETHERSCAN**."
+msgstr "Etherscan 插件名为** 合同验证 - Etherscan**。"
+
+#: ../../contract_verification.md:16
+msgid "You can access it from the Plugin Manager."
+msgstr "您可以通过插件管理器访问它。"
+
+#: ../../contract_verification.md:18
+msgid "The plugin has 3 pages, the **verification** page, the **receipts** page, and the **settings** page."
+msgstr "该插件有 3 个页面：**验证**页面、**收据**页面和**设置**页面。"
+
+#: ../../contract_verification.md:20
+msgid "When you go to the plugin for the first time, the settings page will load for inputting the API key."
+msgstr "首次访问插件时，将加载设置页面以输入 API 密钥。"
+
+#: ../../contract_verification.md:22
+msgid "![](images/a-cv-etherscan-plugin-api-needed.png)"
+msgstr "![](images/a-cv-etherscan-plugin-api-needed.png)"
+
+#: ../../contract_verification.md:25
+msgid "Etherscan API Key - settings page"
+msgstr "Etherscan API 密钥 - 设置页面"
+
+#: ../../contract_verification.md:26
+msgid "Etherscan is a block explorer for Ethereum mainnet and they make block explorers for other chains."
+msgstr "Etherscan 是以太坊主网的区块探索器，他们还为其他链制作区块探索器。"
+
+#: ../../contract_verification.md:28
+msgid "For Ethereum testnets like Goerli or Sepolia, the same API key works."
+msgstr "对于 Goerli 或 Sepolia 等以太坊测试网，使用相同的 API 密钥也可以。"
+
+#: ../../contract_verification.md:30
+msgid "If you are trying to verify on L2 chains like Optimism, a different API key is needed for their block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key."
+msgstr "如果您要在 Optimism 等 L2 链上进行验证，则需要为其区块探索器提供不同的 API 密钥。并非所有 Etherscan 制作的区块链浏览器都有 API 密钥。Remix Contract Verification - Etherscan 插件只有在您可以登录该区块浏览器获取 API 密钥的情况下才能工作。"
+
+#: ../../contract_verification.md:32
+msgid "Once the API key is input, the verification page (the homepage) is opened."
+msgstr "输入 API 密钥后，就会打开验证页面（主页）。"
+
+#: ../../contract_verification.md:34
+msgid "Verification page"
+msgstr "验证页面"
+
+#: ../../contract_verification.md:36
+msgid "![](images/a-cv-etherscan-verify-page1.png)"
+msgstr "![](images/a-cv-etherscan-verify-page1.png)"
+
+#: ../../contract_verification.md:38
+msgid "The network is NOT selected in the Etherscan plugin. The network is chosen in the Deploy & Run plugin and in your browser's wallet (if using)."
+msgstr "在 Etherscan 插件中未选择网络。网络在 \"部署和运行 \"插件和浏览器钱包（如果使用）中选择。"
+
+#: ../../contract_verification.md:40
+msgid "The prerequisites for verification are:"
+msgstr "核查的前提条件是"
+
+#: ../../contract_verification.md:41
+msgid "The address of a deployed contract on a public network"
+msgstr "公共网络上已部署合同的地址"
+
+#: ../../contract_verification.md:42
+msgid "That same contract compiled in Remix"
+msgstr "Remix 中汇编的同一份合同"
+
+#: ../../contract_verification.md:43
+msgid "Constructor parameters same as used during deployment (if required)"
+msgstr "构造函数参数与部署过程中使用的参数相同（如需要）"
+
+#: ../../contract_verification.md:46
+msgid "Receipts page"
+msgstr "收据页面"
+
+#: ../../contract_verification.md:47
+msgid "Verification receipts are found on the receipts page."
+msgstr "验证收据可在收据页面找到。"
+
+#: ../../contract_verification.md:49
+msgid "![](images/a-cv-etherscan-receipts.png)"
+msgstr "![](images/a-cv-etherscan-receipts.png)"
+
+#: ../../contract_verification.md:51
+msgid "Verification with constructor arguments"
+msgstr "使用构造函数参数进行验证"
+
+#: ../../contract_verification.md:52
+msgid "When a contract has arguments in the constructor, a text box will show for inputting the same constructor inputs as the deployed contract."
+msgstr "当合约的构造函数中有参数时，会显示一个文本框，用于输入与已部署合约相同的构造函数输入。"
+
+#: ../../contract_verification.md:54
+msgid "![](images/a-cv-etherscan-constructor-args.png)"
+msgstr "![](images/a-cv-etherscan-constructor-args.png)"
+
+#: ../../contract_verification.md:56
+msgid "Verifying a proxy contract"
+msgstr "验证代理合同"
+
+#: ../../contract_verification.md:57
+msgid "Before verifying a proxy contract, the associated implementation contract must already be verified."
+msgstr "在验证代理合同之前，必须先验证相关的执行合同。"
+
+#: ../../contract_verification.md:59
+msgid "Just for review, the implementation contract is you wrote or adapted and the proxy is, for example, an ERC1967Proxy."
+msgstr "为了便于查看，实施合约是由您编写或改编的，而代理则是 ERC1967Proxy。"
+
+#: ../../contract_verification.md:61
+msgid "**Do not check the proxy box when verifying the implementation.** Then after verifying the implementation contract:"
+msgstr "** 在验证执行时不要勾选代理框。** 然后在验证执行合同后再勾选代理框："
+
+#: ../../contract_verification.md:63
+msgid "Cut out the implementation contract's address from the Contract Address box."
+msgstr "从 \"合同地址 \"框中剪下执行合同的地址。"
+
+#: ../../contract_verification.md:64
+msgid "Click the \"It's a proxy contract address\" checkbox."
+msgstr "单击 \"这是代理合同地址 \"复选框。"
+
+#: ../../contract_verification.md:65
+msgid "Paste the verified implementation contract's address in the Expected Implementation Address box."
+msgstr "在 \"预期实施地址 \"框中粘贴经过验证的实施合同地址。"
+
+#: ../../contract_verification.md:66
+msgid "Paste in the proxy contract address into the Contract Address box."
+msgstr "在合同地址框中粘贴代理合同地址。"
+
+#: ../../contract_verification.md:68
+msgid "To explain this visually, verify the implementation contract:"
+msgstr "为了以图示的方式解释，验证合约的执行过程："
+
+#: ../../contract_verification.md:70
+msgid "![](images/a-cv-etherscan-verify-implementation.png)"
+msgstr "![](images/a-cv-etherscan-verify-implementation.png)"
+
+#: ../../contract_verification.md:72
+msgid "Then check the \"It's a proxy contract\" checkbox and cut and paste the implementation address from the contract address to the implementation contract box:"
+msgstr "然后选中 \"这是代理合同 \"复选框，并将合同地址中的执行地址剪切并粘贴到执行合同框中："
+
+#: ../../contract_verification.md:74
+msgid "![](images/a-cv-etherscan-move-addr.png)"
+msgstr "![](images/a-cv-etherscan-move-addr.png)"
+
+#: ../../contract_verification.md:76
+msgid "And then paste the address of the proxy contract into the Contract Address box. ![](images/a-cv-etherscan-verify-proxy2.png)"
+msgstr "然后将代理合同的地址粘贴到合同地址框中。![](images/a-cv-etherscan-verify-proxy2.png)"
+
+#: ../../contract_verification.md:79
+msgid "Generate Verification Scripts"
+msgstr "生成验证脚本"
+
+#: ../../contract_verification.md:80
+msgid "Clicking the Generate Verification Scripts on the Verification page, will create a folder named etherscan in the Workspace's scripts folder that contains .ts files for verifying and returning the receipt status."
+msgstr "单击 \"验证 \"页面上的 \"生成验证脚本\"，将在工作区的脚本文件夹中创建一个名为 etherscan 的文件夹，其中包含用于验证和返回收据状态的 .ts 文件。"
+
+#: ../../contract_verification.md:82
+msgid "![](images/a-cv-etherscan-gen-scripts.png)"
+msgstr "![](images/a-cv-etherscan-gen-scripts.png)"
+

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:48\n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "作为开发依赖："
 
 #: ../../unittestingAsCLI.md:15
 msgid "`npm install --save-dev @remix-project/remix-tests`"
-msgstr "`npm install --save-dev @remix-project/remix-tests`"
+msgstr "npm install --save-dev @remix-project/remix-tests"
 
 #: ../../unittestingAsCLI.md:17
 msgid "As a global NPM module:"
@@ -51,7 +51,7 @@ msgstr "作为全局NPM模块："
 
 #: ../../unittestingAsCLI.md:19
 msgid "`npm install -g @remix-project/remix-tests`"
-msgstr "`npm install -g @remix-project/remix-tests`"
+msgstr "npm install -g @remix-project/remix-tests"
 
 #: ../../unittestingAsCLI.md:21
 msgid "To confirm installation, run:"

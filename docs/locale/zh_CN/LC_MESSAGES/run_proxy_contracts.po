@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-28 23:16-0400\n"
-"PO-Revision-Date: 2023-05-30 18:47\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -22,24 +22,24 @@ msgid "Deploy & Run Proxy Contracts"
 msgstr "部署与运行代理合约"
 
 #: ../../run_proxy_contracts.md:4
-msgid "Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern."
-msgstr "在Remix IDE 中，用户可以使用 UUPS 代理合约。"
+msgid "Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern."
+msgstr "Remix IDE 提供了处理使用 UUPS 模式的代理合约的辅助功能。"
 
 #: ../../run_proxy_contracts.md:6
 msgid "A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 msgstr "UUPS 代理合约实现了[ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 
 #: ../../run_proxy_contracts.md:8
-msgid "Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address."
-msgstr "一旦您部署了一份UUPS的实现合约，Remix将在您的实现合约地址下部署一个ERC1967合约。"
+msgid "Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address."
+msgstr "一旦您部署了 UUPS实现合约，Remix 将会部署一个 ERC1967合约，并包含您的实现合约地址。"
 
 #: ../../run_proxy_contracts.md:10
 msgid "To interact with the functions in the **implementation contract**, use the deployed instance of the **ERC1967 instance** not on the implementation contract."
 msgstr "要与**执行合约**中的函数交互，请使用**ERC 1967合约**的部署实例，而不是执行合约。"
 
 #: ../../run_proxy_contracts.md:12
-msgid "When its time to upgrade you contract, Remix has a UI for this."
-msgstr "当你想升级合约的时候，Remix有一个用户页面来引导。"
+msgid "When it's time to upgrade your contract, Remix has a UI for this."
+msgstr "当需要升级合约时，Remix 提供了相应的用户界面进行操作。"
 
 #: ../../run_proxy_contracts.md:14
 msgid "To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy & Run."

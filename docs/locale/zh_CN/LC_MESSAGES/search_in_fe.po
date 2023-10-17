@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/search_in_fe.pot\n"
+"X-Crowdin-File-ID: 8043\n"
+"Language: zh_CN\n"
+
+#: ../../search_in_fe.md:1
+msgid "Search in Files"
+msgstr "搜索文件"
+
+#: ../../search_in_fe.md:3
+msgid "The **Search in Files** plugin is loaded by default.  It also includes functionality to search & replace as well as searching with regular expressions."
+msgstr "**Search in Files **插件默认已加载。它还包括搜索和替换功能，以及支持使用正则表达式进行搜索。"
+
+#: ../../search_in_fe.md:5
+msgid "![](images/a-search.png)"
+msgstr "![](images/a-search.png)"
+
+#: ../../search_in_fe.md:7
+msgid "This plugin searches through text in the files of the current workspace.  It does not search across workspaces."
+msgstr "这个插件可以在当前工作空间的文件中搜索文本，但不能跨工作空间搜索。"
+
+#: ../../search_in_fe.md:9
+msgid "Search and Replace"
+msgstr "搜索和替换"
+
+#: ../../search_in_fe.md:10
+msgid "Clicking on the caret to the left of the text input box will reveal the **replace** functionality."
+msgstr "点击文本输入框左侧的插入符号将显示**替换**功能。"
+
+#: ../../search_in_fe.md:12
+msgid "![](images/a-search-open.png)"
+msgstr "![](images/a-search-open.png)"
+
