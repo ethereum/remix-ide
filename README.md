@@ -38,4 +38,6 @@ Go to `docs/_build/html` and open `index.html` on the browser.
 
 We wholeheartedly welcome everyone to contribute. Suggestions, issues, queries and feedbacks are our pleasure. Please reach us on [Gitter](https://gitter.im/ethereum/remix) in case of any query.
 
+The site is internationalized.  Do not make any corrections to .po or .pot files.  These get handled in our translation management platform.  To help with the translation of our documentation, please visit https://crowdin.com/project/remix-translation. To help with our translations of Remix's UI, please visit https://crowdin.com/project/remix-ui.
+
 
