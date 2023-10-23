@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Remix - Ethereum IDE 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"POT-Creation-Date: 2023-10-23 08:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,98 +200,158 @@ msgstr ""
 msgid "![](images/a-editor-error-fe-num.png)"
 msgstr ""
 
+#: ../../solidity_editor.md:80
+msgid "Quick Fixes for common mistakes"
+msgstr ""
+
 #: ../../solidity_editor.md:81
-msgid "Gas Estimates"
+msgid "The Remix editor offers solutions to the following missing keywords & code:"
+msgstr ""
+
+#: ../../solidity_editor.md:82
+msgid "License"
 msgstr ""
 
 #: ../../solidity_editor.md:83
-msgid "Gas estimates are displayed on the same line where a function is declared."
+msgid "Pragma"
+msgstr ""
+
+#: ../../solidity_editor.md:84
+msgid "Visibility"
 msgstr ""
 
 #: ../../solidity_editor.md:85
-msgid "![](images/a-editor-i-got-gas.png)"
+msgid "Mutability"
+msgstr ""
+
+#: ../../solidity_editor.md:86
+msgid "Data Location (storage, memory, etc)"
 msgstr ""
 
 #: ../../solidity_editor.md:87
-msgid "Constructor gas estimates are also displayed, and consist of two components: creation cost and code deposit cost."
+msgid "Add virtual or override"
+msgstr ""
+
+#: ../../solidity_editor.md:88
+msgid "Marking a contract abstract"
 msgstr ""
 
 #: ../../solidity_editor.md:90
-msgid "Go to Definition and References"
+msgid "A Quick Fix option is available when there is a blue dot in Editor - like in the image below."
 msgstr ""
 
 #: ../../solidity_editor.md:92
-msgid "Definitions"
+msgid "In this example, the license has been left out.  After compilation, a warning is triggered and a Quick Fix blue dot appears."
 msgstr ""
 
-#: ../../solidity_editor.md:93
-msgid "By right-clicking, you can go to a definition. You can also use the shortcut displayed."
+#: ../../solidity_editor.md:94
+msgid "![](images/a-editor-qf-license.png)"
 msgstr ""
 
-#: ../../solidity_editor.md:95
-msgid "You can also right-click on the filename of an import statement and jump to that file."
+#: ../../solidity_editor.md:96
+msgid "When you click on the blue dot, a popup menu appears.  In this case of a missing license, these are the options:"
 msgstr ""
 
-#: ../../solidity_editor.md:97
-msgid "![](images/a-editor-goto-def.png)"
+#: ../../solidity_editor.md:98
+msgid "![](images/a-editor-qf-license-options5.png)"
 msgstr ""
 
-#: ../../solidity_editor.md:99
-msgid "You can also ‘peek’ at the definition inline in the Editor. You can then jump to a definition by double-clicking on the right hand side of the line."
-msgstr ""
-
-#: ../../solidity_editor.md:101
-msgid "References"
+#: ../../solidity_editor.md:100
+msgid "If you can’t get the Quick Fix blue dot to appear, try clicking on the number for the line where the error occurs."
 msgstr ""
 
 #: ../../solidity_editor.md:102
-msgid "By right-clicking, you can display all the references. You can also use the shortcut displayed."
+msgid "Gas Estimates"
 msgstr ""
 
 #: ../../solidity_editor.md:104
-msgid "![](images/a-editor-refs1.png)"
+msgid "Gas estimates are displayed on the same line where a function is declared."
 msgstr ""
 
 #: ../../solidity_editor.md:106
-msgid "You can jump to a reference by double-clicking on the right hand side of the line."
+msgid "![](images/a-editor-i-got-gas.png)"
 msgstr ""
 
 #: ../../solidity_editor.md:108
-msgid "![](images/a-editor-ref2.png)"
-msgstr ""
-
-#: ../../solidity_editor.md:109
-msgid "Highlighted References"
+msgid "Constructor gas estimates are also displayed, and consist of two components: creation cost and code deposit cost."
 msgstr ""
 
 #: ../../solidity_editor.md:111
-msgid "References are highlighted in the Editor."
+msgid "Go to Definition and References"
 msgstr ""
 
 #: ../../solidity_editor.md:113
-msgid "![](images/a-editor-ref-highlight.png)"
+msgid "Definitions"
 msgstr ""
 
 #: ../../solidity_editor.md:114
-msgid "Hovering"
+msgid "By right-clicking, you can go to a definition. You can also use the shortcut displayed."
 msgstr ""
 
 #: ../../solidity_editor.md:116
-msgid "When you hover over a term with a definition, the definition will pop up. Hovering over code that has triggered an error (underlined with a red squiggly line) will show the error message."
+msgid "You can also right-click on the filename of an import statement and jump to that file."
 msgstr ""
 
 #: ../../solidity_editor.md:118
-msgid "![](images/a-editor-hover.png)"
+msgid "![](images/a-editor-goto-def.png)"
 msgstr ""
 
-#: ../../solidity_editor.md:119
-msgid "Files with Errors turn Red"
+#: ../../solidity_editor.md:120
+msgid "You can also ‘peek’ at the definition inline in the Editor. You can then jump to a definition by double-clicking on the right hand side of the line."
 msgstr ""
 
-#: ../../solidity_editor.md:121
-msgid "When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor."
+#: ../../solidity_editor.md:122
+msgid "References"
 msgstr ""
 
 #: ../../solidity_editor.md:123
+msgid "By right-clicking, you can display all the references. You can also use the shortcut displayed."
+msgstr ""
+
+#: ../../solidity_editor.md:125
+msgid "![](images/a-editor-refs1.png)"
+msgstr ""
+
+#: ../../solidity_editor.md:127
+msgid "You can jump to a reference by double-clicking on the right hand side of the line."
+msgstr ""
+
+#: ../../solidity_editor.md:129
+msgid "![](images/a-editor-ref2.png)"
+msgstr ""
+
+#: ../../solidity_editor.md:130
+msgid "Highlighted References"
+msgstr ""
+
+#: ../../solidity_editor.md:132
+msgid "References are highlighted in the Editor."
+msgstr ""
+
+#: ../../solidity_editor.md:134
+msgid "![](images/a-editor-ref-highlight.png)"
+msgstr ""
+
+#: ../../solidity_editor.md:135
+msgid "Hovering"
+msgstr ""
+
+#: ../../solidity_editor.md:137
+msgid "When you hover over a term with a definition, the definition will pop up. Hovering over code that has triggered an error (underlined with a red squiggly line) will show the error message."
+msgstr ""
+
+#: ../../solidity_editor.md:139
+msgid "![](images/a-editor-hover.png)"
+msgstr ""
+
+#: ../../solidity_editor.md:140
+msgid "Files with Errors turn Red"
+msgstr ""
+
+#: ../../solidity_editor.md:142
+msgid "When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor."
+msgstr ""
+
+#: ../../solidity_editor.md:144
 msgid "More about the Editor updates in this article: Major Updates to Remix Editor"
 msgstr ""
