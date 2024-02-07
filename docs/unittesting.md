@@ -148,7 +148,8 @@ function checkSenderIs0AndValueis10 () public payable {
 
 Regarding `gas`, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with `Out-of-Gas` error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: ```contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit```
 
-Various test examples can be seen in [examples](./unittesting_examples) section.
+Various test examples can be seen in [examples](https://remix-ide.readthedocs.io/en/latest/unittesting_examples.html) section.
+
 
 
 Points to remember
