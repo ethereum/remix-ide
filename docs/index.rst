@@ -123,6 +123,7 @@ Useful links:
    :caption: Miscellaneous
 
    plugin_list
+   vyper
    remix_as_code_viewer
    code_contribution_guide
    community
