@@ -5,7 +5,7 @@ Vyper contracts can be compiled in Remix in the **Vyper compiler**.
 
 ![](images/a-vyper-pi-basic.png)
 
-The plugin can be activated going to:
+The plugin can be activated by going to:
 1. the Plugin Manager and clicking on the Vyper compiler's activate button.
 2. the File Explorer, then right clicking on a .vy file and selecting compile in the pop-up menu.
 3. https://remix.ethereum.org/#activate=vyper
@@ -13,25 +13,29 @@ The plugin can be activated going to:
 ## Compiling a Vyper file
 A Vyper file (with a .vy extension) needs to be the active file in the Editor.  To get some example files, click on the **Clone Vyper examples repo** button.  This will clone a repo and put it in a new Workspace.  Go to the File Explorer to see the files.
 
-## Specifying Vyper, EVM Versions, and Optimize
+## Specifying Vyper version, EVM versions, and optimize
 
-To specify the version of Vyper, the EVM version, or Optimized, add a comment at the top of your .vy code like in the example below:
+To specify the Vyper version, the EVM version, and optimize setting, add a comment at the top of your .vy code as in the examples below:
+
+### Current way to specify Vyper version
+As of 0.3.10, the recommended way to specify the version pragma is as follows:
+
+```
+#pragma version ^0.3.10
+```
+
+### Old way to specify Vyper version
 
 ```
 # @version ^0.3.0
 ```
-As of 0.3.10, the recommended way to specify the version pragma is as follows:
 
-```
-#pragma version ^0.3.0
-```
-
-EVM version
+### EVM version
 ```
 # @pragma evm-version paris
 ```
 
-Optimize
+### Optimize
 ```
 #pragma optimize codesize
 ```
@@ -55,12 +59,12 @@ The remote compilation is done using our remote containerized service that suppo
 
 ### Local Compiler
 
-The local compilation can be done by connecting Remix Online IDE to your file system with Remixd and then running a docker container that runs the Ape framework. Click here for more info about this setup.
+The local compilation can be done by connecting Remix Online IDE to your file system with [Remixd](remixd.html) and then running a docker container that runs the Ape framework. 
 
 When the next version of Remix Desktop is ready, you’ll be able to run everything locally — both Remix, and the new Vyper compilers (still in Docker, of course).
 
 ## Compiler errors
-When there are compiler errors in the Vyper plugin, a cards will appear at the bottom of the compiler.
+When there are compiler errors in the Vyper plugin, a card will appear at the bottom of the compiler.
 
 
 Errors appear one at a time.  Fix one and the next, if there is one, will appear.
