@@ -109,6 +109,27 @@ For more script examples, please see [Frequently Asked Scripts](FAS.html).
 
 `require` statement is supported in a limited manner for Remix supported modules with Remix Scripts.
 
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, remix and hardhat only for hardhat.ethers object/plugin.
+For now, modules supported by Remix are:
+- ethers
+- web3
+- swarmgw
+- chai
+- starknet
+- multihashes
+- zokrates-js
+- snarkjs
+- circomlibjs
+- @zk-kit/incremental-merkle-tree
+- @semaphore-protocol/proof
+- @semaphore-protocol/group
+- @semaphore-protocol/identity
+- @semaphore-protocol/data
+- @chainlink/functions-toolkit
+- @personaelabs/spartan-ecdsa
+- @ethereumjs/util
+- ffjavascript
+- sindri
+- remix
+- hardhat (only for hardhat.ethers object)
 
 For unsupported modules, this error `<module_name> module require is not supported by Remix IDE` will be shown.
