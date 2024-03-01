@@ -120,7 +120,7 @@ contract Sunshine {
         string color;
     }
       
-    function picker(Garden memory gardenPlot) public {
+    function fertilizer(Garden memory gardenPlot) public {
         uint a = gardenPlot.slugCount;
         uint b = gardenPlot.wormCount;
         Flower[] memory cFlowers = gardenPlot.theFlowers;
