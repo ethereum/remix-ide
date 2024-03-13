@@ -212,7 +212,7 @@ msgstr ""
 
 #: ../../compile.md:83
 msgid ""
-"According to the the Solidity Docs, \"the optimizer tries to simplify "
+"According to the Solidity Docs, \"the optimizer tries to simplify "
 "complicated expressions, which reduces both code size and execution cost,"
 " i.e., it can reduce gas needed for contract deployment as well as for "
 "external calls made to the contract.\""
