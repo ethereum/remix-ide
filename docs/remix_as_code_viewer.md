@@ -20,7 +20,7 @@ Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rink
 
 ![](images/a-code-viewer-etherscan.png)
 
-Tihs works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix. 
+This works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix. 
 
 Through GitHub
 ------------------

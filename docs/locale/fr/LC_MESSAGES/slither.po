@@ -78,7 +78,7 @@ msgid "**Solc-select:** [https://github.com/crytic/solc-select#quickstart](https
 msgstr "**Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)"
 
 #: ../../slither.md:33
-msgid "There are setup with [remixd](https://www.npmjs.com/package/@remix-project/remixd) installation or can be done using `remixd -i slither` commmand."
+msgid "There are setup with [remixd](https://www.npmjs.com/package/@remix-project/remixd) installation or can be done using `remixd -i slither` command."
 msgstr "Il est configuré avec l'installation de [remixd](https://www.npmjs.com/package/@remix-project/remixd) ou peut être fait en utilisant la commande `remixd -i slither`."
 
 #: ../../slither.md:35
