@@ -59,6 +59,9 @@ Useful links:
    plugin_manager
    settings
    solidity_editor
+   run
+   udapp
+   run_proxy_contracts
    terminal
    remixd
 
@@ -67,9 +70,7 @@ Useful links:
    :caption: Solidity modules
 
    compile
-   run
-   udapp
-   run_proxy_contracts
+   ai
    debugger
    static_analysis
 
