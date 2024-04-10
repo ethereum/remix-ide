@@ -10,7 +10,7 @@ Solidity Copilot helps in writing code using code completion. The switch to acti
 
 ![](images/a-ai-switch.png)
 
-The Solidity Copilot is specifically for help with Solidity coding. Although it is thousands of times smaller than ChatGPT, it will likely be slower than ChatGPT.  
+The Solidity Copilot is specifically for help with Solidity coding. Although it is thousands of times smaller than ChatGPT, it could be slower than ChatGPT.  
 
 ## ChatGPT in Remix
 Remix is currently using ChatGPT v3.5. 
@@ -70,7 +70,7 @@ The settings for Solidity Copilot are in Remix's Settings panel. These settings 
 There are two settings for Solidity Copilot:
 
 ### Maximum words 
-Max words sets the maximum number of words that will be returned. The fewer the words, the more likely that a useable answer will be returned.
+Max words sets the maximum number of words that will be returned. The fewer the words, the more likely that a context-accurate answer will be returned and the quicker the response time.
 
 ### Temperature
-Temperature is an advanced setting. As the setting is increased, the range of possible answers will increase. A lower number is more likely to return a relevant answer.
+Temperature is an advanced setting. As the setting is increased, the range of possible answers will increase. A higher number is more likely to return a relevant answer.
