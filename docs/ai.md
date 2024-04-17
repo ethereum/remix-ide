@@ -29,7 +29,7 @@ In the Right-click menu, select the options **Explain the function** and **Gener
 The "Explain this code" option in the Editor's Right-click menu can be triggered with, or without, highlighting a block of code.
 
 ## Editor: Code Completion
-With the Soldity Copilot switch on, just start typing. When you put a space after a word, the Copilot will make a suggestion.  
+With the Solidity Copilot switch on, just start typing. When you put a space after a word, the Copilot will make a suggestion.  
 
 **NOTE: the suggestion will take into account everything that preceded it in this contract.**
 
