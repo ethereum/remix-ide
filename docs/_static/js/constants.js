@@ -41,7 +41,6 @@ const HOME_NAV_IDs = [
       { name: "Articles", href: ARTICLES_URL },
     ]
   },
-  { name: "Learn", href: LEARN_URL },
   { name: "IDE", href: IDE_ID },
   { name: "Plugins", href: PLUGINS_ID },
   { name: "Libraries", href: LIBRARIES_ID },
