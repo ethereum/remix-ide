@@ -1,0 +1,67 @@
+/* ROOT THEMING DECLARATIONS */
+:root {
+  /* Light mode theme colors */
+  --color-background: #FFFFFF;
+  --color-body: #333333;
+  --color-body-light: #5F5F5F;
+  --color-code-background: #F4F4F4;
+  --color-primary: #2F6DF2;
+  --color-primary-transparent: #3B98F680;
+  --color-hover: #2F6DF2E5;
+
+  --color-a: #2D61D226;
+  --color-b: #2B55B726;
+  --color-c: #B198FF26;
+  --color-d: #FF86E326;
+  --color-gradient: linear-gradient(180deg, var(--color-a) 0%, var(--color-b) 37%, var(--color-c) 75%, var(--color-d) 100%);
+
+  background-color: var(--color-background);
+  color: var(--color-body);
+
+
+  --navHeight: 4.25rem;
+  --sideWidth: 22.5rem;
+
+  /* Font sizes */
+  --size-body: 1rem;
+  --size-body-link: 1rem;
+  --size-body-small: 0.875rem;
+  --size-body-small-link: 0.875rem;
+  --size-body-big: 1.125rem;
+  --size-h1: 2.75rem;
+  --size-h2: 2.25rem;
+  --size-h3: 1.875rem;
+  --size-h4: 1.5rem;
+  --size-h5: 1.25rem;
+  --size-h6: 1rem;
+  --size-left-nav-title: var(--size-body);
+  --size-left-nav-lvl-1: var(--size-body-small);
+
+  --line-height: 1.5;
+
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark mode theme colors */
+:root[style*=dark] {
+  --color-background: #0E0E0E !important;
+  --color-body: #F8F8F8 !important;
+  --color-body-light: #CDCDCD !important;
+  --color-code-background: #313131 !important;
+  --color-primary: #709EFF !important;
+  --color-primary-transparent: #709EFF80;
+  --color-hover: #709EFFE5;
+}
+
+/* Remix mode theme colors */
+:root[style*=remix] {
+  --color-background: #2A2C3F !important;
+  --color-body: #F8F8F8 !important;
+  --color-body-light: #A2A3C8 !important;
+  --color-code-background: #1A1B29 !important;
+  --color-primary: #007AA6 !important;
+  --color-primary-transparent: #007AA680;
+  --color-hover: #007AA6E5;
+  --color-gradient: linear-gradient(180deg, var(--color-code-background) 0%, var(--color-code-background) 100%) !important;
+}
