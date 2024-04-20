@@ -40,3 +40,179 @@ h6 {
 a {
   color: var(--color-primary);
 }
+
+/* Selecting the navigation content wrap element */
+.wy-nav-content-wrap {
+  background-color: var(--color-background);
+}
+
+/* Selecting the navigation content element */
+.wy-nav-content {
+  color: var(--color-body);
+  background: none !important;
+}
+
+/* Selecting the navigation side element */
+.wy-nav-side {
+  background-color: var(--color-background);
+  background-image: var(--color-gradient);
+}
+
+/* Selecting the vertical menu anchor elements */
+.wy-menu-vertical a {
+  color: var(--color-body) !important;
+}
+
+.wy-menu-vertical li {
+  margin-bottom: 0.75rem;
+}
+
+/* Last li in ul/ol should be margin-bottom: 0; */
+.wy-menu-vertical li:last-child {
+  margin-bottom: 0;
+}
+
+.wy-breadcrumbs,
+.wy-breadcrumbs *,
+.wy-breadcrumbs *::before,
+.wy-breadcrumbs *::after {
+  font-size: var(--size-body);
+  font-family: "Helvetica", sans-serif;
+  color: var(--color-primary)
+}
+
+.wy-breadcrumbs a.icon-home:before {
+  /* font-family: "Helvetica", sans-serif; */
+  content: "Home";
+}
+
+.wy-breadcrumbs-aside a,
+.wy-breadcrumbs-aside a:visited,
+/* .wy-breadcrumbs-aside a:not(:visited), */
+a.fa.fa-github,
+a.fa.fa-github:visited,
+a.fa.fa-github:not(:visited),
+a.btn.btn-neutral:visited,
+a.btn.btn-neutral:not(:visited),
+a.btn.btn-neutral {
+  background: transparent !important;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* .rst-content .remix-link-container a.remix-link:hover, */
+.wy-breadcrumbs-aside a:hover,
+a.fa.fa-github:hover,
+a.btn.btn-neutral:hover {
+  background: var(--white) !important;
+  color: var(--color-b) !important;
+  border-color: var(--color-b) !important;
+}
+
+/* Selecting the highlight element */
+.highlight {
+  background-color: var(--color-code-background);
+}
+
+/* Remove background from the search container */
+.wy-side-nav-search {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  background: none !important;
+}
+
+.wy-side-nav-search [role="search"] {
+  flex: 1;
+}
+
+/* Style the search input */
+.wy-side-nav-search input[type="text"] {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-primary);
+  background: var(--color-background);
+  color: var(--color-body);
+  box-shadow: none;
+}
+
+
+button.color-toggle {
+  height: 2rem;
+  margin-inline-start: 0.5rem;
+  padding: 0;
+  border: 1px solid transparent;
+  color: transparent;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+}
+
+img.color-toggle-icon {
+  margin: 0;
+  --size: 1.75rem;
+  height: var(--size);
+  width: var(--size);
+  background-color: transparent;
+  color: var(--color-body);
+}
+
+/*
+
+
+
+*/
+
+/* For dark mode */
+:root[style*=dark] {
+  background-color: var(--color-background) !important;
+  color: var(--color-body) !important;
+}
+
+.wy-nav-content-wrap[style*=dark] {
+  background-color: var(--color-background) !important;
+}
+
+.wy-nav-content[style*=dark] {
+  color: var(--color-body) !important;
+}
+
+.wy-nav-side[style*=dark] {
+  background: var(--color-gradient) !important;
+}
+
+.highlight[style*=dark] {
+  background-color: var(--color-code-background) !important;
+}
+
+a[style*=dark] {
+  color: var(--color-primary) !important;
+}
+
+/* For remix mode */
+:root[style*=remix] {
+  background-color: var(--color-background) !important;
+  color: var(--color-body) !important;
+}
+
+.wy-nav-content-wrap[style*=remix] {
+  background-color: var(--color-background) !important;
+}
+
+.wy-nav-content[style*=remix] {
+  color: var(--color-body) !important;
+}
+
+.wy-nav-side[style*=remix] {
+  background: var(--color-gradient) !important;
+}
+
+.highlight[style*=remix] {
+  background-color: var(--color-code-background) !important;
+}
+
+a[style*=remix] {
+  color: var(--color-primary) !important;
+}
