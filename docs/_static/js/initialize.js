@@ -8,6 +8,9 @@ const onDOMContentLoaded = () => {
   // Add color mode button
   addColorModeButton()
 
+  // Add hr under search form
+  addHrUnderSearchForm();
+
   // Update color mode
   updateMode();
 

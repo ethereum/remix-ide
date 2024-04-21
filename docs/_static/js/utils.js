@@ -123,5 +123,10 @@ const updateEditButtonLabel = () => {
   const editButton = document.querySelector(".wy-breadcrumbs-aside a");
   if (!editButton) return;
   editButton.textContent = "Edit on GitHub";
-  // TODO: Add GitHub icon to the button
+}
+
+const addHrUnderSearchForm = () => {
+  const verticalMenu = document.querySelector(".wy-menu-vertical[role=navigation]");
+  const hr = document.createElement("hr");
+  verticalMenu.parentNode.insertBefore(hr, verticalMenu);
 }
