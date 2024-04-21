@@ -53,18 +53,6 @@ const updateMode = () => {
   document.documentElement.setAttribute("style", `--color-scheme: ${mode}`);
 }
 
-const cycleColorMode = () => {
-  if (!COLOR_CHOICES.includes(mode)) return;
-
-  // Set mode to the next color scheme in COLOR_CHOICES array, wrapping to beginning if necessary
-  const index = COLOR_CHOICES.indexOf(mode);
-  mode = COLOR_CHOICES[(index + 1) % COLOR_CHOICES.length];
-
-  updateMode();
-
-  updateColorModeIcon();
-}
-
 const addColorModeButton = () => {
   // Prepare the toggle icon according to color mode
   const toggleIcon = document.createElement("img");
@@ -103,6 +91,18 @@ const updateColorModeIcon = () => {
   const toggleIcon = document.querySelector(`.${COLOR_TOGGLE_ICON_CLASS}`);
   // Remix shows Moon => Dark mode shows Sun => Light mode shows Remix logo -> repeat
   toggleIcon.src = getModeIconSrc(mode);
+}
+
+const cycleColorMode = () => {
+  if (!COLOR_CHOICES.includes(mode)) return;
+
+  // Set mode to the next color scheme in COLOR_CHOICES array, wrapping to beginning if necessary
+  const index = COLOR_CHOICES.indexOf(mode);
+  mode = COLOR_CHOICES[(index + 1) % COLOR_CHOICES.length];
+
+  updateMode();
+
+  updateColorModeIcon();
 }
 
 const preloadFonts = () => {
