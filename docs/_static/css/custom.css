@@ -3,6 +3,8 @@
  */
 
 :root {
+  box-sizing: border-box;
+
   background-color: var(--color-background);
   color: var(--color-body);
 
@@ -55,7 +57,8 @@ a:hover {
   color: var(--color-hover);
 }
 
-code, pre {
+code,
+pre {
   background-color: var(--color-code-background) !important;
   color: var(--color-body) !important;
 }
@@ -82,20 +85,40 @@ code, pre {
   background-image: var(--color-gradient);
 }
 
+.wy-menu-vertical ul {
+  margin-bottom: 4rem;
+}
+
+.wy-menu-vertical p.caption {
+  margin-top: 1.5rem;
+  padding-inline: var(--space-vertical-menu-pad-x);
+  line-height: var(--line-height-header);
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: var(--size-body)
+}
+
 /* Selecting the vertical menu anchor elements */
 .wy-menu-vertical a {
   color: var(--color-body) !important;
+  /* padding-inline: var(--space-vertical-menu-pad-x) !important; */
 }
 
 /* Selecting the vertical menu list elements */
 .wy-menu-vertical li {
-  margin-bottom: 0.75rem;
+  margin: 0 var(--space-vertical-menu-pad-x);
 }
 
 /* Selecting the last li in the vertical menu */
 .wy-menu-vertical li:last-child {
   margin-bottom: 0;
 }
+
+.wy-menu-vertical li a {
+  padding: 0.325rem 0;
+  font-size: var(--size-left-nav-lvl-1);
+}
+
 
 /* Selecting the breadcrumbs ul element */
 ul.wy-breadcrumbs {
@@ -167,7 +190,8 @@ a.btn.btn-neutral:not(:visited) {
 }
 
 /* Selecting the font awesome icons */
-.fa::before, .fa::after {
+.fa::before,
+.fa::after {
   font-family: FontAwesome !important;
 }
 
@@ -227,12 +251,30 @@ a.btn.btn-neutral:focus {
   background-color: var(--color-code-background);
 }
 
+nav.wy-nav-shift {
+  width: var(--space-side-width);
+}
+
+/* Only child to left nav.my-nav-shift box */
+.wy-side-scroll {
+  max-width: 100%;
+}
+
 /* Remove background from the search container */
 .wy-side-nav-search {
   display: flex;
   flex-direction: row-reverse;
   align-items: end;
   background: none !important;
+  margin: 2.857rem 0 0; /* 1.5rem 0 0; */
+  padding: 0 var(--space-vertical-menu-pad-x);
+}
+
+.wy-side-scroll hr {
+  margin: 1.5rem 0.5rem;
+  /* height: 1px; */
+  /* max-width: 100%; */
+  border-color: var(--color-background);
 }
 
 /* Select the search form */

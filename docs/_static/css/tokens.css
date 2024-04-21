@@ -20,11 +20,12 @@
   --size-left-nav-title: var(--size-body);
   --size-left-nav-lvl-1: var(--size-body-small);
 
-  --line-height: 1.5;
+  --line-height-header: 1.5;
+  --size-side-width: 22.5rem;
 
   /* Spacing */
-  --navHeight: 4.25rem;
-  --sideWidth: 22.5rem;
+  --space-nav-height: 4.25rem;
+  --space-vertical-menu-pad-x: 1.625rem;
 
   /* Colors */
   --color-background: #FFFFFF;
