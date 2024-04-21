@@ -1,28 +1,10 @@
-/* ROOT THEMING DECLARATIONS */
+/**
+ * Theme tokens
+ */
+
+/* Light mode theme colors */
 :root {
-  /* Light mode theme colors */
-  --color-background: #FFFFFF;
-  --color-body: #333333;
-  --color-body-light: #5F5F5F;
-  --color-code-background: #F4F4F4;
-  --color-primary: #2F6DF2;
-  --color-primary-transparent: #3B98F680;
-  --color-hover: #2F6DF2E5;
-
-  --color-a: #2D61D226;
-  --color-b: #2B55B726;
-  --color-c: #B198FF26;
-  --color-d: #FF86E326;
-  --color-gradient: linear-gradient(180deg, var(--color-a) 0%, var(--color-b) 37%, var(--color-c) 75%, var(--color-d) 100%);
-
-  background-color: var(--color-background);
-  color: var(--color-body);
-
-
-  --navHeight: 4.25rem;
-  --sideWidth: 22.5rem;
-
-  /* Font sizes */
+  /* Typography */
   --size-body: 1rem;
   --size-body-link: 1rem;
   --size-body-small: 0.875rem;
@@ -39,8 +21,24 @@
 
   --line-height: 1.5;
 
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
+  /* Spacing */
+  --navHeight: 4.25rem;
+  --sideWidth: 22.5rem;
+
+  /* Colors */
+  --color-background: #FFFFFF;
+  --color-body: #333333;
+  --color-body-light: #5F5F5F;
+  --color-code-background: #F4F4F4;
+  --color-primary: #2F6DF2;
+  --color-primary-transparent: #3B98F680;
+  --color-hover: #2F6DF2E5;
+
+  --color-a: #2D61D226;
+  --color-b: #2B55B726;
+  --color-c: #B198FF26;
+  --color-d: #FF86E326;
+  --color-gradient: linear-gradient(180deg, var(--color-a) 0%, var(--color-b) 37%, var(--color-c) 75%, var(--color-d) 100%);
 }
 
 /* Dark mode theme colors */
@@ -63,5 +61,6 @@
   --color-primary: #007AA6 !important;
   --color-primary-transparent: #007AA680;
   --color-hover: #007AA6E5;
+
   --color-gradient: linear-gradient(180deg, var(--color-code-background) 0%, var(--color-code-background) 100%) !important;
 }
