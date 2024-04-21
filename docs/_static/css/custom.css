@@ -137,14 +137,17 @@ ul.wy-breadcrumbs {
 .wy-breadcrumbs a.icon-home:before {
   content: "Home";
 }
-/* .wy-breadcrumbs a.icon-home:hover { */
-  /* fill: var(--color-hover); */
-/* } */
 
 /* Select edit button aside */
 .wy-breadcrumbs-aside {
   float: unset;
   margin-inline-start: auto;
+}
+
+.wy-breadcrumbs-aside a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* Edit and Next/Prev buttons */
@@ -161,6 +164,11 @@ a.btn.btn-neutral:not(:visited) {
   box-shadow: none;
   border: 2px solid var(--color-primary) !important;
   line-height: 1;
+}
+
+/* Selecting the font awesome icons */
+.fa::before, .fa::after {
+  font-family: FontAwesome !important;
 }
 
 /* Edit on GitHub button */
