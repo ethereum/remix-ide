@@ -1,8 +1,8 @@
 const getModeIconSrc = (mode) => {
   if (!COLOR_CHOICES.includes(mode)) return ""
-  if (mode === REMIX) return MOON_ICON_PATH;
+  if (mode === CLASSIC) return MOON_ICON_PATH;
   if (mode === DARK) return SUN_ICON_PATH;
-  return REMIX_ICON_PATH;
+  return CLASSIC_ICON_PATH;
 }
 
 const addFooterNote = () => {
@@ -41,7 +41,7 @@ const getColorMode = () => {
 
   const colorMode = localStorage.getItem(LS_COLOR_SCHEME);
   if (colorMode === DARK) return DARK;
-  if (colorMode === REMIX) return REMIX;
+  if (colorMode === CLASSIC) return CLASSIC;
   return LIGHT;
 }
 

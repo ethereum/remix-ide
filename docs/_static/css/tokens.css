@@ -19,11 +19,11 @@
   --size-h6: 1rem;
   --size-left-nav-title: var(--size-body);
   --size-left-nav-lvl-1: var(--size-body-small);
-
+  
   --line-height-header: 1.5;
-  --size-side-width: 22.5rem;
-
+  
   /* Spacing */
+  --space-side-width: 22.5rem;
   --space-nav-height: 4.25rem;
   --space-vertical-menu-pad-x: 1.625rem;
 
@@ -55,7 +55,7 @@
 }
 
 /* Remix mode theme colors */
-:root[style*=remix] {
+:root[style*=classic] {
   --color-background: #2A2C3F !important;
   --color-body: #F8F8F8 !important;
   --color-body-light: #A2A3C8 !important;

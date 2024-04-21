@@ -1,10 +1,10 @@
 // Color mode constants
-const [REMIX, DARK, LIGHT] = ["remix", "dark", "light"];
-const COLOR_CHOICES = [REMIX, DARK, LIGHT]
+const [CLASSIC, DARK, LIGHT] = ["classic", "dark", "light"];
+const COLOR_CHOICES = [CLASSIC, DARK, LIGHT]
 
 const SUN_ICON_PATH = "_static/img/sun.svg";
 const MOON_ICON_PATH = "_static/img/moon.svg";
-const REMIX_ICON_PATH = "_static/img/remix.svg";
+const CLASSIC_ICON_PATH = "_static/img/classic.svg";
 
 const COLOR_TOGGLE_ICON_CLASS = "color-toggle-icon";
 const REMIX_LOGO_CLASS = "remix-logo";
