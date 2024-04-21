@@ -5,10 +5,11 @@
 /* Light mode theme colors */
 :root {
   /* Typography */
-  --size-body: 1rem;
-  --size-body-link: 1rem;
+  --size-body-xs: 0.75rem;
   --size-body-small: 0.875rem;
   --size-body-small-link: 0.875rem;
+  --size-body: 1rem;
+  --size-body-link: 1rem;
   --size-body-big: 1.125rem;
   --size-h1: 2.75rem;
   --size-h2: 2.25rem;

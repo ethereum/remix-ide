@@ -51,6 +51,15 @@ a {
   color: var(--color-primary);
 }
 
+a:hover {
+  color: var(--color-hover);
+}
+
+code, pre {
+  background-color: var(--color-code-background) !important;
+  color: var(--color-body) !important;
+}
+
 /**
  * Custom class styling
  */
@@ -93,11 +102,13 @@ ul.wy-breadcrumbs {
   display: flex;
   align-items: center;
   padding: 2rem 1rem;
+  line-height: var(--line-height);
+  letter-spacing: 1%;
 }
 
 /* Selecting the hr below the breadcrumbs */
 [role="navigation"]:has(ul.wy-breadcrumbs) hr {
-  margin: 0;
+  margin: 0 0 3.375rem;
 }
 
 /* Selecting the breadcrumb list elements */
@@ -115,9 +126,41 @@ ul.wy-breadcrumbs {
   color: var(--color-primary)
 }
 
+/* Selecting the breadcrumb anchor elements hover */
+.wy-breadcrumbs li:hover a {
+  color: var(--color-hover);
+  fill: var(--color-hover);
+  /* text-decoration: underline; */
+}
+
 /* Selecting the breadcrumb home icon pseudo-element */
 .wy-breadcrumbs a.icon-home:before {
   content: "Home";
+}
+/* .wy-breadcrumbs a.icon-home:hover { */
+  /* fill: var(--color-hover); */
+/* } */
+
+/* Select edit button aside */
+.wy-breadcrumbs-aside {
+  float: unset;
+  margin-inline-start: auto;
+}
+
+/* Edit and Next/Prev buttons */
+.wy-breadcrumbs-aside a,
+.wy-breadcrumbs-aside a:visited,
+a.fa.fa-github,
+a.fa.fa-github:visited,
+a.fa.fa-github:not(:visited),
+a.btn.btn-neutral,
+a.btn.btn-neutral:visited,
+a.btn.btn-neutral:not(:visited) {
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: none;
+  border: 2px solid var(--color-primary) !important;
+  line-height: 1;
 }
 
 /* Edit on GitHub button */
@@ -126,13 +169,10 @@ ul.wy-breadcrumbs {
 a.fa.fa-github,
 a.fa.fa-github:visited,
 a.fa.fa-github:not(:visited) {
+  padding: 0.5rem 1rem;
   background: transparent !important;
   color: var(--color-primary) !important;
-  border: 2px solid var(--color-primary) !important;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  box-shadow: none;
+  font-size: var(--size-body-xs);
 }
 
 /* Edit on GitHub button hover */
@@ -155,13 +195,9 @@ a.fa.fa-github:focus {
 a.btn.btn-neutral,
 a.btn.btn-neutral:visited,
 a.btn.btn-neutral:not(:visited) {
+  padding: 0.75rem 2rem;
   background: var(--color-primary) !important;
   color: var(--color-background) !important;
-  border: 2px solid var(--color-primary) !important;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  padding: 0.75rem 2rem;
-  box-shadow: none;
 }
 
 /* Next/Previous buttons hover */
@@ -226,4 +262,15 @@ img.color-toggle-icon {
   width: var(--size);
   background-color: transparent;
   color: var(--color-body);
+}
+
+/* Content styling */
+.rst-content h1 {
+  margin-bottom: 4rem;
+}
+
+.rst-content h2,
+.rst-content h3,
+.rst-content h4 {
+  margin-top: 4rem;
 }
