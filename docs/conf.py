@@ -164,7 +164,7 @@ html_static_path = ['_static']
 
 html_js_files = ["js/constants.js", "js/utils.js", "js/initialize.js"]
 
-html_css_files = ["css/fonts.css", "css/theme.css", "css/custom.css"]
+html_css_files = ["css/fonts.css", "css/tokens.css", "css/custom.css"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
