@@ -118,3 +118,10 @@ const preloadFonts = () => {
     document.head.appendChild(link);
   });
 }
+
+const updateEditButtonLabel = () => {
+  const editButton = document.querySelector(".wy-breadcrumbs-aside a");
+  if (!editButton) return;
+  editButton.textContent = "Edit on GitHub";
+  // TODO: Add GitHub icon to the button
+}
