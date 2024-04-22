@@ -6,7 +6,11 @@ const SUN_ICON_PATH = "_static/img/sun.svg";
 const MOON_ICON_PATH = "_static/img/moon.svg";
 const CLASSIC_ICON_PATH = "_static/img/classic.svg";
 
+const REMIX_LOGO_PATH = "_static/img/remix-logo.svg"
+const HAMBURGER_PATH = "_static/img/hamburger.svg";
+
 const COLOR_TOGGLE_ICON_CLASS = "color-toggle-icon";
+const MOBILE_MENU_ICON_CLASS = "mobile-menu-toggle-icon";
 const REMIX_LOGO_CLASS = "remix-logo";
 const LS_COLOR_SCHEME = "color-scheme";
 
@@ -25,6 +29,7 @@ const EVENTS_ID = "#events";
 const REWARDS_ID = "#rewards";
 const TEAM_ID = "#team";
 
+// Learn menu
 const LEARNETH_PLUGIN_TUTORIALS_URL = `${REMIX_IDE_URL}/?#activate=LearnEth`;
 const VIDEOS_URL = "https://www.youtube.com/channel/UCjTUPyFEr2xDGN6Cg8nKDaA";
 const ARTICLES_URL = "https://medium.com/remix-ide";
@@ -32,7 +37,7 @@ const ARTICLES_URL = "https://medium.com/remix-ide";
 /**
  * type NavItem = { name: string } & ({ href: string } | { items: NavItem[] })
  */
-const HOME_NAV_IDs = [
+const NAV_LINKS = [
   { name: "About", href: ABOUT_ID },
   {
     name: "Learn", items: [
@@ -47,5 +52,14 @@ const HOME_NAV_IDs = [
   { name: "Events", href: EVENTS_ID },
   { name: "Rewards", href: REWARDS_ID },
   { name: "Team", href: TEAM_ID },
-];
+].map((item) => {
+  if (item.href && item.href.startsWith("#")) {
+    return { ...item, href: REMIX_HOME_URL + "/" + item.href }
+  }
+  return item
+})
+console.log(NAV_LINKS)
 
+
+// const MOBILE_MENU_TOGGLE_CLASS = "shift";
+const WRAPPER_CLASS = "unified-wrapper";

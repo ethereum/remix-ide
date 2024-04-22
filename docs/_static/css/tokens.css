@@ -27,6 +27,9 @@
   --space-nav-height: 4.25rem;
   --space-vertical-menu-pad-x: 1.625rem;
 
+  /* Shadows */
+  --shadow-base: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
   /* Colors */
   --color-background: #FFFFFF;
   --color-body: #333333;

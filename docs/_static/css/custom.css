@@ -67,6 +67,10 @@ pre {
  * Custom class styling
  */
 
+.wy-body-for-nav {
+  background-color: var(--color-background);
+}
+
 /* Selecting the navigation content wrap element */
 .wy-nav-content-wrap {
   background-color: var(--color-background);
@@ -266,14 +270,12 @@ nav.wy-nav-shift {
   flex-direction: row-reverse;
   align-items: end;
   background: none !important;
-  margin: 2.857rem 0 0; /* 1.5rem 0 0; */
+  margin: 2.857rem 0 0;
   padding: 0 var(--space-vertical-menu-pad-x);
 }
 
 .wy-side-scroll hr {
   margin: 1.5rem 0.5rem;
-  /* height: 1px; */
-  /* max-width: 100%; */
   border-color: var(--color-background);
 }
 
@@ -295,10 +297,10 @@ nav.wy-nav-shift {
 /* Select color mode cycle/toggle button */
 button.color-toggle {
   height: 2rem;
-  margin-inline-start: 0.5rem;
+  margin-inline-start: 0.75rem;
   padding: 0;
   border: 1px solid transparent;
-  color: transparent;
+  color: var(--color-body);
   background-color: transparent;
   display: grid;
   place-items: center;
@@ -307,11 +309,7 @@ button.color-toggle {
 /* Select color mode cycle/toggle button icon */
 img.color-toggle-icon {
   margin: 0;
-  --size: 1.75rem;
-  height: var(--size);
-  width: var(--size);
   background-color: transparent;
-  color: var(--color-body);
 }
 
 /* Content styling */
@@ -323,4 +321,247 @@ img.color-toggle-icon {
 .rst-content h3,
 .rst-content h4 {
   margin-top: 4rem;
+}
+
+/**
+ * Customization for the unified layout
+ */
+
+body.wy-body-for-nav {
+  position: relative;
+}
+
+/* Site wrapper, and two children: header and rest */
+.unified-wrapper {
+  position: relative;
+  /* inset: 0; */
+  top: var(--space-nav-height);
+  max-width: 80rem;
+  margin-inline: auto;
+  /* background: var(--color-background); */
+}
+
+/* Header styling */
+.remix-logo {
+  color: var(--color-primary);
+}
+
+.unified-header {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-base);
+  backdrop-filter: blur(3px);
+}
+
+.unified-header .inner-header {
+  display: flex;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  /* padding-block: 1rem; */
+  background: var(--color-background);
+  height: var(--space-nav-height);
+}
+
+.unified-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 95%;
+  background: var(--color-f);
+  z-index: -1;
+}
+
+.unified-header .home-link {
+  display: block;
+  text-decoration: none;
+}
+
+.unified-header .home-link:hover .remix-logo {
+  transform: scale(1.1);
+  transition: transform 100ms ease-in-out;
+}
+
+.unified-header img.remix-logo {
+  transform: scale(1);
+  transition: transform 100ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.unified-header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 1.75rem;
+}
+
+.unified-header .nav-bar .nav-button-container {
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  /* display: flex; */
+  display: none; /* Currently mobile only */
+}
+
+.unified-header .nav-bar .nav-button-container button {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.mobile-menu-toggle-icon {
+  color: var(--color-body);
+  --size: 1.5rem;
+  height: var(--size);
+  width: var(--size);
+}
+
+.unified-header .nav-link {
+  display: flex;
+  align-items: center;
+  padding-inline: 8px;
+  height: 100%;
+  font-size: var(--size-body-small-link);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  box-sizing: content-box;
+  border: 2px solid transparent;
+  color: var(--color-body);
+  border-radius: 0px;
+}
+
+.unified-header .nav-link.active {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.unified-header .nav-link:hover {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.unified-header .nav-link:focus {
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+/* Rest: Grid, with two children: side bar, and content */
+.unified-wrapper .wy-grid-for-nav {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: auto 1fr;
+  background: var(--color-background);
+}
+
+/* First child: Side bar */
+.unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  padding-bottom: unset !important;
+  min-height: unset !important;
+  z-index: 10 !important;
+  max-width: var(--space-side-width) !important;
+}
+
+/* Skip to content a11y button */
+a.skip-to-content:visited,
+a.skip-to-content:not(:visited),
+a.skip-to-content {
+  display: block;
+  pointer-events: none;
+  width: fit-content;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  padding: 2px 4px;
+  font-size: 14px;
+  margin-inline-end: auto;
+  margin-inline-start: 2rem;
+  color: var(--color-a);
+}
+
+a.skip-to-content:focus {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.dropdown:has(button.dropdown-button[aria-expanded=false]) {
+  display: none;
+}
+
+/**
+ * MOBILE
+ */
+
+@media (max-width: 768px) {
+
+  /* Menu closed styles */
+  .unified-header .nav-link {
+    display: none;
+  }
+
+  .unified-header .inner-header {
+    padding-inline: 1rem;
+  }
+
+  .unified-header .nav-bar .nav-button-container {
+    display: flex;
+  }
+
+  .unified-wrapper .wy-grid-for-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: var(--space-side-width);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform 200ms ease-in-out;
+  }
+
+  /* Menu open styles */
+  .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
+    position: absolute;
+
+  }
+
+  .unified-wrapper.menu-open nav.wy-nav-side {
+    transform: translateX(0);
+    transition: transform 200ms ease-in-out;
+  }
+
+  .unified-wrapper.menu-open .rst-versions {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .unified-wrapper.menu-open .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+    z-index: 5;
+    background: #0006;
+  }
+
+  a.skip-to-content {
+    display: none;
+  }
 }

@@ -2,6 +2,9 @@ const onDOMContentLoaded = () => {
   // Preload fonts
   preloadFonts();
 
+  // // Rearrange DOM elements for styling
+  rearrangeDom();
+
   // Update edit button to "Edit on GitHub"
   updateEditButtonLabel();
 
@@ -16,7 +19,10 @@ const onDOMContentLoaded = () => {
 
   // Add footer note
   addFooterNote();
-};
+
+  // // Build header
+  buildHeader();
+}
 
 let mode = getColorMode()
 

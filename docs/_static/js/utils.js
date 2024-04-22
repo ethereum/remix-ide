@@ -1,3 +1,14 @@
+const appendSvg = (path, container, className) => {
+  fetch(path)
+    .then(response => response.text())
+    .then(data => {
+      const logoContainer = document.createElement("div");
+      className && logoContainer.classList.add(className);
+      logoContainer.innerHTML = data;
+      container.appendChild(logoContainer);
+    });
+}
+
 const getModeIconSrc = (mode) => {
   if (!COLOR_CHOICES.includes(mode)) return ""
   if (mode === CLASSIC) return MOON_ICON_PATH;
@@ -13,6 +24,23 @@ const addFooterNote = () => {
     'Customized with ❤️ by the <a href="https://ethereum.org/" target="_blank">ethereum.org</a> team.';
   contentInfo.parentNode.insertBefore(footerNote, contentInfo.nextSibling);
 };
+
+const updateActiveNavLink = () => {
+  const navLinks = document.querySelectorAll(".unified-header .nav-link");
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (document.documentURI.includes("contributing.html")) {
+      link.classList[href.includes("contributing.html") ? "add" : "remove"](
+        "active"
+      );
+    } else {
+      link.classList[document.documentURI.includes(href) ? "add" : "remove"](
+        "active"
+      );
+    }
+  });
+};
+
 
 const removeColorParam = () => {
   const { location, title } = document;
@@ -53,25 +81,23 @@ const updateMode = () => {
   document.documentElement.setAttribute("style", `--color-scheme: ${mode}`);
 }
 
-const addColorModeButton = () => {
-  // Prepare the toggle icon according to color mode
-  const toggleIcon = document.createElement("img");
-  toggleIcon.classList.add(COLOR_TOGGLE_ICON_CLASS);
-  toggleIcon.src = getModeIconSrc(mode);
-  toggleIcon.alt = "Color mode toggle icon";
-  toggleIcon.setAttribute("aria-hidden", "true");
-  toggleIcon.setAttribute("key", "toggle icon");
+const updateColorModeIcon = (button) => {
+  // Delete any child nodes of toggleButton
+  button.innerHTML = "";
+  // Add latest icon as button children
+  appendSvg(getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
+};
 
+const addColorModeButton = () => {
   // Create a new button element
   const colorModeButton = document.createElement("button");
   colorModeButton.classList.add("color-toggle");
   colorModeButton.setAttribute("type", "button");
   colorModeButton.setAttribute("aria-label", "Toggle light dark mode");
   colorModeButton.setAttribute("key", "color mode button");
-  colorModeButton.onclick = cycleColorMode;
-
-  // Append the icon into the button
-  colorModeButton.appendChild(toggleIcon);
+  colorModeButton.onclick = cycleColorMode;  
+  // Update the icon for this button according to the current mode
+  updateColorModeIcon(colorModeButton);
 
   // Select the side nav search container
   const sideNavSearch = document.querySelector('.wy-side-nav-search');
@@ -87,12 +113,6 @@ const addColorModeButton = () => {
   sideNavSearch.insertBefore(colorModeButton, searchInput);
 }
 
-const updateColorModeIcon = () => {
-  const toggleIcon = document.querySelector(`.${COLOR_TOGGLE_ICON_CLASS}`);
-  // Remix shows Moon => Dark mode shows Sun => Light mode shows Remix logo -> repeat
-  toggleIcon.src = getModeIconSrc(mode);
-}
-
 const cycleColorMode = () => {
   if (!COLOR_CHOICES.includes(mode)) return;
 
@@ -102,7 +122,8 @@ const cycleColorMode = () => {
 
   updateMode();
 
-  updateColorModeIcon();
+  const colorModeButton = document.querySelector("button.color-toggle");
+  updateColorModeIcon(colorModeButton);
 }
 
 const preloadFonts = () => {
@@ -129,4 +150,92 @@ const addHrUnderSearchForm = () => {
   const verticalMenu = document.querySelector(".wy-menu-vertical[role=navigation]");
   const hr = document.createElement("hr");
   verticalMenu.parentNode.insertBefore(hr, verticalMenu);
+}
+
+const handleRstVersions = () => {
+  const rstVersions = document.querySelector(".rst-versions");
+  if (!rstVersions) return
+  rstVersions.remove();
+  const wyNavSide = document.querySelector("nav.wy-nav-side");
+  wyNavSide.appendChild(rstVersions);
+}
+
+const rearrangeDom = () => {
+  const bodyDivs = document.querySelectorAll("body>div");
+  bodyDivs.forEach((div) => { div.remove(); });
+  const wrapperDiv = document.createElement("div");
+  wrapperDiv.classList.add(WRAPPER_CLASS);
+  bodyDivs.forEach((div) => wrapperDiv.appendChild(div));
+  document.body.prepend(wrapperDiv);
+
+  handleRstVersions()
+
+  const backdrop = document.createElement("div");
+  backdrop.classList.add("backdrop");
+  wrapperDiv.appendChild(backdrop);
+
+  const content = document.querySelector(".wy-nav-content");
+  content.id = "content";
+  const oldWrap = document.querySelector("section.wy-nav-content-wrap");
+  oldWrap.remove();
+  document.querySelector(".wy-grid-for-nav").appendChild(content);
+}
+
+const buildHeader = () => {
+  const header = document.createElement("div");
+  header.classList.add("unified-header");
+  console.log(header)
+  document.querySelector(`.${WRAPPER_CLASS}`).prepend(header);
+
+  const innerHeader = document.createElement("div");
+  innerHeader.classList.add("inner-header");
+  header.appendChild(innerHeader);
+
+  const homeLink = document.createElement("a");
+  homeLink.classList.add("home-link");
+  homeLink.href = REMIX_HOME_URL;
+  homeLink.ariaLabel = "Remix project home";
+  innerHeader.appendChild(homeLink);
+
+  appendSvg(REMIX_LOGO_PATH, homeLink, REMIX_LOGO_CLASS);
+
+  const skipToContent = document.createElement("a");
+  skipToContent.classList.add("skip-to-content");
+  skipToContent.href = "#content";
+  skipToContent.innerText = "skip to content";
+  innerHeader.appendChild(skipToContent);
+
+  const navBar = document.createElement("nav");
+  navBar.classList.add("nav-bar");
+  innerHeader.appendChild(navBar);
+
+  /**
+   * type NavItem = { name: string } & ({ href: string } | { items: NavItem[] })
+   */
+  const navLinkExcludingDropdown = NAV_LINKS.filter(({ href }) => !!href)
+  const linkElements = navLinkExcludingDropdown.map(({ name, href }) => {
+    const link = document.createElement("a");
+    link.classList.add("nav-link");
+    link.setAttribute("key", name);
+    link.setAttribute("href", href);
+    link.setAttribute("aria-label", name);
+    link.innerText = name;
+    return link;
+  });
+  linkElements.forEach((link) => navBar.appendChild(link));
+
+  // Flex wrapper for color mode and mobile menu buttons
+  const navButtonContainer = document.createElement("div");
+  navButtonContainer.classList.add("nav-button-container");
+  navBar.appendChild(navButtonContainer);
+
+  // Build mobile hamburger menu
+  const menuButton = document.createElement("button");
+  menuButton.classList.add("mobile-menu-button");
+  menuButton.setAttribute("type", "button");
+  menuButton.setAttribute("aria-label", "Toggle menu");
+  menuButton.setAttribute("key", "menu button");
+  // menuButton.addEventListener("click", toggleMenu); // TODO: Enable menu logic
+  appendSvg(HAMBURGER_PATH, menuButton, MOBILE_MENU_ICON_CLASS);
+  navButtonContainer.appendChild(menuButton);
 }
