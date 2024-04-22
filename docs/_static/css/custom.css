@@ -104,8 +104,29 @@ pre {
 
 /* Selecting the vertical menu anchor elements */
 .wy-menu-vertical a {
+  background: transparent;
   color: var(--color-body) !important;
-  /* padding-inline: var(--space-vertical-menu-pad-x) !important; */
+}
+
+.wy-menu-vertical a:hover {
+  background: transparent;
+  color: var(--color-primary);
+  box-shadow: 0 2px 0 var(--color-primary);
+}
+
+.wy-menu-vertical a.active {
+  color: var(--color-body);
+  box-shadow: 0 1px 0 var(--color-primary);
+}
+
+.wy-menu-vertical a:focus {
+  color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.wy-menu-vertical li,
+.wy-menu-vertical a {
+  background: transparent !important;
 }
 
 /* Selecting the vertical menu list elements */
