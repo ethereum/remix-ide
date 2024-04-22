@@ -157,7 +157,6 @@ ul.wy-breadcrumbs {
 .wy-breadcrumbs li:hover a {
   color: var(--color-hover);
   fill: var(--color-hover);
-  /* text-decoration: underline; */
 }
 
 /* Selecting the breadcrumb home icon pseudo-element */
@@ -171,9 +170,16 @@ ul.wy-breadcrumbs {
   margin-inline-start: auto;
 }
 
+.breadcrumb-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .wy-breadcrumbs-aside a {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 0.5rem;
 }
 
