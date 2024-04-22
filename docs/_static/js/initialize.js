@@ -26,10 +26,15 @@ const onDOMContentLoaded = () => {
 
   // Build header
   buildHeader();
+
+  // Close menu
+  toggleMenu({ force: false });
 }
 
 function main() {
   document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+  document.addEventListener("click", handleGeneralClick);
+  document.addEventListener("keydown", handleKeyDown);
 }
 
 main()

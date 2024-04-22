@@ -59,5 +59,5 @@ const NAV_LINKS = [
   return item
 })
 
-// const MOBILE_MENU_TOGGLE_CLASS = "shift";
+const MOBILE_MENU_TOGGLE_CLASS = "shift";
 const WRAPPER_CLASS = "unified-wrapper";

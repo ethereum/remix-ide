@@ -180,6 +180,23 @@ const rearrangeDom = () => {
   document.querySelector(".wy-grid-for-nav").appendChild(content);
 }
 
+const toggleMenu = (options = {}) => {
+  const handleClassToggle = ({ classList }, className) => {
+    if (typeof options.force !== "undefined") {
+      classList.toggle(className, options.force);
+    } else {
+      classList.toggle(className);
+    }
+  };
+  document
+    .querySelectorAll('[data-toggle="rst-versions"]')
+    .forEach((e) => handleClassToggle(e, MOBILE_MENU_TOGGLE_CLASS));
+  document
+    .querySelectorAll('[data-toggle="wy-nav-shift"]')
+    .forEach((e) => handleClassToggle(e, MOBILE_MENU_TOGGLE_CLASS));
+  handleClassToggle(document.querySelector(`.${WRAPPER_CLASS}`), "menu-open");
+}
+
 const buildHeader = () => {
   const header = document.createElement("div");
   header.classList.add("unified-header");
@@ -234,7 +251,36 @@ const buildHeader = () => {
   menuButton.setAttribute("type", "button");
   menuButton.setAttribute("aria-label", "Toggle menu");
   menuButton.setAttribute("key", "menu button");
-  // menuButton.addEventListener("click", toggleMenu); // TODO: Enable menu logic
+  menuButton.addEventListener("click", toggleMenu);
   appendSvg(HAMBURGER_PATH, menuButton, MOBILE_MENU_ICON_CLASS);
   navButtonContainer.appendChild(menuButton);
 }
+
+const handleGeneralClick = (e) => {
+  if (e.target.closest(".backdrop")) {
+    toggleMenu({ force: false });
+  }
+
+  if (e.target.closest("a")) {
+    const target = e.target.closest("a");
+    const href = target.getAttribute("href");
+    if (href.includes(SOLIDITY_HOME_URL)) {
+      const url = new URL(href);
+      const params = new URLSearchParams(url.search);
+      params.set("color", localStorage.getItem(LS_COLOR_SCHEME));
+      url.search = params.toString();
+      target.setAttribute("href", url.toString());
+    }
+  }
+};
+
+const handleKeyDown = (e) => {
+  if (e.metaKey && e.key === "k") {
+    document.querySelector("#rtd-search-form input").focus();
+  } else if (e.key === "Escape") {
+    toggleMenu({ force: false });
+  }
+  if (e.metaKey && e.code === "Backslash") {
+    cycleColorMode();
+  }
+};
