@@ -424,8 +424,6 @@ body.wy-body-for-nav {
   align-items: center;
   justify-content: space-between;
   padding-inline: 2rem;
-  /* padding-block: 1rem; */
-  background: var(--color-background);
   height: var(--space-nav-height);
 }
 
@@ -434,7 +432,7 @@ body.wy-body-for-nav {
   position: absolute;
   inset: 0;
   opacity: 95%;
-  background: var(--color-f);
+  background: var(--color-background);
   z-index: -1;
 }
 
@@ -548,7 +546,7 @@ a.skip-to-content {
   font-size: 14px;
   margin-inline-end: auto;
   margin-inline-start: 2rem;
-  color: var(--color-a);
+  color: var(--color-primary);
 }
 
 a.skip-to-content:focus {
