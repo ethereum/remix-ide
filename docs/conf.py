@@ -162,7 +162,12 @@ html_favicon = '../favicon.ico'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_js_files = ["js/constants.js", "js/utils.js", "js/initialize.js"]
+html_js_files = [
+    "js/constants.js",
+    "js/utils.js",
+    "js/loaders.js",
+    "js/initialize.js"
+]
 
 html_css_files = ["css/fonts.css", "css/tokens.css", "css/custom.css"]
 
