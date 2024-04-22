@@ -6,6 +6,12 @@ const SUN_ICON_PATH = "_static/img/sun.svg";
 const MOON_ICON_PATH = "_static/img/moon.svg";
 const CLASSIC_ICON_PATH = "_static/img/classic.svg";
 
+const COLOR_MODES = [
+  { name: "Classic", icon: CLASSIC_ICON_PATH, value: CLASSIC },
+  { name: "Dark", icon: MOON_ICON_PATH, value: DARK },
+  { name: "Light", icon: SUN_ICON_PATH, value: LIGHT },
+]
+
 const REMIX_LOGO_PATH = "_static/img/remix-logo.svg"
 const HAMBURGER_PATH = "_static/img/hamburger.svg";
 

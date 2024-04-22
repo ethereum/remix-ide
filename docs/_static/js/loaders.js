@@ -50,6 +50,20 @@ const updateEditButtonLabel = () => {
 }
 
 /**
+ * Preload color-mode icons, storing them in the colorModeSvgs object.
+ */
+const preloadColorModeIcons = () => {
+  const icons = COLOR_MODES.map(({ icon }) => icon);
+  icons.forEach((path, idx) => {
+    fetch(path)
+      .then(response => response.text())
+      .then(data => {
+        colorModeSvgs[icons[idx].value] = data;
+      })
+  })
+}
+
+/**
  * Adds a color mode button to the side navigation bar.
  */
 const addColorModeButton = () => {

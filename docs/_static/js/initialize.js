@@ -1,6 +1,7 @@
 // Dependencies: ./utils.js
 
 let mode = getColorMode()
+const colorModeSvgs = {}
 
 const onDOMContentLoaded = () => {
   // Preload fonts
@@ -12,6 +13,9 @@ const onDOMContentLoaded = () => {
   // Update edit button to "Edit on GitHub"
   updateEditButtonLabel();
 
+  // Preload color mode icons
+  preloadColorModeIcons();
+  
   // Add color mode button
   addColorModeButton()
 

@@ -75,7 +75,7 @@ const updateColorModeIcon = (button) => {
   // Delete any child nodes of toggleButton
   button.innerHTML = "";
   // Add latest icon as button children
-  appendSvg(getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
+  appendSvg(colorModeSvgs[mode] ?? getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
 };
 
 const cycleColorMode = () => {
