@@ -46,6 +46,11 @@ const removeColorParam = () => {
   );
 }
 
+/**
+ * Retrieves the color mode preference.
+ * Priority given to query param `color`, then to localStorage `color-scheme`
+ * @returns {string} The color mode to use
+ */
 const getColorMode = () => {
   // Check localStorage for existing color scheme preference
   const urlParams = new URLSearchParams(window.location.search);
@@ -57,10 +62,8 @@ const getColorMode = () => {
     if (COLOR_CHOICES.includes(colorSchemeParam)) return colorSchemeParam;
   }
 
-  const colorMode = localStorage.getItem(LS_COLOR_SCHEME);
-  if (colorMode === DARK) return DARK;
-  if (colorMode === CLASSIC) return CLASSIC;
-  return LIGHT;
+  const lsMode = localStorage.getItem(LS_COLOR_SCHEME);
+  return COLOR_CHOICES.includes(lsMode) ? lsMode : COLOR_CHOICES[0];
 }
 
 const updateMode = () => {
