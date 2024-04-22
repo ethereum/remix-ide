@@ -4,34 +4,15 @@ let mode = getColorMode()
 const colorModeSvgs = {}
 
 const onDOMContentLoaded = () => {
-  // Preload fonts
   preloadFonts();
-
-  // Rearrange DOM elements for styling
   rearrangeDom();
-
-  // Update edit button to "Edit on GitHub"
   updateEditButtonLabel();
-
-  // Preload color mode icons
   preloadColorModeIcons();
-  
-  // Add color mode button
   addColorModeButton()
-
-  // Add hr under search form
   addHrUnderSearchForm();
-
-  // Update color mode
   updateMode();
-
-  // Add footer note
   addFooterNote();
-
-  // Build header
   buildHeader();
-
-  // Close menu
   toggleMenu({ force: false });
 }
 

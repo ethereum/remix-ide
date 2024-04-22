@@ -177,7 +177,7 @@ const buildHeader = () => {
 /**
  * Toggles the mobile menu.
  * @param {Object} options - The options object.
- * @param {boolean} options.force - If true, forces the menu to open or close.
+ * @param {boolean} options.force - forces the menu to open (true) or close (false).
  */
 const toggleMenu = (options = {}) => {
   const handleClassToggle = ({ classList }, className) => {
