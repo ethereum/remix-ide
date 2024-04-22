@@ -1,8 +1,12 @@
+// Dependencies: ./utils.js
+
+let mode = getColorMode()
+
 const onDOMContentLoaded = () => {
   // Preload fonts
   preloadFonts();
 
-  // // Rearrange DOM elements for styling
+  // Rearrange DOM elements for styling
   rearrangeDom();
 
   // Update edit button to "Edit on GitHub"
@@ -20,11 +24,9 @@ const onDOMContentLoaded = () => {
   // Add footer note
   addFooterNote();
 
-  // // Build header
+  // Build header
   buildHeader();
 }
-
-let mode = getColorMode()
 
 function main() {
   document.addEventListener("DOMContentLoaded", onDOMContentLoaded);

@@ -41,7 +41,6 @@ const updateActiveNavLink = () => {
   });
 };
 
-
 const removeColorParam = () => {
   const { location, title } = document;
   const { pathname, origin, search, hash } = location;
