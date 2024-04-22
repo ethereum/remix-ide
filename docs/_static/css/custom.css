@@ -89,8 +89,8 @@ pre {
   background-image: var(--color-gradient);
 }
 
-.wy-menu-vertical ul {
-  margin-bottom: 4rem;
+.wy-menu-vertical>ul {
+  margin: 0 var(--space-vertical-menu-pad-x) 4rem 0;
 }
 
 .wy-menu-vertical p.caption {
@@ -106,22 +106,32 @@ pre {
 .wy-menu-vertical a {
   background: transparent;
   color: var(--color-body) !important;
+  display: inline-block !important;
+  position: relative;
 }
 
-.wy-menu-vertical a:hover {
-  background: transparent;
-  color: var(--color-primary);
-  box-shadow: 0 2px 0 var(--color-primary);
+.wy-menu-vertical a::after {
+  content: "";
+  position: absolute;
+  inset-inline: -0.5rem;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-primary);
+  visibility: hidden;
 }
 
-.wy-menu-vertical a.active {
-  color: var(--color-body);
-  box-shadow: 0 1px 0 var(--color-primary);
+.wy-menu-vertical a.current::after {
+  height: 1px;
 }
 
-.wy-menu-vertical a:focus {
-  color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-primary);
+.wy-menu-vertical li.current>a {
+  font-weight: 400 !important;
+}
+
+.wy-menu-vertical a:hover::after,
+.wy-menu-vertical a.current::after,
+.wy-menu-vertical a:focus::after {
+  visibility: visible;
 }
 
 .wy-menu-vertical li,
@@ -130,8 +140,11 @@ pre {
 }
 
 /* Selecting the vertical menu list elements */
-.wy-menu-vertical li {
-  margin: 0 var(--space-vertical-menu-pad-x);
+.wy-menu-vertical li.toctree-l1,
+.wy-menu-vertical li.toctree-l2,
+.wy-menu-vertical li.toctree-l3,
+.wy-menu-vertical li.toctree-l4 {
+  margin: 0;
 }
 
 /* Selecting the last li in the vertical menu */
@@ -144,6 +157,17 @@ pre {
   font-size: var(--size-left-nav-lvl-1);
 }
 
+.wy-menu-vertical li.current a {
+  padding-inline: 0 !important;
+}
+
+.wy-menu-vertical li:has(a.reference.internal) {
+  padding-inline-start: var(--space-vertical-menu-pad-x) !important;
+}
+
+.wymenu-vertical a.reference.internal {
+  padding-inline: 0 !important;
+}
 
 /* Selecting the breadcrumbs ul element */
 ul.wy-breadcrumbs {
@@ -337,6 +361,14 @@ button.color-toggle {
 img.color-toggle-icon {
   margin: 0;
   background-color: transparent;
+}
+
+.wy-menu-vertical li a.reference.internal {
+  border: none;
+}
+
+.wy-menu-vertical .toctree-expand::before {
+  color: var(--color-body);
 }
 
 /* Content styling */
