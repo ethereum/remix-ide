@@ -10,10 +10,10 @@ const appendSvg = (path, container, className) => {
 }
 
 const getModeIconSrc = (mode) => {
-  if (!COLOR_CHOICES.includes(mode)) return ""
-  if (mode === CLASSIC) return MOON_ICON_PATH;
-  if (mode === DARK) return SUN_ICON_PATH;
-  return CLASSIC_ICON_PATH;
+  const index = COLOR_MODES.findIndex(({ value }) => value === mode);
+  if (index < 0) return "";
+  const next = (index + 1) % COLOR_MODES.length;
+  return COLOR_MODES[next].icon;
 }
 
 const updateActiveNavLink = () => {
@@ -83,7 +83,8 @@ const cycleColorMode = () => {
 
   // Set mode to the next color scheme in COLOR_CHOICES array, wrapping to beginning if necessary
   const index = COLOR_CHOICES.indexOf(mode);
-  mode = COLOR_CHOICES[(index + 1) % COLOR_CHOICES.length];
+  const next = (index + 1) % COLOR_CHOICES.length
+  mode = COLOR_CHOICES[next];
 
   updateMode();
 
