@@ -2340,7 +2340,7 @@ msgid "Go to a transaction in the terminal."
 msgstr ""
 
 #: ../../tutorial_debug.md:103
-msgid "Click a line with a transaction - to exand the log."
+msgid "Click a line with a transaction - to expand the log."
 msgstr ""
 
 #: ../../tutorial_debug.md:104
