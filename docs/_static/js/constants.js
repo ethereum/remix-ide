@@ -16,8 +16,10 @@ const REMIX_LOGO_CLASS = "remix-logo";
 const LS_COLOR_SCHEME = "color-scheme";
 
 // Navigation constants
-const REMIX_HOME_URL = "https://remix-project.org";
-const REMIX_DOCS_URL = "https://remix-ide.readthedocs.io"
+// const REMIX_HOME_URL = "https://remix-project.org"; // TODO: Revert for production
+const REMIX_HOME_URL = "https://remix-dev.netlify.app";
+// const REMIX_DOCS_URL = "https://remix-ide.readthedocs.io" // TODO: Revert for production
+const REMIX_DOCS_URL = "https://remix-ide-dev.readthedocs.io"
 const REMIX_IDE_URL = "https://remix.ethereum.org";
 const REMIX_REWARDS_URL = "https://rewards.remix.ethereum.eth.limo"; // TODO: Remove?
 
