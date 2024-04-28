@@ -146,15 +146,50 @@ const buildHeader = () => {
   /**
    * type NavItem = { name: string } & ({ href: string } | { items: NavItem[] })
    */
-  const navLinkExcludingDropdown = NAV_LINKS.filter(({ href }) => !!href)
-  const linkElements = navLinkExcludingDropdown.map(({ name, href }) => {
-    const link = document.createElement("a");
-    link.classList.add("nav-link");
-    link.setAttribute("key", name);
-    link.setAttribute("href", href);
-    link.setAttribute("aria-label", name);
-    link.innerText = name;
-    return link;
+  const linkElements = NAV_LINKS.map(({ name, href, items }) => {
+    if (href) {
+      const link = document.createElement("a");
+      link.classList.add("nav-link");
+      link.setAttribute("key", name);
+      link.setAttribute("href", href);
+      link.setAttribute("aria-label", name);
+      link.innerText = name;
+      return link;
+    }
+    // Learn menu dropdown
+    if (items) {
+      const dropdown = document.createElement("div");
+      dropdown.classList.add("nav-dropdown");
+      dropdown.setAttribute("key", name);
+      
+      // Return button, styled the same as the other links, with a chevron icon
+      const button = document.createElement("button");
+      button.classList.add("nav-link");
+      button.classList.add("dropdown-button");
+      button.id = "dropdown-button";
+      button.innerText = name;
+      button.setAttribute("key", name);
+      button.setAttribute("aria-label", name);
+      button.setAttribute("aria-haspopup", "true");
+      button.setAttribute("aria-expanded", "false");
+      button.onclick = toggleDropdown;
+      const dropdownItemsBox = document.createElement("div");
+      dropdownItemsBox.classList.add("dropdown-items");
+      dropdown.appendChild(button);
+      dropdown.appendChild(dropdownItemsBox);
+
+      const dropdownItems = items.map(({ name, href }) => {
+        const item = document.createElement("a");
+        item.classList.add("dropdown-item");
+        item.setAttribute("key", name);
+        item.setAttribute("href", href);
+        item.setAttribute("aria-label", name);
+        item.innerText = name;
+        return item;
+      });
+      dropdownItems.forEach((item) => dropdownItemsBox.appendChild(item));
+      return dropdown;
+    }
   });
   linkElements.forEach((link) => navBar.appendChild(link));
 

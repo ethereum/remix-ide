@@ -111,13 +111,19 @@ const handleGeneralClick = (e) => {
   if (e.target.closest("a")) {
     const target = e.target.closest("a");
     const href = target.getAttribute("href");
-    if (href.includes(SOLIDITY_HOME_URL)) {
+    if (href.includes(REMIX_HOME_URL)) {
       const url = new URL(href);
       const params = new URLSearchParams(url.search);
       params.set("color", localStorage.getItem(LS_COLOR_SCHEME));
       url.search = params.toString();
       target.setAttribute("href", url.toString());
     }
+  }
+
+  if (!e.target.closest("#dropdown-button")) {
+    const dropdownButton = document.getElementById("dropdown-button");
+    const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true"
+    if (isExpanded) dropdownButton.setAttribute("aria-expanded", "false");
   }
 };
 
@@ -130,4 +136,9 @@ const handleKeyDown = (e) => {
   if (e.metaKey && e.code === "Backslash") {
     cycleColorMode();
   }
+};
+
+const toggleDropdown = () => {
+  const dropdownButton = document.getElementById("dropdown-button");
+  dropdownButton.setAttribute("aria-expanded", dropdownButton.getAttribute("aria-expanded") === "true" ? "false" : "true");
 };

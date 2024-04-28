@@ -392,11 +392,9 @@ body.wy-body-for-nav {
 /* Site wrapper, and two children: header and rest */
 .unified-wrapper {
   position: relative;
-  /* inset: 0; */
   top: var(--space-nav-height);
   max-width: 80rem;
   margin-inline: auto;
-  /* background: var(--color-background); */
 }
 
 /* Header styling */
@@ -457,6 +455,10 @@ body.wy-body-for-nav {
   justify-content: flex-end;
   height: 100%;
   gap: 1.75rem;
+}
+
+.unified-header .nav-bar * {
+  border: none;
 }
 
 .unified-header .nav-bar .nav-button-container {
@@ -552,8 +554,49 @@ a.skip-to-content:focus {
   transition: opacity 200ms ease-in-out;
 }
 
-.dropdown:has(button.dropdown-button[aria-expanded=false]) {
+.nav-dropdown {
+  position: relative;
+  height: 100%;
+}
+
+.nav-dropdown .dropdown-items {
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: calc(100% + 1.rem);
+  border-radius: 0.25rem;
+  padding: 1.5rem 1rem;
+  background: var(--color-background);
+  box-shadow: var(--shadow-base);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.nav-dropdown .dropdown-items a {
+  white-space: nowrap;
+  font-size: var(--size-body-small-link);
+  color: var(--color-body)
+}
+
+.nav-dropdown .dropdown-items a:hover {
+  color: var(--color-primary)
+}
+
+.nav-dropdown:has(button.dropdown-button[aria-expanded=false]) .dropdown-items {
   display: none;
+}
+
+.nav-dropdown button.dropdown-button {
+  background: transparent;
+  height: 100%;
+  padding-block: 0;
+  border: none;
+}
+
+.nav-dropdown button.dropdown-button:focus {
+  border: none;
 }
 
 /**
