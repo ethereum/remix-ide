@@ -204,11 +204,6 @@ ul.wy-breadcrumbs {
   fill: var(--color-hover);
 }
 
-/* Selecting the breadcrumb home icon pseudo-element */
-.wy-breadcrumbs a.icon-home:before {
-  content: "Home";
-}
-
 /* Select edit button aside */
 .wy-breadcrumbs-aside {
   float: unset;
@@ -219,6 +214,10 @@ ul.wy-breadcrumbs {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.breadcrumb-item.active {
+  margin-inline-end: 0.5rem;
 }
 
 .wy-breadcrumbs-aside a {
@@ -442,8 +441,7 @@ body.wy-body-for-nav {
 }
 
 .unified-header .home-link:hover .remix-logo {
-  transform: scale(1.1);
-  transition: transform 100ms ease-in-out;
+  color: var(--color-hover);
 }
 
 .unified-header img.remix-logo {
@@ -616,6 +614,10 @@ a.skip-to-content:focus {
     transition: opacity 200ms ease-in-out;
     z-index: 5;
     background: #0006;
+  }
+
+  .wy-nav-content {
+    padding-inline: 1.5rem;
   }
 
   a.skip-to-content {
