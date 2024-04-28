@@ -1,7 +1,7 @@
 // Dependencies: ./utils.js
 
 let mode = getColorMode()
-const colorModeSvgs = {}
+const loadedSvgs = {}
 
 const onDOMContentLoaded = () => {
   preloadFonts();

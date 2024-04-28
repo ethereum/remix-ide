@@ -78,7 +78,7 @@ const updateColorModeIcon = (button) => {
   // Delete any child nodes of toggleButton
   button.innerHTML = "";
   // Add latest icon as button children
-  appendSvg(colorModeSvgs[mode] ?? getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
+  appendSvg(loadedSvgs[mode] ?? getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
 };
 
 const cycleColorMode = () => {
@@ -138,7 +138,20 @@ const handleKeyDown = (e) => {
   }
 };
 
-const toggleDropdown = () => {
+/**
+ * ({ expanded: boolean }) => Optional: false closes, true opens
+ */
+const toggleDropdown = (options = {}) => {
   const dropdownButton = document.getElementById("dropdown-button");
-  dropdownButton.setAttribute("aria-expanded", dropdownButton.getAttribute("aria-expanded") === "true" ? "false" : "true");
+  if (typeof options.expanded === "boolean") {
+    dropdownButton.setAttribute(
+      "aria-expanded",
+      options.expanded ? "true" : "false"
+    );
+  } else {
+    dropdownButton.setAttribute(
+      "aria-expanded",
+      dropdownButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
+  }
 };

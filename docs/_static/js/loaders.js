@@ -50,7 +50,7 @@ const updateEditButtonLabel = () => {
 }
 
 /**
- * Preload color-mode icons, storing them in the colorModeSvgs object.
+ * Preload color-mode icons, storing them in the loadedSvgs object.
  */
 const preloadColorModeIcons = () => {
   const icons = COLOR_MODES.map(({ icon }) => icon);
@@ -58,7 +58,7 @@ const preloadColorModeIcons = () => {
     fetch(path)
       .then(response => response.text())
       .then(data => {
-        colorModeSvgs[icons[idx].value] = data;
+        loadedSvgs[icons[idx].value] = data;
       })
   })
 }
@@ -73,7 +73,7 @@ const addColorModeButton = () => {
   colorModeButton.setAttribute("type", "button");
   colorModeButton.setAttribute("aria-label", "Toggle light dark mode");
   colorModeButton.setAttribute("key", "color mode button");
-  colorModeButton.onclick = cycleColorMode;  
+  colorModeButton.onclick = cycleColorMode;
   // Update the icon for this button according to the current mode
   updateColorModeIcon(colorModeButton);
 
@@ -118,7 +118,6 @@ const addFooterNote = () => {
 const buildHeader = () => {
   const header = document.createElement("div");
   header.classList.add("unified-header");
-  console.log(header)
   document.querySelector(`.${WRAPPER_CLASS}`).prepend(header);
 
   const innerHeader = document.createElement("div");
@@ -161,7 +160,7 @@ const buildHeader = () => {
       const dropdown = document.createElement("div");
       dropdown.classList.add("nav-dropdown");
       dropdown.setAttribute("key", name);
-      
+
       // Return button, styled the same as the other links, with a chevron icon
       const button = document.createElement("button");
       button.classList.add("nav-link");
@@ -173,6 +172,8 @@ const buildHeader = () => {
       button.setAttribute("aria-haspopup", "true");
       button.setAttribute("aria-expanded", "false");
       button.onclick = toggleDropdown;
+      appendSvg(CHEVRON_DOWN_PATH, button, "chevron-icon");
+
       const dropdownItemsBox = document.createElement("div");
       dropdownItemsBox.classList.add("dropdown-items");
       dropdown.appendChild(button);

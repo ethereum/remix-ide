@@ -9,6 +9,7 @@ const COLOR_CHOICES = COLOR_MODES.map(({ value }) => value);
 
 const REMIX_LOGO_PATH = "_static/img/remix-logo.svg"
 const HAMBURGER_PATH = "_static/img/hamburger.svg";
+const CHEVRON_DOWN_PATH = "_static/img/down-arrow.svg";
 
 const COLOR_TOGGLE_ICON_CLASS = "color-toggle-icon";
 const MOBILE_MENU_ICON_CLASS = "mobile-menu-toggle-icon";
@@ -46,3 +47,4 @@ const NAV_LINKS = [
 
 const MOBILE_MENU_TOGGLE_CLASS = "shift";
 const WRAPPER_CLASS = "unified-wrapper";
+

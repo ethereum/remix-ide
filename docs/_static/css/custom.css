@@ -198,6 +198,10 @@ ul.wy-breadcrumbs {
   color: var(--color-primary)
 }
 
+.wy-breadcrumbs a.icon-home::before {
+  font-family: FontAwesome;
+}
+
 /* Selecting the breadcrumb anchor elements hover */
 .wy-breadcrumbs li:hover a {
   color: var(--color-hover);
@@ -400,6 +404,7 @@ body.wy-body-for-nav {
 /* Header styling */
 .remix-logo {
   color: var(--color-primary);
+  height: 30px;
 }
 
 .unified-header {
@@ -557,12 +562,13 @@ a.skip-to-content:focus {
 .nav-dropdown {
   position: relative;
   height: 100%;
+  font-size: var(--size-body-small-link);
 }
 
 .nav-dropdown .dropdown-items {
   position: absolute;
   inset-inline-end: 0;
-  inset-block-start: calc(100% + 1.rem);
+  inset-block-start: calc(100% - 1rem);
   border-radius: 0.25rem;
   padding: 1.5rem 1rem;
   background: var(--color-background);
@@ -571,21 +577,33 @@ a.skip-to-content:focus {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: fit-content;
+  width: max-content;
+}
+
+.nav-dropdown:has(button.dropdown-button[aria-expanded=false]) .dropdown-items {
+  display: none;
 }
 
 .nav-dropdown .dropdown-items a {
   white-space: nowrap;
   font-size: var(--size-body-small-link);
-  color: var(--color-body)
+  line-height: var(--size-h5);
+  color: var(--color-body);
 }
 
 .nav-dropdown .dropdown-items a:hover {
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 
-.nav-dropdown:has(button.dropdown-button[aria-expanded=false]) .dropdown-items {
-  display: none;
+.nav-dropdown .chevron-icon {
+  transform: scaleY(1);
+  transition: transform 100ms;
+  margin-inline-start: 0.375rem;
+}
+
+.nav-dropdown:has(button.dropdown-button[aria-expanded=true]) .chevron-icon {
+  transform: scaleY(-1);
+  transition: transform 100ms;
 }
 
 .nav-dropdown button.dropdown-button {
@@ -593,6 +611,7 @@ a.skip-to-content:focus {
   height: 100%;
   padding-block: 0;
   border: none;
+  font-family: Helvetica, sans-serif;
 }
 
 .nav-dropdown button.dropdown-button:focus {
