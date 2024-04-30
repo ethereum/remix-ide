@@ -153,6 +153,13 @@ const buildHeader = () => {
       link.setAttribute("href", href);
       link.setAttribute("aria-label", name);
       link.innerText = name;
+
+      href === REMIX_DOCS_URL && link.classList.add("active");
+      if (href === REMIX_IDE_URL) {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+      }
+
       return link;
     }
     // Learn menu dropdown

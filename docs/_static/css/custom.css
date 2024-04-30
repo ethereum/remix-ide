@@ -470,7 +470,6 @@ body.wy-body-for-nav {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  /* display: flex; */
   display: none; /* Currently mobile only */
 }
 
@@ -496,24 +495,24 @@ body.wy-body-for-nav {
   text-decoration: none;
   letter-spacing: -0.02em;
   font-weight: 400;
-  box-sizing: content-box;
-  border: 2px solid transparent;
   color: var(--color-body);
   border-radius: 0px;
 }
 
 .unified-header .nav-link.active {
-  border-bottom: 1px solid var(--color-primary);
+  box-shadow: 0 1px 0 var(--color-primary);
+  color: var(--color-primary);
 }
 
 .unified-header .nav-link:hover {
   color: var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
+  box-shadow: 0 2px 0 var(--color-primary);
+  
 }
 
 .unified-header .nav-link:focus {
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  box-shadow: 0 2px 0 var(--color-primary);
 }
 
 /* Rest: Grid, with two children: side bar, and content */
