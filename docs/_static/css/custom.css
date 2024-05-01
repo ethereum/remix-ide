@@ -361,9 +361,12 @@ button.color-toggle {
 }
 
 /* Select color mode cycle/toggle button icon */
-img.color-toggle-icon {
+.color-toggle-icon svg {
   margin: 0;
   background-color: transparent;
+  --size: 1.5rem;
+  height: var(--size);
+  width: var(--size);
 }
 
 .wy-menu-vertical li a.reference.internal {

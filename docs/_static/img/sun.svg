@@ -1,13 +1,11 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false" class="color-toggle-icon" aria-hidden="true">
-  <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentcolor">
-    <circle cx="12" cy="12" r="5" />
-    <path d="M12 1v2" />
-    <path d="M12 21v2" />
-    <path d="M4.22 4.22l1.42 1.42" />
-    <path d="M18.36 18.36l1.42 1.42" />
-    <path d="M1 12h2" />
-    <path d="M21 12h2" />
-    <path d="M4.22 19.78l1.42-1.42" />
-    <path d="M18.36 5.64l1.42-1.42" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+  <circle cx="10.9998" cy="11.0003" r="3.33333" fill="currentcolor"/>
+  <path d="M11 1V4.33333" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M18.3569 4.33301L15.9999 6.69003" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M21 11L17.6667 11" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M18.3569 18.3574L15.9999 16.0004" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M11 17.667V21.0003" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M6.34521 16.2646L3.98819 18.6217" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M4.3335 11L1.00016 11" stroke="currentcolor" stroke-linecap="round"/>
+  <path d="M6.68994 6.69043L4.33292 4.33341" stroke="currentcolor" stroke-linecap="round"/>
 </svg>
