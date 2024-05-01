@@ -193,6 +193,7 @@ const buildHeader = () => {
         item.setAttribute("href", href);
         item.setAttribute("aria-label", name);
         item.innerText = name;
+        appendSvg(NE_ARROW_PATH, item, "external-link-icon")
         return item;
       });
       dropdownItems.forEach((item) => dropdownItemsBox.appendChild(item));

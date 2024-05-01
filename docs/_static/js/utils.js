@@ -132,6 +132,7 @@ const handleKeyDown = (e) => {
     document.querySelector("#rtd-search-form input").focus();
   } else if (e.key === "Escape") {
     toggleMenu({ force: false });
+    toggleDropdown({ expanded: false })
   }
   if (e.metaKey && e.code === "Backslash") {
     cycleColorMode();
