@@ -13,6 +13,11 @@
 }
 
 body,
+div {
+  transition: background 200ms ease-in-out;
+}
+
+body,
 p,
 span,
 div,
@@ -63,6 +68,13 @@ pre {
   color: var(--color-body) !important;
 }
 
+html,
+body,
+.wy-grid-for-nav {
+  background: var(--color-background);
+  position: relative;
+}
+
 /**
  * Custom class styling
  */
@@ -73,13 +85,13 @@ pre {
 
 /* Selecting the navigation content wrap element */
 .wy-nav-content-wrap {
-  background-color: var(--color-background);
+  background-color: transparent;
 }
 
 /* Selecting the navigation content element */
 .wy-nav-content {
   color: var(--color-body);
-  background: none !important;
+  background: transparent !important;
   padding: 0 3.625rem;
 }
 
@@ -324,8 +336,9 @@ nav.wy-nav-shift {
   flex-direction: row-reverse;
   align-items: end;
   background: none !important;
-  margin: 2.857rem 0 0;
+  margin: 5rem 0 0;
   padding: 0 var(--space-vertical-menu-pad-x);
+  margin: 2.875rem 0 0 !important;
 }
 
 .wy-side-scroll hr {
@@ -454,7 +467,8 @@ body.wy-body-for-nav {
 
 /* Site wrapper, and two children: header and rest */
 .unified-wrapper {
-  position: relative;
+  position: fixed;
+  inset: 0;
   top: var(--space-nav-height);
   max-width: 80rem;
   margin-inline: auto;
@@ -585,7 +599,6 @@ body.wy-body-for-nav {
   position: relative !important;
   display: grid !important;
   grid-template-columns: auto 1fr;
-  background: var(--color-background);
 }
 
 /* First child: Side bar */
@@ -593,14 +606,27 @@ body.wy-body-for-nav {
   position: relative;
   display: flex;
   flex-direction: column;
-  top: 0;
-  bottom: 0;
+  inset-block: 0;
   inset-inline-start: 0;
   padding-bottom: unset !important;
   min-height: unset !important;
   z-index: 10 !important;
   max-width: var(--space-side-width) !important;
 }
+
+.unified-wrapper .wy-grid-for-nav nav.wy-nav-side .wy-side-scroll {
+  position: relative !important;
+  /* width: fit-content !important; */
+  height: unset !important;
+}
+
+.wy-nav-side,
+.wy-side-scroll,
+.wy-side-nav-search,
+.my-menu {
+  width: 100% !important;
+}
+
 
 /* Skip to content a11y button */
 a.skip-to-content:visited,
@@ -621,6 +647,11 @@ a.skip-to-content {
 a.skip-to-content:focus {
   opacity: 1;
   transition: opacity 200ms ease-in-out;
+}
+
+#content {
+  scroll-margin-top: 6rem;
+  scroll-behavior: smooth;
 }
 
 .nav-dropdown {
@@ -692,6 +723,34 @@ a.skip-to-content:focus {
   border: none;
 }
 
+/* Second child: Content */
+.unified-wrapper .wy-grid-for-nav .wy-nav-content {
+  position: relative !important;
+  overflow-y: auto !important;
+  width: 100%;
+  max-width: 100vw !important;
+  padding-inline: 3.625rem;
+}
+
+.unified-wrapper .wy-grid-for-nav .wy-nav-content .rst-content {
+  max-width: 80ch;
+}
+
+.unified-wrapper.menu-open .backdrop {
+  opacity: 0.5;
+}
+
+.unified-wrapper .wy-nav-side,
+.unified-wrapper .rst-versions {
+  inset-inline-start: auto;
+
+}
+
+.unified-wrapper .backdrop {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
 /**
  * MOBILE
  */
@@ -755,7 +814,7 @@ a.skip-to-content:focus {
     background: #0006;
   }
 
-  .wy-nav-content {
+  .unified-wrapper .wy-grid-for-nav .wy-nav-content {
     padding-inline: 1.5rem;
   }
 
