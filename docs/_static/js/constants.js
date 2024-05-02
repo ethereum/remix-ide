@@ -15,6 +15,9 @@ const NE_ARROW_PATH = "_static/img/northeast-arrow.svg";
 const COLOR_TOGGLE_ICON_CLASS = "color-toggle-icon";
 const MOBILE_MENU_ICON_CLASS = "mobile-menu-toggle-icon";
 const REMIX_LOGO_CLASS = "remix-logo";
+const THEME_BUTTON_WRAPPER_CLASS = "theme-button-wrapper";
+const THEME_BUTTON_CLASS = "theme-button";
+const THEME_DROPDOWN_MENU_CLASS = "theme-dropdown-menu";
 const LS_COLOR_SCHEME = "color-scheme";
 
 // Navigation constants

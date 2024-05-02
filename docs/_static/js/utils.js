@@ -32,6 +32,22 @@ const updateActiveNavLink = () => {
   });
 };
 
+/**
+ * Retrieves the icon associated with the given mode.
+ * @param {string} mode - The mode to retrieve the icon for.
+ * @returns {string} The icon associated with the given mode.
+ */
+const getIconFromMode = (mode) => {
+  const match = COLOR_MODES.find(({ value }) => value === mode);
+  if (!match) return COLOR_MODES[0].icon;
+  return match.icon;
+}
+
+const closeThemeMenu = () => {
+  const themeMenu = document.querySelector("." + THEME_DROPDOWN_MENU_CLASS);
+  themeMenu.setAttribute("aria-expanded", "false")
+}
+
 const removeColorParam = () => {
   const { location, title } = document;
   const { pathname, origin, search, hash } = location;
@@ -74,12 +90,20 @@ const updateMode = () => {
   document.documentElement.setAttribute("style", `--color-scheme: ${mode}`);
 }
 
-const updateColorModeIcon = (button) => {
-  // Delete any child nodes of toggleButton
-  button.innerHTML = "";
+const updateColorModeIcon = () => {
+  const themeDropdownButton = document.querySelector("." + THEME_BUTTON_CLASS)
+  // Delete any child nodes of theme button
+  themeDropdownButton.innerHTML = "";
   // Add latest icon as button children
-  appendSvg(loadedSvgs[mode] ?? getModeIconSrc(mode), button, COLOR_TOGGLE_ICON_CLASS);
+  appendSvg(getIconFromMode(mode), themeDropdownButton, COLOR_TOGGLE_ICON_CLASS)
 };
+
+const setColorMode = (newMode) => {
+  if (!COLOR_CHOICES.includes(newMode)) return;
+  mode = newMode;
+  updateMode();
+  updateColorModeIcon();
+}
 
 const cycleColorMode = () => {
   if (!COLOR_CHOICES.includes(mode)) return;
@@ -125,6 +149,10 @@ const handleGeneralClick = (e) => {
     const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true"
     if (isExpanded) dropdownButton.setAttribute("aria-expanded", "false");
   }
+
+  if (!e.target.closest("." + THEME_BUTTON_CLASS)) {
+    closeThemeMenu();
+  }
 };
 
 const handleKeyDown = (e) => {
@@ -133,6 +161,7 @@ const handleKeyDown = (e) => {
   } else if (e.key === "Escape") {
     toggleMenu({ force: false });
     toggleDropdown({ expanded: false })
+    closeThemeMenu();
   }
   if (e.metaKey && e.code === "Backslash") {
     cycleColorMode();

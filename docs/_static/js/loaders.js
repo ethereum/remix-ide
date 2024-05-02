@@ -64,19 +64,9 @@ const preloadColorModeIcons = () => {
 }
 
 /**
- * Adds a color mode button to the side navigation bar.
+ * Clean up unused elements from side nav search
  */
-const addColorModeButton = () => {
-  // Create a new button element
-  const colorModeButton = document.createElement("button");
-  colorModeButton.classList.add("color-toggle");
-  colorModeButton.setAttribute("type", "button");
-  colorModeButton.setAttribute("aria-label", "Toggle light dark mode");
-  colorModeButton.setAttribute("key", "color mode button");
-  colorModeButton.onclick = cycleColorMode;
-  // Update the icon for this button according to the current mode
-  updateColorModeIcon(colorModeButton);
-
+const cleanSearchInput = () => {
   // Select the side nav search container
   const sideNavSearch = document.querySelector('.wy-side-nav-search');
 
@@ -85,10 +75,6 @@ const addColorModeButton = () => {
   const versionDiv = sideNavSearch.querySelector('div.version');
   if (anchor) sideNavSearch.removeChild(anchor);
   if (versionDiv) sideNavSearch.removeChild(versionDiv);
-
-  // Insert the button before the search input
-  const searchInput = sideNavSearch.querySelector('[role="search"]');
-  sideNavSearch.insertBefore(colorModeButton, searchInput);
 }
 
 /**
@@ -205,7 +191,56 @@ const buildHeader = () => {
   // Flex wrapper for color mode and mobile menu buttons
   const navButtonContainer = document.createElement("div");
   navButtonContainer.classList.add("nav-button-container");
-  navBar.appendChild(navButtonContainer);
+  innerHeader.appendChild(navButtonContainer);
+
+  // Add theme dropdown button
+  const themeButtonWrapper = document.createElement("div");
+  themeButtonWrapper.classList.add(THEME_BUTTON_WRAPPER_CLASS);
+  navButtonContainer.appendChild(themeButtonWrapper);
+
+  // Create the theme dropdown button
+  const themeDropdownButton = document.createElement('button');
+  themeDropdownButton.classList.add(THEME_BUTTON_CLASS);
+  themeDropdownButton.setAttribute("type", "button");
+  themeDropdownButton.setAttribute("aria-label", "Theme menu button");
+  appendSvg(getIconFromMode(mode), themeDropdownButton, COLOR_TOGGLE_ICON_CLASS)
+  themeButtonWrapper.appendChild(themeDropdownButton);
+  
+  // Create the dropdown menu
+  const dropdownMenu = document.createElement('div');
+  dropdownMenu.classList.add(THEME_DROPDOWN_MENU_CLASS); // .theme-dropdown-menu
+  dropdownMenu.setAttribute("aria-expanded", "false");
+  dropdownMenu.setAttribute("aria-label", "Toggle theme menu");
+
+  COLOR_MODES.forEach(({ name, icon, value }) => {
+    const dropdownItem = document.createElement('button');
+    dropdownItem.classList.add('theme-dropdown-item');
+
+    const label = document.createElement('span');
+    label.textContent = name;
+    dropdownItem.appendChild(label);
+
+    const iconContainer = document.createElement('div');
+    appendSvg(icon, iconContainer, 'mode-choice-icon');
+    dropdownItem.appendChild(iconContainer);
+
+    dropdownItem.onclick = () => {
+      setColorMode(value)
+      closeThemeMenu()
+    };
+    dropdownItem.setAttribute('key', value);
+
+    dropdownMenu.appendChild(dropdownItem);
+  });
+
+  // Append the dropdown menu to the dropdown button
+  themeButtonWrapper.appendChild(dropdownMenu);
+
+  // Add event listeners to toggle aria-expanded attribute
+  themeDropdownButton.addEventListener('click', () => {
+    const isExpanded = dropdownMenu.getAttribute('aria-expanded') === 'true';
+    dropdownMenu.setAttribute('aria-expanded', !isExpanded);
+  });
 
   // Build mobile hamburger menu
   const menuButton = document.createElement("button");

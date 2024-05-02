@@ -8,7 +8,7 @@ const onDOMContentLoaded = () => {
   rearrangeDom();
   updateEditButtonLabel();
   preloadColorModeIcons();
-  addColorModeButton()
+  cleanSearchInput();
   addHrUnderSearchForm();
   updateMode();
   addFooterNote();
