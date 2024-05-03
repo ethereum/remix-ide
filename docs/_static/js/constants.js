@@ -24,7 +24,7 @@ const LS_COLOR_SCHEME = "color-scheme";
 // const REMIX_HOME_URL = "https://remix-project.org"; // TODO: Revert for production
 const REMIX_HOME_URL = "https://remix-dev.netlify.app";
 // const REMIX_DOCS_URL = "https://remix-ide.readthedocs.io" // TODO: Revert for production
-const REMIX_DOCS_URL = "https://remix-ide-dev.readthedocs.io"
+const REMIX_DOCS_URL = "/#"
 const REMIX_IDE_URL = "https://remix.ethereum.org";
 const REMIX_REWARDS_URL = "https://rewards.remix.ethereum.eth.limo"; // TODO: Remove?
 

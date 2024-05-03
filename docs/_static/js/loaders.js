@@ -141,7 +141,7 @@ const buildHeader = () => {
       link.innerText = name;
 
       href === REMIX_DOCS_URL && link.classList.add("active");
-      if (href === REMIX_IDE_URL) {
+      if (href.startsWith("http") && href !== REMIX_HOME_URL) {
         link.setAttribute("target", "_blank");
         link.setAttribute("rel", "noopener noreferrer");
       }
@@ -178,6 +178,10 @@ const buildHeader = () => {
         item.setAttribute("key", name);
         item.setAttribute("href", href);
         item.setAttribute("aria-label", name);
+        if (href.startsWith("http")) {
+          item.setAttribute("target", "_blank");
+          item.setAttribute("rel", "noopener noreferrer");
+        }
         item.innerText = name;
         appendSvg(NE_ARROW_PATH, item, "external-link-icon")
         return item;
