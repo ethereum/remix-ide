@@ -352,13 +352,14 @@ nav.wy-nav-shift {
 }
 
 /* Select the search input */
-.wy-side-nav-search input[type="text"] {
+input[type="text"] {
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem !important;
   border: 1px solid var(--color-primary);
   background: var(--color-background);
   color: var(--color-body);
   box-shadow: none;
+  width: 100%;
 }
 
 /* Select color mode cycle/toggle button */
@@ -760,6 +761,64 @@ a.skip-to-content:focus {
 .unified-wrapper .backdrop {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
+}
+
+/* Flyover menu */
+/* .rst-versions {
+  background: var(--color-d);
+  transition: background 50ms linear;
+} */
+
+.rst-versions,
+.rst-versions.shift-up {
+  background-image: var(--color-gradient);
+  background-color: var(--color-background);
+  transition: background 50ms linear;
+}
+
+.rst-versions .rst-current-version {
+  color: var(--color-primary);
+  border-top: 1px solid var(--color-primary);
+  background: var(--color-d);
+  padding: 1rem;
+}
+
+.rst-versions.shift-up .rst-current-version {
+  background: transparent;
+}
+
+span.fa.fa-book {
+  color: var(--color-primary) !important;
+}
+
+.rst-versions .rst-current-version .fa::before {
+  font-family: FontAwesome;
+  color: var(--color-primary);
+}
+
+.rst-versions .rst-current-version .fa.fa-book::before {
+  margin-inline-end: 0.375rem;
+}
+
+.rst-versions .rst-current-version .fa.fa-caret-down::before {
+  margin-inline-end: 0.5625rem;
+}
+
+.rst-other-versions .injected dt {
+  color: var(--color-body)
+}
+
+.rst-versions .rst-other-versions dd a,
+.rst-versions .rst-other-versions dd {
+  color: var(--color-primary);
+}
+
+dd:has(form#flyout-search-form) {
+  width: 100%;
+}
+
+dd:has(form#flyout-search-form) > div {
+  padding: 0.375rem 0 !important;
 }
 
 /**

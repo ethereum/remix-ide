@@ -278,3 +278,23 @@ const toggleMenu = (options = {}) => {
     .forEach((e) => handleClassToggle(e, MOBILE_MENU_TOGGLE_CLASS));
   handleClassToggle(document.querySelector(`.${WRAPPER_CLASS}`), "menu-open");
 }
+
+/**
+ * Updates the flyover menu by modifying the DOM elements.
+ */
+const updateFlyoverMenu = () => {
+  const rtdVersion = document.querySelector(".rst-current-version");
+  // Assign current label and caret elements to variables
+  const rtdLabel = rtdVersion.querySelector(".fa.fa-book");
+  rtdLabel.textContent = "RTD"; // Update label to RTD
+  const caretDown = rtdVersion.querySelector(".fa.fa-caret-down");
+  // Clear inner HTML of rtdVersion
+  rtdVersion.innerHTML = "";
+  // Append rtdLabel and caret to rtdVersion
+  rtdVersion.appendChild(rtdLabel);
+  rtdVersion.appendChild(caretDown);
+  // Append new span with "Latest" label
+  const latestSpan = document.createElement("span");
+  latestSpan.textContent = "Latest";
+  rtdVersion.appendChild(latestSpan);
+}

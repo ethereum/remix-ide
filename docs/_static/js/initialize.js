@@ -14,6 +14,7 @@ const onDOMContentLoaded = () => {
   addFooterNote();
   buildHeader();
   toggleMenu({ force: false });
+  updateFlyoverMenu();
 }
 
 function main() {
