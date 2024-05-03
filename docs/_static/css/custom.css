@@ -480,9 +480,7 @@ body.wy-body-for-nav {
 
 /* Site wrapper, and two children: header and rest */
 .unified-wrapper {
-  position: fixed;
-  inset: 0;
-  top: var(--space-nav-height);
+  position: relative;
   max-width: 80rem;
   margin-inline: auto;
 }
@@ -610,26 +608,27 @@ body.wy-body-for-nav {
 /* Rest: Grid, with two children: side bar, and content */
 .unified-wrapper .wy-grid-for-nav {
   position: relative !important;
-  display: grid !important;
-  grid-template-columns: auto 1fr;
+  display: flex !important;
 }
 
 /* First child: Side bar */
 .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  inset-block: 0;
-  inset-inline-start: 0;
+  top: var(--space-nav-height);
+  bottom: 0;
+  inset-inline-start: auto;
   padding-bottom: unset !important;
   min-height: unset !important;
-  z-index: 10 !important;
   max-width: var(--space-side-width) !important;
+  width: var(--space-side-width);
+  z-index: 10 !important;
+  overflow: auto;
 }
 
 .unified-wrapper .wy-grid-for-nav nav.wy-nav-side .wy-side-scroll {
   position: relative !important;
-  /* width: fit-content !important; */
   height: unset !important;
 }
 
@@ -662,7 +661,7 @@ a.skip-to-content:focus {
   transition: opacity 200ms ease-in-out;
 }
 
-#content {
+#content * {
   scroll-margin-top: 6rem;
   scroll-behavior: smooth;
 }
@@ -742,6 +741,8 @@ a.skip-to-content:focus {
   width: 100%;
   max-width: 100vw !important;
   padding-inline: 3.625rem;
+  margin-inline-start: var(--space-side-width);
+  margin-top: var(--space-nav-height);
 }
 
 .unified-wrapper .wy-grid-for-nav .wy-nav-content .rst-content {
@@ -774,6 +775,8 @@ a.skip-to-content:focus {
   background-image: var(--color-gradient);
   background-color: var(--color-background);
   transition: background 50ms linear;
+  width: 100% !important;
+  max-width: var(--space-side-width);
 }
 
 .rst-versions .rst-current-version {
@@ -849,7 +852,6 @@ dd:has(form#flyout-search-form) > div {
 
   .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
     position: absolute;
-    inset-block: 0;
     inset-inline-start: 0;
     width: var(--space-side-width);
     overflow-y: scroll;
@@ -858,10 +860,6 @@ dd:has(form#flyout-search-form) > div {
   }
 
   /* Menu open styles */
-  .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
-    position: absolute;
-
-  }
 
   .unified-wrapper.menu-open nav.wy-nav-side {
     transform: translateX(0);
@@ -886,6 +884,7 @@ dd:has(form#flyout-search-form) > div {
 
   .unified-wrapper .wy-grid-for-nav .wy-nav-content {
     padding-inline: 1.5rem;
+    margin-inline-start: unset;
   }
 
   a.skip-to-content {
