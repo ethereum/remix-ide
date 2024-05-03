@@ -298,6 +298,8 @@ a.btn.btn-neutral,
 a.btn.btn-neutral:visited,
 a.btn.btn-neutral:not(:visited) {
   padding: 0.75rem 2rem;
+  display: flex;
+  gap: 10px;
   background: var(--color-primary) !important;
   color: var(--color-background) !important;
 }

@@ -99,6 +99,18 @@ const addFooterNote = () => {
 };
 
 /**
+ * Updates the footer button icons via switching fa class
+ */
+const updateFooterButtonIcons = () => {
+  const rightArrow = document.querySelector(".fa-arrow-circle-right")
+  rightArrow.classList.remove("fa-arrow-circle-right")
+  rightArrow.classList.add("fa-caret-right")
+  const leftArrow = document.querySelector(".fa-arrow-circle-left")
+  leftArrow.classList.remove("fa-arrow-circle-left")
+  leftArrow.classList.add("fa-caret-left")
+}
+
+/**
  * Builds the header element for the website app
  */
 const buildHeader = () => {

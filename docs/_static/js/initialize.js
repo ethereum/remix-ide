@@ -11,8 +11,9 @@ const onDOMContentLoaded = () => {
   cleanSearchInput();
   addHrUnderSearchForm();
   updateMode();
-  addFooterNote();
   buildHeader();
+  addFooterNote();
+  updateFooterButtonIcons();
   toggleMenu({ force: false });
   updateFlyoverMenu();
 }
