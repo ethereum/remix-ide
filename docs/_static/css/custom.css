@@ -766,12 +766,12 @@ a.skip-to-content:focus {
   transition: opacity 200ms ease-in-out;
 }
 
-/* Flyover menu */
-/* .rst-versions {
-  background: var(--color-d);
-  transition: background 50ms linear;
-} */
+/* Force image backgrounds to white until all fixed for dark modes */
+[role=main].document img {
+  background-color: white;
+}
 
+/* Flyover menu */
 .rst-versions,
 .rst-versions.shift-up {
   background-image: var(--color-gradient);
