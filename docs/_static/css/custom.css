@@ -780,7 +780,6 @@ a.skip-to-content:focus {
 .unified-wrapper .wy-nav-side,
 .unified-wrapper .rst-versions {
   inset-inline-start: auto;
-
 }
 
 .unified-wrapper .backdrop {
@@ -796,7 +795,7 @@ a.skip-to-content:focus {
 /* Flyover menu */
 .rst-versions,
 .rst-versions.shift-up {
-  background-image: var(--color-gradient);
+  background-image: linear-gradient(to bottom, var(--color-a), var(--color-b));
   background-color: var(--color-background);
   transition: background 50ms linear;
   width: 100% !important;
@@ -806,7 +805,7 @@ a.skip-to-content:focus {
 .rst-versions .rst-current-version {
   color: var(--color-primary);
   border-top: 1px solid var(--color-primary);
-  background: var(--color-d);
+  background: unset; /* var(--color-d); */
   padding: 1rem;
 }
 
@@ -846,6 +845,10 @@ dd:has(form#flyout-search-form) {
 
 dd:has(form#flyout-search-form) > div {
   padding: 0.375rem 0 !important;
+}
+
+.rst-versions .injected hr {
+  border-color: var(--color-background) !important;
 }
 
 /**
