@@ -7,9 +7,9 @@
   /* Typography */
   --size-body-xs: 0.75rem;
   --size-body-small: 0.875rem;
-  --size-body-small-link: 1rem;
+  --size-body-small-link: var(--size-body-small);
   --size-body: 1rem;
-  --size-body-link: 1rem;
+  --size-body-link: var(--size-body);
   --size-body-big: 1.125rem;
   --size-h1: 2.75rem;
   --size-h2: 2.25rem;
@@ -20,7 +20,7 @@
   --size-left-nav-title: var(--size-body);
   --size-left-nav-lvl-1: var(--size-body-small);
 
-  --line-height-header: 1.5;
+  --line-height-header: 1.625;
 
   /* Spacing */
   --space-side-width: 22.5rem;
