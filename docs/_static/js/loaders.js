@@ -103,11 +103,15 @@ const addFooterNote = () => {
  */
 const updateFooterButtonIcons = () => {
   const rightArrow = document.querySelector(".fa-arrow-circle-right")
-  rightArrow.classList.remove("fa-arrow-circle-right")
-  rightArrow.classList.add("fa-caret-right")
+  if (rightArrow) {
+    rightArrow.classList.add("fa-caret-right")
+    rightArrow.classList.remove("fa-arrow-circle-right")
+  }
   const leftArrow = document.querySelector(".fa-arrow-circle-left")
-  leftArrow.classList.remove("fa-arrow-circle-left")
-  leftArrow.classList.add("fa-caret-left")
+  if (leftArrow) {
+    leftArrow.classList.add("fa-caret-left")
+    leftArrow.classList.remove("fa-arrow-circle-left")
+  }
 }
 
 /**
