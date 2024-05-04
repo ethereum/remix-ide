@@ -652,7 +652,10 @@ body.wy-body-for-nav {
 }
 
 .unified-wrapper .wy-grid-for-nav nav.wy-nav-side .wy-side-scroll {
-  position: relative !important;
+  position: static !important;
+  width: unset !important;
+  overflow: unset !important;
+  padding-bottom: 2rem;
   height: unset !important;
 }
 
