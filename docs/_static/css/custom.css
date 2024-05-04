@@ -105,7 +105,7 @@ body,
   width: 100%;
 }
 
-.wy-menu-vertical > ul {
+.wy-menu-vertical>ul {
   margin: 0;
   margin-bottom: 3rem;
 }
@@ -127,10 +127,6 @@ body,
   position: relative;
 }
 
-.wy-menu-vertical ul.current {
-  background: var(--color-a);
-}
-
 .wy-menu-vertical li.current>a {
   font-weight: 400 !important;
 }
@@ -142,9 +138,9 @@ body,
 }
 
 ul.current ul,
-.wy-menu-vertical li:hover,
-.wy-menu-vertical li.current {
-    background: var(--color-a) !important;
+.wy-menu-vertical li.current,
+.wy-menu-vertical li:hover {
+  background: var(--color-a) !important;
 }
 
 .wy-menu-vertical li,
@@ -179,27 +175,27 @@ ul.current ul,
   display: block !important;
 }
 
-.wy-menu-vertical li > a {
-  margin-inline-end: var(--space-vertical-menu-pad-x) !important;  
+.wy-menu-vertical li>a {
+  margin-inline-end: var(--space-vertical-menu-pad-x) !important;
 }
 
-.wy-menu-vertical .toctree-l1 > a {
-  margin-inline-start: var(--space-vertical-menu-pad-x) !important;  
+.wy-menu-vertical .toctree-l1>a {
+  margin-inline-start: var(--space-vertical-menu-pad-x) !important;
 }
 
-.wy-menu-vertical .toctree-l2 > a {
+.wy-menu-vertical .toctree-l2>a {
   margin-inline-start: calc(1.5 * var(--space-vertical-menu-pad-x)) !important;
 }
 
-.wy-menu-vertical .toctree-l3 > a {
+.wy-menu-vertical .toctree-l3>a {
   margin-inline-start: calc(2 * var(--space-vertical-menu-pad-x)) !important;
 }
 
-.wy-menu-vertical .toctree-l4 > a {
+.wy-menu-vertical .toctree-l4>a {
   margin-inline-start: calc(2.5 * var(--space-vertical-menu-pad-x)) !important;
 }
 
-.wy-menu-vertical .toctree-l5 > a {
+.wy-menu-vertical .toctree-l5>a {
   margin-inline-start: calc(3 * var(--space-vertical-menu-pad-x)) !important;
 }
 
@@ -623,7 +619,7 @@ body.wy-body-for-nav {
 .unified-header .nav-link:hover {
   color: var(--color-primary);
   box-shadow: 0 2px 0 var(--color-primary);
-  
+
 }
 
 .unified-header .nav-link:focus {
@@ -715,6 +711,7 @@ a.skip-to-content:focus {
   gap: 0.375rem;
   width: max-content;
 }
+
 .mode-choice-icon svg {
   --size: 0.75rem;
   max-width: var(--size);
@@ -848,7 +845,7 @@ dd:has(form#flyout-search-form) {
   width: 100%;
 }
 
-dd:has(form#flyout-search-form) > div {
+dd:has(form#flyout-search-form)>div {
   padding: 0.375rem 0 !important;
 }
 
