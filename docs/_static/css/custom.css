@@ -140,7 +140,7 @@ body,
 ul.current ul,
 .wy-menu-vertical li.current,
 .wy-menu-vertical li:hover {
-  background: var(--color-a) !important;
+  background: var(--color-primary-transparent) !important;
 }
 
 .wy-menu-vertical li,
@@ -796,8 +796,6 @@ a.skip-to-content:focus {
 /* Flyover menu */
 .rst-versions,
 .rst-versions.shift-up {
-  /* background-image: linear-gradient(to bottom, var(--color-a), var(--color-b)); */
-  /* background-color: var(--color-background); */
   background-color: var(--color-d);
   transition: background 50ms linear;
   width: 100% !important;

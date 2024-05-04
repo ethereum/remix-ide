@@ -36,13 +36,13 @@
   --color-body-light: #5F5F5F;
   --color-code-background: #F4F4F4;
   --color-primary: #2F6DF2;
-  --color-primary-transparent: #3B98F680;
+  --color-primary-transparent: #3B98F620;
   --color-hover: #2F6DF2B2;
 
-  --color-a: #2D61D226;
-  --color-b: #2B55B726;
-  --color-c: #B198FF26;
-  --color-d: #FF86E326;
+  --color-a: #E0E7F8;
+  --color-b: #DFE6F4;
+  --color-c: #F3F0FF;
+  --color-d: #FFEDFB;
   --color-gradient: linear-gradient(180deg, var(--color-a) 0%, var(--color-b) 37%, var(--color-c) 75%, var(--color-d) 100%);
 }
 
@@ -53,8 +53,13 @@
   --color-body-light: #CDCDCD !important;
   --color-code-background: #313131 !important;
   --color-primary: #709EFF !important;
-  --color-primary-transparent: #709EFF80;
+  --color-primary-transparent: #709EFF10;
   --color-hover: #709EFFE5;
+
+  --color-a: #131A2B;
+  --color-b: #121927;
+  --color-c: #262332;
+  --color-d: #32202E;
 }
 
 /* Remix mode theme colors */
@@ -64,8 +69,11 @@
   --color-body-light: #A2A3C8 !important;
   --color-code-background: #1A1B29 !important;
   --color-primary: #007AA6 !important;
-  --color-primary-transparent: #007AA680;
+  --color-primary-transparent: #007AA618;
   --color-hover: #007AA6E5;
 
-  --color-gradient: linear-gradient(180deg, var(--color-code-background) 0%, var(--color-code-background) 100%) !important;
+  --color-a: var(--color-code-background);
+  --color-b: var(--color-code-background);
+  --color-c: var(--color-code-background);
+  --color-d: var(--color-code-background);
 }
