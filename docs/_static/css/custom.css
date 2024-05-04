@@ -796,10 +796,13 @@ a.skip-to-content:focus {
 /* Flyover menu */
 .rst-versions,
 .rst-versions.shift-up {
+  position: sticky;
+  bottom: 0;
   background-color: var(--color-d);
   transition: background 50ms linear;
   width: 100% !important;
   max-width: var(--space-side-width);
+  overflow-y: unset;
 }
 
 .rst-versions .rst-current-version {
@@ -875,25 +878,14 @@ dd:has(form#flyout-search-form)>div {
   }
 
   .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
-    position: absolute;
     transform: translateX(-100%);
     transition: transform 200ms ease-in-out;
   }
 
   /* Menu open styles */
-  .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
-    position: absolute;
-  }
-
   .unified-wrapper.menu-open nav.wy-nav-side {
     transform: translateX(0);
     transition: transform 200ms ease-in-out;
-  }
-
-  .unified-wrapper.menu-open .rst-versions {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
   }
 
   .unified-wrapper.menu-open .backdrop {
