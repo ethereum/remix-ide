@@ -43,11 +43,6 @@ const getIconFromMode = (mode) => {
   return match.icon;
 }
 
-const closeThemeMenu = () => {
-  const themeMenu = document.querySelector("." + THEME_DROPDOWN_MENU_CLASS);
-  themeMenu.setAttribute("aria-expanded", "false")
-}
-
 const removeColorParam = () => {
   const { location, title } = document;
   const { pathname, origin, search, hash } = location;
@@ -129,7 +124,7 @@ const moveRstVersions = () => {
 
 const handleGeneralClick = (e) => {
   if (e.target.closest(".backdrop")) {
-    toggleMenu({ force: false });
+    toggleMobileMenu({ force: false });
   }
 
   if (e.target.closest("a")) {
@@ -144,14 +139,14 @@ const handleGeneralClick = (e) => {
     }
   }
 
-  if (!e.target.closest("#dropdown-button")) {
-    const dropdownButton = document.getElementById("dropdown-button");
+  if (!e.target.closest("#" + LEARN_DROPDOWN_CLASS)) {
+    const dropdownButton = document.getElementById(LEARN_DROPDOWN_CLASS);
     const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true"
     if (isExpanded) dropdownButton.setAttribute("aria-expanded", "false");
   }
 
-  if (!e.target.closest("." + THEME_BUTTON_CLASS)) {
-    closeThemeMenu();
+  if (!e.target.closest("#" + THEME_BUTTON_CLASS)) {
+    toggleMenu(THEME_BUTTON_CLASS, { expanded: false });
   }
 };
 
@@ -159,10 +154,11 @@ const handleKeyDown = (e) => {
   if (e.metaKey && e.key === "k") {
     document.querySelector("#rtd-search-form input").focus();
   } else if (e.key === "Escape") {
-    toggleMenu({ force: false });
-    toggleDropdown({ expanded: false })
-    closeThemeMenu();
+    toggleMobileMenu({ force: false });
+    toggleMenu(LEARN_DROPDOWN_CLASS, { expanded: false })
+    toggleMenu(THEME_BUTTON_CLASS, { expanded: false });
   }
+
   if (e.metaKey && e.code === "Backslash") {
     cycleColorMode();
   }
@@ -171,17 +167,90 @@ const handleKeyDown = (e) => {
 /**
  * ({ expanded: boolean }) => Optional: false closes, true opens
  */
-const toggleDropdown = (options = {}) => {
-  const dropdownButton = document.getElementById("dropdown-button");
+const toggleMenu = (id, options = {}) => {
+  const element = document.getElementById(id);
   if (typeof options.expanded === "boolean") {
-    dropdownButton.setAttribute(
-      "aria-expanded",
-      options.expanded ? "true" : "false"
-    );
+    element.setAttribute("aria-expanded", options.expanded.toString());
   } else {
-    dropdownButton.setAttribute(
+    element.setAttribute(
       "aria-expanded",
-      dropdownButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+      element.getAttribute("aria-expanded") === "true" ? "false" : "true"
     );
   }
 };
+
+const getDisplayName = (locale) => new Intl.DisplayNames([locale], { type: "language" }).of(locale)
+
+/**
+ * Select available language anchor links from flyover menu and return list of objects
+ * @returns { { label: string, href: string }[] }
+ */
+const getLanguages = () => {
+  const languageLinksSelector = ".rst-other-versions .injected dl:first-child dd a"
+  const links = document.querySelectorAll(languageLinksSelector)
+  if (!links) return [];
+  return Array.from(links).map((a) => ({ label: getDisplayName(a.textContent), href: a.href }))
+}
+
+/**
+ * Builds the language list and adds it to the DOM.
+ */
+const buildLanguageList = () => {
+  const languageMenuItemsBox = document.querySelector("." + LANGUAGE_MENU_ITEMS_CLASS);
+
+  const languages = getLanguages()
+
+  const addLanguageToDOM = ({ href, label }) => {
+    const langAnchor = document.createElement("a")
+    langAnchor.setAttribute("href", href)
+    langAnchor.innerText = label
+    languageMenuItemsBox.appendChild(langAnchor)
+  }
+  languages.forEach(addLanguageToDOM)
+}
+
+/**
+ * Handles the click event for the language button.
+ * Toggles the menu visibility.
+ * If the language menu does not have any children, it first builds the language list.
+ */
+const handleLanguageButtonClick = () => {
+  const menuHasChildren = document.querySelector("." + LANGUAGE_MENU_ITEMS_CLASS).hasChildNodes()
+  if (!menuHasChildren) buildLanguageList();
+  toggleMenu(LANGUAGE_BUTTON_CLASS);
+}
+
+/**
+ * Builds a language button with a menu for selecting different languages.
+ *
+ * @returns {HTMLElement} The wrapper element containing the language button and menu.
+ */
+const buildLanguageButton = () => {
+  // Add wrapper for button and menu
+  const languageMenuWrapper = document.createElement("div");
+  languageMenuWrapper.classList.add("language-menu-wrapper");
+
+  // Add trigger button, displaying current language
+  const languageButton = document.createElement("button");
+  languageButton.classList.add("nav-link");
+  languageButton.classList.add(LANGUAGE_BUTTON_CLASS);
+  languageButton.id = LANGUAGE_BUTTON_CLASS;
+  const { lang } = document.documentElement
+  const langName = getDisplayName(lang)
+  languageButton.innerText = langName
+  languageButton.setAttribute("key", langName);
+  languageButton.setAttribute("aria-label", langName);
+  languageButton.setAttribute("aria-haspopup", "true");
+  languageButton.setAttribute("aria-expanded", "false");
+  languageButton.onclick = handleLanguageButtonClick
+  appendSvg(CHEVRON_DOWN_PATH, languageButton, "chevron-icon");
+  languageMenuWrapper.appendChild(languageButton);
+
+  // Add menu items container
+  const languageMenuItemsBox = document.createElement("div");
+  languageMenuItemsBox.classList.add(LANGUAGE_MENU_ITEMS_CLASS);
+  languageMenuWrapper.appendChild(languageMenuItemsBox);
+
+  // Return wrapper element; languages filled on first open
+  return languageMenuWrapper
+}

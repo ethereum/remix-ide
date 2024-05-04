@@ -15,6 +15,9 @@ const NE_ARROW_PATH = "_static/img/northeast-arrow.svg";
 const COLOR_TOGGLE_ICON_CLASS = "color-toggle-icon";
 const MOBILE_MENU_ICON_CLASS = "mobile-menu-toggle-icon";
 const REMIX_LOGO_CLASS = "remix-logo";
+const LEARN_DROPDOWN_CLASS = "dropdown-button"
+const LANGUAGE_BUTTON_CLASS = "language-button"
+const LANGUAGE_MENU_ITEMS_CLASS = "language-menu-items"
 const THEME_BUTTON_WRAPPER_CLASS = "theme-button-wrapper";
 const THEME_BUTTON_CLASS = "theme-button";
 const THEME_DROPDOWN_MENU_CLASS = "theme-dropdown-menu";
@@ -50,5 +53,6 @@ const NAV_LINKS = [
 ]
 
 const MOBILE_MENU_TOGGLE_CLASS = "shift";
+const FLYOVER_MENU_TOGGLE_CLASS = "shift-up";
 const WRAPPER_CLASS = "unified-wrapper";
 

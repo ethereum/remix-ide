@@ -173,14 +173,14 @@ const buildHeader = () => {
       // Return button, styled the same as the other links, with a chevron icon
       const button = document.createElement("button");
       button.classList.add("nav-link");
-      button.classList.add("dropdown-button");
-      button.id = "dropdown-button";
+      button.classList.add(LEARN_DROPDOWN_CLASS);
+      button.id = LEARN_DROPDOWN_CLASS;
       button.innerText = name;
       button.setAttribute("key", name);
       button.setAttribute("aria-label", name);
       button.setAttribute("aria-haspopup", "true");
       button.setAttribute("aria-expanded", "false");
-      button.onclick = toggleDropdown;
+      button.onclick = () => toggleMenu(LEARN_DROPDOWN_CLASS);
       appendSvg(CHEVRON_DOWN_PATH, button, "chevron-icon");
 
       const dropdownItemsBox = document.createElement("div");
@@ -188,17 +188,17 @@ const buildHeader = () => {
       dropdown.appendChild(button);
       dropdown.appendChild(dropdownItemsBox);
 
-      const dropdownItems = items.map(({ name, href }) => {
+      const dropdownItems = items.map(({ name: itemName, href }) => {
         const item = document.createElement("a");
         item.classList.add("dropdown-item");
-        item.setAttribute("key", name);
+        item.setAttribute("key", itemName);
         item.setAttribute("href", href);
-        item.setAttribute("aria-label", name);
+        item.setAttribute("aria-label", itemName);
         if (href.startsWith("http")) {
           item.setAttribute("target", "_blank");
           item.setAttribute("rel", "noopener noreferrer");
         }
-        item.innerText = name;
+        item.innerText = itemName;
         appendSvg(NE_ARROW_PATH, item, "external-link-icon")
         return item;
       });
@@ -208,10 +208,13 @@ const buildHeader = () => {
   });
   linkElements.forEach((link) => navBar.appendChild(link));
 
-  // Flex wrapper for color mode and mobile menu buttons
+  // Flex wrapper for language, color mode and mobile menu buttons
   const navButtonContainer = document.createElement("div");
   navButtonContainer.classList.add("nav-button-container");
   innerHeader.appendChild(navButtonContainer);
+
+  // Build language menu component and append to navButtonContainer
+  navButtonContainer.appendChild(buildLanguageButton());
 
   // Add theme dropdown button
   const themeButtonWrapper = document.createElement("div");
@@ -221,14 +224,16 @@ const buildHeader = () => {
   // Create the theme dropdown button
   const themeDropdownButton = document.createElement('button');
   themeDropdownButton.classList.add(THEME_BUTTON_CLASS);
+  themeDropdownButton.id = THEME_BUTTON_CLASS
   themeDropdownButton.setAttribute("type", "button");
   themeDropdownButton.setAttribute("aria-label", "Theme menu button");
   appendSvg(getIconFromMode(mode), themeDropdownButton, COLOR_TOGGLE_ICON_CLASS)
   themeButtonWrapper.appendChild(themeDropdownButton);
-  
+
   // Create the dropdown menu
   const dropdownMenu = document.createElement('div');
   dropdownMenu.classList.add(THEME_DROPDOWN_MENU_CLASS); // .theme-dropdown-menu
+  dropdownMenu.id = THEME_DROPDOWN_MENU_CLASS
   dropdownMenu.setAttribute("aria-expanded", "false");
   dropdownMenu.setAttribute("aria-label", "Toggle theme menu");
 
@@ -246,7 +251,7 @@ const buildHeader = () => {
 
     dropdownItem.onclick = () => {
       setColorMode(value)
-      closeThemeMenu()
+      toggleMenu(THEME_DROPDOWN_MENU_CLASS, { expanded: false })
     };
     dropdownItem.setAttribute('key', value);
 
@@ -278,7 +283,7 @@ const buildHeader = () => {
  * @param {Object} options - The options object.
  * @param {boolean} options.force - forces the menu to open (true) or close (false).
  */
-const toggleMenu = (options = {}) => {
+const toggleMobileMenu = (options = {}) => {
   const handleClassToggle = ({ classList }, className) => {
     if (typeof options.force !== "undefined") {
       classList.toggle(className, options.force);
@@ -300,6 +305,7 @@ const toggleMenu = (options = {}) => {
  */
 const updateFlyoverMenu = () => {
   const rtdVersion = document.querySelector(".rst-current-version");
+  if (!rtdVersion) return
   // Assign current label and caret elements to variables
   const rtdLabel = rtdVersion.querySelector(".fa.fa-book");
   rtdLabel.textContent = "RTD"; // Update label to RTD
