@@ -505,6 +505,8 @@ body.wy-body-for-nav {
 /* Site wrapper, and two children: header and rest */
 .unified-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 80rem;
   margin-inline: auto;
 }
@@ -808,7 +810,7 @@ a.skip-to-content:focus {
 .rst-versions .rst-current-version {
   color: var(--color-primary);
   border-top: 1px solid var(--color-primary);
-  background: unset; /* var(--color-d); */
+  background: unset;
   padding: 1rem;
 }
 
@@ -869,9 +871,6 @@ dd:has(form#flyout-search-form) > div {
     padding-inline: 1rem;
   }
 
-  /* .unified-header .nav-bar .nav-button-container {
-    display: flex;
-  } */
   .unified-header .mobile-menu-button {
     display: block;
   }
@@ -881,10 +880,6 @@ dd:has(form#flyout-search-form) > div {
   }
 
   .unified-wrapper .wy-grid-for-nav nav.wy-nav-side {
-    position: absolute;
-    inset-inline-start: 0;
-    width: var(--space-side-width);
-    overflow-y: scroll;
     transform: translateX(-100%);
     transition: transform 200ms ease-in-out;
   }
