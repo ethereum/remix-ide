@@ -210,13 +210,18 @@ const buildLanguageList = () => {
 }
 
 /**
- * Handles the click event for the language button.
- * Toggles the menu visibility.
- * If the language menu does not have any children, it first builds the language list.
+ * If the language menu does not have any children, it build the language list.
  */
-const handleLanguageButtonClick = () => {
+const checkLanguageMenu = () => {
   const menuHasChildren = document.querySelector("." + LANGUAGE_MENU_ITEMS_CLASS).hasChildNodes()
   if (!menuHasChildren) buildLanguageList();
+}
+
+/**
+ * Handles the click event for the language button.
+ */
+const handleLanguageButtonClick = () => {
+  checkLanguageMenu();
   toggleMenu(LANGUAGE_BUTTON_CLASS);
 }
 
