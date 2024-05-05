@@ -960,7 +960,7 @@ dd:has(form#flyout-search-form)>div {
   }
 
   a.skip-to-content {
-    display: none;
+    display: none !important;
   }
 }
 
