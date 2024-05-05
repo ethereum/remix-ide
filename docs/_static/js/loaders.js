@@ -273,7 +273,7 @@ const buildHeader = () => {
   menuButton.setAttribute("type", "button");
   menuButton.setAttribute("aria-label", "Toggle menu");
   menuButton.setAttribute("key", "menu button");
-  menuButton.addEventListener("click", toggleMenu);
+  menuButton.addEventListener("click", toggleMobileMenu);
   appendSvg(HAMBURGER_PATH, menuButton, MOBILE_MENU_ICON_CLASS);
   navButtonContainer.appendChild(menuButton);
 }
