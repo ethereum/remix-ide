@@ -597,6 +597,7 @@ body.wy-body-for-nav {
   justify-content: flex-end;
   height: 100%;
   gap: 1.75rem;
+  margin-inline-start: auto;
 }
 
 .unified-header .nav-bar *,
@@ -609,7 +610,7 @@ body.wy-body-for-nav {
   justify-content: center;
   gap: 0.5rem;
   display: flex;
-  margin-inline-start: 1rem;
+  margin-inline-start: 2rem;
   height: 100%;
 }
 
@@ -640,6 +641,7 @@ body.wy-body-for-nav {
   font-weight: 400;
   color: var(--color-body);
   border-radius: 0px;
+  text-align: center;
 }
 
 .unified-header .nav-link.active {
@@ -706,8 +708,9 @@ a.skip-to-content {
   transition: opacity 200ms ease-in-out;
   padding: 2px 4px;
   font-size: 14px;
-  margin-inline-end: auto;
-  margin-inline-start: 2rem;
+  margin-inline: auto;
+  margin-inline: 1rem;
+  text-align: center;
   color: var(--color-primary);
 }
 
@@ -728,7 +731,6 @@ a.skip-to-content:focus {
 }
 
 #language-button {
-  margin-inline-start: 1rem;
   margin-inline-end: 1.5rem;
 }
 
@@ -923,6 +925,11 @@ dd:has(form#flyout-search-form)>div {
 
   .unified-header .inner-header {
     padding-inline: 1rem;
+  }
+
+  #language-button {
+    margin-inline-start: 1rem;
+    margin-inline-end: 0rem;
   }
 
   .unified-header .mobile-menu-button {
