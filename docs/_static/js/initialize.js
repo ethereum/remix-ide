@@ -14,7 +14,7 @@ const onDOMContentLoaded = () => {
   buildHeader();
   addFooterNote();
   updateFooterButtonIcons();
-  toggleMobileMenu({ force: false });
+  toggleMobileMenu({ expanded: false });
   updateFlyoverMenu();
 }
 

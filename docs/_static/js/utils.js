@@ -124,7 +124,7 @@ const moveRstVersions = () => {
 
 const handleGeneralClick = (e) => {
   if (e.target.closest(".backdrop")) {
-    toggleMobileMenu({ force: false });
+    toggleMobileMenu({ expanded: false });
   }
 
   if (e.target.closest("a")) {
@@ -156,7 +156,7 @@ const handleKeyDown = (e) => {
   if (e.metaKey && e.key === "k") {
     document.querySelector("#rtd-search-form input").focus();
   } else if (e.key === "Escape") {
-    toggleMobileMenu({ force: false });
+    toggleMobileMenu({ expanded: false });
     toggleMenu(LEARN_DROPDOWN_CLASS, { expanded: false })
     toggleMenu(LANGUAGE_BUTTON_CLASS, { expanded: false });
     toggleMenu(THEME_DROPDOWN_MENU_CLASS, { expanded: false });

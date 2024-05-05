@@ -281,12 +281,12 @@ const buildHeader = () => {
 /**
  * Toggles the mobile menu.
  * @param {Object} options - The options object.
- * @param {boolean} options.force - forces the menu to open (true) or close (false).
+ * @param {boolean} options.expanded - forces the menu to open (true) or close (false).
  */
 const toggleMobileMenu = (options = {}) => {
   const handleClassToggle = ({ classList }, className) => {
-    if (typeof options.force !== "undefined") {
-      classList.toggle(className, options.force);
+    if (typeof options.expanded !== "undefined") {
+      classList.toggle(className, options.expanded);
     } else {
       classList.toggle(className);
     }
