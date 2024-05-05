@@ -140,13 +140,15 @@ const handleGeneralClick = (e) => {
   }
 
   if (!e.target.closest("#" + LEARN_DROPDOWN_CLASS)) {
-    const dropdownButton = document.getElementById(LEARN_DROPDOWN_CLASS);
-    const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true"
-    if (isExpanded) dropdownButton.setAttribute("aria-expanded", "false");
+    toggleMenu(LEARN_DROPDOWN_CLASS, { expanded: false })
+  }
+
+  if (!e.target.closest("#" + LANGUAGE_BUTTON_CLASS)) {
+    toggleMenu(LANGUAGE_BUTTON_CLASS, { expanded: false });
   }
 
   if (!e.target.closest("#" + THEME_BUTTON_CLASS)) {
-    toggleMenu(THEME_BUTTON_CLASS, { expanded: false });
+    toggleMenu(THEME_DROPDOWN_MENU_CLASS, { expanded: false });
   }
 };
 
@@ -156,7 +158,8 @@ const handleKeyDown = (e) => {
   } else if (e.key === "Escape") {
     toggleMobileMenu({ force: false });
     toggleMenu(LEARN_DROPDOWN_CLASS, { expanded: false })
-    toggleMenu(THEME_BUTTON_CLASS, { expanded: false });
+    toggleMenu(LANGUAGE_BUTTON_CLASS, { expanded: false });
+    toggleMenu(THEME_DROPDOWN_MENU_CLASS, { expanded: false });
   }
 
   if (e.metaKey && e.code === "Backslash") {

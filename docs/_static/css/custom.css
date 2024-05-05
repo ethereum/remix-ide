@@ -396,6 +396,8 @@ button.color-toggle {
 
 .theme-button-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
@@ -468,7 +470,7 @@ button.color-toggle {
 
 .theme-dropdown-menu {
   position: absolute;
-  inset-block-start: 2.75rem;
+  inset-block-start: 100%;
   inset-inline-end: 0;
   border-radius: 0.5rem;
   border: 1px solid var(--color-primary) !important;
@@ -608,6 +610,7 @@ body.wy-body-for-nav {
   gap: 0.5rem;
   display: flex;
   margin-inline-start: 1rem;
+  height: 100%;
 }
 
 .mobile-menu-button {
@@ -692,7 +695,6 @@ body.wy-body-for-nav {
   width: 100% !important;
 }
 
-
 /* Skip to content a11y button */
 a.skip-to-content:visited,
 a.skip-to-content:not(:visited),
@@ -725,11 +727,15 @@ a.skip-to-content:focus {
   font-size: var(--size-body-link);
 }
 
+#language-button {
+  margin-inline-start: 1rem;
+  margin-inline-end: 1.5rem;
+}
+
 .language-menu-wrapper .language-menu-items,
 .nav-dropdown .dropdown-items {
   position: absolute;
   inset-inline-end: 0;
-  inset-block-start: 4rem;
   border-radius: 0.5rem;
   border: 1px solid var(--color-primary) !important;
   padding: 1.5rem;
@@ -739,6 +745,19 @@ a.skip-to-content:focus {
   flex-direction: column;
   gap: 0.375rem;
   width: max-content;
+}
+
+.language-menu-wrapper .language-menu-items {
+  inset-block-start: 100% !important;
+}
+
+.language-menu-wrapper .language-menu-items a {
+  padding-block: 0.375rem;
+  line-height: 125%;
+  color: var(--color-body);
+}
+.language-menu-wrapper .language-menu-items a:hover {
+  color: var(--color-hover);
 }
 
 .mode-choice-icon svg {
@@ -896,6 +915,10 @@ dd:has(form#flyout-search-form)>div {
   /* Menu closed styles */
   .unified-header .nav-link {
     display: none;
+  }
+
+  #language-button {
+    display: flex;
   }
 
   .unified-header .inner-header {
