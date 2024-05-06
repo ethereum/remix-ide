@@ -758,7 +758,12 @@ a.skip-to-content:focus {
   line-height: 125%;
   color: var(--color-body);
 }
-.language-menu-wrapper .language-menu-items a:hover {
+
+.language-menu-wrapper .language-menu-items a.active {
+  color: var(--color-primary);
+}
+
+  .language-menu-wrapper .language-menu-items a:hover {
   color: var(--color-hover);
 }
 

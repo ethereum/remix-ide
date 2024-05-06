@@ -207,6 +207,8 @@ const buildLanguageList = () => {
     const langAnchor = document.createElement("a")
     langAnchor.setAttribute("href", href)
     langAnchor.innerText = label
+    const isActive = label === getDisplayName(document.documentElement.lang)
+    if (isActive) langAnchor.classList.add("active")
     languageMenuItemsBox.appendChild(langAnchor)
   }
   languages.forEach(addLanguageToDOM)
@@ -243,11 +245,8 @@ const buildLanguageButton = () => {
   languageButton.classList.add("nav-link");
   languageButton.classList.add(LANGUAGE_BUTTON_CLASS);
   languageButton.id = LANGUAGE_BUTTON_CLASS;
-  const { lang } = document.documentElement
-  const langName = getDisplayName(lang)
-  languageButton.innerText = langName
-  languageButton.setAttribute("key", langName);
-  languageButton.setAttribute("aria-label", langName);
+  languageButton.innerText = "Language"
+  languageButton.setAttribute("aria-label", "Language menu button");
   languageButton.setAttribute("aria-haspopup", "true");
   languageButton.setAttribute("aria-expanded", "false");
   languageButton.onclick = handleLanguageButtonClick
