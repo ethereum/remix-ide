@@ -134,6 +134,7 @@ const handleGeneralClick = (e) => {
       const url = new URL(href);
       const params = new URLSearchParams(url.search);
       params.set("color", localStorage.getItem(LS_COLOR_SCHEME));
+      params.set("lang", document.documentElement.lang);
       url.search = params.toString();
       target.setAttribute("href", url.toString());
     }
