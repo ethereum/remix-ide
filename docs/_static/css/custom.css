@@ -596,7 +596,7 @@ body.wy-body-for-nav {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
-  gap: 1.75rem;
+  gap: 1rem;
   margin-inline-start: auto;
 }
 
@@ -608,9 +608,9 @@ body.wy-body-for-nav {
 .unified-header .nav-button-container {
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   display: flex;
-  margin-inline-start: 2rem;
+  margin-inline-start: 1rem;
   height: 100%;
 }
 
@@ -701,15 +701,14 @@ body.wy-body-for-nav {
 a.skip-to-content:visited,
 a.skip-to-content:not(:visited),
 a.skip-to-content {
-  display: block;
+  position: absolute;
   pointer-events: none;
   width: fit-content;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
-  padding: 2px 4px;
+  padding: 4px;
+  background: var(--color-background);
   font-size: 14px;
-  margin-inline: auto;
-  margin-inline: 1rem;
   text-align: center;
   color: var(--color-primary);
 }
@@ -728,10 +727,6 @@ a.skip-to-content:focus {
   position: relative;
   height: 100%;
   font-size: var(--size-body-link);
-}
-
-#language-button {
-  margin-inline-end: 1.5rem;
 }
 
 .language-menu-wrapper .language-menu-items,
@@ -768,7 +763,7 @@ a.skip-to-content:focus {
 }
 
 .mode-choice-icon svg {
-  --size: 1rem;
+  --size: 0.75rem;
   max-width: var(--size);
   max-height: var(--size);
 }
