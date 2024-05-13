@@ -768,7 +768,7 @@ a.skip-to-content:focus {
 }
 
 .mode-choice-icon svg {
-  --size: 0.75rem;
+  --size: 1rem;
   max-width: var(--size);
   max-height: var(--size);
 }

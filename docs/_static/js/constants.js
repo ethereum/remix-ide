@@ -1,8 +1,8 @@
 // Color mode constants
 const COLOR_MODES = [
   { name: "Light", icon: "_static/img/sun.svg", value: "light" },
-  { name: "Classic", icon: "_static/img/classic.svg", value: "classic" },
-  { name: "Dark", icon: "_static/img/moon.svg", value: "dark" },
+  { name: "Dark", icon: "_static/img/sunset.svg", value: "dark" },
+  { name: "Black", icon: "_static/img/moon.svg", value: "black" },
 ]
 
 const COLOR_CHOICES = COLOR_MODES.map(({ value }) => value);

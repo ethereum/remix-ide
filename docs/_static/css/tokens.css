@@ -2,7 +2,7 @@
  * Theme tokens
  */
 
-/* Light mode theme colors */
+/* Base / light mode theme colors */
 :root {
   /* Typography */
   --size-body-xs: 0.75rem;
@@ -48,22 +48,6 @@
 
 /* Dark mode theme colors */
 :root[style*=dark] {
-  --color-background: #0E0E0E !important;
-  --color-body: #F8F8F8 !important;
-  --color-body-light: #CDCDCD !important;
-  --color-code-background: #313131 !important;
-  --color-primary: #709EFF !important;
-  --color-primary-transparent: #709EFF10;
-  --color-hover: #709EFFE5;
-
-  --color-a: #131A2B;
-  --color-b: #121927;
-  --color-c: #262332;
-  --color-d: #32202E;
-}
-
-/* Remix mode theme colors */
-:root[style*=classic] {
   --color-background: #2A2C3F !important;
   --color-body: #F8F8F8 !important;
   --color-body-light: #A2A3C8 !important;
@@ -76,4 +60,20 @@
   --color-b: var(--color-code-background);
   --color-c: var(--color-code-background);
   --color-d: var(--color-code-background);
+}
+
+/* Black mode theme colors */
+:root[style*=black] {
+  --color-background: #0E0E0E !important;
+  --color-body: #F8F8F8 !important;
+  --color-body-light: #CDCDCD !important;
+  --color-code-background: #313131 !important;
+  --color-primary: #709EFF !important;
+  --color-primary-transparent: #709EFF10;
+  --color-hover: #709EFFE5;
+
+  --color-a: #131A2B;
+  --color-b: #121927;
+  --color-c: #262332;
+  --color-d: #32202E;
 }
