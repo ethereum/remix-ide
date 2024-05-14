@@ -768,6 +768,10 @@ a.skip-to-content:focus {
   max-height: var(--size);
 }
 
+button#language-button {
+  text-transform: uppercase;
+}
+
 .language-menu-wrapper:has(button.language-button[aria-expanded=false]) .language-menu-items,
 .nav-dropdown:has(button.dropdown-button[aria-expanded=false]) .dropdown-items {
   display: none;
@@ -781,11 +785,14 @@ a.skip-to-content:focus {
   padding-block: 0.375rem;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
 }
 
 .nav-dropdown .dropdown-items a:hover {
   color: var(--color-primary);
+}
+
+.external-link-icon {
+  margin-inline-start: 0.25rem;
 }
 
 .language-menu-wrapper .chevron-icon,
@@ -918,16 +925,13 @@ dd:has(form#flyout-search-form)>div {
   .unified-header .nav-link {
     display: none;
   }
-
-  #language-button {
-    display: flex;
-  }
-
+  
   .unified-header .inner-header {
     padding-inline: 1rem;
   }
-
+  
   #language-button {
+    display: flex;
     margin-inline-start: 1rem;
     margin-inline-end: 0rem;
   }

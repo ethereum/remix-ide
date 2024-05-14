@@ -246,7 +246,7 @@ const buildLanguageButton = () => {
   languageButton.classList.add("nav-link");
   languageButton.classList.add(LANGUAGE_BUTTON_CLASS);
   languageButton.id = LANGUAGE_BUTTON_CLASS;
-  languageButton.innerText = "Language"
+  languageButton.innerText = document.documentElement.lang;
   languageButton.setAttribute("aria-label", "Language menu button");
   languageButton.setAttribute("aria-haspopup", "true");
   languageButton.setAttribute("aria-expanded", "false");

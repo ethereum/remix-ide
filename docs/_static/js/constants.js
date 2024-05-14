@@ -40,7 +40,7 @@ const ARTICLES_URL = "https://medium.com/remix-ide";
  * type NavItem = { name: string } & ({ href: string } | { items: NavItem[] })
  */
 const NAV_LINKS = [
-  { name: "Remix Project", href: REMIX_HOME_URL },
+  { name: "About", href: REMIX_HOME_URL },
   { name: "Documentation", href: REMIX_DOCS_URL },
   { name: "IDE", href: REMIX_IDE_URL },
   {

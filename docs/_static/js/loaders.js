@@ -160,6 +160,7 @@ const buildHeader = () => {
       if (href.startsWith("http") && href !== REMIX_HOME_URL) {
         link.setAttribute("target", "_blank");
         link.setAttribute("rel", "noopener noreferrer");
+        appendSvg(NE_ARROW_PATH, link, "external-link-icon")
       }
 
       return link;
