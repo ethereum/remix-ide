@@ -15,7 +15,7 @@ const onDOMContentLoaded = () => {
   addFooterNote();
   updateFooterButtonIcons();
   toggleMobileMenu({ expanded: false });
-  updateFlyoverMenu();
+  setTimeout(updateFlyoverMenu, 100);
 }
 
 function main() {

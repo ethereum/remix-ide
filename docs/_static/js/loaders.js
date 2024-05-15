@@ -304,20 +304,16 @@ const toggleMobileMenu = (options = {}) => {
 /**
  * Updates the flyover menu by modifying the DOM elements.
  */
-const updateFlyoverMenu = () => {
-  const rtdVersion = document.querySelector(".rst-current-version");
-  if (!rtdVersion) return
-  // Assign current label and caret elements to variables
-  const rtdLabel = rtdVersion.querySelector(".fa.fa-book");
-  rtdLabel.textContent = "RTD"; // Update label to RTD
-  const caretDown = rtdVersion.querySelector(".fa.fa-caret-down");
-  // Clear inner HTML of rtdVersion
-  rtdVersion.innerHTML = "";
-  // Append rtdLabel and caret to rtdVersion
-  rtdVersion.appendChild(rtdLabel);
-  rtdVersion.appendChild(caretDown);
-  // Append new span with "Latest" label
-  const latestSpan = document.createElement("span");
-  latestSpan.textContent = "Latest";
-  rtdVersion.appendChild(latestSpan);
+const updateFlyoverMenu = () => {  
+  const rtdCurrentVersion = document.querySelector(".rst-current-version");
+  
+  const insideMenu = document.querySelector(".rst-other-versions .injected")
+  const dlItems = insideMenu.getElementsByTagName("dl") || []
+  Array.from(dlItems).forEach(item => item.classList.add("hidden"))
+  const hr = insideMenu.getElementsByTagName("hr") || []
+  Array.from(hr).forEach(item => item.classList.add("hidden"))
+  
+  const flyover = document.querySelector(".rst-versions")
+  rtdCurrentVersion && rtdCurrentVersion.classList.add("hidden")
+  flyover.classList.add(FLYOVER_MENU_TOGGLE_CLASS)
 }
