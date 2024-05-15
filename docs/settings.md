@@ -80,4 +80,4 @@ Choose themes here.  The Dark & Light themes are the themes that the Remix team 
 ![](images/a-settings-themes.png)
 
 ### Language
-The Remix user interface is available in a number of languages.  If you don't see your prefered language,  please join our [translation platform](https://crowdin.com/project/remix-ui).  Similarly, if you don't see this documentation in your language, please help us out on our platform for [translating documentation](https://crowdin.com/project/remix-translation).
+The Remix user interface is available in a number of languages.  If you don't see your preferred language,  please join our [translation platform](https://crowdin.com/project/remix-ui).  Similarly, if you don't see this documentation in your language, please help us out on our platform for [translating documentation](https://crowdin.com/project/remix-translation).
