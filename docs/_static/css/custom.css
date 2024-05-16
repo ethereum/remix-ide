@@ -887,6 +887,14 @@ span.fa.fa-book {
   color: var(--color-primary);
 }
 
+.rst-versions .rst-current-version .fa.fa-book::before {
+  margin-inline-end: 0.375rem;
+}
+
+.rst-versions .rst-current-version .fa.fa-caret-down::before {
+  margin-inline-end: 0.5625rem;
+}
+
 /**
  * MOBILE
  */

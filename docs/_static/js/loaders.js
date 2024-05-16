@@ -304,13 +304,35 @@ const toggleMobileMenu = (options = {}) => {
 /**
  * Updates the flyover menu by modifying the DOM elements.
  */
-const updateFlyoverMenu = () => {  
+const updateFlyoverMenu = () => { 
   const rtdCurrentVersion = document.querySelector(".rst-current-version");
-  
-  const insideMenu = document.querySelector(".rst-other-versions .injected")
-  const dlItems = insideMenu.getElementsByTagName("dl") || []
+  if (!rtdCurrentVersion) return
+
+  // Assign current label and caret elements to variables
+  // Acts as fallback if injected not yet available for removal
+  const rtdLabel = rtdCurrentVersion.querySelector(".fa.fa-book");
+  rtdLabel.textContent = "RTD"; // Update label to RTD
+  const caretDown = rtdCurrentVersion.querySelector(".fa.fa-caret-down");
+  // Clear inner HTML of rtdVersion
+  rtdCurrentVersion.innerHTML = " ";
+  // Append rtdLabel and caret to rtdVersion
+  rtdCurrentVersion.appendChild(rtdLabel);
+  rtdCurrentVersion.appendChild(caretDown);
+  // Append new span with "Latest" label
+  const latestSpan = document.createElement("span");
+  latestSpan.textContent = "Latest";
+  rtdCurrentVersion.appendChild(latestSpan);
+}
+
+/**
+ * Force opens the menu, then hides everything except the RTD watermark links
+ */
+const hideFlyoverMenu = () => {
+  const rtdCurrentVersion = document.querySelector(".rst-current-version");
+  const injected = document.querySelector(".rst-other-versions .injected")
+  const dlItems = injected.getElementsByTagName("dl") || []
   Array.from(dlItems).forEach(item => item.classList.add("hidden"))
-  const hr = insideMenu.getElementsByTagName("hr") || []
+  const hr = injected.getElementsByTagName("hr") || []
   Array.from(hr).forEach(item => item.classList.add("hidden"))
   
   const flyover = document.querySelector(".rst-versions")
