@@ -328,14 +328,22 @@ const updateFlyoverMenu = () => {
  * Force opens the menu, then hides everything except the RTD watermark links
  */
 const hideFlyoverMenu = () => {
-  const rtdCurrentVersion = document.querySelector(".rst-current-version");
-  const injected = document.querySelector(".rst-other-versions .injected")
-  const dlItems = injected.getElementsByTagName("dl") || []
-  Array.from(dlItems).forEach(item => item.classList.add("hidden"))
-  const hr = injected.getElementsByTagName("hr") || []
-  Array.from(hr).forEach(item => item.classList.add("hidden"))
-  
-  const flyover = document.querySelector(".rst-versions")
-  rtdCurrentVersion && rtdCurrentVersion.classList.add("hidden")
-  flyover.classList.add(FLYOVER_MENU_TOGGLE_CLASS)
+  const intervalId = setInterval(() => {
+    const rtdCurrentVersion = document.querySelector(".rst-current-version");
+    const injected = document.querySelector(".rst-other-versions .injected");
+
+    if (injected) {
+      const dlItems = injected.getElementsByTagName("dl") || [];
+      Array.from(dlItems).forEach(item => item.classList.add("hidden"));
+      const hr = injected.getElementsByTagName("hr") || [];
+      Array.from(hr).forEach(item => item.classList.add("hidden"));
+
+      const flyover = document.querySelector(".rst-versions");
+      rtdCurrentVersion && rtdCurrentVersion.classList.add("hidden");
+      flyover.classList.add(FLYOVER_MENU_TOGGLE_CLASS);
+
+      // Clear the interval once the .injected element is available
+      clearInterval(intervalId);
+    }
+  }, 100); // Check every 100 milliseconds
 }
