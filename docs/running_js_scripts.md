@@ -1,18 +1,21 @@
 Running Scripts
 ===============
 
-_JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._
-
-Remix IDE supports execution of JS scripts.
+Remix IDE supports execution of JS & TS scripts.
 
 ## Write & Run a script
 
-Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:
+Create a file with `.js` or `.ts` extension and put your logic inside it. To run a script either:
 
-1. Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal
-2. Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor.
+- Click the green play button in the upper left of the Editor.
 
-Here is a sample script:
+- Right click on the script name in the `File Explorers` and click on the **Run** option. 
+
+- `Ctrl+Shift+S` when the script is displayed in the editor.
+
+- Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal
+
+Here is a sample .js script:
 
 ```
 function test() {
@@ -30,7 +33,7 @@ Running it using one of options mentioned above will show result in Remix termin
 
 ![](images/a-running-scripts-run.png)
 
-## Why run JavaScript Scripts in Remix?
+## Why run scripts in Remix?
 * To mimic how the front-end of your dapp will use web3.js or ethers.js
 * To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI.
 * To run some tests on a previous deployed contract.
@@ -50,14 +53,14 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
 ## JS Scripts in the File Explorers
 In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**.
 
-## Compile a contract and run a script on the fly
-It is often convenient when drafting a contract to run a script just after the compilation succeeded.
+## Compile a contract and run a script in one click
+When drafting a contract, it can be helpful to run a script just after the compilation succeeds.
 
-That way one can quickly deploy and call several contracts in order to set them in a desired state for testing purpose.
+With this technique, one can write some code then quickly deploy and set the state of the contracts.
 
-Also if the script contains Mocha tests, those will also be run.
+The script can contains Mocha tests to be run.
 
-In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:
+In order to connect a contract with a script, add the **NatSpec** tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:
 
 ```code
   /**
@@ -67,6 +70,8 @@ In order to do so, add the NatSpec tag `@custom:dev-run-script` to the contract 
    */
   contract ContractName {}
 ```
+
+When you are ready to deploy the code for real, remove the NatSpec comment `@custom:dev-run-script`.
 
 **ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling.
 
