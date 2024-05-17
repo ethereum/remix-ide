@@ -5,15 +5,15 @@ Click the
 ![](images/a-user-testing-icon.png) (double check)
  icon from icon bar to move to the `Solidity Unit Testing` plugin. 
  
- If you haven't used this plugin before and are not seeing `double check` icon, you have to activate it from Remix plugin manager.
+ If you haven't used this plugin before and are not seeing the `double check` icon, you have to activate it from Remix plugin manager.
  
 Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) icon and activate `Solidity Unit Testing` plugin.
 
 ![](images/a-unit-testing-from-pm.png)
 
-Now `double check` icon will appear on the left side icon bar. Clicking on icon will load the plugin in the side panel.
+Now the `double check` icon will appear on the left side icon bar. Clicking on the icon will load the plugin in the side panel.
 
-<i>Alternatively, just select `Solidity` environment from Remix IDE `Home` tab. This will activate `Solidity Unit Testing` plugin along with `Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static Analysis` plugins.</i>
+<i>Alternatively, select `Solidity` environment from Remix IDE `Home` tab. This will activate `Solidity Unit Testing` plugin along with `Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static Analysis` plugins.</i>
 
 After successful loading, plugin looks like this:
 
@@ -21,7 +21,7 @@ After successful loading, plugin looks like this:
 
 Test directory
 ----------
-Plugin asks you to provide a directory which will be your workspace only for this plugin. To select directory, as soon as you add `/` to the path, it shows the possible options. 
+Plugin asks you to provide a directory which will be your unit testing workspace (not to be confused with a Workspace in the File Explorer). To select directory, as soon as you add `/` to the path, it shows the possible options. [Rob Edit]
 
 ![](images/a-unit-testing-test-directory.png)
 
@@ -31,13 +31,13 @@ Default test directory is `browser/tests`.
 
 Generate
 ----------
-Select a solidity file which you want to test and click on the button `Generate`. It will generate a test file dedicated to selected file **in the test directory**. 
+Select the Solidity file which you want to test and click on the `Generate` button. In the `test` directory, a test file will be created for your selected file. 
 
-If no file is selected, it will still create a file with generic name as `newFile_test.sol`.
+If no file is selected, a generic test file named, `newFile_test.sol` will be created.
 
-This file contains sufficient information to give better understanding about developing tests for a contract.
+This file contains information about developing tests for a contract.
 
-Generic file looks as:
+Below is an example of a generic test file:
 
 ```
 pragma solidity >=0.4.22 <0.8.0;
@@ -87,9 +87,9 @@ Write Tests
 -----------
 Write sufficient unit tests to ensure that your contract works as expected under different scenarios. 
 
-Remix injects a built-in `assert` library which can be used for testing. You can visit the library documentation [here](./assert_library).
+Remix injects a built-in `assert` library for testing. You can visit the library documentation [here](./assert_library).
 
-Apart from this, Remix allows usage of some special functions in the test file to make testing more structural. They are as:
+Additionally, Remix allows the usage of special functions in the test file to make testing more structural. They are:
 
 * `beforeEach()` - Runs before each test
 * `beforeAll()` - Runs before all tests
@@ -100,7 +100,7 @@ To get started, see [this simple example](./unittesting_examples.html#simple-exa
 
 Run
 -----
-Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be shown as below:
+Once you are done with writing tests, select the file(s) and click on `Run` to execute the tests. The execution will run in a separate environment. After completing the execution of one file, a test summary will be shown:
 
 ![](images/a-unit-testing-run-result.png)
 
