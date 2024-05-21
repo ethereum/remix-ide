@@ -63,9 +63,7 @@ Click the `Deploy` button
 
 You'll see the deployed instance (AKA the udapp).
 
-![](images/a-debug2-udapp1a.png)
-
-Then open it up (by clicking the caret).
+Open it up (by clicking the caret).
 
 ![](images/a-debug3-udapp2.png)
 

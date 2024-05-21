@@ -4,28 +4,42 @@ Deploy & Run
 ![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**.
 
 The three main actions of the Deploy & Run module are:
-1. Deploying a contract
-2. Accessing an onchain contract (a previously deployed contract)
-3. Interacting with the functions of a deployed contract
+1. **Deploying** a contract
+2. **Accessing** an onchain contract
+3. **Interacting** with the functions of a deployed contract
+
+This documentation page will cover **Deploying** and **Accessing**.  Interacting will be covered in [Deploy & Run part 2](udapp.html).
+
+![](images/a-deploy-run1.png)
 
 To deploy a contract, you need to have a contract compiled.  To check that there is a compiled contract, look in the <b>CONTRACT</b> select box (which is under the VALUE input field). 
 
-![](images/a-contract.png)
+If nothing is there, you'll need to compile a contract. If you do not see your desired contract in the CONTRACT select box's list, make sure the file with the contract is the active tab in the Editor.
 
-If nothing is there, you'll need to compile a contract. If you do not see your desired contract in the list of the CONTRACT select box, make sure the file with the contract is the active tab in the Editor.
+Once the contract is selected, choose the chain for deployment and/or method for deployment in the **ENVIRONMENT** select box.
 
-Once your contract is selected, your next choice is choosing the chain you'd like to deploy it to. This is done in the **ENVIRONMENT** select box.
+**NOTE:** If you want to connect Remix with a browser wallet, like Metamask, you would use the Injected Provider.  Then in the browser wallet, you can select your desired chain when you have input its configuration.
 
-**NOTE:** If you want to connect Remix with a browser wallet, like Metamask, you would use the Injected Provider.
+For assistance with getting the configuration (the RPC server address etc), click the plug icon next the word **ENVIRONMENT** to get to chainlist.org. 
+
+![](images/a-deploy-run-plug.png)
 
 
 Remix VM
 ---------
-The Remix VM is a sandbox blockchain in the browser.  In the current version of Remix, the **state** of the chain is saved in the **.states folder** in File Explorer.  This was not the case in earlier versions of Remix - where this chain would refresh when the browser would refresh.
+The Remix VM is a sandbox blockchain in the browser.  Transactions do not require an approval to run.  It comes with 10 accounts; each loaded with 100ETH.
+
+In the current version of Remix, the **state** of the chain is saved in the **.states folder** in File Explorer.  This was not the case in earlier versions of Remix - where this chain would refresh when the browser would refresh.
 
 To turn off the saving of the Remix VM’s state, uncheck the **Save environment state** in the Settings panel.
 
 Saving the state means you can refresh the browser and not lose your work.  The caviot being that storage in a browser is inherently feable.  Of course, if you push to a remote repo or if you use Remixd to share a folder on your hard drive, then you have are not relying on the browser to save your work.
+
+For collaborative work, sharing the state of the Remix VM is a great way to work out bugs.  Just have your teammates load the **state.json** file into their instance of Remix.
+
+![](images/a-deploy-run-state-file.png)
+
+
 
 Environment
 -----------
@@ -117,7 +131,7 @@ If you put the wildcard `*`, it means everyone can request the node. Whereas, if
 Only use `--http.corsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**.
 
 --- 
-      
+     
 
 Account:
 --------
