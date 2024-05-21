@@ -62,7 +62,7 @@ The script can contains Mocha tests to be run.
 
 In order to connect a contract with a script, add the **NatSpec** tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:
 
-```code
+```
   /**
    * @title ContractName
    * @dev ContractDescription
