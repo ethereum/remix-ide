@@ -113,7 +113,7 @@ msgid "Most of the `remix-tests` options are there to define a custom compiler c
 msgstr ""
 
 #: ../../unittestingAsCLI.md:183
-msgid "Rememeber, custom compiler version will require internet connection to load compiler."
+msgid "Remember, custom compiler version will require internet connection to load compiler."
 msgstr ""
 
 #: ../../unittestingAsCLI.md:185

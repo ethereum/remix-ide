@@ -2094,7 +2094,7 @@ msgid "String Length: Bytes length != String length"
 msgstr ""
 
 #: ../../static_analysis.md:255
-msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not necessarily encoded in one byte of data."
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
 msgstr ""
 
 #: ../../static_analysis.md:265

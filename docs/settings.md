@@ -69,7 +69,7 @@ Just like the Swarm settings above, IPFS settings are for publishing your contra
 
 Other options are to:
 - Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)
-- Use any external IPFS which doesn’t require any authentification.
+- Use any external IPFS which doesn’t require any authentication.
 - Use your own local ipfs node (which usually runs under http://localhost:5001)
 
 ![](images/a-settings-ipfs.png)
