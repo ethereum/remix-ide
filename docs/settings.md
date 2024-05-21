@@ -69,7 +69,7 @@ Just like the Swarm settings above, IPFS settings are for publishing your contra
 
 Other options are to:
 - Use your own INFURA IPFS node. This requires a subscription. [Learn more](https://infura.io/product/ipfs)
-- Use any external IPFS which doesn’t require any authentification.
+- Use any external IPFS which doesn’t require any authentication.
 - Use your own local ipfs node (which usually runs under http://localhost:5001)
 
 ![](images/a-settings-ipfs.png)
@@ -80,4 +80,4 @@ Choose themes here.  The Dark & Light themes are the themes that the Remix team 
 ![](images/a-settings-themes.png)
 
 ### Language
-The Remix user interface is available in a number of languages.  If you don't see your prefered language,  please join our [translation platform](https://crowdin.com/project/remix-ui).  Similarly, if you don't see this documentation in your language, please help us out on our platform for [translating documentation](https://crowdin.com/project/remix-translation).
+The Remix user interface is available in a number of languages.  If you don't see your preferred language,  please join our [translation platform](https://crowdin.com/project/remix-ui).  Similarly, if you don't see this documentation in your language, please help us out on our platform for [translating documentation](https://crowdin.com/project/remix-translation).
