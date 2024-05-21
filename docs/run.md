@@ -153,22 +153,22 @@ The **Value** field is **NOT** for gas.
 
  ![](images/a-Runtab-deploy-atAddress.png)
 
-Deploy & AtAddress
+Deploy and AtAddress
 ------------------
 
 -   In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts.
 
 -   `Deploy` sends a transaction that deploys the selected contract. When
     the transaction is mined, the newly created instance will be added
-    (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them.
+    (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you will need to specify them.
 
--   `At Address` is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with **At Address** does not cost gas.
+-   `AtAddress` is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with **AtAddress** does not cost gas.
 
-**Note:** When using At Address, be sure you trust the contract at that address.
+**Note:** When using AtAddress, be sure you trust the contract at that address.
 
-To use **At Address**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access.
+To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the Editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access.
 
-Using the ABI with At Address
+Using the ABI with AtAddress
 ----------------------------
 
 The **ABI** is a JSON array which describes the contract's interface.
