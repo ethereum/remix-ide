@@ -3,7 +3,7 @@ AI Tools
 
 Remix has integrated two AI tools:
 - ChatGPT 
-- Solidity Copilot which uses our own LLM (large language model) called Solcoder.
+- Remix's Solidity Copilot which uses our own LLM (large language model) called Solcoder.
 
 ## Remix's Solidity Copilot
 Solidity Copilot helps in writing code using code completion. The switch to activate Solidity Copilot is at the top of the Editor. 

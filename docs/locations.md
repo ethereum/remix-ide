@@ -11,8 +11,6 @@ Remix URLs & Links with Parameters
 
 - Remix Desktop is an Electron App. Here is the [release page](https://github.com/ethereum/remix-desktop/releases).
 
-- Remix has a VSCode extension called [Ethereum Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix). 
-
 - The Remix twitter account is [EthereumRemix](https://twitter.com/EthereumRemix).
 
 - The Remix Project Medium publication is: [https://medium.com/remix-ide](https://medium.com/remix-ide).
