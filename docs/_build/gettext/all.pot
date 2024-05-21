@@ -278,7 +278,7 @@ msgid "The other JSON file is named contractName.json . The contractName.json fi
 msgstr ""
 
 #: ../../contract_metadata.md:8
-msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
+msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  These metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
 msgstr ""
 
 #: ../../contract_metadata.md:10
@@ -2094,7 +2094,7 @@ msgid "String Length: Bytes length != String length"
 msgstr ""
 
 #: ../../static_analysis.md:255
-msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
 msgstr ""
 
 #: ../../static_analysis.md:265
@@ -2340,7 +2340,7 @@ msgid "Go to a transaction in the terminal."
 msgstr ""
 
 #: ../../tutorial_debug.md:103
-msgid "Click a line with a transaction - to exand the log."
+msgid "Click a line with a transaction - to expand the log."
 msgstr ""
 
 #: ../../tutorial_debug.md:104

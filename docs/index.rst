@@ -3,28 +3,20 @@ Welcome to Remix's documentation!
 
 **Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. 
 It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs.  
-The IDE comes in two flavors (web app or desktop app) and as a VSCode extension.
+The IDE comes in two flavors (web app or desktop app).
 
 **Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__
 
-Supported browsers: Firefox, Chrome, Brave. We do not support use of Remix on tablets or mobile devices.
+**Supported browsers:** Firefox, Chrome, Brave. We do not support use of Remix on tablets or mobile devices.
 
-**Remix Desktop IDE**, see releases: `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__
-
-**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__.  
-Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__.
-
-**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way.
+**Translations of the Remix Documentation**: currently available in `English <https://remix-ide.readthedocs.io/en/latest/>`__, `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__, `Spanish <https://remix-ide.readthedocs.io/es/latest/>`__, `Italian <https://remix-ide.readthedocs.io/it/latest/>`__, and `French <https://remix-ide.readthedocs.io/fr/latest/>`__.  More languages are on the way.
 
 Remix Project
 ~~~~~~~~~~~~~
 Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-project>`__ which also includes the
 `Remix Plugin Engine <https://github.com/ethereum/remix-plugin>`__ and `Remix Libraries <https://github.com/ethereum/remix-project/tree/master/libs#remix-libraries>`__, which are low-level tools for wider use.
 
-Remix IDE is available
-at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these
-docs. Our IDE tool is available at `our GitHub repository
-<https://github.com/ethereum/remix-project>`__.
+Remix IDE is located at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs. The IDE's repo is at `GitHub <https://github.com/ethereum/remix-project>`__.
 
 This set of documents covers instructions on how to use Remix.  
 Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
@@ -67,6 +59,9 @@ Useful links:
    plugin_manager
    settings
    solidity_editor
+   run
+   udapp
+   run_proxy_contracts
    terminal
    remixd
 
@@ -75,9 +70,7 @@ Useful links:
    :caption: Solidity modules
 
    compile
-   run
-   udapp
-   run_proxy_contracts
+   ai
    debugger
    static_analysis
 

@@ -71,7 +71,7 @@ This panel shows the step number and the **opcode** that the debugger is current
 
 ![](images/a-debug-opcodes1.png)
 
-As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes.
+As you drag the **slider** (which is above the navigation buttons), the focused step number & opcode changes.
 ### Step details
 Step details shows more info about the opcode step.  
 

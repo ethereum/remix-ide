@@ -58,7 +58,7 @@ msgid "![](images/a-code-viewer-etherscan.png)"
 msgstr "![](images/a-code-viewer-etherscan.png)"
 
 #: ../../remix_as_code_viewer.md:23
-msgid "Tihs works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix."
+msgid "This works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix."
 msgstr "这适用于Etherscan测试网址 `https://ropsten.etherscan.io`，`https://goerli.etherscan.io/`等。如果它们被更新，则合约将在Remix中加载。"
 
 #: ../../remix_as_code_viewer.md:25

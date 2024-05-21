@@ -1,10 +1,10 @@
 Code Contribution Guide
 =======================
 
-Remix is an open source tool and we encourage everyone to help us improve it.
-Please open issues, give feedback or contribute by a pulling request
-to our codebase.
+Remix is an open source tool. Please help us improve it by:
+- Opening issues in our [GitHub repo](https://github.com/ethereum/remix-project).
+- Writing some code and making a pulling request.
 
-The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` among others. Check out the `package.json` files in the Remix submodules to learn more about the stack.
+The Remix application is built with Typescript and React.
 
 To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project).

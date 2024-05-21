@@ -180,7 +180,7 @@ Loading remote solc version v0.7.4+commit.3f05b770 ...
 	 returned: 1
 ```
 
-Rememeber, custom compiler version will require internet connection to load compiler.
+Remember, custom compiler version will require internet connection to load compiler.
 
 As a CI solution
 -----------------

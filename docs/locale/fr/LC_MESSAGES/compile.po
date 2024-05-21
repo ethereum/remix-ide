@@ -195,7 +195,7 @@ msgid "Enable optimization"
 msgstr "Activer l'optimisation"
 
 #: ../../compile.md:83
-msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgid "According to the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
 msgstr "Selon la documentation de Solidity, \"l'optimiseur tente de simplifier les expressions compliquées, ce qui réduit à la fois la taille du code et le coût d'exécution, c'est-à-dire qu'il peut réduire le gaz nécessaire au déploiement du contrat ainsi qu'aux appels externes faits au contrat\"."
 
 #: ../../compile.md:85
