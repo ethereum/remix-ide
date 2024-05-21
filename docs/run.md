@@ -24,12 +24,11 @@ For assistance with getting the correct configuration (the RPC server address, e
 
 ![](images/a-deploy-run-plug.png)
 
-
 Remix VM
 ---------
 The Remix VM is a sandbox blockchain in the browser.  Transactions do not require an approval to run.  Remix VM comes with 10 accounts, each loaded with 100 ETH.
 
-In the current version of Remix when you deploy a contract to the Remix VM, the **state** of the chain is saved in the **.states folder** in the File Explorer. This was not the case in earlier versions of Remix where this chain would refresh when the browser was refreshed.
+In the current version of Remix, the **state** of the Remix VM chain is saved in the **.states folder** in the File Explorer. This was not the case in earlier versions of Remix where this chain would reset when the browser was refreshed.
 
 To prevent saving of the Remix VM chain state, uncheck the **Save environment state** in the Settings panel.
 

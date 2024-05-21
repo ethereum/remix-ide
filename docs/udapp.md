@@ -10,29 +10,29 @@ After a contract is deployed or after it is accessed with AtAddress, the deploye
 The deployed contract's address is visible as are a few other icons - one of which is the **pin** icon.  
 
 ## Pinned contracts
-When a contract is pinned, it will jump up to the **Pinned Contracts** section and Remix will save the contract's address and the ABI (in the .deploys folder of the File Explorer).  When the browser is refreshed, the pinned contracts will be loaded into the Pinned Contracts section.  
+When a contract is pinned, it will jump up to the **Pinned Contracts** section and Remix will save the contract's address and the ABI (in the .deploys folder of the current Workspace).  When Remix is refreshed, the pinned contracts will be loaded into the Pinned Contracts section.  
 
 #### Pinned contracts are chain & Workspace specific
 Because a pinned contract's address and ABI are stored in a File Explorer Workspace, the same Workspace must be active to see its pinned contracts.  Similarly, only the pinned contracts of the currently selected chain will show.
 
 ## Functions 
-TO see a contract's functions, click the caret on the left side of the panel.
+To see a contract's functions, click the caret on the left side of the panel.
 
 ![](images/a-deploy-run-caret.png)
 
-The functions buttons can have different color buttons.
+The functions' buttons can have different colors.
 
--   Functions that are `constant` or `pure` functions in Solidity have a blue buttons. Clicking one of this type does not create a new transaction. So clicking will not cause state changes - it will only return a value stored in the contract - so it won't cost you anything in gas fees.
+-   Blue buttons are for `view` or `pure` functions. Clicking a blue button does not create a new transaction - so there will be **no gas fees**.
 
--   Functions that change the state of the contract AND that do not accept Ether are called `non-payable` functions and have an orange button. Clicking on them will create a transaction and thus cost gas.
+-   Orange buttons are for `non-payable` functions.  Non-payable functions change the state of the contract BUT **do not accept value** (typically ETH) being sent with the transaction. Clicking an orange button will create a transaction and will cost gas.
 
--   Functions that have red buttons are `payable` functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a **value**.  The **value** is put in in the Value field which is under the Gas Limit field.
+-   Red buttons are for `payable` functions. Clicking a red button will create a new transaction and this transaction can accept a **value** (typically ETH).  The amount of value is set in in the **Value** field which is under the Gas Limit field.
 
 ![](images/a-jvm-calling-instance.png)
 
 
 See more information about [Solidity
-modifiers](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers) in the Solidity docs.
+modifiers](https://docs.soliditylang.org/en/latest/cheatsheet.html#modifiers) - in the Solidity docs.
 
 ## Inputting parameters
 A function has two views - the collapsed and the expanded view, which is visible after clicking the caret on the right side of the panel.  
