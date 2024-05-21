@@ -29,11 +29,11 @@ Remix VM
 ---------
 The Remix VM is a sandbox blockchain in the browser.  Transactions do not require an approval to run.  It comes with 10 accounts; each loaded with 100ETH.
 
-In the current version of Remix, the **state** of the chain is saved in the **.states folder** in File Explorer.  This was not the case in earlier versions of Remix - where this chain would refresh when the browser would refresh.
+In the current version of Remix, the **state** of the chain is saved in the **.states folder** in File Explorer.  This was not the case in earlier versions of Remix - where this chain would reset when Remix would refresh.
 
 To turn off the saving of the Remix VM’s state, uncheck the **Save environment state** in the Settings panel.
 
-Saving the state means you can refresh the browser and not lose your work.  The caviot being that storage in a browser is inherently feable.  Of course, if you push to a remote repo or if you use Remixd to share a folder on your hard drive, then you have are not relying on the browser to save your work.
+Saving the state means you can refresh the Remix and not lose your work.  The caveat being that storage in a browser is inherently feable.  Of course, if you push to a remote repo or if you use Remixd to share a folder on your hard drive, then you have are not relying on the browser to save your work.
 
 For collaborative work, sharing the state of the Remix VM is a great way to work out bugs.  Just have your teammates load the **state.json** file into their instance of Remix.
 
