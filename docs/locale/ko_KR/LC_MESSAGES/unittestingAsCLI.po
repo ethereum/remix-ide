@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittestingAsCLI.pot\n"
+"X-Crowdin-File-ID: 7441\n"
+"Language: ko_KR\n"
+
+#: ../../unittestingAsCLI.md:1
+msgid "Command Line Interface"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:3
+msgid "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:6
+msgid "`remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`."
+msgstr ""
+
+#: ../../unittestingAsCLI.md:8
+msgid "Get started"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:11
+msgid "You can install it using NPM:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:13
+msgid "As a dev dependency:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:15
+msgid "`npm install --save-dev @remix-project/remix-tests`"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:17
+msgid "As a global NPM module:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:19
+msgid "`npm install -g @remix-project/remix-tests`"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:21
+msgid "To confirm installation, run:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:26
+msgid "Version should be same as on NPM."
+msgstr ""
+
+#: ../../unittestingAsCLI.md:28
+msgid "How to use"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:31
+msgid "You can see all available options using `help` command."
+msgstr ""
+
+#: ../../unittestingAsCLI.md:51
+msgid "General structure of a command is as:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:53
+msgid "`$ remix-tests <options> <file/directory path>`"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:55
+msgid "To run all test files inside `examples` directory"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:59
+msgid "To run single test file named `simple_storage_test.sol` inside `examples` directory"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:63
+msgid "**NOTE:** `remix-tests` will assume that name of test(s) file ends with `\"_test.sol\"`. e.g `simple_storage_test.sol`"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:65
+msgid "Example"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:67
+msgid "Consider for a simple storage contract named `simple_storage.sol`:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:89
+msgid "Test file `simple_storage_test.sol` can be as:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:123
+msgid "Running `simple_storage_test.sol` file will output as:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:149
+msgid "Custom compiler context"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:152
+msgid "Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:183
+msgid "Rememeber, custom compiler version will require internet connection to load compiler."
+msgstr ""
+
+#: ../../unittestingAsCLI.md:185
+msgid "As a CI solution"
+msgstr ""
+
+#: ../../unittestingAsCLI.md:188
+msgid "`remix-tests` can also be used for continuous integration (CI) testing."
+msgstr ""
+
+#: ../../unittestingAsCLI.md:190
+msgid "For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration."
+msgstr ""
+

@@ -1,0 +1,115 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/layout.pot\n"
+"X-Crowdin-File-ID: 6478\n"
+"Language: ko_KR\n"
+
+#: ../../layout.md:1
+msgid "Navigating Remix"
+msgstr ""
+
+#: ../../layout.md:3
+msgid "Remix IDE is comprised of three panels and a terminal."
+msgstr ""
+
+#: ../../layout.md:5
+msgid "![](images/a-layout1c.png)"
+msgstr ""
+
+#: ../../layout.md:7
+msgid "Icon Panel - click to change which plugins appear in the Side Panel"
+msgstr ""
+
+#: ../../layout.md:8
+msgid "Side Panel - most but not all plugins have their interface here"
+msgstr ""
+
+#: ../../layout.md:9
+msgid "Main Panel - for editing files, large format tools, and the home tab"
+msgstr ""
+
+#: ../../layout.md:10
+msgid "Terminal - for viewing transaction receipts and various logs"
+msgstr ""
+
+#: ../../layout.md:12
+msgid "Default Tools"
+msgstr ""
+
+#: ../../layout.md:15
+msgid "When Remix is loaded - the icon panel shows these icons by default."
+msgstr ""
+
+#: ../../layout.md:17
+msgid "![](images/a-icons-at-load.png)"
+msgstr ""
+
+#: ../../layout.md:19
+msgid "To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab."
+msgstr ""
+
+#: ../../layout.md:21
+msgid "Home tab"
+msgstr ""
+
+#: ../../layout.md:24
+msgid "![](images/a-hometab.png)"
+msgstr ""
+
+#: ../../layout.md:26
+msgid "The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel."
+msgstr ""
+
+#: ../../layout.md:28
+msgid "The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem."
+msgstr ""
+
+#: ../../layout.md:30
+msgid "Solidity"
+msgstr ""
+
+#: ../../layout.md:31
+msgid "Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default)."
+msgstr ""
+
+#: ../../layout.md:33
+msgid "To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. ![](images/a-plug.png) <br> You can also get there by clicking the **More** button in the featured plugin list."
+msgstr ""
+
+#: ../../layout.md:37
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../layout.md:40
+msgid "In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on."
+msgstr ""
+
+#: ../../layout.md:42
+msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr ""
+
+#: ../../layout.md:44
+msgid "Themes"
+msgstr ""
+
+#: ../../layout.md:47
+msgid "Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix."
+msgstr ""
+
+#: ../../layout.md:49
+msgid "![](images/a-themes.png)"
+msgstr ""
+

@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:35-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/FAQ.pot\n"
+"X-Crowdin-File-ID: 6454\n"
+"Language: ko_KR\n"
+
+#: ../../FAQ.md:1
+msgid "FAQ"
+msgstr ""
+
+#: ../../FAQ.md:3
+msgid "Supported devices & Browsers"
+msgstr ""
+
+#: ../../FAQ.md:5
+msgid "**Q:** What browsers will Remix work on?"
+msgstr ""
+
+#: ../../FAQ.md:7
+msgid "**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
+msgstr ""
+
+#: ../../FAQ.md:9
+msgid "**Q:** Will Remix work on a tablet or mobile device?"
+msgstr ""
+
+#: ../../FAQ.md:11
+msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
+msgstr ""
+
+#: ../../FAQ.md:13
+msgid "General"
+msgstr ""
+
+#: ../../FAQ.md:15
+msgid "**Q:** Are there keyboard shortcuts in Remix?"
+msgstr ""
+
+#: ../../FAQ.md:17
+msgid "**A:** Yes - here is the list of keyboard shortcuts:"
+msgstr ""
+
+#: ../../FAQ.md:19
+msgid "`Ctrl+S`: Compiles the active Solidity file"
+msgstr ""
+
+#: ../../FAQ.md:21
+msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)"
+msgstr ""
+
+#: ../../FAQ.md:23
+msgid "`Ctrl+Shift+F` : Opens the File Explorer"
+msgstr ""
+
+#: ../../FAQ.md:25
+msgid "`CTRL+Alt+F` : Formats the code in the current file"
+msgstr ""
+
+#: ../../FAQ.md:27
+msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
+msgstr ""
+
+#: ../../FAQ.md:29
+msgid "Solidity compiler"
+msgstr ""
+
+#: ../../FAQ.md:31
+msgid "**Q:** Error: compiler might be in a non-sane state"
+msgstr ""
+
+#: ../../FAQ.md:38
+msgid "**A:** Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
+msgstr ""
+
+#: ../../FAQ.md:41
+msgid "**Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
+msgstr ""
+
+#: ../../FAQ.md:43
+msgid "**A:**  Try a different browser or a newer solidity compiler version."
+msgstr ""
+
+#: ../../FAQ.md:45
+msgid "**Q:** How to verify a contract that imports other contracts?"
+msgstr ""
+
+#: ../../FAQ.md:47
+msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
+msgstr ""
+
+#: ../../FAQ.md:49
+msgid "A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file."
+msgstr ""
+
+#: ../../FAQ.md:51
+msgid "Deploy & Run"
+msgstr ""
+
+#: ../../FAQ.md:53
+msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
+msgstr ""
+
+#: ../../FAQ.md:55
+msgid "**A:** If the endpoint you are using is http, it won't work."
+msgstr ""
+
+#: ../../FAQ.md:57
+msgid "**Q:** Where is deploy button?"
+msgstr ""
+
+#: ../../FAQ.md:59
+msgid "**A:** It's in the **Deploy & Run Transactions** module."
+msgstr ""
+
+#: ../../FAQ.md:61
+msgid "**Q:** How to pass a tuple to a public function in Remix?"
+msgstr ""
+
+#: ../../FAQ.md:63
+msgid "**A:** Pass it as an array []."
+msgstr ""
+
+#: ../../FAQ.md:65
+msgid "**Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?"
+msgstr ""
+
+#: ../../FAQ.md:67
+msgid "**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
+msgstr ""
+
+#: ../../FAQ.md:69
+msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
+msgstr ""
+
+#: ../../FAQ.md:71
+msgid "For example, here's a solidity file with a struct as an input parameter."
+msgstr ""
+
+#: ../../FAQ.md:103
+msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
+msgstr ""
+
+#: ../../FAQ.md:107
+msgid "Plugin Developers"
+msgstr ""
+
+#: ../../FAQ.md:109
+msgid "**Q:** Where do plugin developers go with their questions?"
+msgstr ""
+
+#: ../../FAQ.md:111
+msgid "**A:** First, join our [Discord server](https://discord.gg/zUNteAzJs3) and then go to the development-plugin channel."
+msgstr ""
+
+#: ../../FAQ.md:113
+msgid "Analytics"
+msgstr ""
+
+#: ../../FAQ.md:115
+msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
+msgstr ""
+
+#: ../../FAQ.md:117
+msgid "**A:** We want to know:"
+msgstr ""
+
+#: ../../FAQ.md:119
+msgid "Which plugins get activated & deactivated"
+msgstr ""
+
+#: ../../FAQ.md:120
+msgid "If users check the box to publish a contract's metadata when deploying"
+msgstr ""
+
+#: ../../FAQ.md:121
+msgid "Which themes are used/used most/not used at all"
+msgstr ""
+
+#: ../../FAQ.md:122
+msgid "The usage of the links to documentation"
+msgstr ""
+
+#: ../../FAQ.md:123
+msgid "On the homepage, which file importing buttons are used"
+msgstr ""
+
+#: ../../FAQ.md:125
+msgid "**Q:** Is it opt-in or opt-out?"
+msgstr ""
+
+#: ../../FAQ.md:127
+msgid "**A:** We use Matomo as an opt-in analytics platform."
+msgstr ""
+
+#: ../../FAQ.md:129
+msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
+msgstr ""
+
+#: ../../FAQ.md:131
+msgid "**A:** All data collected through Matomo is stored on our server. No data is given to third parties."
+msgstr ""
+
+#: ../../FAQ.md:133
+msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
+msgstr ""
+
+#: ../../FAQ.md:135
+msgid "**Q:** What does Remix do with this info?"
+msgstr ""
+
+#: ../../FAQ.md:137
+msgid "**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
+msgstr ""
+
+#: ../../FAQ.md:139
+msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
+msgstr ""
+
+#: ../../FAQ.md:141
+msgid "**Q:** After I agree opt-in, can I change my mind?"
+msgstr ""
+
+#: ../../FAQ.md:143
+msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
+msgstr ""
+

@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_learneth.pot\n"
+"X-Crowdin-File-ID: 7427\n"
+"Language: ko_KR\n"
+
+#: ../../remix_tutorials_learneth.md:1
+msgid "Tutorials in Remix"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:4
+msgid "**Learneth** is a tutorial platform integrated into Remix."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:6
+msgid "Tutorials can contain quizzes for testing students' work.  These quizzes are run by Solidity Unit Tests."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:8
+msgid "![](images/a-learneth.png)"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:10
+msgid "We have a growing set of tutorials on our repo- but anyone can build tutorials on their own repos and have their students load them up!"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:12
+msgid "The tutorials contain .md files for instructions and can also contain example files, Solidity Unit Test files for quizzes, as well as answer files for quizzes."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:14
+msgid "Opening Learneth & associated links"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:15
+msgid "Learneth is a plugin - so to access it, you need to activate the Learneth plugin in the Plugin Manager.   Alternatively - this link will active it: click this link."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:21
+msgid "This link will activate Learneth and then will open a specific tutorial - in this case it will load the **proxy contract** tutorial:"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:27
+msgid "**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html)."
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:29
+msgid "Learneth Tutorials"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:31
+msgid "Here is the current list of Learneth Tutorials"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:33
+msgid "***Beginner***"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:38
+msgid "***Intermediate***"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:43
+msgid "***Advanced***"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:50
+msgid "Learneth & Tutorial Repos"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:52
+msgid "The code for the Learneth plugin is located here: https://github.com/bunsenstraat/remix-learneth-plugin/blob/master/docs/index.rst"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:55
+msgid "Documentation for creating your own tutorials is located here: https://remix-learneth-plugin.readthedocs.io/en/latest/index.html"
+msgstr ""
+
+#: ../../remix_tutorials_learneth.md:58
+msgid "Remix maintains and curates this repo of Learneth tutorials: https://github.com/ethereum/remix-workshops"
+msgstr ""
+

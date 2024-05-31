@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/foundry.pot\n"
+"X-Crowdin-File-ID: 7417\n"
+"Language: ko_KR\n"
+
+#: ../../foundry.md:1
+msgid "Foundry"
+msgstr ""
+
+#: ../../foundry.md:4
+msgid "_(Supported since Remix IDE v0.25.0)_"
+msgstr ""
+
+#: ../../foundry.md:6
+msgid "Foundry Provider"
+msgstr ""
+
+#: ../../foundry.md:9
+msgid "**Foundry Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Foundry's built-in **Anvil** blockchain. `Foundry Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."
+msgstr ""
+
+#: ../../foundry.md:11
+msgid "![](images/a-foundry-provider.png)"
+msgstr ""
+
+#: ../../foundry.md:13
+msgid "As soon as you select `Foundry Provider`, a modal is opened asking for the `Anvil JSON-RPC Endpoint`."
+msgstr ""
+
+#: ../../foundry.md:15
+msgid "![](images/a-foundry-provider-modal.png)"
+msgstr ""
+
+#: ../../foundry.md:17
+msgid "If Foundry Anvil node is running with default options, the default endpoint value in modal will not need any change. In case, Anvil node host and port are different, JSON-RPC endpoint should be updated in the modal text box."
+msgstr ""
+
+#: ../../foundry.md:19
+msgid "Once the correct endpoint is filled in the modal, just click on `OK` and the accounts from the Anvil node will be loaded in the `ACCOUNT` section. Network id will also be shown."
+msgstr ""
+
+#: ../../foundry.md:21
+msgid "![](images/a-foundry-provider-connected.png)"
+msgstr ""
+
+#: ../../foundry.md:23
+msgid "Now, one can start deploying the contract from Remix IDE to the local Anvil node as usual."
+msgstr ""
+
+#: ../../foundry.md:25
+msgid "Foundry Remappings"
+msgstr ""
+
+#: ../../foundry.md:28
+msgid "Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can have compilation errors on Remix IDE."
+msgstr ""
+
+#: ../../foundry.md:30
+msgid "To support such compilation, Remix suggests running [compilation using a compiler config file](https://remix-ide.readthedocs.io/en/latest/compile.html#json-file-for-compiler-configuration). Remix adds some default Forge remappings in the compiler config file when a Foundry project is loaded in Remix IDE using remixd."
+msgstr ""
+
+#: ../../foundry.md:32
+msgid "![](images/a-foundry-cc.png)"
+msgstr ""
+
+#: ../../foundry.md:34
+msgid "Further, more remappings can be added manually, if required."
+msgstr ""
+

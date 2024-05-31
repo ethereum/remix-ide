@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/community.pot\n"
+"X-Crowdin-File-ID: 6462\n"
+"Language: ko_KR\n"
+
+#: ../../community.md:1
+msgid "Community Support"
+msgstr ""
+
+#: ../../community.md:4
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
+msgstr ""
+
+#: ../../community.md:8
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
+msgstr ""
+
+#: ../../community.md:11
+msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
+msgstr ""
+

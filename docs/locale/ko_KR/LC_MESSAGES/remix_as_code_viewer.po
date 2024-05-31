@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_as_code_viewer.pot\n"
+"X-Crowdin-File-ID: 7425\n"
+"Language: ko_KR\n"
+
+#: ../../remix_as_code_viewer.md:1
+msgid "Remix as code viewer"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:4
+msgid "Through Etherscan"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:7
+msgid "Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a mutiple part contract verification, Remix provides a quick way to load all the contracts."
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:9
+msgid "A typical Etherscan URL for a contract address looks like this:"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:11
+msgid "`https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:13
+msgid "In the URL, change `etherscan.io` to `remix.ethereum.org`"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:15
+msgid "`https://remix.ethereum.org/address/0xdac17f958d2ee523a2206206994597c13d831ec7`"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:17
+msgid "and reload. It will fetch the contracts verified on Etherscan."
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:19
+msgid "Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace."
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:21
+msgid "![](images/a-code-viewer-etherscan.png)"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:23
+msgid "Tihs works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix."
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:25
+msgid "Through GitHub"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:28
+msgid "Solidity files in GitHub can be loaded on Remix with a similar tweak. For a file with URL like:"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:30
+msgid "`https://github.com/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:32
+msgid "change `github.com` to `remix.ethereum.org` like:"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:34
+msgid "`https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol`"
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:36
+msgid "and reload. It will open the same file in Remix IDE."
+msgstr ""
+
+#: ../../remix_as_code_viewer.md:38
+msgid "![](images/a-code-viewer-github.png)"
+msgstr ""
+

@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/testing_using_Chai_&_Mocha.pot\n"
+"X-Crowdin-File-ID: 7437\n"
+"Language: ko_KR\n"
+
+#: ../../testing_using_Chai_&_Mocha.md:1
+msgid "Testing using Chai & Mocha"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:4
+msgid "_(Supported since Remix IDE v0.22.0)_"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:6
+msgid "Remix supports testing of your files in JavaScript using assertion library [Chai](https://www.chaijs.com/) & test framework [Mocha](https://mochajs.org/)"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:8
+msgid "_Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework._"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:10
+msgid "_Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun._"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:12
+msgid "Write tests"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:14
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Let's name it `sample.test.js`."
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:16
+msgid "Write your tests in the file. Here is a sample:"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:33
+msgid "Run tests"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:35
+msgid "Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JS scripts"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:37
+msgid "![](images/run_with_mocha_option.png)"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:39
+msgid "Click on `Run`, tests will be executed and result will be shown on Terminal."
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:41
+msgid "![](images/run_with_mocha_result.png)"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:43
+msgid "Test a contract"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:45
+msgid "Similarly unit tests can be written to test the functionality of a smart contract. An example to test default `1_Storage.sol` contract can be as:"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:86
+#: ../../testing_using_Chai_&_Mocha.md:158
+msgid "Result will be as:"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:88
+msgid "![](images/run_with_mocha_storage_test.png)"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:90
+msgid "Debugging a test transaction"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:92
+msgid "To debug a transaction in one of the tests, print the transaction hash and input that in the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html)."
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:94
+msgid "![](images/run_with_mocha_print_hash.png)"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:96
+msgid "Hardhat-ethers support"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:98
+msgid "Remix also supports methods of [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:131
+msgid "With this, one can run the tests for a hardhat project easily using Remix."
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:133
+msgid "Example to test `Storage` contract with this plugin methods can be as:"
+msgstr ""
+
+#: ../../testing_using_Chai_&_Mocha.md:160
+msgid "![](images/run_with_mocha_hhethers.png)"
+msgstr ""
+

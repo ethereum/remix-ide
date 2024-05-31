@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/unittesting_examples.pot\n"
+"X-Crowdin-File-ID: 6508\n"
+"Language: ko_KR\n"
+
+#: ../../unittesting_examples.md:1
+msgid "Testing by Example"
+msgstr ""
+
+#: ../../unittesting_examples.md:4
+msgid "Here are some examples which can give you better understanding to plan your tests."
+msgstr ""
+
+#: ../../unittesting_examples.md:6
+msgid "**Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
+msgstr ""
+
+#: ../../unittesting_examples.md:8
+msgid "1. Simple example"
+msgstr ""
+
+#: ../../unittesting_examples.md:9
+msgid "In this example, we test setting & getting variables."
+msgstr ""
+
+#: ../../unittesting_examples.md:11
+msgid "Contract/Program to be tested: `Simple_storage.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:32
+msgid "Test contract/program: `simple_storage_test.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:60
+msgid "2. Testing a method involving `msg.sender`"
+msgstr ""
+
+#: ../../unittesting_examples.md:61
+msgid "In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
+msgstr ""
+
+#: ../../unittesting_examples.md:63
+msgid "Contract/Program to be tested: `Sender.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:85
+msgid "Test contract/program: `Sender_test.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:137
+msgid "3. Testing method execution"
+msgstr ""
+
+#: ../../unittesting_examples.md:139
+msgid "With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed."
+msgstr ""
+
+#: ../../unittesting_examples.md:141
+msgid "To help in such cases, Solidity introduced the `try-catch` statement in version `0.6.0`. Previously, we had to use low-level calls to track down what was going on."
+msgstr ""
+
+#: ../../unittesting_examples.md:143
+msgid "Here is an example test file that use both **try-catch** blocks and **low level calls**:"
+msgstr ""
+
+#: ../../unittesting_examples.md:145
+msgid "Contract/Program to be tested: `AttendanceRegister.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:174
+msgid "Test contract/program: `AttendanceRegister_test.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:262
+msgid "4. Testing a method involving `msg.value`"
+msgstr ""
+
+#: ../../unittesting_examples.md:263
+msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:"
+msgstr ""
+
+#: ../../unittesting_examples.md:265
+msgid "Contract/Program to be tested: `Value.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:285
+msgid "Test contract/program: `Value_test.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:331
+msgid "5. Testing a method involving `msg.sender` and `msg.value`"
+msgstr ""
+
+#: ../../unittesting_examples.md:332
+msgid "In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts."
+msgstr ""
+
+#: ../../unittesting_examples.md:334
+msgid "Contract/Program to be tested: `Donations.sol`"
+msgstr ""
+
+#: ../../unittesting_examples.md:379
+msgid "Test contract/program: `Donations_test.sol`"
+msgstr ""
+

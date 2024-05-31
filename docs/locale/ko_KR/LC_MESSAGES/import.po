@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/import.pot\n"
+"X-Crowdin-File-ID: 6474\n"
+"Language: ko_KR\n"
+
+#: ../../import.md:1
+msgid "Importing & Loading Source Files in Solidity"
+msgstr ""
+
+#: ../../import.md:4
+msgid "There are two main reasons for loading external files into Remix:"
+msgstr ""
+
+#: ../../import.md:5
+msgid "**to import a library or dependency** (for files you will NOT be editing)"
+msgstr ""
+
+#: ../../import.md:6
+msgid "**to load some files for manipulation, editing and play** (for files you might want to edit)"
+msgstr ""
+
+#: ../../import.md:8
+msgid "Importing a library or dependency"
+msgstr ""
+
+#: ../../import.md:10
+msgid "When importing from NPM, or a URL (like github, an IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
+msgstr ""
+
+#: ../../import.md:12
+msgid "Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder."
+msgstr ""
+
+#: ../../import.md:14
+msgid "Under the hood, Remix checks to see if the files are already loaded in the **.deps** directory.  If not, it gets them via unpkg if it is an NPM lib."
+msgstr ""
+
+#: ../../import.md:16
+msgid "Here are some example import statements:"
+msgstr ""
+
+#: ../../import.md:18
+msgid "Import from NPM"
+msgstr ""
+
+#: ../../import.md:27
+msgid "**Note:** In the example above, **@openzeppelin** is the name of the npm library.  In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name."
+msgstr ""
+
+#: ../../import.md:33
+msgid "Import from a Github URL"
+msgstr ""
+
+#: ../../import.md:37
+msgid "You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example above imports from OpenZeppelin Contracts v2.5.0."
+msgstr ""
+
+#: ../../import.md:39
+msgid "Import from Swarm"
+msgstr ""
+
+#: ../../import.md:45
+msgid "Import from IPFS"
+msgstr ""
+
+#: ../../import.md:51
+msgid "Importing a local file not in .deps"
+msgstr ""
+
+#: ../../import.md:53
+msgid "To import a file NOT in the **.deps** folder, use a relative path (**./**). For example:"
+msgstr ""
+
+#: ../../import.md:59
+msgid "**Note:** It is not possible to import across Workspaces."
+msgstr ""
+
+#: ../../import.md:61
+msgid "Importing a file from your computer's filesystem"
+msgstr ""
+
+#: ../../import.md:63
+msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computer's filesystem."
+msgstr ""
+
+#: ../../import.md:65
+msgid "More about the import keyword"
+msgstr ""
+
+#: ../../import.md:66
+msgid "For a detailed explanation of the `import` keyword see the [Solidity documentation](https://docs.soliditylang.org/en/latest/layout-of-source-files.html?highlight=import#importing-other-source-files)"
+msgstr ""
+
+#: ../../import.md:70
+msgid "Importing files for manipulation"
+msgstr ""
+
+#: ../../import.md:71
+msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder that shows their source - eg github or gists."
+msgstr ""
+
+#: ../../import.md:73
+msgid "Import buttons on the Remix home tab"
+msgstr ""
+
+#: ../../import.md:74
+msgid "The Gist, Github, Swarm, IPFS, & HTTPS buttons are to assist in getting files into Remix so you can explore."
+msgstr ""
+
+#: ../../import.md:76
+msgid "![](images/a-import-from.png)"
+msgstr ""
+
+#: ../../import.md:78
+msgid "Clicking on any of the Import buttons will bring up a modal like this one:"
+msgstr ""
+
+#: ../../import.md:80
+msgid "![](images/a-gist-modal.png)"
+msgstr ""
+
+#: ../../import.md:82
+msgid "No need to wrap the input in quotes."
+msgstr ""
+
+#: ../../import.md:83
+msgid "Loading with a remix command in the console"
+msgstr ""
+
+#: ../../import.md:84
+msgid "The 2 remix commands for loading are:"
+msgstr ""
+
+#: ../../import.md:85
+msgid "remix.loadurl(url)"
+msgstr ""
+
+#: ../../import.md:86
+msgid "remix.loadgist(id)"
+msgstr ""
+
+#: ../../import.md:95
+msgid "Accessing files loaded from the Home tab or from a remix command"
+msgstr ""
+
+#: ../../import.md:97
+msgid "When you load from github, a folder named `github` folder is created in the root of your current workspace.  To import a file from the `github` folder, you would use a command like this:"
+msgstr ""
+
+#: ../../import.md:103
+msgid "Notice that this import statement doesn't include the version information that was in the remix.load(url) command.  So it is recommended that you use the methods described at the top of this page for importing dependencies that you are not intending to edit."
+msgstr ""
+
+#: ../../import.md:105
+msgid "Assume the .sol file that contained the import statement above is in the contracts folder. Notice that this import statement didn't need to traverse back to the github folder with a relative path like: **../github**."
+msgstr ""
+
