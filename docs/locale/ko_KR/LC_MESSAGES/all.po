@@ -1,0 +1,2644 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/all.pot\n"
+"X-Crowdin-File-ID: 6456\n"
+"Language: ko_KR\n"
+
+#: ../../assert_library.md:1
+msgid "Remix Assert Library"
+msgstr ""
+
+#: ../../assert_library.md:4
+#: ../../assert_library.md:13
+msgid "Assert.ok(value[, message])"
+msgstr ""
+
+#: ../../assert_library.md:5
+#: ../../assert_library.md:27
+msgid "Assert.equal(actual, expected[, message])"
+msgstr ""
+
+#: ../../assert_library.md:6
+#: ../../assert_library.md:47
+msgid "Assert.notEqual(actual, expected[, message])"
+msgstr ""
+
+#: ../../assert_library.md:7
+#: ../../assert_library.md:63
+msgid "Assert.greaterThan(value1, value2[, message])"
+msgstr ""
+
+#: ../../assert_library.md:8
+#: ../../assert_library.md:82
+msgid "Assert.lesserThan(value1, value2[, message])"
+msgstr ""
+
+#: ../../assert_library.md:11
+msgid "Assert"
+msgstr ""
+
+#: ../../assert_library.md:14
+msgid "value: <bool>"
+msgstr ""
+
+#: ../../assert_library.md:15
+#: ../../assert_library.md:30
+#: ../../assert_library.md:50
+#: ../../assert_library.md:66
+#: ../../assert_library.md:85
+msgid "message: <string>"
+msgstr ""
+
+#: ../../assert_library.md:17
+msgid "Tests if value is truthy. message is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:19
+#: ../../assert_library.md:34
+#: ../../assert_library.md:54
+#: ../../assert_library.md:70
+#: ../../assert_library.md:89
+msgid "Examples:"
+msgstr ""
+
+#: ../../assert_library.md:28
+#: ../../assert_library.md:48
+msgid "actual: <uint | int | bool | address | bytes32 | string>"
+msgstr ""
+
+#: ../../assert_library.md:29
+#: ../../assert_library.md:49
+msgid "expected: <uint | int | bool | address | bytes32 | string>"
+msgstr ""
+
+#: ../../assert_library.md:32
+msgid "Tests if actual & expected values are same. message is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:52
+msgid "Tests if actual & expected values are not same. message is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:64
+#: ../../assert_library.md:83
+msgid "value1: <uint | int>"
+msgstr ""
+
+#: ../../assert_library.md:65
+#: ../../assert_library.md:84
+msgid "value2: <uint | int>"
+msgstr ""
+
+#: ../../assert_library.md:68
+msgid "Tests if value1 is greater than value2. message is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:87
+msgid "Tests if value1 is lesser than value2. message is returned in case of failure."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../code_contribution_guide.md:1
+msgid "Code Contribution Guide"
+msgstr ""
+
+#: ../../code_contribution_guide.md:4
+msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
+msgstr ""
+
+#: ../../code_contribution_guide.md:8
+msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like yo-yo, csjs-inject and among others. Check out the package.json files in the Remix submodules to learn more about the stack."
+msgstr ""
+
+#: ../../code_contribution_guide.md:10
+msgid "To learn more, please visit our GitHub page."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../community.md:1
+msgid "Community Support"
+msgstr ""
+
+#: ../../community.md:4
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join the community and ask for help."
+msgstr ""
+
+#: ../../community.md:8
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a contributors' channel especially for developers working on Remix tools."
+msgstr ""
+
+#: ../../community.md:11
+msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../compile.md:1
+msgid "Compiler (Solidity)"
+msgstr ""
+
+#: ../../compile.md:4
+msgid "Clicking the Solidity icon in the icon panel brings you to the Solidty Compiler."
+msgstr ""
+
+#: ../../compile.md:6
+msgid "Compiling is triggered when you click the compile button ( D. in image below). If you want the file to be compiled each time the file is saved or when another file is selected - check the auto compile checkbox ( E. in image below)."
+msgstr ""
+
+#: ../../compile.md:8
+msgid "Since the Solidity version 0.5.7, it is possible to compile Yul files. Please read the (solidity documentation about Yul) which contain some code examples. You can use the language dropdown ( B. in image below) to switch the language. This dropdown list is only available for versions greater than or equal to 0.5.7."
+msgstr ""
+
+#: ../../compile.md:11
+msgid "The fork selection dropdown list ( C. in image below) allows to compile code against a specific ethereum hard fork. The compiler default corresponds to the default hard fork used by a specific version. Please go to \"Compilation Details\" ( G. in image below) in the settings of Metadata section to see the harfork name used for the current compilation."
+msgstr ""
+
+#: ../../compile.md:14
+msgid "If the contract has a lot of dependencies it can take a while to compile - so you use autocompilation at your discretion."
+msgstr ""
+
+#: ../../compile.md:18
+msgid "After each compilation, a list is updated with all newly compiled contracts.  A compiled contract can be selected with the Contract pulldown menu ( F. in the image).  Multiple contracts are compiled when one contract imports other contracts.  Selecting a contract will show information about that one."
+msgstr ""
+
+#: ../../compile.md:21
+msgid "When the \"Compilation Details\" button is clicked ( G. in image), a modal opens displaying detailed information about the current selected contract."
+msgstr ""
+
+#: ../../compile.md:23
+msgid "For those writing your own custom solidity compiler, you can import that by clicking the + button (X. in the image) to open a modal where you can input the url of the compiler to be loaded."
+msgstr ""
+
+#: ../../compile.md:25
+msgid "From the Solidity Compiler module you can also publish your contract to Swarm (only non abstract contracts can be published) & IPFS."
+msgstr ""
+
+#: ../../compile.md:28
+msgid "Published data notably contains the abi and the solidity source code."
+msgstr ""
+
+#: ../../compile.md:30
+msgid "After a contract is published, you can find its metadata information using the bzz URL located in the details modal dialog SWARM LOCATION."
+msgstr ""
+
+#: ../../compile.md:33
+msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report. It is important to address reported issues even if the compiler doesn't complain. (see more)"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../contract_metadata.md:1
+msgid "Build Artifact"
+msgstr ""
+
+#: ../../contract_metadata.md:4
+msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
+msgstr ""
+
+#: ../../contract_metadata.md:6
+msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
+msgstr ""
+
+#: ../../contract_metadata.md:8
+msgid "In order to generate these artifact files, the Generate contract metadata box in the General settings section of the Settings module needs to be checked.  The these metadatas files will then be generated when you compile a file and will be placed in the artifacts folder - which you can see in the Files Explorers plugin."
+msgstr ""
+
+#: ../../contract_metadata.md:10
+msgid "You can write scripts that can access either of these files."
+msgstr ""
+
+#: ../../contract_metadata.md:12
+msgid "Library Deployment with filename.json"
+msgstr ""
+
+#: ../../contract_metadata.md:15
+msgid "By default Remix automatically deploys needed libraries."
+msgstr ""
+
+#: ../../contract_metadata.md:17
+msgid "When you open the metadata file for the libraries - artifact/filename.json you will see the following sections:"
+msgstr ""
+
+#: ../../contract_metadata.md:19
+msgid "linkReferences contains a map representing libraries which depend on the current contract. Values are addresses of libraries used for linking the contract."
+msgstr ""
+
+#: ../../contract_metadata.md:22
+msgid "autoDeployLib defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in linkReferences"
+msgstr ""
+
+#: ../../contract_metadata.md:24
+msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: <network_name>:<networkd_id>, but it is also possible to define <network_name> or <network_id> as keys."
+msgstr ""
+
+#: ../../contract_metadata.md:28
+msgid "Here is a sample metadata file for linking a library:"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../create_deploy.md:1
+msgid "Creating and Deploying a Contract"
+msgstr ""
+
+#: ../../create_deploy.md:4
+msgid "There are 3 type of environments Remix can be plugged to: Javascript VM, Injected provider, or Web3 provider. (for details see Running transactions)"
+msgstr ""
+
+#: ../../create_deploy.md:7
+msgid "Both Web3 provider and Injected provider require the use of an external tool."
+msgstr ""
+
+#: ../../create_deploy.md:10
+msgid "The external tool for Web3 provider is an Ethereum node and for Injected provider Metamask."
+msgstr ""
+
+#: ../../create_deploy.md:13
+msgid "The JavaScript VM mode is convenient because each execution runs in your browser and you don't need any other software or Ethereum node to run it."
+msgstr ""
+
+#: ../../create_deploy.md:16
+msgid "So, it is the easiest test environment - no setup required!"
+msgstr ""
+
+#: ../../create_deploy.md:18
+msgid "But keep in mind that reloading the browser when you are in the Javascript VM will restart Remix in an empty state."
+msgstr ""
+
+#: ../../create_deploy.md:20
+msgid "For performance purposes ( which is to say - for testing in an environment that is closest to the mainnet), it might also be better to use an external node."
+msgstr ""
+
+#: ../../create_deploy.md:22
+msgid "Selecting the VM mode"
+msgstr ""
+
+#: ../../create_deploy.md:25
+msgid "Make sure the VM mode is selected. All accounts displayed in Accounts should have 100 ether."
+msgstr ""
+
+#: ../../create_deploy.md:28
+msgid "Sample contract"
+msgstr ""
+
+#: ../../create_deploy.md:57
+msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
+msgstr ""
+
+#: ../../create_deploy.md:60
+msgid "Deploying an instance"
+msgstr ""
+
+#: ../../create_deploy.md:63
+msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
+msgstr ""
+
+#: ../../create_deploy.md:66
+msgid "Moving on, in the Run tab select, JavaScript VM to specify that you are going to deploy an instance of the contract in the JavaScript VM state."
+msgstr ""
+
+#: ../../create_deploy.md:72
+msgid "The constructor of Ballot.sol needs a parameter (of type uint8). Give any value and click on Deploy."
+msgstr ""
+
+#: ../../create_deploy.md:75
+msgid "The transaction which deploys the instance of Ballot is created."
+msgstr ""
+
+#: ../../create_deploy.md:77
+msgid "In a \"normal\" blockchain, it can take several seconds to execute. This is the time for the transaction to be mined. However, because we are using the JavaScript VM, our execution is immediate."
+msgstr ""
+
+#: ../../create_deploy.md:81
+msgid "The terminal will inform you about the transaction. You can see details there and start debugging."
+msgstr ""
+
+#: ../../create_deploy.md:84
+msgid "The newly created instance is displayed in the run tab."
+msgstr ""
+
+#: ../../create_deploy.md:88
+msgid "Interacting with an instance"
+msgstr ""
+
+#: ../../create_deploy.md:91
+msgid "This new instance contains 3 actions which corresponds to the 3 functions (setP, setPN, get). Clicking on SetP or SetPN will create a new transaction."
+msgstr ""
+
+#: ../../create_deploy.md:95
+msgid "Note that SetP is payable (red button) : it is possible to send value (Ether) to the contract."
+msgstr ""
+
+#: ../../create_deploy.md:98
+msgid "SetPN is not payable (orange button - depending on the theme) : it is not possible to send value (Ether) to the contract."
+msgstr ""
+
+#: ../../create_deploy.md:101
+msgid "Clicking on get will not execute a transaction (usually its a blue button - depending on the theme). It doesn't execute a transaction because a get does not modify the state (variable value) of this instance."
+msgstr ""
+
+#: ../../create_deploy.md:104
+msgid "As get is view you can see the return value just below the action."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../debugger.md:1
+msgid "Debugger"
+msgstr ""
+
+#: ../../debugger.md:4
+msgid "This module allows you to debug the transaction. It can be used to deploy transactions created from Remix and already mined transactions. (debugging works only if the current environment provides the necessary features)."
+msgstr ""
+
+#: ../../debugger.md:9
+msgid "To get to the debugger - you can click the debug button in the terminal when a successful or failed transaction appears there.  You can also load the module from the plugin manager and then click the bug in the icon panel.  Or you can get to the debugger by running the debug command in the console."
+msgstr ""
+
+#: ../../debugger.md:14
+msgid "To learn more about how to use this tool go to the debugger tutorial."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../FAQ.md:1
+msgid "FAQ"
+msgstr ""
+
+#: ../../FAQ.md:4
+msgid "Solidity compiler"
+msgstr ""
+
+#: ../../FAQ.md:6
+msgid "Q: Error: compiler might be in a non-sane state"
+msgstr ""
+
+#: ../../FAQ.md:13
+msgid "A: Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
+msgstr ""
+
+#: ../../FAQ.md:16
+msgid "Q: I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
+msgstr ""
+
+#: ../../FAQ.md:18
+msgid "A:  Try a different browser or a newer solidity compiler version."
+msgstr ""
+
+#: ../../FAQ.md:20
+msgid "Q: How to verify a contract that imports other contracts?"
+msgstr ""
+
+#: ../../FAQ.md:22
+msgid "A:  The verification tool does not recursively go through the import statments in a contract.  So can only verify a 'flattened' contract."
+msgstr ""
+
+#: ../../FAQ.md:24
+msgid "There is a plugin called Flattener which will stuff all the original code and the imported code into a single file."
+msgstr ""
+
+#: ../../FAQ.md:26
+msgid "Deploy & Run"
+msgstr ""
+
+#: ../../FAQ.md:28
+msgid "Q: I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in remix IDE selecting \"web3 provider\" and putting my endpoint in, it's telling me that it can't connect"
+msgstr ""
+
+#: ../../FAQ.md:30
+msgid "A: If the endpoint you are using is http, it won't work."
+msgstr ""
+
+#: ../../FAQ.md:32
+msgid "Q: Where is deploy button?"
+msgstr ""
+
+#: ../../FAQ.md:34
+msgid "A: Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
+msgstr ""
+
+#: ../../FAQ.md:37
+msgid "Q: How to pass a tuple to a public function in Remix?"
+msgstr ""
+
+#: ../../FAQ.md:39
+msgid "A: Pass it as an array []."
+msgstr ""
+
+#: ../../FAQ.md:41
+msgid "Q: How to input a struct as input to a parameter of a function in the Deploy & Run module?"
+msgstr ""
+
+#: ../../FAQ.md:43
+msgid "A: For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
+msgstr ""
+
+#: ../../FAQ.md:45
+msgid "pragma experimental ABIEncoderV2; at the top of the solidity file."
+msgstr ""
+
+#: ../../FAQ.md:47
+msgid "For example, here's a solidity file with a struct is an input parameter."
+msgstr ""
+
+#: ../../FAQ.md:79
+msgid "The input of initPeepToPeeps takes a struct.  If you input [1,2] the transaction will go through."
+msgstr ""
+
+#: ../../FAQ.md:83
+msgid "General"
+msgstr ""
+
+#: ../../FAQ.md:85
+msgid "Q: Where do plugin developers go with their questions?"
+msgstr ""
+
+#: ../../FAQ.md:87
+msgid "A: The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../file_explorer.md:1
+msgid "File Explorers"
+msgstr ""
+
+#: ../../file_explorer.md:4
+msgid "To get to the File Explorers module - click the file explorers icon."
+msgstr ""
+
+#: ../../file_explorer.md:8
+msgid "The basic files explorer lists all the files stored in your browser's browser storage. You can see them in the browser folder."
+msgstr ""
+
+#: ../../file_explorer.md:11
+msgid "Important Note: Clearing the browser storage will permanently delete all the solidity files stored there. This is an inherent limitation of a browser-based IDE.  However, if you want to store files outside of the browser and on your computer's filesystem, use Remixd or use the desktop version of Remix-IDE. RemixD enables you to have access to a selected folder on your hard drive. Remix Desktop is a version of Remix-IDE in an Electron app."
+msgstr ""
+
+#: ../../file_explorer.md:14
+msgid "You can rename, remove or add new files to the file explorer."
+msgstr ""
+
+#: ../../file_explorer.md:19
+msgid "We will start by reviewing the icons in the image above."
+msgstr ""
+
+#: ../../file_explorer.md:21
+msgid "The book icon - A. is the link to the module's documentation."
+msgstr ""
+
+#: ../../file_explorer.md:23
+msgid "The icons to the right of the browser file explorer in the image above only appear for browser storage."
+msgstr ""
+
+#: ../../file_explorer.md:25
+msgid "Create new File"
+msgstr ""
+
+#: ../../file_explorer.md:28
+msgid "The icon marked B. above. Creates a new file."
+msgstr ""
+
+#: ../../file_explorer.md:30
+msgid "Publish to Gist"
+msgstr ""
+
+#: ../../file_explorer.md:33
+msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
+msgstr ""
+
+#: ../../file_explorer.md:36
+msgid "Click this link to Github tokens setup and select Generate new token. Then check the Create gists checkbox and generate a new token."
+msgstr ""
+
+#: ../../file_explorer.md:38
+msgid "Take the token and paste it in Remix's Settings module in the Github Access Token section. And then click Save. Now you should be able to use the feature."
+msgstr ""
+
+#: ../../file_explorer.md:40
+msgid "Create a folder"
+msgstr ""
+
+#: ../../file_explorer.md:43
+msgid "The icon marked D. above.  Creates a new folder in browser file explorer."
+msgstr ""
+
+#: ../../file_explorer.md:45
+msgid "Context Menu (Right Click)"
+msgstr ""
+
+#: ../../file_explorer.md:47
+msgid "Right click on a file or a folder and the context menu will appear."
+msgstr ""
+
+#: ../../file_explorer.md:51
+msgid "You can rename or delete a selected file or a folder. You can also create a folder."
+msgstr ""
+
+#: ../../file_explorer.md:53
+msgid "To create a file with the context menu, right click on a folder to get the Create File option. A file will be created inside that folder."
+msgstr ""
+
+#: ../../file_explorer.md:57
+msgid "The functionality of the context menu also works with RemixD (which gives you have access to a folder on your hard drive)."
+msgstr ""
+
+#: ../../file_explorer.md:59
+msgid "Note: When working with RemixD, you need to open and close the localhost folder to refresh the view."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../import.md:1
+msgid "Importing Source Files in Solidity"
+msgstr ""
+
+#: ../../import.md:4
+msgid "There are multiple techniques for importing files into Remix."
+msgstr ""
+
+#: ../../import.md:6
+msgid "For a tutorial about importing files click here.  You can also find this tutorial in the Remix Workshops plugin."
+msgstr ""
+
+#: ../../import.md:8
+msgid "For a detailed explanation of the import keyword see the Solidity documentation"
+msgstr ""
+
+#: ../../import.md:11
+msgid "Here are a some of the main methods of importing a file:"
+msgstr ""
+
+#: ../../import.md:13
+msgid "Importing a file from the browser's local storage"
+msgstr ""
+
+#: ../../import.md:16
+msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
+msgstr ""
+
+#: ../../import.md:24
+msgid "Importing a file from your computer's filesystem"
+msgstr ""
+
+#: ../../import.md:27
+msgid "This method uses remixd - the remix daemon.  Please go to the remixd tutorial for instructions about how to bridge the divide between the browser and your computers filesystem."
+msgstr ""
+
+#: ../../import.md:30
+msgid "Importing from GitHub"
+msgstr ""
+
+#: ../../import.md:33
+msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
+msgstr ""
+
+#: ../../import.md:42
+msgid "Importing from Swarm"
+msgstr ""
+
+#: ../../import.md:45
+msgid "Files can be imported using all URLs supported by swarm. If you do not have a swarm node, then use swarm-gateways.net."
+msgstr ""
+
+#: ../../import.md:52
+msgid "Importing from IPFS"
+msgstr ""
+
+#: ../../import.md:55
+msgid "Files can be imported from IPFS."
+msgstr ""
+
+#: ../../import.md:61
+msgid "Importing from the console"
+msgstr ""
+
+#: ../../import.md:64
+msgid "You can also use a remix command remix.loadurl('<the_url>')in the console. You should specify the release tag (where available), otherwise you will get the latest code in the master branch. For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
+msgstr ""
+
+#: ../../import.md:70
+msgid "Notice that this will create a github folder in the file explorer.  To load a file in the github folder, you would use a command like this:"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:2
+msgid "Welcome to Remix documentation!"
+msgstr ""
+
+#: ../../index.rst:4
+msgid "Remix is a powerful, open source tool that helps you write Solidity contracts straight from the browser. Written in JavaScript, Remix supports both usage in the browser and locally."
+msgstr ""
+
+#: ../../index.rst:7
+msgid "Remix also supports testing, debugging and deploying of smart contracts and much more."
+msgstr ""
+
+#: ../../index.rst:9
+msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
+msgstr ""
+
+#: ../../index.rst:14
+msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
+msgstr ""
+
+#: ../../index.rst:16
+msgid "Useful links:"
+msgstr ""
+
+#: ../../index.rst:18
+msgid "`Solidity documentation <https://solidity.readthedocs.io>`__"
+msgstr ""
+
+#: ../../index.rst:20
+msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
+msgstr ""
+
+#: ../../index.rst:22
+msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
+msgstr ""
+
+#: ../../index.rst:24
+msgid "`Ethereum StackExchange for Remix <https://ethereum.stackexchange.com/questions/tagged/remix>`__"
+msgstr ""
+
+#: ../../index.rst:26
+msgid "`Community support channel <https://gitter.im/ethereum/remix>`__"
+msgstr ""
+
+#: ../../index.rst:28
+msgid "`Ðapp Developer resources (Ethereum wiki) <https://github.com/ethereum/wiki/wiki/Dapp-Developer-Resources>`__"
+msgstr ""
+
+#: ../../index.rst:30
+msgid "New Layout Intro"
+msgstr ""
+
+#: ../../index.rst:36
+msgid "Tour of default modules"
+msgstr ""
+
+#: ../../index.rst:46
+msgid "Tour of typical solidity modules"
+msgstr ""
+
+#: ../../index.rst:56
+msgid "Solidity Unit Testing"
+msgstr ""
+
+#: ../../index.rst:64
+msgid "Using Remix"
+msgstr ""
+
+#: ../../index.rst:76
+msgid "Miscellaneous"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../layout.md:1
+msgid "Remix-IDE Layout"
+msgstr ""
+
+#: ../../layout.md:4
+msgid "The new structure"
+msgstr ""
+
+#: ../../layout.md:8
+msgid "Icon Panel - click to change which plugin appears in the Side Panel"
+msgstr ""
+
+#: ../../layout.md:9
+msgid "Side Panel - Most but not all plugins will have their GUI here."
+msgstr ""
+
+#: ../../layout.md:10
+msgid "Main Panel - In the old layout this was just for editing files.  In the tabs can be plugins or files for the IDE to compile."
+msgstr ""
+
+#: ../../layout.md:11
+msgid "Terminal - where you will see the results of your interactions with the GUI's.  Also you can run scripts here."
+msgstr ""
+
+#: ../../layout.md:13
+msgid "Icon Panel at Page Load"
+msgstr ""
+
+#: ../../layout.md:15
+msgid "When you load remix - the icon panel show these icons by default."
+msgstr ""
+
+#: ../../layout.md:19
+msgid "Everything in remix is now a plugin...  so the Plugin Manager is very important. In the old layout, each basic task in remix was separated into the tabs.  Now these tabs are plugins."
+msgstr ""
+
+#: ../../layout.md:22
+msgid "But to activate a half a dozen plugins - (or however many you are using) each time the page load is tedious.  So learn about the Environments."
+msgstr ""
+
+#: ../../layout.md:24
+msgid "Homepage"
+msgstr ""
+
+#: ../../layout.md:29
+msgid "The homepage is located in a tab in the Main Panel."
+msgstr ""
+
+#: ../../layout.md:31
+msgid "You can also get there by clicking the remix logo at the top of the icon panel."
+msgstr ""
+
+#: ../../layout.md:33
+msgid "Environments"
+msgstr ""
+
+#: ../../layout.md:34
+msgid "Clicking on one of the environment buttons loads up a collection of plugins.  We currently have a Solidity Button and a Vyper button.  In the future you will be able to save your own environment."
+msgstr ""
+
+#: ../../layout.md:36
+msgid "To see all the plugins go to the plugin manager - by selecting the plug in the icon panel."
+msgstr ""
+
+#: ../../layout.md:39
+msgid "The environment buttons are time & sanity savers - so you don't need to go to the plugin manager to get started everytime you load the page."
+msgstr ""
+
+#: ../../layout.md:42
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../layout.md:45
+msgid "In order to make Remix flexible for integrating changes into its functionality and for integrating remix into other projects (your's for example), we've now made everything a plugin.  This means that you only load the functionality you need.  It also means that you need a place to turn off and on plugins - as your needs change.  This all happens in the plug manager."
+msgstr ""
+
+#: ../../layout.md:47
+msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr ""
+
+#: ../../layout.md:49
+msgid "Themes"
+msgstr ""
+
+#: ../../layout.md:52
+msgid "So you want to work on Remix with a dark theme or a gray theme or just a different theme that the one you are currently looking at?  Go to the settings tab and at the bottom is a choice of lots of bootstrap based themes."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../locations.md:1
+msgid "Remix URLs & Links with Parameters"
+msgstr ""
+
+#: ../../locations.md:4
+msgid "Remix URLs"
+msgstr ""
+
+#: ../../locations.md:5
+msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
+msgstr ""
+
+#: ../../locations.md:6
+msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
+msgstr ""
+
+#: ../../locations.md:8
+msgid "Github repo: https://github.com/ethereum/remix-project . The README contains instructions for running Remix-IDE locally."
+msgstr ""
+
+#: ../../locations.md:10
+msgid "Github release: https://github.com/ethereum/remix-project/releases ."
+msgstr ""
+
+#: ../../locations.md:13
+msgid "Embedding & Linking to Remix"
+msgstr ""
+
+#: ../../locations.md:15
+msgid "Remix-IDE's urls have parameters -so it is possible to specify:"
+msgstr ""
+
+#: ../../locations.md:16
+msgid "the list of plugins you want activated"
+msgstr ""
+
+#: ../../locations.md:17
+msgid "the theme (Dark or Light)"
+msgstr ""
+
+#: ../../locations.md:18
+msgid "the panels that should be minimized"
+msgstr ""
+
+#: ../../locations.md:19
+msgid "if you want the Solidity compiler to have optimize enabled"
+msgstr ""
+
+#: ../../locations.md:21
+msgid "In the following example, there is a list of plugins that follows the word plugins will be activated and the last plugin will gain the focus."
+msgstr ""
+
+#: ../../locations.md:26
+msgid "For the plugin are called by their name in their profile.  To check for a plugin's profile name - for plugins built by external teams, please go to https://github.com/ethereum/remix-plugins-directory/tree/master/plugins"
+msgstr ""
+
+#: ../../locations.md:28
+msgid "Further Customization with URL parameters"
+msgstr ""
+
+#: ../../locations.md:30
+msgid "The following URL will close everything except the main panel & the icon panel (so the side and terminal are minimized)"
+msgstr ""
+
+#: ../../locations.md:32
+msgid "https://remix.ethereum.org/?#embed=true"
+msgstr ""
+
+#: ../../locations.md:34
+msgid "To link with the side panel minimized use this URL:"
+msgstr ""
+
+#: ../../locations.md:36
+msgid "https://remix.ethereum.org/?#minimizesidepanel=true"
+msgstr ""
+
+#: ../../locations.md:38
+msgid "To link to Remix with the dark theme or the light theme specified use this url:"
+msgstr ""
+
+#: ../../locations.md:40
+msgid "https://remix.ethereum.org/?#theme=Dark"
+msgstr ""
+
+#: ../../locations.md:42
+msgid "To link to Remix with the Solidity compiler, the unit testing, and LearnEth plugins activated (with Learneth gaining the side panel's focus) & with the Light theme loaded & with the terminal minimized use this URL & with optimize off:"
+msgstr ""
+
+#: ../../locations.md:44
+msgid "https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../plugin_manager.md:1
+msgid "Plugin Manager"
+msgstr ""
+
+#: ../../plugin_manager.md:4
+msgid "Everything is a PLUGIN in Remix"
+msgstr ""
+
+#: ../../plugin_manager.md:6
+msgid "In order to integrate new tools made by us and by ...you into Remix, we've now made everything a plugin. This architecture will also allow Remix or just parts of Remix to be integrated into other projects (your's for example)."
+msgstr ""
+
+#: ../../plugin_manager.md:9
+msgid "This means that you only load the functionality you need."
+msgstr ""
+
+#: ../../plugin_manager.md:11
+msgid "It also means that you can turn off and on plugins - as your needs change."
+msgstr ""
+
+#: ../../plugin_manager.md:13
+msgid "This all happens in the plug manager."
+msgstr ""
+
+#: ../../plugin_manager.md:15
+msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix."
+msgstr ""
+
+#: ../../plugin_manager.md:17
+msgid "To load your local plugin, you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
+msgstr ""
+
+#: ../../plugin_manager.md:21
+msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../remix_commands.md:1
+msgid "Remix Commands"
+msgstr ""
+
+#: ../../remix_commands.md:4
+msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto completion.  These commands are using the following libraries:"
+msgstr ""
+
+#: ../../remix_commands.md:6
+msgid "ethers: The ethers.js library is a compact and complete JavaScript library for Ethereum."
+msgstr ""
+
+#: ../../remix_commands.md:8
+msgid "remix:  Ethereum IDE and tools for the web."
+msgstr ""
+
+#: ../../remix_commands.md:10
+msgid "web3: The web3.js library is a collection of modules which contain specific functionality for the ethereum ecosystem."
+msgstr ""
+
+#: ../../remix_commands.md:12
+msgid "swarmgw: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
+msgstr ""
+
+#: ../../remix_commands.md:14
+msgid "Here's the list of commands"
+msgstr ""
+
+#: ../../remix_commands.md:15
+msgid "remix.debug(hash): Start debugging a transaction."
+msgstr ""
+
+#: ../../remix_commands.md:17
+msgid "remix.debugHelp(): Display help message for debugging"
+msgstr ""
+
+#: ../../remix_commands.md:19
+msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
+msgstr ""
+
+#: ../../remix_commands.md:21
+msgid "remix.exeCurrent(): Run the script currently displayed in the editor."
+msgstr ""
+
+#: ../../remix_commands.md:23
+msgid "remix.getFile(path): Returns the content of the file located at the given path"
+msgstr ""
+
+#: ../../remix_commands.md:25
+msgid "remix.help(): Display this help message."
+msgstr ""
+
+#: ../../remix_commands.md:27
+msgid "remix.loadgist(id): Load a gist in the file explorer."
+msgstr ""
+
+#: ../../remix_commands.md:29
+msgid "remix.loadurl(url): Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
+msgstr ""
+
+#: ../../remix_commands.md:31
+msgid "remix.setFile(path, content): set the content of the file located at the given path"
+msgstr ""
+
+#: ../../remix_commands.md:33
+msgid "remix.setproviderurl(url): Change the current provider to Web3 provider and set the url endpoint."
+msgstr ""
+
+#: ../../remix_commands.md:35
+msgid "swarmgw.get(url, cb): Download files from Swarm via https**://swarm-gateways.net/"
+msgstr ""
+
+#: ../../remix_commands.md:37
+msgid "swarmgw.put(content, cb): Upload files to Swarm via https**://swarm-gateways.net/"
+msgstr ""
+
+#: ../../remix_commands.md:39
+msgid "ethers.Contract: This API provides a graceful connection to a contract deployed on the blockchain, simplifying calling and querying its functions and handling all the binary protocol and conversion as necessarily."
+msgstr ""
+
+#: ../../remix_commands.md:41
+msgid "ethers.HDNode: A Hierarchical Deterministic Wallet represents a large tree of private keys which can reliably be reproduced from an initial seed."
+msgstr ""
+
+#: ../../remix_commands.md:43
+msgid "ethers.Interface: The Interface Object is a meta-class that accepts a Solidity (or compatible) Application Binary Interface (ABI) and populates functions to deal with encoding and decoding the parameters to pass in and results returned."
+msgstr ""
+
+#: ../../remix_commands.md:45
+msgid "ethers.providers: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
+msgstr ""
+
+#: ../../remix_commands.md:47
+msgid "ethers.SigningKey: The SigningKey interface provides an abstraction around the secp256k1 elliptic curve cryptography library."
+msgstr ""
+
+#: ../../remix_commands.md:49
+msgid "ethers.utils: The utility functions exposed in both the ethers umbrella package and the ethers-utils."
+msgstr ""
+
+#: ../../remix_commands.md:51
+msgid "ethers.utils.AbiCoder: Create a new ABI Coder object"
+msgstr ""
+
+#: ../../remix_commands.md:53
+msgid "ethers.utils.RLP: This encoding method is used internally for several aspects of Ethereum, such as encoding transactions and determining contract addresses."
+msgstr ""
+
+#: ../../remix_commands.md:55
+msgid "ethers.Wallet: A wallet manages a private/public key pair which is used to cryptographically sign transactions and prove ownership on the Ethereum network."
+msgstr ""
+
+#: ../../remix_commands.md:57
+msgid "ethers.version: Contains the version of the ethers container object."
+msgstr ""
+
+#: ../../remix_commands.md:59
+msgid "web3.bzz: Bzz module for interacting with the swarm network."
+msgstr ""
+
+#: ../../remix_commands.md:61
+msgid "web3.eth: Eth module for interacting with the Ethereum network."
+msgstr ""
+
+#: ../../remix_commands.md:63
+msgid "web3.eth.accounts: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
+msgstr ""
+
+#: ../../remix_commands.md:65
+msgid "web3.eth.abi: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
+msgstr ""
+
+#: ../../remix_commands.md:67
+msgid "web3.eth.ens: The web3.eth.ens functions let you interacting with ENS."
+msgstr ""
+
+#: ../../remix_commands.md:69
+msgid "web3.eth.Iban: The web3.eth.Iban function lets convert Ethereum addresses from and to IBAN and BBAN."
+msgstr ""
+
+#: ../../remix_commands.md:71
+msgid "web3.eth.net: Net module for interacting with network properties."
+msgstr ""
+
+#: ../../remix_commands.md:73
+msgid "web3.eth.personal: Personal module for interacting with the Ethereum accounts."
+msgstr ""
+
+#: ../../remix_commands.md:75
+msgid "web3.eth.subscribe: The web3.eth.subscribe function lets you subscribe to specific events in the blockchain."
+msgstr ""
+
+#: ../../remix_commands.md:77
+msgid "web3.givenProvider: When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser. Will return the given provider by the (browser) environment, otherwise null."
+msgstr ""
+
+#: ../../remix_commands.md:79
+msgid "web3.modules: Contains the version of the web3 container object."
+msgstr ""
+
+#: ../../remix_commands.md:81
+msgid "web3.providers: Contains the current available providers."
+msgstr ""
+
+#: ../../remix_commands.md:83
+msgid "web3.shh: Shh module for interacting with the whisper protocol"
+msgstr ""
+
+#: ../../remix_commands.md:85
+msgid "web3.utils: This package provides utility functions for Ethereum dapps and other **web3.js packages."
+msgstr ""
+
+#: ../../remix_commands.md:87
+msgid "web3.version: Contains the version of the web3 container object."
+msgstr ""
+
+#: ../../remix_commands.md:89
+msgid "web3.eth.clearSubscriptions();: Resets subscriptions."
+msgstr ""
+
+#: ../../remix_commands.md:91
+msgid "web3.eth.Contract(jsonInterface[, address][, options]): The **web3.eth.Contract object makes it easy to interact with smart contracts on the ethereum blockchain."
+msgstr ""
+
+#: ../../remix_commands.md:93
+msgid "web3.eth.accounts.create([entropy]);: The web3.eth.accounts contains functions to generate Ethereum accounts and sign transactions and data."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../remixd.md:1
+msgid "Remixd: Access your Local Filesystem"
+msgstr ""
+
+#: ../../remixd.md:3
+msgid "To give the Remix-ide (the web app) access to a folder on your local computer, you need to use remixd."
+msgstr ""
+
+#: ../../remixd.md:5
+msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
+msgstr ""
+
+#: ../../remixd.md:8
+msgid "NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin."
+msgstr ""
+
+#: ../../remixd.md:10
+msgid "The code of remixd is here ."
+msgstr ""
+
+#: ../../remixd.md:13
+msgid "remixd Installation"
+msgstr ""
+
+#: ../../remixd.md:14
+msgid "remixd can be globally installed using the following command: npm install -g remixd"
+msgstr ""
+
+#: ../../remixd.md:17
+msgid "Or just install it in the directory of your choice by removing the -g flag: npm install remixd"
+msgstr ""
+
+#: ../../remixd.md:20
+msgid "remixd Command"
+msgstr ""
+
+#: ../../remixd.md:21
+msgid "From the terminal, the command remixd -s <absolute-path-to-the-shared-folder> --remix-ide <your-remix-ide-URL-instance> will start remixd and will share the given folder with remix-ide."
+msgstr ""
+
+#: ../../remixd.md:23
+msgid "For example, to use remixd with Remix IDE, use this command: remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org"
+msgstr ""
+
+#: ../../remixd.md:26
+msgid "Make sure that if you use https://remix.ethereum.org (secure http) in the remixd command (like in the example above), that you are also pointing your browser to https://remix.ethereum.org and not to http://remix.ethereum.org (plain old insecure http).  Or if you want to use http in the browser use http in the remixd command."
+msgstr ""
+
+#: ../../remixd.md:28
+msgid "The folder is shared using a websocket connection between Remix IDE and remixd."
+msgstr ""
+
+#: ../../remixd.md:31
+msgid "Be sure the user executing remixd has read/write permission on the folder."
+msgstr ""
+
+#: ../../remixd.md:34
+msgid "There is an option to run remixd in read-only mode, use --read-only flag."
+msgstr ""
+
+#: ../../remixd.md:36
+msgid "Warning!"
+msgstr ""
+
+#: ../../remixd.md:37
+msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
+msgstr ""
+
+#: ../../remixd.md:40
+msgid "After the command is running, activate the remixd plugin."
+msgstr ""
+
+#: ../../remixd.md:41
+msgid "From Remix IDE, in the Plugin Manager, activate the remixd plugin.  This plugin is a websocket plugin and it has no UI other than a modal dialog box."
+msgstr ""
+
+#: ../../remixd.md:43
+msgid "This modal will ask confirmation"
+msgstr ""
+
+#: ../../remixd.md:45
+msgid "Accepting this dialog will start a session."
+msgstr ""
+
+#: ../../remixd.md:47
+msgid "If you do not have remixd running in the background - another modal will open up and it will say:"
+msgstr ""
+
+#: ../../remixd.md:54
+msgid "Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be available in the file explorer."
+msgstr ""
+
+#: ../../remixd.md:56
+msgid "When you click the activation of remixd is successful - there will NOT be an icon that loads in the icon panel."
+msgstr ""
+
+#: ../../remixd.md:58
+msgid "Click the File Explorers icon and in the swap panel you should now see the folder for localhost."
+msgstr ""
+
+#: ../../remixd.md:60
+msgid "Click on the localhost connection icon:"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../remix_tutorials_github.md:1
+msgid "Remix Github Tutorials"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:4
+msgid "There are a series of tutorials in our github repo remix-workshops."
+msgstr ""
+
+#: ../../remix_tutorials_github.md:6
+msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
+msgstr ""
+
+#: ../../remix_tutorials_github.md:8
+msgid "In this repo there tutorials for all levels."
+msgstr ""
+
+#: ../../remix_tutorials_github.md:10
+msgid "There are tutorials for specific remix functionalities like:"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:12
+msgid "Deploying"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:18
+msgid "Testing"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:23
+msgid "Remix Plugin Development"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:27
+msgid "Other"
+msgstr ""
+
+#: ../../remix_tutorials_github.md:35
+msgid "Additional external workshops"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../run.md:1
+msgid "Deploy & Run"
+msgstr ""
+
+#: ../../run.md:4
+msgid "The Deploy & Run module allows you to send transactions to the current environment."
+msgstr ""
+
+#: ../../run.md:6
+msgid "To use this module, you need to have a contract compiled.  So, if there is a contract name in the <b>CONTRACT</b> select box (the select box is under the VALUE input field), you can use this module.  If nothing is there or you do not see the contract you want, you need to select a contract in the editor to make it active, go to a compiler module and compile it, and then come back to Deploy & Run."
+msgstr ""
+
+#: ../../run.md:10
+msgid "Environment"
+msgstr ""
+
+#: ../../run.md:13
+msgid "JavaScript VM: All the transactions will be executed in a sandbox blockchain in the browser. This means nothing will be persisted when you reload the page. The JsVM is its own blockchain and on each reload it will start a new blockchain, the old one will not be saved."
+msgstr ""
+
+#: ../../run.md:17
+msgid "Injected Provider: Remix will connect to an injected web3 provider. Metamask is an example of a provider that inject web3."
+msgstr ""
+
+#: ../../run.md:20
+msgid "Web3 Provider: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client."
+msgstr ""
+
+#: ../../run.md:22
+msgid "More about Web3 Provider"
+msgstr ""
+
+#: ../../run.md:24
+msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
+msgstr ""
+
+#: ../../run.md:26
+msgid "geth --rpc --rpccorsdomain https://remix.ethereum.org"
+msgstr ""
+
+#: ../../run.md:28
+msgid "Also see Geth Docs about the rpc server"
+msgstr ""
+
+#: ../../run.md:30
+msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
+msgstr ""
+
+#: ../../run.md:32
+msgid "geth --rpc --rpccorsdomain=\"https://remix.ethereum.org\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
+msgstr ""
+
+#: ../../run.md:34
+msgid "If you are using remix-alpha or a local version of remix - replace the url of the --rpccorsdomain with the url of Remix that you are using."
+msgstr ""
+
+#: ../../run.md:36
+msgid "To run Remix Desktop & a local test node, use this Geth command:"
+msgstr ""
+
+#: ../../run.md:38
+msgid "geth --rpc --rpccorsdomain=\"package://a7df6d3c223593f3550b35e90d7b0b1f.mod\" --rpcapi web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console"
+msgstr ""
+
+#: ../../run.md:40
+msgid "Also see Geth Docs on Dev mode"
+msgstr ""
+
+#: ../../run.md:42
+msgid "The Web3 Provider Endpoint for a local node is http://localhost:8545"
+msgstr ""
+
+#: ../../run.md:46
+msgid "WARNING: Don't get lazy. It is a bad idea to use the Geth flag <b>--rpccorsdomain</b> with a wildcard: --rpccorsdomain *"
+msgstr ""
+
+#: ../../run.md:48
+msgid "If you put the wildcard *, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  --rpccorsdomain 'https://remix-alpha.ethereum.org'"
+msgstr ""
+
+#: ../../run.md:50
+msgid "Only use --rpccorsdomain * when using a test chain AND using only test accounts. For real accounts or on the mainchain specify the url."
+msgstr ""
+
+#: ../../run.md:55
+msgid "Account:"
+msgstr ""
+
+#: ../../run.md:57
+msgid "Account: the list of accounts associated with the current environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
+msgstr ""
+
+#: ../../run.md:60
+msgid "Gas Limit:"
+msgstr ""
+
+#: ../../run.md:62
+msgid "This sets the maximum amount of gas that will be allowed for all the transactions created in Remix."
+msgstr ""
+
+#: ../../run.md:65
+msgid "Value:"
+msgstr ""
+
+#: ../../run.md:67
+msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is NOT for gas."
+msgstr ""
+
+#: ../../run.md:71
+msgid "Initiate Instance"
+msgstr ""
+
+#: ../../run.md:74
+msgid "In the image above, the select box is set to Ballot.  This select box will contain the list of compiled contracts."
+msgstr ""
+
+#: ../../run.md:76
+msgid "Deploy send a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). Note that if the constructor has parameters, you need to specify them."
+msgstr ""
+
+#: ../../run.md:81
+msgid "At Address this is used at access a contract that has already been deployed. It assumes that the given address is an instance of the selected contract.  Note: There's no check at this point, so be careful when using this feature, and be sure you trust the contract at that address."
+msgstr ""
+
+#: ../../run.md:84
+msgid "Pending Instances"
+msgstr ""
+
+#: ../../run.md:87
+msgid "Validating a transaction takes several seconds. During this time, the GUI shows it in a pending mode. When the transaction is mined, the number of pending transactions is updated and the transaction is added to the log (see terminal)."
+msgstr ""
+
+#: ../../run.md:92
+msgid "Using the ABI"
+msgstr ""
+
+#: ../../run.md:95
+msgid "Using Deploy or At Address is a classic use case of Remix. However, it is possible to interact with a contract by using its ABI. The ABI is a JSON array which describe its interface."
+msgstr ""
+
+#: ../../run.md:99
+msgid "To interact with a contract using the ABI, create a new file in Remix with extension *.abi and copy the ABI content to it. Then, in the input next to At Address, put the Address of the contract you want to interact with. Click on At Address, a new \"connection\" with the contract will popup below."
+msgstr ""
+
+#: ../../run.md:105
+msgid "Using the Recorder"
+msgstr ""
+
+#: ../../run.md:108
+msgid "The Recorder is a tool used to save a bunch of transactions in a JSON file and rerun them later either in the same environment or in another."
+msgstr ""
+
+#: ../../run.md:111
+msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr ""
+
+#: ../../run.md:113
+msgid "There are many use cases for the recorder."
+msgstr ""
+
+#: ../../run.md:115
+msgid "For instance:"
+msgstr ""
+
+#: ../../run.md:117
+msgid "After having coded and tested contracts in a constrained environment (like the JavaScript VM), you could then change the environment and redeploy it to a more realistic environment like a test net with an injected web3 or to a Geth node. By using the generated scenario.json file, you will be using all the same settings that you used in the Javascript VM.  And this mean that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
+msgstr ""
+
+#: ../../run.md:120
+msgid "You can also change the settings in the scenario.json file to customize the playback."
+msgstr ""
+
+#: ../../run.md:122
+msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
+msgstr ""
+
+#: ../../run.md:125
+msgid "Working in a dev environment often requires to setup the state in a first place."
+msgstr ""
+
+#: ../../run.md:130
+msgid "scenario.json"
+msgstr ""
+
+#: ../../run.md:131
+msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a 0 next to Transactions Recorded.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
+msgstr ""
+
+#: ../../run.md:133
+msgid "The JSON file below is an example of the scenario.json file."
+msgstr ""
+
+#: ../../run.md:135
+msgid "In it, 3 transactions are executed:"
+msgstr ""
+
+#: ../../run.md:137
+msgid "The first corresponds to the deployment of the lib testLib."
+msgstr ""
+
+#: ../../run.md:139
+msgid "The second corresponds to the deployment of the contract test with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property linkReferences. In that case we use the address of the previously created library : created{1512830014773}. The number is the id (timestamp) of the transaction that led to the creation of the library."
+msgstr ""
+
+#: ../../run.md:146
+msgid "The third record corresponds to the call to the function set of the contract test (the property to is set to: created{1512830015080}) . Input parameters are 1 and 0xca35b7d915458ef540ade6068dfe2f44e8fa733c"
+msgstr ""
+
+#: ../../run.md:151
+msgid "All these transactions are created using the value of the accounts account{0}."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../settings.md:1
+msgid "Settings"
+msgstr ""
+
+#: ../../settings.md:4
+msgid "To get to Settings click the gear a the very bottom of the icon panel."
+msgstr ""
+
+#: ../../settings.md:6
+msgid "You can find a link to the homepage (if you closed it) as well as a link to our Gitter Channel and for you aesthetes out there, we now have a rather large list of themes."
+msgstr ""
+
+#: ../../settings.md:10
+msgid "Another important settings:"
+msgstr ""
+
+#: ../../settings.md:12
+msgid "Text wrap: controls if the text in the editor should be wrapped."
+msgstr ""
+
+#: ../../settings.md:14
+msgid "Enable optimization: defines if the compiler should enable optimization during compilation. Enabling this option saves execution gas. It is useful to enable optimization for contracts ready to be deployed in production but could lead to some inconsistencies when debugging such a contract."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../solidity_editor.md:1
+msgid "Solidity Editor"
+msgstr ""
+
+#: ../../solidity_editor.md:4
+msgid "The Remix editor recompiles the code each time the current file is changed or another file is selected. It also provides syntax highlighting mapped to solidity keywords."
+msgstr ""
+
+#: ../../solidity_editor.md:10
+msgid "Here's the list of some important features:"
+msgstr ""
+
+#: ../../solidity_editor.md:12
+msgid "It display opened files as tabs."
+msgstr ""
+
+#: ../../solidity_editor.md:13
+msgid "Compilation Warning and Error are displayed in the gutter"
+msgstr ""
+
+#: ../../solidity_editor.md:14
+msgid "Remix saves the current file continuously (5s after the last changes)"
+msgstr ""
+
+#: ../../solidity_editor.md:16
+msgid "+/- on the top left corner enable you to increase/decrease the font size of the editor"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../static_analysis.md:1
+msgid "Solidity Static Analysis"
+msgstr ""
+
+#: ../../static_analysis.md:4
+msgid "Static code analysis is a process to debug the code by examining it and without actually executing the code."
+msgstr ""
+
+#: ../../static_analysis.md:6
+msgid "Solidity Static Analysis plugin performs static analysis on Solidity smart contracts once they are compiled. It checks for security vulnerabilities and bad development practices, among other issues. This plugin comes with Solidity environment of Remix IDE. It can also be activated individually from Plugin Manager."
+msgstr ""
+
+#: ../../static_analysis.md:8
+msgid "How to use"
+msgstr ""
+
+#: ../../static_analysis.md:11
+msgid "If you select this plugin, you will see a number of modules listed along with checkboxes, one Auto run checkbox and a Run button."
+msgstr ""
+
+#: ../../static_analysis.md:15
+msgid "By default, all modules are selected for analysis and a new analysis is performed at each compilation."
+msgstr ""
+
+#: ../../static_analysis.md:17
+msgid "One can select/deselect the modules under which contract should be analyzed and can run the analysis again for last compiled contract by clicking on Run."
+msgstr ""
+
+#: ../../static_analysis.md:19
+msgid "If you don't want to run analysis each time you compile a contract, just uncheck the checkbox near to Auto run."
+msgstr ""
+
+#: ../../static_analysis.md:21
+msgid "Analysis Modules"
+msgstr ""
+
+#: ../../static_analysis.md:23
+msgid "Currently, with Remix IDE v0.10.1, there are 21 analysis modules listed under 4 categories. Categories are: Security, Gas & Economy, ERC & Miscellaneous."
+msgstr ""
+
+#: ../../static_analysis.md:25
+msgid "Here is the list of modules under each category along with the example code which should be avoided or used very carefully while development:"
+msgstr ""
+
+#: ../../static_analysis.md:27
+msgid "Category: Security"
+msgstr ""
+
+#: ../../static_analysis.md:28
+msgid "Transaction origin: 'tx.origin' is used"
+msgstr ""
+
+#: ../../static_analysis.md:30
+msgid "tx.origin is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
+msgstr ""
+
+#: ../../static_analysis.md:32
+#: ../../static_analysis.md:41
+#: ../../static_analysis.md:54
+#: ../../static_analysis.md:65
+#: ../../static_analysis.md:78
+#: ../../static_analysis.md:87
+#: ../../static_analysis.md:95
+#: ../../static_analysis.md:105
+#: ../../static_analysis.md:119
+#: ../../static_analysis.md:136
+#: ../../static_analysis.md:150
+#: ../../static_analysis.md:168
+#: ../../static_analysis.md:194
+#: ../../static_analysis.md:207
+#: ../../static_analysis.md:217
+#: ../../static_analysis.md:229
+#: ../../static_analysis.md:239
+#: ../../static_analysis.md:247
+#: ../../static_analysis.md:257
+#: ../../static_analysis.md:269
+#: ../../static_analysis.md:284
+msgid "Example:"
+msgstr ""
+
+#: ../../static_analysis.md:37
+msgid "Check effects: Potential reentrancy bugs"
+msgstr ""
+
+#: ../../static_analysis.md:39
+msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
+msgstr ""
+
+#: ../../static_analysis.md:50
+msgid "Inline assembly: Inline assembly used"
+msgstr ""
+
+#: ../../static_analysis.md:52
+msgid "Use of inline assembly is advised only in rare cases."
+msgstr ""
+
+#: ../../static_analysis.md:61
+msgid "Block timestamp: Semantics maybe unclear"
+msgstr ""
+
+#: ../../static_analysis.md:63
+msgid "now does not mean current time. now is an alias for block.timestamp. block.timestamp can be influenced by miners to a certain degree, be careful."
+msgstr ""
+
+#: ../../static_analysis.md:74
+msgid "Low level calls: Semantics maybe unclear"
+msgstr ""
+
+#: ../../static_analysis.md:76
+msgid "Use of low level call, callcode or delegatecall should be avoided whenever possible. send does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use transfer whenever failure of the ether transfer should rollback the whole transaction."
+msgstr ""
+
+#: ../../static_analysis.md:83
+msgid "Blockhash usage: Semantics maybe unclear"
+msgstr ""
+
+#: ../../static_analysis.md:85
+msgid "blockhash is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
+msgstr ""
+
+#: ../../static_analysis.md:91
+msgid "Selfdestruct: Beware of caller contracts"
+msgstr ""
+
+#: ../../static_analysis.md:93
+msgid "selfdestruct can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
+msgstr ""
+
+#: ../../static_analysis.md:100
+msgid "Category: Gas & Economy"
+msgstr ""
+
+#: ../../static_analysis.md:101
+msgid "Gas costs: Too high gas requirement of functions"
+msgstr ""
+
+#: ../../static_analysis.md:103
+msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
+msgstr ""
+
+#: ../../static_analysis.md:115
+msgid "This on local calls: Invocation of local functions via 'this'"
+msgstr ""
+
+#: ../../static_analysis.md:117
+msgid "Never use this to call functions in the same contract, it only consumes more gas than normal local calls."
+msgstr ""
+
+#: ../../static_analysis.md:132
+msgid "Delete on dynamic Array: Use require/assert appropriately"
+msgstr ""
+
+#: ../../static_analysis.md:134
+msgid "The delete operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
+msgstr ""
+
+#: ../../static_analysis.md:146
+msgid "For loop over dynamic array: Iterations depend on dynamic array's size"
+msgstr ""
+
+#: ../../static_analysis.md:148
+msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
+msgstr ""
+
+#: ../../static_analysis.md:164
+msgid "Ether transfer in loop: Transferring Ether in a for/while/do-while loop"
+msgstr ""
+
+#: ../../static_analysis.md:166
+msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
+msgstr ""
+
+#: ../../static_analysis.md:189
+msgid "Category: ERC"
+msgstr ""
+
+#: ../../static_analysis.md:190
+msgid "ERC20: 'decimals' should be 'uint8'"
+msgstr ""
+
+#: ../../static_analysis.md:192
+msgid "ERC20 Contracts decimals function should have uint8 as return type."
+msgstr ""
+
+#: ../../static_analysis.md:202
+msgid "Category: Miscellaneous"
+msgstr ""
+
+#: ../../static_analysis.md:203
+msgid "Constant/View/Pure functions: Potentially constant/view/pure functions"
+msgstr ""
+
+#: ../../static_analysis.md:205
+msgid "It warns for the methods which potentially should be constant/view/pure but are not."
+msgstr ""
+
+#: ../../static_analysis.md:213
+msgid "Similar variable names: Variable names are too similar"
+msgstr ""
+
+#: ../../static_analysis.md:215
+msgid "It warns on the usage of similar variable names."
+msgstr ""
+
+#: ../../static_analysis.md:225
+msgid "No return: Function with 'returns' not returning"
+msgstr ""
+
+#: ../../static_analysis.md:227
+msgid "It warns for the methods which define a return type but never explicitly return a value."
+msgstr ""
+
+#: ../../static_analysis.md:235
+msgid "Guard conditions: Use 'require' and 'assert' appropriately"
+msgstr ""
+
+#: ../../static_analysis.md:237
+msgid "Use assert(x) if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use require(x) if x can be false, due to e.g. invalid input or a failing external component."
+msgstr ""
+
+#: ../../static_analysis.md:243
+msgid "Result not used: The result of an operation not used"
+msgstr ""
+
+#: ../../static_analysis.md:245
+msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
+msgstr ""
+
+#: ../../static_analysis.md:253
+msgid "String Length: Bytes length != String length"
+msgstr ""
+
+#: ../../static_analysis.md:255
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI defintion) therefore one character is not nessesarily encoded in one byte of data."
+msgstr ""
+
+#: ../../static_analysis.md:265
+msgid "Delete from dynamic array: 'delete' on an array leaves a gap"
+msgstr ""
+
+#: ../../static_analysis.md:267
+msgid "Using delete on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
+msgstr ""
+
+#: ../../static_analysis.md:280
+msgid "Data Truncated: Division on int/uint values truncates the result"
+msgstr ""
+
+#: ../../static_analysis.md:282
+msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
+msgstr ""
+
+#: ../../static_analysis.md:292
+msgid "Remix-analyzer"
+msgstr ""
+
+#: ../../static_analysis.md:294
+msgid "remix-analyzer is the library which works underneath of remix-ide Solidity Static Analysis plugin."
+msgstr ""
+
+#: ../../static_analysis.md:296
+msgid "remix-analyzer is an NPM package. It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the remix-analyzer repository"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../support.md:1
+msgid "Support chat"
+msgstr ""
+
+#: ../../support.md:4
+msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
+msgstr ""
+
+#: ../../support.md:8
+msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../terminal.md:1
+msgid "Terminal"
+msgstr ""
+
+#: ../../terminal.md:6
+msgid "Features, available in the terminal:"
+msgstr ""
+
+#: ../../terminal.md:8
+msgid "It integrates a JavaScript interpreter and the web3 object. It enables the execution of the JavaScript script which interacts with the current context. (note that web3 is only available if the web provider or injected provider mode is selected)."
+msgstr ""
+
+#: ../../terminal.md:12
+msgid "It displays important actions made while interacting with the Remix IDE (i.e. sending a new transaction)."
+msgstr ""
+
+#: ../../terminal.md:14
+msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
+msgstr ""
+
+#: ../../terminal.md:18
+msgid "It allows searching for the data and clearing the logs from the terminal."
+msgstr ""
+
+#: ../../terminal.md:20
+msgid "You can run scripts by inputting them at the bottom after the >."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial_debug.md:1
+msgid "Debugging Transactions"
+msgstr ""
+
+#: ../../tutorial_debug.md:4
+msgid "There are two ways to start debugging, each one corresponds to a different use case."
+msgstr ""
+
+#: ../../tutorial_debug.md:5
+msgid "from the transaction log in the Terminal - use this when you want to debug a transaction."
+msgstr ""
+
+#: ../../tutorial_debug.md:6
+msgid "from the Debugger - use this if you have a transaction hash."
+msgstr ""
+
+#: ../../tutorial_debug.md:8
+msgid "Initiate Debugging from the transaction log in the Terminal"
+msgstr ""
+
+#: ../../tutorial_debug.md:9
+msgid "Let's start with a basic contract ( or replace this one by your own ) :"
+msgstr ""
+
+#: ../../tutorial_debug.md:10
+msgid "create a blank file in the file explorer (by clicking the + icon) and give it a name."
+msgstr ""
+
+#: ../../tutorial_debug.md:11
+msgid "copy the code below."
+msgstr ""
+
+#: ../../tutorial_debug.md:12
+msgid "compile the code."
+msgstr ""
+
+#: ../../tutorial_debug.md:13
+msgid "click the Run & Deploy icon in the icon panel."
+msgstr ""
+
+#: ../../tutorial_debug.md:53
+msgid "For the purpose of this tutorial, we will run the JavaScript VM. This simulates a custom blockchain. You could do the same using a proper backend node."
+msgstr ""
+
+#: ../../tutorial_debug.md:56
+msgid "Let's deploy the contract:"
+msgstr ""
+
+#: ../../tutorial_debug.md:58
+msgid "Click the Deploy button"
+msgstr ""
+
+#: ../../tutorial_debug.md:62
+msgid "You'll see the deployed instance (AKA the udapp)."
+msgstr ""
+
+#: ../../tutorial_debug.md:66
+msgid "Then open it up (by clicking the caret)."
+msgstr ""
+
+#: ../../tutorial_debug.md:71
+msgid "We are going to call the Donate function and will send it ether."
+msgstr ""
+
+#: ../../tutorial_debug.md:73
+msgid "To do this: in the value input box put in 2 and select Ether as the unit (and not wei like I did in the image below - well you could - it won't really change anything)."
+msgstr ""
+
+#: ../../tutorial_debug.md:77
+msgid "Then click the Donate button."
+msgstr ""
+
+#: ../../tutorial_debug.md:79
+msgid "This will send Ether to the this function."
+msgstr ""
+
+#: ../../tutorial_debug.md:81
+msgid "Because we are using the JavaScript VM, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr ""
+
+#: ../../tutorial_debug.md:83
+msgid "Remix displays information related to each transaction result in the terminal."
+msgstr ""
+
+#: ../../tutorial_debug.md:85
+msgid "Check in the terminal where the transaction you just made is logged."
+msgstr ""
+
+#: ../../tutorial_debug.md:87
+msgid "Click the debug button to start debugging it."
+msgstr ""
+
+#: ../../tutorial_debug.md:91
+msgid "Before we get to the actual debugging tool, the next section show how to start debugging session directly from the Debugger."
+msgstr ""
+
+#: ../../tutorial_debug.md:93
+msgid "Initiate Debugging from the Debugger"
+msgstr ""
+
+#: ../../tutorial_debug.md:95
+msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
+msgstr ""
+
+#: ../../tutorial_debug.md:97
+msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
+msgstr ""
+
+#: ../../tutorial_debug.md:99
+msgid "You can start a debug session by providing a transaction hash."
+msgstr ""
+
+#: ../../tutorial_debug.md:101
+msgid "To find a transaction hash:"
+msgstr ""
+
+#: ../../tutorial_debug.md:102
+msgid "Go to a transaction in the terminal."
+msgstr ""
+
+#: ../../tutorial_debug.md:103
+msgid "Click a line with a transaction - to exand the log."
+msgstr ""
+
+#: ../../tutorial_debug.md:104
+msgid "The transaction hash is there - copy it."
+msgstr ""
+
+#: ../../tutorial_debug.md:108
+msgid "Then click in the debugger paste the hash and click on the Start debugging button."
+msgstr ""
+
+#: ../../tutorial_debug.md:112
+msgid "Using the debugger"
+msgstr ""
+
+#: ../../tutorial_debug.md:117
+msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
+msgstr ""
+
+#: ../../tutorial_debug.md:121
+msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
+msgstr ""
+
+#: ../../tutorial_debug.md:125
+msgid "More explaination of what these buttons do."
+msgstr ""
+
+#: ../../tutorial_debug.md:126
+msgid "Step Into"
+msgstr ""
+
+#: ../../tutorial_debug.md:127
+msgid "Step Over Into"
+msgstr ""
+
+#: ../../tutorial_debug.md:130
+msgid "11 panels give detailed information about the execution:"
+msgstr ""
+
+#: ../../tutorial_debug.md:132
+msgid "Instructions"
+msgstr ""
+
+#: ../../tutorial_debug.md:134
+msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
+msgstr ""
+
+#: ../../tutorial_debug.md:137
+msgid "Important note: When this panel is hidden, the slider will have a courser granularity and only stop at expression boundaries, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
+msgstr ""
+
+#: ../../tutorial_debug.md:143
+msgid "Solidity Locals"
+msgstr ""
+
+#: ../../tutorial_debug.md:145
+msgid "The Solidity Locals panel displays local variables associated with the current context."
+msgstr ""
+
+#: ../../tutorial_debug.md:148
+msgid "Solidity State"
+msgstr ""
+
+#: ../../tutorial_debug.md:150
+msgid "The Solidity State panel displays state variables of the current executing contract."
+msgstr ""
+
+#: ../../tutorial_debug.md:153
+msgid "Low level panels"
+msgstr ""
+
+#: ../../tutorial_debug.md:155
+msgid "These panels display low level informations about the execution:"
+msgstr ""
+
+#: ../../tutorial_debug.md:157
+msgid "Stack"
+msgstr ""
+
+#: ../../tutorial_debug.md:158
+msgid "Storages Changes"
+msgstr ""
+
+#: ../../tutorial_debug.md:159
+msgid "Memory"
+msgstr ""
+
+#: ../../tutorial_debug.md:160
+msgid "Call Data"
+msgstr ""
+
+#: ../../tutorial_debug.md:161
+msgid "Call Stack"
+msgstr ""
+
+#: ../../tutorial_debug.md:162
+msgid "Return Value (only if the current step is a RETURN opcode)"
+msgstr ""
+
+#: ../../tutorial_debug.md:163
+msgid "Full Storages Changes (only at the end of the execution - display every storage change of every modified contract)"
+msgstr ""
+
+#: ../../tutorial_debug.md:166
+msgid "Reverted Transaction"
+msgstr ""
+
+#: ../../tutorial_debug.md:168
+msgid "A transaction can be reverted (because of an out of gas exception or Solidity revert statement or because of a low level exception)."
+msgstr ""
+
+#: ../../tutorial_debug.md:171
+msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
+msgstr ""
+
+#: ../../tutorial_debug.md:174
+msgid "Remix will warn you when the execution throws an exception. The warning button will jump to the last opcode before the exception happened."
+msgstr ""
+
+#: ../../tutorial_debug.md:178
+msgid "Breakpoints"
+msgstr ""
+
+#: ../../tutorial_debug.md:180
+msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
+msgstr ""
+
+#: ../../tutorial_debug.md:183
+msgid "Breakpoints can be added and removed by clicking on the line number in the Editor."
+msgstr ""
+
+#: ../../tutorial_debug.md:185
+msgid "When using debug session with breakpoints, the execution will jump to the first encountered breakpoint."
+msgstr ""
+
+#: ../../tutorial_debug.md:188
+msgid "Important note: If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and second time for assigning the actual value. As an example, assume you are debugging the following contract:"
+msgstr ""
+
+#: ../../tutorial_debug.md:206
+msgid "And let's says that breakpoints are set for the lines"
+msgstr ""
+
+#: ../../tutorial_debug.md:208
+msgid "uint p = 45;"
+msgstr ""
+
+#: ../../tutorial_debug.md:210
+msgid "m = 89;"
+msgstr ""
+
+#: ../../tutorial_debug.md:212
+msgid "uint l = 34;"
+msgstr ""
+
+#: ../../tutorial_debug.md:214
+msgid "then clicking on Jump to next breakpoint will stop at the following lines in the given order:"
+msgstr ""
+
+#: ../../tutorial_debug.md:217
+msgid "uint p = 45; (declaration of p)"
+msgstr ""
+
+#: ../../tutorial_debug.md:219
+msgid "uint l = 34; (declaration of l)"
+msgstr ""
+
+#: ../../tutorial_debug.md:221
+msgid "uint p = 45; (45 assigned to p)"
+msgstr ""
+
+#: ../../tutorial_debug.md:223
+msgid "m = 89; (89 assigned to m)"
+msgstr ""
+
+#: ../../tutorial_debug.md:225
+msgid "uint l = 34; (34 assigned to l)"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../udapp.md:1
+msgid "Run & Deploy (part 2)"
+msgstr ""
+
+#: ../../udapp.md:4
+msgid "Deployed contracts"
+msgstr ""
+
+#: ../../udapp.md:6
+msgid "This section in the Run tab contains a list of deployed contracts to interact with through autogenerated UI of the deployed contract (also called udapp)."
+msgstr ""
+
+#: ../../udapp.md:8
+msgid "The deployed contract appears but is in its collapsed form."
+msgstr ""
+
+#: ../../udapp.md:12
+msgid "Click the sideways caret to open it up."
+msgstr ""
+
+#: ../../udapp.md:16
+msgid "You will see the functions in the contract.  The functions buttons can have different color buttons."
+msgstr ""
+
+#: ../../udapp.md:18
+msgid "Functions that are constant or pure functions in Solidity have a blue buttons. Clicking one of this type does not create a new transaction. So clicking will not cause state changes - it will only return a value stored in the contract - so it won't cost you anything in gas fees."
+msgstr ""
+
+#: ../../udapp.md:20
+msgid "Functions that change the state of the contract AND that do not accept Ether are called non-payable functions and have an orange button. Clicking on them will create a transaction and thus cost gas."
+msgstr ""
+
+#: ../../udapp.md:22
+msgid "Functions that have red buttons are payable functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a value.  The value is put in in the Value field which is under the Gas Limit field."
+msgstr ""
+
+#: ../../udapp.md:27
+msgid "See more information about Solidity modifiers in the Solidity docs. ."
+msgstr ""
+
+#: ../../udapp.md:31
+msgid "If a function requires input parameters, well.. you gotta put them in."
+msgstr ""
+
+#: ../../udapp.md:33
+msgid "Inputting parameters"
+msgstr ""
+
+#: ../../udapp.md:37
+msgid "Inputting parameters in the collapsed view"
+msgstr ""
+
+#: ../../udapp.md:39
+msgid "(Inputting all the parameters in a single input box)"
+msgstr ""
+
+#: ../../udapp.md:40
+msgid "The input box tells you what type each parameter needs to be."
+msgstr ""
+
+#: ../../udapp.md:41
+msgid "Numbers and addresses do not need to be wrapped in double quotes."
+msgstr ""
+
+#: ../../udapp.md:42
+msgid "Strings need to be wrapped."
+msgstr ""
+
+#: ../../udapp.md:43
+msgid "Parameters are separated by commas."
+msgstr ""
+
+#: ../../udapp.md:45
+msgid "In the example above the \"delegate\" function has 3 parameters."
+msgstr ""
+
+#: ../../udapp.md:47
+msgid "Inputting parameters in the expanded view"
+msgstr ""
+
+#: ../../udapp.md:48
+msgid "Clicking the 'down' caret brings you to the Multi-param Manager - where you can input the parameters one at a time. Much less confusing!"
+msgstr ""
+
+#: ../../udapp.md:52
+msgid "In the expanded view, strings do not need to be wrapped."
+msgstr ""
+
+#: ../../udapp.md:54
+msgid "Clicking the clipboard icon will encode the inputs and will copy them.  Only a valid set of inputs can be encoded."
+msgstr ""
+
+#: ../../udapp.md:56
+msgid "So if you made a mistake and put a uint8 where an address should have been, clicking the clipboard here will give you an error."
+msgstr ""
+
+#: ../../udapp.md:58
+msgid "Low level interactions"
+msgstr ""
+
+#: ../../udapp.md:60
+msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the recieve() or fallback() function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
+msgstr ""
+
+#: ../../udapp.md:62
+msgid "The low level interactions section is below the functions in each deployed contract."
+msgstr ""
+
+#: ../../udapp.md:67
+msgid "Please note the following:"
+msgstr ""
+
+#: ../../udapp.md:69
+msgid "If you are executing a plain Ether transfer to a contract, you need to have the receive() function in your contract.  If your contract has been deployed and you want to send it funds, you would input the amount of Ether or Wei etc. (see A in graphic below), and then input NOTHING in the calldata field of Low level interactions (see B in graphic) and click the Transact button (see C in graphic below)."
+msgstr ""
+
+#: ../../udapp.md:73
+msgid "If you are sending calldata to your contract with Ether, then you need to use the fallback() function and have it with the state mutability of payable."
+msgstr ""
+
+#: ../../udapp.md:75
+msgid "If you are not sending ether to the contract but are sending call data then you need to use the fallback() function."
+msgstr ""
+
+#: ../../udapp.md:77
+msgid "If you break the rules when using the Low level interactions you will be slapped with a warning."
+msgstr ""
+
+#: ../../udapp.md:79
+msgid "Please see the solidity docs for more specifics about using the fallback and receive functions."
+msgstr ""
+
+#: ../../udapp.md:81
+msgid "Passing in a tuple or a struct to a function"
+msgstr ""
+
+#: ../../udapp.md:82
+msgid "To pass a tuple in, you need to put in an array []."
+msgstr ""
+
+#: ../../udapp.md:84
+msgid "Similarly, to pass in a struct as a parameter of a function, it needs to be put in as an array [].  Also note that the line pragma experimental ABIEncoderV2; needs to put in at the top of the solidity file."
+msgstr ""
+
+#: ../../udapp.md:88
+msgid "Example of passing nested struct to a function"
+msgstr ""
+
+#: ../../udapp.md:89
+msgid "Consider a nested struct defined like this:"
+msgstr ""
+
+#: ../../udapp.md:101
+msgid "If a function has the signature fertilizer(Garden memory gardenPlot) then the correct syntax is:"
+msgstr ""
+
+#: ../../udapp.md:106
+msgid "To continue on this example, here's a sample contract:"
+msgstr ""
+
+#: ../../udapp.md:133
+msgid "After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named fertilizer :"
+msgstr ""
+
+#: ../../udapp.md:139
+msgid "The function fertilizer accepts a single parameter of the type Garden. The type Garden is a struct. Structs are wrapped in square brackets.  Inside Garden is an array that is an array of structs named theFlowers. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../unittesting_examples.md:1
+msgid "Testing by Example"
+msgstr ""
+
+#: ../../unittesting_examples.md:4
+msgid "Here are some examples which can give you better understanding to plan your tests."
+msgstr ""
+
+#: ../../unittesting_examples.md:6
+msgid "Note: Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
+msgstr ""
+
+#: ../../unittesting_examples.md:8
+msgid "1. Simple example"
+msgstr ""
+
+#: ../../unittesting_examples.md:9
+msgid "In this example, we test setting & getting variables."
+msgstr ""
+
+#: ../../unittesting_examples.md:11
+msgid "Contract/Program to be tested: Simple_storage.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:32
+msgid "Test contract/program: simple_storage_test.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:60
+msgid "2. Testing a method involving msg.sender"
+msgstr ""
+
+#: ../../unittesting_examples.md:61
+msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
+msgstr ""
+
+#: ../../unittesting_examples.md:63
+msgid "Contract/Program to be tested: Sender.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:85
+msgid "Test contract/program: Sender_test.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:137
+msgid "3. Testing method execution"
+msgstr ""
+
+#: ../../unittesting_examples.md:139
+msgid "With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed."
+msgstr ""
+
+#: ../../unittesting_examples.md:141
+msgid "To help in such cases, Solidity introduced the try-catch statement in version 0.6.0. Previously, we had to use low-level calls to track down what was going on."
+msgstr ""
+
+#: ../../unittesting_examples.md:143
+msgid "Here is an example test file that use both try-catch blocks and low level calls:"
+msgstr ""
+
+#: ../../unittesting_examples.md:145
+msgid "Contract/Program to be tested: AttendanceRegister.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:174
+msgid "Test contract/program: AttendanceRegister_test.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:262
+msgid "4. Testing a method involving msg.value"
+msgstr ""
+
+#: ../../unittesting_examples.md:263
+msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as msg.value. Sometimes, multiple calculations in a method are performed based on msg.value which can be tested with various values using Remix's Custom transaction context. See the example:"
+msgstr ""
+
+#: ../../unittesting_examples.md:265
+msgid "Contract/Program to be tested: Value.sol"
+msgstr ""
+
+#: ../../unittesting_examples.md:285
+msgid "Test contract/program: Value_test.sol"
+msgstr ""
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Remix, Ethereum-IDE 1\nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-10-21 10:25+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+
+#: ../../unittesting.md:1
+msgid "Unit Testing Plugin"
+msgstr ""
+
+#: ../../unittesting.md:4
+msgid "Click the double check icon to get to the Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:8
+msgid "If you haven't used this plugin before and are not seeing double check icon, you have to activate it from Remix plugin manager."
+msgstr ""
+
+#: ../../unittesting.md:10
+msgid "Go to the plugin manager (by click the plug icon) and load up the unit testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:14
+msgid "Now double check icon will appear on the left side icon bar. Clicking on icon will load the unit testing module in the side panel."
+msgstr ""
+
+#: ../../unittesting.md:16
+msgid "Alternatively, just select Solidity environment from remix IDE home page. This will activate Solidity Unit Testing plugin along with Solidity Compiler, Deploy & Run Transactions & Solidity Static Analysis plugins."
+msgstr ""
+
+#: ../../unittesting.md:20
+msgid "Generate"
+msgstr ""
+
+#: ../../unittesting.md:22
+msgid "Select a solidity file which you want to test and click on the button Generate. It will generate a new sample solidity test file in the current folder suffixed with _test. This file contains the minimum you need for running unit testing."
+msgstr ""
+
+#: ../../unittesting.md:24
+msgid "Write Tests"
+msgstr ""
+
+#: ../../unittesting.md:26
+msgid "Write tests to check the functionality of your contract. Remix injects a built-in assert library which can be used for testing. Visit the library documentation here."
+msgstr ""
+
+#: ../../unittesting.md:28
+msgid "Apart from this, Remix allows usage of some special functions to make testing more structural. They are:"
+msgstr ""
+
+#: ../../unittesting.md:30
+msgid "beforeEach() - Runs before each test"
+msgstr ""
+
+#: ../../unittesting.md:31
+msgid "beforeAll() - Runs before all tests"
+msgstr ""
+
+#: ../../unittesting.md:32
+msgid "afterEach() - Runs after each test"
+msgstr ""
+
+#: ../../unittesting.md:33
+msgid "afterAll() - Runs after all tests"
+msgstr ""
+
+#: ../../unittesting.md:35
+msgid "To get started, see this simple example."
+msgstr ""
+
+#: ../../unittesting.md:37
+msgid "Run"
+msgstr ""
+
+#: ../../unittesting.md:39
+msgid "Once you are done with writing tests, select the _test.sol files in the list and click on the button Run to execute the tests in the selected files. The execution will run in a separate environment and the result will be displayed below."
+msgstr ""
+
+#: ../../unittesting.md:43
+msgid "Stop"
+msgstr ""
+
+#: ../../unittesting.md:45
+msgid "If you have selected multiple files to run the tests and want to stop the execution, click on Stop button. It will stop execution after running the tests for current file."
+msgstr ""
+
+#: ../../unittesting.md:47
+msgid "Customization"
+msgstr ""
+
+#: ../../unittesting.md:49
+msgid "Remix facilitates users with various types of customizations to test a contract properly."
+msgstr ""
+
+#: ../../unittesting.md:51
+msgid "1. Custom Compiler Context"
+msgstr ""
+
+#: ../../unittesting.md:53
+msgid "Solidity Unit Testing refers Solidity Compiler plugin for compiler configurations. One can provide customized inputs for Compiler, EVM Version & Enable Optimization and these will be the configuration settings used for contract compilation before running unit tests."
+msgstr ""
+
+#: ../../unittesting.md:57
+msgid "2. Custom Transaction Context"
+msgstr ""
+
+#: ../../unittesting.md:59
+msgid "For a contract method interaction, prime parameters of transaction are from address, value & gas. Usually, we need to test a method's behaviour under different values of these parameters."
+msgstr ""
+
+#: ../../unittesting.md:61
+msgid "Remix provides the functionality of custom msg.sender & msg.value of transaction using method devdoc like:"
+msgstr ""
+
+#: ../../unittesting.md:71
+msgid "Things to keep in mind while using custom transaction context:"
+msgstr ""
+
+#: ../../unittesting.md:73
+msgid "Parameters must be defined in devdoc of related method"
+msgstr ""
+
+#: ../../unittesting.md:74
+msgid "Each parameter key should be prefixed with a hash (#) and end with a colon following a space (: ) like #sender:  & #value:"
+msgstr ""
+
+#: ../../unittesting.md:75
+msgid "For now, customization is available for parameters sender & value only"
+msgstr ""
+
+#: ../../unittesting.md:76
+msgid "Sender is from address of a transaction which is accessed using msg.sender inside a contract method. It should be defined in a fixed format as 'account-<account_index>'"
+msgstr ""
+
+#: ../../unittesting.md:77
+msgid "<account_index> varies from 0-2 before remix-ide release v0.10.0 and 0-9 afterwards"
+msgstr ""
+
+#: ../../unittesting.md:78
+msgid "remix_accounts.sol must be imported in your test file to use custom sender"
+msgstr ""
+
+#: ../../unittesting.md:79
+msgid "Value is value sent along with a transaction in wei which is accessed using msg.value inside a contract method. It should be a number."
+msgstr ""
+
+#: ../../unittesting.md:81
+msgid "Regarding gas, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with Out-of-Gas error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit"
+msgstr ""
+
+#: ../../unittesting.md:83
+msgid "Various test examples can be seen in examples section."
+msgstr ""
+
+#: ../../unittesting.md:86
+msgid "Points to remember"
+msgstr ""
+
+#: ../../unittesting.md:89
+msgid "A test contract cannot have a method with parameters. Having one such method will show error: Method 'methodname' can not have parameters inside a test contract"
+msgstr ""
+
+#: ../../unittesting.md:90
+msgid "Number of test accounts are 3 before remix-ide release v0.10.0 and 10 afterwards"
+msgstr ""
+
+#: ../../unittesting.md:91
+msgid "A test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin but it will work fine with Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:93
+msgid "Remix-tests"
+msgstr ""
+
+#: ../../unittesting.md:96
+msgid "remix-tests is the module which works underneath of remix-ide Solidity Unit Testing plugin."
+msgstr ""
+
+#: ../../unittesting.md:98
+msgid "remix-tests is an NPM package. It can also be used as  a CLI/CI solution, supporting node.js. Find more information about this type of usage in the remix-tests repository"
+msgstr ""
+
+#: ../../unittesting.md:100
+msgid "For CI implementation example, see Su Squares contract and Travis build that uses remix-tests for continuous integration testing."
+msgstr ""
+

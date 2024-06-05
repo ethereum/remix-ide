@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/slither.pot\n"
+"X-Crowdin-File-ID: 7435\n"
+"Language: ko_KR\n"
+
+#: ../../slither.md:1
+msgid "Slither"
+msgstr ""
+
+#: ../../slither.md:4
+msgid "_(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)_"
+msgstr ""
+
+#: ../../slither.md:6
+msgid "Remixd and Slither"
+msgstr ""
+
+#: ../../slither.md:9
+msgid "**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)"
+msgstr ""
+
+#: ../../slither.md:11
+msgid "When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html)."
+msgstr ""
+
+#: ../../slither.md:13
+msgid "`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepancy, Slither can also be installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_"
+msgstr ""
+
+#: ../../slither.md:16
+msgid "when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)"
+msgstr ""
+
+#: ../../slither.md:18
+msgid "The remixd Slither listener is a websocket plugin similar to remixd and is used to perform Slither analysis with Remix IDE."
+msgstr ""
+
+#: ../../slither.md:20
+msgid "![](images/a-slither-remixd.png)"
+msgstr ""
+
+#: ../../slither.md:22
+msgid "Enable Slither Analysis"
+msgstr ""
+
+#: ../../slither.md:25
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../slither.md:27
+msgid "To use Slither analysis with Remix IDE efficiently, following tools should be installed locally on the system:"
+msgstr ""
+
+#: ../../slither.md:29
+msgid "**Slither:** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)"
+msgstr ""
+
+#: ../../slither.md:30
+msgid "**Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)"
+msgstr ""
+
+#: ../../slither.md:31
+msgid "**Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)"
+msgstr ""
+
+#: ../../slither.md:33
+msgid "There are setup with [remixd](https://www.npmjs.com/package/@remix-project/remixd) installation or can be done using `remixd -i slither` commmand."
+msgstr ""
+
+#: ../../slither.md:35
+msgid "How to use"
+msgstr ""
+
+#: ../../slither.md:37
+msgid "If a project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Static Analysis` plugin with the label `Enable Slither Analysis`."
+msgstr ""
+
+#: ../../slither.md:39
+msgid "![](images/a-slither-analysis.png)"
+msgstr ""
+
+#: ../../slither.md:41
+msgid "There is an info icon on the right side of the label which redirects to a specific section of Remix official documentation that explains how to use Slither Analysis and prerequisites for it."
+msgstr ""
+
+#: ../../slither.md:43
+msgid "One can check the `Enable Slither Analysis` box to run the analysis using Slither along with the Remix's analysis library."
+msgstr ""
+
+#: ../../slither.md:45
+msgid "Latest report of Slither analysis will be stored locally on project root with a file named as `remix-slither-report.json`."
+msgstr ""
+
+#: ../../slither.md:47
+msgid "Slither Analysis report will also be displayed on the Remix IDE side after the Remix analysis report for better user readability."
+msgstr ""
+
+#: ../../slither.md:49
+msgid "![](images/a-slither-analysis-success.png)"
+msgstr ""
+
+#: ../../slither.md:51
+msgid "The result of the analysis will be shown in the Remix IDE terminal"
+msgstr ""
+
+#: ../../slither.md:53
+msgid "![](images/a-slither-analysis-success-terminal.png)"
+msgstr ""
+
+#: ../../slither.md:55
+msgid "and also in the **remixd** console."
+msgstr ""
+
+#: ../../slither.md:57
+msgid "![](images/a-slither-analysis-success-remixd.png)"
+msgstr ""
+
+#: ../../slither.md:59
+msgid "To only run Slither Analysis, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report."
+msgstr ""
+
+#: ../../slither.md:61
+msgid "![](images/a-slither-analysis-only.png)"
+msgstr ""
+
+#: ../../slither.md:63
+msgid "By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look at them, check the box with label `Show warnings for external libraries`."
+msgstr ""
+
+#: ../../slither.md:65
+msgid "![](images/a-slither-analysis-ext-libs.png)"
+msgstr ""
+
+#: ../../slither.md:67
+msgid "More Details"
+msgstr ""
+
+#: ../../slither.md:69
+msgid "Analysis for Slither is run using the version set in `Solidity Compiler` plugin on Remix IDE. Slither is a CLI tool and requires `solc` to run the analysis. Before running the analysis, Slither websocket plugin checks if current version of solc is same as the version set in Remix IDE."
+msgstr ""
+
+#: ../../slither.md:71
+msgid "If the compiler version set in Solidity Compiler is different from current version of solc installed locally, the Slither websocket plugin will update the `solc` to be the same as the required version `solc-select`."
+msgstr ""
+
+#: ../../slither.md:73
+msgid "For example, if current `solc` version on the system is 0.8.4 and on the Remix IDE 0.8.6 is set, `remixd` logs explain remote solc version selection"
+msgstr ""
+
+#: ../../slither.md:75
+msgid "![](images/a-slither-analysis-select.png)"
+msgstr ""
+
+#: ../../slither.md:77
+msgid "After successful analysis run:"
+msgstr ""
+
+#: ../../slither.md:79
+msgid "![](images/a-slither-analysis-select-success.png)"
+msgstr ""
+

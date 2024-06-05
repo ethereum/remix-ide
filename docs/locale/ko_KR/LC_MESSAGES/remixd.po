@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remixd.pot\n"
+"X-Crowdin-File-ID: 6488\n"
+"Language: ko_KR\n"
+
+#: ../../remixd.md:1
+msgid "Remixd: Access your Local Filesystem"
+msgstr ""
+
+#: ../../remixd.md:4
+msgid "[![npm version](https://badge.fury.io/js/%40remix-project%2Fremixd.svg)](https://www.npmjs.com/package/@remix-project/remixd)"
+msgstr ""
+
+#: ../../remixd.md:4
+msgid "npm version"
+msgstr ""
+
+#: ../../remixd.md:6
+msgid "To give the Remix IDE (the web app) access to a folder on your computer, you need to use **Remixd** - the plugin along with **remixd** - the cli/npm module."
+msgstr ""
+
+#: ../../remixd.md:8
+msgid "The **Remixd** plugin can be activated from the plugin manager or in the **File Explorer** - see the image below.  The **connect to localhost** - will activate the **Remixd** plugin."
+msgstr ""
+
+#: ../../remixd.md:10
+msgid "![](images/a-remixd-fe.png)"
+msgstr ""
+
+#: ../../remixd.md:12
+msgid "Once you click **connect to localhost** or activate Remixd from the **Plugin Manager**, a modal will come up:"
+msgstr ""
+
+#: ../../remixd.md:14
+msgid "![](images/a-remixd-modal.png)"
+msgstr ""
+
+#: ../../remixd.md:16
+msgid "The Remixd plugin is a **websocket plugin** and it has no UI other than this modal dialog box - so you won't see a Remixd icon in the icon panel."
+msgstr ""
+
+#: ../../remixd.md:18
+msgid "Before you hit **Connect**, you need to install the [remixd NPM module](https://www.npmjs.com/package/@remix-project/remixd) and run the **remixd** command."
+msgstr ""
+
+#: ../../remixd.md:20
+msgid "The code of `remixd` is [here](https://github.com/ethereum/remix-project/tree/master/libs/remixd) ."
+msgstr ""
+
+#: ../../remixd.md:23
+msgid "remixd Installation"
+msgstr ""
+
+#: ../../remixd.md:25
+msgid "**remixd** is an NPM module and can be globally installed using the following command: `npm install -g @remix-project/remixd`"
+msgstr ""
+
+#: ../../remixd.md:28
+msgid "Or just install it in the directory of your choice by removing the -g flag: `npm install @remix-project/remixd`"
+msgstr ""
+
+#: ../../remixd.md:31
+msgid "**NOTE:** When the remixd NPM module is installed, it also installs [Slither](https://github.com/crytic/slither), [solc-select](https://github.com/crytic/solc-select#quickstart) and sets [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html) to latest version i.e. 0.8.15 currently."
+msgstr ""
+
+#: ../../remixd.md:33
+msgid "**ALSO NOTE:** `Python3.6+ (pip3)` needs to already be installed on the System. (This packaging of Slither with the remixd module is supported since Remixd v0.6.3). In case of any discrepancy, Slither can also installed along with other dependencies using command `remixd -i slither`"
+msgstr ""
+
+#: ../../remixd.md:36
+msgid "Find your version of remixd"
+msgstr ""
+
+#: ../../remixd.md:37
+msgid "The command: `remixd -v` or `remixd --version` will return your version number."
+msgstr ""
+
+#: ../../remixd.md:39
+msgid "**If this command does not work, then you have an outdated version!**"
+msgstr ""
+
+#: ../../remixd.md:40
+msgid "Update to the latest remixd"
+msgstr ""
+
+#: ../../remixd.md:41
+msgid "Because **remixd** creates a bridge from the browser to your local filesystem, it is important that you have the latest version of script."
+msgstr ""
+
+#: ../../remixd.md:43
+msgid "For users who had installed the version of remixd from the **VERY** old NPM address or for users who do not know which NPM address they had installed it from, run these 2 steps:"
+msgstr ""
+
+#: ../../remixd.md:45
+msgid "uninstall the old one: **npm uninstall -g remixd**"
+msgstr ""
+
+#: ../../remixd.md:46
+msgid "install the new: **npm install -g @remix-project/remixd**"
+msgstr ""
+
+#: ../../remixd.md:48
+msgid "**For Most Users** who know that they have a remixd version installed from @remix-project/remixd then just run:"
+msgstr ""
+
+#: ../../remixd.md:50
+msgid "**npm install -g @remix-project/remixd**"
+msgstr ""
+
+#: ../../remixd.md:52
+msgid "remixd command"
+msgstr ""
+
+#: ../../remixd.md:53
+msgid "The remixd command without options uses the terminal's current directory as the shared directory and the shared Remix domain will be `https://remix.ethereum.org`, `https://remix-alpha.ethereum.org`, or `https://remix-beta.ethereum.org`"
+msgstr ""
+
+#: ../../remixd.md:55
+msgid "The remixd command is:<br> `remixd`"
+msgstr ""
+
+#: ../../remixd.md:58
+msgid "If you are using Remix from localhost or you are not running the command from your working directory, you'll need to use the command with flags."
+msgstr ""
+
+#: ../../remixd.md:60
+msgid "remixd options"
+msgstr ""
+
+#: ../../remixd.md:80
+msgid "**NOTE**: `remixd -i slither` can be used to install Slither along with its dependencies"
+msgstr ""
+
+#: ../../remixd.md:82
+msgid "HTTP vs HTTPS in the remixd command"
+msgstr ""
+
+#: ../../remixd.md:83
+msgid "If your browser is on https://remix.ethereum.org (**secure http**) then use https in the command:<br> `remixd -s <absolute-path-to-the-shared-folder> --remix-ide https://remix.ethereum.org`"
+msgstr ""
+
+#: ../../remixd.md:86
+msgid "Or if you are using **http** in the browser, then use **http** in the remixd command."
+msgstr ""
+
+#: ../../remixd.md:88
+msgid "Read/Write permission & Read-only mode"
+msgstr ""
+
+#: ../../remixd.md:89
+msgid "The folder is shared using **a websocket connection** between `Remix IDE` and `remixd`."
+msgstr ""
+
+#: ../../remixd.md:92
+msgid "Be sure the user executing `remixd` has read/write permission on the folder."
+msgstr ""
+
+#: ../../remixd.md:95
+msgid "Alternatively, there is an option to run remixd in read-only mode, use `--read-only` flag."
+msgstr ""
+
+#: ../../remixd.md:97
+msgid "Ports Usage"
+msgstr ""
+
+#: ../../remixd.md:99
+msgid "`remixd` functions by making websocket connections with Remix IDE on different ports. Ports are defined according to specific purpose. Port usage details are as:"
+msgstr ""
+
+#: ../../remixd.md:101
+msgid "**65520** : For `remixd` websocket listener, to share local file system with Remix IDE. Shared folder will be loaded in the Remix IDE `File Explorers` workspace named `localhost`"
+msgstr ""
+
+#: ../../remixd.md:102
+msgid "**65522** : For `hardhat` websocket listener, to enable the Hardhat Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Hardhat project."
+msgstr ""
+
+#: ../../remixd.md:103
+msgid "**65523** : For `slither` websocket listener, to enable the Slither Analysis using Remix IDE `Solidity Static Analysis` plugin"
+msgstr ""
+
+#: ../../remixd.md:104
+msgid "**65524** : For `truffle` websocket listener, to enable the Truffle Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Truffle project."
+msgstr ""
+
+#: ../../remixd.md:107
+msgid "**Note:** Please make sure your system is secured enough and these ports are not opened nor forwarded."
+msgstr ""
+
+#: ../../remixd.md:109
+msgid "Warning!"
+msgstr ""
+
+#: ../../remixd.md:110
+msgid "`remixd` **provides full read and write access** to the given folder **for any application** that can access the `TCP port 65520` on your local host."
+msgstr ""
+
+#: ../../remixd.md:113
+msgid "To minimize the risk, Remixd can **ONLY** bridge between your filesystem and the Remix IDE URLS - including:"
+msgstr ""
+
+#: ../../remixd.md:123
+msgid "(the package:// urls in the list above are for remix desktop)"
+msgstr ""
+
+#: ../../remixd.md:125
+msgid "Clicking Connect on the modal."
+msgstr ""
+
+#: ../../remixd.md:127
+msgid "Clicking on the **Connect** button on the Remixd modal (see the image above), will attempt to start a session where your browser can access the specified folder on your computer's filesystem."
+msgstr ""
+
+#: ../../remixd.md:129
+msgid "If you do not have `remixd` running in the background - another modal will open up and it will say:"
+msgstr ""
+
+#: ../../remixd.md:136
+msgid "Assuming you don't get the 2nd modal, your connection to the remixd daemon is successful. The shared folder will be visible in the File Explorer's workspace under **localhost**."
+msgstr ""
+
+#: ../../remixd.md:138
+msgid "![](images/a-ws-localhost.png)"
+msgstr ""
+
+#: ../../remixd.md:140
+msgid "Creating & deleting folders & files"
+msgstr ""
+
+#: ../../remixd.md:141
+msgid "Clicking on the **new folder** or **new file** icon under **localhost** will create a new file or folder in the shared folder.  Similarly, if you **right click** on a file or folder you can **rename** or **delete** the file."
+msgstr ""
+
+#: ../../remixd.md:143
+msgid "Closing a remixd session"
+msgstr ""
+
+#: ../../remixd.md:144
+msgid "In the terminal where **remixd** is running, typing `ctrl-c` will close the session.  Remix IDE will then put up a modal saying that **remixd** has stopped running."
+msgstr ""
+

@@ -1,0 +1,79 @@
+/**
+ * Theme tokens
+ */
+
+/* Base / light mode theme colors */
+:root {
+  /* Typography */
+  --size-body-xs: 0.75rem;
+  --size-body-small: 0.875rem;
+  --size-body-small-link: var(--size-body-small);
+  --size-body: 1rem;
+  --size-body-link: var(--size-body);
+  --size-body-big: 1.125rem;
+  --size-h1: 2.75rem;
+  --size-h2: 2.25rem;
+  --size-h3: 1.875rem;
+  --size-h4: 1.5rem;
+  --size-h5: 1.25rem;
+  --size-h6: 1rem;
+  --size-left-nav-title: var(--size-body);
+  --size-left-nav-lvl-1: var(--size-body-small);
+
+  --line-height-header: 1.625;
+
+  /* Spacing */
+  --space-side-width: 22.5rem;
+  --space-nav-height: 4.25rem;
+  --space-vertical-menu-pad-x: 1.625rem;
+
+  /* Shadows */
+  --shadow-base: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+  /* Colors */
+  --color-background: #FFFFFF;
+  --color-body: #333333;
+  --color-body-light: #5F5F5F;
+  --color-code-background: #F4F4F4;
+  --color-primary: #2F6DF2;
+  --color-primary-transparent: #3B98F620;
+  --color-hover: #2F6DF2B2;
+
+  --color-a: #E0E7F8;
+  --color-b: #DFE6F4;
+  --color-c: #F3F0FF;
+  --color-d: #FFEDFB;
+  --color-gradient: linear-gradient(180deg, var(--color-a) 0%, var(--color-b) 37%, var(--color-c) 75%, var(--color-d) 100%);
+}
+
+/* Dark mode theme colors */
+:root[style*=dark] {
+  --color-background: #2A2C3F !important;
+  --color-body: #F8F8F8 !important;
+  --color-body-light: #A2A3C8 !important;
+  --color-code-background: #1A1B29 !important;
+  --color-primary: #007AA6 !important;
+  --color-primary-transparent: #007AA618;
+  --color-hover: #007AA6E5;
+
+  --color-a: var(--color-code-background);
+  --color-b: var(--color-code-background);
+  --color-c: var(--color-code-background);
+  --color-d: var(--color-code-background);
+}
+
+/* Black mode theme colors */
+:root[style*=black] {
+  --color-background: #0E0E0E !important;
+  --color-body: #F8F8F8 !important;
+  --color-body-light: #CDCDCD !important;
+  --color-code-background: #313131 !important;
+  --color-primary: #709EFF !important;
+  --color-primary-transparent: #709EFF10;
+  --color-hover: #709EFFE5;
+
+  --color-a: #131A2B;
+  --color-b: #121927;
+  --color-c: #262332;
+  --color-d: #32202E;
+}

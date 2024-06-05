@@ -1,0 +1,335 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/run.pot\n"
+"X-Crowdin-File-ID: 6490\n"
+"Language: ko_KR\n"
+
+#: ../../run.md:1
+msgid "Deploy & Run"
+msgstr ""
+
+#: ../../run.md:4
+msgid "![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**."
+msgstr ""
+
+#: ../../run.md:6
+msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
+msgstr ""
+
+#: ../../run.md:8
+msgid "![](images/a-contract.png)"
+msgstr ""
+
+#: ../../run.md:10
+msgid "If nothing is there, you need to compile a file. If you do not see the contract you want, you need to select a contract in the editor to make it active."
+msgstr ""
+
+#: ../../run.md:12
+msgid "Environment"
+msgstr ""
+
+#: ../../run.md:15
+msgid "`Remix VM (Merge)` : Connects to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own \"blockchain\" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  Merge refers to the fork of Ethereum when the Merge occurred. This fork is also known as the **Paris** fork."
+msgstr ""
+
+#: ../../run.md:17
+msgid "`Remix VM (London)` : Same as above except this chain is using the London fork of Ethereum."
+msgstr ""
+
+#: ../../run.md:19
+msgid "`Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum."
+msgstr ""
+
+#: ../../run.md:21
+msgid "`Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and will load it into the Remix VM.  It is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about Forking)"
+msgstr ""
+
+#: ../../run.md:23
+msgid "`Remix VM - Goerli fork` : Same as above except this forks the Goerli testnet. (See below for more info about Forking)"
+msgstr ""
+
+#: ../../run.md:25
+msgid "`Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about Forking)"
+msgstr ""
+
+#: ../../run.md:27
+msgid "`Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)"
+msgstr ""
+
+#: ../../run.md:29
+msgid "`Injected Provider - provider name`: Connects Remix to an injected web3 provider. The most common injected provider is `Metamask`."
+msgstr ""
+
+#: ../../run.md:31
+msgid "`Custom - External HTTP Provider`: Remix will connect to a remote node. You will need to provide the URL to the selected provider: geth, parity or any Ethereum client. This was previously called **Web3 Provider**. (See below for more info about External HTTP Provider)"
+msgstr ""
+
+#: ../../run.md:33
+msgid "`Dev - Hardhat Provider`: Connects Remix to a local Hardhat test chain."
+msgstr ""
+
+#: ../../run.md:35
+msgid "`Dev - Ganache Provider`: Connects Remix to a local Truffle Ganache test chain."
+msgstr ""
+
+#: ../../run.md:37
+msgid "`Dev - Foundry Provider`: Connects Remix to a local Foundry Anvil test chain."
+msgstr ""
+
+#: ../../run.md:39
+msgid "`L2 - Optimism Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the mainnet of Optimism."
+msgstr ""
+
+#: ../../run.md:41
+msgid "`L2 - Arbitrum One Provider`: Connects Remix to an Injected Provider (usually Metamask) with the settings for the Arbitrum One network."
+msgstr ""
+
+#: ../../run.md:43
+msgid "`WalletConnect`: Connects Remix to a wallet on a mobile device."
+msgstr ""
+
+#: ../../run.md:45
+msgid "Forking chains in Remix"
+msgstr ""
+
+#: ../../run.md:47
+msgid "Forking is a great technique for developing a contract that interacts with deployed contracts on a specific chain. By bringing in a chain to the Remix VM, you'll have the 10 accounts loaded with 100ETH."
+msgstr ""
+
+#: ../../run.md:49
+msgid "Careful though, if you refresh the browser, you’ll lose the forked chain."
+msgstr ""
+
+#: ../../run.md:51
+msgid "Custom Fork"
+msgstr ""
+
+#: ../../run.md:52
+msgid "The Custom fork option allows you to specify a chain's RPC server, a block number, and an EVM version."
+msgstr ""
+
+#: ../../run.md:54
+msgid "![](images/a-custom-fork.png)"
+msgstr ""
+
+#: ../../run.md:56
+msgid "You can get the **Node URL** from chainlist.org. If the chain does not load, you may need to choose a different RPC server. You will also need to choose an EVM version appropriate to the block number. So, if you choose a very low block number, the EVM with the Merge “flavor” won’t work because this version of the EVM came out later."
+msgstr ""
+
+#: ../../run.md:58
+msgid "More about External HTTP Provider"
+msgstr ""
+
+#: ../../run.md:60
+msgid "If you are using Geth & https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:"
+msgstr ""
+
+#: ../../run.md:66
+msgid "Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/rpc/server)"
+msgstr ""
+
+#: ../../run.md:68
+msgid "To run Remix using  https://remix.ethereum.org & a local test node, use this Geth command:"
+msgstr ""
+
+#: ../../run.md:74
+msgid "If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using."
+msgstr ""
+
+#: ../../run.md:76
+msgid "To run Remix Desktop & a local test node, use this Geth command:"
+msgstr ""
+
+#: ../../run.md:82
+msgid "Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode)"
+msgstr ""
+
+#: ../../run.md:84
+msgid "The Web3 Provider Endpoint for a local node is **http://localhost:8545**"
+msgstr ""
+
+#: ../../run.md:88
+msgid "**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: `--http.corsdomain *`"
+msgstr ""
+
+#: ../../run.md:90
+msgid "If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--http.corsdomain 'https://remix-alpha.ethereum.org'`"
+msgstr ""
+
+#: ../../run.md:92
+msgid "Only use `--http.corsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**."
+msgstr ""
+
+#: ../../run.md:97
+msgid "Account:"
+msgstr ""
+
+#: ../../run.md:99
+msgid "Account: the list of accounts associated with the current  environment (and their associated balances).  On the Remix VM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
+msgstr ""
+
+#: ../../run.md:102
+msgid "Gas Limit:"
+msgstr ""
+
+#: ../../run.md:104
+msgid "This sets the maximum amount of gas that will be allowed for all the  transactions created in Remix."
+msgstr ""
+
+#: ../../run.md:107
+msgid "Value:"
+msgstr ""
+
+#: ../../run.md:109
+msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br>  **Note:** payable functions have a red button."
+msgstr ""
+
+#: ../../run.md:112
+msgid "The **Value** field is always reset to 0 after each transaction execution. <br> The **Value** field is **NOT** for gas."
+msgstr ""
+
+#: ../../run.md:115
+msgid "![](images/a-Runtab-deploy-atAddress.png)"
+msgstr ""
+
+#: ../../run.md:117
+msgid "Deploy & AtAddress"
+msgstr ""
+
+#: ../../run.md:120
+msgid "In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts."
+msgstr ""
+
+#: ../../run.md:122
+msgid "`Deploy` sends a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them."
+msgstr ""
+
+#: ../../run.md:126
+msgid "`At Address` is used to access a contract that has already been deployed. Because the contract is already deployed, accessing a contract with **AtAddress** does not cost gas."
+msgstr ""
+
+#: ../../run.md:128
+msgid "**Note:** When using AtAddress, be sure you trust the contract at that address."
+msgstr ""
+
+#: ../../run.md:130
+msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access."
+msgstr ""
+
+#: ../../run.md:132
+msgid "Using the ABI with AtAddress"
+msgstr ""
+
+#: ../../run.md:135
+msgid "The **ABI** is a JSON array which describes the contract's interface."
+msgstr ""
+
+#: ../../run.md:137
+msgid "To interact with a contract using the ABI, create a new file in Remix with extension ***.abi** and copy the ABI content to it."
+msgstr ""
+
+#: ../../run.md:140
+msgid "Make sure this file is the active tab in the editor. Then, in the field next to `At Address`, input the contract's address and click on `At Address`. If successful, an instance of the contract will appear below - in the list of **Deployed Contracts**."
+msgstr ""
+
+#: ../../run.md:142
+msgid "**Note:** To generate the ABI, in the Solidity compiler, after a contract is compiled, click on the **Compilation Details** button.  A modal will come up with that contains the ABI among other info."
+msgstr ""
+
+#: ../../run.md:144
+msgid "Pending Instances"
+msgstr ""
+
+#: ../../run.md:147
+msgid "Validating a transaction takes several seconds. During this time, the GUI shows it in a pending mode. When the transaction is mined, the number of pending transactions is updated and the transaction is added to the log ([see terminal](terminal.html))."
+msgstr ""
+
+#: ../../run.md:152
+msgid "Using the Recorder"
+msgstr ""
+
+#: ../../run.md:155
+msgid "The Recorder is a tool used to save a bunch of transactions in a JSON file and re-run them later either in the same environment or in another."
+msgstr ""
+
+#: ../../run.md:158
+msgid "Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr ""
+
+#: ../../run.md:160
+msgid "There are many use cases for the recorder."
+msgstr ""
+
+#: ../../run.md:162
+msgid "For instance:"
+msgstr ""
+
+#: ../../run.md:164
+msgid "After having coded and tested contracts in a constrained environment (like the Remix VM), you could then change the environment and redeploy it to a more realistic environment like a public testnet or to a Geth node. By using the generated **scenario.json** file, you will be using all the same settings that you used in the Remix VM.  And this means that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
+msgstr ""
+
+#: ../../run.md:167
+msgid "You can also change the settings in the scenario.json file to customize the playback."
+msgstr ""
+
+#: ../../run.md:169
+msgid "Deploying contract does often require more than creating one transaction and so the recorder will automate this deployment."
+msgstr ""
+
+#: ../../run.md:172
+msgid "Working in a dev environment often requires setting up the state in the first place."
+msgstr ""
+
+#: ../../run.md:175
+msgid "![](images/a-recorder.png)"
+msgstr ""
+
+#: ../../run.md:177
+msgid "When checked, the option `Run transactions using the last compilation result` allows you to develop a contract and easily set the state using **the latest compiled versions of the contracts.**"
+msgstr ""
+
+#: ../../run.md:179
+msgid "scenario.json"
+msgstr ""
+
+#: ../../run.md:180
+msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a `0` next to **Transactions Recorded**.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
+msgstr ""
+
+#: ../../run.md:182
+msgid "The JSON file below is an example of the scenario.json file."
+msgstr ""
+
+#: ../../run.md:184
+msgid "In it, 3 transactions are executed:"
+msgstr ""
+
+#: ../../run.md:186
+msgid "The first corresponds to the deployment of the lib `testLib`."
+msgstr ""
+
+#: ../../run.md:188
+msgid "The second corresponds to the deployment of the contract `test` with the first parameter of the constructor set to 11. That contract depends on a library. The linkage is done using the property `linkReferences`. In that case we use the address of the previously created library : `created{1512830014773}`. The number is the id (timestamp) of the transaction that led to the creation of the library."
+msgstr ""
+
+#: ../../run.md:195
+msgid "The third record corresponds to the call to the function `set` of the contract `test` (the property to is set to: `created{1512830015080}`) . Input parameters are `1` and `0xca35b7d915458ef540ade6068dfe2f44e8fa733c`"
+msgstr ""
+
+#: ../../run.md:200
+msgid "All these transactions are created using the value of the accounts `account{0}`."
+msgstr ""
+

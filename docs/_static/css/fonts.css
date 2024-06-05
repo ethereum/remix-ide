@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  src: local('Helvetica'), url(../fonts/Helvetica.ttc) format('truetype');
+}

@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/assert_library.pot\n"
+"X-Crowdin-File-ID: 6458\n"
+"Language: ko_KR\n"
+
+#: ../../assert_library.md:1
+msgid "Remix Assert Library"
+msgstr ""
+
+#: ../../assert_library.md:4
+msgid "[Assert.ok(value[, message])](#assert-ok-value-message)"
+msgstr ""
+
+#: ../../assert_library.md:5
+msgid "[Assert.equal(actual, expected[, message])](#assert-equal-actual-expected-message)"
+msgstr ""
+
+#: ../../assert_library.md:6
+msgid "[Assert.notEqual(actual, expected[, message])](#assert-notequal-actual-expected-message)"
+msgstr ""
+
+#: ../../assert_library.md:7
+msgid "[Assert.greaterThan(value1, value2[, message])](#assert-greaterthan-value1-value2-message)"
+msgstr ""
+
+#: ../../assert_library.md:8
+msgid "[Assert.lesserThan(value1, value2[, message])](#assert-lesserthan-value1-value2-message)"
+msgstr ""
+
+#: ../../assert_library.md:11
+msgid "Assert"
+msgstr ""
+
+#: ../../assert_library.md:13
+msgid "Assert.ok(value[, message])"
+msgstr ""
+
+#: ../../assert_library.md:14
+msgid "`value`: \\<bool\\>"
+msgstr ""
+
+#: ../../assert_library.md:15
+#: ../../assert_library.md:30
+#: ../../assert_library.md:50
+#: ../../assert_library.md:66
+#: ../../assert_library.md:85
+msgid "`message`: \\<string\\>"
+msgstr ""
+
+#: ../../assert_library.md:17
+msgid "Tests if value is truthy. `message` is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:19
+#: ../../assert_library.md:34
+#: ../../assert_library.md:54
+#: ../../assert_library.md:70
+#: ../../assert_library.md:89
+msgid "Examples:"
+msgstr ""
+
+#: ../../assert_library.md:27
+msgid "Assert.equal(actual, expected[, message])"
+msgstr ""
+
+#: ../../assert_library.md:28
+#: ../../assert_library.md:48
+msgid "`actual`: \\<uint | int | bool | address | bytes32 | string\\>"
+msgstr ""
+
+#: ../../assert_library.md:29
+#: ../../assert_library.md:49
+msgid "`expected`: \\<uint | int | bool | address | bytes32 | string\\>"
+msgstr ""
+
+#: ../../assert_library.md:32
+msgid "Tests if `actual` & `expected` values are same. `message` is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:47
+msgid "Assert.notEqual(actual, expected[, message])"
+msgstr ""
+
+#: ../../assert_library.md:52
+msgid "Tests if `actual` & `expected` values are not same. `message` is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:63
+msgid "Assert.greaterThan(value1, value2[, message])"
+msgstr ""
+
+#: ../../assert_library.md:64
+#: ../../assert_library.md:83
+msgid "`value1`: \\<uint | int\\>"
+msgstr ""
+
+#: ../../assert_library.md:65
+#: ../../assert_library.md:84
+msgid "`value2`: \\<uint | int\\>"
+msgstr ""
+
+#: ../../assert_library.md:68
+msgid "Tests if `value1` is greater than `value2`. `message` is returned in case of failure."
+msgstr ""
+
+#: ../../assert_library.md:82
+msgid "Assert.lesserThan(value1, value2[, message])"
+msgstr ""
+
+#: ../../assert_library.md:87
+msgid "Tests if `value1` is lesser than `value2`. `message` is returned in case of failure."
+msgstr ""
+

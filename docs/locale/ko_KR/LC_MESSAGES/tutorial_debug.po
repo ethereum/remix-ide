@@ -1,0 +1,375 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/tutorial_debug.pot\n"
+"X-Crowdin-File-ID: 6502\n"
+"Language: ko_KR\n"
+
+#: ../../tutorial_debug.md:1
+msgid "Debugging Transactions"
+msgstr ""
+
+#: ../../tutorial_debug.md:4
+msgid "(also see this page's companion: [the Debugger Tour](debugger.html))"
+msgstr ""
+
+#: ../../tutorial_debug.md:6
+msgid "There are two ways to start a debugging session, each one corresponds to a different use case."
+msgstr ""
+
+#: ../../tutorial_debug.md:7
+msgid "Use Case 1: for debugging a transaction made in Remix - click the **Debug button** in the transaction log in Remix's Terminal."
+msgstr ""
+
+#: ../../tutorial_debug.md:9
+msgid "Use Case 2: for debugging a transaction where you have a **txn hash** from **verified contract** or where you have the txn hash and the compiled source code with the same compilation settings as the deployed contract."
+msgstr ""
+
+#: ../../tutorial_debug.md:11
+msgid "Initiate Debugging from the transaction log in the Terminal"
+msgstr ""
+
+#: ../../tutorial_debug.md:12
+msgid "Let's start with a basic contract ( or replace the contract below with your own )"
+msgstr ""
+
+#: ../../tutorial_debug.md:52
+msgid "Make a new file in Remix and copy the code above into it."
+msgstr ""
+
+#: ../../tutorial_debug.md:53
+msgid "Compile the code."
+msgstr ""
+
+#: ../../tutorial_debug.md:54
+msgid "Go to the Run & Deploy module."
+msgstr ""
+
+#: ../../tutorial_debug.md:56
+msgid "For the purpose of this tutorial, we will run the `Remix VM`."
+msgstr ""
+
+#: ../../tutorial_debug.md:58
+msgid "Deploy the contract:"
+msgstr ""
+
+#: ../../tutorial_debug.md:60
+msgid "Click the `Deploy` button"
+msgstr ""
+
+#: ../../tutorial_debug.md:62
+msgid "![](images/a-debug1-deploy.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:64
+msgid "You'll see the deployed instance (AKA the udapp)."
+msgstr ""
+
+#: ../../tutorial_debug.md:66
+msgid "![](images/a-debug2-udapp1a.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:68
+msgid "Then open it up (by clicking the caret)."
+msgstr ""
+
+#: ../../tutorial_debug.md:70
+msgid "![](images/a-debug3-udapp2.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:73
+msgid "We are going to call the `Donate` function and will send 2 Ethers."
+msgstr ""
+
+#: ../../tutorial_debug.md:75
+msgid "To do this: in the value input box put in **2** and **select Ether** as the unit (DO NOT LEAVE THE DEFAULT unit as **gwei** or the change will be hard to detect)."
+msgstr ""
+
+#: ../../tutorial_debug.md:77
+msgid "![](images/a-debug4-value-loc.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:79
+msgid "Then click the `Donate` button."
+msgstr ""
+
+#: ../../tutorial_debug.md:81
+msgid "This will send the Ether to the function."
+msgstr ""
+
+#: ../../tutorial_debug.md:83
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr ""
+
+#: ../../tutorial_debug.md:85
+msgid "Remix displays information related to each transaction result in the terminal."
+msgstr ""
+
+#: ../../tutorial_debug.md:87
+msgid "Check in the **terminal** where the transaction you just made is logged."
+msgstr ""
+
+#: ../../tutorial_debug.md:89
+msgid "Click the **debug button**."
+msgstr ""
+
+#: ../../tutorial_debug.md:91
+msgid "![](images/a-debug5-term-debug-but.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:93
+msgid "But before we get to the actual debugging tool, the next section shows how to start a debugging session directly from the Debugger."
+msgstr ""
+
+#: ../../tutorial_debug.md:95
+msgid "Initiate Debugging from the Debugger"
+msgstr ""
+
+#: ../../tutorial_debug.md:97
+msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
+msgstr ""
+
+#: ../../tutorial_debug.md:99
+msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
+msgstr ""
+
+#: ../../tutorial_debug.md:101
+msgid "You can start a debug session by providing a `transaction hash`."
+msgstr ""
+
+#: ../../tutorial_debug.md:103
+msgid "To find a transaction hash:"
+msgstr ""
+
+#: ../../tutorial_debug.md:104
+msgid "Go to a transaction in the terminal."
+msgstr ""
+
+#: ../../tutorial_debug.md:105
+msgid "Click a line with a transaction - to expand the log."
+msgstr ""
+
+#: ../../tutorial_debug.md:106
+msgid "The transaction hash is there - copy it."
+msgstr ""
+
+#: ../../tutorial_debug.md:108
+msgid "![](images/a-debug6-term-txn-hash.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:110
+msgid "Then click in the debugger paste the hash and click on the `Start debugging` button."
+msgstr ""
+
+#: ../../tutorial_debug.md:112
+msgid "![](images/a-debug7-debugger.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:114
+msgid "Using the debugger"
+msgstr ""
+
+#: ../../tutorial_debug.md:117
+msgid "![](images/a-debug8-top3.png)"
+msgstr ""
+
+#: ../../tutorial_debug.md:119
+msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
+msgstr ""
+
+#: ../../tutorial_debug.md:123
+msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
+msgstr ""
+
+#: ../../tutorial_debug.md:127
+msgid "Explanation of Debugger button capabilities"
+msgstr ""
+
+#: ../../tutorial_debug.md:129
+msgid "Step Over Back  Returns to the previous step, but ignores/steps over function calls: the debugger WILL NOT enter a function"
+msgstr ""
+
+#: ../../tutorial_debug.md:131
+msgid "Step Back  Returns to the previous step. Does not ignore function calls: the debugger WILL enter any function along the way"
+msgstr ""
+
+#: ../../tutorial_debug.md:133
+msgid "Step Into  Forwards to the next step. Does not ignore function calls: the debugger WILL enter any function along the way"
+msgstr ""
+
+#: ../../tutorial_debug.md:135
+msgid "Step Over Forward  Forwards to the next step, but ignores/steps over function calls: the debugger WILL NOT enter a function"
+msgstr ""
+
+#: ../../tutorial_debug.md:137
+msgid "Jump to the Previous Breakpoint  Sends the debugger to the last visited breakpoint. Note that breakpoints may be set by clicking the line number in source code"
+msgstr ""
+
+#: ../../tutorial_debug.md:139
+msgid "Jump Out  Sends the debugger to the function's end"
+msgstr ""
+
+#: ../../tutorial_debug.md:141
+msgid "Jump to the Next Breakpoint  Sends the debugger to the next breakpoint"
+msgstr ""
+
+#: ../../tutorial_debug.md:145
+msgid "11 panels give detailed information about the execution:"
+msgstr ""
+
+#: ../../tutorial_debug.md:147
+msgid "Instructions"
+msgstr ""
+
+#: ../../tutorial_debug.md:149
+msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
+msgstr ""
+
+#: ../../tutorial_debug.md:152
+msgid "Important note: When this panel is hidden, the slider will have a coarser granularity and only stop at *expression boundaries*, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
+msgstr ""
+
+#: ../../tutorial_debug.md:158
+msgid "Solidity Locals"
+msgstr ""
+
+#: ../../tutorial_debug.md:160
+msgid "The Solidity Locals panel displays local variables associated with the current context."
+msgstr ""
+
+#: ../../tutorial_debug.md:163
+msgid "Solidity State"
+msgstr ""
+
+#: ../../tutorial_debug.md:165
+msgid "The Solidity State panel displays state variables of the current executing contract."
+msgstr ""
+
+#: ../../tutorial_debug.md:168
+msgid "Low level panels"
+msgstr ""
+
+#: ../../tutorial_debug.md:170
+msgid "These panels display low level informations about the execution:"
+msgstr ""
+
+#: ../../tutorial_debug.md:172
+msgid "Stack"
+msgstr ""
+
+#: ../../tutorial_debug.md:173
+msgid "Storages Changes"
+msgstr ""
+
+#: ../../tutorial_debug.md:174
+msgid "Memory"
+msgstr ""
+
+#: ../../tutorial_debug.md:175
+msgid "Call Data"
+msgstr ""
+
+#: ../../tutorial_debug.md:176
+msgid "Call Stack"
+msgstr ""
+
+#: ../../tutorial_debug.md:177
+msgid "Return Value (only if the current step is a RETURN opcode)"
+msgstr ""
+
+#: ../../tutorial_debug.md:178
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
+msgstr ""
+
+#: ../../tutorial_debug.md:180
+msgid "Reverted Transaction"
+msgstr ""
+
+#: ../../tutorial_debug.md:182
+msgid "A transaction can be `reverted` (because of an *out of gas exception*, a Solidity `revert` statement or a low level exception)."
+msgstr ""
+
+#: ../../tutorial_debug.md:184
+msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
+msgstr ""
+
+#: ../../tutorial_debug.md:186
+msgid "Remix will warn you when the execution throws an exception.  The `warning` button will jump to the last opcode before the exception happened."
+msgstr ""
+
+#: ../../tutorial_debug.md:189
+msgid "Breakpoints"
+msgstr ""
+
+#: ../../tutorial_debug.md:191
+msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
+msgstr ""
+
+#: ../../tutorial_debug.md:194
+msgid "Breakpoints can be added and removed by clicking on the line number in the **Editor**."
+msgstr ""
+
+#: ../../tutorial_debug.md:196
+msgid "When using a debug session with breakpoints, the execution will jump to the first encountered breakpoint."
+msgstr ""
+
+#: ../../tutorial_debug.md:199
+msgid "**Important note:** If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and a second time for assigning the actual value."
+msgstr ""
+
+#: ../../tutorial_debug.md:203
+msgid "Here's an example of this issue.  If you are debugging the following contract:"
+msgstr ""
+
+#: ../../tutorial_debug.md:218
+msgid "And breakpoints are set for the lines"
+msgstr ""
+
+#: ../../tutorial_debug.md:220
+msgid "`uint p = 45;`"
+msgstr ""
+
+#: ../../tutorial_debug.md:222
+msgid "`m = 89;`"
+msgstr ""
+
+#: ../../tutorial_debug.md:224
+msgid "`uint l = 34;`"
+msgstr ""
+
+#: ../../tutorial_debug.md:226
+msgid "then clicking on the `Jump to the next breakpoint` button will stop at the following lines in the given order:"
+msgstr ""
+
+#: ../../tutorial_debug.md:229
+msgid "`uint p = 45;` (declaration of p)"
+msgstr ""
+
+#: ../../tutorial_debug.md:231
+msgid "`uint l = 34;` (declaration of l)"
+msgstr ""
+
+#: ../../tutorial_debug.md:233
+msgid "`uint p = 45;` (45 assigned to p)"
+msgstr ""
+
+#: ../../tutorial_debug.md:235
+msgid "`m = 89;` (89 assigned to m)"
+msgstr ""
+
+#: ../../tutorial_debug.md:237
+msgid "`uint l = 34;` (34 assigned to l)"
+msgstr ""
+

@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/search_in_fe.pot\n"
+"X-Crowdin-File-ID: 8043\n"
+"Language: ko_KR\n"
+
+#: ../../search_in_fe.md:1
+msgid "Search in Files"
+msgstr ""
+
+#: ../../search_in_fe.md:3
+msgid "The **Search in Files** plugin is loaded by default.  It also includes functionality to search & replace as well as searching with regular expressions."
+msgstr ""
+
+#: ../../search_in_fe.md:5
+msgid "![](images/a-search.png)"
+msgstr ""
+
+#: ../../search_in_fe.md:7
+msgid "This plugin searches through text in the files of the current workspace.  It does not search across workspaces."
+msgstr ""
+
+#: ../../search_in_fe.md:9
+msgid "Search and Replace"
+msgstr ""
+
+#: ../../search_in_fe.md:10
+msgid "Clicking on the caret to the left of the text input box will reveal the **replace** functionality."
+msgstr ""
+
+#: ../../search_in_fe.md:12
+msgid "![](images/a-search-open.png)"
+msgstr ""
+

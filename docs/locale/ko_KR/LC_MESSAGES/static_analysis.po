@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/static_analysis.pot\n"
+"X-Crowdin-File-ID: 6496\n"
+"Language: ko_KR\n"
+
+#: ../../static_analysis.md:1
+msgid "Solidity Analyzers"
+msgstr ""
+
+#: ../../static_analysis.md:4
+msgid "Static code analysis is a process of debugging code by examining it without executing it."
+msgstr ""
+
+#: ../../static_analysis.md:6
+msgid "The `Solidity Analyzers` plugin gangs three analysis tools together to perform static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
+msgstr ""
+
+#: ../../static_analysis.md:8
+msgid "![](images/a-ssa-activate.png)"
+msgstr ""
+
+#: ../../static_analysis.md:10
+msgid "`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgstr ""
+
+#: ../../static_analysis.md:12
+msgid "`Solidity Analyzers` uses these tools:"
+msgstr ""
+
+#: ../../static_analysis.md:13
+msgid "[Remix Analysis](#remix-analysis): a basic analysis tool"
+msgstr ""
+
+#: ../../static_analysis.md:14
+msgid "[Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations"
+msgstr ""
+
+#: ../../static_analysis.md:15
+msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool"
+msgstr ""
+
+#: ../../static_analysis.md:17
+msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
+msgstr ""
+
+#: ../../static_analysis.md:19
+msgid "How to use"
+msgstr ""
+
+#: ../../static_analysis.md:22
+msgid "**A contract must be compiled before analysis can be run.**"
+msgstr ""
+
+#: ../../static_analysis.md:24
+msgid "At the top of the panel, check the tools that you want to use."
+msgstr ""
+
+#: ../../static_analysis.md:26
+msgid "![](images/a-ssa-1.png)"
+msgstr ""
+
+#: ../../static_analysis.md:28
+msgid "Errors & Warnings"
+msgstr ""
+
+#: ../../static_analysis.md:29
+msgid "By default, `Solidity Analyzers` will show both errors and warnings.  The combined number of errors and warnings are shown in the badge in that tools tab."
+msgstr ""
+
+#: ../../static_analysis.md:31
+msgid "![](images/a-ssa-err-warn.png)"
+msgstr ""
+
+#: ../../static_analysis.md:33
+msgid "If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors."
+msgstr ""
+
+#: ../../static_analysis.md:35
+msgid "**NOTE:** Remix Analysis does not flag error - it only shows warnings so if you check `Hide warnings`, nothing will show in the Remix Analysis tab."
+msgstr ""
+
+#: ../../static_analysis.md:37
+msgid "![](images/a-ssa-show-hide-warnings.png)"
+msgstr ""
+
+#: ../../static_analysis.md:39
+msgid "Warnings from external libraries"
+msgstr ""
+
+#: ../../static_analysis.md:41
+msgid "By default, warnings from external libraries are not shown.  If you check the box `Show warnings for external libraries`, the tools will also analyse the external libraries for warnings."
+msgstr ""
+
+#: ../../static_analysis.md:43
+msgid "Slither"
+msgstr ""
+
+#: ../../static_analysis.md:45
+msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded."
+msgstr ""
+
+#: ../../static_analysis.md:47
+msgid "Solhint"
+msgstr ""
+
+#: ../../static_analysis.md:49
+msgid "The [Solhint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem."
+msgstr ""
+
+#: ../../static_analysis.md:51
+msgid "Remix Analysis"
+msgstr ""
+
+#: ../../static_analysis.md:54
+msgid "Remix Analysis has 4 categories: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
+msgstr ""
+
+#: ../../static_analysis.md:56
+msgid "Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:"
+msgstr ""
+
+#: ../../static_analysis.md:58
+msgid "Category: Security"
+msgstr ""
+
+#: ../../static_analysis.md:59
+msgid "**Transaction origin: 'tx.origin' is used**"
+msgstr ""
+
+#: ../../static_analysis.md:61
+msgid "`tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
+msgstr ""
+
+#: ../../static_analysis.md:63
+#: ../../static_analysis.md:72
+#: ../../static_analysis.md:85
+#: ../../static_analysis.md:96
+#: ../../static_analysis.md:109
+#: ../../static_analysis.md:118
+#: ../../static_analysis.md:126
+#: ../../static_analysis.md:136
+#: ../../static_analysis.md:150
+#: ../../static_analysis.md:167
+#: ../../static_analysis.md:181
+#: ../../static_analysis.md:199
+#: ../../static_analysis.md:225
+#: ../../static_analysis.md:238
+#: ../../static_analysis.md:248
+#: ../../static_analysis.md:260
+#: ../../static_analysis.md:270
+#: ../../static_analysis.md:278
+#: ../../static_analysis.md:288
+#: ../../static_analysis.md:300
+#: ../../static_analysis.md:315
+msgid "_Example:_"
+msgstr ""
+
+#: ../../static_analysis.md:68
+msgid "**Check effects: Potential reentrancy bugs**"
+msgstr ""
+
+#: ../../static_analysis.md:70
+msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
+msgstr ""
+
+#: ../../static_analysis.md:81
+msgid "**Inline assembly: Inline assembly used**"
+msgstr ""
+
+#: ../../static_analysis.md:83
+msgid "Use of inline assembly is advised only in rare cases."
+msgstr ""
+
+#: ../../static_analysis.md:92
+msgid "**Block timestamp: Semantics may be unclear**"
+msgstr ""
+
+#: ../../static_analysis.md:94
+msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
+msgstr ""
+
+#: ../../static_analysis.md:105
+msgid "**Low level calls: Semantics may be unclear**"
+msgstr ""
+
+#: ../../static_analysis.md:107
+msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
+msgstr ""
+
+#: ../../static_analysis.md:114
+msgid "**Blockhash usage: Semantics maybe unclear**"
+msgstr ""
+
+#: ../../static_analysis.md:116
+msgid "`blockhash` is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
+msgstr ""
+
+#: ../../static_analysis.md:122
+msgid "**Selfdestruct: Beware of caller contracts**"
+msgstr ""
+
+#: ../../static_analysis.md:124
+msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
+msgstr ""
+
+#: ../../static_analysis.md:131
+msgid "Category: Gas & Economy"
+msgstr ""
+
+#: ../../static_analysis.md:132
+msgid "**Gas costs: Too high gas requirement of functions**"
+msgstr ""
+
+#: ../../static_analysis.md:134
+msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
+msgstr ""
+
+#: ../../static_analysis.md:146
+msgid "**This on local calls: Invocation of local functions via 'this'**"
+msgstr ""
+
+#: ../../static_analysis.md:148
+msgid "Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls."
+msgstr ""
+
+#: ../../static_analysis.md:163
+msgid "**Delete on dynamic Array: Use require/assert appropriately**"
+msgstr ""
+
+#: ../../static_analysis.md:165
+msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
+msgstr ""
+
+#: ../../static_analysis.md:177
+msgid "**For loop over dynamic array: Iterations depend on dynamic array's size**"
+msgstr ""
+
+#: ../../static_analysis.md:179
+msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
+msgstr ""
+
+#: ../../static_analysis.md:195
+msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
+msgstr ""
+
+#: ../../static_analysis.md:197
+msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
+msgstr ""
+
+#: ../../static_analysis.md:220
+msgid "Category: ERC"
+msgstr ""
+
+#: ../../static_analysis.md:221
+msgid "**ERC20: 'decimals' should be 'uint8'**"
+msgstr ""
+
+#: ../../static_analysis.md:223
+msgid "ERC20 Contracts `decimals` function should have `uint8` as return type."
+msgstr ""
+
+#: ../../static_analysis.md:233
+msgid "Category: Miscellaneous"
+msgstr ""
+
+#: ../../static_analysis.md:234
+msgid "**Constant/View/Pure functions: Potentially constant/view/pure functions**"
+msgstr ""
+
+#: ../../static_analysis.md:236
+msgid "It warns for the methods which potentially should be constant/view/pure but are not."
+msgstr ""
+
+#: ../../static_analysis.md:244
+msgid "**Similar variable names: Variable names are too similar**"
+msgstr ""
+
+#: ../../static_analysis.md:246
+msgid "It warns on the usage of similar variable names."
+msgstr ""
+
+#: ../../static_analysis.md:256
+msgid "**No return: Function with 'returns' not returning**"
+msgstr ""
+
+#: ../../static_analysis.md:258
+msgid "It warns for the methods which define a return type but never explicitly return a value."
+msgstr ""
+
+#: ../../static_analysis.md:266
+msgid "**Guard conditions: Use 'require' and 'assert' appropriately**"
+msgstr ""
+
+#: ../../static_analysis.md:268
+msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
+msgstr ""
+
+#: ../../static_analysis.md:274
+msgid "**Result not used: The result of an operation not used**"
+msgstr ""
+
+#: ../../static_analysis.md:276
+msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
+msgstr ""
+
+#: ../../static_analysis.md:284
+msgid "**String Length: Bytes length != String length**"
+msgstr ""
+
+#: ../../static_analysis.md:286
+msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
+msgstr ""
+
+#: ../../static_analysis.md:296
+msgid "**Delete from dynamic array: 'delete' on an array leaves a gap**"
+msgstr ""
+
+#: ../../static_analysis.md:298
+msgid "Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
+msgstr ""
+
+#: ../../static_analysis.md:311
+msgid "**Data Truncated: Division on int/uint values truncates the result**"
+msgstr ""
+
+#: ../../static_analysis.md:313
+msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
+msgstr ""
+
+#: ../../static_analysis.md:323
+msgid "Remix-analyzer"
+msgstr ""
+
+#: ../../static_analysis.md:325
+msgid "`remix-analyzer` is the library which works underneath the Remix Analysis tool."
+msgstr ""
+
+#: ../../static_analysis.md:327
+msgid "`remix-analyzer` is an [NPM package](https://www.npmjs.com/package/@remix-project/remix-analyzer). It can be used as a library in a solution supporting node.js. Find more information about this type of usage in the [remix-analyzer repository](https://github.com/ethereum/remix-project/tree/master/libs/remix-analyzer#how-to-use)"
+msgstr ""
+

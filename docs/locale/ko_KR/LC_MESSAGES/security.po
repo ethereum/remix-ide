@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-24 17:10+0200\n"
+"PO-Revision-Date: 2024-05-31 13:50\n"
+"Last-Translator: \n"
+"Language-Team: Korean\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ko\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/security.pot\n"
+"X-Crowdin-File-ID: 7433\n"
+"Language: ko_KR\n"
+
+#: ../../security.md:1
+msgid "Using Remix Safely"
+msgstr ""
+
+#: ../../security.md:4
+msgid "It is dangerous to send transactions on contracts you don't understand (even if it's a get rich quick scheme that you've copied & pasted from a Discord DM or a youtube video and you really really want to get rich)."
+msgstr ""
+
+#: ../../security.md:6
+msgid "Check our [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) on a current scam promoting \"liquidity front runner bots\"."
+msgstr ""
+
+#: ../../security.md:8
+msgid "Always check that you are loading Remix over HTTPS unless you have a specific reason for accessing it with HTTP (e.g. for using Remix locally or for a connection you trust)."
+msgstr ""
+
+#: ../../security.md:10
+msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
+msgstr ""
+
+#: ../../security.md:12
+msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
+msgstr ""
+
+#: ../../security.md:15
+msgid "Rather, **use one** like this:<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
+msgstr ""
+
+#: ../../security.md:18
+msgid "When connecting a contract to an existing deployment, ensure that the thing you are connecting to is correct AND is the correct version."
+msgstr ""
+
+#: ../../security.md:20
+msgid "Always be sure to address or understand every warning."
+msgstr ""
+
+#: ../../security.md:22
+msgid "Remix is a subdomain of ethereum.org - so the only valid Remix urls are:"
+msgstr ""
+
+#: ../../security.md:23
+msgid "remix.ethereum.org"
+msgstr ""
+
+#: ../../security.md:24
+msgid "remix-alpha.ethereum.org"
+msgstr ""
+
+#: ../../security.md:25
+msgid "remix-beta.ethereum.org"
+msgstr ""
+
+#: ../../security.md:27
+msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
+msgstr ""
+
+#: ../../security.md:29
+msgid "Remix's ease makes its users a target"
+msgstr ""
+
+#: ../../security.md:30
+msgid "Because Remix has no setup, it has a large community of noobies to smart contract development. This is great, but it provides a target audience for scammers exploit. Without Remix, the scammers would first need to instruct victims to set up a local dev environment, which would severely limit the success rate of the scam."
+msgstr ""
+
+#: ../../security.md:32
+msgid "**Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!**"
+msgstr ""
+
+#: ../../security.md:34
+msgid "For Solidity Tutorials in Remix, go to the LearnEth plugin."
+msgstr ""
+
