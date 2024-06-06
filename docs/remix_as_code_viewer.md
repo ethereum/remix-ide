@@ -4,7 +4,7 @@ Remix as code viewer
 Through Etherscan
 ------------------
 
-Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a mutiple part contract verification, Remix provides a quick way to load all the contracts.
+Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a multiple part contract verification, Remix provides a quick way to load all the contracts.
 
 A typical Etherscan URL for a contract address looks like this:
 
