@@ -89,7 +89,7 @@ We wholeheartedly welcome everyone to contribute. Suggestions, issues, queries a
 ### Translating
 The site is internationalized. **Do not make any corrections to .po or .pot files.**  These get handled in our translation management platform Crowdin.  To help with the translation of our documentation, please visit https://crowdin.com/project/remix-translation. To help with our translations of Remix's UI, please visit https://crowdin.com/project/remix-ui.
 
-### Custom theming
+## Custom theming
 
 The documentation is built using Sphinx and the Read the Docs theme as a base. The theme has been customized using CSS overrides and JavaScript to built on top of the base theme.
 
@@ -108,16 +108,12 @@ html_css_files = ["css/fonts.css", "css/tokens.css", "css/custom.css"]
 
 These `js` and `css` files are been declared to run once the initial theming has been applied.
 
-**constants.js** - Contains all JavaScript constants to be used throughout the other scripts.
-
-**utils.js** - Contains all utility/helper functions to be used throughout the other scripts.
-
-**loaders.js** - Contains primary logic for all the loading scripts, organized by `initialize.js`. These scripts work to re-arrange a variety of DOM elements to create the new theming.
-
-**initialize.js** - Contains high-level script logic. Declares order of `loader.js` functions to be run during `onDOMContentLoaded` (immediately after the initial DOM content has been loaded)
-
-**css/fonts.css** - Contains all font imports and declarations.
-
-**css/tokens.css** - Contains all CSS theming variables and tokens used throughout the other CSS files. This includes the full color mode / theming setup for light/dark/classic modes.
-
-**css/custom.css** - Contains all custom CSS overrides and theming. This uses existing CSS selectors from the Sphinx theming to select and override various styling.
+| File (`docs/_static/`) | Description                                                                                          |
+| ---------------------- |----------------------------------------------------------------------------------------------------- |
+| **constants.js**       | Contains all JavaScript constants to be used throughout the other scripts.                           |
+| **utils.js**           | Contains all utility/helper functions to be used throughout the other scripts.                       |
+| **loaders.js**         | Contains primary logic for all the loading scripts, organized by `initialize.js`.                    |
+| **initialize.js**      | Contains high-level script logic. Declares order of `loader.js` functions to be run during `onDOMContentLoaded` (immediately after the initial DOM content has been loaded) |
+| **css/fonts.css**      | Contains all font imports and declarations.                                                          |
+| **css/tokens.css**     | Contains all CSS theming variables and tokens used throughout the other CSS files.                   |
+| **css/custom.css**     | Contains all custom CSS overrides and theming. This uses existing CSS selectors from the Sphinx theming to select and override various styling. |
