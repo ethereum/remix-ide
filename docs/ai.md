@@ -1,37 +1,44 @@
 AI Tools
 ========
 
-Remix has integrated two AI tools:
-- ChatGPT 
-- Remix's Solidity Copilot which uses our own LLM (large language model) called Solcoder.
+Remix has its own AI tool named **RemixAI** and a sub-project called **Solidity Copilot** for code completion.  
+
+RemixAI is also used in the: 
+- **Explain this contract** icon at the top of the Editor
+- **right-click menu options** of the Editor
+- **triple slash** (///) for prepending an AI code request in a file in the Editor
+- **Explain this error** button in the compiler errors in the Solidity Compiler
 
 ## Remix's Solidity Copilot
-Solidity Copilot helps in writing code using code completion. The switch to activate Solidity Copilot is at the top of the Editor. 
+Solidity Copilot helps in writing code using **code completion**. The switch to activate it is at the top of the Editor.
 
 ![](images/a-ai-switch.png)
 
-The Solidity Copilot is specifically for help with Solidity coding. Although it is thousands of times smaller than ChatGPT, it could be slower than ChatGPT.  
+All other RemixAI tools are always on.
 
-## ChatGPT in Remix
-Remix is currently using ChatGPT v3.5. 
+#### Code Completion
+When you type a new line or a space, the Solidity Copilot will propose some code.  The proposed code will take into account what is has already been written on in the file.  
+
+Use the Solidity Copilot switch at the top of the Editor to turn off or on the code completion. 
 
 ## Editor: Right-click Menu 
-Both ChatGPT and Solidity Copilot are integrated into the Editor's Right-click popup menu.
-
 ![](images/a-ai-editor-popup-menu.png)
 
 In both cases the answer will be printed out in Remix's Terminal.
 
-### GPT: Explain a Function and Generate Documentation
+### Explain a Function and Generate Documentation
 In the Right-click menu, select the options **Explain the function** and **Generate documentation**.
 
-### Solcoder: Explain this code
-The "Explain this code" option in the Editor's Right-click menu can be triggered with, or without, highlighting a block of code.
+### Explain this code
+The "Explain this code" option in the Editor's Right-click menu can be triggered with, or without, highlighting a block of code. If some code has not been highlighted, RemixAI will take into account the code surrounding the cursor.
 
 ## Editor: Code Completion
-With the Solidity Copilot switch on, just start typing. When you put a space after a word, the Copilot will make a suggestion.  
+With the Solidity Copilot switch on, just start coding. When you put a space after a word or put a new line, the Copilot will make a suggestion.  
 
-**NOTE: the suggestion will take into account everything that preceded it in this contract.**
+[image]
+
+**NOTE: the suggestion will take into account everything that preceded it in this contract.** 
+[Stephane is this true or does it look at the entire file?]
 
 ![](images/a-ai-completion-proposal.png)
 
@@ -40,7 +47,7 @@ Hit tab to accept the suggestion.
 ![](images/a-ai-completion-accepted.png)
 
 
-## Editor: Ask Solidity Copilot with ///
+## Editor: Ask RemixAI with ///
 In the Editor, when the Solidity Copilot is on, you can ask it a coding question with the `///` prompt.
 For example:
 
@@ -48,16 +55,15 @@ For example:
 /// write a function that returns an array with 3 elements from the function's parameters
 ```
 
-## Terminal Queries to AI
+## Terminal Queries using RemixAI
+Before your question, either type `gpt` or `sol-gpt`.  
 
-### ChatGPT Query Example
-`gpt In Solidity what is the goal of modifiers?`
+For example:
 
-### Solcoder Queries 
 `sol-gpt What is the goal of modifiers?`
 
 ## Compilers: Explain Error
-In the compiler error "cards" of both the Solidity compiler and the Vyper compiler there is a button to "Ask ChatGPT".
+In the compiler error "cards" of both the Solidity compiler and the Vyper compiler there is a button to "Ask RemixAI".
 
 ![](images/a-ai-solcomp1.png)
 
