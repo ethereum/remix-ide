@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:35-0400\n"
+"PO-Revision-Date: 2023-10-17 13:52\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/FAQ.pot\n"
+"X-Crowdin-File-ID: 6454\n"
+"Language: zh_CN\n"
+
+#: ../../FAQ.md:1
+msgid "FAQ"
+msgstr "常見問題"
+
+#: ../../FAQ.md:3
+msgid "Supported devices & Browsers"
+msgstr "支援的裝置和瀏覽器"
+
+#: ../../FAQ.md:5
+msgid "**Q:** What browsers will Remix work on?"
+msgstr "**問:** Remix 可在哪些瀏覽器上運行？"
+
+#: ../../FAQ.md:7
+msgid "**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers."
+msgstr "**答:** 我們支援Firefox、Chrome和Brave。我們沒有在Safari、Edge或其他瀏覽器中進行測試或查找錯誤。。"
+
+#: ../../FAQ.md:9
+msgid "**Q:** Will Remix work on a tablet or mobile device?"
+msgstr "**Q:** Remix能在平板電腦或移動裝置上運行嗎？"
+
+#: ../../FAQ.md:11
+msgid "**A:** We do not support the use of Remix on tablets or mobile phones."
+msgstr "**答:** 我們不支援在平板電腦或移動裝置上使用Remix。"
+
+#: ../../FAQ.md:13
+msgid "General"
+msgstr "常規"
+
+#: ../../FAQ.md:15
+msgid "**Q:** Are there keyboard shortcuts in Remix?"
+msgstr "**問:** Remix中是否有鍵盤快速鍵？"
+
+#: ../../FAQ.md:17
+msgid "**A:** Yes - here is the list of keyboard shortcuts:"
+msgstr "**答:** 是 - 這裡是鍵盤快速鍵清單："
+
+#: ../../FAQ.md:19
+msgid "`Ctrl+S`: Compiles the active Solidity file"
+msgstr "`Ctrl+S`: 編譯選中的 Solidity 檔案"
+
+#: ../../FAQ.md:21
+msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)"
+msgstr "`Ctrl+Shift+S`：當腳本在編輯器中顯示時，編譯一個 Solidity 檔案並運行腳本。 (點選 [here](瞭解更多關於這個功能的資訊(running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly))。"
+
+#: ../../FAQ.md:23
+msgid "`Ctrl+Shift+F` : Opens the File Explorer"
+msgstr "`Ctrl+Shift+F`: 打開檔案瀏覽器"
+
+#: ../../FAQ.md:25
+msgid "`CTRL+Alt+F` : Formats the code in the current file"
+msgstr "`CTRL+Alt+F` : 對當前檔案中的代碼進行格式化"
+
+#: ../../FAQ.md:27
+msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
+msgstr "`Ctrl+Shift+A` : 打開插件管理器"
+
+#: ../../FAQ.md:29
+msgid "Solidity compiler"
+msgstr "Solidity 編譯器"
+
+#: ../../FAQ.md:31
+msgid "**Q:** Error: compiler might be in a non-sane state"
+msgstr "**問：**錯誤：編譯器可能處於非正常狀態"
+
+#: ../../FAQ.md:38
+msgid "**A:** Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
+msgstr "**答：**舊版本的solidity 編譯器在chrome 中存在這個問題。請將 Solidity Plugin 中的編譯器版本更改為較新的版本或使用其他瀏覽器。"
+
+#: ../../FAQ.md:41
+msgid "**Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
+msgstr "**問:** 我遇到了一個問題：超過了最大調用棧，還有其他各種錯誤，最終無法編譯。"
+
+#: ../../FAQ.md:43
+msgid "**A:**  Try a different browser or a newer solidity compiler version."
+msgstr "**答：**嘗試不同的瀏覽器或更新的solidity 編譯器版本。"
+
+#: ../../FAQ.md:45
+msgid "**Q:** How to verify a contract that imports other contracts?"
+msgstr "**問：**如何驗證導入其他合約的合約？"
+
+#: ../../FAQ.md:47
+msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
+msgstr "**答：**驗證工具不會遞迴遍歷合約中的導入語句。 所以只能驗證一個「扁平化」的合約。"
+
+#: ../../FAQ.md:49
+msgid "A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file."
+msgstr "可以透過在檔案資源管理器中右鍵點選合約並選擇「 Flatten」選項來對合約進行「扁平化」處理。這將把所有原始代碼和導入的代碼壓縮到單個檔案中。"
+
+#: ../../FAQ.md:51
+msgid "Deploy & Run"
+msgstr "部署和運行"
+
+#: ../../FAQ.md:53
+msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
+msgstr "**問：** 我在我的應用程式中使用Infura節點，但是當我嘗試在Remix IDE中選擇「外部HTTP提供者」並將我的節點放入以便基於該節點進行部署時，它告訴我無法連接。"
+
+#: ../../FAQ.md:55
+msgid "**A:** If the endpoint you are using is http, it won't work."
+msgstr "**答：** 如果您使用的端點是http，它將無法正常運行。"
+
+#: ../../FAQ.md:57
+msgid "**Q:** Where is deploy button?"
+msgstr "**問：** 部署按鈕在哪裡？"
+
+#: ../../FAQ.md:59
+msgid "**A:** It's in the **Deploy & Run Transactions** module."
+msgstr "**A:**它位於**部署和運行交易**模組中。"
+
+#: ../../FAQ.md:61
+msgid "**Q:** How to pass a tuple to a public function in Remix?"
+msgstr "**問：**如何將元組傳遞給 Remix 中的公共函數？"
+
+#: ../../FAQ.md:63
+msgid "**A:** Pass it as an array []."
+msgstr "**答：** 將其作為陣列 [] 傳遞。"
+
+#: ../../FAQ.md:65
+msgid "**Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?"
+msgstr "**問：** 如何在Deploy & Run模組中輸入一個struct作為函數參數的輸入？"
+
+#: ../../FAQ.md:67
+msgid "**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
+msgstr "**答：** 輸入一個結構體，就像一個元組一樣，將它作為一個陣列[] 傳入。 您還需要輸入以下內容："
+
+#: ../../FAQ.md:69
+msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
+msgstr "`pragma experimental ABIEncoderV2;` 在solidity檔案的頂部。"
+
+#: ../../FAQ.md:71
+msgid "For example, here's a solidity file with a struct as an input parameter."
+msgstr "例如，這是一個具有結構體作為輸入參數的 Solidity 檔案。"
+
+#: ../../FAQ.md:103
+msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
+msgstr "initPeepToPeeps的輸入需要一個結構體。如果您輸入`[1,2]`，交易將會通過。"
+
+#: ../../FAQ.md:107
+msgid "Plugin Developers"
+msgstr "插件開發者"
+
+#: ../../FAQ.md:109
+msgid "**Q:** Where do plugin developers go with their questions?"
+msgstr "**問：** 插件開發人員可以去哪裡解決他們的問題？"
+
+#: ../../FAQ.md:111
+msgid "**A:** First, join our [Discord server](https://discord.gg/zUNteAzJs3) and then go to the development-plugin channel."
+msgstr "**A:**首先，加入我們的 Discord (https://discord.gg/zUNteAzJs3) 然後前往 development-plugin 頻道。"
+
+#: ../../FAQ.md:113
+msgid "Analytics"
+msgstr "資料分析"
+
+#: ../../FAQ.md:115
+msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
+msgstr "**問:** 當Matomo Analytics啟用時，要保存哪些資訊？"
+
+#: ../../FAQ.md:117
+msgid "**A:** We want to know:"
+msgstr "**答:** 我們想知道："
+
+#: ../../FAQ.md:119
+msgid "Which plugins get activated & deactivated"
+msgstr "哪些插件被啟動和停用"
+
+#: ../../FAQ.md:120
+msgid "If users check the box to publish a contract's metadata when deploying"
+msgstr "如果用戶在部署合約時，勾選了發佈合約中繼資料的選項"
+
+#: ../../FAQ.md:121
+msgid "Which themes are used/used most/not used at all"
+msgstr "哪個主題被使用/使用最多/根本不使用"
+
+#: ../../FAQ.md:122
+msgid "The usage of the links to documentation"
+msgstr "檔案連結的使用"
+
+#: ../../FAQ.md:123
+msgid "On the homepage, which file importing buttons are used"
+msgstr "在主頁上使用了哪個檔案導入按鈕"
+
+#: ../../FAQ.md:125
+msgid "**Q:** Is it opt-in or opt-out?"
+msgstr "**問:** 需要使用者主動選擇加入還是主動選擇退出？"
+
+#: ../../FAQ.md:127
+msgid "**A:** We use Matomo as an opt-in analytics platform."
+msgstr "**答:** 我們使用的是Matomo分析平臺，需要使用者同意加入後才能獲得資訊。"
+
+#: ../../FAQ.md:129
+msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
+msgstr "**Q:** 資訊存儲在哪裡？資訊是否與第三方共用？"
+
+#: ../../FAQ.md:131
+msgid "**A:** All data collected through Matomo is stored on our server. No data is given to third parties."
+msgstr "**A:** 透過 Matomo 收集的所有資料都存儲在我們的伺服器上，不會提供給第三方"
+
+#: ../../FAQ.md:133
+msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
+msgstr "我們尊重您的隱私，不會收集或儲存任何可識別個人身份的資訊。"
+
+#: ../../FAQ.md:135
+msgid "**Q:** What does Remix do with this info?"
+msgstr "**問:** Remix使用這些資訊做什麼？"
+
+#: ../../FAQ.md:137
+msgid "**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
+msgstr "**答:** "我們的目標是瞭解我們有多少用戶，人們正在使用哪些插件， 哪些插件沒有被使用，哪些插件沒有充分發揮它們的潛力。"
+
+#: ../../FAQ.md:139
+msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
+msgstr "借助這些資訊，我們可以調整使用者介面，並提供更多的建議和檔案。 這是從使用者那裡獲得匿名回饋的一種方式。"
+
+#: ../../FAQ.md:141
+msgid "**Q:** After I agree opt-in, can I change my mind?"
+msgstr "**問:** 在我選擇同意加入後，我能否改變主意？"
+
+#: ../../FAQ.md:143
+msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
+msgstr "**答:** 您可以在設置面板中關閉或在 Matomo 上關閉。無論是否選擇加入或退出，都不會產生任何後果。"
+
