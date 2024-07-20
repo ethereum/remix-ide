@@ -1,30 +1,27 @@
 AI Tools
 ========
 
-Remix has its own AI tool named **RemixAI** and a sub-project called **Solidity Copilot** for code completion.  
+Remix has its own AI tool named **RemixAI** and a sub-project called **RemixAI Copilot** for code completion.  
 
 RemixAI is also used in the: 
 - **Explain this contract** icon at the top of the Editor
-- **right-click menu options** of the Editor
-- **triple slash** (///) for prepending an AI code request in a file in the Editor
-- **Explain this error** button in the compiler errors in the Solidity Compiler
+- **Explain this error** button when an error is thrown in the Solidity Compiler
+- **Right-click menu options** of the Editor
+- **Triple slash** (///) for prepending an AI code request in a file in the Editor
 
-## Remix's Solidity Copilot
-Solidity Copilot helps in writing code using **code completion**. The switch to activate it is at the top of the Editor.
+## Code Completion
+When you type a space or a new line, the RemixAI Copilot will propose some code.  The proposed code is a technique called, **code completion**. The RemixAI Copilot's suggested code will take into account what has already been written in the file.  
+
+The switch to activate it is at the top of the Editor.
 
 ![](images/a-ai-switch.png)
 
 All other RemixAI tools are always on.
 
-#### Code Completion
-When you type a new line or a space, the Solidity Copilot will propose some code.  The proposed code will take into account what is has already been written on in the file.  
-
-Use the Solidity Copilot switch at the top of the Editor to turn off or on the code completion. 
-
 ## Editor: Right-click Menu 
 ![](images/a-ai-editor-popup-menu.png)
 
-In both cases the answer will be printed out in Remix's Terminal.
+For both **Explain this function** or **Explain this code**, the answer will be printed out in Remix's Terminal.
 
 ### Explain a Function and Generate Documentation
 In the Right-click menu, select the options **Explain the function** and **Generate documentation**.
@@ -33,12 +30,7 @@ In the Right-click menu, select the options **Explain the function** and **Gener
 The "Explain this code" option in the Editor's Right-click menu can be triggered with, or without, highlighting a block of code. If some code has not been highlighted, RemixAI will take into account the code surrounding the cursor.
 
 ## Editor: Code Completion
-With the Solidity Copilot switch on, just start coding. When you put a space after a word or put a new line, the Copilot will make a suggestion.  
-
-[image]
-
-**NOTE: the suggestion will take into account everything that preceded it in this contract.** 
-[Stephane is this true or does it look at the entire file?]
+As explained above, with the RemixAI Copilot switched on, when you put a space after a word or make a new line, the Copilot will make a suggestion. 
 
 ![](images/a-ai-completion-proposal.png)
 
