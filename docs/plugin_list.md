@@ -165,6 +165,12 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect
 <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)
 
+**zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
+<br>Compile and deploy smart contracts for zkSync Era.
+<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zksync/profile.json): zkSync
+<br>[Documentation](https://docs.zksync.io/)
+<br>[Make an issue](https://github.com/NethermindEth/zksync-remix-plugin/issues)
+
 **Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp;
 <br>ZoKrates is a toolbox for zkSNARKs on Ethereum.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zokrates/profile.json): ZoKrates
