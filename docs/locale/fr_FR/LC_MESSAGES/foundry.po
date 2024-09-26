@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:35\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../foundry.md:1
 msgid "Foundry"
-msgstr "Fonderie"
+msgstr "Foundry"
 
 #: ../../foundry.md:4
 msgid "_(Supported since Remix IDE v0.25.0)_"
@@ -63,7 +63,7 @@ msgstr "Maintenant, vous pouvez commencer à déployer le contrat depuis Remix I
 
 #: ../../foundry.md:25
 msgid "Foundry Remappings"
-msgstr "Remaniements de fonderie"
+msgstr "Remaniements de la fonderie"
 
 #: ../../foundry.md:28
 msgid "Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can have compilation errors on Remix IDE."
