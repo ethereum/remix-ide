@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:30\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +22,12 @@ msgid "Code Contribution Guide"
 msgstr "Guía de Contribución de Código"
 
 #: ../../code_contribution_guide.md:4
-msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr "Remix es una herramienta de código abierto y estamos animando a todos a ayudarnos a mejorarlo. Puedes abrir un issue, dar un feedback o contribuir con un pull request en nuestro código fuente."
+msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please open issues, give feedback or contribute by a pulling request to our codebase."
+msgstr "Remix es una herramienta de código abierto y estamos animando a todos a ayudarnos a mejorarlo. Puedes abrir un issue, dar feedback o contribuir con un pull request en nuestro código."
 
 #: ../../code_contribution_guide.md:8
-msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` and among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
-msgstr "La aplicación Remix está construida con JavaScript y no utiliza ningún framework. Nos basamos en un conjunto seleccionado de módulos npm, como `yo-yo`, `csjs-inject` y entre otros. Eche un vistazo a los archivos `package.json` de los submódulos de Remix para saber más sobre la pila."
+msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
+msgstr "La aplicación Remix está construida en JavaScript y no usa framework alguno. Confiamos en una serie de módulos de npm como `yo-yo`, `csjs-inject` entre otros. Revisa los archivos package.json en los submódulos de Remix para saber más sobre el stack de desarrollo."
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
