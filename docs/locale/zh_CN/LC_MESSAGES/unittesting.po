@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "如果您以前没有使用过此插件并且没有看到`双重检查`�
 
 #: ../../unittesting.md:10
 msgid "Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) icon and activate `Solidity Unit Testing` plugin."
-msgstr "点击 ![](images/a-plug.png) (插件)图标以进入插件管理器并激活Solidity Unit Testing插件。"
+msgstr "点击 ![](images/a-plug.png) (插件)图标以进入插件管理器并激活 `Solidity Unit Testing` 插件。"
 
 #: ../../unittesting.md:12
 msgid "![](images/a-unit-testing-from-pm.png)"
@@ -43,7 +43,7 @@ msgstr "现在，`双重检查`图标将出现在左侧图标栏中。单击该�
 
 #: ../../unittesting.md:16
 msgid "<i>Alternatively, just select `Solidity` environment from Remix IDE `Home` tab. This will activate `Solidity Unit Testing` plugin along with `Solidity Compiler`, `Deploy & Run Transactions` & `Solidity Static Analysis` plugins.</i>"
-msgstr "<i>或者，只需从Remix IDE主页选中Solidity环境。这将激活`Solidity编译器`、`部署和运行交易`和`Solidity静态分析`插件，以及`Solidity Unit Testing`插件。</i>"
+msgstr "<i>或者，只需从Remix IDE主页选中Solidity环境。这将激活 “Solidity编译器“ 、“部署和运行交易” 和 “Solidity静态分析” 插件，以及 “Solidity Unit Testing” 插件。</i>"
 
 #: ../../unittesting.md:18
 msgid "After successful loading, plugin looks like this:"
@@ -71,7 +71,7 @@ msgstr "选定目录后，该目录将用于加载测试文件和存储新生成
 
 #: ../../unittesting.md:30
 msgid "Default test directory is `browser/tests`."
-msgstr "默认测试目录是browser/tests。"
+msgstr "默认测试目录是 `browser/tests` 。"
 
 #: ../../unittesting.md:32
 msgid "Generate"
@@ -79,7 +79,7 @@ msgstr "生成"
 
 #: ../../unittesting.md:34
 msgid "Select a solidity file which you want to test and click on the button `Generate`. It will generate a test file dedicated to selected file **in the test directory**."
-msgstr "选择要测试的Solidity文件，然后单击“生成”按钮。它会在`测试目录`中生成专用于所选文件的测试文件。"
+msgstr "选择要测试的Solidity文件，然后单击“生成”按钮。它会在 **测试目录** 中生成专用于所选文件的测试文件。"
 
 #: ../../unittesting.md:36
 msgid "If no file is selected, it will still create a file with generic name as `newFile_test.sol`."
@@ -163,7 +163,7 @@ msgstr "Remix 帮助用户通过各种类型的自定义来正确测试合约。
 
 #: ../../unittesting.md:117
 msgid "**1. Custom Compiler Context**"
-msgstr "**1. 自定义编译器上下文**"
+msgstr " **1. 自定义编译器上下文** "
 
 #: ../../unittesting.md:119
 msgid "`Solidity Unit Testing` refers to the `Solidity Compiler` plugin for compiler configurations. Configure `Compiler`, `EVM Version`, `Enable Optimization` & `runs` in the `Solidity Compiler` plugin and this will be used in the `Solidity Unit Testing` plugin for contract compilation before running unit tests."
@@ -175,7 +175,7 @@ msgstr "![](images/a-unit-testing-custom-compiler-config.png)"
 
 #: ../../unittesting.md:125
 msgid "**2. Custom Transaction Context**"
-msgstr "**2. 自定义交易上下文**"
+msgstr " **2. 自定义交易上下文** "
 
 #: ../../unittesting.md:127
 msgid "For interacting with a contract's method, the prime parameters of a transaction are `from` address, `value` & `gas`. Typically, a method's behaviour is tested with different values of these parameters."
@@ -183,7 +183,7 @@ msgstr "要与合约的方法交互，交易的主要参数是`from`地址、`va
 
 #: ../../unittesting.md:129
 msgid "One can input custom values for `msg.sender` & `msg.value` of transaction using NatSpec comments, like:"
-msgstr "在交易的中，您可以使用NatSpec注释输入自定义的`msg.sender`和`msg.value`值，如："
+msgstr "在交易中，您可以使用NatSpec注释输入自定义的`msg.sender`和`msg.value`值，如："
 
 #: ../../unittesting.md:139
 msgid "<b>Instructions to use:</b>"
@@ -195,7 +195,7 @@ msgstr "参数必须在方法的NatSpec中定义"
 
 #: ../../unittesting.md:142
 msgid "Each parameter key should be prefixed with a hash (**#**) and end with a colon following a space (**:&nbsp;**) like `#sender: ` & `#value: `"
-msgstr "每个参数键都应以 (**#**) 为前缀，并以一个空格（**:&nbsp;**）后缀结束，如`#sender:`和`#value:`"
+msgstr "每个参数键都应以 ( **#** ) 为前缀，并以一个空格（ **:&nbsp;** ）后缀结束，如`#sender:`和`#value:`"
 
 #: ../../unittesting.md:143
 msgid "For now, customization is only available for parameters `sender` & `value`"
