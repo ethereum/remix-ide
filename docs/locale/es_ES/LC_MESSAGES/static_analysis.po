@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -34,8 +34,8 @@ msgid "![](images/a-ssa-activate.png)"
 msgstr "![](images/a-ssa-activate.png)"
 
 #: ../../static_analysis.md:10
-msgid "`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
-msgstr "También puede cargar `Solidity Analyzers` haciendo clic en el icono `Solidity` de la sección de plugins destacados de la pestaña de inicio de Remix.  Este botón carga los siguientes plugins: Solidity Compiler, Solidity Unit Testing y Static Analyzers."
+msgid "`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgstr "\"Solidity Analyzers\" también se puede cargar haciendo clic en el icono de \"Solidity\" en la sección de complementos destacados de la pestaña de inicio de Remix. Este botón carga los siguientes complementos: Compilador de solidez, Pruebas unitarias de solidez y Analizadores estáticos."
 
 #: ../../static_analysis.md:12
 msgid "`Solidity Analyzers` uses these tools:"
@@ -63,7 +63,7 @@ msgstr "Cómo utilizarlo"
 
 #: ../../static_analysis.md:22
 msgid "**A contract must be compiled before analysis can be run.**"
-msgstr "**Un contrato debe ser compilado antes de poder ejecutar el análisis.**"
+msgstr "**Un contrato debe compilarse antes de poder ejecutar el análisis.**"
 
 #: ../../static_analysis.md:24
 msgid "At the top of the panel, check the tools that you want to use."
@@ -186,16 +186,16 @@ msgid "Use of inline assembly is advised only in rare cases."
 msgstr "Se aconseja utilizar el montaje en línea sólo en casos excepcionales."
 
 #: ../../static_analysis.md:92
-msgid "**Block timestamp: Semantics maybe unclear**"
-msgstr "**Sello de tiempo del bloque: Semántica quizá poco clara**"
+msgid "**Block timestamp: Semantics may be unclear**"
+msgstr "**Marca de tiempo de bloque: la semántica puede no estar clara**"
 
 #: ../../static_analysis.md:94
 msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
 msgstr "`now` no significa hora actual. `now` es un alias de `block.timestamp`. `block.timestamp` puede estar influenciado por los mineros hasta cierto punto, tenga cuidado."
 
 #: ../../static_analysis.md:105
-msgid "**Low level calls: Semantics maybe unclear**"
-msgstr "**Llamadas de bajo nivel: Semántica quizá poco clara**"
+msgid "**Low level calls: Semantics may be unclear**"
+msgstr "**Llamadas de bajo nivel: la semántica puede estar poco clara**"
 
 #: ../../static_analysis.md:107
 msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
@@ -243,7 +243,7 @@ msgstr "**Borrar en array dinámico: Utilice require/assert adecuadamente**"
 
 #: ../../static_analysis.md:165
 msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
-msgstr "La operación `delete` cuando se aplica a un array de tamaño dinámico en Solidity genera código para borrar cada uno de los elementos contenidos. Si el array es grande, esta operación puede sobrepasar el límite de gas del bloque y lanzar una excepción OOG. También los objetos anidados de tamaño dinámico pueden producir los mismos resultados."
+msgstr "La operación `delete` cuando se aplica a un array de tamaño dinámico en Solidity genera código para borrar cada uno de los elementos que contiene. Si el array es grande, esta operación puede sobrepasar el límite de gas del bloque y lanzar una excepción OOG. También los objetos anidados de tamaño dinámico pueden producir los mismos resultados."
 
 #: ../../static_analysis.md:177
 msgid "**For loop over dynamic array: Iterations depend on dynamic array's size**"
@@ -271,7 +271,7 @@ msgstr "**ERC20: 'decimales' debería ser 'uint8'**"
 
 #: ../../static_analysis.md:223
 msgid "ERC20 Contracts `decimals` function should have `uint8` as return type."
-msgstr "Los contratos ERC20 La función `decimals` debe tener `uint8` como tipo de retorno."
+msgstr "La función `decimals` de ERC20 Contracts debería tener `uint8` como tipo de retorno."
 
 #: ../../static_analysis.md:233
 msgid "Category: Miscellaneous"
@@ -307,7 +307,7 @@ msgstr "**Guarde las condiciones: Utilice 'require' y 'assert' adecuadamente**"
 
 #: ../../static_analysis.md:268
 msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
-msgstr "Utilice `assert(x)` si nunca jamás desea que x sea falso, en ninguna circunstancia (aparte de un error en su código). Utilice `require(x)` si x puede ser falso, debido, por ejemplo, a una entrada no válida o a un componente externo que falle."
+msgstr "Utilice `assert(x)` si nunca jamás quiere que x sea falso, en ninguna circunstancia (aparte de un error en su código). Utilice `require(x)` si x puede ser falso, debido, por ejemplo, a una entrada no válida o a un componente externo que falle."
 
 #: ../../static_analysis.md:274
 msgid "**Result not used: The result of an operation not used**"
@@ -339,7 +339,7 @@ msgstr "**Datos truncados: La división en valores int/uint trunca el resultado*
 
 #: ../../static_analysis.md:313
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
-msgstr "La división de valores enteros vuelve a dar como resultado un valor entero. Esto significa, por ejemplo, 10 / 100 = 0 en lugar de 0,1, ya que el resultado vuelve a ser un número entero. Esto no es válido para la división de (sólo) valores literales ya que esos dan constantes racionales."
+msgstr "La división de valores enteros vuelve a dar como resultado un valor entero. Esto significa, por ejemplo, que 10 / 100 = 0 en lugar de 0,1, ya que el resultado vuelve a ser un número entero. Esto no es válido para la división de (sólo) valores literales ya que esos dan constantes racionales."
 
 #: ../../static_analysis.md:323
 msgid "Remix-analyzer"
