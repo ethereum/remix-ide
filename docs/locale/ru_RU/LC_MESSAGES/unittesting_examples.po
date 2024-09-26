@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,101 +19,101 @@ msgstr ""
 
 #: ../../unittesting_examples.md:1
 msgid "Testing by Example"
-msgstr "Тестирование на примере"
+msgstr ""
 
 #: ../../unittesting_examples.md:4
 msgid "Here are some examples which can give you better understanding to plan your tests."
-msgstr "Приведем несколько примеров, которые могут дать Вам лучшее понимание для планирования Ваших тестов."
+msgstr ""
 
 #: ../../unittesting_examples.md:6
 msgid "**Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
-msgstr "**Примечание:** Примеры в этом разделе предназначены для того, чтобы дать Вам толчок к развитию. Мы не рекомендуем полагаться на них без проверки с Вашей стороны."
+msgstr ""
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
-msgstr "1. Простой пример"
+msgstr ""
 
 #: ../../unittesting_examples.md:9
 msgid "In this example, we test setting & getting variables."
-msgstr "В этом примере мы тестируем установку и получение переменных."
+msgstr ""
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: `Simple_storage.sol`"
-msgstr "Тестируемый контракт/программа: `Simple_storage.sol`."
+msgstr ""
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: `simple_storage_test.sol`"
-msgstr "Тестовый контракт/программа: `simple_storage_test.sol`."
+msgstr ""
 
 #: ../../unittesting_examples.md:60
 msgid "2. Testing a method involving `msg.sender`"
-msgstr "2. Тестирование метода, включающего `msg.sender`."
+msgstr ""
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
-msgstr "В Solidity функция `msg.sender` играет большую роль в управлении доступом при взаимодействии методов смарт-контракта. Различные `msg.sender` могут помочь протестировать контракт, в котором задействовано несколько учетных записей с различными ролями. Ниже приведен пример тестирования такого случая:"
+msgstr ""
 
 #: ../../unittesting_examples.md:63
 msgid "Contract/Program to be tested: `Sender.sol`"
-msgstr "Тестируемый контракт/программа: `Sender.sol`"
+msgstr ""
 
 #: ../../unittesting_examples.md:85
 msgid "Test contract/program: `Sender_test.sol`"
-msgstr "Тестовый контракт/программа: `Sender_test.sol`."
+msgstr ""
 
 #: ../../unittesting_examples.md:137
 msgid "3. Testing method execution"
-msgstr "3. Выполнение метода тестирования"
+msgstr ""
 
 #: ../../unittesting_examples.md:139
 msgid "With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed."
-msgstr "С помощью Solidity можно напрямую проверить изменения, произведенные методом в хранилище, получив эти переменные из контракта. Но тестирование успешного выполнения метода требует определенной стратегии. Это не совсем верно, когда тест проходит успешно - обычно очевидно, почему он прошел. Однако, когда тест не удался, очень важно понять, почему он не удался."
+msgstr ""
 
 #: ../../unittesting_examples.md:141
 msgid "To help in such cases, Solidity introduced the `try-catch` statement in version `0.6.0`. Previously, we had to use low-level calls to track down what was going on."
-msgstr "Чтобы помочь в таких случаях, Solidity ввел оператор `try-catch` в версии `0.6.0`. Ранее нам приходилось использовать низкоуровневые вызовы, чтобы отследить, что происходит."
+msgstr ""
 
 #: ../../unittesting_examples.md:143
 msgid "Here is an example test file that use both **try-catch** blocks and **low level calls**:"
-msgstr "Вот пример тестового файла, в котором используются как блоки **try-catch**, так и **низкоуровневые вызовы**:"
+msgstr ""
 
 #: ../../unittesting_examples.md:145
 msgid "Contract/Program to be tested: `AttendanceRegister.sol`"
-msgstr "Проверяемый контракт/программа: `AttendanceRegister.sol`."
+msgstr ""
 
 #: ../../unittesting_examples.md:174
 msgid "Test contract/program: `AttendanceRegister_test.sol`"
-msgstr "Тестовый контракт/программа: `AttendanceRegister_test.sol`."
+msgstr ""
 
 #: ../../unittesting_examples.md:262
 msgid "4. Testing a method involving `msg.value`"
-msgstr "4. Тестирование метода, включающего `msg.value`"
+msgstr ""
 
 #: ../../unittesting_examples.md:263
 msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:"
-msgstr "В Solidity эфир может быть передан вместе с вызовом метода, доступ к которому осуществляется внутри контракта как `msg.value`. Иногда несколько вычислений в методе выполняются на основе `msg.value`, которые можно протестировать с различными значениями, используя контекст пользовательских транзакций Remix. См. пример:"
+msgstr ""
 
 #: ../../unittesting_examples.md:265
 msgid "Contract/Program to be tested: `Value.sol`"
-msgstr "Тестируемый контракт/программа: `Value.sol`"
+msgstr ""
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: `Value_test.sol`"
-msgstr "Тестовый контракт/программа: `Value_test.sol`"
+msgstr ""
 
 #: ../../unittesting_examples.md:331
 msgid "5. Testing a method involving `msg.sender` and `msg.value`"
-msgstr "5. Тестирование метода, включающего `msg.sender` и `msg.value`"
+msgstr ""
 
 #: ../../unittesting_examples.md:332
 msgid "In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts."
-msgstr "В следующем тесте мы будем эмулировать несколько счетов, делающих депозиты в смарт-контракте одному и тому же получателю, и, наконец, попросим получателя снять единовременную сумму всех пожертвований. Мы также проверяем, что пожертвования соответствуют ожидаемым суммам. Этот пример очень наглядно показывает, как можно переключаться между различными счетами, используя при этом набор различных сумм msg.value."
+msgstr ""
 
 #: ../../unittesting_examples.md:334
 msgid "Contract/Program to be tested: `Donations.sol`"
-msgstr "Проверяемый контракт/программа: `Donations.sol`"
+msgstr ""
 
 #: ../../unittesting_examples.md:379
 msgid "Test contract/program: `Donations_test.sol`"
-msgstr "Тестовый контракт/программа: `Donations_test.sol`"
+msgstr ""
 
