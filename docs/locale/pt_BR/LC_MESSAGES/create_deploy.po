@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/create_deploy.pot\n"
+"X-Crowdin-File-ID: 6468\n"
+"Language: pt_BR\n"
+
+#: ../../create_deploy.md:1
+msgid "Creating and Deploying a Contract"
+msgstr "Criando e implantando um contrato"
+
+#: ../../create_deploy.md:4
+msgid "Let's go through a basic workflow:"
+msgstr "Vamos avançar por um fluxo de trabalho básico:"
+
+#: ../../create_deploy.md:5
+msgid "create a new file"
+msgstr "criar um novo arquivo"
+
+#: ../../create_deploy.md:6
+msgid "code a contract in the file"
+msgstr "codifique um contrato no arquivo"
+
+#: ../../create_deploy.md:7
+msgid "compile the contract"
+msgstr "compile o contrato"
+
+#: ../../create_deploy.md:8
+msgid "deploy it to the local simulated blockchain (Remix VM)"
+msgstr "faça deploy dele para a blockchain simulada local (Remix VM)"
+
+#: ../../create_deploy.md:9
+msgid "interact with the deployed contract's functions"
+msgstr "interaja com as funções do contrato implantado"
+
+#: ../../create_deploy.md:11
+msgid "Creating a new file"
+msgstr "Criando um novo arquivo"
+
+#: ../../create_deploy.md:13
+msgid "![](images/a-file-explorer-new-file2a.png)"
+msgstr "![](images/a-file-explorer-new-file2a.png)"
+
+#: ../../create_deploy.md:15
+msgid "In the File Explorer, create a new file by clicking on the new file icon, and name it. The `.sol` is default extension in Remix, if a file is named without an extension, `.sol` will appended."
+msgstr "No Gerenciador de Arquivos, crie um novo arquivo clicando no novo ícone de arquivo e nomeando-o. A extensão `.sol` é padrão no Remix, se um arquivo for nomeado sem uma extensão,  `.sol` será adicionado ao nome do arquivo."
+
+#: ../../create_deploy.md:17
+msgid "**NOTE:** For information about templates or workspaces, see the [File Explorer docs](file_explorer.html)."
+msgstr "**NOTA:** Para obter informações sobre templates ou espaços de trabalho, consulte a [Documentação de Explorador de Arquivos](file_explorer.html)."
+
+#: ../../create_deploy.md:19
+msgid "In the editor, paste in the following contract into the empty file:"
+msgstr "No editor, cole o seguinte contrato no arquivo vazio:"
+
+#: ../../create_deploy.md:49
+msgid "When pasting in code, make sure you understand it before deploying or interacting with it. Don't get scammed!"
+msgstr "Ao colar um código, certifique-se de entendê-lo antes de implantar ou interagir com ele. Não seja enganado!"
+
+#: ../../create_deploy.md:51
+msgid "Compile the Contract"
+msgstr "Compilar o contrato"
+
+#: ../../create_deploy.md:53
+msgid "With the contract above as the active tab in the Editor, compile the contract.   A quick way to compile is to hit **ctrl + s**. You can also compile by going to the Solidity compiler and clicking the compile button, or by right clicking a file in the File Explorer, or by clicking the play button at the top of the Editor."
+msgstr "Com o contrato acima na aba ativa do Editor, compile o contrato. Uma maneira rápida de compilar é apertar **ctrl + s**. Você também pode compilar indo para o compilador Solidity e clicando no botão de compilação, ou clicando com o botão direito do mouse em um arquivo no Gerenciador de Arquivos, ou clicando no botão play no topo do Editor."
+
+#: ../../create_deploy.md:56
+msgid "**For More Info** see the docs on the [Solidity Compiler](compile.html)."
+msgstr "**Para mais informações** veja a documentação no [Compilador Solidity](compile.html)."
+
+#: ../../create_deploy.md:58
+msgid "Deploy the contract"
+msgstr "Implantar o contrato"
+
+#: ../../create_deploy.md:60
+msgid "Go to the **Deploy & Run Transactions** plugin."
+msgstr "Vá para o plugin **Implantar e Executar Transações**."
+
+#: ../../create_deploy.md:62
+msgid "At the top of this plugin is the Environment select box.  Here you can choose where you want to deploy your contract.  There are many choices.  For more info about these options see [this section](run.html#environment) of the docs."
+msgstr "Na parte superior deste plugin está a caixa de seleção do ambiente. Aqui você pode escolher onde quer implantar seu contrato. Há muitas escolhas. Para mais informações sobre essas opções, consulte [esta seção](run.html#environment) da documentação."
+
+#: ../../create_deploy.md:64
+msgid "For a brief synopsis:"
+msgstr "Para um breve sinopse:"
+
+#: ../../create_deploy.md:66
+msgid "**Injected Provider** is used to connect Remix with a Browser Wallet (e.g. Metamask) which is generally for deploying to a public network."
+msgstr "O **Provedor Injetado** é usado para conectar a Remix com uma Carteira do navegador (por exemplo, Metamask) que é usado geralmente para implantação em uma rede pública."
+
+#: ../../create_deploy.md:68
+msgid "**Remix VM** is a test blockchain in the browser.  There are quite a few \"flavors\" of the Remix VM. Each \"flavor\" is associated with a different hard fork with the name in parathesies - e.g. Remix VM (Shanghai) or for the choice of a chain to fork into the Remix VM."
+msgstr "**Remix VM** é uma blockchain de teste no navegador. Existem alguns \"sabores\" da Remix VM. Cada \"sabor\" é associado a um fork diferente com o nome em parenteses - ex.: Remix VM (Shanghai) ou para a escolher uma rede para fazer o fork no Remix VM."
+
+#: ../../create_deploy.md:70
+msgid "The **Remix VM** is convenient because it is a blockchain that runs in the browser and nothing else needs to be installed in order to run it."
+msgstr "O **Remix VM** é conveniente porque é uma blockchain que executa no navegador e nada mais precisa ser instalado para poder executá-lo."
+
+#: ../../create_deploy.md:72
+msgid "**Dev** is for connecting Remix to a local chain running on your computer."
+msgstr "**Dev** é para conectar Remix a uma rede local em execução no seu computador."
+
+#: ../../create_deploy.md:74
+msgid "**L2** is for connecting Remix to Optimism or Abritrum via a browser wallet.  Its essentially the same as Injected Provider, but it sets the wallet with the configuration of the specified L2."
+msgstr "**L2** é para conectar Remix no Optimism ou Abritrum através de uma carteira do navegador. É essencialmente o mesmo que o Provedor Injetado, mas define a carteira com a configuração do L2 especificado."
+
+#: ../../create_deploy.md:76
+msgid "(For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))"
+msgstr "(Para mais detalhes, veja [Executando transações](https://remix-ide.readthedocs.io/en/latest/run.html))"
+
+#: ../../create_deploy.md:78
+msgid "Select the top Remix VM environment"
+msgstr "Selecione o ambiente Remix VM superior"
+
+#: ../../create_deploy.md:81
+msgid "Choose the top first Remix VM in the dropdown list."
+msgstr "Escolha o primeiro Remix VM na lista de seleção."
+
+#: ../../create_deploy.md:83
+msgid "The Remix VM comes with 10 accounts funded with 100 ether."
+msgstr "O Remix VM vem com 10 contas financiadas com 100 ether."
+
+#: ../../create_deploy.md:85
+msgid "**NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will also restart to its fresh & default state.  For a more realistic testing environment, use a public testnet."
+msgstr "**NOTA:** Quando você estiver no **Remix VM** e você recarregar o navegador - o **Remix VM** também irá reiniciar para seu estado novo e padrão. Para um ambiente de teste mais realista, use uma rede de testes pública."
+
+#: ../../create_deploy.md:87
+msgid "![](images/a-run-remix-vm-accounts.png)"
+msgstr "![](images/a-run-remix-vm-accounts.png)"
+
+#: ../../create_deploy.md:89
+msgid "Deploying a contract"
+msgstr "Implantando um contrato"
+
+#: ../../create_deploy.md:92
+msgid "![](images/a-run-testContract.png)"
+msgstr "![](images/a-run-testContract.png)"
+
+#: ../../create_deploy.md:94
+msgid "The constructor of `testContract` needs a parameter of the type `uint256`. Input a uint256 and click on `Deploy`."
+msgstr "O construtor do `testContract` precisa de um parâmetro do tipo `uint256`. Insira um uint256 e clique em `Implantar`."
+
+#: ../../create_deploy.md:97
+msgid "The transaction is created which deploys the instance of `testContract` ."
+msgstr "A transação é criada que implementa a instância do `testContract`."
+
+#: ../../create_deploy.md:99
+msgid "In a more realistic blockchain, you would have to approve the transaction and then wait for the transaction to be mined. However, because we are using the `Remix VM`, the execution is immediate."
+msgstr "Em uma blockchain mais realista, você teria que aprovar a transação e, em seguida, esperar até que a transação fosse minerada. No entanto, como estamos usando o `Remix VM`, a execução é imediata."
+
+#: ../../create_deploy.md:101
+msgid "The terminal will give information about the transaction."
+msgstr "O terminal fornecerá informações sobre a transação."
+
+#: ../../create_deploy.md:103
+msgid "The newly created instance is displayed in the **Deployed Contracts** section."
+msgstr "A instância recém-criada é exibida na seção **Contratos implantados**."
+
+#: ../../create_deploy.md:105
+msgid "![](images/a-remix-vm-instance.png)"
+msgstr "![](images/a-remix-vm-instance.png)"
+
+#: ../../create_deploy.md:107
+msgid "Interacting with the deployed instance"
+msgstr "Interagindo com a instância do Contrato Inteligente implantada"
+
+#: ../../create_deploy.md:109
+msgid "Clicking on the caret to the left of the instance of TESTCONTRACT will expand it so its functions are visible."
+msgstr "Clicando no cursor à esquerda da instância do TESTCONTRACT irá expandi-lo para que suas funções sejam visíveis."
+
+#: ../../create_deploy.md:111
+msgid "This new instance contains the 3 functions (`setP`, `setPN`, `get`)."
+msgstr "Esta nova instância contém 3 funções (`setP`, `setPN`, `get`)."
+
+#: ../../create_deploy.md:113
+msgid "Clicking on `setP` or `setPN` will create a new transaction."
+msgstr "Clicando no `setP` ou `setPN` criará uma nova transação."
+
+#: ../../create_deploy.md:115
+msgid "`setP` is a `payable` function (payable functions have red buttons). With a payable function, value (ETH) can be sent to the contract. The amount of ETH is chosen in the VALUE input field and the unit of ETH is selected in the box to the right."
+msgstr "`setP` é uma função `payable` (funções pagáveis têm botões vermelhos). Com uma função pagável, o valor (ETH) pode ser enviado para o contrato. A quantidade de ETH é escolhida no campo de entrada VALUE e a unidade de ETH está selecionada na caixa para a direita."
+
+#: ../../create_deploy.md:117
+msgid "![](images/a-remix-vm-value.png)"
+msgstr "![](images/a-remix-vm-value.png)"
+
+#: ../../create_deploy.md:119
+msgid "`setPN` is not payable (an orange button - depending on the theme). It is not possible to send value (Ether) to this function."
+msgstr "`setPN` não é pagável (um botão laranja - dependendo do tema). Não é possível enviar valor (Ether) para esta função."
+
+#: ../../create_deploy.md:121
+msgid "`get` is a **view function** (a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (it is only returning the value of the variable `value`)."
+msgstr "`get` é uma **função de visualização** (um botão azul - dependendo do tema). Ele não executa uma transação porque um `get` não modifica o estado (ele está apenas retornando o valor da variável `value`)."
+
+#: ../../create_deploy.md:123
+msgid "The value that gets returned appears just below the `get` button."
+msgstr "O valor que é retornado aparece logo abaixo do botão 'get'."
+
+#: ../../create_deploy.md:125
+msgid "![](images/a-remix-vm-view.png)"
+msgstr "![](images/a-remix-vm-view.png)"
+
