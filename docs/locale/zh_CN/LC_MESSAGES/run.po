@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "部署 & 运行"
 
 #: ../../run.md:4
 msgid "![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**."
-msgstr "![](images/a-run-icon.png) 部署与运行模块是为了将交易发送到当前的**环境**中。"
+msgstr "![](images/a-run-icon.png) 部署与运行模块是为了将交易发送到当前的 **环境** 中。"
 
 #: ../../run.md:6
 msgid "For deploying, you need to have a contract compiled.  To check that there is a compiled contract, find the <b>CONTRACT</b> select box (which is under the VALUE input field), you can use this module."
@@ -43,7 +43,7 @@ msgstr "环境"
 
 #: ../../run.md:15
 msgid "`Remix VM (Merge)` : Connects to a sandbox blockchain in the browser. The Remix VM (previously called JavaScript VM) is its own \"blockchain\" and on each reload the old chain will be cleared and a new blockchain will be started. **The old one will not be saved**.  Merge refers to the fork of Ethereum when the Merge occurred. This fork is also known as the **Paris** fork."
-msgstr "`Remix VM (Merge)`：连接到浏览器中的一个沙盒区块链。Remix VM（以前称为JavaScript VM）是它自己的 \"区块链\"，在每次重新加载时，旧的链将被清除，新的区块链将被启动。**旧的将不会被保存**。  合并指的是合并发生时以太坊的分叉。这个分叉也被称为**巴黎**分叉。"
+msgstr "`Remix VM (Merge)`：连接到浏览器中的一个沙盒区块链。Remix VM（以前称为JavaScript VM）是它自己的 \"区块链\"，在每次重新加载时，旧的链将被清除，新的区块链将被启动。 **旧的将不会被保存** 。  合并指的是合并发生时以太坊的分叉。这个分叉也被称为 **巴黎** 分叉。"
 
 #: ../../run.md:17
 msgid "`Remix VM (London)` : Same as above except this chain is using the London fork of Ethereum."
@@ -127,7 +127,7 @@ msgstr "![](images/a-custom-fork.png)"
 
 #: ../../run.md:56
 msgid "You can get the **Node URL** from chainlist.org. If the chain does not load, you may need to choose a different RPC server. You will also need to choose an EVM version appropriate to the block number. So, if you choose a very low block number, the EVM with the Merge “flavor” won’t work because this version of the EVM came out later."
-msgstr "你可以从chainlist.org获得**节点的URL**。如果链不加载，你可能需要选择一个不同的RPC服务器。你还需要选择一个与区块编号相适应的EVM版本。因此，如果你选择了一个非常低的区块号码，带有Merge \"味道 \"的EVM将无法工作，因为这个版本的EVM是后来才出现的。"
+msgstr "你可以从chainlist.org获得 **节点的URL** 。如果链不加载，你可能需要选择一个不同的RPC服务器。你还需要选择一个与区块编号相适应的EVM版本。因此，如果你选择了一个非常低的区块号码，带有Merge \"flavor \"的EVM将无法工作，因为这个版本的EVM是后来才出现的。"
 
 #: ../../run.md:58
 msgid "More about External HTTP Provider"
@@ -159,11 +159,11 @@ msgstr "请参阅 [Geth 文档中关于开发模式的内容](https://geth.ether
 
 #: ../../run.md:84
 msgid "The Web3 Provider Endpoint for a local node is **http://localhost:8545**"
-msgstr "本地节点的 Web3 Provider Endpoint 是 **http://localhost:8545**"
+msgstr "本地节点的 Web3 Provider Endpoint 是 **http://localhost:8545** "
 
 #: ../../run.md:88
 msgid "**WARNING:** Don't get lazy. It is a bad idea to use the Geth flag <b>--http.corsdomain</b> with a wildcard: `--http.corsdomain *`"
-msgstr "**提醒:** 别偷懒。有一种很不明智的做法，就是在 Geth 参数标识 <b>--http.corsdomain</b> 后面跟一个通配符: `--http.corsdomain *`"
+msgstr " **提醒:** 别偷懒。有一种很不明智的做法，就是在 Geth 参数标识 <b>--http.corsdomain</b> 后面跟一个通配符: `--http.corsdomain *`"
 
 #: ../../run.md:90
 msgid "If you put the wildcard `*`, it means everyone can request the node. Whereas, if you put a URL, it restricts the urls to just that one - e.g.  `--http.corsdomain 'https://remix-alpha.ethereum.org'`"
@@ -171,7 +171,7 @@ msgstr "如果你是用通配符 `*` ，这就意味着所有人都可以访问�
 
 #: ../../run.md:92
 msgid "Only use `--http.corsdomain *` when using a **test chain** AND using only **test accounts**. For real accounts or on the mainchain **specify the url**."
-msgstr "只在使用**测试链**或**测试账户**时使用 `--http.corsdomain *` 。如果使用真实账户或在主链上，**请指明 url** 。"
+msgstr "只在使用 **测试链** 或 **测试账户** 时使用 `--http.corsdomain *` 。如果使用真实账户或在主链上， **请指明 url**  。"
 
 #: ../../run.md:97
 msgid "Account:"
@@ -195,11 +195,12 @@ msgstr "以太币："
 
 #: ../../run.md:109
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br>  **Note:** payable functions have a red button."
-msgstr "这里设置了发送到一个合约或者 payable 函数的以太币数量，单位可以是 ETH、WEI、GWEI 等。<br> **注意:** payable 函数有一个红色按钮。"
+msgstr "这里设置了发送到一个合约或者 payable 函数的以太币数量，单位可以是 ETH、WEI、GWEI 等。<br> \n"
+" **注意:** payable 函数有一个红色按钮。"
 
 #: ../../run.md:112
 msgid "The **Value** field is always reset to 0 after each transaction execution. <br> The **Value** field is **NOT** for gas."
-msgstr "每笔交易执行后，这个 **Value** 字段总是会被重置为0。<br> 这个 **Value** 字段**不是**用作 gas 消耗的。"
+msgstr "每笔交易执行后，这个 **Value** 字段总是会被重置为0。<br> 这个 **Value** 字段 **不是** 用作 gas 消耗的。"
 
 #: ../../run.md:115
 msgid "![](images/a-Runtab-deploy-atAddress.png)"
@@ -211,7 +212,7 @@ msgstr "部署 & AtAddress"
 
 #: ../../run.md:120
 msgid "In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts."
-msgstr "在上图中，下拉选框选中了 **Ballot**。 这个下拉选框会包含已编译合约的列表。"
+msgstr "在上图中，下拉选框选中了 **Ballot** 。 这个下拉选框会包含已编译合约的列表。"
 
 #: ../../run.md:122
 msgid "`Deploy` sends a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them."
@@ -226,8 +227,8 @@ msgid "**Note:** When using AtAddress, be sure you trust the contract at that ad
 msgstr "**注意:** 当使用 AtAddress 时，请您确保这个地址的合约是可信的。"
 
 #: ../../run.md:130
-msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
-msgstr "使用 **AtAddress** ，您需要有已部署且在编辑器中**处于选中状态**的合约的**源码**或 **ABI** 。当使用源码时，合约必须通过和你想访问的已部署合约相同的编译设置进行编译。"
+msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access."
+msgstr "要使用 **AtAddress **，您需要在编辑器**处于选中状态时**有已部署合约的**源代码**或**ABI**。当使用源代码时，它必须使用与您尝试访问的已部署合约相同的编译设置进行编译。"
 
 #: ../../run.md:132
 msgid "Using the ABI with AtAddress"
@@ -266,8 +267,8 @@ msgid "The Recorder is a tool used to save a bunch of transactions in a JSON fil
 msgstr "Recorder 是一种工具，用于将一堆交易保存在一个 JSON 文件中，然后在同一环境或另一个环境中重新运行它们。"
 
 #: ../../run.md:158
-msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
-msgstr "保存到 JSON 文件(默认情况下，文件名为scenario.json)可以让您很方便地检查交易列表、调整输入参数、更改链接库等..."
+msgid "Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr "将数据保存到 JSON 文件 (默认命名为 scenario.json) 可以让您很方便地检查交易列表、调整输入参数、更改链接库等..."
 
 #: ../../run.md:160
 msgid "There are many use cases for the recorder."
@@ -290,8 +291,8 @@ msgid "Deploying contract does often require more than creating one transaction 
 msgstr "部署合约通常需要的不仅仅是创建一个交易，因此记录器将自动执行这个部署流程。"
 
 #: ../../run.md:172
-msgid "Working in a dev environment often requires setting up the state in a first place."
-msgstr "在开发环境中工作通常需要事先设置一个初始状态。"
+msgid "Working in a dev environment often requires setting up the state in the first place."
+msgstr "在开发环境中工作通常需要先设置状态。"
 
 #: ../../run.md:175
 msgid "![](images/a-recorder.png)"
