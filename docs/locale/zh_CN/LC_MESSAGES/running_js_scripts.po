@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "运行脚本"
 
 #: ../../running_js_scripts.md:4
 msgid "_JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions._"
-msgstr "_JavaScript（JS）是一种轻量级、解释型或即时编译的编程语言，具有一等函数。_"
+msgstr "_JJavaScript（JS）是一种轻量级、解释性或即时编译的编程语言，具有一级函数功能。_"
 
 #: ../../running_js_scripts.md:6
 msgid "Remix IDE supports execution of JS scripts."
@@ -43,7 +43,7 @@ msgstr "在编辑器中将脚本设置为选中文件，并在 Remix 终端运�
 
 #: ../../running_js_scripts.md:13
 msgid "Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor."
-msgstr "在`Files Explorers`插件中，右键单击脚本名称，然后点击**Run**选项。在编辑器中显示脚本时，快捷键为`Ctrl+Shift+S`。"
+msgstr "在`Files Explorers`插件中，右键单击脚本名称，然后点击 **Run** 选项。在编辑器中显示脚本时，快捷键为`Ctrl+Shift+S`。"
 
 #: ../../running_js_scripts.md:15
 msgid "Here is a sample script:"
@@ -87,7 +87,7 @@ msgstr "设置"
 
 #: ../../running_js_scripts.md:43
 msgid "These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**."
-msgstr "这些脚本需要访问合约的ABI。 ABI位于合约的元数据文件中。请确保通过转到设置模块并检查“生成合约元数据”选项是否已选中来创建此元数据文件。"
+msgstr "这些脚本需要访问合约的ABI。 ABI位于合约的元数据文件中。请确保通过转到 **设置** 模块并检查 **生成合约元数据** 选项是否 **已选中** 来创建此元数据文件。"
 
 #: ../../running_js_scripts.md:45
 msgid "Compile a Solidity file - to generate the contract metadata."
@@ -95,7 +95,7 @@ msgstr "编译Solidity文件-以生成合约元数据。"
 
 #: ../../running_js_scripts.md:47
 msgid "In the Deploy & Run plugin, choose the Environment."
-msgstr "在Deploy & Run插件中，选择环境。"
+msgstr "在 部署 与运行 插件中，选择环境。"
 
 #: ../../running_js_scripts.md:48
 msgid "Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider."
@@ -107,7 +107,7 @@ msgstr "文件浏览器中的JS脚本"
 
 #: ../../running_js_scripts.md:51
 msgid "In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**."
-msgstr "在**工作区**的**脚本**文件夹中，有两个示例文件：一个使用**web3.js**，另一个使用**ethers.js**。"
+msgstr "在 **工作区** 的 **脚本** 文件夹中，有两个示例文件：一个使用 **web3.js** ，另一个使用 **ethers.js** 。"
 
 #: ../../running_js_scripts.md:53
 msgid "Compile a contract and run a script on the fly"
@@ -131,7 +131,7 @@ msgstr "为了实现这一点，请在合同中添加NatSpec标签@custom:dev-ru
 
 #: ../../running_js_scripts.md:71
 msgid "**ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling."
-msgstr "**快捷键**：在编辑Solidity文件时，按Ctrl+Shift+S将编译该文件并运行脚本。相比之下，按Ctrl+S仅会开始编译。"
+msgstr " **快捷键** ：在编辑Solidity文件时，按Ctrl+Shift+S将编译该文件并运行脚本。相比之下，按Ctrl+S仅会开始编译。"
 
 #: ../../running_js_scripts.md:73
 msgid "An Example Script"
