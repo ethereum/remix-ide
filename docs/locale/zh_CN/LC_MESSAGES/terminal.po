@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -47,5 +47,5 @@ msgstr "它允许从终端搜索数据并清除日志。"
 
 #: ../../terminal.md:20
 msgid "You can run scripts by inputting them at the bottom after the `>`."
-msgstr "您可以在底部 `>` 之后输入命令来运行脚本。"
+msgstr "您可以通过在底部输入脚本来运行它们，输入在 `>`  后面。"
 
