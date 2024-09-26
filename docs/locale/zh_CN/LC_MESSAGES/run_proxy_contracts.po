@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -22,24 +22,24 @@ msgid "Deploy & Run Proxy Contracts"
 msgstr "部署与运行代理合约"
 
 #: ../../run_proxy_contracts.md:4
-msgid "Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern."
-msgstr "在Remix IDE 中，用户可以使用 UUPS 代理合约。"
+msgid "Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern."
+msgstr "Remix IDE 提供了处理使用 UUPS 模式的代理合约的辅助功能。"
 
 #: ../../run_proxy_contracts.md:6
 msgid "A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 msgstr "UUPS 代理合约实现了[ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 
 #: ../../run_proxy_contracts.md:8
-msgid "Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address."
-msgstr "一旦您部署了一份UUPS的实现合约，Remix将在您的实现合约地址下部署一个ERC1967合约。"
+msgid "Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address."
+msgstr "一旦您部署了 UUPS实现合约，Remix 将会部署一个 ERC1967合约，并包含您的实现合约地址。"
 
 #: ../../run_proxy_contracts.md:10
 msgid "To interact with the functions in the **implementation contract**, use the deployed instance of the **ERC1967 instance** not on the implementation contract."
-msgstr "要与**执行合约**中的函数交互，请使用**ERC 1967合约**的部署实例，而不是执行合约。"
+msgstr "要与 **执行合约** 中的函数交互，请使用 **ERC 1967合约** 的部署实例，而不是执行合约。"
 
 #: ../../run_proxy_contracts.md:12
-msgid "When its time to upgrade you contract, Remix has a UI for this."
-msgstr "当你想升级合约的时候，Remix有一个用户页面来引导。"
+msgid "When it's time to upgrade your contract, Remix has a UI for this."
+msgstr "当需要升级合约时，Remix 提供了相应的用户界面进行操作。"
 
 #: ../../run_proxy_contracts.md:14
 msgid "To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy & Run."
@@ -59,7 +59,7 @@ msgstr "![](images/a-proxy-deploy1-noParams.png)"
 
 #: ../../run_proxy_contracts.md:21
 msgid "Check the box for **Deploy with Proxy**. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:"
-msgstr "选中 **Deploy with Proxy（通过代理进行部署）** 的复选框，部署时会创建两笔交易：一笔是部署你的执行合约，另一笔是部署ERC1967代理合约。你会看到两个弹窗提示你做检查："
+msgstr "选中 **使用代理部署** 的复选框，部署时会创建两笔交易：一笔是部署你的执行合约，另一笔是部署ERC1967代理合约。你会看到两个弹窗提示你做检查："
 
 #: ../../run_proxy_contracts.md:23
 msgid "![](images/a-proxy-modal1.png)"
@@ -87,7 +87,7 @@ msgstr "![](images/a-deployed-instances.png)"
 
 #: ../../run_proxy_contracts.md:35
 msgid "To interact with your implementation contract **DO NOT** use the instance of your contract. Instead, you should **use the ERC1967 Proxy**. The proxy will have all the functions of your implementation."
-msgstr "要与你的执行合约进行交互，**不要**使用你部署的合约实例，而是**使用ERC1967代理合约**。代理合约拥有实现合约的所有方法。"
+msgstr "要与你的执行合约进行交互， **不要** 使用你部署的合约实例，而是 **使用ERC1967代理合约** 。代理合约拥有实现合约的所有方法。"
 
 #: ../../run_proxy_contracts.md:37
 msgid "Upgrading"
