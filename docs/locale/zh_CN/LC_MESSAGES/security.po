@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "安全使用 Remix"
 
 #: ../../security.md:4
 msgid "It is dangerous to send transactions on contracts you don't understand (even if it's a get rich quick scheme that you've copied & pasted from a Discord DM or a youtube video and you really really want to get rich)."
-msgstr "在不理解合约的情况下发送交易是危险的（即使它是一个从Discord私信或YouTube视频中复制并粘贴的快速致富计划，你非常想变得富有）。"
+msgstr "在不理解合约的情况下发送交易是危险的（即使它是一个从Discord私信或YouTube视频中复制并粘贴的快速致富计划，在你非常想变得富有时）。"
 
 #: ../../security.md:6
 msgid "Check our [article](https://medium.com/remix-ide/remix-in-youtube-crypto-scams-71c338da32d?source=friends_link&sk=bb6efbbf88bc3e496611943d282ad797) on a current scam promoting \"liquidity front runner bots\"."
@@ -35,15 +35,15 @@ msgstr "始终检查您是否正在通过 HTTPS 加载 Remix，除非您有使�
 
 #: ../../security.md:10
 msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
-msgstr "请确保所有导入都包含**版本号**，否则您将不知道获取的文件版本，并且构建不能复现。"
+msgstr "请确保所有导入都包含 **版本号** ，否则您将不知道获取的文件版本，并且构建不能复现。"
 
 #: ../../security.md:12
 msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
-msgstr "所以**不要** 使用这样的导入：<br> `import \"@openzepelin/contracts/token/ERC20/ERC20.sol\";`"
+msgstr "所以 **不要** 使用这样的导入：<br> `import \"@openzepelin/contracts/token/ERC20/ERC20.sol\";`"
 
 #: ../../security.md:15
 msgid "Rather, **use one** like this:<br> `import \"@openzeppelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
-msgstr "相反，**使用一个** 像这样：<br> `import \"@openzepelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
+msgstr "相反， **使用一个** 像这样：<br> `import \"@openzepelin/contracts@4.7.3/token/ERC20/ERC20.sol\";`"
 
 #: ../../security.md:18
 msgid "When connecting a contract to an existing deployment, ensure that the thing you are connecting to is correct AND is the correct version."
@@ -71,7 +71,7 @@ msgstr "remix-beta.ethereum.org"
 
 #: ../../security.md:27
 msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
-msgstr "如果您被引导到一个看起来像Remix但URL类似但不同的网站 - 那不是Remix，很可能是一种骗局。"
+msgstr "如果您被引导到一个看起来 **像Remix但URL类似但不同的网站**  - 那不是Remix，很可能是一种骗局。"
 
 #: ../../security.md:29
 msgid "Remix's ease makes its users a target"
@@ -83,7 +83,7 @@ msgstr "因为 Remix 没有安装过程，所以它拥有一个庞大的智能�
 
 #: ../../security.md:32
 msgid "**Scams lose their effectiveness when potential victims are educated about scams and about how to read and understand code. Learn Solidity and learn it well!**"
-msgstr "**当潜在受害者了解诈骗及如何阅读和理解代码时，诈骗的效力就会减弱。学习Solidity并且要学好！**"
+msgstr " **当潜在受害者了解诈骗及如何阅读和理解代码时，诈骗的效力就会减弱。学习Solidity并且要学好！** "
 
 #: ../../security.md:34
 msgid "For Solidity Tutorials in Remix, go to the LearnEth plugin."
