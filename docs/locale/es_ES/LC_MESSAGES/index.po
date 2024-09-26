@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -18,42 +18,34 @@ msgstr ""
 "Language: es_ES\n"
 
 #: ../../index.rst:51
-#: ../../index.rst:51
 msgid "Introduction"
 msgstr "Introducción"
 
 #: ../../index.rst:61
-#: ../../index.rst:61
 msgid "Core Modules"
 msgstr "Módulos básicos"
 
-#: ../../index.rst:72
-#: ../../index.rst:72
+#: ../../index.rst:73
 msgid "Solidity modules"
 msgstr "Módulos de solidez"
 
-#: ../../index.rst:83
-#: ../../index.rst:83
+#: ../../index.rst:84
 msgid "Unit Testing"
 msgstr "Pruebas unitarias"
 
-#: ../../index.rst:93
-#: ../../index.rst:93
+#: ../../index.rst:94
 msgid "External Tool Integrations"
 msgstr "Integraciones de herramientas externas"
 
-#: ../../index.rst:102
-#: ../../index.rst:102
+#: ../../index.rst:103
 msgid "Guides"
 msgstr "Guías"
 
-#: ../../index.rst:113
-#: ../../index.rst:113
+#: ../../index.rst:114
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: ../../index.rst:120
-#: ../../index.rst:120
+#: ../../index.rst:121
 msgid "Miscellaneous"
 msgstr "Varios"
 
@@ -63,7 +55,7 @@ msgstr "Bienvenido a la documentación de Remix"
 
 #: ../../index.rst:4
 msgid "**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and as a VSCode extension."
-msgstr "**El IDE Remix** es utilizado durante todo el trayecto de desarrollo de contratos inteligentes por usuarios de todos los niveles de conocimiento. No requiere configuración, fomenta un ciclo de desarrollo rápido y cuenta con un rico conjunto de plugins con interfaces gráficas de usuario intuitivas. El IDE viene en dos sabores (aplicación web o aplicación de escritorio) y como extensión de VSCode."
+msgstr "**El IDE Remix** es utilizado durante todo el trayecto de desarrollo de contratos inteligentes por usuarios de todos los niveles de conocimiento. No requiere configuración, fomenta un ciclo de desarrollo rápido y cuenta con un rico conjunto de plugins con interfaces gráficas intuitivas. El IDE viene en dos sabores (aplicación web o aplicación de escritorio) y como extensión de VSCode."
 
 #: ../../index.rst:8
 msgid "**Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__"
@@ -82,8 +74,8 @@ msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.
 msgstr "**Ethereum Remix**, la extensión VSCode, consulte `aquí <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. La documentación de la extensión VSCode se encuentra `aquí <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
 
 #: ../../index.rst:17
-msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
-msgstr "**Traducciones de la documentación de Remix** La documentación de Remix está actualmente en `Inglés <https://remix-ide.readthedocs.io/en/latest/>`__ y `Chino implícito <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  Más idiomas están en camino."
+msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
+msgstr "**Remix Documentation Translations** Los documentos de Remix están actualmente en `English <https://remix-ide.readthedocs.io/en/latest/>`__ y `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__. Hay más idiomas en camino."
 
 #: ../../index.rst:20
 msgid "Remix Project"
