@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Haga clic en el icono ![](images/a-user-testing-icon.png) (doble check) 
 
 #: ../../unittesting.md:8
 msgid "If you haven't used this plugin before and are not seeing `double check` icon, you have to activate it from Remix plugin manager."
-msgstr "Si no ha utilizado este plugin antes y no ve el icono de `doble check`, tiene que activarlo desde el gestor de plugins Remix."
+msgstr "Si no ha utilizado este plugin antes y no ve el icono de `doble check`, tiene que activarlo desde el gestor de plugins de Remix."
 
 #: ../../unittesting.md:10
 msgid "Go to the plugin manager by clicking the ![](images/a-plug.png) (plug) icon and activate `Solidity Unit Testing` plugin."
@@ -79,7 +79,7 @@ msgstr "Genere"
 
 #: ../../unittesting.md:34
 msgid "Select a solidity file which you want to test and click on the button `Generate`. It will generate a test file dedicated to selected file **in the test directory**."
-msgstr "Seleccione un archivo solidity que desee probar y pulse el botón `Generar`. Se generará un archivo de prueba dedicado al archivo seleccionado **en el directorio de prueba**."
+msgstr "Seleccione el archivo solidity que desea probar y pulse el botón `Generar`. Se generará un archivo de prueba dedicado al archivo seleccionado **en el directorio de prueba**."
 
 #: ../../unittesting.md:36
 msgid "If no file is selected, it will still create a file with generic name as `newFile_test.sol`."
