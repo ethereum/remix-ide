@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "`artifacts/<contractName_metadata>.json`: contiene los metadatos de la s
 
 #: ../../contract_metadata.md:8
 msgid "`artifacts/build-info/<dynamic_hash>.json`: contains info about `solc` compiler version, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try [Hardhat compilation](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) from Remix."
-msgstr "`artifacts/build-info/<dynamic_hash>.json`: contiene información sobre la versión del compilador `solc`, la entrada y la salida del compilador. Este archivo se genera de forma similar a los archivos generados mediante la compilación Hardhat. También puede probar [compilación Hardhat](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) de Remix."
+msgstr "`artifacts/build-info/<dynamic_hash>.json`: contiene información sobre la versión del compilador `solc`, la entrada y la salida del compilador. Este archivo se genera de forma similar a los archivos generados mediante la compilación Hardhat. También puede probar [Compilación Hardhat](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) de Remix."
 
 #: ../../contract_metadata.md:10
 msgid "Please note that in order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked. By default, it is checked."
@@ -63,7 +63,7 @@ msgstr "`linkReferences` contiene un mapa que representa las bibliotecas que dep
 
 #: ../../contract_metadata.md:24
 msgid "`autoDeployLib` defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in `linkReferences`"
-msgstr "`autoDeployLib` define si las bibliotecas deben ser autodesplegadas por Remix o si el contrato debe enlazarse con bibliotecas descritas en `linkReferences`."
+msgstr "`autoDeployLib` define si las librerías deben ser autodesplegadas por Remix o si el contrato debe enlazarse con librerías descritas en `linkReferences`."
 
 #: ../../contract_metadata.md:26
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: `<network_name>:<networkd_id>`, but it is also possible to define `<network_name>` or `<network_id>` as keys."
