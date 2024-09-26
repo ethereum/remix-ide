@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:03\n"
+"PO-Revision-Date: 2024-09-26 01:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests
 
 #: ../../unittestingAsCLI.md:6
 msgid "`remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`."
-msgstr "remix-tests是一种命令行接口工具，用于运行Solidity单元测试。这个工具在Remix的`Solidity Unit Testing`插件下作为一个库使用。在NPM上以`@remix-project/remix-tests`的形式在提供。"
+msgstr "`remix-tests` 是一种命令行接口工具，用于运行Solidity单元测试。这个工具在Remix的`Solidity Unit Testing`插件下作为一个库使用。在NPM上以`@remix-project/remix-tests`的形式在提供。"
 
 #: ../../unittestingAsCLI.md:8
 msgid "Get started"
@@ -43,7 +43,7 @@ msgstr "作为开发依赖："
 
 #: ../../unittestingAsCLI.md:15
 msgid "`npm install --save-dev @remix-project/remix-tests`"
-msgstr "`npm install --save-dev @remix-project/remix-tests`"
+msgstr "npm install --save-dev @remix-project/remix-tests"
 
 #: ../../unittestingAsCLI.md:17
 msgid "As a global NPM module:"
@@ -111,7 +111,7 @@ msgstr "自定义编译器环境"
 
 #: ../../unittestingAsCLI.md:152
 msgid "Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:"
-msgstr "大多数`remix-tests`选项都是用于自定义编译器环境的。使用扩展的自定义编译器环境，执行上述测试文件有如下输出："
+msgstr "大多数 `remix-tests` 选项都是用于自定义编译器环境的。使用扩展的自定义编译器环境，执行上述测试文件有如下输出："
 
 #: ../../unittestingAsCLI.md:183
 msgid "Rememeber, custom compiler version will require internet connection to load compiler."
