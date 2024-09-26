@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -118,8 +118,8 @@ msgid "**If you are not using Remixd, it is highly recommended that you save to 
 msgstr "**Si no está utilizando Remixd, es muy recomendable que guarde en un repositorio remoto.** (Los navegadores se bloquean causando que localstorage & indexedDB se corrompan)"
 
 #: ../../file_explorer.md:42
-msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT)."
-msgstr "Remix IDE puede conectarse a repositorios Git remotos alojados en GitHub (o servicio similar) o en IPFS.   La mayoría de las operaciones Git se realizan en el pluin **DGit**. (DGit significa GIT descentralizado)."
+msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** plugin. (DGit stands for Decentralized GIT)."
+msgstr "Remix IDE se puede conectar a repositorios remotos de Git alojados en GitHub (o un servicio similar) o en IPFS. La mayoría de las operaciones de Git se realizan en el complemento **DGit**. (DGit significa GIT descentralizado)."
 
 #: ../../file_explorer.md:45
 msgid "[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized."
@@ -239,8 +239,8 @@ msgid "Workspaces initialized with Git"
 msgstr "Espacios de trabajo inicializados con Git"
 
 #: ../../file_explorer.md:92
-msgid "Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box."
-msgstr "Los espacios de trabajo inicializados con Git tendrán el icono Git junto a ellos en la casilla de selección **Espacios de trabajo**."
+msgid "Git initialized workspaces will have the Git icon next to them in the **Workspaces** select box."
+msgstr "Los espacios de trabajo inicializados de Git tendrán el icono de Git junto a ellos en el cuadro de selección **Espacios de trabajo**."
 
 #: ../../file_explorer.md:94
 msgid "![](images/a-fe-select-git.png)"
@@ -388,7 +388,7 @@ msgstr "Git en el Explorador de archivos"
 
 #: ../../file_explorer.md:162
 msgid "In Remix, a workspace can be initialized with Git.  The Git commands then operate on the workspace."
-msgstr "En Remix, se puede inicializar un espacio de trabajo con Git.  A continuación, los comandos Git operan sobre el espacio de trabajo."
+msgstr "En Remix, se puede inicializar un espacio de trabajo con Git.  Los comandos Git operan entonces sobre el espacio de trabajo."
 
 #: ../../file_explorer.md:164
 msgid "Initialize"
