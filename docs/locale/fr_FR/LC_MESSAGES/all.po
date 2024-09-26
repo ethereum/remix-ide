@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"PO-Revision-Date: 2024-09-26 01:30\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -216,7 +216,7 @@ msgstr "Construction de l'artefact"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation succeeds, Remix creates two JSON files for each compiled contract.  One of these files captures the output from the Solidity compilation. This file will be named  contractName_metadata.json."
-msgstr "Lorsqu'une compilation réussit, Remix crée deux fichiers JSON pour chaque contrat compilé. L'un de ces fichiers capture la sortie de la compilation Solidity. Ce fichier sera nommé contractName_metadata.json."
+msgstr "Lorsqu'une compilation réussit, Remix crée deux fichiers JSON pour chaque contrat compilé.  L'un de ces fichiers contient les données de sortie de la compilation Solidity. Ce fichier sera nommé contractName_metadata.json."
 
 #: ../../contract_metadata.md:6
 msgid "The other JSON file is named contractName.json . The contractName.json file contains the compilation's artifact that is needed for linking a library to the file. It contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI."
@@ -268,7 +268,7 @@ msgstr "Création et déploiement d'un contrat"
 
 #: ../../create_deploy.md:4
 msgid "There are 3 type of environments Remix can be plugged to: Javascript VM, Injected provider, or Web3 provider. (for details see Running transactions)"
-msgstr "Il y a 3 types d'environnements sur lesquels Remix peut être branché : Javascript VM, fournisseur injecté, ou fournisseur Web3. (pour plus de détails, voir Exécuter des transactions)"
+msgstr "Il existe 3 types d'environnements sur lesquels Remix peut être branché : Javascript VM, fournisseur injecté, ou fournisseur Web3. (pour plus de détails, voir Exécuter des transactions)"
 
 #: ../../create_deploy.md:7
 msgid "Both Web3 provider and Injected provider require the use of an external tool."
@@ -304,7 +304,7 @@ msgstr "Assurez-vous que le mode VM est sélectionné. Tous les comptes affiché
 
 #: ../../create_deploy.md:28
 msgid "Sample contract"
-msgstr "Contrat d'exemple"
+msgstr "Modèle de contrat"
 
 #: ../../create_deploy.md:57
 msgid "This contract is very basic. The goal is to quickly start to create and to interact with a sample contract."
@@ -312,7 +312,7 @@ msgstr "Ce contrat est très basique. L'objectif est de commencer rapidement à 
 
 #: ../../create_deploy.md:60
 msgid "Deploying an instance"
-msgstr "Déploiement d'une instance"
+msgstr "Déployer une instance"
 
 #: ../../create_deploy.md:63
 msgid "The Compile tab displays information related to the current contract (note that there can be more than one) (see compile)."
@@ -492,7 +492,7 @@ msgstr ""
 
 #: ../../file_explorer.md:1
 msgid "File Explorers"
-msgstr "Explorateur de fichiers"
+msgstr "Explorateurs de Fichiers"
 
 #: ../../file_explorer.md:4
 msgid "To get to the File Explorers module - click the file explorers icon."
@@ -512,7 +512,7 @@ msgstr "Vous pouvez renommer, supprimer ou ajouter de nouveaux fichiers dans l'e
 
 #: ../../file_explorer.md:19
 msgid "We will start by reviewing the icons in the image above."
-msgstr "Nous commencerons par examiner les icônes de l'image ci-dessus."
+msgstr "Nous commencerons par passer en revue les icônes de l'image ci-dessus."
 
 #: ../../file_explorer.md:21
 msgid "The book icon - A. is the link to the module's documentation."
@@ -532,7 +532,7 @@ msgstr "L'icône marquée B. ci-dessus. Crée un nouveau fichier."
 
 #: ../../file_explorer.md:30
 msgid "Publish to Gist"
-msgstr "Publier sur le Gist"
+msgstr "Publier dans Gist"
 
 #: ../../file_explorer.md:33
 msgid "The icon marked C. above. Publishes all files from the browser folder to a gist.  Only file in the root of browser will be published.  Files in subfolders will not be publish to the Gist. Gist API has changed in 2018 and requires users to be authenticated to be able to publish a gist."
@@ -556,7 +556,7 @@ msgstr "L'icône marquée D. ci-dessus.  Crée un nouveau dossier dans l'explora
 
 #: ../../file_explorer.md:45
 msgid "Context Menu (Right Click)"
-msgstr "Menu contextuel (Clic droit)"
+msgstr "Menu contextuel (clic droit)"
 
 #: ../../file_explorer.md:47
 msgid "Right click on a file or a folder and the context menu will appear."
@@ -608,7 +608,7 @@ msgstr "Importation d'un fichier à partir de la mémoire locale du navigateur"
 
 #: ../../import.md:16
 msgid "Files in Remix can be imported with the import key word with the path to the file. Use ./ for relative paths to increase portability."
-msgstr "Les fichiers dans Remix peuvent être importés avec le mot-clé import et le chemin d'accès au fichier. Utilisez ./ pour les chemins relatifs afin d'améliorer la portabilité."
+msgstr "Les fichiers de Remix peuvent être importés avec le mot-clé import et le chemin d'accès au fichier. Utilisez ./ pour les chemins relatifs afin d'améliorer la portabilité."
 
 #: ../../import.md:24
 msgid "Importing a file from your computer's filesystem"
@@ -624,7 +624,7 @@ msgstr "Importation depuis GitHub"
 
 #: ../../import.md:33
 msgid "It is possible to import files directly from GitHub.  You should specify the release tag (where available), otherwise you will get the latest code in the master branch.  For OpenZeppelin Contracts you should only use code published in an official release, the example below imports from OpenZeppelin Contracts v2.5.0."
-msgstr "Il est possible d'importer des fichiers directement depuis GitHub.  Vous devez spécifier l'étiquette de la version (lorsqu'elle est disponible), sinon vous obtiendrez le code le plus récent de la branche master.  Pour OpenZeppelin Contracts, vous ne devez utiliser que le code publié dans une version officielle. L'exemple ci-dessous importe OpenZeppelin Contracts v2.5.0."
+msgstr "Il est possible d'importer des fichiers directement depuis GitHub.  Vous devez spécifier l'étiquette de la version (lorsqu'elle est disponible), sinon vous obtiendrez le code le plus récent dans la branche master.  Pour OpenZeppelin Contracts, vous ne devez utiliser que le code publié dans une version officielle. L'exemple ci-dessous importe OpenZeppelin Contracts v2.5.0."
 
 #: ../../import.md:42
 msgid "Importing from Swarm"
@@ -672,7 +672,7 @@ msgstr "Remix prend également en charge les tests, le débogage, le déploiemen
 
 #: ../../index.rst:9
 msgid "Our Remix project with all its features is available at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs.  Our IDE tool is available at `our GitHub repository <https://github.com/ethereum/remix-ide>`__."
-msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur `remix.ethereum.org <https://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans ces documents.  Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
+msgstr "Notre projet Remix avec toutes ses fonctionnalités est disponible sur le site `remix.ethereum.org <https://remix.ethereum.org>`__ et plus d'informations peuvent être trouvées dans cette documentation. Notre outil IDE est disponible sur `notre dépôt GitHub <https://github.com/ethereum/remix-ide>`__."
 
 #: ../../index.rst:14
 msgid "This set of documents covers instructions on how to use Remix and some tutorials to help you get started."
@@ -688,7 +688,7 @@ msgstr "`Documentation Solidity <https://solidity.readthedocs.io>`__"
 
 #: ../../index.rst:20
 msgid "`Remix alpha <https://remix-alpha.ethereum.org>`__ - The version where we test new Remix release (not stable!)."
-msgstr "`Remix alpha <https://remix-alpha.ethereum.org>`__ - La version où nous testons les nouvelles versions de Remix (pas stable !)."
+msgstr "`Remix alpha <https://remix-alpha.ethereum.org>`__ - La version où nous testons la nouvelle version de Remix (non stable !)."
 
 #: ../../index.rst:22
 msgid "`Remix on Medium <https://medium.com/remix-ide>`__"
@@ -836,7 +836,7 @@ msgstr "Remix URLs"
 
 #: ../../locations.md:5
 msgid "An online version is available at https://remix.ethereum.org. This version is stable and is updated at almost every release."
-msgstr "Une version en ligne est disponible à l'adresse https://remix.ethereum.org. Cette version est stable et est mise à jour à presque toutes les versions."
+msgstr "Une version en ligne est disponible sur https://remix.ethereum.org. Cette version est stable et est mise à jour à presque chaque version."
 
 #: ../../locations.md:6
 msgid "An alpha online version is available at https://remix-alpha.ethereum.org. This is not a stable version."
@@ -868,7 +868,7 @@ msgstr "le thème (Sombre ou Clair)"
 
 #: ../../locations.md:18
 msgid "the panels that should be minimized"
-msgstr "les panneaux qui doivent être réduits au minimum"
+msgstr "les panneaux qui doivent être minimisés"
 
 #: ../../locations.md:19
 msgid "if you want the Solidity compiler to have optimize enabled"
@@ -956,7 +956,7 @@ msgstr "Pour charger votre plugin local, vous devez cliquer sur le lien \"Connec
 
 #: ../../plugin_manager.md:21
 msgid "To learn more about how to create your own plugin, go to the README of remix-plugin repo."
-msgstr "Pour en savoir plus sur la façon de créer votre propre plugin, consultez le README du repo remix-plugin."
+msgstr "Pour en savoir plus sur la façon de créer votre propre plugin, consultez le README du repo de remix-plugin."
 
 msgid ""
 msgstr ""
@@ -964,7 +964,7 @@ msgstr ""
 
 #: ../../remix_commands.md:1
 msgid "Remix Commands"
-msgstr "Commandes Remix"
+msgstr "Commandes de Remix"
 
 #: ../../remix_commands.md:4
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is auto completion.  These commands are using the following libraries:"
@@ -992,11 +992,11 @@ msgstr "Voici la liste des commandes"
 
 #: ../../remix_commands.md:15
 msgid "remix.debug(hash): Start debugging a transaction."
-msgstr "remix.debug(hash) : Commencez à déboguer une transaction."
+msgstr "remix.debug(hash): Démarrer le débogage d'une transaction."
 
 #: ../../remix_commands.md:17
 msgid "remix.debugHelp(): Display help message for debugging"
-msgstr "remix.debugHelp() : Affiche un message d'aide pour le débogage"
+msgstr "remix.debugHelp(): Affiche le message d'aide pour le débogage"
 
 #: ../../remix_commands.md:19
 msgid "remix.execute(filepath): Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
@@ -1008,7 +1008,7 @@ msgstr "remix.exeCurrent() : Exécute le script actuellement affiché dans l'éd
 
 #: ../../remix_commands.md:23
 msgid "remix.getFile(path): Returns the content of the file located at the given path"
-msgstr "remix.getFile(path) : Renvoie le contenu du fichier situé dans le chemin donné."
+msgstr "remix.getFile(path) : renvoie le contenu du fichier situé dans le chemin donné."
 
 #: ../../remix_commands.md:25
 msgid "remix.help(): Display this help message."
@@ -1164,7 +1164,7 @@ msgstr "Pour donner à Remix-ide (l'application web) l'accès à un dossier sur 
 
 #: ../../remixd.md:5
 msgid "remixd is both the name of an npm module and the name of a Remix-plugin.  You need to install the plugin (from the plugin manager) and you need to install the remixd npm module."
-msgstr "remixd est à la fois le nom d'un module npm et le nom d'un plugin Remix.  Vous devez installer le plugin (à partir du gestionnaire de plugins) et vous devez installer le module npm remixd."
+msgstr "remixd est à la fois le nom d'un module npm et le nom d'un plugin Remix.  Vous devez installer le plugin (depuis le gestionnaire de plugins) et vous devez installer le module npm remixd."
 
 #: ../../remixd.md:8
 msgid "NOTE: you need to install the remixd npm module & Run its command before activating the remixd plugin."
@@ -1216,7 +1216,7 @@ msgstr "Il existe une option pour exécuter remixd en mode lecture seule, utilis
 
 #: ../../remixd.md:36
 msgid "Warning!"
-msgstr "Attention !"
+msgstr "Avertissement !"
 
 #: ../../remixd.md:37
 msgid "remixd provides full read and write access to the given folder for any application that can access the TCP port 65520 on your local host."
@@ -1228,7 +1228,7 @@ msgstr "Une fois la commande lancée, activez le plugin remixd."
 
 #: ../../remixd.md:41
 msgid "From Remix IDE, in the Plugin Manager, activate the remixd plugin.  This plugin is a websocket plugin and it has no UI other than a modal dialog box."
-msgstr "Depuis Remix IDE, dans le Plugin Manager, activez le plugin remixd.  Ce plugin est un plugin websocket et il n'a pas d'interface utilisateur autre qu'une boîte de dialogue modale."
+msgstr "Depuis Remix IDE, dans le Plugin Manager, activez le plugin remixd.  Ce plugin est un plugin websocket et n'a pas d'interface utilisateur autre qu'une boîte de dialogue modale."
 
 #: ../../remixd.md:43
 msgid "This modal will ask confirmation"
@@ -1288,7 +1288,7 @@ msgstr "Déploiement"
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
-msgstr "Essais"
+msgstr "Tests"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
@@ -1296,11 +1296,11 @@ msgstr "Développement du plugin Remix"
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr "Autre"
+msgstr "Autres"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr "Ateliers externes supplémentaires"
+msgstr "Ateliers externes additionnels"
 
 msgid ""
 msgstr ""
@@ -1392,7 +1392,7 @@ msgstr "N'utilisez --rpccorsdomain * que lorsque vous utilisez une chaîne de te
 
 #: ../../run.md:55
 msgid "Account:"
-msgstr "Compte :"
+msgstr "Compte :"
 
 #: ../../run.md:57
 msgid "Account: the list of accounts associated with the current environment (and their associated balances).  On the JsVM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
@@ -1408,7 +1408,7 @@ msgstr "Ceci définit la quantité maximale de gaz qui sera autorisée pour tout
 
 #: ../../run.md:65
 msgid "Value:"
-msgstr "Valeur :"
+msgstr "Valeur:"
 
 #: ../../run.md:67
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function.  ( Note: payable functions have a red button). The value is always reset to 0 after each transaction execution). The Value field is NOT for gas."
@@ -1440,7 +1440,7 @@ msgstr "La validation d'une transaction prend plusieurs secondes. Pendant ce tem
 
 #: ../../run.md:92
 msgid "Using the ABI"
-msgstr "Utilisation de l'ABI"
+msgstr "Utiliser l'ABI"
 
 #: ../../run.md:95
 msgid "Using Deploy or At Address is a classic use case of Remix. However, it is possible to interact with a contract by using its ABI. The ABI is a JSON array which describe its interface."
@@ -1472,7 +1472,7 @@ msgstr "Par exemple :"
 
 #: ../../run.md:117
 msgid "After having coded and tested contracts in a constrained environment (like the JavaScript VM), you could then change the environment and redeploy it to a more realistic environment like a test net with an injected web3 or to a Geth node. By using the generated scenario.json file, you will be using all the same settings that you used in the Javascript VM.  And this mean that you won't need to click the interface 100 times or whatever to get the state that you achieved originally.  So the recorder could be a tool to protect your sanity."
-msgstr "Après avoir codé et testé des contrats dans un environnement contraint (comme la VM JavaScript), vous pouvez changer l'environnement et le redéployer dans un environnement plus réaliste comme un réseau de test avec un web3 injecté ou un nœud Geth. En utilisant le fichier scenario.json généré, vous utiliserez tous les mêmes paramètres que ceux utilisés dans la VM JavaScript.  Cela signifie que vous n'aurez pas besoin de cliquer 100 fois sur l'interface pour obtenir l'état que vous avez obtenu à l'origine.  L'enregistreur pourrait donc être un outil pour protéger votre santé mentale."
+msgstr "Après avoir codé et testé des contrats dans un environnement contraint (comme la VM JavaScript), vous pouvez changer d'environnement et le redéployer dans un environnement plus réaliste comme un réseau de test avec un web3 injecté ou un nœud Geth. En utilisant le fichier scenario.json généré, vous utiliserez tous les mêmes paramètres que ceux utilisés dans la VM JavaScript.  Cela signifie que vous n'aurez pas besoin de cliquer 100 fois sur l'interface pour obtenir l'état que vous avez obtenu à l'origine.  L'enregistreur pourrait donc être un outil pour protéger votre santé mentale."
 
 #: ../../run.md:120
 msgid "You can also change the settings in the scenario.json file to customize the playback."
@@ -1492,7 +1492,7 @@ msgstr "scenario.json"
 
 #: ../../run.md:131
 msgid "To create this file in the recorder, you first of course need to have run some transactions.  In the image above - it has a 0 next to Transactions Recorded.  So this isn't the right moment to save transactions because - well because there aren't any.  Each time you make a transaction, that number will increment.  Then when you are ready, click the floppy disk icon and the scenario.json file will be created."
-msgstr "Pour créer ce fichier dans l'enregistreur, vous devez bien entendu avoir effectué quelques transactions.  Dans l'image ci-dessus, il y a un 0 à côté de Transactions enregistrées.  Ce n'est donc pas le bon moment pour enregistrer des transactions, parce que - eh bien, parce qu'il n'y en a pas.  Chaque fois que vous effectuez une transaction, ce nombre s'incrémente.  Lorsque vous êtes prêt, cliquez sur l'icône de la disquette et le fichier scenario.json sera créé."
+msgstr "Pour créer ce fichier dans l'enregistreur, vous devez bien entendu avoir effectué quelques transactions.  Dans l'image ci-dessus, il y a un 0 à côté de Transactions enregistrées.  Ce n'est donc pas le bon moment pour enregistrer des transactions, parce que - eh bien, parce qu'il n'y en a pas.  Chaque fois que vous effectuez une transaction, ce nombre augmente.  Lorsque vous êtes prêt, cliquez sur l'icône de la disquette et le fichier scenario.json sera créé."
 
 #: ../../run.md:133
 msgid "The JSON file below is an example of the scenario.json file."
@@ -1552,7 +1552,7 @@ msgstr ""
 
 #: ../../solidity_editor.md:1
 msgid "Solidity Editor"
-msgstr "Solidity Editor"
+msgstr "Editeur Solidity"
 
 #: ../../solidity_editor.md:4
 msgid "The Remix editor recompiles the code each time the current file is changed or another file is selected. It also provides syntax highlighting mapped to solidity keywords."
@@ -1764,7 +1764,7 @@ msgstr "ERC20 : \"decimals\" devrait être \"uint8\"."
 
 #: ../../static_analysis.md:192
 msgid "ERC20 Contracts decimals function should have uint8 as return type."
-msgstr "La fonction decimals de l'ERC20 Contracts devrait avoir uint8 comme type de retour."
+msgstr "La fonction décimales des contrats ERC20 devrait avoir uint8 comme type de retour."
 
 #: ../../static_analysis.md:202
 msgid "Category: Miscellaneous"
@@ -1800,7 +1800,7 @@ msgstr "Protégez les conditions : Utilisez les termes \"exiger\" et \"affirmer\
 
 #: ../../static_analysis.md:237
 msgid "Use assert(x) if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use require(x) if x can be false, due to e.g. invalid input or a failing external component."
-msgstr "Utilisez assert(x) si vous ne voulez jamais que x soit faux, en aucune circonstance (à l'exception d'un bogue dans votre code). Utilisez require(x) si x peut être faux, par exemple à cause d'une entrée invalide ou d'un composant externe défaillant."
+msgstr "Utilisez assert(x) si vous ne voulez jamais que x soit faux, en aucune circonstance (à l'exception d'un bogue dans votre code). Utilisez require(x) si x peut être faux, en raison par exemple d'une entrée invalide ou d'un composant externe défaillant."
 
 #: ../../static_analysis.md:243
 msgid "Result not used: The result of an operation not used"
@@ -1856,11 +1856,11 @@ msgstr "Support chat"
 
 #: ../../support.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support chat where we and other users try to answer your questions if you get stuck using Remix. Please, join the Remix channel and ask the community for help."
-msgstr "Nous savons que l'écosystème de la blockchain est très récent et que beaucoup d'informations sont dispersées sur le web. C'est pourquoi nous avons créé un chat d'assistance communautaire où nous et d'autres utilisateurs essayons de répondre à vos questions si vous êtes bloqué dans l'utilisation de Remix. Rejoignez le canal Remix et demandez de l'aide à la communauté."
+msgstr "Nous savons que l'écosystème blockchain est très récent et que beaucoup d'informations sont dispersées sur le web. C'est pourquoi nous avons créé un chat d'assistance communautaire où nous et d'autres utilisateurs essayons de répondre à vos questions si vous êtes bloqué lors de l'utilisation de Remix. Rejoignez le canal Remix et demandez de l'aide à la communauté."
 
 #: ../../support.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we've opened another channel specially for developers working on Remix tool."
-msgstr "Pour tous ceux qui sont intéressés par le développement d'un plugin personnalisé pour Remix ou qui veulent contribuer à la base de code, nous avons ouvert un autre canal spécialement pour les développeurs travaillant sur l'outil Remix."
+msgstr "Pour tous ceux qui sont intéressés par le développement d'un plugin personnalisé pour Remix ou qui veulent contribuer à la base de code, nous avons ouvert un autre canal dédié aux développeurs travaillant sur l'outil Remix."
 
 msgid ""
 msgstr ""
@@ -1872,7 +1872,7 @@ msgstr "Terminal"
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
-msgstr "Caractéristiques, disponibles dans le terminal :"
+msgstr "Fonctionnalités, disponibles dans le terminal :"
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the web3 object. It enables the execution of the JavaScript script which interacts with the current context. (note that web3 is only available if the web provider or injected provider mode is selected)."
@@ -1884,7 +1884,7 @@ msgstr "Il affiche les actions importantes effectuées lors de l'interaction ave
 
 #: ../../terminal.md:14
 msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
-msgstr "Il affiche les transactions qui sont minées dans le contexte actuel. Vous pouvez choisir d'afficher toutes les transactions ou seulement celles qui se réfèrent aux contrats que Remix connaît (par exemple les transactions créées à partir de l'IDE Remix)."
+msgstr "Il affiche les transactions qui sont minées dans le contexte actuel. Vous pouvez choisir d'afficher toutes les transactions ou seulement les transactions qui se réfèrent aux contrats que Remix connaît (par exemple les transactions créées à partir de l'IDE Remix)."
 
 #: ../../terminal.md:18
 msgid "It allows searching for the data and clearing the logs from the terminal."
@@ -2096,7 +2096,7 @@ msgstr "Ces panneaux affichent des informations de bas niveau sur l'exécution :
 
 #: ../../tutorial_debug.md:157
 msgid "Stack"
-msgstr "Pile"
+msgstr "Base"
 
 #: ../../tutorial_debug.md:158
 msgid "Storages Changes"
@@ -2132,7 +2132,7 @@ msgstr "Une transaction peut être annulée (en raison d'une exception \"out of 
 
 #: ../../tutorial_debug.md:171
 msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
-msgstr "Il est important d'être conscient de l'exception et de localiser l'endroit où elle se trouve dans le code source."
+msgstr "Il est important d'être conscient de l'exception et de savoir où elle se trouve dans le code source."
 
 #: ../../tutorial_debug.md:174
 msgid "Remix will warn you when the execution throws an exception. The warning button will jump to the last opcode before the exception happened."
@@ -2232,7 +2232,7 @@ msgstr "Les fonctions qui sont des fonctions constantes ou pures dans Solidity o
 
 #: ../../udapp.md:20
 msgid "Functions that change the state of the contract AND that do not accept Ether are called non-payable functions and have an orange button. Clicking on them will create a transaction and thus cost gas."
-msgstr "Les fonctions qui modifient l'état du contrat ET qui n'acceptent pas d'Ether sont appelées fonctions non payantes et ont un bouton orange. En cliquant sur ces fonctions, vous créez une transaction et vous payez donc du gaz."
+msgstr "Les fonctions qui modifient l'état du contrat ET qui n'acceptent pas d'Ether sont appelées fonctions non payantes et ont un bouton orange. Cliquer dessus créera une transaction et coûtera donc du gaz."
 
 #: ../../udapp.md:22
 msgid "Functions that have red buttons are payable functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a value.  The value is put in in the Value field which is under the Gas Limit field."
@@ -2408,7 +2408,7 @@ msgstr "2. Tester une méthode impliquant <code>msg.sender</code>"
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, msg.sender plays a great role in access management of a smart contract methods interaction. Different msg.sender can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
-msgstr "Dans Solidity, msg.sender joue un rôle important dans la gestion de l'accès à l'interaction des méthodes d'un contrat intelligent. Différents msg.sender peuvent aider à tester un contrat impliquant plusieurs comptes avec différents rôles. Voici un exemple pour tester un tel cas :"
+msgstr "Dans Solidity, msg.sender joue un rôle important dans la gestion de l'accès à l'interaction des méthodes d'un contrat intelligent. Différents msg.sender peuvent aider à tester un contrat impliquant plusieurs comptes avec des rôles différents. Voici un exemple pour tester un tel cas :"
 
 #: ../../unittesting_examples.md:63
 msgid "Contract/Program to be tested: Sender.sol"
@@ -2452,7 +2452,7 @@ msgstr "Dans Solidity, l'éther peut être passé avec un appel de méthode qui 
 
 #: ../../unittesting_examples.md:265
 msgid "Contract/Program to be tested: Value.sol"
-msgstr "Contrat/Programme à tester : Value.sol"
+msgstr "Contrat/programme à tester : Value.sol"
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: Value_test.sol"
@@ -2608,7 +2608,7 @@ msgstr "En ce qui concerne le gaz, Remix estime en interne le gaz nécessaire po
 
 #: ../../unittesting.md:83
 msgid "Various test examples can be seen in examples section."
-msgstr "Vous trouverez divers exemples de tests dans la section des exemples."
+msgstr "Vous trouverez plusieurs exemples de tests dans la section des exemples."
 
 #: ../../unittesting.md:86
 msgid "Points to remember"
@@ -2624,7 +2624,7 @@ msgstr "Le nombre de comptes de test est de 3 avant la sortie de la version 0.10
 
 #: ../../unittesting.md:91
 msgid "A test file which imports remix_accounts.sol might not compile successfully with Solidity Compiler plugin but it will work fine with Solidity Unit Testing plugin."
-msgstr "Un fichier de test qui importe remix_accounts.sol peut ne pas se compiler avec le plugin Solidity Compiler mais fonctionnera parfaitement avec le plugin Solidity Unit Testing."
+msgstr "Un fichier de test qui importe remix_accounts.sol peut ne pas se compiler avec le plugin Solidity Compiler mais fonctionnera correctement avec le plugin Solidity Unit Testing."
 
 #: ../../unittesting.md:93
 msgid "Remix-tests"
