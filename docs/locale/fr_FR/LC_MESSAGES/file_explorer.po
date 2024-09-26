@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -107,7 +107,7 @@ msgstr "Remix Desktop"
 
 #: ../../file_explorer.md:36
 msgid "Remix Desktop is a version of Remix IDE in an Electron app. Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser.  To connect to public networks, you need to use service like Infura and then use the WalletConnect plugin to approve transactions on your mobile device."
-msgstr "Remix Desktop est une version de Remix IDE dans une application Electron. Notez que lorsque vous utilisez Remix Desktop, vous ne pouvez pas utiliser un portefeuille de navigateur comme MetaMask, car Remix Desktop ne fonctionne pas dans un navigateur.  Pour vous connecter à des réseaux publics, vous devez utiliser un service comme Infura, puis utiliser le plugin WalletConnect pour approuver les transactions sur votre appareil mobile."
+msgstr "Remix Desktop est une version de Remix IDE dans une application Electron. Notez que lorsque vous utilisez Remix Desktop, vous ne pouvez pas utiliser un portefeuille de navigateur comme MetaMask, car Remix Desktop ne fonctionne pas dans un navigateur.  Pour vous connecter aux réseaux publics, vous devez utiliser un service comme Infura, puis utiliser le plugin WalletConnect pour approuver les transactions sur votre appareil mobile."
 
 #: ../../file_explorer.md:38
 msgid "Connecting Remix to remote Git repos"
@@ -118,8 +118,8 @@ msgid "**If you are not using Remixd, it is highly recommended that you save to 
 msgstr "**Si vous n'utilisez pas Remixd, il est fortement recommandé de sauvegarder sur un repo distant (les navigateurs peuvent se bloquer, entraînant la corruption du stockage local et de la base de données indexée)."
 
 #: ../../file_explorer.md:42
-msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT)."
-msgstr "Remix IDE peut être connecté à des dépôts Git distants hébergés dans GitHub (ou service similaire) ou dans IPFS.   La plupart des opérations Git sont effectuées dans le pluin **DGit**. (DGit signifie Decentralized GIT)."
+msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** plugin. (DGit stands for Decentralized GIT)."
+msgstr ""
 
 #: ../../file_explorer.md:45
 msgid "[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized."
@@ -239,8 +239,8 @@ msgid "Workspaces initialized with Git"
 msgstr "Espaces de travail initialisés avec Git"
 
 #: ../../file_explorer.md:92
-msgid "Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box."
-msgstr "Les espaces de travail initialisés Git auront l'icône Git à côté d'eux dans la boîte de sélection **Espaces de travail**."
+msgid "Git initialized workspaces will have the Git icon next to them in the **Workspaces** select box."
+msgstr ""
 
 #: ../../file_explorer.md:94
 msgid "![](images/a-fe-select-git.png)"
