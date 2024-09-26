@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -38,8 +38,8 @@ msgid "When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) mo
 msgstr "Cuando se instala el módulo [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd), también se instalan [Slither](https://github.com/crytic/slither) y [solc-select](https://github.com/crytic/solc-select#quickstart) y la última versión de [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html)."
 
 #: ../../slither.md:13
-msgid "`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_"
-msgstr "`Python3.6+ (pip3)` necesita estar ya instalado en el Sistema. En caso de discrepancia, Slither también puede instalarse junto con otras dependencias utilizando el comando `remixd -i slither` _(Este empaquetado de Slither con el módulo remixd está soportado desde Remixd `v0.6.3`)_"
+msgid "`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepancy, Slither can also be installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_"
+msgstr "`Python3.6+ (pip3)` ya debe estar instalado en el sistema. En caso de cualquier discrepancia, Slither también se puede instalar junto con otras dependencias usando el comando `remixd -i slither` _(Este embalaje de Slither con el módulo remezclado es compatible desde Remixd `v0.6.3`)_"
 
 #: ../../slither.md:16
 msgid "when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)"
@@ -138,8 +138,8 @@ msgid "![](images/a-slither-analysis-only.png)"
 msgstr "![](images/a-slither-analysis-only.png)"
 
 #: ../../slither.md:63
-msgid "By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look on them, check the box with label `Show warnings for external libraries`."
-msgstr "Por defecto, no muestra las advertencias para bibliotecas externas como remix-tests.sol, hardhat/console.sol etc. Para echarles un vistazo, marque la casilla con la etiqueta `Mostrar advertencias para bibliotecas externas`."
+msgid "By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look at them, check the box with label `Show warnings for external libraries`."
+msgstr "De forma predeterminada, no muestra las advertencias para bibliotecas externas como remix-tests.sol, hardhat/console.sol, etc. Para echarles un vistazo, marca la casilla con la etiqueta \"Mostrar advertencias para bibliotecas externas\"."
 
 #: ../../slither.md:65
 msgid "![](images/a-slither-analysis-ext-libs.png)"
