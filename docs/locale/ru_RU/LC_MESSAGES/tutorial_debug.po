@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,55 +19,55 @@ msgstr ""
 
 #: ../../tutorial_debug.md:1
 msgid "Debugging Transactions"
-msgstr "Отладка транзакций"
+msgstr "Отладочные транзакции"
 
 #: ../../tutorial_debug.md:4
 msgid "(also see this page's companion: [the Debugger Tour](debugger.html))"
-msgstr "(также см. сопутствующую страницу: [тур по отладчику](debugger.html))"
+msgstr "Так же ознакомьтесь с сопровождающим текстом этой станицы: [the Debugger Tour](debugger.html))"
 
 #: ../../tutorial_debug.md:6
 msgid "There are two ways to start a debugging session, each one corresponds to a different use case."
-msgstr "Существует два способа начать сеанс отладки, каждый из которых соответствует различным вариантам использования."
+msgstr "Есть два способа начать отладочную сессию, каждый из которых соответствует отдельному варианту использования."
 
 #: ../../tutorial_debug.md:7
 msgid "Use Case 1: for debugging a transaction made in Remix - click the **Debug button** in the transaction log in Remix's Terminal."
-msgstr "Пример 1: для отладки транзакции, выполненной в Ремиксе - нажмите кнопку **Отладка** в журнале транзакций в Терминале Ремикса."
+msgstr "Используйте Case 1: для отладки транзакции в Remix - нажмите кнопку **Debug button** в журнале транзакций в Remix's Terminal."
 
 #: ../../tutorial_debug.md:9
 msgid "Use Case 2: for debugging a transaction where you have a **txn hash** from **verified contract** or where you have the txn hash and the compiled source code with the same compilation settings as the deployed contract."
-msgstr "Пример использования 2: для отладки транзакции, когда у Вас есть **txn-хэш** от **проверенного контракта** или когда у Вас есть txn-хэш и скомпилированный исходный код с теми же настройками компиляции, что и развернутый контракт."
+msgstr "Используйте Case 2: для отладки транзакции, в которой у вас **txn hash** из **verified contract** или где у вас есть txn hash и скомпилированный исходный код с теми же настройками компиляции, что и развернутый контракт."
 
 #: ../../tutorial_debug.md:11
 msgid "Initiate Debugging from the transaction log in the Terminal"
-msgstr "Инициируйте отладку из журнала транзакций в Терминале"
+msgstr "Инициировать отладку из журнала транзакций в терминале"
 
 #: ../../tutorial_debug.md:12
 msgid "Let's start with a basic contract ( or replace the contract below with your own )"
-msgstr "Давайте начнем с базового контракта (или замените приведенный ниже контракт на свой собственный)"
+msgstr "Начните с базового контракта ( или замените контракт ниже своим собственным)"
 
 #: ../../tutorial_debug.md:52
 msgid "Make a new file in Remix and copy the code above into it."
-msgstr "Создайте новый файл в Remix и скопируйте в него приведенный выше код."
+msgstr "Создайте новый файл в Remix и скопируйте в него код выше."
 
 #: ../../tutorial_debug.md:53
 msgid "Compile the code."
-msgstr "Скомпилируйте код."
+msgstr "Компилировать код."
 
 #: ../../tutorial_debug.md:54
 msgid "Go to the Run & Deploy module."
-msgstr "Перейдите в модуль Run & Deploy."
+msgstr "Перейти к модулю Run & Deploy."
 
 #: ../../tutorial_debug.md:56
 msgid "For the purpose of this tutorial, we will run the `Remix VM`."
-msgstr "Для целей данного руководства мы запустим `Remix VM`."
+msgstr "Для этого примера мы запустим `Remix VM`."
 
 #: ../../tutorial_debug.md:58
 msgid "Deploy the contract:"
-msgstr "Разверните контракт:"
+msgstr "Развернуть контракт:"
 
 #: ../../tutorial_debug.md:60
 msgid "Click the `Deploy` button"
-msgstr "Нажмите кнопку `Развертывание`."
+msgstr "Нажмите кнопку `Deploy`"
 
 #: ../../tutorial_debug.md:62
 msgid "![](images/a-debug1-deploy.png)"
@@ -75,7 +75,7 @@ msgstr "![](images/a-debug1-deploy.png)"
 
 #: ../../tutorial_debug.md:64
 msgid "You'll see the deployed instance (AKA the udapp)."
-msgstr "Вы увидите развернутый экземпляр (он же udapp)."
+msgstr "Вы увидите развернутый экземпляр (AKA udapp)."
 
 #: ../../tutorial_debug.md:66
 msgid "![](images/a-debug2-udapp1a.png)"
@@ -83,7 +83,7 @@ msgstr "![](images/a-debug2-udapp1a.png)"
 
 #: ../../tutorial_debug.md:68
 msgid "Then open it up (by clicking the caret)."
-msgstr "Затем откройте его (щелкнув по каретке)."
+msgstr "Затем откройте его вверх (нажав на курсор)."
 
 #: ../../tutorial_debug.md:70
 msgid "![](images/a-debug3-udapp2.png)"
@@ -91,11 +91,11 @@ msgstr "![](images/a-debug3-udapp2.png)"
 
 #: ../../tutorial_debug.md:73
 msgid "We are going to call the `Donate` function and will send 2 Ethers."
-msgstr "Мы собираемся вызвать функцию `Donate` и отправим 2 Ethers."
+msgstr "Мы вызовем функцию «Пожертвовать» и отправим 2 Ethers."
 
 #: ../../tutorial_debug.md:75
 msgid "To do this: in the value input box put in **2** and **select Ether** as the unit (DO NOT LEAVE THE DEFAULT unit as **gwei** or the change will be hard to detect)."
-msgstr "Для этого: в поле ввода значения введите **2** и **выберите Эфир** в качестве единицы измерения (НЕ ОСТАВЛЯЙТЕ УСТАНОВЛЕННУЮ единицу измерения **gwei**, иначе изменение будет трудно обнаружить)."
+msgstr "Для этого: в поле ввода значения введите **2** и **выберите Ether** в качестве единицы измерения (НЕ ОСТАВЛЯЙТЕ единицу измерения по умолчанию как **gwei**, иначе изменение будет трудно обнаружить)."
 
 #: ../../tutorial_debug.md:77
 msgid "![](images/a-debug4-value-loc.png)"
@@ -107,23 +107,23 @@ msgstr "Затем нажмите кнопку `Пожертвовать`."
 
 #: ../../tutorial_debug.md:81
 msgid "This will send the Ether to the function."
-msgstr "Это отправит Эфир в функцию."
+msgstr "Это отправит Эфир функции."
 
 #: ../../tutorial_debug.md:83
-msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr "Поскольку мы используем `Remix VM`, все происходит практически мгновенно.  (Если бы мы использовали Injected Web 3, то нам пришлось бы утверждать транзакцию, платить за бензин и ждать, пока транзакция будет добыта)."
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr "Потому что мы используем `Remix VM`, все происходит почти мгновенно. (Если мы использовали Injected Web 3, то нам нужно было бы одобрить транзакцию, оплатить газ и ожидать совершения сделки.)"
 
 #: ../../tutorial_debug.md:85
 msgid "Remix displays information related to each transaction result in the terminal."
-msgstr "Remix отображает в терминале информацию, относящуюся к каждому результату транзакции."
+msgstr "Remix отображает информацию, связанную с результатами каждой транзакции в терминале."
 
 #: ../../tutorial_debug.md:87
 msgid "Check in the **terminal** where the transaction you just made is logged."
-msgstr "Проверьте в **терминале**, где зарегистрирована транзакция, которую Вы только что совершили."
+msgstr "Проверьте **терминал**, где регистрируется только что совершённая транзакция."
 
 #: ../../tutorial_debug.md:89
 msgid "Click the **debug button**."
-msgstr "Нажмите кнопку **отладка**."
+msgstr "Нажмите **debug button** (кнопку отладки)."
 
 #: ../../tutorial_debug.md:91
 msgid "![](images/a-debug5-term-debug-but.png)"
@@ -131,39 +131,39 @@ msgstr "![](images/a-debug5-term-debug-but.png)"
 
 #: ../../tutorial_debug.md:93
 msgid "But before we get to the actual debugging tool, the next section shows how to start a debugging session directly from the Debugger."
-msgstr "Но прежде чем мы перейдем к собственно инструменту отладки, в следующем разделе будет показано, как начать сеанс отладки непосредственно из Отладчика."
+msgstr "Но прежде чем мы перейдем к инструменту отладки, следующий раздел показывает, как начать сеанс отладки прямо из отладчика."
 
 #: ../../tutorial_debug.md:95
 msgid "Initiate Debugging from the Debugger"
-msgstr "Инициируйте отладку из отладчика"
+msgstr "Инициировать отладку из отладчика"
 
 #: ../../tutorial_debug.md:97
 msgid "Click the bug icon in the icon panel to get to the debugger in the side panel."
-msgstr "Щелкните значок ошибки на панели пиктограмм, чтобы перейти к отладчику на боковой панели."
+msgstr "Нажмите на значок ошибки на панели значка, чтобы добраться до отладчика на боковой панели."
 
 #: ../../tutorial_debug.md:99
 msgid "If you don't see the bug icon, go to the plugin manager and activate the debugger."
-msgstr "Если Вы не видите значок ошибки, зайдите в менеджер плагинов и активируйте отладчик."
+msgstr "Если вы не видите значка ошибки, перейдите в менеджер плагинов и активируйте дебаггер."
 
 #: ../../tutorial_debug.md:101
 msgid "You can start a debug session by providing a `transaction hash`."
-msgstr "Вы можете начать сеанс отладки, предоставив `хэш транзакции`."
+msgstr "Вы можете начать отладочный сеанс, предоставив хеш транзакции."
 
 #: ../../tutorial_debug.md:103
 msgid "To find a transaction hash:"
-msgstr "Чтобы найти хэш транзакции:"
+msgstr "Чтобы найти хеш транзакции:"
 
 #: ../../tutorial_debug.md:104
 msgid "Go to a transaction in the terminal."
-msgstr "Перейдите к транзакции в терминале."
+msgstr "Перейти к транзакции в терминале."
 
 #: ../../tutorial_debug.md:105
 msgid "Click a line with a transaction - to expand the log."
-msgstr "Щелкните на строке с транзакцией - , чтобы развернуть журнал."
+msgstr "Нажмите на строку с транзакцией - чтобы раскрыть журнал."
 
 #: ../../tutorial_debug.md:106
 msgid "The transaction hash is there - copy it."
-msgstr "Хэш транзакции находится там - скопируйте его."
+msgstr "Хэш транзакции уже существует, - скопируйте его."
 
 #: ../../tutorial_debug.md:108
 msgid "![](images/a-debug6-term-txn-hash.png)"
@@ -171,7 +171,7 @@ msgstr "![](images/a-debug6-term-txn-hash.png)"
 
 #: ../../tutorial_debug.md:110
 msgid "Then click in the debugger paste the hash and click on the `Start debugging` button."
-msgstr "Затем щелкните в отладчике, вставив хэш, и нажмите кнопку `Начать отладку`."
+msgstr "Затем нажмите в отладчике \"вставить хеш\" и нажмите на кнопку `Start debugging`."
 
 #: ../../tutorial_debug.md:112
 msgid "![](images/a-debug7-debugger.png)"
@@ -187,83 +187,83 @@ msgstr "![](images/a-debug8-top3.png)"
 
 #: ../../tutorial_debug.md:119
 msgid "The debugger allows one to see detailed informations about the transaction's execution. It uses the editor to display the location in the source code where the current execution is."
-msgstr "Отладчик позволяет увидеть подробную информацию о выполнении транзакции. Он использует редактор для отображения того места в исходном коде, где находится текущее выполнение."
+msgstr "Отладчик позволяет видеть подробную информацию о выполнении транзакции. Он использует редактор для отображения места в исходном коде, где находится текущее выполнение."
 
 #: ../../tutorial_debug.md:123
 msgid "The navigation part contains a slider and buttons that can be used to step through the transaction execution."
-msgstr "Навигационная часть содержит ползунок и кнопки, которые можно использовать для пошагового выполнения транзакции."
+msgstr "Навигационная часть содержит ползунок и кнопки, которые могут быть использованы для пошагового выполнения транзакции."
 
 #: ../../tutorial_debug.md:127
 msgid "Explanation of Debugger button capabilities"
-msgstr "Объяснение возможностей кнопок Отладчика"
+msgstr "Пояснение возможностей кнопок отладчика"
 
 #: ../../tutorial_debug.md:129
 msgid "Step Over Back  Returns to the previous step, but ignores/steps over function calls: the debugger WILL NOT enter a function"
-msgstr "Step Over Back Возвращает к предыдущему шагу, но игнорирует/перешагивает через вызовы функций: отладчик НЕ БУДЕТ входить в функцию"
+msgstr "Step Over Back Возвращает к предыдущему шагу, но игнорирует вызовы функций или пропускает их: отладчик НЕ БУДЕТ вводить функцию."
 
 #: ../../tutorial_debug.md:131
 msgid "Step Back  Returns to the previous step. Does not ignore function calls: the debugger WILL enter any function along the way"
-msgstr "Шаг назад Возвращает к предыдущему шагу. Не игнорирует вызовы функций: отладчик БУДЕТ входить в любую функцию на этом пути"
+msgstr "Step Back  Returns возвращает к предыдущему шагу. Не игнорирует вызовы функций: отладчик БУДЕТ вводить любую функцию по пути."
 
 #: ../../tutorial_debug.md:133
 msgid "Step Into  Forwards to the next step. Does not ignore function calls: the debugger WILL enter any function along the way"
-msgstr "Step Into Переходит к следующему шагу. Не игнорирует вызовы функций: отладчик БУДЕТ входить в любую функцию на этом пути"
+msgstr "Step Into  Forwards переводит к следующему шагу. Не игнорирует вызовы функций: отладчик БУДЕТ вводить любую функцию по пути"
 
 #: ../../tutorial_debug.md:135
 msgid "Step Over Forward  Forwards to the next step, but ignores/steps over function calls: the debugger WILL NOT enter a function"
-msgstr "Step Over Forward Переходит к следующему шагу, но игнорирует/преодолевает вызовы функций: отладчик НЕ БУДЕТ входить в функцию"
+msgstr "Step Over Forward переводит к следующему шагу, но игнорирует вызовы функций или пропускает их: отладчик НЕ БУДЕТ вводить функцию"
 
 #: ../../tutorial_debug.md:137
 msgid "Jump to the Previous Breakpoint  Sends the debugger to the last visited breakpoint. Note that breakpoints may be set by clicking the line number in source code"
-msgstr "Jump to the Previous Breakpoint (Перейти к предыдущей точке останова) Отправляет отладчик к последней посещенной точке останова. Обратите внимание, что точки останова могут быть установлены щелчком мыши по номеру строки в исходном коде"
+msgstr "Jump to the Previous Breakpoint отправляет отладчик к последней посещенной контрольной точке. Обратите внимание, что контрольные точки можно установить, щелкнув номер строки в исходном коде"
 
 #: ../../tutorial_debug.md:139
 msgid "Jump Out  Sends the debugger to the function's end"
-msgstr "Jump Out Отправляет отладчик в конец функции"
+msgstr "Перейти к отправке отладчика в конец функции"
 
 #: ../../tutorial_debug.md:141
 msgid "Jump to the Next Breakpoint  Sends the debugger to the next breakpoint"
-msgstr "Jump to the Next Breakpoint (Перейти к следующей точке останова) Отправляет отладчик к следующей точке останова."
+msgstr "\"Перейти к следующей точке останова\": отправляет отладчик на следующую точку останова"
 
 #: ../../tutorial_debug.md:145
 msgid "11 panels give detailed information about the execution:"
-msgstr "11 панелей дают подробную информацию об исполнении:"
+msgstr "11 панелей дают подробную информацию о выполнении:"
 
 #: ../../tutorial_debug.md:147
 msgid "Instructions"
-msgstr "Инструкции"
+msgstr "Инструкция"
 
 #: ../../tutorial_debug.md:149
 msgid "The Instructions panel displays the bytecode of the current executing contract- with the current step highlighted."
-msgstr "На панели Инструкции отображается байткод текущего выполняемого контракта с выделенным текущим шагом."
+msgstr "Панель Инструкций отображает байт-код текущего контракта выполнения с выделенным текущим шагом."
 
 #: ../../tutorial_debug.md:152
 msgid "Important note: When this panel is hidden, the slider will have a coarser granularity and only stop at *expression boundaries*, even if they are compiled into multiple EVM instructions. When the panel is displayed, it will be possible to step over every instruction, even those that refers to the same expression."
-msgstr "Важное замечание: Когда эта панель скрыта, ползунок будет иметь более грубую гранулярность и останавливаться только на *границах выражений*, даже если они скомпилированы в несколько инструкций EVM. Когда панель отображается, можно будет перешагнуть через каждую инструкцию, даже через те, которые ссылаются на одно и то же выражение."
+msgstr "Важное примечание: когда эта панель скрыта, ползунок будет иметь более грубую детализацию и останавливаться только на *границах выражения*, даже если они скомпилированы в несколько инструкций EVM. Когда панель отображается, можно будет пройти каждую инструкцию, даже ту, которая относится к одному и тому же выражению."
 
 #: ../../tutorial_debug.md:158
 msgid "Solidity Locals"
-msgstr "Solidity Locals"
+msgstr "Локальные символы"
 
 #: ../../tutorial_debug.md:160
 msgid "The Solidity Locals panel displays local variables associated with the current context."
-msgstr "Панель Solidity Locals отображает локальные переменные, связанные с текущим контекстом."
+msgstr "На панели Solidity Locals отображаются локальные переменные, связанные с текущим контекстом."
 
 #: ../../tutorial_debug.md:163
 msgid "Solidity State"
-msgstr "Состояние солидности"
+msgstr "Solidity State"
 
 #: ../../tutorial_debug.md:165
 msgid "The Solidity State panel displays state variables of the current executing contract."
-msgstr "Панель Solidity State отображает переменные состояния текущего исполняемого контракта."
+msgstr "На панели \"Solidity State\" отображаются переменные состояний текущего исполняющего контракта."
 
 #: ../../tutorial_debug.md:168
 msgid "Low level panels"
-msgstr "Панели низкого уровня"
+msgstr "Панели нижнего уровня"
 
 #: ../../tutorial_debug.md:170
 msgid "These panels display low level informations about the execution:"
-msgstr "Эти панели отображают низкоуровневую информацию об исполнении:"
+msgstr "Эти панели отображают нижне уровневую информацию о выполнении:"
 
 #: ../../tutorial_debug.md:172
 msgid "Stack"
@@ -271,7 +271,7 @@ msgstr "Стек"
 
 #: ../../tutorial_debug.md:173
 msgid "Storages Changes"
-msgstr "Изменения в хранилищах"
+msgstr "Изменения в работе хранилища"
 
 #: ../../tutorial_debug.md:174
 msgid "Memory"
@@ -279,7 +279,7 @@ msgstr "Память"
 
 #: ../../tutorial_debug.md:175
 msgid "Call Data"
-msgstr "Данные о звонках"
+msgstr "Данные вызова"
 
 #: ../../tutorial_debug.md:176
 msgid "Call Stack"
@@ -287,59 +287,59 @@ msgstr "Стек вызовов"
 
 #: ../../tutorial_debug.md:177
 msgid "Return Value (only if the current step is a RETURN opcode)"
-msgstr "Возвращаемое значение (только если текущий шаг является опкодом RETURN)"
+msgstr "Возвращаемое значение (только если текущий шаг является кодом RETURN)"
 
 #: ../../tutorial_debug.md:178
-msgid "Full Storages Changes (only at the end of the execution & it displays the all the storage changes)"
-msgstr "Полные изменения хранилищ (только в конце выполнения & отображает все изменения хранилищ)"
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
+msgstr "Полные изменения хранилища (только в конце выполнения, и отображаются все изменения в хранилище)"
 
 #: ../../tutorial_debug.md:180
 msgid "Reverted Transaction"
-msgstr "Возвращенная транзакция"
+msgstr "Отменённая транзакция"
 
 #: ../../tutorial_debug.md:182
 msgid "A transaction can be `reverted` (because of an *out of gas exception*, a Solidity `revert` statement or a low level exception)."
-msgstr "Транзакция может быть `отменена` (из-за исключения *out of gas*, оператора Solidity `revert` или исключения низкого уровня)."
+msgstr "Транзакция может быть отменена (из-за исключения *отсутствие газа*, утверждения о solidity «revert» или исключения нижнего уровня)."
 
 #: ../../tutorial_debug.md:184
 msgid "It is important to be aware of the exception and to locate where the exception is in the source code."
-msgstr "Важно знать об исключении и определить, где оно находится в исходном коде."
+msgstr "Важно знать об исключении и определять, где это исключение находится в исходном коде."
 
 #: ../../tutorial_debug.md:186
 msgid "Remix will warn you when the execution throws an exception.  The `warning` button will jump to the last opcode before the exception happened."
-msgstr "Remix предупредит Вас, когда при выполнении возникнет исключение.  Кнопка `предупреждение` приведет к переходу к последнему опкоду, предшествующему возникновению исключения."
+msgstr "Remix предупредит вас, когда выполнение выдаст исключение. Кнопка «Предупреждение» перейдет к последнему коду операции перед возникновением исключения."
 
 #: ../../tutorial_debug.md:189
 msgid "Breakpoints"
-msgstr "Точки останова"
+msgstr "Контрольные точки"
 
 #: ../../tutorial_debug.md:191
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
-msgstr "Две последние кнопки из области навигации используются для перехода либо назад к предыдущей точке останова, либо вперед к следующей точке останова."
+msgstr "Две последние кнопки навигационной области используются для перехода назад к предыдущей контрольной точке или вперёд к следующей контрольной точке."
 
 #: ../../tutorial_debug.md:194
 msgid "Breakpoints can be added and removed by clicking on the line number in the **Editor**."
-msgstr "Точки останова можно добавлять и удалять, щелкая на номере строки в **Редакторе**."
+msgstr "Контрольные точки могут быть добавлены и удалены, путём нажатия на номер строки в **Editor**."
 
 #: ../../tutorial_debug.md:196
 msgid "When using a debug session with breakpoints, the execution will jump to the first encountered breakpoint."
-msgstr "При использовании сеанса отладки с точками останова выполнение перейдет к первой встреченной точке останова."
+msgstr "При использовании отладочного сеанса с контрольными точками выполнение перейдёт к первой встречной контрольной точке."
 
 #: ../../tutorial_debug.md:199
 msgid "**Important note:** If you add a breakpoint to a line that declares a variable, it might be triggered twice: Once for initializing the variable to zero and a second time for assigning the actual value."
-msgstr "**Важное замечание:** Если Вы добавите точку останова в строку, в которой объявлена переменная, то она может сработать дважды: один раз при инициализации переменной нулем, а второй раз при присвоении фактического значения."
+msgstr "**Важное примечание:** Если вы добавите точку останова к строке, которая объявляет переменную, это может быть вызвано дважды: один раз для инициализации переменной к нулю, а второй раз для назначения фактического значения."
 
 #: ../../tutorial_debug.md:203
 msgid "Here's an example of this issue.  If you are debugging the following contract:"
-msgstr "Вот пример этой проблемы.  Если Вы отлаживаете следующий контракт:"
+msgstr "Вот пример этой проблемы. Если вы отлаживаете следующий контракт:"
 
 #: ../../tutorial_debug.md:218
 msgid "And breakpoints are set for the lines"
-msgstr "И точки останова устанавливаются для строк"
+msgstr "А контрольные точки заданы для строк"
 
 #: ../../tutorial_debug.md:220
 msgid "`uint p = 45;`"
-msgstr "`uint p = 45;`."
+msgstr "`uint p = 45;`"
 
 #: ../../tutorial_debug.md:222
 msgid "`m = 89;`"
@@ -351,7 +351,7 @@ msgstr "`uint l = 34;`"
 
 #: ../../tutorial_debug.md:226
 msgid "then clicking on the `Jump to the next breakpoint` button will stop at the following lines in the given order:"
-msgstr "тогда нажатие на кнопку `Переход к следующей точке останова` приведет к остановке на следующих строках в заданном порядке:"
+msgstr "затем, нажатие на кнопку «Перейти к следующей контрольной точке» остановит на следующих строках в указанном порядке:"
 
 #: ../../tutorial_debug.md:229
 msgid "`uint p = 45;` (declaration of p)"
@@ -363,13 +363,13 @@ msgstr "`uint l = 34;` (объявление l)"
 
 #: ../../tutorial_debug.md:233
 msgid "`uint p = 45;` (45 assigned to p)"
-msgstr "`uint p = 45;` (45 присваивается p)"
+msgstr "`uint p = 45;` (45 назначено p)"
 
 #: ../../tutorial_debug.md:235
 msgid "`m = 89;` (89 assigned to m)"
-msgstr "`m = 89;` (89 присвоено m)"
+msgstr "`m = 89;` (89 присвоено м);"
 
 #: ../../tutorial_debug.md:237
 msgid "`uint l = 34;` (34 assigned to l)"
-msgstr "`uint l = 34;` (34 присваивается l)"
+msgstr "`uint l = 34;` (34 присвоено l)"
 
