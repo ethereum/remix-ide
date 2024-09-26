@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -18,42 +18,34 @@ msgstr ""
 "Language: zh_CN\n"
 
 #: ../../index.rst:51
-#: ../../index.rst:51
 msgid "Introduction"
-msgstr "导言"
+msgstr "简介"
 
-#: ../../index.rst:61
 #: ../../index.rst:61
 msgid "Core Modules"
-msgstr "核心单元"
+msgstr "核心模块"
 
-#: ../../index.rst:72
-#: ../../index.rst:72
+#: ../../index.rst:73
 msgid "Solidity modules"
-msgstr "稳固模块"
+msgstr "Solidity模块"
 
-#: ../../index.rst:83
-#: ../../index.rst:83
+#: ../../index.rst:84
 msgid "Unit Testing"
 msgstr "单元测试"
 
-#: ../../index.rst:93
-#: ../../index.rst:93
+#: ../../index.rst:94
 msgid "External Tool Integrations"
 msgstr "外部工具集成"
 
-#: ../../index.rst:102
-#: ../../index.rst:102
+#: ../../index.rst:103
 msgid "Guides"
 msgstr "指南"
 
-#: ../../index.rst:113
-#: ../../index.rst:113
+#: ../../index.rst:114
 msgid "Advanced"
 msgstr "高级"
 
-#: ../../index.rst:120
-#: ../../index.rst:120
+#: ../../index.rst:121
 msgid "Miscellaneous"
 msgstr "其它选项"
 
@@ -63,11 +55,11 @@ msgstr "欢迎使用 Remix 文档！"
 
 #: ../../index.rst:4
 msgid "**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and as a VSCode extension."
-msgstr "**Remix IDE（集成开发环境）** 适用于所有知识水平的用户在智能合约开发过程中的整个过程。它不需要任何设置，促进快速开发周期，并具有直观GUI的丰富插件集。该IDE有两种版本（Web应用程序或桌面应用程序），并可作为VSCode扩展。"
+msgstr " **Remix IDE** 适用于所有知识水平的用户在智能合约开发过程中的整个过程。它不需要任何设置，促进快速开发周期，并具有直观GUI的丰富插件集。该IDE有两种版本（Web应用程序或桌面应用程序），并可作为VSCode扩展。"
 
 #: ../../index.rst:8
 msgid "**Remix Online IDE**, see: `https://remix.ethereum.org <https://remix.ethereum.org>`__"
-msgstr "**Remix IDE** 线上地址是： `https://remix.ethereum.org <https://remix.ethereum.org>`__"
+msgstr " **Remix IDE** 线上地址是： `https://remix.ethereum.org <https://remix.ethereum.org>`__"
 
 #: ../../index.rst:10
 msgid "Supported browsers: Firefox, Chrome, Brave. We do not support use of Remix on tablets or mobile devices."
@@ -75,15 +67,15 @@ msgstr "支持的浏览器：Firefox，Chrome，Brave。我们不支持在平板
 
 #: ../../index.rst:12
 msgid "**Remix Desktop IDE**, see releases: `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__"
-msgstr "**Remix Desktop IDE** ，请参阅版本： `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__"
+msgstr " **Remix Desktop IDE** ，请参阅版本： `https://github.com/ethereum/remix-desktop/releases <https://github.com/ethereum/remix-desktop/releases>`__"
 
 #: ../../index.rst:14
 msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. Documentation for the VSCode extension is located `here <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
-msgstr "**Ethereum Remix** 是VSCode的扩展程序，可以在 `这里 <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__ 找到。有关VSCode扩展程序的文档位于 `这里 <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__ 。"
+msgstr " **Ethereum Remix** 是VSCode的扩展程序，可以在 `这里 <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__ 找到。有关VSCode扩展程序的文档位于 `这里 <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__ 。"
 
 #: ../../index.rst:17
-msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
-msgstr "**Remix 文档翻译** Remix 文档目前有 \"英文 <https://remix-ide.readthedocs.io/en/latest/>__ \"和 \"中文 <https://remix-ide.readthedocs.io/zh_CN/latest/>__ \"。  更多语言即将推出。"
+msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
+msgstr " **Remix文档翻译** Remix文档目前提供`英文版本<https://remix-ide.readthedocs.io/en/latest/>`__和`简体中文版本<https://remix-ide.readthedocs.io/zh_CN/latest/>`__。更多语言版本即将到来。"
 
 #: ../../index.rst:20
 msgid "Remix Project"
