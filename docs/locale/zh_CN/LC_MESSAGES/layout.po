@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../layout.md:1
 msgid "Navigating Remix"
-msgstr "导航混音"
+msgstr "导航 Remix"
 
 #: ../../layout.md:3
 msgid "Remix IDE is comprised of three panels and a terminal."
@@ -35,11 +35,11 @@ msgstr "图标面板 - 点击可更改侧面板中显示的插件"
 
 #: ../../layout.md:8
 msgid "Side Panel - most but not all plugins have their interface here"
-msgstr "侧面板 - 大部分插件（并非所有插件）的界面都在这里"
+msgstr "侧面板--大多数插件（并非所有插件）的界面都在这里"
 
 #: ../../layout.md:9
 msgid "Main Panel - for editing files, large format tools, and the home tab"
-msgstr "主面板 - 用于编辑文件、大幅面工具和主页选项卡"
+msgstr "主面板 - 用于编辑文件、大型格式工具和主页选项卡"
 
 #: ../../layout.md:10
 msgid "Terminal - for viewing transaction receipts and various logs"
@@ -59,7 +59,7 @@ msgstr "![](images/a-icons-at-load.png)"
 
 #: ../../layout.md:19
 msgid "To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab."
-msgstr "要加载更多插件，请访问 **[插件管理器](#plugin-manager)**，或点击主页标签中的特色插件。"
+msgstr "要加载更多插件，请访问  **[插件管理器](#plugin-manager)** ，或点击主页标签中的特色插件。"
 
 #: ../../layout.md:21
 msgid "Home tab"
@@ -71,7 +71,7 @@ msgstr "![](images/a-hometab.png)"
 
 #: ../../layout.md:26
 msgid "The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel."
-msgstr "主页选项卡位于主面板中。  它可以关闭，就像主面板上的其他选项卡一样。  <br> 你也可以通过点击图标面板顶部的 Remix 徽标来访问它（即使已关闭）。"
+msgstr "主页选项卡位于主面板中。  它可以关闭，就像主面板上的其他选项卡一样。  <br> 你也可以通过点击图标面板顶部的 Remix logo来访问它（即使已关闭）。"
 
 #: ../../layout.md:28
 msgid "The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem."
@@ -79,27 +79,27 @@ msgstr "主页标签包含资源链接、公告、教程、特色插件、将文
 
 #: ../../layout.md:30
 msgid "Solidity"
-msgstr "稳固性"
+msgstr "Solidity"
 
 #: ../../layout.md:31
 msgid "Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default)."
-msgstr "在主页选项卡的特色插件部分点击 **Solidity 按钮** 将会激活 **Solidity静态分析** 和 **Solidity 单元测试**，同时也会有 **Solidity 编译器**和 **Deploy & Run**（这些默认已经存在）。"
+msgstr "在主页选项卡的特色插件部分点击 **Solidity 按钮** 将会激活 **Solidity静态分析** 和 **Solidity 单元测试** ，同时也会有 **Solidity 编译器** 和 **部署与运行**（这些默认已经存在）。"
 
 #: ../../layout.md:33
 msgid "To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel. ![](images/a-plug.png) <br> You can also get there by clicking the **More** button in the featured plugin list."
-msgstr "要查看所有插件，请转到**插件管理器** - 通过选择图标面板中的插件。![](images/a-plug.png) <br> 您还可以通过单击特色插件列表中的**更多**按钮进入该页面。"
+msgstr "要查看所有插件，请转到 **插件管理器** - 通过选择图标面板中的插件。![](images/a-plug.png) <br> 您还可以通过单击特色插件列表中的 **更多** 按钮进入该页面。"
 
 #: ../../layout.md:37
 msgid "Plugin Manager"
 msgstr "插件管理器"
 
 #: ../../layout.md:40
-msgid "In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on."
-msgstr "在 Remix 中，你只需要加载你所需的功能 - 插件管理器用来管理哪些插件被关闭或打开。"
+msgid "In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on."
+msgstr "在Remix中，您只需加载所需的功能 - 而插件管理器是您管理插件启用或禁用的地方。"
 
 #: ../../layout.md:42
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr "当您创建自己的插件并且想要将本地插件加载到 Remix 中时，插件管理器也是您要去的地方。 在这种情况下，您可以单击插件管理器面板顶部的“连接到本地插件”链接。"
+msgstr "插件管理器也是当您创建自己的插件并希望将本地插件加载到 Remix 中时所需的位置。在这种情况下，您会点击插件管理器面板顶部的 \"连接到本地插件\" 链接。"
 
 #: ../../layout.md:44
 msgid "Themes"
@@ -107,7 +107,7 @@ msgstr "主题"
 
 #: ../../layout.md:47
 msgid "Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix."
-msgstr "可在**设置**插件底部选择主题。这些都是基于 Bootstrap 的主题。深色和浅色主题最适合 Remix。"
+msgstr "可在 **设置** 插件底部选择主题。这些都是基于 Bootstrap 的主题。深色和浅色主题最适合 Remix。"
 
 #: ../../layout.md:49
 msgid "![](images/a-themes.png)"
