@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "启动调试会话："
 
 #: ../../debugger.md:9
 msgid "**Click** the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the **Side Panel**."
-msgstr "当终端里出现了成功或者失败的交易时，**点击** Debug（调试）按钮。Debugger（调试器）被激活，然后在**侧面板**里进行显示。"
+msgstr "当终端里出现了成功或者失败的交易时， **点击** Debug（调试）按钮。Debugger（调试器）被激活，然后在 **侧面板** 里进行显示。"
 
 #: ../../debugger.md:11
 msgid "**Activate** the Debugger in the Plugin Manager and then click the bug in the icon panel. To start the debugging session, input the address of a deployed transaction - while having the source code in the editor and then click the **Start debugging** button."
@@ -62,12 +62,12 @@ msgid "Use generated sources"
 msgstr "使用生成的源代码"
 
 #: ../../debugger.md:22
-msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
-msgstr "此选项适用于使用 Solidity 0.7.2 或更高版本的合约。有关“生成的源代码”的更多详细信息，请参阅 [Solidity 博客](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features) 。"
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgstr "这个选项适用于使用 Solidity 0.7.2 或更高版本的合约。有关[生成源]的更多详细信息，请参阅 Solidity 博客(https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)。"
 
 #: ../../debugger.md:24
 msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
-msgstr "使用“生成的源代码”将使审核合约更加容易。当选中该选项时，您可以在调试时进入那些编译器输出。"
+msgstr "使用 **生成的源代码** 将使审核合约更加容易。当选中该选项时，您可以在调试时进入那些编译器输出。"
 
 #: ../../debugger.md:26
 msgid "![](images/a-debug-use-gen-sources.png)"
@@ -95,19 +95,19 @@ msgstr "滚动条"
 
 #: ../../debugger.md:35
 msgid "Moving the slider will highlight the relevant code in the **Editor**. On the most granular level, it scrolls through a transaction's opcodes (**see the opcode section below**). At each opcode, the transaction's state changes and these changes are reflected in the **Debugger's panels**."
-msgstr "移动滚动条将高亮编辑器中的相关代码。在最精细的级别上，它会滚动交易的操作码(请参见下面的操作码部分)。在每个操作码处，交易的状态更改，并且这些更改将反映在**调试器面板**中。"
+msgstr "移动滚动条将高亮 **编辑器** 中的相关代码。在最精细的级别上，它会滚动交易的操作码( **请参见下面的操作码部分** )。在每个操作码处，交易的状态更改，并且这些更改将反映在 **调试器面板** 中。"
 
 #: ../../debugger.md:37
 msgid "Step over back"
-msgstr "单步向后回退"
+msgstr "单步执行并返回"
 
 #: ../../debugger.md:38
 msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
-msgstr "此按钮转到上一个操作码。如果上一步涉及一个 **函数调用**，不会进入到函数中。"
+msgstr "此按钮转到上一个操作码。如果上一步涉及一个 **函数调用** ，不会进入到函数中。"
 
 #: ../../debugger.md:39
 msgid "Step back"
-msgstr "单步回退"
+msgstr "回退一步"
 
 #: ../../debugger.md:40
 msgid "This button steps back to the previous opcode."
@@ -115,11 +115,11 @@ msgstr "此按钮会返回到上一个操作码。"
 
 #: ../../debugger.md:41
 msgid "Step into"
-msgstr "单步进入"
+msgstr "逐步执行"
 
 #: ../../debugger.md:42
 msgid "This button advances to the next opcode. If the next line contains a function call, **Step into** will go into the function."
-msgstr "此按钮会进入到下一个操作码。如果下一行包含函数调用，**单步进入**会进入此函数。"
+msgstr "此按钮会进入到下一个操作码。如果下一行包含函数调用， **逐步执行** 会进入此函数。"
 
 #: ../../debugger.md:43
 msgid "Step over forward"
@@ -127,7 +127,7 @@ msgstr "向前跳过"
 
 #: ../../debugger.md:44
 msgid "This button advances to the next opcode.  If the next step involves a **function call**, function will not be entered."
-msgstr "此按钮会跳转到下一个操作码。如果下一步包含**函数调用**，调试器不会进入到此函数中。"
+msgstr "此按钮会跳转到下一个操作码。如果下一步包含 **函数调用** ，调试器不会进入到此函数中。"
 
 #: ../../debugger.md:45
 msgid "Jump to the previous breakpoint"
@@ -135,7 +135,7 @@ msgstr "跳转到上一个断点"
 
 #: ../../debugger.md:46
 msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
-msgstr "可以在编辑器的边距处放置断点。如果当前调用的步骤已经通过了断点，则此按钮将将滚动条移动到最近通过的断点。"
+msgstr "可以在编辑器的边距处放置断点。如果当前调用的步骤已经通过了断点，则此按钮将会将滚动条移动到最近通过的断点。"
 
 #: ../../debugger.md:48
 msgid "Jump out"
@@ -183,7 +183,7 @@ msgstr "![](images/a-debug-sol-locals.png)"
 
 #: ../../debugger.md:64
 msgid "Solidity State"
-msgstr "Solidity State"
+msgstr "Solidity 状态"
 
 #: ../../debugger.md:65
 msgid "These are the state variables of the contract."
@@ -199,7 +199,7 @@ msgstr "操作码"
 
 #: ../../debugger.md:70
 msgid "This panel shows the step number and the **opcode** that the debugger is currently on."
-msgstr "该面板显示了调试器当前所在的步骤编号和操作码（opcode）。"
+msgstr "该面板显示了调试器当前所在的步骤编号和 **操作码（opcode）** 。"
 
 #: ../../debugger.md:72
 msgid "![](images/a-debug-opcodes1.png)"
@@ -207,7 +207,7 @@ msgstr "![](images/a-debug-opcodes1.png)"
 
 #: ../../debugger.md:74
 msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
-msgstr "当您拖动导航按钮上面的滚动条时，焦点步骤编号和操作码会发生变化。"
+msgstr "当您拖动导航按钮上面的 **滚动条** 时，焦点步骤编号和操作码会发生变化。"
 
 #: ../../debugger.md:75
 msgid "Step details"
@@ -243,7 +243,7 @@ msgstr "内存"
 
 #: ../../debugger.md:87
 msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. **Reads** are limited to a width of 256 bits while **writes** can be either 8 bits or 256 bits wide."
-msgstr "每次新的调用内存都会被清除。内存是线性的，可以按字节级寻址。读取的宽度限制为256位，而写入可以是8位或256位。"
+msgstr "每次新的调用内存都会被清除。内存是线性的，可以按字节级寻址。 **读取** 的宽度限制为256位，而 **写入** 可以是8位或256位。"
 
 #: ../../debugger.md:89
 msgid "The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right)."
@@ -263,15 +263,15 @@ msgstr "![](images/a-debugger-memory.png)"
 
 #: ../../debugger.md:100
 msgid "Some address slots have hex encoded values and those values are then decoded.  For example, check position **0xa0** and **0x140**."
-msgstr "一些地址槽包含十六进制编码的值，这些值随后会被解码。例如，检查位置0xa0和0x140。"
+msgstr "一些地址槽包含十六进制编码的值，这些值随后会被解码。例如，检查位置 **0xa0** 和 **0x140** 。"
 
 #: ../../debugger.md:101
 msgid "Storage"
 msgstr "存储"
 
 #: ../../debugger.md:102
-msgid "This is the persistant storage."
-msgstr "这是持久性的存储。"
+msgid "This is the persistent storage."
+msgstr "这是永久存储。"
 
 #: ../../debugger.md:104
 msgid "![](images/a-debug-storage.png)"
@@ -318,8 +318,8 @@ msgid "Full Storage Changes"
 msgstr "完整存储变更"
 
 #: ../../debugger.md:119
-msgid "This shows the persistant storage at the end of the function."
-msgstr "显示函数结束后的永久性存储。"
+msgid "This shows the persistent storage at the end of the function."
+msgstr "这显示了函数结束时的持久化存储。"
 
 #: ../../debugger.md:121
 msgid "![](images/a-debug-full-store-change.png)"
