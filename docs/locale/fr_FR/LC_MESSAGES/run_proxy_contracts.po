@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -22,24 +22,24 @@ msgid "Deploy & Run Proxy Contracts"
 msgstr "Déployer et exécuter des contrats proxy"
 
 #: ../../run_proxy_contracts.md:4
-msgid "Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern."
-msgstr "Remix IDE dispose d'une fonctionnalité pour aider à la gestion des contrats proxy qui utilisent le modèle UUPS."
+msgid "Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:6
 msgid "A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 msgstr "Un contrat proxy UUPS est le côté implémentation d'un [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
 
 #: ../../run_proxy_contracts.md:8
-msgid "Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address."
-msgstr "Une fois que vous avez déployé un contrat d'implémentation UUPS, Remix déploiera un ERC1967 avec l'adresse de votre contrat d'implémentation."
+msgid "Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:10
 msgid "To interact with the functions in the **implementation contract**, use the deployed instance of the **ERC1967 instance** not on the implementation contract."
 msgstr "Pour interagir avec les fonctions du **contrat de mise en œuvre**, utilisez l'instance déployée de l'instance **ERC1967** qui ne figure pas dans le contrat de mise en œuvre."
 
 #: ../../run_proxy_contracts.md:12
-msgid "When its time to upgrade you contract, Remix has a UI for this."
-msgstr "Lorsqu'il est temps de mettre à jour votre contrat, Remix dispose d'une interface utilisateur pour cela."
+msgid "When it's time to upgrade your contract, Remix has a UI for this."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:14
 msgid "To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy & Run."
@@ -59,7 +59,7 @@ msgstr "![](images/a-proxy-deploy1-noParams.png)"
 
 #: ../../run_proxy_contracts.md:21
 msgid "Check the box for **Deploy with Proxy**. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:"
-msgstr "Cochez la case **Déployer avec Proxy**. Cela créera deux transactions : une pour l'implémentation (votre contrat) et l'autre pour le contrat proxy ERC1967. Vous obtiendrez deux fenêtres modales à parcourir :"
+msgstr "Cochez la case **Déployer avec Proxy**. Cela créera deux transactions : l'une pour l'implémentation (votre contrat) et l'autre pour le contrat proxy ERC1967. Vous obtiendrez deux fenêtres modales à parcourir :"
 
 #: ../../run_proxy_contracts.md:23
 msgid "![](images/a-proxy-modal1.png)"
@@ -79,7 +79,7 @@ msgstr "Si vous effectuez un déploiement sur la **Remix VM**, ces fenêtres app
 
 #: ../../run_proxy_contracts.md:31
 msgid "After the ERC1967 proxy contract is deployed, in the Deployed Contracts section, you'll see two deployed instances."
-msgstr "Une fois le contrat proxy ERC1967 déployé, dans la section Contrats déployés, vous verrez deux instances déployées."
+msgstr "Une fois le contrat proxy ERC1967 déployé, vous verrez deux instances déployées dans la section Contrats déployés."
 
 #: ../../run_proxy_contracts.md:33
 msgid "![](images/a-deployed-instances.png)"
