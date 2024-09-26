@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"PO-Revision-Date: 2024-09-26 01:30\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../assert_library.md:1
 msgid "Remix Assert Library"
-msgstr "Bibliothèque Remix Acéré"
+msgstr "Bibliothèque Remix Assert"
 
 #: ../../assert_library.md:4
 msgid "[Assert.ok(value[, message])](#assert-ok-value-message)"
