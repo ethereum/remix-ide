@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Vérifiez toujours que vous chargez Remix via HTTPS, sauf si vous avez u
 
 #: ../../security.md:10
 msgid "Make sure all your imports include the **version number** otherwise you don't know what version of files you are getting and the builds are not reproducible."
-msgstr "Assurez-vous que tous vos imports incluent le **numéro de version** sinon vous ne savez pas quelle version de fichiers vous obtenez et les builds ne sont pas reproductibles."
+msgstr "Assurez-vous que toutes vos importations incluent le **numéro de version**, sinon vous ne savez pas quelle version des fichiers vous obtenez et les constructions ne sont pas reproductibles."
 
 #: ../../security.md:12
 msgid "So **do not** use an import like this:<br> `import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";`"
@@ -71,7 +71,7 @@ msgstr "remix-beta.ethereum.org"
 
 #: ../../security.md:27
 msgid "If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a scam."
-msgstr "Si vous êtes dirigé vers un site qui ressemble à Remix mais dont l'URL est **similaire mais différente**, il ne s'agit PAS de Remix et il est probable qu'il s'agisse d'une escroquerie."
+msgstr "Si vous êtes dirigé vers un site qui ressemble à Remix mais dont l'URL est **similaire mais différente**, il ne s'agit PAS de Remix et il s'agit probablement d'une arnaque."
 
 #: ../../security.md:29
 msgid "Remix's ease makes its users a target"
