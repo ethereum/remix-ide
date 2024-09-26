@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,57 +19,57 @@ msgstr ""
 
 #: ../../contract_metadata.md:1
 msgid "Compilation Artifacts"
-msgstr "Артефакты компиляции"
+msgstr ""
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation for a Solidity file succeeds, Remix creates three JSON files for each compiled contract. Files can be seen in the `File Explorers plugin` as:"
-msgstr "Когда компиляция для файла Solidity проходит успешно, Remix создает три JSON-файла для каждого скомпилированного контракта. Файлы можно увидеть в плагине `File Explorers` как:"
+msgstr ""
 
 #: ../../contract_metadata.md:6
 msgid "`artifacts/<contractName>.json`: contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. It is used for linking a library address to the file."
-msgstr "`artifacts/<contractName>.json`: содержит ссылку на библиотеки, байткод, развернутый байткод, оценку газа, идентификаторы методов и ABI. Он используется для привязки адреса библиотеки к файлу."
+msgstr ""
 
 #: ../../contract_metadata.md:7
 msgid "`artifacts/<contractName_metadata>.json`: contains the metadata from the output of Solidity compilation."
-msgstr "`artifacts/<contractName_metadata>.json`: содержит метаданные, полученные на выходе компиляции Solidity."
+msgstr ""
 
 #: ../../contract_metadata.md:8
 msgid "`artifacts/build-info/<dynamic_hash>.json`: contains info about `solc` compiler version, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try [Hardhat compilation](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) from Remix."
-msgstr "`artifacts/build-info/<dynamic_hash>.json`: содержит информацию о версии компилятора `solc`, входных и выходных данных компилятора. Этот файл генерируется аналогично файлам, генерируемым при компиляции Hardhat. Вы также можете попробовать [Hardhat compilation](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) от Remix."
+msgstr ""
 
 #: ../../contract_metadata.md:10
 msgid "Please note that in order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked. By default, it is checked."
-msgstr "Обратите внимание, что для генерации этих артефактных файлов необходимо установить флажок **Генерировать метаданные контракта** в разделе **Общие настройки** модуля **Настройки**. По умолчанию он установлен."
+msgstr ""
 
 #: ../../contract_metadata.md:12
 msgid "You can write scripts that can access either of these files."
-msgstr "Вы можете написать сценарии, которые могут обращаться к любому из этих файлов."
+msgstr ""
 
 #: ../../contract_metadata.md:14
 msgid "Library Deployment with filename.json"
-msgstr "Развертывание библиотеки с помощью файла filename.json"
+msgstr ""
 
 #: ../../contract_metadata.md:17
 msgid "By default Remix automatically deploys needed libraries."
-msgstr "По умолчанию Remix автоматически развертывает необходимые библиотеки."
+msgstr ""
 
 #: ../../contract_metadata.md:19
 msgid "When you open the metadata file for the libraries - **artifact/filename.json** you will see the following sections:"
-msgstr "Когда Вы откроете файл метаданных для библиотек - **artifact/filename.json**, Вы увидите следующие разделы:"
+msgstr ""
 
 #: ../../contract_metadata.md:21
 msgid "`linkReferences` contains a map representing libraries which depend on the current contract.  Values are addresses of libraries used for linking the contract."
-msgstr "`linkReferences` содержит карту, представляющую библиотеки, которые зависят от текущего контракта.  Значениями являются адреса библиотек, используемых для связывания контракта."
+msgstr ""
 
 #: ../../contract_metadata.md:24
 msgid "`autoDeployLib` defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in `linkReferences`"
-msgstr "`autoDeployLib` определяет, должны ли библиотеки быть автоматически развернуты Remix или контракт должен быть скомпонован с библиотеками, описанными в `linkReferences`."
+msgstr ""
 
 #: ../../contract_metadata.md:26
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: `<network_name>:<networkd_id>`, but it is also possible to define `<network_name>` or `<network_id>` as keys."
-msgstr "Обратите внимание, что Ремикс будет разрешать адреса, соответствующие текущей сети. По умолчанию ключ конфигурации имеет вид: `<network_name>:<networkd_id>`, но можно также определить в качестве ключей `<network_name>` или `<network_id>`."
+msgstr ""
 
 #: ../../contract_metadata.md:30
 msgid "Here is a sample metadata file for linking a library:"
-msgstr "Здесь приведен пример файла метаданных для связывания библиотеки:"
+msgstr ""
 
