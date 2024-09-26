@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -62,8 +62,8 @@ msgid "use the shortcut `control + s`."
 msgstr "utilisez le raccourci `contrôle + s`."
 
 #: ../../compile.md:19
-msgid "right click on a file in the File Explorer and selecting **Compile** option"
-msgstr "cliquez avec le bouton droit de la souris sur un fichier dans l'explorateur de fichiers et sélectionnez l'option **Compiler**."
+msgid "right click on a file in the File Explorer and select the **Compile** option"
+msgstr ""
 
 #: ../../compile.md:21
 msgid "![](images/a-sol-comp-basic.png)"
@@ -74,8 +74,8 @@ msgid "Auto Compile"
 msgstr "Compilation automatique"
 
 #: ../../compile.md:24
-msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compiliation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
-msgstr "Si la case de compilation automatique (**B. dans la figure 1 ci-dessus**) est cochée, la compilation aura lieu toutes les quelques secondes (lorsque le fichier est sauvegardé automatiquement) ainsi que lorsqu'un autre fichier est sélectionné.  Si un contrat comporte de nombreuses dépendances, la compilation peut prendre un certain temps - c'est pourquoi vous pouvez utiliser la compilation automatique à votre discrétion."
+msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compilation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
+msgstr ""
 
 #: ../../compile.md:27
 msgid "Solidity versions & Remix functionality"
@@ -118,8 +118,8 @@ msgid "**Published data contains the contract's metadata and the solidity source
 msgstr "**Les données publiées contiennent les métadonnées du contrat et le code source de Solidity."
 
 #: ../../compile.md:47
-msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addreses of the contracts that it imported and the address of the contract's **metadata**."
-msgstr "Après avoir cliqué sur **Publish on IPFS** ou **Publish on Swarm**, une fenêtre modale s'ouvre.  Cette fenêtre contient l'adresse du contrat ainsi que les adresses des contrats importés et l'adresse des **métadonnées** du contrat."
+msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addresses of the contracts that it imported and the address of the contract's **metadata**."
+msgstr ""
 
 #: ../../compile.md:49
 msgid "When the \"Compilation Details\" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract."
@@ -134,8 +134,8 @@ msgid "Passive Contract Verification"
 msgstr "Vérification passive des contrats"
 
 #: ../../compile.md:54
-msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verifiy your contracts without you needing to do anything."
-msgstr "Lorsque vous publiez vos métadonnées sur IPFS et que vous déployez votre code sur le réseau principal ou sur un réseau de test public, le service de vérification des contrats **[Sourcify](https://sourcify.dev/)**, vérifiera vos contrats sans que vous ayez à faire quoi que ce soit."
+msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verify your contracts without you needing to do anything."
+msgstr ""
 
 #: ../../compile.md:56
 msgid "Compile and Run script"
@@ -170,8 +170,8 @@ msgid "![](images/a-sol-comp-adv.png)"
 msgstr "![](images/a-sol-comp-adv.png)"
 
 #: ../../compile.md:70
-msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the cofiguration (**R. in fig 2**)."
-msgstr "Un bouton radio vous permet de choisir de configurer le compilateur via l'interface (**N. dans la fig. 2**) ou d'utiliser un fichier JSON pour la configuration (**R. dans la fig. 2**)."
+msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**)."
+msgstr ""
 
 #: ../../compile.md:72
 msgid "Solidity or YUL"
@@ -187,7 +187,7 @@ msgstr "Sélectionnez une version de l'EVM"
 
 #: ../../compile.md:77
 msgid "The EVM dropdown list (**P. in fig 2**) allows to compile code against a specific **Ethereum hard fork**. The `compiler default` corresponds to the default hard fork used by a specific version."
-msgstr "La liste déroulante EVM (**P. dans la fig 2**) permet de compiler le code contre une **fourche dure d'Ethereum** spécifique. Le `compiler default` correspond au hard fork par défaut utilisé par une version spécifique."
+msgstr "La liste déroulante EVM (**P. dans la fig 2**) permet de compiler le code par rapport à une **fourche dure d'Ethereum** spécifique. Le `compiler default` correspond au hard fork par défaut utilisé par une version spécifique."
 
 #: ../../compile.md:80
 msgid "To see the name of the hard fork used in the current compilation, click the \"Compilation Details\" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name."
@@ -198,12 +198,12 @@ msgid "Enable optimization"
 msgstr "Activer l'optimisation"
 
 #: ../../compile.md:83
-msgid "According to the the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
-msgstr "Selon la documentation de Solidity, \"l'optimiseur tente de simplifier les expressions compliquées, ce qui réduit à la fois la taille du code et le coût d'exécution, c'est-à-dire qu'il peut réduire le gaz nécessaire au déploiement du contrat ainsi qu'aux appels externes faits au contrat\"."
+msgid "According to the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgstr ""
 
 #: ../../compile.md:85
-msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be) ."
-msgstr "Pour les versions récentes de Solidity, il est [recommandé d'activer l'optimisation] (https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)."
+msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)."
+msgstr ""
 
 #: ../../compile.md:87
 msgid "To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html)."
