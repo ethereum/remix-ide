@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:03\n"
+"PO-Revision-Date: 2024-09-26 01:37\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "`remix-tests` est un outil qui peut être utilisé comme une solution CL
 
 #: ../../unittestingAsCLI.md:8
 msgid "Get started"
-msgstr "Commencez"
+msgstr "Premiers pas"
 
 #: ../../unittestingAsCLI.md:11
 msgid "You can install it using NPM:"
@@ -103,7 +103,7 @@ msgstr "Le fichier de test `simple_storage_test.sol` peut être comme :"
 
 #: ../../unittestingAsCLI.md:123
 msgid "Running `simple_storage_test.sol` file will output as:"
-msgstr "L'exécution du fichier `simple_storage_test.sol` produira le résultat suivant :"
+msgstr "L'exécution du fichier `simple_storage_test.sol` donnera le résultat suivant :"
 
 #: ../../unittestingAsCLI.md:149
 msgid "Custom compiler context"
