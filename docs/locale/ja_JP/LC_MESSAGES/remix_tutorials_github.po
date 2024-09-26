@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-21 10:25+0200\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/remix_tutorials_github.pot\n"
+"X-Crowdin-File-ID: 6486\n"
+"Language: ja_JP\n"
+
+#: ../../remix_tutorials_github.md:1
+msgid "Remix Github Tutorials"
+msgstr "Remix Githubチュートリアル"
+
+#: ../../remix_tutorials_github.md:4
+msgid "There are a series of tutorials in our github repo remix-workshops."
+msgstr "GitHubリポジトリのRemixワークショップには、一連のチュートリアルがあります。"
+
+#: ../../remix_tutorials_github.md:6
+msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
+msgstr "新しいRemixレイアウトを使用するために、これらのチュートリアルをアップグレードしている段階にあります。"
+
+#: ../../remix_tutorials_github.md:8
+msgid "In this repo there tutorials for all levels."
+msgstr "このリポジトリは、すべてのレベルが対象です。"
+
+#: ../../remix_tutorials_github.md:10
+msgid "There are tutorials for specific remix functionalities like:"
+msgstr "次のような特定のRemix機能に関するチュートリアルがあります:"
+
+#: ../../remix_tutorials_github.md:12
+msgid "Deploying"
+msgstr "デプロイ"
+
+#: ../../remix_tutorials_github.md:18
+msgid "Testing"
+msgstr "テストを実行する"
+
+#: ../../remix_tutorials_github.md:23
+msgid "Remix Plugin Development"
+msgstr "Remixプラグイン開発"
+
+#: ../../remix_tutorials_github.md:27
+msgid "Other"
+msgstr "その他"
+
+#: ../../remix_tutorials_github.md:35
+msgid "Additional external workshops"
+msgstr "さらなる外部ワークショップ"
+
