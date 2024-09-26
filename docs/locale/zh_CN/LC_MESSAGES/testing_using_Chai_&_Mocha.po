@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Remix支持使用断言库 [Chai](https://www.chaijs.com/) 和测试框�
 
 #: ../../testing_using_Chai_&_Mocha.md:8
 msgid "_Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework._"
-msgstr "_Chai是一个用于Node.js和浏览器的BDD / TDD断言库，可以与任何JavaScript测试框架愉快地配对使用。_"
+msgstr "_Chai是一个用于Node.js和浏览器的BDD / TDD断言库，可以与任何JavaScript测试框架完美地配对使用。_"
 
 #: ../../testing_using_Chai_&_Mocha.md:10
 msgid "_Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun._"
@@ -42,8 +42,8 @@ msgid "Write tests"
 msgstr "编写测试"
 
 #: ../../testing_using_Chai_&_Mocha.md:14
-msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`."
-msgstr "在您的项目工作区中创建一个js文件。最好将其创建在`scripts`文件夹内。我们来命名它为`sample.test.js`。"
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Let's name it `sample.test.js`."
+msgstr "在您的项目工作区创建一个 js 文件。最好将其创建在 `scripts` 文件夹中。我们给它命名为 `sample.test.js`。"
 
 #: ../../testing_using_Chai_&_Mocha.md:16
 msgid "Write your tests in the file. Here is a sample:"
@@ -55,7 +55,7 @@ msgstr "运行测试"
 
 #: ../../testing_using_Chai_&_Mocha.md:35
 msgid "Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JS scripts"
-msgstr "完成编写测试后，在文件浏览器插件中右键单击文件名。它将显示一些选项，包括运行选项。此运行选项用于运行JS脚本。"
+msgstr "完成编写测试后，在 “文件浏览器插件” 中右键单击文件名。它将显示一些选项，包括 “运行” 选项。此 “运行” 选项用于运行JS脚本。"
 
 #: ../../testing_using_Chai_&_Mocha.md:37
 msgid "![](images/run_with_mocha_option.png)"
@@ -112,7 +112,7 @@ msgstr "通过这个，可以使用Remix轻松地运行Hardhat项目的测试。
 
 #: ../../testing_using_Chai_&_Mocha.md:133
 msgid "Example to test `Storage` contract with this plugin methods can be as:"
-msgstr "例如，使用此插件方法测试`Storage`合约可以如下："
+msgstr "例如，使用此插件方法测试 `Storage` 合约可以如下："
 
 #: ../../testing_using_Chai_&_Mocha.md:160
 msgid "![](images/run_with_mocha_hhethers.png)"
