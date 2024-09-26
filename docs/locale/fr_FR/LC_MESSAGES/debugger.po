@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -62,8 +62,8 @@ msgid "Use generated sources"
 msgstr "Utiliser les sources générées"
 
 #: ../../debugger.md:22
-msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
-msgstr "Cette option est disponible pour les contrats utilisant Solidity 0.7.2 ou plus. Consultez le blog de Solidity pour plus de détails sur [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgstr ""
 
 #: ../../debugger.md:24
 msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
@@ -95,7 +95,7 @@ msgstr "Curseur"
 
 #: ../../debugger.md:35
 msgid "Moving the slider will highlight the relevant code in the **Editor**. On the most granular level, it scrolls through a transaction's opcodes (**see the opcode section below**). At each opcode, the transaction's state changes and these changes are reflected in the **Debugger's panels**."
-msgstr "En déplaçant le curseur, vous mettez en évidence le code correspondant dans l'**Éditeur**. Au niveau le plus granulaire, il fait défiler les opcodes d'une transaction (**voir la section opcode ci-dessous**). À chaque opcode, l'état de la transaction change et ces changements sont reflétés dans les **panneaux du débogueur**."
+msgstr "En déplaçant le curseur, vous mettez en évidence le code correspondant dans l'**Éditeur**. Au niveau le plus granulaire, il fait défiler les opcodes d'une transaction (**voir la section opcode ci-dessous**). À chaque opcode, l'état de la transaction change et ces changements sont reflétés dans les panneaux du **Débogueur**."
 
 #: ../../debugger.md:37
 msgid "Step over back"
@@ -195,7 +195,7 @@ msgstr "![](images/a-debug-sol-state.png)"
 
 #: ../../debugger.md:69
 msgid "Opcodes"
-msgstr "Opcodes"
+msgstr "Codes d'opérations"
 
 #: ../../debugger.md:70
 msgid "This panel shows the step number and the **opcode** that the debugger is currently on."
@@ -223,7 +223,7 @@ msgstr "![](images/a-debug-step-detail.png)"
 
 #: ../../debugger.md:79
 msgid "Stack"
-msgstr "Pile"
+msgstr "Base"
 
 #: ../../debugger.md:80
 msgid "This panel shows the EVM Stack."
@@ -251,7 +251,7 @@ msgstr "Le panneau \"Mémoire\" se compose de 3 colonnes.  Il se peut que vous d
 
 #: ../../debugger.md:91
 msgid "The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (**?**) will show - like this:"
-msgstr "La première colonne est l'emplacement dans la mémoire.  La 2ème colonne est la valeur codée en hexadécimal.  La troisième colonne est la valeur décodée.  S'il n'y a rien, les points d'interrogation (**?**) s'affichent - comme ceci :"
+msgstr "La première colonne est l'emplacement dans la mémoire.  La 2ème colonne est la valeur codée en hexadécimal.  La 3e colonne est la valeur décodée.  S'il n'y a rien, les points d'interrogation (**?**) s'affichent - comme ceci :"
 
 #: ../../debugger.md:96
 msgid "Here is a full example of the **Memory** panel,"
@@ -270,8 +270,8 @@ msgid "Storage"
 msgstr "Stockage"
 
 #: ../../debugger.md:102
-msgid "This is the persistant storage."
-msgstr "Il s'agit du stockage persistant."
+msgid "This is the persistent storage."
+msgstr ""
 
 #: ../../debugger.md:104
 msgid "![](images/a-debug-storage.png)"
@@ -318,8 +318,8 @@ msgid "Full Storage Changes"
 msgstr "Changements dans le stockage complet"
 
 #: ../../debugger.md:119
-msgid "This shows the persistant storage at the end of the function."
-msgstr "Cela montre le stockage persistant à la fin de la fonction."
+msgid "This shows the persistent storage at the end of the function."
+msgstr ""
 
 #: ../../debugger.md:121
 msgid "![](images/a-debug-full-store-change.png)"
