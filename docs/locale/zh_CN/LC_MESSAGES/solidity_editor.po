@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-10-23 08:59-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -30,16 +30,16 @@ msgid "Remix saves the current file every 5 seconds."
 msgstr "Remix每5秒保存一次当前文件。"
 
 #: ../../solidity_editor.md:6
-msgid "The Remix Editor will highlight keywords in Soldiity, JS, and TS."
-msgstr "Remix编辑器将突出显示Soldiity、JS和TS中的关键字。"
+msgid "The Remix Editor will highlight keywords in Solidity, JS, and TS."
+msgstr "Remix 编辑器会高亮显示 Solidity、JS和TS 中的关键词。"
 
 #: ../../solidity_editor.md:8
 msgid "Editor displays information from other plugins"
 msgstr "编辑器会显示来自其他插件的信息。"
 
 #: ../../solidity_editor.md:9
-msgid "The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Soldity Compiler and the Debugger."
-msgstr "当然，编辑代码是Editor的主要目的。但它还可以与其他插件配合工作，特别是Solidity编译器和调试器。"
+msgid "The main purpose of the Editor is, of course, to edit code. But it also works with other plugins, notably, the Solidity Compiler and the Debugger."
+msgstr "编辑器的主要目的当然是编辑代码。但它还可以与其他插件一起使用，特别是 Solidity 编译器和调试工具。"
 
 #: ../../solidity_editor.md:11
 msgid "The Solidity Compiler will display warnings and errors in the Editor's gutter at the problematic line."
@@ -51,7 +51,7 @@ msgstr "调试程序时，可在Editor边栏打上断点。"
 
 #: ../../solidity_editor.md:13
 msgid "When stepping through code in the Debugger, the relevant code will be highlighted in the Editor."
-msgstr "在Debugger中逐步执行代码时，相关代码将在Editor中突出显示。"
+msgstr "在Debugger中逐步执行代码时，相关代码将在Editor中高亮显示。"
 
 #: ../../solidity_editor.md:15
 msgid "![](images/a-editor-general.png)"
@@ -201,99 +201,159 @@ msgstr "一个文件中的错误数量也报告在了 文件资源管理器 中�
 msgid "![](images/a-editor-error-fe-num.png)"
 msgstr "![](images/a-editor-error-fe-num.png)"
 
+#: ../../solidity_editor.md:80
+msgid "Quick Fixes for common mistakes"
+msgstr "常见错误的快速修复"
+
 #: ../../solidity_editor.md:81
+msgid "The Remix editor offers solutions to the following missing keywords & code:"
+msgstr "Remix编辑器为以下缺失的关键字和代码提供解决方案："
+
+#: ../../solidity_editor.md:82
+msgid "License"
+msgstr "许可证"
+
+#: ../../solidity_editor.md:83
+msgid "Pragma"
+msgstr "编译指令"
+
+#: ../../solidity_editor.md:84
+msgid "Visibility"
+msgstr "可见性"
+
+#: ../../solidity_editor.md:85
+msgid "Mutability"
+msgstr "可调性"
+
+#: ../../solidity_editor.md:86
+msgid "Data Location (storage, memory, etc)"
+msgstr "数据位置 (存储、 内存等)"
+
+#: ../../solidity_editor.md:87
+msgid "Add virtual or override"
+msgstr "添加虚拟或覆盖"
+
+#: ../../solidity_editor.md:88
+msgid "Marking a contract abstract"
+msgstr "标记合约摘要"
+
+#: ../../solidity_editor.md:90
+msgid "A Quick Fix option is available when there is a blue dot in Editor - like in the image below."
+msgstr "当编辑器中有一个蓝色点时，快速修复选项是可用的，就像在下面的图像中一样。"
+
+#: ../../solidity_editor.md:92
+msgid "In this example, the license has been left out.  After compilation, a warning is triggered and a Quick Fix blue dot appears."
+msgstr "在此示例中，许可证已被排除。编译后，会触发警告并出现快速修复蓝色点。"
+
+#: ../../solidity_editor.md:94
+msgid "![](images/a-editor-qf-license.png)"
+msgstr "![](images/a-editor-qf-license.png)"
+
+#: ../../solidity_editor.md:96
+msgid "When you click on the blue dot, a popup menu appears.  In this case of a missing license, these are the options:"
+msgstr "当你点击蓝色点时，弹出菜单会出现。在这种情况下缺少许可，这些选项是:"
+
+#: ../../solidity_editor.md:98
+msgid "![](images/a-editor-qf-license-options5.png)"
+msgstr "![](images/a-editor-qf-license.png)"
+
+#: ../../solidity_editor.md:100
+msgid "If you can’t get the Quick Fix blue dot to appear, try clicking on the number for the line where the error occurs."
+msgstr "如果无法显示快速修复的蓝点，请尝试点击出现错误的行号。"
+
+#: ../../solidity_editor.md:102
 msgid "Gas Estimates"
 msgstr "Gas 估算"
 
-#: ../../solidity_editor.md:83
+#: ../../solidity_editor.md:104
 msgid "Gas estimates are displayed on the same line where a function is declared."
 msgstr "Gas估算显示在声明函数的同一行。"
 
-#: ../../solidity_editor.md:85
+#: ../../solidity_editor.md:106
 msgid "![](images/a-editor-i-got-gas.png)"
 msgstr "![](images/a-editor-i-got-gas.png)"
 
-#: ../../solidity_editor.md:87
+#: ../../solidity_editor.md:108
 msgid "Constructor gas estimates are also displayed, and consist of two components: creation cost and code deposit cost."
 msgstr "构造函数的Gas估算也会被显示，包括两个组成部分：创建成本和代码存储成本。"
 
-#: ../../solidity_editor.md:90
+#: ../../solidity_editor.md:111
 msgid "Go to Definition and References"
 msgstr "转到定义和引用"
 
-#: ../../solidity_editor.md:92
+#: ../../solidity_editor.md:113
 msgid "Definitions"
 msgstr "定义"
 
-#: ../../solidity_editor.md:93
+#: ../../solidity_editor.md:114
 msgid "By right-clicking, you can go to a definition. You can also use the shortcut displayed."
 msgstr "通过右键单击，您可以转到定义。您还可以使用快捷方式进行操作。"
 
-#: ../../solidity_editor.md:95
+#: ../../solidity_editor.md:116
 msgid "You can also right-click on the filename of an import statement and jump to that file."
 msgstr "您还可以右键单击导入语句的文件名并跳转到该文件。"
 
-#: ../../solidity_editor.md:97
+#: ../../solidity_editor.md:118
 msgid "![](images/a-editor-goto-def.png)"
 msgstr "![](images/a-editor-goto-def.png)"
 
-#: ../../solidity_editor.md:99
+#: ../../solidity_editor.md:120
 msgid "You can also ‘peek’ at the definition inline in the Editor. You can then jump to a definition by double-clicking on the right hand side of the line."
 msgstr "您还可以在编辑器中“查看”内联定义。然后，通过双击行右侧来跳转到定义。"
 
-#: ../../solidity_editor.md:101
+#: ../../solidity_editor.md:122
 msgid "References"
 msgstr "引用"
 
-#: ../../solidity_editor.md:102
+#: ../../solidity_editor.md:123
 msgid "By right-clicking, you can display all the references. You can also use the shortcut displayed."
 msgstr "通过右键单击，您可以显示所有的引用。您也可以使用快捷方式进行操作。"
 
-#: ../../solidity_editor.md:104
+#: ../../solidity_editor.md:125
 msgid "![](images/a-editor-refs1.png)"
 msgstr "![](images/a-editor-refs1.png)"
 
-#: ../../solidity_editor.md:106
+#: ../../solidity_editor.md:127
 msgid "You can jump to a reference by double-clicking on the right hand side of the line."
 msgstr "双击行右侧即可跳转到相应的引用。"
 
-#: ../../solidity_editor.md:108
+#: ../../solidity_editor.md:129
 msgid "![](images/a-editor-ref2.png)"
 msgstr "![](images/a-editor-ref2.png)"
 
-#: ../../solidity_editor.md:109
+#: ../../solidity_editor.md:130
 msgid "Highlighted References"
 msgstr "突出显示的引用"
 
-#: ../../solidity_editor.md:111
+#: ../../solidity_editor.md:132
 msgid "References are highlighted in the Editor."
 msgstr "在编辑器中，引用会被突出显示。"
 
-#: ../../solidity_editor.md:113
+#: ../../solidity_editor.md:134
 msgid "![](images/a-editor-ref-highlight.png)"
 msgstr "![](images/a-editor-ref-highlight.png)"
 
-#: ../../solidity_editor.md:114
+#: ../../solidity_editor.md:135
 msgid "Hovering"
 msgstr "悬停提示"
 
-#: ../../solidity_editor.md:116
+#: ../../solidity_editor.md:137
 msgid "When you hover over a term with a definition, the definition will pop up. Hovering over code that has triggered an error (underlined with a red squiggly line) will show the error message."
 msgstr "当您将鼠标悬停在带有定义的术语上时，定义将弹出。当您将鼠标悬停在触发错误（下划线为红色波浪线）的代码上时，会显示错误消息。"
 
-#: ../../solidity_editor.md:118
+#: ../../solidity_editor.md:139
 msgid "![](images/a-editor-hover.png)"
 msgstr "![](images/a-editor-hover.png)"
 
-#: ../../solidity_editor.md:119
+#: ../../solidity_editor.md:140
 msgid "Files with Errors turn Red"
 msgstr "文件出现错误时会变成红色"
 
-#: ../../solidity_editor.md:121
+#: ../../solidity_editor.md:142
 msgid "When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor."
 msgstr "当一个文件包含错误时，它的名称将在“文件资源管理器”中和编辑器顶部的选项卡上变为红色。"
 
-#: ../../solidity_editor.md:123
+#: ../../solidity_editor.md:144
 msgid "More about the Editor updates in this article: Major Updates to Remix Editor"
 msgstr "有关编辑器更新的更多信息，请参阅此文章：Remix 编辑器的重大更新"
 
