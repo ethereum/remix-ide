@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:35\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "**Remixd** &nbsp; (Sin UI) <br>Remixd (con un paquete npm ejecutándose 
 
 #: ../../plugin_list.md:17
 msgid "**Solidity Compiler** &nbsp; ![](images/pi-sol.png)<br> Compiles Solidity & YUL. <br>profile name: **solidity** <br>[Documentation](compile.html)"
-msgstr "**Compilador de Solidity** &nbsp; ![](images/pi-sol.png)<br> Compila Solidity & YUL. <br>nombre del perfil: **solidity** <br>[Documentation](compilar.html)"
+msgstr "**Solidity Compiler** &nbsp; ![](images/pi-sol.png)<br> Compila Solidity & YUL. <br>nombre del perfil: **solidity** <br>[Documentation](compilar.html)"
 
 #: ../../plugin_list.md:22
 msgid "**Deploy & Run** &nbsp; ![](images/pi-deploy.png)<br> Deploy & interact with smart contracts on the in-browser chain (JSVM), local nodes, and public networks. <br>profile name: **udapp** <br>[Documentation](run.html)"
@@ -102,12 +102,12 @@ msgid "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>Deploy & interact with sm
 msgstr "**Klaytn** &nbsp; ![](images/pi-klaytn.png) <br>Despliegue e interactúe con contratos inteligentes en la red pública Klaytn, nodos klaytn locales. <br>[Nombre del perfil](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/klaytn/profile.json): klaytn-remix-plugin <br>[Documentation](https://github.com/klaytn-ozys/plug-and-klay) <br>[Hacer un issue](https://github.com/klaytn-ozys/plug-and-klay/issues)"
 
 #: ../../plugin_list.md:100
-msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizes that teach users Solidity and Remix features. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
-msgstr "**AprendaEth** &nbsp; ![](images/pi-learneth.png) &nbsp; Tutoriales de Remix y Solidity <br>Tutoriales que contienen quizes que enseñan a los usuarios las características de Solidity y Remix. <br>[Nombre del perfil](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Hacer una edición](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
+msgid "**Learneth** &nbsp; ![](images/pi-learneth.png) &nbsp; Remix & Solidity Tutorials <br>Tutorials that contain quizzes that teach users Solidity and Remix features. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
+msgstr "**LearnEth** &nbsp; ![]( Images/pi-learneth.png) &nbsp; Tutoriales de Remix & Solidity <br>Tutoriales que contienen cuestionarios que enseñan a los usuarios las funciones de Solidity y Remix. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/learneth/profile.json): learnEth <br>[Documentación](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html) <br>[Make and issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)"
 
 #: ../../plugin_list.md:106
-msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allow you to take Lexon code and to <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
-msgstr "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon es un lenguaje que se lee como un contrato legal y compila en Solidity (y luego en bytecode). Este plugin le permite tomar código Lexon y <br>[Nombre del perfil](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Hacer una edición](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
+msgid "**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp; <br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allows you to take Lexon code and to <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)"
+msgstr "**Lexon** &nbsp; ![]( Images/pi-lexon.png) &nbsp; <br>Lexon es un lenguaje que se lee como un contrato legal y se compila en Solidity (y luego en bytecode). Este complemento le permite tomar el código de Lexon y <br>[Profile namel](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon <br>[Documentación](https://gitlab.com/lexon-foundation/lexon-remix) <br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issuesus)"
 
 #: ../../plugin_list.md:112
 msgid "**Moonbeam** &nbsp; ![](images/pi-moonbeam.png) <br>Compile and Deploy to the Moonbeam network <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin <br>[Documentation](https://github.com/purestake/moonbeam-remix-plugin) <br>[Make an issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)"
@@ -126,8 +126,8 @@ msgid "**One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>Makes a basic fro
 msgstr "**One Click Dapp** &nbsp; ![](images/pi-1click.png) <br>Realiza un front-end básico para su contrato una vez desplegado en una red de pruebas pública.   [Nombre del perfil](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp <br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp) <br>[Hacer una edición](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)"
 
 #: ../../plugin_list.md:135
-msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compile contracts written in Cairo to Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin) <br>[Make an issue](https://github.com/hexdivision/starkware-remix-plugin/issues)"
-msgstr "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compilar contratos escritos en Cairo a Starknet <br>[Nombre del perfil](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starkNet_compiler/profile.json): starkNet_compiler <br>[Documentation](https://github.com/hexdivision/starkware-remix-plugin) <br>[Hacer una edición](https://github.com/hexdivision/starkware-remix-plugin/issues)"
+msgid "**Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp; <br>Compile contracts written in Cairo to Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler <br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin) <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
+msgstr "**Starknet** &nbsp; ![]( Images/pi-starknet.png) &nbsp; <br>Compilar contratos escritos en El Cairo a Starknet <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler <br>[Documentación](https://github.com/NethermindEth/starknet-remix-plugin) <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)"
 
 #: ../../plugin_list.md:141
 msgid "**Tenderly** &nbsp; ![](images/pi-tenderly.png) <br>Verify Contracts. Import To Remix From your Tenderly project. <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/tenderly/profile.json): tenderly <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix) <br>[Make an issue](/issues)"
