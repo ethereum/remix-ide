@@ -1,0 +1,251 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/compile.pot\n"
+"X-Crowdin-File-ID: 6464\n"
+"Language: ja_JP\n"
+
+#: ../../compile.md:1
+msgid "Solidity Compiler"
+msgstr "Solidityコンパイラ"
+
+#: ../../compile.md:4
+msgid "Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler.  The default view of the Solidity Compiler shows the basic configuration.  To open the Advanced Configuration panel, click the **Advanced Configuration** button (**C. in fig. 1**). For details on advanced features - see below."
+msgstr "アイコンパネルにあるSolidityアイコンをクリックして、Solidityコンパイラに移動してください。Solidityコンパイラのデフォルトでは、基本設定が表示されます。高度な設定パネルを開くには、 **Advanced Configuration** ボタンをクリックしてください (**C. in fig. 1**)。それらの高度な機能につては後述します。"
+
+#: ../../compile.md:6
+msgid "Solidity Compiler Basics"
+msgstr "Solidityコンパイラの基礎"
+
+#: ../../compile.md:8
+msgid "Selecting a contract to compile"
+msgstr "コンパイルするコントラクトの選択"
+
+#: ../../compile.md:9
+msgid "To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor."
+msgstr "コンパイルするコントラクト選択するには、ファイルエクスプローラ内にあるファイルを選択します。または、既に複数のファイルを開いている場合は、エディタ内でコンパイルしたいファイルがアクティブになっていることを確認してください。"
+
+#: ../../compile.md:11
+msgid "If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:"
+msgstr "アクティブなファイルがエディタにないか、ファイルがコンパイルされていない場合、Solidityコンパイラは次のようになります:"
+
+#: ../../compile.md:13
+msgid "![](images/a-sol-comp-no-file.png)"
+msgstr "![](images/a-sol-comp-no-file.png)"
+
+#: ../../compile.md:15
+msgid "Triggering compilation"
+msgstr "コンパイルのトリガー"
+
+#: ../../compile.md:16
+msgid "Compiling is triggered when you:"
+msgstr "コンパイルは次の場合にトリガーされます:"
+
+#: ../../compile.md:17
+msgid "click the compile button (**D. in fig. 1 below**)"
+msgstr "コンパイルボタンをクリック(**D. in fig. 1 below**)"
+
+#: ../../compile.md:18
+msgid "use the shortcut `control + s`."
+msgstr "ショートカットを使用 `control + s`"
+
+#: ../../compile.md:19
+msgid "right click on a file in the File Explorer and select the **Compile** option"
+msgstr "ファイルエクスプローラ内にあるファイルの右クリックし、**Compile** オプションを選択"
+
+#: ../../compile.md:21
+msgid "![](images/a-sol-comp-basic.png)"
+msgstr "![](images/a-sol-comp-basic.png)"
+
+#: ../../compile.md:23
+msgid "Auto Compile"
+msgstr "自動コンパイル"
+
+#: ../../compile.md:24
+msgid "If the auto compile checkbox (**B. in fig. 1 above**) is checked, compilation will occur every few seconds (when the file is auto-saved) as well as when another file is selected.  If a contract has a lot of dependencies, it can take a while to compile - so you use autocompilation at your discretion."
+msgstr "自動コンパイルチェックボックス(**B. in fig. 1 above**)にチェックがされていると、別のファイルが選択された時や数秒経過時にコンパイルが行われます(ファイルが自動保存されている場合)。コントラクトに依存関係が複数ある場合、コンパイルに時間がかかることがあります。そのため、オートコンパイルを自分の判断で使うことができるようになっています。"
+
+#: ../../compile.md:27
+msgid "Solidity versions & Remix functionality"
+msgstr "SolidityバージョンとRemix機能"
+
+#: ../../compile.md:28
+msgid "The compiler version is selected in the **COMPILER** dropdown list (**A. in fig. 1 above**)."
+msgstr "**COMPILER** ドロップダウンリストでコンパイラバージョンを選択します(**A. in fig. 1 above**)。"
+
+#: ../../compile.md:30
+msgid "You can compile (and deploy) contracts with versions of Solidity **older than 0.4.12**. However, the older compilers use a legacy AST — which we no longer support. Consequently, some plugins may not work and some functionality - e.g. source highlighting in the Editor may only be partially working."
+msgstr "**0.4.12よりも古い** Solidityバージョンのコントラクトのコンパイル(とデプロイ)ができます。ただし、古いコンパイラは、現在サポートされていないレガシーASTを使用しています。結果として、いくつかのプラグインや機能が動作しない可能性があります。例: エディタのソースハイライトが部分的に動作するなど"
+
+#: ../../compile.md:34
+msgid "Using the Contract select box"
+msgstr "コントラクト選択ボックスの使用"
+
+#: ../../compile.md:36
+msgid "Because a Solidity file can include multiple contracts and because contracts can import other contracts,  multiple contracts are often compiled.  **However**, only 1 contract's compilation details can be retrieved at a time."
+msgstr "Solidityファイルに複数のコントラクトを含めることができ、コントラクトは他のコントラクトをインポートできるため、複数のコントラクトがコンパイルされることが頻繁にあります。**だたし**、一度に1つのコントラクトのコンパイル詳細のみしか取得できません。"
+
+#: ../../compile.md:38
+msgid "To select the desired contract, use the **Contract** select box (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected."
+msgstr "目的のコントラクトを選択するには、 **Contract** 選択ボックス(**F. in fig. 1**)を使用します。正しいコントラクトを選択し忘れることはよくあるミスです。そのため、目的のコントラクトが選択されていることを必ず確認してください"
+
+#: ../../compile.md:40
+msgid "Compilation Details and Publishing"
+msgstr "コンパイラ詳細と公開"
+
+#: ../../compile.md:41
+msgid "Using the publish button, you can upload your contract to  **IPFS** or **Swarm** (only non abstract contracts can be published to Swarm)."
+msgstr "公開ボタンを使用することで、コントラクトを **IPFS** または **Swarm** にアップロードすることができます(Swarmでは抽象コントラクトのみ公開できません)。"
+
+#: ../../compile.md:43
+msgid "When publishing a contract that imports other contracts, the main contract and all of its imported contracts will be published - each to their own address."
+msgstr "他のコントラクトをインポートするコントラクトを公開した場合は、メインコントラクトとすべてのインポートされたコントラクトが公開されます。また、それぞれがアドレスを持ちます。"
+
+#: ../../compile.md:45
+msgid "**Published data contains the contract's metadata and the solidity source code.**"
+msgstr "**公開されるデータには、コントラクトのメタデータとSolidityのソースコードが含まれます。**"
+
+#: ../../compile.md:47
+msgid "After either **Publish on IPFS** or **Publish on Swarm** is clicked a modal will pop up.  This modal contains the contract's address as well as the addresses of the contracts that it imported and the address of the contract's **metadata**."
+msgstr "**Publish on IPFS** または **Publish on Swarm** をクリックすると、モーダルがポップアップします。このモーダルは、コントラクトアドレスと、インポートしたコントラクトのアドレスとコントラクトの **メタデータ** のアドレスが含まれています。"
+
+#: ../../compile.md:49
+msgid "When the \"Compilation Details\" button is clicked (**G. in fig. 1**), a modal opens displaying detailed information about the current selected contract."
+msgstr "「Compilation Details」ボタンをクリックした場合(**G. in fig. 1**)、モーダルが開き、現在選択されているコントラクトに関する詳細情報が表示されます。"
+
+#: ../../compile.md:51
+msgid "If you just want to get the **ABI** or the **Bytecode** - click the appropriate button see **H. in fig. 1**."
+msgstr "**ABI** または **Bytecode**のみ取得したい場合は、**H. in fig. 1** にある適切なボタンをクリックしてください。"
+
+#: ../../compile.md:53
+msgid "Passive Contract Verification"
+msgstr "パッシブコントラクト検証"
+
+#: ../../compile.md:54
+msgid "When you publish your metadata to IPFS and deploy your code to the mainnet or a public testnet, the contract verification service **[Sourcify](https://sourcify.dev/)**,  will verify your contracts without you needing to do anything."
+msgstr "IPFSにメタデータを公開したり、メインネットもしくは公開テストネットにコードをデプロイする場合は、コントラクト検証サービス **[Sourcify](https://sourcify.dev/)** が自動的に検証してくれます。"
+
+#: ../../compile.md:56
+msgid "Compile and Run script"
+msgstr "コンパイルとスクリプトの実行"
+
+#: ../../compile.md:57
+msgid "The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script.  It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working.  ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
+msgstr "コンパイルとスクリプトの実行を行うボタン(**E. in fig. 1**)は、コンパイルおよびスクリプトを即座に実行するためにあります。コントラクトの状態を設定するスクリプトを自動的に実行することで時間を節約できまます。これにより、コードの動作を素早く理解することができます。 ([詳細は「コンパイルと実行」をご覧ください](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))"
+
+#: ../../compile.md:59
+msgid "Compilation Errors and Warning"
+msgstr "コンパイルエラーと警告"
+
+#: ../../compile.md:60
+msgid "Compilation Errors and Warning are displayed below the contract section. At each compilation, the static analysis tab builds a report."
+msgstr "コンパイルエラーと警告は、コントラクトセクションの下に表示されます。各コンパイルでは、静的解析タブがレポートを作成します。"
+
+#: ../../compile.md:63
+msgid "It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))"
+msgstr "コンパイラで問題がない場合でもレポートされた問題に対応することは重要です。 ([性的解析の詳細](static_analysis.html))"
+
+#: ../../compile.md:65
+msgid "Advanced Compiler Configurations"
+msgstr "高度なコンパイラ設定"
+
+#: ../../compile.md:66
+msgid "Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 2 below**)."
+msgstr "高度なコンパイラ設定をクリックしてこのパネルが開きます(**M. in fig. 2 below**)。"
+
+#: ../../compile.md:68
+msgid "![](images/a-sol-comp-adv.png)"
+msgstr "![](images/a-sol-comp-basic.png)"
+
+#: ../../compile.md:70
+msgid "There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**)."
+msgstr "ラジオボタンがあり、インターフェースを通してコンパラの設定するかどうかを選択できます(**N. in fig 2**)、またはJSONファイルを使用して設定することができます(**R. in fig 2**)。"
+
+#: ../../compile.md:72
+msgid "Solidity or YUL"
+msgstr "SolidityまたはYUL"
+
+#: ../../compile.md:73
+msgid "Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples. You can use the language dropdown (**O. in fig 2**) to switch the language. **This dropdown list is only available for versions greater than or equal to `0.5.7`.**"
+msgstr "Solidityバージョン `0.5.7`以降、`Yul`ファイルのコンパイルができるようになりました。[Yulに関するSolidityドキュメント](https://docs.soliditylang.org/en/latest/yul.html)) をご覧ください。コード例を見ることができます。言語ドロップダウン(**O. in fig 2**)を使用して言語を変更できます。 **このドロップダウンリストは、`0.5.7`以降のバージョンからのみ利用可能です。**"
+
+#: ../../compile.md:76
+msgid "Select an EVM version"
+msgstr "EVMバージョンの選択"
+
+#: ../../compile.md:77
+msgid "The EVM dropdown list (**P. in fig 2**) allows to compile code against a specific **Ethereum hard fork**. The `compiler default` corresponds to the default hard fork used by a specific version."
+msgstr "EVMドロップダウンリスト(**P. in fig 2**)では、特定の **イーサリアムハードフォーク** に対してコードコンパイルすることができます。`compiler default`は、デフォルトで使用されるハードフォークの特定のバージョンに対応します。"
+
+#: ../../compile.md:80
+msgid "To see the name of the hard fork used in the current compilation, click the \"Compilation Details\" button and in the `Metadata` section there will be a sub-section called **settings**.  Open up the **settings** to see the EVM version's name."
+msgstr "現在のコンパイラで使用されているハードフォークの名前を確認するには、**設定**と呼ばれるサブセクションにある`Metadata` セクションの「Compilation Details」ボタンをクリックしてください。**設定*を開くとEVMバージョンの名前を確認できます。"
+
+#: ../../compile.md:82
+msgid "Enable optimization"
+msgstr "最適化の有効化"
+
+#: ../../compile.md:83
+msgid "According to the Solidity Docs, \"the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract.\""
+msgstr "Solidityドキュメントによると、「オプティマイザーは、複雑な式を簡素化しようとします。これにより、コードサイズおよび実行コストの両方を削減します。すなわち、コントラクトデプロイメントおよびコントラクトへの外部コールで必要とされるガスを削減します。」と書かれています。"
+
+#: ../../compile.md:85
+msgid "For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)."
+msgstr "最新のSolidityのバージョンでは、[最適化を有効にすることが推奨されています](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be)。"
+
+#: ../../compile.md:87
+msgid "To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html)."
+msgstr "最適化についてさらに学びたい場合は、(**Q. in the fig 2**)  [オプティマイザーに関するSolidityのドキュメント](https://docs.soliditylang.org/en/latest/internals/optimizer.html)をご覧ください。"
+
+#: ../../compile.md:89
+msgid "To the right of the **Enable optimization** checkbox is the box to input the number of Optimization runs.  The default value is 200."
+msgstr " **Enable optimization** チェックボックスの右側に最適化の実行回数を入力するボックスがあります。デフォルト値は200になっています。"
+
+#: ../../compile.md:91
+msgid "You may ask — \"What is the right number of runs for my contract?\" And the Solidity docs say:"
+msgstr "「自分のコントラクトで実行する最適な数は何ですか？」という疑問に対して、Solidityドキュメントに解答があります:"
+
+#: ../../compile.md:93
+msgid "If you want the initial contract deployment to be cheaper and the later function executions to be more expensive, set it to --optimize-runs=1. If you expect many transactions and do not care for higher deployment cost and output size, set --optimize-runs to a high number."
+msgstr "最初のコントラクトのデプロイメントを安価に、後の関数の実行を高価にしたい場合は、 --optimize-runs=1 に設定します。コントラクトで多数のトランザクションを想定しており、より高いデプロイメントコストと大きな出力サイズになることを気にしないならば、 --optimize-runs に大きな数を設定します。"
+
+#: ../../compile.md:95
+msgid "To learn more about the optimization runs, visit the [Solidity docs about Optimizer options](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)."
+msgstr "最適化の実行の詳細情報については、[オプティマイザーオプションに関するSolidityドキュメント](https://docs.soliditylang.org/en/latest/using-the-compiler.html?highlight=optimize-runs#optimizer-options)を参照してください。"
+
+#: ../../compile.md:97
+msgid "JSON file for Compiler configuration"
+msgstr "コンパイラ設定用JSONファイル"
+
+#: ../../compile.md:98
+msgid "Selecting the radio button next to **Use configuration file** will let you set the configuration using a JSON file (**T. in fig 2**).   When you switch to **compile with a config file**, a sample compiler config file is created. This file can be edited with all the available options."
+msgstr " **Use configuration file** にあるラジオボタンを選択すると、JSONファイルを使って設定することができます(**T. in fig 2**)。 **設定ファイルを使ってコンパイル**に切り替えると、コンパイラ設定ファイルのサンプルが作成されます。このファイルを編集することで、使用可能なオプションをすべて使うことがでます。"
+
+#: ../../compile.md:100
+msgid "Clicking the config file's name will open it up in the Editor.  To change the config file click the **Change** button.  If you update the text box with a file name of a file that does not exist, a new file will be created containing the default file's contents."
+msgstr "設定ファイル名をクリックすると、エディタが開きます。設定ファイルを変更するには **Change** ボタンをクリックします。存在しないファイル名にテキストボックスを更新すると新しいファイルが作成されます。そのファイルは、デフォルトの内容を含みます。"
+
+#: ../../compile.md:103
+msgid "There is no error checking when using the .json file for configuration settings, so make sure your config file is correct."
+msgstr ".jsonファイルを使う場合、エラーのチェックはありません。そのため、設定ファイルが正しいことを確実にしてください。"
+
+#: ../../compile.md:105
+msgid "Use a Custom Solidity Compiler"
+msgstr "カスタムSolidityコンパイラの使用"
+
+#: ../../compile.md:106
+msgid "For those writing your own custom solidity compiler, you can import that by clicking the **+** button (**X. in fig 1**) to open a modal where you can input the url of the compiler to be loaded."
+msgstr "独自のカスタムSolidityコンパイラを作成する人々向けに、**+** button (**X. in fig 1**) をクリックすることでロードされるコンパイラのURLを入力するモーダルが開き、インポートすることが可能です。"
+
