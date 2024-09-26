@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -35,11 +35,11 @@ msgstr "Escribir y ejecutar un script"
 
 #: ../../running_js_scripts.md:10
 msgid "Create a file with `.js` extension and put your logic inside it. Once ready, there are two ways to run this script:"
-msgstr "Cree un archivo con extensión `.js` y ponga su lógica dentro de él. Una vez listo, hay dos maneras de ejecutar este script:"
+msgstr "Cree un archivo con extensión `.js` y ponga su lógica dentro de él. Una vez listo, hay dos formas de ejecutar este script:"
 
 #: ../../running_js_scripts.md:12
 msgid "Make the script the active file in the editor and run `remix.exeCurrent()` from Remix terminal"
-msgstr "Haga que el script sea el archivo activo en el editor y ejecute `remix.exeCurrent()` desde el terminal Remix"
+msgstr "Haga del script el archivo activo en el editor y ejecute `remix.exeCurrent()` desde el terminal Remix"
 
 #: ../../running_js_scripts.md:13
 msgid "Just right click on the script name in the `Files Explorers` plugin and click on the **Run** option. **ShortCut**: `Ctrl+Shift+S` when the script is displayed in the editor."
@@ -47,7 +47,7 @@ msgstr "Sólo tiene que hacer clic con el botón derecho del ratón en el nombre
 
 #: ../../running_js_scripts.md:15
 msgid "Here is a sample script:"
-msgstr "He aquí un ejemplo de guión:"
+msgstr "Aquí tiene un ejemplo de guión:"
 
 #: ../../running_js_scripts.md:29
 msgid "Running it using one of options mentioned above will show result in Remix terminal"
