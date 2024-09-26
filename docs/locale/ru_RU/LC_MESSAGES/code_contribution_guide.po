@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:30\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -22,14 +22,14 @@ msgid "Code Contribution Guide"
 msgstr "Руководство по написанию кода"
 
 #: ../../code_contribution_guide.md:4
-msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please opening issues, give feedback or contribute by a pulling request to our codebase."
-msgstr "Remix - это инструмент с открытым исходным кодом, и мы призываем всех помочь нам его улучшить. Пожалуйста, находя проблемы, оставляйте отзывы или отправляйте запросы на добавление в нашу кодовую базу."
+msgid "Remix is an open source tool and we encourage everyone to help us improve it. Please open issues, give feedback or contribute by a pulling request to our codebase."
+msgstr ""
 
 #: ../../code_contribution_guide.md:8
-msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` and among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
-msgstr "Приложение Remix построено на JavaScript и не использует никаких фреймворков. Мы полагаемся на избранный набор модулей npm, таких как `yo-yo`, `csjs-inject` и другие. Ознакомьтесь с файлами `package.json` в подмодулях Remix, чтобы узнать больше об этом стеке."
+msgid "The Remix application is built with JavaScript and it doesn't use any frameworks. We rely on a selected set of npm modules, like `yo-yo`, `csjs-inject` among others. Check out the `package.json` files in the Remix submodules to learn more about the stack."
+msgstr ""
 
 #: ../../code_contribution_guide.md:10
 msgid "To learn more, please visit our [GitHub page](https://github.com/ethereum/remix-project)."
-msgstr "Чтобы узнать больше, посетите нашу [GitHub-страницу](https://github.com/ethereum/remix-project)."
+msgstr ""
 
