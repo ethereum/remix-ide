@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:35\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -59,7 +59,7 @@ msgstr "![](images/a-hardhat-remixd.png)"
 
 #: ../../hardhat.md:23
 msgid "Enable Hardhat Compilation"
-msgstr "Activar la compilación Hardhat"
+msgstr "Habilitar la compilación Hardhat"
 
 #: ../../hardhat.md:26
 msgid "Prerequisites"
@@ -87,15 +87,15 @@ msgstr "Cómo utilizarlo"
 
 #: ../../hardhat.md:36
 msgid "If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`."
-msgstr "Si se comparte un proyecto hardhat a través de remixd y se carga el espacio de trabajo `localhost` en Remix IDE, aparecerá una casilla de verificación adicional en el plugin `Solidity Compiler` con la etiqueta `Enable Hardhat Compilation`."
+msgstr "Si se comparte un proyecto hardhat a través de remixd y se carga el espacio de trabajo `localhost` en Remix IDE, aparecerá una casilla de verificación extra en el plugin `Solidity Compiler` con la etiqueta `Enable Hardhat Compilation`."
 
 #: ../../hardhat.md:38
 msgid "![](images/a-hardhat-compilation.png)"
 msgstr "![](images/a-hardhat-compilation.png)"
 
 #: ../../hardhat.md:40
-msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
-msgstr "Hay un icono de información junto a la etiqueta que redirige a una sección específica de la documentación oficial de Remix que explica cómo utilizar la compilación Hardhat."
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
+msgstr "Hay un icono de información junto a la etiqueta que redirige a una sección específica de la documentación oficial de Remix que explica cómo usar la compilación de Hardhat."
 
 #: ../../hardhat.md:42
 msgid "One can check the `Enable Hardhat Compilation` box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
@@ -199,7 +199,7 @@ msgstr "Pruebas unitarias de Solidity"
 
 #: ../../hardhat.md:94
 msgid "Similarly, `console.log` can be used while running unit tests using Remix Solidity Unit Testing plugin. See image below."
-msgstr "Del mismo modo, `console.log` puede utilizarse mientras se ejecutan pruebas unitarias utilizando el plugin Remix Solidity Unit Testing. Vea la imagen de abajo."
+msgstr "De forma similar, `console.log` puede utilizarse mientras se ejecutan pruebas unitarias utilizando el plugin Remix Solidity Unit Testing. Vea la imagen de abajo."
 
 #: ../../hardhat.md:96
 msgid "![](images/hardhat-utesting-file.png)"
