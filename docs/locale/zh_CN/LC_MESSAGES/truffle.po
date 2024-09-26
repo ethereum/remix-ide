@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:03\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,11 +31,11 @@ msgstr "Remixd 和 Truffle"
 
 #: ../../truffle.md:9
 msgid "**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)"
-msgstr "注意：如果您以前没有使用过remixd，请在[此处](./remixd.html)阅读更多相关信息。"
+msgstr " **注意：** 如果您以前没有使用过 `remixd` ，请在[此处](./remixd.html)阅读更多相关信息。"
 
 #: ../../truffle.md:11
 msgid "If `remixd` is running locally on your device and shared folder is a **Truffle project**, an additional websocket plugin will be listening on port `65524`. According to its documentation,"
-msgstr "如果`remixd`正在本地设备上运行，并且共享文件夹是Truffle项目，则需要额外的websocket插件侦听端口65524。根据文档，"
+msgstr "如果 `remixd` 正在本地设备上运行，并且共享文件夹是 **Truffle项目** ，则需要额外的websocket插件侦听端口65524。根据文档，"
 
 #: ../../truffle.md:13
 msgid "_Truffle projects are projects with a truffle-config.js file._"
@@ -71,7 +71,7 @@ msgstr "要在Remix IDE中有效地使用Truffle编译："
 
 #: ../../truffle.md:30
 msgid "**Truffle** should be installed locally on the system [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)"
-msgstr "必须在本地系统上安装Truffle [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)"
+msgstr "必须在本地系统上安装 **Truffle**  [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)"
 
 #: ../../truffle.md:31
 msgid "Shared folder should be a Truffle project containing `truffle-config.js`"
@@ -79,7 +79,7 @@ msgstr "共享文件夹应该是一个包含`truffle-config.js`的Truffle项目"
 
 #: ../../truffle.md:32
 msgid "`Remixd` Truffle websocket listener should be running at `65524`"
-msgstr "`Remixd` Truffle websocket监听器应该在65524端口运行"
+msgstr "`Remixd` Truffle websocket监听器应该在 `65524`端口运行"
 
 #: ../../truffle.md:34
 msgid "How to use"
@@ -87,19 +87,19 @@ msgstr "使用方式"
 
 #: ../../truffle.md:36
 msgid "If a truffle project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Truffle Compilation`."
-msgstr "如果通过remixd共享了一个truffle项目，并且在Remix IDE中加载了localhost工作区，则`Solidity编译器`插件中会显示一个额外的复选框，标签为`启用Truffle编译`。"
+msgstr "如果通过remixd共享了一个truffle项目，并且在Remix IDE中加载了 `localhost` 工作区，则 `Solidity编译器` 插件中会显示一个额外的复选框，标签为 `启用Truffle编译` 。"
 
 #: ../../truffle.md:38
 msgid "![](images/a-truffle-compilation.png)"
 msgstr "![](images/a-truffle-compilation.png)"
 
 #: ../../truffle.md:40
-msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation."
-msgstr "标签旁边有一个信息图标，点击后会跳转到 Remix 官方文档的特定部分，其中解释了如何使用 Truffle 编译。"
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Truffle compilation."
+msgstr "在标签旁边有一个信息图标，可重定向到 Remix 官方文档的特定部分，该部分说明了如使用Truffle编译。"
 
 #: ../../truffle.md:42
 msgid "One can check the `Enable Truffle Compilation` box to run the compilation for Truffle along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
-msgstr "可以勾选`启用 Truffle 编译`复选框，在`Solidity Compiler`插件中使用编译器配置来运行 Truffle 的编译。"
+msgstr "可以勾选 `启用 Truffle 编译` 复选框，在 `Solidity Compiler` 插件中使用编译器配置来运行 Truffle 的编译。"
 
 #: ../../truffle.md:44
 msgid "On clicking `Compile` button, a file named as `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Truffle for compilation."
@@ -119,7 +119,7 @@ msgstr "在 **remixd** 终端中也会显示编译结果。"
 
 #: ../../truffle.md:52
 msgid "Ganache Provider"
-msgstr "Ganache Provider"
+msgstr "Ganache 提供商"
 
 #: ../../truffle.md:55
 msgid "_In Truffle, contracts are deployed by connecting to a built-in personal blockchain, i.e. Ganache. Read more about it in [Truffle documentation](https://trufflesuite.com/docs/truffle/quickstart/#migrating-with-truffle-develop)_"
@@ -127,7 +127,7 @@ msgstr "在Truffle中，合约是通过连接到内置的个人区块链（即Ga
 
 #: ../../truffle.md:57
 msgid "**Ganache Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Truffle's built-in Ganache blockchain. `Ganache Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin."
-msgstr "**Ganache Provider**是Remix IDE上的一个插件，它使用户能够将合约部署到Truffle内置的Ganache区块链上。可以从`Deploy＆Run Transactions`插件中的环境列表中选择`Ganache Provider`。"
+msgstr " **Ganache Provider** 是Remix IDE上的一个插件，它使用户能够将合约部署到Truffle内置的Ganache区块链上。可以从`Deploy＆Run Transactions`插件中的环境列表中选择`Ganache Provider`。"
 
 #: ../../truffle.md:59
 msgid "![](images/a-truffle-provider.png)"
