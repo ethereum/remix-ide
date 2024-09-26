@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../static_analysis.md:1
 msgid "Solidity Analyzers"
-msgstr "固态分析仪"
+msgstr "Solidity分析仪"
 
 #: ../../static_analysis.md:4
 msgid "Static code analysis is a process of debugging code by examining it without executing it."
@@ -27,23 +27,23 @@ msgstr "静态代码分析是在不执行代码的情况下通过检查代码进
 
 #: ../../static_analysis.md:6
 msgid "The `Solidity Analyzers` plugin gangs three analysis tools together to perform static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. It can be activated from Remix `Plugin Manager`."
-msgstr "Solidity Analyzers \"插件将三种分析工具整合在一起，对 Solidity 智能合约进行静态分析。每个工具都会检查安全漏洞和不良开发实践等问题。可从 Remix 的 \"插件管理器 \"中激活。"
+msgstr "`Solidity Analyzers` 插件将三种分析工具整合在一起，对 Solidity 智能合约进行静态分析。每个工具都会检查安全漏洞和不良开发实践等问题。可从 Remix 的 \"插件管理器 \"中激活。"
 
 #: ../../static_analysis.md:8
 msgid "![](images/a-ssa-activate.png)"
 msgstr "![](images/a-ssa-activate.png)"
 
 #: ../../static_analysis.md:10
-msgid "`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
-msgstr "点击 Remix 主页选项卡特色插件部分的 \"Solidity \"图标，还可加载 \"Solidity Analyzers\"。  该按钮可加载以下插件：Solidity编译器、Solidity单元测试和静态分析器。"
+msgid "`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgstr "可以通过在 `Remix` 主页选项卡的特色插件部分点击 `Solidity` 图标来加载 `Solidity Analyzers`。该按钮会加载以下插件：Solidity编译器、Solidity单元测试和静态分析器。"
 
 #: ../../static_analysis.md:12
 msgid "`Solidity Analyzers` uses these tools:"
-msgstr "固体分析仪 \"使用这些工具："
+msgstr "“Solidity分析仪” 使用这些工具："
 
 #: ../../static_analysis.md:13
 msgid "[Remix Analysis](#remix-analysis): a basic analysis tool"
-msgstr "[混音分析](#remix-analysis)：基本分析工具"
+msgstr "[Remix分析](#remix-analysis)：基本分析工具"
 
 #: ../../static_analysis.md:14
 msgid "[Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations"
@@ -51,11 +51,11 @@ msgstr "[Solhint linter](https://github.com/protofire/solhint#rules)：用于代
 
 #: ../../static_analysis.md:15
 msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool"
-msgstr "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer)：一款全面的静态分析工具"
+msgstr "[Slither静态分析](https://github.com/crytic/slither#slither-the-solidity-source-analyzer)：全面的静态分析工具"
 
 #: ../../static_analysis.md:17
 msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
-msgstr "**注意：** Slither 只能在 Remix 通过 [Remixd]（remix.html）连接到本地计算机文件系统时使用。"
+msgstr " **注意：** Slither 只能在 Remix 通过 [Remixd]（remix.html）连接到本地计算机文件系统时使用。"
 
 #: ../../static_analysis.md:19
 msgid "How to use"
@@ -63,7 +63,7 @@ msgstr "如何使用"
 
 #: ../../static_analysis.md:22
 msgid "**A contract must be compiled before analysis can be run.**"
-msgstr "**在运行分析之前，必须先编译合同**。"
+msgstr " **在运行分析之前，必须先编译合约** 。"
 
 #: ../../static_analysis.md:24
 msgid "At the top of the panel, check the tools that you want to use."
@@ -79,7 +79,7 @@ msgstr "错误和警告"
 
 #: ../../static_analysis.md:29
 msgid "By default, `Solidity Analyzers` will show both errors and warnings.  The combined number of errors and warnings are shown in the badge in that tools tab."
-msgstr "默认情况下，\"Solidity Analyzers \"将同时显示错误和警告。  错误和警告的总数显示在该工具选项卡的徽章中。"
+msgstr "默认情况下， `Solidity Analyzers` 将同时显示错误和警告。错误和警告的总数显示在该工具选项卡的标记中。"
 
 #: ../../static_analysis.md:31
 msgid "![](images/a-ssa-err-warn.png)"
@@ -91,7 +91,7 @@ msgstr "如果选中 \"隐藏警告\"，警告将被隐藏，你只能看到错�
 
 #: ../../static_analysis.md:35
 msgid "**NOTE:** Remix Analysis does not flag error - it only shows warnings so if you check `Hide warnings`, nothing will show in the Remix Analysis tab."
-msgstr "**注意：** 混音分析不会标记错误，只会显示警告，因此如果勾选 \"隐藏警告\"，混音分析选项卡中将不会显示任何内容。"
+msgstr " **注意：** Remix分析不会标记错误，只会显示警告，因此如果勾选 \"隐藏警告\"，Remix分析选项卡中将不会显示任何内容。"
 
 #: ../../static_analysis.md:37
 msgid "![](images/a-ssa-show-hide-warnings.png)"
@@ -115,7 +115,7 @@ msgstr "要使用该插件运行 [Slither](https://github.com/crytic/slither#sli
 
 #: ../../static_analysis.md:47
 msgid "Solhint"
-msgstr "索尔欣特"
+msgstr "Solhint"
 
 #: ../../static_analysis.md:49
 msgid "The [Solhint](https://github.com/protofire/solhint#rules) linter can be run without connecting Remix to your filesystem."
@@ -123,15 +123,15 @@ msgstr "[Solhint](https://github.com/protofire/solhint#rules) 内核程序无需
 
 #: ../../static_analysis.md:51
 msgid "Remix Analysis"
-msgstr "混音分析"
+msgstr "Remix分析"
 
 #: ../../static_analysis.md:54
 msgid "Remix Analysis has 4 categories: `Security`, `Gas & Economy`, `ERC` & `Miscellaneous`."
-msgstr "Remix 分析有 4 个类别：安全\"、\"天然气与经济\"、\"ERC \"和 \"杂项\"。"
+msgstr "Remix 分析有 4 个类别：安全\"、\"Gas与经济\"、\"ERC \"和 \"杂项\"。"
 
 #: ../../static_analysis.md:56
 msgid "Here is the list of modules under each category along with the example code which **should be avoided or used very carefully while development**:"
-msgstr "以下是每个类别下的模块列表，以及示例代码，在开发过程中应该避免使用或非常小心地使用："
+msgstr "以下是每个类别下的模块列表，以及示例代码， **在开发过程中应该避免使用或非常小心地使用** ："
 
 #: ../../static_analysis.md:58
 msgid "Category: Security"
@@ -139,11 +139,11 @@ msgstr "类别：安全"
 
 #: ../../static_analysis.md:59
 msgid "**Transaction origin: 'tx.origin' is used**"
-msgstr "交易来源：使用'tx.origin'"
+msgstr " **交易来源：使用'tx.origin'** "
 
 #: ../../static_analysis.md:61
 msgid "`tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by \"msg.sender\", because otherwise any contract you call can act on your behalf."
-msgstr "tx.origin仅在非常特殊的情况下有用。如果您将其用于身份验证，通常应该将其替换为msg.sender，否则你调用的任何合约都可以代表你执行操作。"
+msgstr "tx.origin仅在非常特殊的情况下有用。如果您将其用于身份验证，通常应该将其替换为 \"msg.sender\" ，否则你调用的任何合约都可以代表你执行操作。"
 
 #: ../../static_analysis.md:63
 #: ../../static_analysis.md:72
@@ -171,7 +171,7 @@ msgstr "_示例：_"
 
 #: ../../static_analysis.md:68
 msgid "**Check effects: Potential reentrancy bugs**"
-msgstr "**检查影响：潜在的可重入错误**"
+msgstr " **检查影响：潜在的可重入错误** "
 
 #: ../../static_analysis.md:70
 msgid "Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability."
@@ -179,23 +179,23 @@ msgstr "Checks-Effects-Interaction 模式的潜在违反可能导致重入漏洞
 
 #: ../../static_analysis.md:81
 msgid "**Inline assembly: Inline assembly used**"
-msgstr "**内联汇编：使用内联汇编**"
+msgstr " **内联汇编：使用内联汇编** "
 
 #: ../../static_analysis.md:83
 msgid "Use of inline assembly is advised only in rare cases."
 msgstr "仅在极少数情况下建议使用内联汇编。"
 
 #: ../../static_analysis.md:92
-msgid "**Block timestamp: Semantics maybe unclear**"
-msgstr "**区块时间戳：语义可能不清晰**"
+msgid "**Block timestamp: Semantics may be unclear**"
+msgstr " **区块时间戳：语义可能不清晰** "
 
 #: ../../static_analysis.md:94
 msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
 msgstr "`now`不表示当前时间。`now`是`block.timestamp`的别名。`block.timestamp`在一定程度上可以受到矿工的影响，请小心。"
 
 #: ../../static_analysis.md:105
-msgid "**Low level calls: Semantics maybe unclear**"
-msgstr "**低级调用：语义可能不清晰**"
+msgid "**Low level calls: Semantics may be unclear**"
+msgstr " **低级调用：语义可能不清晰** "
 
 #: ../../static_analysis.md:107
 msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
@@ -203,19 +203,19 @@ msgstr "尽可能避免调用低级别的`call`、`callcode`或`delegatecall`。
 
 #: ../../static_analysis.md:114
 msgid "**Blockhash usage: Semantics maybe unclear**"
-msgstr "**区块哈希用法：语义可能不清晰**"
+msgstr " **区块哈希用法：语义可能不清晰** "
 
 #: ../../static_analysis.md:116
 msgid "`blockhash` is used to access the last 256 block hashes. A miner computes the block hash by \"summing up\" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block."
-msgstr "`blockhash`用于访问最近256个区块的哈希值。矿工通过“总结”当前挖掘的区块中的信息来计算区块哈希。通过巧妙地总结区块中的信息，矿工可以尝试影响当前区块中交易的结果。"
+msgstr " `blockhash` 用于访问最近256个区块的哈希值。矿工通过“总结”当前挖掘的区块中的信息来计算区块哈希。通过巧妙地总结区块中的信息，矿工可以尝试影响当前区块中交易的结果。"
 
 #: ../../static_analysis.md:122
 msgid "**Selfdestruct: Beware of caller contracts**"
-msgstr "**自毁：小心调用合约**"
+msgstr " **自毁：小心调用合约** "
 
 #: ../../static_analysis.md:124
 msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
-msgstr "`selfdestruct`可能会意外地阻止调用合约的操作。特别是当该合约计划被其他合约使用（例如库合约、交互合约）时，需要特别小心。被调合约的自毁操作可能会使其调用方处于无法操作的状态。"
+msgstr "`selfdestruct` 可能会意外地阻止调用合约的操作。特别是当该合约计划被其他合约使用（例如库合约、交互合约）时，需要特别小心。被调合约的自毁操作可能会使其调用方处于无法操作的状态。"
 
 #: ../../static_analysis.md:131
 msgid "Category: Gas & Economy"
@@ -223,7 +223,7 @@ msgstr "类别：gas与经济"
 
 #: ../../static_analysis.md:132
 msgid "**Gas costs: Too high gas requirement of functions**"
-msgstr "**Gas费用：函数的Gas消耗过高**"
+msgstr " **Gas费用：函数的Gas消耗过高** "
 
 #: ../../static_analysis.md:134
 msgid "If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage"
@@ -231,7 +231,7 @@ msgstr "如果一个函数的gas需求高于block gas limit，它就不能被执
 
 #: ../../static_analysis.md:146
 msgid "**This on local calls: Invocation of local functions via 'this'**"
-msgstr "**关于This的本地调用：通过“this”调用本地函数**"
+msgstr " **关于This的本地调用：通过“this”调用本地函数** "
 
 #: ../../static_analysis.md:148
 msgid "Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls."
@@ -239,7 +239,7 @@ msgstr "永远不要使用`this`调用同一个合约中的函数，这样做只
 
 #: ../../static_analysis.md:163
 msgid "**Delete on dynamic Array: Use require/assert appropriately**"
-msgstr "**动态数组的删除：适当使用 require/assert**"
+msgstr " **动态数组的删除：适当使用 require/assert** "
 
 #: ../../static_analysis.md:165
 msgid "The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results."
@@ -251,11 +251,11 @@ msgstr "**For循环遍历动态数组：根据动态数组的大小进行迭代*
 
 #: ../../static_analysis.md:179
 msgid "Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful."
-msgstr "没有固定迭代次数的循环，例如依赖于存储值的循环，必须谨慎使用：由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能会在某个点停止完整的合约。 此外，使用无界循环会产生大量可避免的 gas 成本。 仔细测试您最多可以将多少项传递给此类函数以使其成功。"
+msgstr "没有固定迭代次数的循环，例如依赖于存储值的循环，必须谨慎使用：由于区块gas限制，交易只能消耗一定量的gas。 循环中的迭代次数可能会超过区块gas限制，这可能会在某个点停止完整的合约。 此外，使用无界循环会产生大量可避免的 gas 成本。 仔细测试您最多可以将多少项传递给此类函数，以确保成功执行。"
 
 #: ../../static_analysis.md:195
 msgid "**Ether transfer in loop: Transferring Ether in a for/while/do-while loop**"
-msgstr "**循环中转移ETH：在for/while/do-while循环中转移ETH**"
+msgstr " **循环中转移ETH：在for/while/do-while循环中转移ETH** "
 
 #: ../../static_analysis.md:197
 msgid "Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved."
@@ -267,7 +267,7 @@ msgstr "类别：ERC"
 
 #: ../../static_analysis.md:221
 msgid "**ERC20: 'decimals' should be 'uint8'**"
-msgstr "**ERC20：'decimals' 应该是 'uint8'类型**"
+msgstr " **ERC20：'decimals' 应该是 'uint8'类型** "
 
 #: ../../static_analysis.md:223
 msgid "ERC20 Contracts `decimals` function should have `uint8` as return type."
@@ -283,11 +283,11 @@ msgstr "**Constant/View/Pure 函数：可能的Constant/View/Pure函数**"
 
 #: ../../static_analysis.md:236
 msgid "It warns for the methods which potentially should be constant/view/pure but are not."
-msgstr "它警告那些可能应该是 constant/view/pure 但不是的方法。"
+msgstr "它对那些可能应该是 constant/view/pure 的方法进行警告，但实际上并非如此。"
 
 #: ../../static_analysis.md:244
 msgid "**Similar variable names: Variable names are too similar**"
-msgstr "**相似的变量名称：变量名称过于相似**"
+msgstr " **相似的变量名称：变量名称过于相似** "
 
 #: ../../static_analysis.md:246
 msgid "It warns on the usage of similar variable names."
@@ -295,23 +295,23 @@ msgstr "它警告使用类似的变量名。"
 
 #: ../../static_analysis.md:256
 msgid "**No return: Function with 'returns' not returning**"
-msgstr "**没有返回：'returns'的函数没有返回**"
+msgstr " **没有返回：'returns'的函数没有返回** "
 
 #: ../../static_analysis.md:258
 msgid "It warns for the methods which define a return type but never explicitly return a value."
-msgstr "它警告定义返回类型但从不显式返回值的方法。"
+msgstr "它对那些定义了返回类型但从未显式返回值的方法进行警告。"
 
 #: ../../static_analysis.md:266
 msgid "**Guard conditions: Use 'require' and 'assert' appropriately**"
-msgstr "守卫条件：适当使用“require”和“assert”"
+msgstr " **守卫条件：适当使用“require”和“assert”** "
 
 #: ../../static_analysis.md:268
 msgid "Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component."
-msgstr "如果您永远不希望x在任何情况下为false（除了你代码中的错误），请使用assert（x）。如果由于无效的输入或错误的外部组件等原因，x可能为false，请使用require（x）。"
+msgstr "如果您永远不希望x在任何情况下为false（除了你代码中的错误），请使用 `assert(x)` 。如果由于无效的输入或错误的外部组件等原因，x可能为false，请使用r`require(x)` 。"
 
 #: ../../static_analysis.md:274
 msgid "**Result not used: The result of an operation not used**"
-msgstr "**结果未使用：操作的结果没有被使用**"
+msgstr " **结果未使用：操作的结果没有被使用** "
 
 #: ../../static_analysis.md:276
 msgid "A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==)."
@@ -319,7 +319,7 @@ msgstr "二元运算产生的值在下文中未使用。 这通常是由混淆�
 
 #: ../../static_analysis.md:284
 msgid "**String Length: Bytes length != String length**"
-msgstr "**字符串长度：字节长度 != 字符串长度**"
+msgstr " **字符串长度：字节长度 != 字符串长度** "
 
 #: ../../static_analysis.md:286
 msgid "Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data."
@@ -327,7 +327,7 @@ msgstr "字节和字符串长度不相同，因为字符串被采用UTF-8编码�
 
 #: ../../static_analysis.md:296
 msgid "**Delete from dynamic array: 'delete' on an array leaves a gap**"
-msgstr "**从动态数组中删除元素：对数组使用 'delete' 会在数组中留下一个间隙**"
+msgstr " **从动态数组中删除元素：对数组使用 'delete' 会在数组中留下一个间隙** "
 
 #: ../../static_analysis.md:298
 msgid "Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property."
@@ -335,7 +335,7 @@ msgstr "使用 delete 对数组进行删除操作，会在数组中留下一个�
 
 #: ../../static_analysis.md:311
 msgid "**Data Truncated: Division on int/uint values truncates the result**"
-msgstr "**数据截断：int/uint 值的除法会截断结果**"
+msgstr " **数据截断：int/uint 值的除法会截断结果** "
 
 #: ../../static_analysis.md:313
 msgid "Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants."
