@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Remix 教程"
 
 #: ../../remix_tutorials_learneth.md:4
 msgid "**Learneth** is a tutorial platform integrated into Remix."
-msgstr "**Learnneth** 是一个整合到Remix的教程平台。"
+msgstr " **Learnneth** 是一个整合到Remix的教程平台。"
 
 #: ../../remix_tutorials_learneth.md:6
 msgid "Tutorials can contain quizzes for testing students' work.  These quizzes are run by Solidity Unit Tests."
@@ -43,7 +43,7 @@ msgstr "这些教程包含指导说明的 .md 文件，还可以包含示例文�
 
 #: ../../remix_tutorials_learneth.md:14
 msgid "Opening Learneth & associated links"
-msgstr "打开Learneth & 相关链接"
+msgstr "打开Learneth 和 相关链接"
 
 #: ../../remix_tutorials_learneth.md:15
 msgid "Learneth is a plugin - so to access it, you need to activate the Learneth plugin in the Plugin Manager.   Alternatively - this link will active it: click this link."
@@ -51,11 +51,11 @@ msgstr "Learneth是一个插件 - 因此要访问它，您需要在插件管理�
 
 #: ../../remix_tutorials_learneth.md:21
 msgid "This link will activate Learneth and then will open a specific tutorial - in this case it will load the **proxy contract** tutorial:"
-msgstr "这个链接将激活Learneth，然后打开一个特定的教程 - 在这种情况下，它将加载**代理合约**教程："
+msgstr "这个链接将激活Learneth，然后打开一个特定的教程 - 在这种情况下，它将加载 **代理合约** 教程："
 
 #: ../../remix_tutorials_learneth.md:27
 msgid "**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html)."
-msgstr "**注意：**有关使用带参数的Remix URL的其他技巧，请转到[locations](locations.html)页面。"
+msgstr " **注意：** 有关使用带参数的Remix URL的其他技巧，请转到[locations](locations.html)页面。"
 
 #: ../../remix_tutorials_learneth.md:29
 msgid "Learneth Tutorials"
@@ -67,15 +67,15 @@ msgstr "以下是当前的Learneth教程列表"
 
 #: ../../remix_tutorials_learneth.md:33
 msgid "***Beginner***"
-msgstr "***初级***"
+msgstr " ***初级*** "
 
 #: ../../remix_tutorials_learneth.md:38
 msgid "***Intermediate***"
-msgstr "***中级***"
+msgstr " ***中级*** "
 
 #: ../../remix_tutorials_learneth.md:43
 msgid "***Advanced***"
-msgstr "***高级**"
+msgstr " ***高级*** "
 
 #: ../../remix_tutorials_learneth.md:50
 msgid "Learneth & Tutorial Repos"
