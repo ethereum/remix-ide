@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -18,48 +18,40 @@ msgstr ""
 "Language: fr_FR\n"
 
 #: ../../index.rst:51
-#: ../../index.rst:51
 msgid "Introduction"
 msgstr "Introduction"
 
 #: ../../index.rst:61
-#: ../../index.rst:61
 msgid "Core Modules"
 msgstr "Modules de base"
 
-#: ../../index.rst:72
-#: ../../index.rst:72
+#: ../../index.rst:73
 msgid "Solidity modules"
 msgstr "Modules de solidité"
 
-#: ../../index.rst:83
-#: ../../index.rst:83
+#: ../../index.rst:84
 msgid "Unit Testing"
 msgstr "Tests unitaires"
 
-#: ../../index.rst:93
-#: ../../index.rst:93
+#: ../../index.rst:94
 msgid "External Tool Integrations"
 msgstr "Intégrations d'outils externes"
 
-#: ../../index.rst:102
-#: ../../index.rst:102
+#: ../../index.rst:103
 msgid "Guides"
 msgstr "Guides"
 
-#: ../../index.rst:113
-#: ../../index.rst:113
+#: ../../index.rst:114
 msgid "Advanced"
-msgstr "Avancé"
+msgstr "Sujets avancés"
 
-#: ../../index.rst:120
-#: ../../index.rst:120
+#: ../../index.rst:121
 msgid "Miscellaneous"
 msgstr "Divers"
 
 #: ../../index.rst:2
 msgid "Welcome to Remix's documentation!"
-msgstr "Bienvenue sur la documentation de Remix !"
+msgstr "Bienvenue dans la documentation de Remix !"
 
 #: ../../index.rst:4
 msgid "**Remix IDE** is used for the entire journey of smart contract development by users at every knowledge level. It requires no setup, fosters a fast development cycle, and has a rich set of plugins with intuitive GUIs. The IDE comes in two flavors (web app or desktop app) and as a VSCode extension."
@@ -82,8 +74,8 @@ msgid "**Ethereum Remix**, the VSCode extension, see `here <https://marketplace.
 msgstr "**Ethereum Remix**, l'extension VSCode, voir `ici <https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix>`__. La documentation de l'extension VSCode se trouve `ici <https://github.com/ethereum/remix-vscode#ethereum-remix-project-extension-for-visual-studio-code>`__."
 
 #: ../../index.rst:17
-msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplied Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
-msgstr "**Traductions de la documentation Remix** La documentation Remix est actuellement en `Anglais <https://remix-ide.readthedocs.io/en/latest/>`__ et en `Chinois implicite <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  D'autres langues sont en cours d'élaboration."
+msgid "**Remix Documentation Translations** The Remix docs are currently in `English <https://remix-ide.readthedocs.io/en/latest/>`__ and `Simplified Chinese <https://remix-ide.readthedocs.io/zh_CN/latest/>`__.  More languages are on the way."
+msgstr ""
 
 #: ../../index.rst:20
 msgid "Remix Project"
