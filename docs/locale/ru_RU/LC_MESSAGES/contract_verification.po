@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:03\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:37\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,19 +19,19 @@ msgstr ""
 
 #: ../../contract_verification.md:1
 msgid "Contract Verification"
-msgstr "Верификация контракта"
+msgstr ""
 
 #: ../../contract_verification.md:4
 msgid "There are two contract verification services in Remix, Sourcify and Etherscan and the extended [Etherscan family](https://etherscan.io/eaas) of block explorers."
-msgstr "В Remix есть две службы проверки контрактов, Sourcify и Etherscan, а также расширенное семейство [Etherscan family](https://etherscan.io/eaas) блокчейн-исследователей."
+msgstr ""
 
 #: ../../contract_verification.md:6
 msgid "Sourcify"
-msgstr "Sourcify"
+msgstr ""
 
 #: ../../contract_verification.md:9
 msgid "Documentation about Sourcify is found [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)."
-msgstr "Документация о Sourcify находится на сайте [here]( https://docs.sourcify.dev/docs/how-to-verify/#remix-plugin)."
+msgstr ""
 
 #: ../../contract_verification.md:11
 msgid "Etherscan"
@@ -39,157 +39,157 @@ msgstr "Etherscan"
 
 #: ../../contract_verification.md:14
 msgid "The Etherscan plugin is called: **CONTRACT VERIFICATION - ETHERSCAN**."
-msgstr "Плагин Etherscan называется: **ВЕРИФИКАЦИЯ КОНТРАКТОВ - ETHERSCAN**."
+msgstr ""
 
 #: ../../contract_verification.md:16
 msgid "You can access it from the Plugin Manager."
-msgstr "Вы можете получить к нему доступ из Менеджера плагинов."
+msgstr ""
 
 #: ../../contract_verification.md:18
 msgid "The plugin has 3 pages, the **verification** page, the **receipts** page, and the **settings** page."
-msgstr "Плагин имеет 3 страницы, страницу **верификации**, страницу **квитанции** и страницу **настройки**."
+msgstr ""
 
 #: ../../contract_verification.md:20
 msgid "When you go to the plugin for the first time, the settings page will load for inputting the API key."
-msgstr "Когда Вы заходите в плагин в первый раз, загружается страница настроек для ввода ключа API."
+msgstr ""
 
 #: ../../contract_verification.md:22
 msgid "![](images/a-cv-etherscan-plugin-api-needed.png)"
-msgstr "![](images/a-cv-etherscan-plugin-api-needed.png)"
+msgstr ""
 
 #: ../../contract_verification.md:25
 msgid "Etherscan API Key - settings page"
-msgstr "Etherscan API Key - страница настроек"
+msgstr ""
 
 #: ../../contract_verification.md:26
 msgid "Etherscan is a block explorer for Ethereum mainnet and they make block explorers for other chains."
-msgstr "Etherscan - это проводник блоков для Ethereum mainnet, и они выпускают проводники блоков для других цепочек."
+msgstr ""
 
 #: ../../contract_verification.md:28
 msgid "For Ethereum testnets like Goerli or Sepolia, the same API key works."
-msgstr "Для тестовых сетей Ethereum, таких как Goerli или Sepolia, работает тот же самый ключ API."
+msgstr ""
 
 #: ../../contract_verification.md:30
 msgid "If you are trying to verify on L2 chains like Optimism, a different API key is needed for their block explorer. Not all of the block explorers made by Etherscan have API keys. The Remix Contract Verification - Etherscan plugin only works where you can login to that block explorer to get the API key."
-msgstr "Если Вы пытаетесь провести верификацию в цепочках L2, таких как Optimism, то для их блокчейн-проводника потребуется другой API-ключ. Не все блокчейн-проводники, созданные Etherscan, имеют API-ключи. Плагин Remix Contract Verification - Etherscan работает только там, где Вы можете войти в этот блокчейн-проводник, чтобы получить API-ключ."
+msgstr ""
 
 #: ../../contract_verification.md:32
 msgid "Once the API key is input, the verification page (the homepage) is opened."
-msgstr "После ввода API-ключа открывается страница верификации (домашняя страница)."
+msgstr ""
 
 #: ../../contract_verification.md:34
 msgid "Verification page"
-msgstr "Страница верификации"
+msgstr ""
 
 #: ../../contract_verification.md:36
 msgid "![](images/a-cv-etherscan-verify-page1.png)"
-msgstr "![](images/a-cv-etherscan-verify-page1.png)"
+msgstr ""
 
 #: ../../contract_verification.md:38
 msgid "The network is NOT selected in the Etherscan plugin. The network is chosen in the Deploy & Run plugin and in your browser's wallet (if using)."
-msgstr "Сеть НЕ выбирается в плагине Etherscan. Сеть выбирается в плагине Deploy & Run и в кошельке Вашего браузера (если он используется)."
+msgstr ""
 
 #: ../../contract_verification.md:40
 msgid "The prerequisites for verification are:"
-msgstr "Предпосылками для проверки являются:"
+msgstr ""
 
 #: ../../contract_verification.md:41
 msgid "The address of a deployed contract on a public network"
-msgstr "Адрес развернутого контракта в публичной сети"
+msgstr ""
 
 #: ../../contract_verification.md:42
 msgid "That same contract compiled in Remix"
-msgstr "Этот же контракт, составленный в Remix"
+msgstr ""
 
 #: ../../contract_verification.md:43
 msgid "Constructor parameters same as used during deployment (if required)"
-msgstr "Параметры конструктора те же, что используются при развертывании (если требуется)"
+msgstr ""
 
 #: ../../contract_verification.md:46
 msgid "Receipts page"
-msgstr "Страница \"Квитанции"
+msgstr ""
 
 #: ../../contract_verification.md:47
 msgid "Verification receipts are found on the receipts page."
-msgstr "Верификационные квитанции находятся на странице квитанций."
+msgstr ""
 
 #: ../../contract_verification.md:49
 msgid "![](images/a-cv-etherscan-receipts.png)"
-msgstr "![](images/a-cv-etherscan-receipts.png)"
+msgstr ""
 
 #: ../../contract_verification.md:51
 msgid "Verification with constructor arguments"
-msgstr "Верификация с аргументами конструктора"
+msgstr ""
 
 #: ../../contract_verification.md:52
 msgid "When a contract has arguments in the constructor, a text box will show for inputting the same constructor inputs as the deployed contract."
-msgstr "Когда контракт имеет аргументы в конструкторе, появится текстовое поле для ввода тех же аргументов конструктора, что и в развернутом контракте."
+msgstr ""
 
 #: ../../contract_verification.md:54
 msgid "![](images/a-cv-etherscan-constructor-args.png)"
-msgstr "![](images/a-cv-etherscan-constructor-args.png)"
+msgstr ""
 
 #: ../../contract_verification.md:56
 msgid "Verifying a proxy contract"
-msgstr "Проверка прокси-контракта"
+msgstr ""
 
 #: ../../contract_verification.md:57
 msgid "Before verifying a proxy contract, the associated implementation contract must already be verified."
-msgstr "Прежде чем проверять прокси-контракт, связанный с ним контракт реализации должен быть уже проверен."
+msgstr ""
 
 #: ../../contract_verification.md:59
 msgid "Just for review, the implementation contract is you wrote or adapted and the proxy is, for example, an ERC1967Proxy."
-msgstr "Просто для обзора, контракт на реализацию Вы написали или адаптировали, а прокси - это, например, ERC1967Proxy."
+msgstr ""
 
 #: ../../contract_verification.md:61
 msgid "**Do not check the proxy box when verifying the implementation.** Then after verifying the implementation contract:"
-msgstr "**Не устанавливайте флажок \"Прокси\" при проверке внедрения**. Затем, после проверки контракта на внедрение:"
+msgstr ""
 
 #: ../../contract_verification.md:63
 msgid "Cut out the implementation contract's address from the Contract Address box."
-msgstr "Вырежьте адрес контракта на реализацию из поля Адрес контракта."
+msgstr ""
 
 #: ../../contract_verification.md:64
 msgid "Click the \"It's a proxy contract address\" checkbox."
-msgstr "Отметьте флажком опцию \"Это адрес прокси-контракта\"."
+msgstr ""
 
 #: ../../contract_verification.md:65
 msgid "Paste the verified implementation contract's address in the Expected Implementation Address box."
-msgstr "Вставьте адрес проверенного контракта на внедрение в поле Ожидаемый адрес внедрения."
+msgstr ""
 
 #: ../../contract_verification.md:66
 msgid "Paste in the proxy contract address into the Contract Address box."
-msgstr "Вставьте адрес прокси-контракта в поле Адрес контракта."
+msgstr ""
 
 #: ../../contract_verification.md:68
-msgid "To explain this visually, verify the implmentation contract:"
-msgstr "Чтобы объяснить это наглядно, проверьте контракт на имплантацию:"
+msgid "To explain this visually, verify the implementation contract:"
+msgstr ""
 
 #: ../../contract_verification.md:70
 msgid "![](images/a-cv-etherscan-verify-implementation.png)"
-msgstr "![](images/a-cv-etherscan-verify-implementation.png)"
+msgstr ""
 
 #: ../../contract_verification.md:72
 msgid "Then check the \"It's a proxy contract\" checkbox and cut and paste the implementation address from the contract address to the implementation contract box:"
-msgstr "Затем установите флажок \"Это прокси-контракт\" и вырежьте и вставьте адрес реализации из адреса контракта в поле \"Контракт реализации\":"
+msgstr ""
 
 #: ../../contract_verification.md:74
 msgid "![](images/a-cv-etherscan-move-addr.png)"
-msgstr "![](images/a-cv-etherscan-move-addr.png)"
+msgstr ""
 
 #: ../../contract_verification.md:76
 msgid "And then paste the address of the proxy contract into the Contract Address box. ![](images/a-cv-etherscan-verify-proxy2.png)"
-msgstr "А затем вставьте адрес прокси-контракта в поле Contract Address (Адрес контракта). ![](images/a-cv-etherscan-verify-proxy2.png)"
+msgstr ""
 
 #: ../../contract_verification.md:79
-msgid "Generate Verfication Scripts"
-msgstr "Создание сценариев верификации"
+msgid "Generate Verification Scripts"
+msgstr ""
 
 #: ../../contract_verification.md:80
 msgid "Clicking the Generate Verification Scripts on the Verification page, will create a folder named etherscan in the Workspace's scripts folder that contains .ts files for verifying and returning the receipt status."
-msgstr "Щелчок по Generate Verification Scripts на странице Verification создаст в папке сценариев рабочей области папку с именем etherscan, содержащую .ts файлы для верификации и возврата статуса квитанции."
+msgstr ""
 
 #: ../../contract_verification.md:82
 msgid "![](images/a-cv-etherscan-gen-scripts.png)"
-msgstr "![](images/a-cv-etherscan-gen-scripts.png)"
+msgstr ""
 
