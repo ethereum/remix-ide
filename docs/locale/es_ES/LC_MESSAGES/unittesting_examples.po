@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,7 @@ msgstr "Para ayudar en estos casos, Solidity introdujo la sentencia `try-catch` 
 
 #: ../../unittesting_examples.md:143
 msgid "Here is an example test file that use both **try-catch** blocks and **low level calls**:"
-msgstr "A continuación se muestra un archivo de prueba de ejemplo que utiliza tanto bloques de **intento de captura** como **llamadas de bajo nivel**:"
+msgstr "He aquí un archivo de prueba de ejemplo que utiliza tanto bloques de **intento de captura** como **llamadas de bajo nivel**:"
 
 #: ../../unittesting_examples.md:145
 msgid "Contract/Program to be tested: `AttendanceRegister.sol`"
