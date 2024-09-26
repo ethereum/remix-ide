@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "![](images/a-plugin-man-overview.png)"
 
 #: ../../plugin_manager.md:6
 msgid "In Remix IDE you only load the functionality you need.  Controlling which plugins are active or inactive happens in the **Plugin Manager**."
-msgstr "在 Remix IDE 中，您可以只加载您需要的功能。在**插件管理器**中可以控制哪些插件是启用的或停用的。"
+msgstr "在 Remix IDE 中，您可以只加载您需要的功能。在 **插件管理器** 中可以控制哪些插件是启用的或停用的。"
 
 #: ../../plugin_manager.md:8
 msgid "This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects."
@@ -46,8 +46,8 @@ msgid "![](images/a-permission-modal.png)"
 msgstr "![](images/a-permission-modal.png)"
 
 #: ../../plugin_manager.md:15
-msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
-msgstr "通常，同一个插件会想要多次执行相同的操作。因此，在授予权限时，最好选中**记住此选项**的复选框。如果不这样做，这个对话框可能会反复弹出。"
+msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, it's helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
+msgstr "通常，同一个插件可能会多次执行相同的操作。因此，在授予权限时，点击 **记住此选择** 框是很有帮助的。如果您不勾选该框，可能会频繁弹出此模态窗口。"
 
 #: ../../plugin_manager.md:17
 msgid "View permissions"
