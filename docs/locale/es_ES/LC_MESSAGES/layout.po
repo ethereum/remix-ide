@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -94,12 +94,12 @@ msgid "Plugin Manager"
 msgstr "Gestor de plugins"
 
 #: ../../layout.md:40
-msgid "In Remix, you only need to load the functionality you need - and the Plugin Manger is where you manage what plugins are turned off or on."
-msgstr "En Remix, sólo tiene que cargar la funcionalidad que necesita - y el Plugin Manger es donde se gestiona qué plugins están activados o desactivados."
+msgid "In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on."
+msgstr "En Remix, solo necesitas cargar la funcionalidad que necesitas, y el Administrador de complementos es donde gestionas qué complementos están desactivados o activados."
 
 #: ../../layout.md:42
 msgid "The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the \"Connect to a Local Plugin\" link at the top of the Plugin Manager panel."
-msgstr "El Gestor de Plugins es también el lugar al que debe acudir cuando esté creando su propio plugin y desee cargar su plugin local en Remix. En ese caso haría clic en el enlace \"Conectar a un plugin local\" en la parte superior del panel del Gestor de Plugins."
+msgstr "El Gestor de Plugins es también el lugar al que debe acudir cuando esté creando su propio plugin y desee cargar su plugin local en Remix. En ese caso haría clic en el enlace \"Conectar a un plugin local\" en la parte superior del panel del Gestor de plugins."
 
 #: ../../layout.md:44
 msgid "Themes"
