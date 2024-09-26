@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr "那些会更改合约状态且不接受以太币的方法称为 `non-pay
 
 #: ../../udapp.md:22
 msgid "Functions that have red buttons are `payable` functions in Solidity. Clicking one of these will create a new transaction and this transaction can accept a **value**.  The **value** is put in in the Value field which is under the Gas Limit field."
-msgstr "带有红色按钮的方法是 Solidity 中的 `payable` 方法。单击这种按钮会创建一个新交易，并且该交易可以接受一个 **value**。这个 **value** 可以在 Gas Limit 字段下面的 Value 字段中指定。"
+msgstr "带有红色按钮的方法是 Solidity 中的 `payable` 方法。单击这种按钮会创建一个新交易，并且该交易可以接受一个 **value** 。这个 **value** 可以在 Gas Limit 字段下面的 Value 字段中指定。"
 
 #: ../../udapp.md:24
 msgid "![](images/a-jvm-calling-instance.png)"
@@ -68,7 +68,7 @@ msgstr "![](images/a-jvm-calling-instance.png)"
 
 #: ../../udapp.md:27
 msgid "See more information about [Solidity modifiers](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers) in the Solidity docs. ."
-msgstr "在 Solidity 文档中查看更多关于 [Solidity 修饰符](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers)的信息"
+msgstr "在 Solidity 文档中查看更多有关 [Solidity 修饰符](https://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=pure#modifiers)的信息"
 
 #: ../../udapp.md:31
 msgid "If a function requires input parameters, well.. you gotta put them in."
@@ -116,7 +116,7 @@ msgstr "在展开视图中输入参数"
 
 #: ../../udapp.md:48
 msgid "Clicking the 'down' caret brings you to the *Multi-param Manager* - where you can input the parameters one at a time. **Much less confusing!**"
-msgstr "单击 'down' 图标会展开**多参数交互界面** - 您可以一次只输入一个参数。**少了很多混乱！**"
+msgstr "单击 'down' 图标会展开 **多参数交互界面** - 您可以一次只输入一个参数。 **少了太多会混乱！** "
 
 #: ../../udapp.md:50
 msgid "![](images/a-udapp-multi-param-man.png)"
@@ -152,7 +152,7 @@ msgstr "请注意以下事项："
 
 #: ../../udapp.md:69
 msgid "If you are executing a plain Ether transfer to a contract, you need to have the receive() function in your contract.  If your contract has been deployed and you want to send it funds, you would input the amount of Ether or Wei etc. (see **A** in graphic below), and then input **NOTHING** in the calldata field of **Low level interactions** (see **B** in graphic) and click the Transact button (see **C** in graphic below)."
-msgstr "如果你只是单纯地想往一个合约转账以太币，那么这个合约需要有 receive() 方法。 如果你的合约已部署，并且你想给它转账以太币，你可以输入以太币的数量(见下图中的 **A**)，单位可以是 Ether 或 Wei 或其他，然后在**低级交互**的 calldata 字段中**什么都不需要**输入(见下图中的 **B**)，直接单击 Transact 按钮即可(参见下图中的 **C**)。"
+msgstr "如果你只是单纯地想往一个合约转账以太币，那么这个合约需要有 receive() 方法。 如果你的合约已部署，并且你想给它转账以太币，你可以输入以太币的数量(见下图中的 **A** )，单位可以是 Ether 或 Wei 或其他，然后在 **低级交互** 的 calldata 字段中 **什么都不需要** 输入(见下图中的 **B** )，直接单击 Transact 按钮即可(参见下图中的 **C** )。"
 
 #: ../../udapp.md:71
 msgid "![](images/a-receive-fun.png)"
@@ -164,11 +164,11 @@ msgstr "如果您想往您的合约发送 calldata 的同时转账以太币，�
 
 #: ../../udapp.md:75
 msgid "If you are not sending ether to the contract but **are** sending call data then you need to use the fallback() function."
-msgstr "如果你没有向合约转账以太币，**只是**发送 calldata，那么你需要使用 fallback() 方法。"
+msgstr "如果你没有向合约转账以太币， **只是** 发送 calldata，那么你需要使用 fallback() 方法。"
 
 #: ../../udapp.md:77
 msgid "If you break the rules when using the **Low level interactions** you will be slapped with a warning."
-msgstr "如果您在使用**低级交互**时违反规则，您将受到警告。"
+msgstr "如果您在使用 **低级交互** 时违反规则，您将受到警告。"
 
 #: ../../udapp.md:79
 msgid "Please see the [solidity docs](https://solidity.readthedocs.io/en/latest/contracts.html#receive-ether-function) for more specifics about using the **fallback** and **receive** functions."
@@ -208,5 +208,5 @@ msgstr "在编译、部署合约并打开部署的实例后，我们可以将下
 
 #: ../../udapp.md:139
 msgid "The function **fertilizer** accepts a single parameter of the type **Garden**. The type **Garden** is a **struct**. Structs are wrapped in **square brackets**.  Inside **Garden** is an array that is an array of structs named **theFlowers**. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets."
-msgstr "**fertilizer** 方法只接受一个 **Garden** 类型的参数。 **Garden** 类型是一个**结构体**。 结构体用**方括号**括起来。 **Garden** 内部有一个叫 **theFlowers** 数组，这个数组的元素也是结构体。 theFlowers 数组本来就有一对括号，里面的结构体元素又有另一对括号。 所以，这里出现了两个方括号。"
+msgstr " **fertilizer** 方法只接受一个 **Garden** 类型的参数。 **Garden** 类型是一个 **结构体** 。 结构体用 **方括号** 括起来。 **Garden** 内部有一个叫 **theFlowers** 数组，这个数组的元素也是结构体。 theFlowers 数组本来就有一对括号，里面的结构体元素又有另一对括号。 所以，这里出现了两个方括号。"
 
