@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:35-0400\n"
+"PO-Revision-Date: 2024-09-26 01:30\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Preguntas Frecuentes (FAQ)"
 
 #: ../../FAQ.md:3
 msgid "Supported devices & Browsers"
-msgstr "Dispositivos y navegadores compatibles"
+msgstr "Dispositivos soportados y navegadores"
 
 #: ../../FAQ.md:5
 msgid "**Q:** What browsers will Remix work on?"
@@ -54,182 +54,186 @@ msgid "**A:** Yes - here is the list of keyboard shortcuts:"
 msgstr "**A:** Sí - aquí está la lista de atajos de teclado:"
 
 #: ../../FAQ.md:19
-msgid "`Ctrl+Shift+F` : Opens the File Explorer"
-msgstr "`Ctrl+Mayús+F` : Abre el Explorador de archivos"
-
-#: ../../FAQ.md:21
-msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
-msgstr "`Ctrl+Mayús+A` : Abre el Gestor de Plugins"
-
-#: ../../FAQ.md:23
 msgid "`Ctrl+S`: Compiles the active Solidity file"
 msgstr "`Ctrl+S`: Compila el archivo Solidity activo"
 
+#: ../../FAQ.md:21
+msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)"
+msgstr "`Ctrl+Shift+S`: Compila un archivo Solidity y ejecuta un script cuando el script se muestra en el editor.<br>(ir [aquí](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) para obtener más información sobre esta funcionalidad)"
+
+#: ../../FAQ.md:23
+msgid "`Ctrl+Shift+F` : Opens the File Explorer"
+msgstr "`Ctrl+Mayús+F` : Abre el Explorador de archivos"
+
 #: ../../FAQ.md:25
-msgid "`Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) more info about this functionality)"
-msgstr "`Ctrl+Mayús+S`: Compila un archivo Solidity y ejecuta un script cuando éste se muestra en el editor.<br>(vaya a [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) más información sobre esta funcionalidad)"
+msgid "`CTRL+Alt+F` : Formats the code in the current file"
+msgstr "`CTRL+Alt+F`: da formato al código en el archivo actual"
 
 #: ../../FAQ.md:27
+msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
+msgstr "`Ctrl+Mayús+A` : Abre el Gestor de Plugins"
+
+#: ../../FAQ.md:29
 msgid "Solidity compiler"
 msgstr "Compilador Solidity"
 
-#: ../../FAQ.md:29
+#: ../../FAQ.md:31
 msgid "**Q:** Error: compiler might be in a non-sane state"
 msgstr "**Q:** Error: el compilador podría estar en un estado no cuerdo"
 
-#: ../../FAQ.md:36
+#: ../../FAQ.md:38
 msgid "**A:** Old versions of solidity compiler had this problem with chrome. Please change the compiler version in Solidity Plugin to the newer one or use another browser."
-msgstr "**A:** Las versiones antiguas del compilador de Solidity tenían este problema con Chrome. Por favor, cambie la versión del compilador en Solidity Plugin por la más reciente o utilice otro navegador."
+msgstr "**A:** Las versiones antiguas del compilador Solidity tenían este problema con Chrome. Por favor, cambie la versión del compilador en Solidity Plugin por la más reciente o utilice otro navegador."
 
-#: ../../FAQ.md:39
+#: ../../FAQ.md:41
 msgid "**Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile."
 msgstr "**Q:** Estoy recibiendo un problema con la pila de llamada máxima excede y varios otros errores, no se puede compilar."
 
-#: ../../FAQ.md:41
+#: ../../FAQ.md:43
 msgid "**A:**  Try a different browser or a newer solidity compiler version."
 msgstr "**A:** Pruebe con otro navegador o con una versión más reciente del compilador de solidity."
 
-#: ../../FAQ.md:43
+#: ../../FAQ.md:45
 msgid "**Q:** How to verify a contract that imports other contracts?"
 msgstr "**Q:** ¿Cómo verificar un contrato que importa otros contratos?"
 
-#: ../../FAQ.md:45
-msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
-msgstr "**A:** La herramienta de verificación no recorre recursivamente las declaraciones de importación de un contrato.  Por lo tanto, sólo puede verificar un contrato \"aplanado\"."
-
 #: ../../FAQ.md:47
-msgid "There is a plugin called `Flattener` which will stuff all the original code and the imported code into a single file."
-msgstr "Existe un plugin llamado `Flattener` que meterá todo el código original y el importado en un único archivo."
+msgid "**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract."
+msgstr "**A:** La herramienta de verificación no recorre recursivamente las declaraciones de importación de un contrato.  Por tanto, sólo puede verificar un contrato \"aplanado\"."
 
 #: ../../FAQ.md:49
+msgid "A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file."
+msgstr "Un contrato se puede \"aplanar\" haciendo clic con el botón derecho en él dentro del Explorador de archivos y eligiendo la opción \"Aplanar\". Esto reunirá todo el código original, así como el código importado, en un solo archivo."
+
+#: ../../FAQ.md:51
 msgid "Deploy & Run"
 msgstr "Despliegue y ejecución"
 
-#: ../../FAQ.md:51
+#: ../../FAQ.md:53
 msgid "**Q:** I am using an Infura endpoint in my app, but when I try to deploy against that endpoint in Remix IDE selecting \"External HTTP Provider\" and putting my endpoint in, it's telling me that it can't connect"
 msgstr "**Q:** Estoy usando un endpoint Infura en mi app, pero cuando intento desplegar contra ese endpoint en Remix IDE seleccionando \"Proveedor HTTP externo\" y poniendo mi endpoint, me dice que no puede conectar"
 
-#: ../../FAQ.md:53
+#: ../../FAQ.md:55
 msgid "**A:** If the endpoint you are using is http, it won't work."
 msgstr "**A:** Si el punto final que está utilizando es http, no funcionará."
 
-#: ../../FAQ.md:55
+#: ../../FAQ.md:57
 msgid "**Q:** Where is deploy button?"
 msgstr "**Q:** ¿Dónde está el botón de despliegue?"
 
-#: ../../FAQ.md:57
-msgid "**A:** Its in the Deploy & Run module. If you haven't activated that module, you should do that by clicking Deploy & Run module in the Plugin Manager. You could also activate everything you need to work with solidity on the landing page ( click the remix logo at the top left for the screen) and click the \"Solidity\" button in the environment section."
-msgstr "**A:** Está en el módulo Deploy & Run. Si no ha activado ese módulo, debería hacerlo haciendo clic en el módulo Deploy & Run en el Gestor de Plugins. También podría activar todo lo necesario para trabajar con solidez en la página de inicio ( haga clic en el logotipo de remix en la parte superior izquierda para la pantalla) y haga clic en el botón \"Solidez\" en la sección de entorno."
+#: ../../FAQ.md:59
+msgid "**A:** It's in the **Deploy & Run Transactions** module."
+msgstr "**A:** Está en el módulo **Implementar y ejecutar transacciones**."
 
-#: ../../FAQ.md:60
+#: ../../FAQ.md:61
 msgid "**Q:** How to pass a tuple to a public function in Remix?"
 msgstr "**Q:** ¿Cómo pasar una tupla a una función pública en Remix?"
 
-#: ../../FAQ.md:62
+#: ../../FAQ.md:63
 msgid "**A:** Pass it as an array []."
 msgstr "**A:** Páselo como una matriz []."
 
-#: ../../FAQ.md:64
+#: ../../FAQ.md:65
 msgid "**Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?"
 msgstr "**Q:** ¿Cómo introducir una estructura como entrada a un parámetro de una función en el módulo Deploy & Run?"
 
-#: ../../FAQ.md:66
+#: ../../FAQ.md:67
 msgid "**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:"
 msgstr "**A:** Para introducir una estructura, al igual que una tupla, pásela como una matriz [].  También tiene que poner la línea"
 
-#: ../../FAQ.md:68
+#: ../../FAQ.md:69
 msgid "`pragma experimental ABIEncoderV2;` at the top of the solidity file."
 msgstr "`pragma experimental ABIEncoderV2;` en la parte superior del archivo solidity."
 
-#: ../../FAQ.md:70
-msgid "For example, here's a solidity file with a struct is an input parameter."
-msgstr "Por ejemplo, aquí hay un archivo solidity con un struct es un parámetro de entrada."
+#: ../../FAQ.md:71
+msgid "For example, here's a solidity file with a struct as an input parameter."
+msgstr "Por ejemplo, aquí hay un archivo de solidity con una estructura como parámetro de entrada."
 
-#: ../../FAQ.md:102
+#: ../../FAQ.md:103
 msgid "The input of initPeepToPeeps takes a struct.  If you input `[1,2]` the transaction will go through."
 msgstr "La entrada de initPeepToPeeps toma un struct.  Si introduce `[1,2]` la operación se realizará."
 
-#: ../../FAQ.md:106
+#: ../../FAQ.md:107
 msgid "Plugin Developers"
 msgstr "Desarrolladores de plugins"
 
-#: ../../FAQ.md:108
+#: ../../FAQ.md:109
 msgid "**Q:** Where do plugin developers go with their questions?"
 msgstr "**Q:** ¿A dónde van los desarrolladores de plugins con sus preguntas?"
 
-#: ../../FAQ.md:110
-msgid "**A:** The Gitter Remix plugin developers room https://gitter.im/ethereum/remix-dev-plugin"
-msgstr "**A:** La sala de desarrolladores del plugin Gitter Remix https://gitter.im/ethereum/remix-dev-plugin"
+#: ../../FAQ.md:111
+msgid "**A:** First, join our [Discord server](https://discord.gg/zUNteAzJs3) and then go to the development-plugin channel."
+msgstr "**R:** Primero, únase a nuestro [servidor Discord] (https://discord.gg/zUNteAzJs3) y luego ve al canal de desarrollo-plugin."
 
-#: ../../FAQ.md:112
+#: ../../FAQ.md:113
 msgid "Analytics"
 msgstr "Analítica"
 
-#: ../../FAQ.md:114
+#: ../../FAQ.md:115
 msgid "**Q:** What information does Remix save when Matomo Analytics is enabled?"
 msgstr "**Q:** ¿Qué información guarda Remix cuando se activa Matomo Analytics?"
 
-#: ../../FAQ.md:116
+#: ../../FAQ.md:117
 msgid "**A:** We want to know:"
 msgstr "**A:** Queremos saberlo:"
 
-#: ../../FAQ.md:118
+#: ../../FAQ.md:119
 msgid "Which plugins get activated & deactivated"
 msgstr "Qué plugins se activan y desactivan"
 
-#: ../../FAQ.md:119
+#: ../../FAQ.md:120
 msgid "If users check the box to publish a contract's metadata when deploying"
 msgstr "Si los usuarios marcan la casilla para publicar los metadatos de un contrato al desplegar"
 
-#: ../../FAQ.md:120
+#: ../../FAQ.md:121
 msgid "Which themes are used/used most/not used at all"
 msgstr "Qué temas se utilizan/utilizan más/no se utilizan en absoluto"
 
-#: ../../FAQ.md:121
+#: ../../FAQ.md:122
 msgid "The usage of the links to documentation"
 msgstr "El uso de los enlaces a la documentación"
 
-#: ../../FAQ.md:122
+#: ../../FAQ.md:123
 msgid "On the homepage, which file importing buttons are used"
 msgstr "En la página de inicio, qué botones de importación de archivos se utilizan"
 
-#: ../../FAQ.md:124
+#: ../../FAQ.md:125
 msgid "**Q:** Is it opt-in or opt-out?"
 msgstr "**Pregunta:** ¿Es opt-in o opt-out?"
 
-#: ../../FAQ.md:126
+#: ../../FAQ.md:127
 msgid "**A:** We use Matomo as an opt-in analytics platform."
 msgstr "**A:** Utilizamos Matomo como plataforma de análisis opt-in."
 
-#: ../../FAQ.md:128
+#: ../../FAQ.md:129
 msgid "**Q:** Where is the info stored?  Is the info shared with 3rd parties?"
 msgstr "**Q:** ¿Dónde se almacena la información?  ¿Se comparte la información con terceros?"
 
-#: ../../FAQ.md:130
-msgid "**A:** All data collected through Matomo is stored on our own server. No data is given to third parties."
-msgstr "**A:** Todos los datos recogidos a través de Matomo se almacenan en nuestro propio servidor.No se facilita ningún dato a terceros."
+#: ../../FAQ.md:131
+msgid "**A:** All data collected through Matomo is stored on our server. No data is given to third parties."
+msgstr "**A:** Todos los datos recopilados a través de Matomo se almacenan en nuestro servidor. No se dan datos a terceros."
 
-#: ../../FAQ.md:132
+#: ../../FAQ.md:133
 msgid "We respect your privacy and do not collect nor store any personally identifiable information (PII)."
 msgstr "Respetamos su privacidad y no recopilamos ni almacenamos ninguna información personal identificable (IPI)."
 
-#: ../../FAQ.md:134
+#: ../../FAQ.md:135
 msgid "**Q:** What does Remix do with this info?"
 msgstr "**Q:** ¿Qué hace Remix con esta información?"
 
-#: ../../FAQ.md:136
+#: ../../FAQ.md:137
 msgid "**A:** Our goal is to understand how many users we have, what plugins people are using, what is not getting used, what is not being used to its full potential."
 msgstr "**A:** Nuestro objetivo es comprender cuántos usuarios tenemos, qué plugins utiliza la gente, qué no se utiliza, qué no se aprovecha todo su potencial."
 
-#: ../../FAQ.md:138
+#: ../../FAQ.md:139
 msgid "With this understanding, we can make adjustments to the UI as well as providing more tips and documentation. It's a way of getting constant anonymous feedback from our users."
-msgstr "Con este conocimiento, podemos realizar ajustes en la interfaz de usuario, así como proporcionar más consejos y documentación. Es una forma de obtener constantes comentarios anónimos de nuestros usuarios."
+msgstr "Con este conocimiento, podemos hacer ajustes en la interfaz de usuario, así como proporcionar más consejos y documentación. Es una forma de obtener constantes comentarios anónimos de nuestros usuarios."
 
-#: ../../FAQ.md:140
+#: ../../FAQ.md:141
 msgid "**Q:** After I agree opt-in, can I change my mind?"
 msgstr "**Pregunta:** Después de aceptar el opt-in, ¿puedo cambiar de opinión?"
 
-#: ../../FAQ.md:142
+#: ../../FAQ.md:143
 msgid "**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out."
 msgstr "**A:** Puede activar o desactivar Matomo en el panel de Configuración.  No hay consecuencias por no activarlo o desactivarlo."
 
