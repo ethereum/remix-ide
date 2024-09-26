@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,89 +19,89 @@ msgstr ""
 
 #: ../../run_proxy_contracts.md:1
 msgid "Deploy & Run Proxy Contracts"
-msgstr "Развертывание и запуск прокси-контрактов"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:4
-msgid "Remix IDE has functionality to assist in the handeling of proxy contracts that use the UUPS pattern."
-msgstr "В Remix IDE имеется функциональность, помогающая в работе с прокси-контрактами, использующими шаблон UUPS."
+msgid "Remix IDE has the functionality to assist in the handling of proxy contracts that use the UUPS pattern."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:6
 msgid "A UUPS proxy contract is the implementation side of an [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
-msgstr "Прокси-контракт UUPS - это сторона реализации [ERC1967Proxy](https://eips.ethereum.org/EIPS/eip-1967)."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:8
-msgid "Once you have deployed a UUPS implementation contract, Remix will deploy a ERC1967 with your implementation contract's address."
-msgstr "После того, как Вы развернули контракт на внедрение UUPS, Remix развернет ERC1967 с адресом Вашего контракта на внедрение."
+msgid "Once you have deployed a UUPS implementation contract, Remix will deploy an ERC1967 with your implementation contract's address."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:10
 msgid "To interact with the functions in the **implementation contract**, use the deployed instance of the **ERC1967 instance** not on the implementation contract."
-msgstr "Для взаимодействия с функциями в **контракте реализации** используйте развернутый экземпляр **ERC1967** не на контракте реализации."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:12
-msgid "When its time to upgrade you contract, Remix has a UI for this."
-msgstr "Когда приходит время обновить Ваш контракт, в Remix есть пользовательский интерфейс для этого."
+msgid "When it's time to upgrade your contract, Remix has a UI for this."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:14
 msgid "To try this out, you will need to get a proxy contract. Go to wizard.openzeppelin.com and select a contract. Then, in the Upgradeability section, check the UUPS option. Then, copy and paste the file into Remix.  Compile the file and go to Deploy & Run."
-msgstr "Чтобы опробовать это, Вам необходимо получить прокси-контракт. Перейдите на wizard.openzeppelin.com и выберите контракт. Затем, в разделе Upgradeability, отметьте опцию UUPS. Затем скопируйте и вставьте этот файл в Remix.  Скомпилируйте файл и перейдите в Deploy & Run."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:16
 msgid "Deploying"
-msgstr "Развертывание"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:17
 msgid "When a UUPS contract is selected in Deploy & Run's Contract select box, you'll see some checkboxes below the Deploy button:"
-msgstr "Когда контракт UUPS выбран в поле выбора контрактов Deploy & Run, Вы увидите несколько флажков под кнопкой Deploy:"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:19
 msgid "![](images/a-proxy-deploy1-noParams.png)"
-msgstr "![](images/a-proxy-deploy1-noParams.png)"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:21
 msgid "Check the box for **Deploy with Proxy**. This will create two transactions: one for the implementation (your contract) and the other for the ERC1967 proxy contract. You will get two modals to check through:"
-msgstr "Установите флажок в поле **Deploy with Proxy**. Это создаст две транзакции: одну для реализации (Вашего контракта) и другую для прокси-контракта ERC1967. Вы получите два модала для проверки:"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:23
 msgid "![](images/a-proxy-modal1.png)"
-msgstr "![](images/a-proxy-modal1.png)"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:25
 msgid "and then"
-msgstr "а затем"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:27
 msgid "![](images/a-proxy-modal2.png)"
-msgstr "![](images/a-proxy-modal2.png)"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:29
 msgid "If you are deploying to the **Remix VM**, these modals will appear one after the other. If you are connected to the mainnet or a public testnet, then the second modal will appear after the first transaction has gone through."
-msgstr "Если Вы выполняете развертывание на **Remix VM**, то эти модалы будут появляться один за другим. Если Вы подключены к основной сети или публичной тестовой сети, то второе модальное окно появится после того, как пройдет первая транзакция."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:31
 msgid "After the ERC1967 proxy contract is deployed, in the Deployed Contracts section, you'll see two deployed instances."
-msgstr "После развертывания контракта прокси ERC1967 в разделе Развернутые контракты Вы увидите два развернутых экземпляра."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:33
 msgid "![](images/a-deployed-instances.png)"
-msgstr "![](images/a-deployed-instances.png)"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:35
 msgid "To interact with your implementation contract **DO NOT** use the instance of your contract. Instead, you should **use the ERC1967 Proxy**. The proxy will have all the functions of your implementation."
-msgstr "Для взаимодействия с Вашим контрактом реализации **НЕ** используйте экземпляр Вашего контракта. Вместо этого Вам следует **использовать прокси-сервер ERC1967**. Прокси будет обладать всеми функциями Вашей реализации."
+msgstr ""
 
 #: ../../run_proxy_contracts.md:37
 msgid "Upgrading"
-msgstr "Обновление"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:39
 msgid "To upgrade, check the Upgrade with Proxy box and dial down the caret to see the options:"
-msgstr "Для обновления установите флажок Upgrade with Proxy и наберите вниз каретку, чтобы увидеть опции:"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:41
 msgid "![](images/a-proxy-upgrade.png)"
-msgstr "![](images/a-proxy-upgrade.png)"
+msgstr ""
 
 #: ../../run_proxy_contracts.md:43
 msgid "You'll either need to use the last deployed ERC1967 contract, or input the address of the ERC1967 contract that you want to use."
-msgstr "Вам нужно будет либо использовать последний развернутый контракт ERC1967, либо ввести адрес контракта ERC1967, который Вы хотите использовать."
+msgstr ""
 
