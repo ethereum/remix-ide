@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -219,7 +219,7 @@ msgstr "La valeur est la `valeur` envoyée avec une transaction dans `wei` et à
 
 #: ../../unittesting.md:149
 msgid "Regarding `gas`, Remix estimates the required gas for each transaction internally. Still if a contract deployment fails with `Out-of-Gas` error, it tries to redeploy it by doubling the gas. Deployment failing with double gas will show error: ```contract deployment failed after trying twice: The contract code couldn't be stored, please check your gas limit```"
-msgstr "En ce qui concerne `gas`, Remix estime en interne le gaz nécessaire pour chaque transaction. Toujours si le déploiement d'un contrat échoue avec l'erreur `Out-of-Gas`, il essaie de le redéployer en doublant le gaz. Un déploiement qui échoue avec un gaz double affichera l'erreur suivante : ``le déploiement du contrat a échoué après avoir essayé deux fois : le code du contrat n'a pas pu être stocké, veuillez vérifier votre limite de gaz``."
+msgstr "En ce qui concerne `gas`, Remix estime en interne le gaz nécessaire pour chaque transaction. Toujours si le déploiement d'un contrat échoue avec l'erreur `Out-of-Gas`, il essaie de le redéployer en doublant le gaz. Un déploiement échouant avec un gaz double affichera l'erreur suivante : ``le déploiement du contrat a échoué après avoir essayé deux fois : le code du contrat n'a pas pu être stocké, veuillez vérifier votre limite de gaz``."
 
 #: ../../unittesting.md:151
 msgid "Various test examples can be seen in [examples](./unittesting_examples) section."
