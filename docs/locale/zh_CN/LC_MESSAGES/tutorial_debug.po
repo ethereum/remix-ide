@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,11 +31,11 @@ msgstr "有两种方法可以开始调试会话，每一种都对应着不同的
 
 #: ../../tutorial_debug.md:7
 msgid "Use Case 1: for debugging a transaction made in Remix - click the **Debug button** in the transaction log in Remix's Terminal."
-msgstr "用例1：用于调试在Remix中进行的交易 - 在Remix终端中的交易日志中单击**Debug按钮**。"
+msgstr "用例1：用于调试在Remix中进行的交易 - 在Remix终端中的交易日志中单击 **Debug按钮** 。"
 
 #: ../../tutorial_debug.md:9
 msgid "Use Case 2: for debugging a transaction where you have a **txn hash** from **verified contract** or where you have the txn hash and the compiled source code with the same compilation settings as the deployed contract."
-msgstr "用例2：用于调试交易，其中您拥有来自**已验证合约**的**交易哈希**或者您拥有与部署的合约具有相同编译设置的**交易哈希**和**已编译源代码**。"
+msgstr "用例2：用于调试交易，其中您拥有来自 **已验证合约** 的* *交易哈希** 或者您拥有与部署的合约具有相同编译设置的 **交易哈希** 和 **已编译源代码** 。"
 
 #: ../../tutorial_debug.md:11
 msgid "Initiate Debugging from the transaction log in the Terminal"
@@ -95,7 +95,7 @@ msgstr "我们将调用 `Donate` 函数向这个合约发送2个ETH。"
 
 #: ../../tutorial_debug.md:75
 msgid "To do this: in the value input box put in **2** and **select Ether** as the unit (DO NOT LEAVE THE DEFAULT unit as **gwei** or the change will be hard to detect)."
-msgstr "要完成此操作：在数值输入框中输入**2**，并**选择以太作**为单位（不要将默认单位留为gwei，否则更改将很难检测）。"
+msgstr "要完成此操作：在数值输入框中输入 **2** ，并 **选择以太** 作为单位（不要将默认单位留为 **gwei** ，否则更改将很难检测）。"
 
 #: ../../tutorial_debug.md:77
 msgid "![](images/a-debug4-value-loc.png)"
@@ -110,8 +110,8 @@ msgid "This will send the Ether to the function."
 msgstr "这会将ETH发送到这个合约。"
 
 #: ../../tutorial_debug.md:83
-msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr "因为我们使用的是`Remix VM`，所以一切都几乎瞬间发生。（如果我们使用了Injected Web 3，则需要批准交易、支付gas费用并等待交易上链。）"
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr "因为我们使用的是 “Remix虚拟机”，所以一切都几乎瞬时发生。(如果我们使用的是 “Injected Web 3”，那么我们需要批准交易、支付gas，并等待交易被挖掘。)"
 
 #: ../../tutorial_debug.md:85
 msgid "Remix displays information related to each transaction result in the terminal."
@@ -119,11 +119,11 @@ msgstr "Remix 在终端中显示与每个交易结果相关的信息。"
 
 #: ../../tutorial_debug.md:87
 msgid "Check in the **terminal** where the transaction you just made is logged."
-msgstr "Remix在**终端**中显示与每个交易结果相关的信息。"
+msgstr "Remix在 **终端** 中显示与每个交易结果相关的信息。"
 
 #: ../../tutorial_debug.md:89
 msgid "Click the **debug button**."
-msgstr "单击**debug按钮**."
+msgstr "单击 **debug按钮** ."
 
 #: ../../tutorial_debug.md:91
 msgid "![](images/a-debug5-term-debug-but.png)"
@@ -147,7 +147,7 @@ msgstr "如果您没有看到错误图标，请转到插件管理器并激活调
 
 #: ../../tutorial_debug.md:101
 msgid "You can start a debug session by providing a `transaction hash`."
-msgstr "您可以通过提供`交易哈希`来启动调试会话。"
+msgstr "您可以通过提供 “交易哈希” 来启动调试会话。"
 
 #: ../../tutorial_debug.md:103
 msgid "To find a transaction hash:"
@@ -171,7 +171,7 @@ msgstr "![](images/a-debug6-term-txn-hash.png)"
 
 #: ../../tutorial_debug.md:110
 msgid "Then click in the debugger paste the hash and click on the `Start debugging` button."
-msgstr "然后在调试器中粘贴**哈希**并点击`开始调试`按钮。"
+msgstr "然后在调试器中粘贴 **哈希** 并点击`开始调试`按钮。"
 
 #: ../../tutorial_debug.md:112
 msgid "![](images/a-debug7-debugger.png)"
@@ -290,8 +290,8 @@ msgid "Return Value (only if the current step is a RETURN opcode)"
 msgstr "Return Valu(仅当当前步骤是返回操作码时)"
 
 #: ../../tutorial_debug.md:178
-msgid "Full Storages Changes (only at the end of the execution & it displays the all the storage changes)"
-msgstr "完整存储更改（仅在执行结束时显示所有存储更改）"
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
+msgstr "完整存储更改(仅在执行结束时，并显示所有存储更改)"
 
 #: ../../tutorial_debug.md:180
 msgid "Reverted Transaction"
