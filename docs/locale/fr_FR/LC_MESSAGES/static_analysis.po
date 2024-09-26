@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -34,8 +34,8 @@ msgid "![](images/a-ssa-activate.png)"
 msgstr "![](images/a-ssa-activate.png)"
 
 #: ../../static_analysis.md:10
-msgid "`Solidity Analyzers` can also be loaded clicking on `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
-msgstr "`Solidity Analyzers` peut également être chargé en cliquant sur l'icône `Solidity` dans la section featured plugins de l'onglet home de Remix.  Ce bouton charge les plugins suivants : Solidity Compiler, Solidity Unit Testing, et Static Analyzers."
+msgid "`Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab.  This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers."
+msgstr ""
 
 #: ../../static_analysis.md:12
 msgid "`Solidity Analyzers` uses these tools:"
@@ -186,16 +186,16 @@ msgid "Use of inline assembly is advised only in rare cases."
 msgstr "L'utilisation de l'assemblage en ligne n'est conseillée que dans de rares cas."
 
 #: ../../static_analysis.md:92
-msgid "**Block timestamp: Semantics maybe unclear**"
-msgstr "**Heure du bloc : La sémantique n'est peut-être pas claire**"
+msgid "**Block timestamp: Semantics may be unclear**"
+msgstr ""
 
 #: ../../static_analysis.md:94
 msgid "`now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful."
 msgstr "`now` ne signifie pas l'heure actuelle. `now` est un alias de `block.timestamp`. `block.timestamp` peut être influencé par les mineurs dans une certaine mesure, soyez prudent."
 
 #: ../../static_analysis.md:105
-msgid "**Low level calls: Semantics maybe unclear**"
-msgstr "**Appels de bas niveau : La sémantique n'est peut-être pas claire**"
+msgid "**Low level calls: Semantics may be unclear**"
+msgstr ""
 
 #: ../../static_analysis.md:107
 msgid "Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction."
@@ -211,7 +211,7 @@ msgstr "`blockhash` est utilisé pour accéder aux 256 derniers hashs de blocs. 
 
 #: ../../static_analysis.md:122
 msgid "**Selfdestruct: Beware of caller contracts**"
-msgstr "**L'autodestruction : Méfiez-vous des contrats d'appel**"
+msgstr "**Autodestruction : Méfiez-vous des contrats d'appel**"
 
 #: ../../static_analysis.md:124
 msgid "`selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state."
