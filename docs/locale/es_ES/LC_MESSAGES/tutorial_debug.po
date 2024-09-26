@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -110,8 +110,8 @@ msgid "This will send the Ether to the function."
 msgstr "Esto enviará el éter a la función."
 
 #: ../../tutorial_debug.md:83
-msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have to need to approve the transaction, pay for gas and wait for the transaction to get mined.)"
-msgstr "Como estamos utilizando la `Remix VM`, todo sucede casi instantáneamente.  (Si hubiéramos utilizado Injected Web 3, tendríamos que aprobar la transacción, pagar la gasolina y esperar a que se minara)."
+msgid "Because we are using the `Remix VM`, everything happens almost instantly.  (If we had been using Injected Web 3, then we would have needed to approve the transaction, pay for gas and wait for the transaction to get mined.)"
+msgstr "Debido a que estamos usando la \"Remix VM\", todo sucede casi al instante. (Si huéramos estado usando Injected Web 3, entonces habríamos tenido que aprobar la transacción, pagar el gas y esperar a que se minara la transacción)"
 
 #: ../../tutorial_debug.md:85
 msgid "Remix displays information related to each transaction result in the terminal."
@@ -290,8 +290,8 @@ msgid "Return Value (only if the current step is a RETURN opcode)"
 msgstr "Valor de retorno (sólo si el paso actual es un opcode RETURN)"
 
 #: ../../tutorial_debug.md:178
-msgid "Full Storages Changes (only at the end of the execution & it displays the all the storage changes)"
-msgstr "Cambios de almacenamiento completos (sólo al final de la ejecución y muestra todos los cambios de almacenamiento)"
+msgid "Full Storages Changes (only at the end of the execution & it displays all the storage changes)"
+msgstr "Cambios de almacenamiento completo (solo al final de la ejecución y muestra todos los cambios de almacenamiento)"
 
 #: ../../tutorial_debug.md:180
 msgid "Reverted Transaction"
@@ -315,7 +315,7 @@ msgstr "Puntos de interrupción"
 
 #: ../../tutorial_debug.md:191
 msgid "The two last buttons from the navigation area are used to jump either back to the previous breakpoint or forward to the next breakpoint."
-msgstr "Los dos últimos botones del área de navegación se utilizan para saltar hacia atrás al punto de interrupción anterior o hacia adelante al siguiente punto de interrupción."
+msgstr "Los dos últimos botones del área de navegación se utilizan para saltar hacia atrás al punto de ruptura anterior o hacia adelante al siguiente punto de ruptura."
 
 #: ../../tutorial_debug.md:194
 msgid "Breakpoints can be added and removed by clicking on the line number in the **Editor**."
