@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:35\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -31,11 +31,11 @@ msgstr "Remixd 和 Hardhat"
 
 #: ../../hardhat.md:9
 msgid "**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)"
-msgstr "注意：如果您以前没有使用过remixd，请在[此处](./remixd.html)阅读更多相关信息。"
+msgstr "**注意：** 如果您以前没有使用过`remixd`，请在[此处](./remixd.html)阅读更多相关信息。"
 
 #: ../../hardhat.md:11
 msgid "If `remixd` is running locally on your device and shared folder is a **Hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,"
-msgstr "如果`remixd`在您的设备上本地运行，并且共享文件夹是一个Hardhat项目，则另外一个websocket插件将会监听`65522`端口。根据其文档，"
+msgstr "如果`remixd`在您的设备上本地运行，并且共享文件夹是一个 **Hardhat项目** ，则另外一个websocket插件将会监听`65522`端口。根据其文档，"
 
 #: ../../hardhat.md:13
 msgid "_Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js or hardhat.config.ts file._"
@@ -51,7 +51,7 @@ msgstr "Hardhat websocket监听器类似于remixd的websocket插件，使用Remi
 
 #: ../../hardhat.md:19
 msgid "It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module."
-msgstr "它不需要任何单独的安装，因为它是通过[remixd NPM](https://www.npmjs.com/package/@remix-project/remixd)模块运行的。"
+msgstr "它不需要任何单独安装，因为它是通过[remixd NPM](https://www.npmjs.com/package/@remix-project/remixd)模块运行。"
 
 #: ../../hardhat.md:21
 msgid "![](images/a-hardhat-remixd.png)"
@@ -71,7 +71,7 @@ msgstr "为了有效地在 Remix IDE 中使用 Hardhat 编译："
 
 #: ../../hardhat.md:30
 msgid "**Hardhat** should be installed locally on the system [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)"
-msgstr "应在本地系统上安装**Hardhat**[https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)"
+msgstr "应在本地系统上安装 **Hardhat** [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)"
 
 #: ../../hardhat.md:31
 msgid "Shared folder should be a Hardhat project containing `hardhat.config.js` or `hardhat.config.ts`"
@@ -79,7 +79,7 @@ msgstr "共享文件夹应该是一个包含 `hardhat.config.js` 或 `hardhat.co
 
 #: ../../hardhat.md:32
 msgid "`Remixd` Hardhat websocket listener should be running at `65522`"
-msgstr "运行 `Remixd` Hardhat websocket 监听器，端口号为 65522。"
+msgstr "运行 `Remixd` Hardhat websocket 监听器，端口号为 `65522` 。"
 
 #: ../../hardhat.md:34
 msgid "How to use"
@@ -87,23 +87,23 @@ msgstr "使用方式"
 
 #: ../../hardhat.md:36
 msgid "If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`."
-msgstr "如果通过remixd共享了一个Hardhat项目，并且在Remix IDE中加载了`localhost`工作区，则Solidity编译器插件中会显示一个额外的复选框，标签为“启用Hardhat编译”。"
+msgstr "如果通过remixd共享了一个Hardhat项目，并且在Remix IDE中加载了 `localhost` 工作区，则 `Solidity` 编译器插件中会显示一个额外的复选框，标签为“启用Hardhat编译”。"
 
 #: ../../hardhat.md:38
 msgid "![](images/a-hardhat-compilation.png)"
 msgstr "![](images/a-hardhat-compilation.png)"
 
 #: ../../hardhat.md:40
-msgid "There is an info icon along side the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
-msgstr "标签旁边有一个信息图标，点击后会跳转到 Remix 官方文档的特定部分，其中解释了如何使用 Hardhat 编译。"
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
+msgstr "在标签旁边有一个信息图标，可以重定向到 Remix 官方文档中的一个特定部分，该部分说明了如何使用 Hardhat 编译。"
 
 #: ../../hardhat.md:42
 msgid "One can check the `Enable Hardhat Compilation` box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
-msgstr "勾选“启用 Hardhat 编译”复选框可在 Solidity Compiler 插件中使用编译器配置运行 Hardhat 的编译。"
+msgstr "勾选 “启用 Hardhat 编译” 复选框可在 `Solidity Compiler` 插件中使用编译器配置运行 Hardhat 的编译。"
 
 #: ../../hardhat.md:44
 msgid "On clicking `Compile` button, a file with `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Hardhat for compilation."
-msgstr "单击“编译”按钮后，在项目根目录下将创建一个名为 remix-compiler.config.js 的文件，其中存储了在 Remix 的 Solidity Compiler 插件中设置的编译器配置。它将传递给 Hardhat 进行编译。"
+msgstr "单击“编译”按钮后，在项目根目录下将创建一个名为 `remix-compiler.config.js` 的文件，其中存储了在 Remix 的 Solidity Compiler 插件中设置的编译器配置。它将传递给 Hardhat 进行编译。"
 
 #: ../../hardhat.md:46
 msgid "The result of the compilation will be shown in the Remix IDE terminal"
@@ -123,7 +123,7 @@ msgstr "![](images/a-hardhat-compilation-success-remixd.png)"
 
 #: ../../hardhat.md:54
 msgid "Hardhat Provider"
-msgstr "Hardhat Provider"
+msgstr "Hardhat 提供者"
 
 #: ../../hardhat.md:57
 msgid "_In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_"
@@ -131,7 +131,7 @@ msgstr "在Hardhat中，合约是通过启动本地节点来部署的。请在 [
 
 #: ../../hardhat.md:59
 msgid "**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This can be chosen from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin."
-msgstr "**Hardhat Provider** 是 Remix IDE 上的一个插件，它使用户能够将合约部署到 Hardhat 的“localhost”网络上。这可以从 `Deploy and Run Transactions` 插件的 `ENVIRONMENT` 下拉菜单中选择。"
+msgstr " **Hardhat Provider** 是 Remix IDE 上的一个插件，它使用户能够将合约部署到 Hardhat 的“localhost”网络上。这可以从 `Deploy and Run Transactions` 插件的 `ENVIRONMENT` 下拉菜单中选择。"
 
 #: ../../hardhat.md:61
 msgid "![](images/a-hardhat-provider-dropdown.png)"
