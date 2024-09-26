@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2023-07-24 13:45\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "Déploiement"
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
-msgstr "Essais"
+msgstr "Tests"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
@@ -51,9 +51,9 @@ msgstr "Développement du plugin Remix"
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr "Autre"
+msgstr "Autres"
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr "Ateliers externes supplémentaires"
+msgstr "Ateliers externes additionnels"
 
