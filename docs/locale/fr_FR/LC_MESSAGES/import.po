@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -38,8 +38,8 @@ msgid "Importing a library or dependency"
 msgstr "Importation d'une bibliothèque ou d'une dépendance"
 
 #: ../../import.md:10
-msgid "When importing from NPM, or a URL (like github, a IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
-msgstr "Lorsque vous importez depuis NPM, ou une URL (comme github, une passerelle IPFS, ou une passerelle Swarm), vous n'avez rien d'autre à faire que d'utiliser l'instruction `import` dans votre contrat. Les dépendances n'ont pas besoin d'être \"préchargées\" dans l'espace de travail actuel de l'explorateur de fichiers avant que le contrat ne soit compilé."
+msgid "When importing from NPM, or a URL (like github, an IPFS gateway, or a Swarm gateway) you do not need to do anything more than use the `import` statement in your contract. The dependencies do not need to be \"preloaded\" into the File Explorer's current Workspace before the contract is compiled."
+msgstr ""
 
 #: ../../import.md:12
 msgid "Files loaded from the import statement are placed in the **Files Explorer's** current Workspace's `.deps` folder."
@@ -79,7 +79,7 @@ msgstr "Importation à partir d'IPFS"
 
 #: ../../import.md:51
 msgid "Importing a local file not in .deps"
-msgstr "Importer un fichier local qui n'est pas dans .deps"
+msgstr "Importation d'un fichier local ne se trouvant pas dans .deps"
 
 #: ../../import.md:53
 msgid "To import a file NOT in the **.deps** folder, use a relative path (**./**). For example:"
@@ -94,8 +94,8 @@ msgid "Importing a file from your computer's filesystem"
 msgstr "Importation d'un fichier à partir du système de fichiers de votre ordinateur"
 
 #: ../../import.md:63
-msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computers filesystem."
-msgstr "Cette méthode utilise **remixd** - le démon remix.  Veuillez consulter la [docs remixd](remixd.html) pour savoir comment combler le fossé entre le navigateur et le système de fichiers de votre ordinateur."
+msgid "This method uses **remixd** - the remix daemon.  Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computer's filesystem."
+msgstr ""
 
 #: ../../import.md:65
 msgid "More about the import keyword"
@@ -106,12 +106,12 @@ msgid "For a detailed explanation of the `import` keyword see the [Solidity docu
 msgstr "Pour une explication détaillée du mot-clé `import`, voir la [documentation Solidity] (https://docs.soliditylang.org/en/latest/layout-of-source-files.html?highlight=import#importing-other-source-files)."
 
 #: ../../import.md:70
-msgid "Importing a files for manipulation"
-msgstr "Importer un fichier pour le manipuler"
+msgid "Importing files for manipulation"
+msgstr ""
 
 #: ../../import.md:71
-msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder the shows their source - eg github or gists."
-msgstr "Lors de l'importation depuis les widgets de l'onglet d'accueil ou avec une commande remix dans la console, les fichiers sont placés dans la **racine de l'espace de travail actuel** à l'intérieur d'un dossier qui montre leur source - par exemple github ou gists."
+msgid "When importing from the home tab widgets or with a remix command in the console, the files are placed in the **root of the current Workspace** inside a folder that shows their source - eg github or gists."
+msgstr ""
 
 #: ../../import.md:73
 msgid "Import buttons on the Remix home tab"
