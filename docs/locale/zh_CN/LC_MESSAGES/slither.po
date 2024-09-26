@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -38,8 +38,8 @@ msgid "When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) mo
 msgstr "安装了 [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) 模块后，它还会安装  [Slither](https://github.com/crytic/slither)、 [solc-select](https://github.com/crytic/solc-select#quickstart) 和最新版本的 [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html)."
 
 #: ../../slither.md:13
-msgid "`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepany, Slither can also installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_"
-msgstr "系统中需要已经安装 `Python3.6+（pip3）`。如果有任何不一致之处，可以使用命令 `remixd -i slither` 安装 Slither 以及其他依赖项。（自 Remixd v0.6.3 起支持将 Slither 打包到 remixd 模块中）"
+msgid "`Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepancy, Slither can also be installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_"
+msgstr "系统中需要已安装`Python3.6+ (pip3)`。如果存在任何差异，可以使用命令 `remixd -i slither`_安装 Slither 以及其他依赖项。 (自 Remixd `v0.6.3` 起，通过 remixd 模块打包 Slither 将得到支持)_"
 
 #: ../../slither.md:16
 msgid "when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)"
@@ -67,15 +67,15 @@ msgstr "要在Remix IDE中有效地使用Slither分析，必须在系统上本�
 
 #: ../../slither.md:29
 msgid "**Slither:** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)"
-msgstr "**Slither:** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)"
+msgstr " ** Slither：** [https://github.com/crytic/slither#how-to-install](https://github.com/crytic/slither#how-to-install)"
 
 #: ../../slither.md:30
 msgid "**Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)"
-msgstr "**Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)"
+msgstr " **Solc:** [https://docs.soliditylang.org/en/latest/installing-solidity.html](https://docs.soliditylang.org/en/latest/installing-solidity.html)"
 
 #: ../../slither.md:31
 msgid "**Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)"
-msgstr "**Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)"
+msgstr " **Solc-select:** [https://github.com/crytic/solc-select#quickstart](https://github.com/crytic/solc-select#quickstart)"
 
 #: ../../slither.md:33
 msgid "There are setup with [remixd](https://www.npmjs.com/package/@remix-project/remixd) installation or can be done using `remixd -i slither` commmand."
@@ -131,15 +131,15 @@ msgstr "![](images/a-slither-analysis-success-remixd.png)"
 
 #: ../../slither.md:59
 msgid "To only run Slither Analysis, deselect `Select all` checkbox and click on `Run`. Now it will show only the Slither Analysis report."
-msgstr "仅运行Slither分析，请取消`Select all`复选框并单击`Run`。现在它将仅显示Slither分析报告。"
+msgstr "仅运行Slither分析，请取消`Select all`复选框并单击`运行`。现在它将仅显示Slither分析报告。"
 
 #: ../../slither.md:61
 msgid "![](images/a-slither-analysis-only.png)"
 msgstr "![](images/a-slither-analysis-only.png)"
 
 #: ../../slither.md:63
-msgid "By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look on them, check the box with label `Show warnings for external libraries`."
-msgstr "默认情况下，它不会显示有关外部库（如remix-tests.sol、hardhat/console.sol等）的警告。要查看它们，请选中标签为`Show warnings for external libraries`的复选框。"
+msgid "By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look at them, check the box with label `Show warnings for external libraries`."
+msgstr "默认情况下，Remix不会显示外部库（如remix-tests.sol、hardhat/console.sol等）的警告信息。要查看这些警告信息，请勾选标签为“显示外部库”的复选框。"
 
 #: ../../slither.md:65
 msgid "![](images/a-slither-analysis-ext-libs.png)"
@@ -159,7 +159,7 @@ msgstr "如果Solidity Compiler中设置的编译器版本与本地安装的当�
 
 #: ../../slither.md:73
 msgid "For example, if current `solc` version on the system is 0.8.4 and on the Remix IDE 0.8.6 is set, `remixd` logs explain remote solc version selection"
-msgstr "例如，如果系统上当前的`solc`版本为0.8.4，并且在Remix IDE上设置为`0.8.6`，则remixd日志将解释远程solc版本选择。"
+msgstr "例如，如果系统上当前的`solc`版本为0.8.4，并且在Remix IDE上设置为`0.8.6`，则 `remixd` 日志将解释远程solc版本选择。"
 
 #: ../../slither.md:75
 msgid "![](images/a-slither-analysis-select.png)"
