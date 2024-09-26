@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "![](images/a-terminal-et-plus.png)"
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
-msgstr "Caractéristiques, disponibles dans le terminal :"
+msgstr "Fonctionnalités, disponibles dans le terminal :"
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
@@ -39,7 +39,7 @@ msgstr "Il affiche les actions importantes effectuées lors de l'interaction ave
 
 #: ../../terminal.md:14
 msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
-msgstr "Il affiche les transactions qui sont minées dans le contexte actuel. Vous pouvez choisir d'afficher toutes les transactions ou seulement celles qui se réfèrent aux contrats que Remix connaît (par exemple les transactions créées à partir de l'IDE Remix)."
+msgstr "Il affiche les transactions qui sont minées dans le contexte actuel. Vous pouvez choisir d'afficher toutes les transactions ou seulement les transactions qui se réfèrent aux contrats que Remix connaît (par exemple les transactions créées à partir de l'IDE Remix)."
 
 #: ../../terminal.md:18
 msgid "It allows searching for the data and clearing the logs from the terminal."
