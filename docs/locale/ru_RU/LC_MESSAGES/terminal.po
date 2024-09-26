@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "Терминал"
 
 #: ../../terminal.md:4
 msgid "![](images/a-terminal-and-more.png)"
-msgstr "![](images/a-terminal-and-more.png)"
+msgstr ""
 
 #: ../../terminal.md:6
 msgid "Features, available in the terminal:"
@@ -31,19 +31,19 @@ msgstr "Функции, доступные в терминале:"
 
 #: ../../terminal.md:8
 msgid "It integrates a JavaScript interpreter and the `web3` object. It enables the execution of the JavaScript script which interacts with the current context. (note that `web3` is only available if the `web provider` or `injected provider` mode is selected)."
-msgstr "Он объединяет интерпретатор JavaScript и объект `web3`. Он обеспечивает выполнение сценария JavaScript, который взаимодействует с текущим контекстом. (обратите внимание, что `web3` доступен только в том случае, если выбран режим `web provider` или `injected provider`)."
+msgstr ""
 
 #: ../../terminal.md:12
 msgid "It displays important actions made while interacting with the Remix IDE (i.e. sending a new transaction)."
-msgstr "Здесь отображаются важные действия, выполненные при взаимодействии с Remix IDE (например, отправка новой транзакции)."
+msgstr ""
 
 #: ../../terminal.md:14
 msgid "It displays transactions that are mined in the current context. You can choose to display all transactions or only transactions that refers to the contracts Remix knows (e.g transaction created from the Remix IDE)."
-msgstr "Он отображает транзакции, которые добываются в текущем контексте. Вы можете выбрать отображение всех транзакций или только транзакций, которые относятся к контрактам, известным Remix (например, транзакция, созданная из Remix IDE)."
+msgstr ""
 
 #: ../../terminal.md:18
 msgid "It allows searching for the data and clearing the logs from the terminal."
-msgstr "Он позволяет осуществлять поиск данных и очищать журналы с терминала."
+msgstr ""
 
 #: ../../terminal.md:20
 msgid "You can run scripts by inputting them at the bottom after the `>`."
