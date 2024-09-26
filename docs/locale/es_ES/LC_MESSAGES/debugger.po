@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "**Active** el depurador en el Gestor de complementos y, a continuación,
 
 #: ../../debugger.md:13
 msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
-msgstr "El depurador resaltará el código relevante en el Editor.  Si desea volver a editar el código sin que el depurador lo resalte, pulse el botón **Detener depuración**."
+msgstr "El depurador resaltará el código relevante en el Editor.  Si desea volver a editar el código sin que el depurador lo resalte, haga clic en el botón **Detener depuración**."
 
 #: ../../debugger.md:15
 msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
@@ -62,8 +62,8 @@ msgid "Use generated sources"
 msgstr "Utilizar fuentes generadas"
 
 #: ../../debugger.md:22
-msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
-msgstr "Esta opción está disponible para contratos que utilicen Solidity 0.7.2 o superior. Consulte el blog de solidity para obtener más detalles sobre [generated sourcess](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
+msgstr "Esta opción está disponible para contratos que utilizan Solidity 0.7.2 o superior. Consulte el blog de solidity para obtener más detalles sobre [fuentes generadas] (https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
 
 #: ../../debugger.md:24
 msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
@@ -103,7 +103,7 @@ msgstr "Paso atrás"
 
 #: ../../debugger.md:38
 msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
-msgstr "Este botón pasa al opcode anterior.  Si el paso anterior implica una **llamada a función**, no se introducirá la función."
+msgstr "Este botón va al opcode anterior.  Si el paso anterior implica una **llamada a función**, no se introducirá la función."
 
 #: ../../debugger.md:39
 msgid "Step back"
@@ -207,7 +207,7 @@ msgstr "![](images/a-debug-opcodes1.png)"
 
 #: ../../debugger.md:74
 msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
-msgstr "A medida que arrastra el **deslizador** (que está encima de los botones de navegación), el número de paso enfocado y el opcode cambian."
+msgstr "Al arrastrar el **deslizador** (que está encima de los botones de navegación), el número de paso enfocado y el opcode cambian."
 
 #: ../../debugger.md:75
 msgid "Step details"
@@ -270,8 +270,8 @@ msgid "Storage"
 msgstr "Almacenamiento"
 
 #: ../../debugger.md:102
-msgid "This is the persistant storage."
-msgstr "Se trata del almacenamiento persistente."
+msgid "This is the persistent storage."
+msgstr "Este es el almacenamiento persistente."
 
 #: ../../debugger.md:104
 msgid "![](images/a-debug-storage.png)"
@@ -295,7 +295,7 @@ msgstr "Datos de llamada"
 
 #: ../../debugger.md:111
 msgid "The call data contains the functions parameters."
-msgstr "Los datos de llamada contienen los parámetros de las funciones."
+msgstr "Los datos de la llamada contienen los parámetros de las funciones."
 
 #: ../../debugger.md:113
 msgid "![](images/a-debug-call-data.png)"
@@ -318,7 +318,7 @@ msgid "Full Storage Changes"
 msgstr "Cambios en el almacenamiento completo"
 
 #: ../../debugger.md:119
-msgid "This shows the persistant storage at the end of the function."
+msgid "This shows the persistent storage at the end of the function."
 msgstr "Esto muestra el almacenamiento persistente al final de la función."
 
 #: ../../debugger.md:121
