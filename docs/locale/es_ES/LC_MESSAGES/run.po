@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -211,7 +211,7 @@ msgstr "Despliegue y AtAddress"
 
 #: ../../run.md:120
 msgid "In the image above, the select box is set to **Ballot**.  This select box will contain the list of compiled contracts."
-msgstr "En la imagen de arriba, el cuadro de selección está ajustado a **Contrato**.  Este cuadro de selección contendrá la lista de contratos compilados."
+msgstr "En la imagen de arriba, el cuadro de selección está configurado como **Baloto**.  Este cuadro de selección contendrá la lista de contratos compilados."
 
 #: ../../run.md:122
 msgid "`Deploy` sends a transaction that deploys the selected contract. When the transaction is mined, the newly created instance will be added (this might take several seconds). <br>**Note:** If the contract's constructor function has parameters, you need to specify them."
@@ -226,8 +226,8 @@ msgid "**Note:** When using AtAddress, be sure you trust the contract at that ad
 msgstr "**Nota:** Cuando utilice AtAddress, asegúrese de que confía en el contrato de esa dirección."
 
 #: ../../run.md:130
-msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
-msgstr "Para utilizar **AtAddress**, necesita tener el **código fuente** o **ABI** del contrato desplegado **en la pestaña activa** del editor.  Cuando utilice el código fuente, debe estar compilado con los mismos ajustes de compilación que el contrato desplegado al que está intentando acceder."
+msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access."
+msgstr "Para usar **AtAddress**, debe tener el **código fuente** o **ABI** del contrato desplegado **en la pestaña activa** del editor. Al utilizar el código fuente, debe compilarse con la misma configuración de compilación que el contrato desplegado al que está intentando acceder."
 
 #: ../../run.md:132
 msgid "Using the ABI with AtAddress"
@@ -266,8 +266,8 @@ msgid "The Recorder is a tool used to save a bunch of transactions in a JSON fil
 msgstr "El grabador es una herramienta que se utiliza para guardar un grupo de transacciones en un archivo JSON y volver a ejecutarlas más tarde, ya sea en el mismo entorno o en otro."
 
 #: ../../run.md:158
-msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
-msgstr "Guardar en el archivo JSON (por defecto se llama scenario.json) permite comprobar fácilmente la lista de transacciones, ajustar los parámetros de entrada, cambiar la biblioteca vinculada, etc."
+msgid "Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr "Guardar en el archivo JSON (por defecto se llama scenario.json) permite comprobar fácilmente la lista de transacciones, ajustar los parámetros de entrada, cambiar la biblioteca vinculada, etc..."
 
 #: ../../run.md:160
 msgid "There are many use cases for the recorder."
@@ -290,8 +290,8 @@ msgid "Deploying contract does often require more than creating one transaction 
 msgstr "El despliegue de un contrato suele requerir más que la creación de una transacción, por lo que el registrador automatizará este despliegue."
 
 #: ../../run.md:172
-msgid "Working in a dev environment often requires setting up the state in a first place."
-msgstr "Trabajar en un entorno de desarrollo requiere a menudo establecer el estado en primer lugar."
+msgid "Working in a dev environment often requires setting up the state in the first place."
+msgstr "Trabajar en un ambiente dev a menudo requiere configurar el estado en primer lugar."
 
 #: ../../run.md:175
 msgid "![](images/a-recorder.png)"
