@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr "文件管理器"
 
 #: ../../file_explorer.md:3
 msgid "The File Explorer is for managing workspaces and files.  This plugin also contains many shortcuts and commands.  For a quick tour, right-click on a file to get a pop-up menu and also check the hamburger menu at the top right of the plugin."
-msgstr "文件浏览器用于管理工作区和文件。此插件还包含许多快捷方式和命令。要进行快速导览，请右键单击文件以获取弹出菜单，并检查插件右上角的汉堡菜单。"
+msgstr "文件浏览器用于管理工作区和文件。此插件还包含许多快捷方式和命令。要进行快速导览，请右键单击文件以获取弹出菜单，并检查插件右上角的折叠菜单。"
 
 #: ../../file_explorer.md:5
 msgid "To find the File Explorer module - click the File Explorer icon."
@@ -67,7 +67,7 @@ msgstr "有一个文件备份和文件保存策略是非常重要的。"
 
 #: ../../file_explorer.md:23
 msgid "**Check the following techniques for:**"
-msgstr "**检查以下技术：**。"
+msgstr " **检查以下技术：** 。"
 
 #: ../../file_explorer.md:24
 msgid "[saving to your hard drive](#file-storage-on-your-hard-drive)"
@@ -83,7 +83,7 @@ msgstr "[备份工作空间](#backup)。"
 
 #: ../../file_explorer.md:28
 msgid "**Important Note:** Clearing the browser storage & IndexedDB will **permanently delete** all the files stored there. It is prudent to backup your workspaces before deleting them...just in case."
-msgstr "**重要提示：** 清除浏览器存储空间和IndexedDB将 **永久地删除** 存储在那里的所有文件。为谨慎起见，在删除你的工作区之前，先备份你的工作区......以防万一。"
+msgstr " **重要提示：** 清除浏览器存储空间和IndexedDB将 **永久地删除** 存储在那里的所有文件。为谨慎起见，在删除你的工作区之前，先备份你的工作区......以防万一。"
 
 #: ../../file_explorer.md:30
 msgid "File Storage on your hard drive"
@@ -115,11 +115,12 @@ msgstr "将Remix连接到远程Git仓库"
 
 #: ../../file_explorer.md:39
 msgid "**If you are not using Remixd, it is highly recommended that you save to a remote repo.**  (Browsers do crash causing localstorage & indexedDB to be corrupted)"
-msgstr "**如果你没有使用Remixd，强烈建议你保存到远程repo。**（浏览器确实会崩溃，导致本地存储和indexedDB被破坏。）"
+msgstr " **如果你没有使用Remixd，强烈建议你保存到远程repo。** （浏览器确实会崩溃，导致本地存储和indexedDB被破坏。）"
 
 #: ../../file_explorer.md:42
-msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** pluin. (DGit stands for Decentralized GIT)."
-msgstr "Remix IDE可以连接到托管在GitHub（或类似服务）的远程Git仓库或IPFS。大部分的Git操作都是在**DGit**库中完成的。(DGit代表分散式GIT）。"
+msgid "Remix IDE can be connected to remote Git repos hosted in GitHub (or similar service) or in IPFS.   Most of the Git operations are done in the **DGit** plugin. (DGit stands for Decentralized GIT)."
+msgstr "Remix IDE 可以连接到 GitHub (或类似服务) 或 IPFS 托管的远程 Git 仓库中。 大部分 Git 操作都在 \n"
+" **DGit** 插件中完成的(DGit 代表分布式GIT)。"
 
 #: ../../file_explorer.md:45
 msgid "[Branch management](#branch-management) is also available at the bottom of the File Explorer when the Workspace is Git initialized."
@@ -127,7 +128,7 @@ msgstr "当工作区被Git初始化时，[分支管理](#branch-management)也�
 
 #: ../../file_explorer.md:47
 msgid "Also see this article about [securing your files in Remix](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)"
-msgstr "您也可以阅读这篇关于 [在 Remix 中保护您的文件](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)的文章"
+msgstr "您也可以阅读这篇关有关 [在 Remix 中保护您的文件](https://medium.com/remix-ide/securing-you-file-in-remix-how-to-clone-and-push-f1350111aa13?source=friends_link&sk=a3dbd0d3b0b44a29a28e8c10f8821fde)的文章"
 
 #: ../../file_explorer.md:49
 msgid "Workspaces"
@@ -135,7 +136,7 @@ msgstr "工作区"
 
 #: ../../file_explorer.md:52
 msgid "Workspaces in Remix are special folders that separate projects.  Files in one workspace cannot import or access files in different workspace.  Choosing a workspace is done with the **Workspaces** select box."
-msgstr "Remix中的工作空间是分隔项目的特殊文件夹。 一个工作区的文件不能导入或访问不同工作区的文件。  选择一个工作区是通过**工作区**选择框完成的。"
+msgstr "Remix中的工作空间是分隔项目的特殊文件夹。 一个工作区的文件不能导入或访问不同工作区的文件。  选择一个工作区是通过 **工作区** 选择框完成的。"
 
 #: ../../file_explorer.md:54
 msgid "![](images/a-fe-workspaces1.png)"
@@ -147,7 +148,7 @@ msgstr "新工作区"
 
 #: ../../file_explorer.md:57
 msgid "Workspaces are created by clicking the + button or by going to the hamburger menu in the upper right side of the File Explorer."
-msgstr "通过点击 \"+\"按钮或进入文件资源管理器右上方的汉堡包菜单，可以创建工作空间。"
+msgstr "通过点击 \"+\"按钮或进入文件资源管理器右上方的折叠菜单，可以创建工作空间。"
 
 #: ../../file_explorer.md:59
 msgid "![](images/a-fe-workspaces-new.png)"
@@ -195,7 +196,7 @@ msgstr "工作区操作"
 
 #: ../../file_explorer.md:76
 msgid "The **Workspace hamburger menu** is for operations that work on an entire workspace."
-msgstr "工作区汉堡包菜单**是用于对整个工作区进行操作的。"
+msgstr " **工作区折叠菜单** 是用于对整个工作区进行操作的。"
 
 #: ../../file_explorer.md:78
 msgid "![](images/a-fe-hamburger.png)"
@@ -239,8 +240,8 @@ msgid "Workspaces initialized with Git"
 msgstr "用Git初始化的工作空间"
 
 #: ../../file_explorer.md:92
-msgid "Git intialized workspaces will have the Git icon next to them in the **Workspaces** select box."
-msgstr "在**工作空间**选择框中，已启用Git的工作空间旁边会有Git图标。"
+msgid "Git initialized workspaces will have the Git icon next to them in the **Workspaces** select box."
+msgstr "在**工作区**选择框中，使用Git初始化的工作区将在它旁边显示Git图标。"
 
 #: ../../file_explorer.md:94
 msgid "![](images/a-fe-select-git.png)"
