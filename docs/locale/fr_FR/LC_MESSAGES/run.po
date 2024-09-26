@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:28\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "`Remix VM (London)` : Identique à la précédente, sauf que cette chaî
 
 #: ../../run.md:19
 msgid "`Remix VM (Berlin)` : Same as above except this chain is using the Berlin fork of Ethereum."
-msgstr "`Remix VM (Berlin)` : Même chose que ci-dessus, mais cette chaîne utilise la version berlinoise d'Ethereum."
+msgstr "`Remix VM (Berlin)` : Identique à la précédente, sauf que cette chaîne utilise la version berlinoise d'Ethereum."
 
 #: ../../run.md:21
 msgid "`Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and will load it into the Remix VM.  It is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about Forking)"
@@ -63,7 +63,7 @@ msgstr "`Remix VM - Goerli fork` : Identique au précédent, sauf qu'il s'agit d
 
 #: ../../run.md:25
 msgid "`Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about Forking)"
-msgstr "`Remix VM - Sepolia fork` : Identique à ce qui précède, sauf qu'il s'agit d'un fork du réseau de test Sepolia. (Voir ci-dessous pour plus d'informations sur le Forking)"
+msgstr "`Remix VM - Sepolia fork` : Identique au précédent, sauf qu'il s'agit d'un fork du réseau de test Sepolia. (Voir ci-dessous pour plus d'informations sur le Forking)"
 
 #: ../../run.md:27
 msgid "`Remix VM - Custom fork` : Forks a chain, at block number, and in an EVM version of your choice. (See below for more info about Forking)"
@@ -147,7 +147,7 @@ msgstr "Pour exécuter Remix à l'aide de https://remix.ethereum.org et d'un nœ
 
 #: ../../run.md:74
 msgid "If you are using remix-alpha or a local version of remix - replace the url of the --http.corsdomain with the url of Remix that you are using."
-msgstr "Si vous utilisez remix-alpha ou une version locale de remix, remplacez l'url de --http.corsdomain par l'url de Remix que vous utilisez."
+msgstr "Si vous utilisez remix-alpha ou une version locale de remix - remplacez l'url du --http.corsdomain par l'url de Remix que vous utilisez."
 
 #: ../../run.md:76
 msgid "To run Remix Desktop & a local test node, use this Geth command:"
@@ -175,7 +175,7 @@ msgstr "N'utilisez `--http.corsdomain *` que lorsque vous utilisez une **chaîne
 
 #: ../../run.md:97
 msgid "Account:"
-msgstr "Compte :"
+msgstr "Compte :"
 
 #: ../../run.md:99
 msgid "Account: the list of accounts associated with the current  environment (and their associated balances).  On the Remix VM, you have a choice of 5 accounts.  If using Injected Web3 with MetaMask, you need to change the account in MetaMask."
@@ -191,7 +191,7 @@ msgstr "Ceci définit la quantité maximale de gaz qui sera autorisée pour tout
 
 #: ../../run.md:107
 msgid "Value:"
-msgstr "Valeur :"
+msgstr "Valeur:"
 
 #: ../../run.md:109
 msgid "This sets the amount of ETH, WEI, GWEI etc that is sent to a contract or a payable function. <br>  **Note:** payable functions have a red button."
@@ -226,8 +226,8 @@ msgid "**Note:** When using AtAddress, be sure you trust the contract at that ad
 msgstr "**Note:** Lorsque vous utilisez AtAddress, assurez-vous que vous avez confiance dans le contrat à cette adresse."
 
 #: ../../run.md:130
-msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying access."
-msgstr "Pour utiliser **AtAddress**, vous devez avoir le **code source** ou **ABI** du contrat déployé **dans l'onglet actif** de l'éditeur.  Lorsque vous utilisez le code source, il doit être compilé avec les mêmes paramètres de compilation que le contrat déployé auquel vous essayez d'accéder."
+msgid "To use **AtAddress**, you need to have the **source code** or **ABI** of the deployed contract  **in the active tab** of the editor.  When using the source code, it must be compiled with the same compilation settings as the deployed contract that you are trying to access."
+msgstr ""
 
 #: ../../run.md:132
 msgid "Using the ABI with AtAddress"
@@ -266,8 +266,8 @@ msgid "The Recorder is a tool used to save a bunch of transactions in a JSON fil
 msgstr "L'enregistreur est un outil utilisé pour enregistrer un ensemble de transactions dans un fichier JSON et les réexécuter plus tard, soit dans le même environnement, soit dans un autre."
 
 #: ../../run.md:158
-msgid "Saving to the JSON file ( by default its called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
-msgstr "L'enregistrement dans le fichier JSON (appelé par défaut scenario.json) permet de vérifier facilement la liste des transactions, d'ajuster les paramètres d'entrée, de changer la bibliothèque liée, etc..."
+msgid "Saving to the JSON file (by default it's called scenario.json) allows one to easily check the transaction list, tweak input parameters, change linked library, etc..."
+msgstr ""
 
 #: ../../run.md:160
 msgid "There are many use cases for the recorder."
@@ -290,8 +290,8 @@ msgid "Deploying contract does often require more than creating one transaction 
 msgstr "Le déploiement d'un contrat nécessite souvent plus que la création d'une transaction et l'enregistreur automatise donc ce déploiement."
 
 #: ../../run.md:172
-msgid "Working in a dev environment often requires setting up the state in a first place."
-msgstr "Pour travailler dans un environnement de développement, il faut souvent commencer par mettre en place l'état."
+msgid "Working in a dev environment often requires setting up the state in the first place."
+msgstr ""
 
 #: ../../run.md:175
 msgid "![](images/a-recorder.png)"
