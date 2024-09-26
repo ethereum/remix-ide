@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Pour donner à l'IDE Remix (l'application web) l'accès à un dossier su
 
 #: ../../remixd.md:8
 msgid "The **Remixd** plugin can be activated from the plugin manager or in the **File Explorer** - see the image below.  The **connect to localhost** - will activate the **Remixd** plugin."
-msgstr "Le plugin **Remixd** peut être activé à partir du gestionnaire de plugins ou de l'explorateur de fichiers** - voir l'image ci-dessous.  L'option **connect to localhost** - activera le plugin **Remixd**."
+msgstr "Le plugin **Remixd** peut être activé à partir du gestionnaire de plugins ou dans l'explorateur de fichiers** - voir l'image ci-dessous.  L'option **connect to localhost** - activera le plugin **Remixd**."
 
 #: ../../remixd.md:10
 msgid "![](images/a-remixd-fe.png)"
@@ -135,7 +135,7 @@ msgstr "La commande remixd est la suivante :<br> `remixd`"
 
 #: ../../remixd.md:58
 msgid "If you are using Remix from localhost or you are not running the command from your working directory, you'll need to use the command with flags."
-msgstr "Si vous utilisez Remix depuis localhost ou si vous n'exécutez pas la commande depuis votre répertoire de travail, vous devrez utiliser la commande avec des drapeaux."
+msgstr "Si vous utilisez Remix à partir de localhost ou si vous n'exécutez pas la commande depuis votre répertoire de travail, vous devrez utiliser la commande avec des drapeaux."
 
 #: ../../remixd.md:60
 msgid "remixd options"
@@ -183,11 +183,11 @@ msgstr "`remixd` fonctionne en établissant des connexions websocket avec Remix 
 
 #: ../../remixd.md:101
 msgid "**65520** : For `remixd` websocket listener, to share local file system with Remix IDE. Shared folder will be loaded in the Remix IDE `File Explorers` workspace named `localhost`"
-msgstr "**65520** : Pour l'auditeur websocket `remixd`, partager le système de fichiers local avec Remix IDE. Le dossier partagé sera chargé dans l'espace de travail `File Explorers` de Remix IDE nommé `localhost`."
+msgstr "**65520** : Pour l'auditeur websocket `remixd`, partager le système de fichiers local avec Remix IDE. Le dossier partagé sera chargé dans l'espace de travail `File Explorers` de Remix IDE nommé `localhost`"
 
 #: ../../remixd.md:102
 msgid "**65522** : For `hardhat` websocket listener, to enable the Hardhat Compilation using Remix IDE `Solidity Compiler` plugin, if shared folder is a Hardhat project."
-msgstr "**65522** : Pour le websocket listener `hardhat`, activer la compilation Hardhat en utilisant le plugin `Solidity Compiler` de Remix IDE, si le dossier partagé est un projet Hardhat."
+msgstr "**65522** : Pour l'écouteur websocket `hardhat`, activer la compilation Hardhat en utilisant le plugin `Solidity Compiler` de Remix IDE, si le dossier partagé est un projet Hardhat."
 
 #: ../../remixd.md:103
 msgid "**65523** : For `slither` websocket listener, to enable the Slither Analysis using Remix IDE `Solidity Static Analysis` plugin"
@@ -203,7 +203,7 @@ msgstr "**Note:** Assurez-vous que votre système est suffisamment sécurisé et
 
 #: ../../remixd.md:109
 msgid "Warning!"
-msgstr "Attention !"
+msgstr "Avertissement !"
 
 #: ../../remixd.md:110
 msgid "`remixd` **provides full read and write access** to the given folder **for any application** that can access the `TCP port 65520` on your local host."
