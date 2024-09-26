@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:36\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -42,8 +42,8 @@ msgid "Write tests"
 msgstr "Rédiger des tests"
 
 #: ../../testing_using_Chai_&_Mocha.md:14
-msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Lets name it `sample.test.js`."
-msgstr "Créez un fichier js dans l'espace de travail de votre projet. Il est préférable de le créer dans le dossier `scripts`. Nommons-le `sample.test.js`."
+msgid "Create a js file in your project workspace. Better to create it inside `scripts` folder. Let's name it `sample.test.js`."
+msgstr ""
 
 #: ../../testing_using_Chai_&_Mocha.md:16
 msgid "Write your tests in the file. Here is a sample:"
