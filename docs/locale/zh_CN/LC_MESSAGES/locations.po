@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -71,11 +71,11 @@ msgstr "有许多方法可以通过使用URL参数来自定义Remix IDE。以下
 
 #: ../../locations.md:27
 msgid "Activate or deactivate a **list of plugins to be activated** - and specify which plugin gains the \"focus\". [SEE MORE](#activating-a-list-of-plugins)"
-msgstr "激活或停用要激活的插件列表 - 并指定哪个插件获得“焦点”。[查看更多](#activating-a-list-of-plugins)"
+msgstr "激活或停用 **要激活的插件列表**  - 并指定哪个插件获得“焦点”。[查看更多](#activating-a-list-of-plugins)"
 
 #: ../../locations.md:28
 msgid "Send **commands to a plugin** - once the plugin loads. [SEE MORE](#pass-commands-to-a-plugin-s-api-via-a-url-param)"
-msgstr "向插件发送命令 - 一旦加载了插件。[查看更多]#pass-commands-to-a-plugin-s-api-via-a-url-param)"
+msgstr " **向插件发送命令**  - 一旦加载了插件。[查看更多]#pass-commands-to-a-plugin-s-api-via-a-url-param)"
 
 #: ../../locations.md:29
 msgid "[Load a GIST](#load-a-gist), [a file via a url](#load-a-file-via-a-url-into-the-editor) or a [base64 encoded string](#load-an-encoded-base64-string-into-a-sol-file-in-the-editor) into Remix's Editor."
@@ -87,15 +87,15 @@ msgstr "指定主题（暗色或亮色）。[查看更多](#specifying-a-theme)"
 
 #: ../../locations.md:31
 msgid "Specify which panels should be **minimized** - useful when embedding Remix in your site. [SEE MORE](#minimizing-remix-panels)"
-msgstr "指定应最小化哪些面板-在将Remix嵌入您的网站时非常有用。[查看更多](#minimizing-remix-panels)"
+msgstr "指定应 **最小化** 哪些面板-在将Remix嵌入您的网站时非常有用。[查看更多](#minimizing-remix-panels)"
 
 #: ../../locations.md:32
 msgid "Select the **version of the Solidity** compiler, enable/disable the **optimizer**, turn on auto compile or choose the language for the Solidity compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)"
-msgstr "选择**Solidity编译器的版本**，启用/禁用**优化器**，打开自动编译或选择Solidity编译器的语言。[查看更多](#load-a-specific-version-of-the-solidity-compiler)"
+msgstr "选择 **Solidity编译器的版本** ，启用/禁用 **优化器** ，打开自动编译或选择Solidity编译器的语言。[查看更多](#load-a-specific-version-of-the-solidity-compiler)"
 
 #: ../../locations.md:33
 msgid "Load **verified contracts from Etherscan** using contract address [SEE MORE](#load-contracts-from-etherscan-via-address)"
-msgstr "使用合约地址从Etherscan加载已验证的合约。[查看更多](#load-contracts-from-etherscan-via-address)"
+msgstr "使用合约地址 **从Etherscan加载已验证的合约** 。[查看更多](#load-contracts-from-etherscan-via-address)"
 
 #: ../../locations.md:35
 msgid "Activating a list of plugins"
@@ -103,7 +103,7 @@ msgstr "激活插件列表"
 
 #: ../../locations.md:36
 msgid "The following example contains the url parameter **activate** followed by **a comma separated list of plugins**."
-msgstr "以下示例包含url参数“ activate”，后跟逗号分隔的插件列表。"
+msgstr "以下示例包含url参数 **activate** ，后跟 **逗号分隔的插件列表** 。"
 
 #: ../../locations.md:38
 msgid "The last plugin in the list will gain the focus."
@@ -115,23 +115,23 @@ msgstr "当您使用激活列表时，用户加载的所有其他插件都将被
 
 #: ../../locations.md:46
 msgid "Note: a plugin is called by its **name** as specified in its profile.  There are 3 types of plugins:"
-msgstr "注意：插件按其配置文件中指定的名称进行调用。有三种类型的插件："
+msgstr "注意：插件按其配置文件中指定的 **名称** 进行调用。有三种类型的插件："
 
 #: ../../locations.md:47
 msgid "**Native Mandatory Plugins** that are always loaded (so you don't need to activate them using the url parameter **activate**). These include: **fileManager**, **settings**, **manager** (the plugin manager), and **udapp** (deploy & run)."
-msgstr "**本机强制性插件**始终加载（因此您不需要使用url参数激活它们）。这些包括：fileManager，settings，manager（插件管理器）和udapp（部署和运行）。"
+msgstr " **本机强制性插件** 始终加载（因此您不需要使用url参数 **激活** 它们）。这些包括： **fileManager** ， **settings** ， **manager** （插件管理器）和 **udapp** （部署和运行）。"
 
 #: ../../locations.md:48
 msgid "**Native Optional Plugins** that are loaded on demand: **debugger**, **hardhat-provider**, **solidity**, **solidityStaticAnalysis**, **solidityUnitTesting**, and **vyper**"
-msgstr "**本机可选插件**按需加载：**debugger**，**hardhat-provider**，**solidity**，**solidityStaticAnalysis**，**solidityUnitTesting**和**vyper**"
+msgstr " **本机可选插件** 按需加载： **debugger** ， **hardhat-provider** ， **solidity** ， **solidityStaticAnalysis** ， **solidityUnitTesting** 和 **vyper** "
 
 #: ../../locations.md:49
 msgid "**External Plugins** to get these plugins' names, please go to [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)."
-msgstr "**外部插件**要获取这些插件的名称，请转到[https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)。"
+msgstr " **外部插件** 要获取这些插件的名称，请转到[https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)。"
 
 #: ../../locations.md:51
-msgid "Deactiving a list of plugins"
-msgstr "禁用插件列表"
+msgid "Deactivating a list of plugins"
+msgstr "禁用一系列插件"
 
 #: ../../locations.md:56
 msgid "Minimizing Remix panels"
@@ -139,7 +139,7 @@ msgstr "最小化Remix面板"
 
 #: ../../locations.md:58
 msgid "The following URL will **close everything except the main panel & the icon panel** (the side and terminal are minimized)."
-msgstr "以下URL将关闭除主面板和图标面板（侧边栏和终端被最小化）以外的所有内容。"
+msgstr "以下URL将 **关闭除主面板和图标面板以外的所有内容**  （侧边栏和终端被最小化）。"
 
 #: ../../locations.md:63
 msgid "To minimize just the side panel, use this URL:"
@@ -162,8 +162,8 @@ msgid "A URL example combining multiple parameters"
 msgstr "一个包含多个参数的URL示例"
 
 #: ../../locations.md:80
-msgid "To link to Remix with the a list of plugins activated and with:"
-msgstr "要链接到带有激活插件列表的Remix，并且："
+msgid "To link to Remix with the list of plugins activated and with:"
+msgstr "使用已激活的插件列表链接到 Remix："
 
 #: ../../locations.md:82
 msgid "the Learneth gaining the side panel's focus (because it is the last in the list)"
@@ -199,11 +199,11 @@ msgstr "使用`call`参数的例子"
 
 #: ../../locations.md:100
 msgid "The URL below uses `activate` & `call`.  It **activates** a number of plugins and **calls** the File Explorers to tell it to load one of the default Remix files:"
-msgstr "以下URL使用`activate`和`call`。它会激活多个插件并调用文件浏览器，告诉它加载一个默认的Remix文件："
+msgstr "以下URL使用`activate`和`call`。它会  **激活 ** 多个插件并  **调用 ** 文件浏览器，告诉它加载一个默认的Remix文件："
 
 #: ../../locations.md:105
 msgid "Load a specific tutorial in the **LearnEth** plugin:"
-msgstr "在LearnEth插件中加载特定的教程："
+msgstr "在 **LearnEth** 插件中加载特定的教程："
 
 #: ../../locations.md:110
 msgid "Make calls to a number of different plugins' APIs"
