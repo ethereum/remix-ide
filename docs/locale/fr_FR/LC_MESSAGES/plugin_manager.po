@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -46,8 +46,8 @@ msgid "![](images/a-permission-modal.png)"
 msgstr "![](images/a-permission-modal.png)"
 
 #: ../../plugin_manager.md:15
-msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, its helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
-msgstr "Souvent, le même plugin voudra effectuer la même action plusieurs fois.  C'est pourquoi, lorsque vous accordez une autorisation, il est utile de cliquer sur la case **Souvenir de ce choix**.  Si vous ne le faites pas, vous risquez de voir apparaître cette fenêtre modale à plusieurs reprises."
+msgid "Often, the same plugin will want to do the same action multiple times.  So when granting permission, it's helpful to click the **Remember this choice** box.  If you don't, you might get this modal repeatedly popping up."
+msgstr ""
 
 #: ../../plugin_manager.md:17
 msgid "View permissions"
