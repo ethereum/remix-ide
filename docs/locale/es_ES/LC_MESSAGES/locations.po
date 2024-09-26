@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -130,8 +130,8 @@ msgid "**External Plugins** to get these plugins' names, please go to [https://g
 msgstr "**Plugins externos** para obtener los nombres de estos plugins, visite [https://github.com/ethereum/remix-plugins-directory/tree/master/plugins](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins)."
 
 #: ../../locations.md:51
-msgid "Deactiving a list of plugins"
-msgstr "Desactivación de una lista de plugins"
+msgid "Deactivating a list of plugins"
+msgstr "Desactivación de una lista de complementos"
 
 #: ../../locations.md:56
 msgid "Minimizing Remix panels"
@@ -162,8 +162,8 @@ msgid "A URL example combining multiple parameters"
 msgstr "Un ejemplo de URL que combina varios parámetros"
 
 #: ../../locations.md:80
-msgid "To link to Remix with the a list of plugins activated and with:"
-msgstr "Para enlazar con Remix con la una lista de plugins activados y con:"
+msgid "To link to Remix with the list of plugins activated and with:"
+msgstr "Para enlazar a Remix con la lista de complementos activados y con:"
 
 #: ../../locations.md:82
 msgid "the Learneth gaining the side panel's focus (because it is the last in the list)"
