@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-21 10:25+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"PO-Revision-Date: 2024-09-26 01:33\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -19,27 +19,27 @@ msgstr ""
 
 #: ../../remix_tutorials_github.md:1
 msgid "Remix Github Tutorials"
-msgstr "Ремикс учебников Github"
+msgstr ""
 
 #: ../../remix_tutorials_github.md:4
 msgid "There are a series of tutorials in our github repo remix-workshops."
-msgstr "В нашем github-репо remix-workshops есть серия обучающих уроков."
+msgstr ""
 
 #: ../../remix_tutorials_github.md:6
 msgid "We are in the process of upgrading these tutorials to use the new Remix layout."
-msgstr "Мы находимся в процессе обновления этих руководств для использования нового макета Remix."
+msgstr ""
 
 #: ../../remix_tutorials_github.md:8
 msgid "In this repo there tutorials for all levels."
-msgstr "В этом репозитории есть учебники для всех уровней."
+msgstr ""
 
 #: ../../remix_tutorials_github.md:10
 msgid "There are tutorials for specific remix functionalities like:"
-msgstr "Существуют учебные пособия по конкретным функциональным возможностям ремикса, например:"
+msgstr ""
 
 #: ../../remix_tutorials_github.md:12
 msgid "Deploying"
-msgstr "Развертывание"
+msgstr ""
 
 #: ../../remix_tutorials_github.md:18
 msgid "Testing"
@@ -47,13 +47,13 @@ msgstr "Тестирование"
 
 #: ../../remix_tutorials_github.md:23
 msgid "Remix Plugin Development"
-msgstr "Разработка плагинов Remix"
+msgstr ""
 
 #: ../../remix_tutorials_github.md:27
 msgid "Other"
-msgstr "Другие"
+msgstr ""
 
 #: ../../remix_tutorials_github.md:35
 msgid "Additional external workshops"
-msgstr "Дополнительные внешние семинары"
+msgstr ""
 
