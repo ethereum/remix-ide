@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "以下是一些示例，可以让您更好地理解计划测试。"
 
 #: ../../unittesting_examples.md:6
 msgid "**Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end."
-msgstr "**注意：** 本节中的示例是为了协助您开发。我们不建议在没有自行验证的情况下依赖它们。"
+msgstr " **注意：** 本节中的示例是为了协助您开发。我们不建议在没有自行验证的情况下依赖它们。"
 
 #: ../../unittesting_examples.md:8
 msgid "1. Simple example"
@@ -39,11 +39,11 @@ msgstr "在这个例子中，我们测试设置和获取变量。"
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: `Simple_storage.sol`"
-msgstr "要测试的合约/程序：Simple_storage.sol`"
+msgstr "要测试的合约/程序：`Simple_storage.sol`"
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: `simple_storage_test.sol`"
-msgstr "测试合约/程序：simple_storage_test.sol`"
+msgstr "测试合约/程序： `simple_storage_test.sol`"
 
 #: ../../unittesting_examples.md:60
 msgid "2. Testing a method involving `msg.sender`"
@@ -51,15 +51,15 @@ msgstr "2.测试一个包含`msg.sender`的方法`"
 
 #: ../../unittesting_examples.md:61
 msgid "In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:"
-msgstr "在Solidity中，`msg.sender`在智能合约方法交互的访问管理中扮演着重要的角色。不同的`msg.sender`可以帮助测试涉及多个不同角色的帐户的合约。以下是一个测试示例："
+msgstr "在Solidity中， `msg.sender` 在智能合约方法交互的访问管理中扮演着重要角色。不同的 `msg.sender` 可以帮助测试涉及多个不同角色的帐户合约。以下是一个测试示例："
 
 #: ../../unittesting_examples.md:63
 msgid "Contract/Program to be tested: `Sender.sol`"
-msgstr "要测试的合约/程序：Sender.sol`"
+msgstr "要测试的合约/程序： `Sender.sol`"
 
 #: ../../unittesting_examples.md:85
 msgid "Test contract/program: `Sender_test.sol`"
-msgstr "测试合约/程序：Sender_test.sol`"
+msgstr "测试合约/程序： `Sender_test.sol`"
 
 #: ../../unittesting_examples.md:137
 msgid "3. Testing method execution"
@@ -75,7 +75,7 @@ msgstr "为了在这种情况下提供帮助，Solidity在版本 0.6.0 中引入
 
 #: ../../unittesting_examples.md:143
 msgid "Here is an example test file that use both **try-catch** blocks and **low level calls**:"
-msgstr "这是一个使用`try-catch`代码块和低级调用的示例测试文件："
+msgstr "这是一个使用 **try-catch** 代码块和低级调用的示例测试文件："
 
 #: ../../unittesting_examples.md:145
 msgid "Contract/Program to be tested: `AttendanceRegister.sol`"
@@ -87,7 +87,7 @@ msgstr "测试合约/程序：`AttendanceRegister_test.sol`"
 
 #: ../../unittesting_examples.md:262
 msgid "4. Testing a method involving `msg.value`"
-msgstr "4.测试一个包含`msg.value`的方法`"
+msgstr "4.测试一个包含 `msg.value` 的方法`"
 
 #: ../../unittesting_examples.md:263
 msgid "In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:"
