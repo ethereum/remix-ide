@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: remix-translation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:35\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese, Brazilian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: remix-translation\n"
+"X-Crowdin-Project-ID: 431830\n"
+"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-File: /[ethereum.remix-ide] master/docs/_build/gettext/hardhat.pot\n"
+"X-Crowdin-File-ID: 7419\n"
+"Language: pt_BR\n"
+
+#: ../../hardhat.md:1
+msgid "Hardhat"
+msgstr "Hardhat"
+
+#: ../../hardhat.md:4
+msgid "_(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_"
+msgstr "_(Suportado desde Remix IDE v0.12.0 e Remixd v0.3.6)_"
+
+#: ../../hardhat.md:6
+msgid "Remixd and Hardhat"
+msgstr "Remix e Hardhat"
+
+#: ../../hardhat.md:9
+msgid "**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)"
+msgstr "**Nota:** Se você não usou `remixd` antes, leia mais sobre ele [aqui](./remixd.html)"
+
+#: ../../hardhat.md:11
+msgid "If `remixd` is running locally on your device and shared folder is a **Hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,"
+msgstr "Se o arquivo `remixd` estiver sendo executado localmente no seu dispositivo e a pasta compartilhada for um **Hardhat project**, um plugin de websocket adicional estará escutando na porta `65522`. De acordo com sua documentação,"
+
+#: ../../hardhat.md:13
+msgid "_Hardhat projects are npm projects with the hardhat package installed and a hardhat.config.js or hardhat.config.ts file._"
+msgstr "_Projetos de Hardhat são projetos npm com o pacote de hardhat instalado e um arquivo hardhat.config.js ou hardhat.config.ts._"
+
+#: ../../hardhat.md:15
+msgid "Remixd looks for the `hardhat.config.js` or `hardhat.config.ts` file in shared folder, and if it finds the file, the Hardhat websocket listener will run."
+msgstr "Remixd procura o arquivo `hardhat.config.js` ou `hardhat.config.ts` em uma pasta compartilhada, e se encontrar o arquivo, o ouvinte do Hardhat websocket será executado."
+
+#: ../../hardhat.md:17
+msgid "The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE."
+msgstr "O ouvinte de websocket Hardhat é um plugin de websocket semelhante a `remixd` e é usado para executar ações específicas de Hardhat com a Remix IDE."
+
+#: ../../hardhat.md:19
+msgid "It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module."
+msgstr "Não precisa de nenhuma instalação separada, pois é enviada com o módulo [remixd NPM](https://www.npmjs.com/package/@remix-project/remix)."
+
+#: ../../hardhat.md:21
+msgid "![](images/a-hardhat-remixd.png)"
+msgstr "![](images/a-hardhat-remixd.png)"
+
+#: ../../hardhat.md:23
+msgid "Enable Hardhat Compilation"
+msgstr "Habilitar Compilação Hardhat"
+
+#: ../../hardhat.md:26
+msgid "Prerequisites"
+msgstr "Pré-Requisitos"
+
+#: ../../hardhat.md:28
+msgid "To use Hardhat compilation with Remix IDE efficiently:"
+msgstr "Para usar a compilação Hardhat com Remix IDE eficientemente:"
+
+#: ../../hardhat.md:30
+msgid "**Hardhat** should be installed locally on the system [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)"
+msgstr "**Hardhat** deve ser instalado localmente no sistema [https://hardhat.org/getting-started/#installation](https://hardhat.org/getting-started/#installation)"
+
+#: ../../hardhat.md:31
+msgid "Shared folder should be a Hardhat project containing `hardhat.config.js` or `hardhat.config.ts`"
+msgstr "A pasta compartilhada deve ser um projeto Hardhat contendo 'hardhat.config.js' ou 'hardhat.config.ts'"
+
+#: ../../hardhat.md:32
+msgid "`Remixd` Hardhat websocket listener should be running at `65522`"
+msgstr "`Remixd` Ouvinte de websocket Hardhat deve estar rodando em `65522`"
+
+#: ../../hardhat.md:34
+msgid "How to use"
+msgstr "Como usar"
+
+#: ../../hardhat.md:36
+msgid "If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`."
+msgstr "Se um projeto hardhat é compartilhado através de remixd e o espaço de trabalho `localhost` é carregado no Remix IDE, haverá uma caixa de seleção extra mostrada no plugin `Solidity Compiler` com o rótulo `Ativar Compilação Hardhat `."
+
+#: ../../hardhat.md:38
+msgid "![](images/a-hardhat-compilation.png)"
+msgstr "![](images/a-hardhat-compilation.png)"
+
+#: ../../hardhat.md:40
+msgid "There is an info icon alongside the label which redirects to a specific section of Remix official documentation that explains how to use Hardhat compilation."
+msgstr "Há um ícone informativo junto ao rótulo que redireciona para uma seção específica do Remix oficial que explica como usar a compilação Hardhat."
+
+#: ../../hardhat.md:42
+msgid "One can check the `Enable Hardhat Compilation` box to run the compilation for Hardhat along with the Remix using the compiler configuration in `Solidity Compiler` plugin."
+msgstr "Uma pessoa pode marcar a caixa `Habilitar Compilação Hardhat ` para executar a compilação de Hardhat juntamente com o Remix usando a configuração do compilador no plugin `Compilador Solidity`."
+
+#: ../../hardhat.md:44
+msgid "On clicking `Compile` button, a file with `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Hardhat for compilation."
+msgstr "Ao clicar no botão `Compilar`, um arquivo `remix-compiler.config.js` será criado na raiz do projeto que estará armazenando a configuração do compilador definido no plugin `Compilador Solidity` do Remix. É transmitido ao Hardhat para compilação."
+
+#: ../../hardhat.md:46
+msgid "The result of the compilation will be shown in the Remix IDE terminal"
+msgstr "O resultado da compilação será mostrado no terminal de Remix IDE"
+
+#: ../../hardhat.md:48
+msgid "![](images/a-hardhat-compilation-success.png)"
+msgstr "![](images/a-hardhat-compilation-success.png)"
+
+#: ../../hardhat.md:50
+msgid "and also in the **remixd** terminal."
+msgstr "e também no terminal **remixd**."
+
+#: ../../hardhat.md:52
+msgid "![](images/a-hardhat-compilation-success-remixd.png)"
+msgstr "![](images/a-hardhat-compilation-success-remixd.png)"
+
+#: ../../hardhat.md:54
+msgid "Hardhat Provider"
+msgstr "Provedor Hardhat"
+
+#: ../../hardhat.md:57
+msgid "_In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_"
+msgstr "_Em Hardhat, contratos são implantados iniciando um nó local. Leia mais sobre isso em [Documentação Hardhat](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_"
+
+#: ../../hardhat.md:59
+msgid "**Hardhat Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Hardhat 'localhost' network. This can be chosen from the `ENVIRONMENT` dropdown of `Deploy and Run Transactions` plugin."
+msgstr "**Provedor de hardhat** é um plugin no Remix IDE que permite que os usuários implantem o contrato para a rede 'localhost'. Isso pode ser escolhido no menu suspenso `ENVIRONMENT` do plugin `Implantar e Executar Transações`."
+
+#: ../../hardhat.md:61
+msgid "![](images/a-hardhat-provider-dropdown.png)"
+msgstr "![](images/a-hardhat-provider-dropdown.png)"
+
+#: ../../hardhat.md:63
+msgid "As soon as you select `Hardhat Provider`, a modal is opened asking for the `Hardhat JSON-RPC Endpoint`."
+msgstr "Assim que você selecionar `Provedor de Hardhat`, uma janela é aberta pedindo o `Hardhat JSON-RPC Endpoint`."
+
+#: ../../hardhat.md:65
+msgid "![](images/a-hardhat-provider-modal.png)"
+msgstr "![](images/a-hardhat-provider-modal.png)"
+
+#: ../../hardhat.md:67
+msgid "If Hardhat node is running with default options, then the default endpoint value in modal will not need any change. In case, Hardhat node host and port are different, JSON-RPC endpoint should be updated in the modal text box."
+msgstr "Se o nó de Hardhat estiver rodando com as opções padrão, então o valor padrão do endpoint na janela não precisará ser alterado. No caso de o host e a porta do nó de Hardhat serem diferentes, o endpoint JSON-RPC deve ser atualizado na caixa de texto da janela."
+
+#: ../../hardhat.md:69
+msgid "Once the correct endpoint is filled in the modal, just click on `OK` and the accounts from the Hardhat node will be loaded in the `ACCOUNT` section. Network id will also be shown."
+msgstr "Uma vez que o enpoint correto é preenchido na janela, apenas clique em `OK` e as contas do nó Hardhat serão carregadas na seção `CONTA`. A identificação da rede também será mostrada."
+
+#: ../../hardhat.md:71
+msgid "![](images/a-hardhat-provider-connected.png)"
+msgstr "![](images/a-hardhat-provider-connected.png)"
+
+#: ../../hardhat.md:73
+msgid "Now, one can start deploying the contract from Remix IDE to the Hardhat local node as usual."
+msgstr "Agora, pode-se começar a implantar o contrato de Remix IDE para o nó local Hardhat como de costume."
+
+#: ../../hardhat.md:75
+msgid "`console.log` in Remix IDE"
+msgstr "`console.log` no IDE do Remix"
+
+#: ../../hardhat.md:78
+msgid "_(Supported since Remix IDE v0.17.0)_"
+msgstr "_(Suportado desde Remix IDE v0.17.0)_"
+
+#: ../../hardhat.md:80
+msgid "Remix IDE supports hardhat console library while using `Remix VM`. It can be used while making a transaction or running unit tests."
+msgstr "Remix IDE suporta biblioteca de console hardhat enquanto usa `Remix VM`. Ele pode ser usado enquanto faz uma transação ou execução de testes de unidade."
+
+#: ../../hardhat.md:82
+msgid "Deploy and Run Transactions"
+msgstr "Implantar e executar transações"
+
+#: ../../hardhat.md:84
+msgid "To try it out, you need to put an import statement and use `console.log` to print the value as shown in image."
+msgstr "Para experimentar, você precisa colocar uma declaração de importação e usar `console.log` para imprimir o valor como mostrado na imagem."
+
+#: ../../hardhat.md:86
+msgid "![](images/hardhat-console-file.png)"
+msgstr "![](images/hardhat-console-file.png)"
+
+#: ../../hardhat.md:88
+msgid "Further, once you execute the `changeOwner` method, the value from console statement will be shown in Remix terminal after transaction details as below:"
+msgstr "Além disso, assim que você executar o método `changeOwner`, o valor do console será mostrado no terminal Remix após os detalhes da transação abaixo:"
+
+#: ../../hardhat.md:90
+msgid "![](images/hardhat-tx-terminal.png)"
+msgstr "![](images/hardhat-tx-terminal.png)"
+
+#: ../../hardhat.md:92
+msgid "Solidity Unit Testing"
+msgstr "Teste Unidade de Solidity"
+
+#: ../../hardhat.md:94
+msgid "Similarly, `console.log` can be used while running unit tests using Remix Solidity Unit Testing plugin. See image below."
+msgstr "Da mesma forma, `console.log` pode ser usado durante a execução de testes unitários usando o plugin de Testes de Remix Solidity Units. Veja a imagem abaixo."
+
+#: ../../hardhat.md:96
+msgid "![](images/hardhat-utesting-file.png)"
+msgstr "![](images/hardhat-utesting-file.png)"
+
+#: ../../hardhat.md:98
+msgid "For the tests including logging message, it will display in the Remix Terminal corresponding to test name."
+msgstr "Para testes incluindo mensagem de registro, ela será exibida no Terminal Remix correspondente ao nome do teste."
+
+#: ../../hardhat.md:100
+msgid "![](images/hardhat-utesting-terminal.png)"
+msgstr "![](images/hardhat-utesting-terminal.png)"
+
