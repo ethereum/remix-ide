@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:02\n"
+"PO-Revision-Date: 2024-09-26 01:34\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ msgstr "Dans cet exemple, nous testons la configuration et l'obtention de variab
 
 #: ../../unittesting_examples.md:11
 msgid "Contract/Program to be tested: `Simple_storage.sol`"
-msgstr "Contrat/programme à tester : `Simple_storage.sol`"
+msgstr "Contrat/Programme à tester : `Simple_storage.sol`"
 
 #: ../../unittesting_examples.md:32
 msgid "Test contract/program: `simple_storage_test.sol`"
@@ -95,7 +95,7 @@ msgstr "Dans Solidity, l'éther peut être passé avec un appel de méthode qui 
 
 #: ../../unittesting_examples.md:265
 msgid "Contract/Program to be tested: `Value.sol`"
-msgstr "Contrat/Programme à tester : `Value.sol`."
+msgstr "Contrat/Programme à tester : `Value.sol`"
 
 #: ../../unittesting_examples.md:285
 msgid "Test contract/program: `Value_test.sol`"
