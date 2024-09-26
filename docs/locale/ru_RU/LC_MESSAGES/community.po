@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
@@ -23,13 +23,13 @@ msgstr "Поддержка сообщества"
 
 #: ../../community.md:4
 msgid "We know that blockchain ecosystem is very new and that lots of information is scattered around the web. That is why we created a community support channel where we and other users try to answer your questions if you get stuck using Remix. Please, join [the community](https://gitter.im/ethereum/remix) and ask for help."
-msgstr "Мы знаем, что экосистема блокчейн очень нова и что много информации разбросано по Интернету. Именно поэтому мы создали канал поддержки сообщества, где мы и другие пользователи пытаемся ответить на Ваши вопросы, если у Вас возникнут затруднения при использовании Remix. Пожалуйста, присоединяйтесь к [сообществу](https://gitter.im/ethereum/remix) и обращайтесь за помощью."
+msgstr ""
 
 #: ../../community.md:8
 msgid "For anyone who is interested in developing a custom plugin for Remix or who wants to contribute to the codebase, we opened a [contributors' channel](https://gitter.im/ethereum/remix-dev) especially for developers working on Remix tools."
-msgstr "Для всех, кто заинтересован в разработке пользовательского плагина для Remix или хочет внести свой вклад в кодовую базу, мы открыли канал [contributors' channel](https://gitter.im/ethereum/remix-dev) специально для разработчиков, работающих над инструментами Remix."
+msgstr ""
 
 #: ../../community.md:11
 msgid "We would kindly ask you to respect the space and to use it for getting help with your work and the developers' channel for discussions related to working on Remix codebase. If you have ideas for collaborations or you want to promote your project, try to find some more appropriate channels to do so. Or you can contact the main contributors directly on Gitter or Twitter."
-msgstr "Мы просим Вас уважать это пространство и использовать его для получения помощи в работе, а канал разработчиков - для обсуждений, связанных с работой над кодовой базой Remix. Если у Вас есть идеи для сотрудничества или Вы хотите продвигать свой проект, постарайтесь найти для этого более подходящие каналы. Или же Вы можете напрямую связаться с основными контрибьюторами на Gitter или Twitter."
+msgstr ""
 
