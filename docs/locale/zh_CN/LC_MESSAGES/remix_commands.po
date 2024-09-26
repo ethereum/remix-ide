@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:01\n"
+"POT-Creation-Date: 2023-09-12 15:08-0400\n"
+"PO-Revision-Date: 2024-09-26 01:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -24,47 +24,47 @@ msgstr "Remix命令"
 
 #: ../../remix_commands.md:4
 msgid "In the console, you can run the commands listed below.  Once you start to type a command, there is *auto complete*.  These commands are using the following libraries:"
-msgstr "在控制台中，您可以运行下面列出的命令。一旦开始输入命令，就会自动完成。这些命令使用以下库："
+msgstr "在控制台中，您可以运行下面列出的命令。一旦开始输入命令，就会 **自动完成** 。这些命令使用以下库："
 
 #: ../../remix_commands.md:6
 msgid "**remix**:  Remix has a number of CLI commands for loading & executing file in a workspace.  See the list below."
-msgstr "**remix**：Remix 有许多 CLI 命令可用于在工作区中加载和执行文件。请参见下面的列表。"
+msgstr " **remix** ：Remix 有许多 CLI 命令可用于在工作区中加载和执行文件。请参见下面的列表。"
 
 #: ../../remix_commands.md:8
 msgid "**ethers**: Remix IDE enables the use of ethersjs commands. See the [Ethers docs](https://docs.ethers.io/) for the full list."
-msgstr "**ethers**：Remix IDE 可以使用 ethersjs 命令。请查看 [Ethers 文档](https://docs.ethers.io/)获取完整列表。"
+msgstr " **ethers** ：Remix IDE 可以使用 ethersjs 命令。请查看 [Ethers 文档](https://docs.ethers.io/)获取完整列表。"
 
 #: ../../remix_commands.md:10
-msgid "**web3**: Remix IDE enable the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
-msgstr "**web3**：Remix IDE 可以使用 web3js 命令。请查看 [Web3js 文档](https://web3js.readthedocs.io/)获取完整列表。"
+msgid "**web3**: Remix IDE enables the use of web3js commands. See the [Web3js docs](https://web3js.readthedocs.io/) for the full list."
+msgstr " **Web3** ：Remix IDE 可以使用 web3js 的命令。请查看 [Web3js 的文档](https://docs.ethers.io/)获取完整命令列表。"
 
 #: ../../remix_commands.md:12
 msgid "**swarmgw**: This library can be used to upload/download files to Swarm via https://swarm-gateways.net/."
-msgstr "**swarmgw**：此库可用于通过 https://swarm-gateways.net/ 上载/下载文件到 Swarm。"
+msgstr " **swarmgw** ：此库可用于通过 https://swarm-gateways.net/ 上传/下载文件到 Swarm。"
 
 #: ../../remix_commands.md:16
 msgid "**remix.execute(filepath)**: Run the script specified by file path. If filepath is empty, script currently displayed in the editor is executed."
-msgstr "**remix.execute(filepath)**：运行指定文件路径的脚本。如果filepath为空，则执行当前编辑器中显示的脚本。"
+msgstr " **remix.execute(filepath)** ：运行指定文件路径的脚本。如果filepath为空，则执行当前编辑器中显示的脚本。"
 
 #: ../../remix_commands.md:18
 msgid "**remix.exeCurrent()**: Run the script currently displayed in the editor."
-msgstr "**remix.exeCurrent()**：运行当前在编辑器中显示的脚本。"
+msgstr " **remix.exeCurrent()** ：运行当前在编辑器中显示的脚本。"
 
 #: ../../remix_commands.md:20
 msgid "**remix.getFile(path)**: Returns the content of the file located at the given path"
-msgstr "**remix.getFile(path)**：返回位于给定路径处的文件内容"
+msgstr " **remix.getFile(path)** ：返回位于给定路径处的文件内容"
 
 #: ../../remix_commands.md:22
 msgid "**remix.help()**: Display this help message."
-msgstr "**remix.help()**：显示此帮助消息。"
+msgstr " **remix.help()** ：显示此帮助消息。"
 
 #: ../../remix_commands.md:24
 msgid "**remix.loadgist(id)**: Load a gist in the file explorer."
-msgstr "**remix.loadgist(id)**：在文件资源管理器中加载一个 gist。"
+msgstr " **remix.loadgist(id)** ：在文件资源管理器中加载一个 gist。"
 
 #: ../../remix_commands.md:26
 msgid "**remix.loadurl(url)**: Load the given url in the file explorer. The url can be of type github, swarm or ipfs."
-msgstr "**remix.loadurl(url)**：在文件资源管理器中加载给定的 url。该 url 可以是 github、swarm 或 ipfs 类型。"
+msgstr " **remix.loadurl(url)** ：在文件资源管理器中加载给定的 url。该 url 可以是 github、swarm 或 ipfs 类型。"
 
 #: ../../remix_commands.md:28
 msgid "A few Ethers JS examples"
@@ -72,11 +72,11 @@ msgstr "一些Ethers JS示例"
 
 #: ../../remix_commands.md:29
 msgid "**ethers.providers**: A Provider abstracts a connection to the Ethereum blockchain, for issuing queries and sending state changing transactions."
-msgstr "**ethers.providers**：Provider抽象了与以太坊区块链的连接，用于发出查询和发送状态更改交易。"
+msgstr " **ethers.providers** ：Provider抽象了与以太坊区块链的连接，用于发出查询和发送状态更改交易。"
 
 #: ../../remix_commands.md:31
 msgid "**ethers.utils**: The utility functions exposed in both the ethers umbrella package and the ethers-utils.  eg ethers.utils.formatBytes32String( text )"
-msgstr "**ethers.utils**：在ether umbrella包和ether-utils中公开的工具函数。例如，ethers.utils.formatBytes32String( text )"
+msgstr " **ethers.utils** ：在ether umbrella包和ether-utils中公开的工具函数。例如，ethers.utils.formatBytes32String( text )"
 
 #: ../../remix_commands.md:33
 msgid "A few Web3 JS examples"
@@ -84,7 +84,7 @@ msgstr "一些Web3 JS示例"
 
 #: ../../remix_commands.md:35
 msgid "**web3.eth.abi**: The web3.eth.abi functions let you de- and encode parameters to ABI (Application Binary Interface) for function calls to the EVM (Ethereum Virtual Machine)."
-msgstr "**web3.eth.abi**：web3.eth.abi函数允许您对ABI（应用程序二进制接口）进行参数解码和编码，以便调用EVM（以太坊虚拟机）的函数。"
+msgstr " **web3.eth.abi** ：web3.eth.abi函数允许您对ABI（应用程序二进制接口）进行参数解码和编码，以便调用EVM（以太坊虚拟机）的函数。"
 
 #: ../../remix_commands.md:37
 msgid "**web3.providers**: Contains the current available providers."
@@ -92,7 +92,7 @@ msgstr "**web3.providers**：包含当前可用的providers。"
 
 #: ../../remix_commands.md:39
 msgid "**web3.utils**: This package provides utility functions for Ethereum dapps and other **web3.js packages."
-msgstr "**web3.utils**：此软件包为以太坊dapp和其他web3.js软件包提供工具函数。"
+msgstr " **web3.utils** ：此包为以太坊dapp和其他web3.js包提供工具函数。"
 
 #: ../../remix_commands.md:41
 msgid "A few Swarm examples (these will be updated soon)"
@@ -100,9 +100,9 @@ msgstr "一些Swarm示例(这些示例将很快更新)"
 
 #: ../../remix_commands.md:43
 msgid "**swarmgw.get(url, cb)**: Download files from Swarm via https**://swarm-gateways.net/"
-msgstr "**swarmgw.get(url, cb)**: 通过https**://swarm-gateways.net/从Swarm下载文件 "
+msgstr " **swarmgw.get(url, cb)** : 通过https**://swarm-gateways.net/从Swarm下载文件 "
 
 #: ../../remix_commands.md:45
 msgid "**swarmgw.put(content, cb)**: Upload files to Swarm via https**://swarm-gateways.net/"
-msgstr "**swarmgw.put(content, cb)**: 通过 https**://swarm-gateways.net/ 上传文件到Swarm"
+msgstr " **swarmgw.put(content, cb)** : 通过 https**://swarm-gateways.net/ 上传文件到Swarm"
 
