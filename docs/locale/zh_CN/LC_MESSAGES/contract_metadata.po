@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-24 17:10+0200\n"
-"PO-Revision-Date: 2023-08-01 13:00\n"
+"PO-Revision-Date: 2024-09-26 01:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "MIME-Version: 1.0\n"
@@ -23,11 +23,11 @@ msgstr "编译工具"
 
 #: ../../contract_metadata.md:4
 msgid "When a compilation for a Solidity file succeeds, Remix creates three JSON files for each compiled contract. Files can be seen in the `File Explorers plugin` as:"
-msgstr "当Solidity文件的编译成功时，Remix会为每个已编译合约创建三个JSON文件。这些文件可以在`File Explorers插件`中看到："
+msgstr "当Solidity文件的编译成功时，Remix会为每个已编译合约创建三个JSON文件。这些文件可以在 `File Explorers插件` 中看到："
 
 #: ../../contract_metadata.md:6
 msgid "`artifacts/<contractName>.json`: contains the link to the libraries, the bytecode, the deployed bytecode, the gas estimation, the method identifiers, and the ABI. It is used for linking a library address to the file."
-msgstr "`artifacts/<contractName>.json`：包含库的链接、字节码、部署后的字节码、燃气估算值、方法标识符和 ABI。它用于将库地址与文件进行关联。"
+msgstr " `artifacts/<contractName>.json` ：包含库的链接、字节码、部署后的字节码、gas估算值、方法标识符和 ABI。它用于将库地址与文件进行关联。"
 
 #: ../../contract_metadata.md:7
 msgid "`artifacts/<contractName_metadata>.json`: contains the metadata from the output of Solidity compilation."
@@ -35,11 +35,11 @@ msgstr "`artifacts/<contractName_metadata>.json`：包含 Solidity 编译输出�
 
 #: ../../contract_metadata.md:8
 msgid "`artifacts/build-info/<dynamic_hash>.json`: contains info about `solc` compiler version, compiler input and output. This file is generated similar to the files generated through Hardhat compilation. You can also try [Hardhat compilation](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation) from Remix."
-msgstr "`artifacts/build-info/<dynamic_hash>.json`：包含有关 `solc` 编译器版本、编译器输入和输出的信息。此文件类似于通过 Hardhat 编译生成的文件。您还可以尝试从 Remix 进行 [Hardhat 编译](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation)。"
+msgstr " `artifacts/build-info/<dynamic_hash>.json` ：包含有关 `solc` 编译器版本、编译器输入和输出的信息。此文件类似于通过 Hardhat 编译生成的文件。您还可以尝试从 Remix 进行 [Hardhat 编译](https://remix-ide.readthedocs.io/en/latest/hardhat.html#enable-hardhat-compilation)。"
 
 #: ../../contract_metadata.md:10
 msgid "Please note that in order to generate these artifact files, the **Generate contract metadata** box in the **General settings** section of the **Settings** module needs to be checked. By default, it is checked."
-msgstr "请注意，为了生成这些artifact文件，需要在**设置**模块的**常规设置**部分中勾选**生成合约元数据**框。默认情况下，它已被勾选。"
+msgstr "请注意，为了生成这些artifact文件，需要在 **设置** 模块的 **常规设置** 部分中勾选 **生成合约元数据** 框。默认情况下，它已被勾选。"
 
 #: ../../contract_metadata.md:12
 msgid "You can write scripts that can access either of these files."
@@ -55,19 +55,19 @@ msgstr "默认情况下，Remix 会自动部署所需的库。"
 
 #: ../../contract_metadata.md:19
 msgid "When you open the metadata file for the libraries - **artifact/filename.json** you will see the following sections:"
-msgstr "当您打开库的元数据文件 - **artifact/filename.json**，您将看到以下部分："
+msgstr "当您打开库的元数据文件 - **artifact/filename.json** ，您将看到以下部分："
 
 #: ../../contract_metadata.md:21
 msgid "`linkReferences` contains a map representing libraries which depend on the current contract.  Values are addresses of libraries used for linking the contract."
-msgstr "`linkReferences`包含一个表示依赖于当前合约的库的映射。值是用于链接合约的库地址。"
+msgstr " `linkReferences` 包含一个表示依赖于当前合约的库的映射。值是用于链接合约的库地址。"
 
 #: ../../contract_metadata.md:24
 msgid "`autoDeployLib` defines if the libraries should be auto deployed by Remix or if the contract should be linked with libraries described in `linkReferences`"
-msgstr "`autoDeployLib`定义了是否应该由 Remix 自动部署这些库，或者将合约与 `linkReferences`中描述的库进行链接。"
+msgstr " `autoDeployLib` 定义了是否应该由 Remix 自动部署这些库，或者将合约与 `linkReferences` 中描述的库进行链接。"
 
 #: ../../contract_metadata.md:26
 msgid "Note that Remix will resolve addresses corresponding to the current network. By default, a configuration key follows the form: `<network_name>:<networkd_id>`, but it is also possible to define `<network_name>` or `<network_id>` as keys."
-msgstr "请注意，Remix 将解析对应于当前网络的地址。默认情况下，配置键遵循以下格式：`<network_name>:<networkd_id>`，但也可以定义`<network_name>`或`<network_id>`作为键。"
+msgstr "请注意，Remix 将解析对应于当前网络的地址。默认情况下，配置键遵循以下格式： `<network_name>:<networkd_id>` ，但也可以定义 `<network_name>` 或 `<network_id>` 作为键。"
 
 #: ../../contract_metadata.md:30
 msgid "Here is a sample metadata file for linking a library:"
