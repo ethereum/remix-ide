@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-12 15:08-0400\n"
-"PO-Revision-Date: 2024-09-26 01:31\n"
+"PO-Revision-Date: 2024-10-10 01:40\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "エディタで、空のファイルに次のコントラクトをペー
 
 #: ../../create_deploy.md:49
 msgid "When pasting in code, make sure you understand it before deploying or interacting with it. Don't get scammed!"
-msgstr ""
+msgstr "コードを張り付ける時に、事前に内容を理解してから、デプロイまたは動作をさせてください。詐欺に引っかからないようにしましょう！"
 
 #: ../../create_deploy.md:51
 msgid "Compile the Contract"
@@ -75,67 +75,67 @@ msgstr "コントラクトのコンパイル"
 
 #: ../../create_deploy.md:53
 msgid "With the contract above as the active tab in the Editor, compile the contract.   A quick way to compile is to hit **ctrl + s**. You can also compile by going to the Solidity compiler and clicking the compile button, or by right clicking a file in the File Explorer, or by clicking the play button at the top of the Editor."
-msgstr ""
+msgstr "エディタのアクティブなタブのコントラクトで、コントラクトのコンパイルをします。手早くコンパイルするには、 **ctrl + s** を押してください。または、Solidityコンパイラへ行きコンパイルすることもできます。その場合は、コンパイルボタンでクリックしてください。ファイルエクスプローラにあるファイルを右クリック、エディタのPlayボタンをクリックすることでも可能です。"
 
 #: ../../create_deploy.md:56
 msgid "**For More Info** see the docs on the [Solidity Compiler](compile.html)."
-msgstr ""
+msgstr "**より詳細な情報は**、 [Solidityコンパイラ](compile.html)のドキュメントをご覧ください。"
 
 #: ../../create_deploy.md:58
 msgid "Deploy the contract"
-msgstr ""
+msgstr "コントラクトのデプロイ"
 
 #: ../../create_deploy.md:60
 msgid "Go to the **Deploy & Run Transactions** plugin."
-msgstr ""
+msgstr "**Deploy & Run Transactions** プラグインに移動します。"
 
 #: ../../create_deploy.md:62
 msgid "At the top of this plugin is the Environment select box.  Here you can choose where you want to deploy your contract.  There are many choices.  For more info about these options see [this section](run.html#environment) of the docs."
-msgstr ""
+msgstr "Environment選択ボックスは、プラグインの最上部にあります。ここでは、あなたのコントラクトをデプロイしたい環境を選択できます。選択項目が多数あります。詳細については、ドキュメントの[こちらのセクション](run.html#environment)をご覧ください。"
 
 #: ../../create_deploy.md:64
 msgid "For a brief synopsis:"
-msgstr ""
+msgstr "概要:"
 
 #: ../../create_deploy.md:66
 msgid "**Injected Provider** is used to connect Remix with a Browser Wallet (e.g. Metamask) which is generally for deploying to a public network."
-msgstr ""
+msgstr "**Injected Provider** は、ブラウザーウォレット(例: MetaMask)でRemixに接続する際に使われます。一般的に、これでパブリックネットワークにデプロイします。"
 
 #: ../../create_deploy.md:68
 msgid "**Remix VM** is a test blockchain in the browser.  There are quite a few \"flavors\" of the Remix VM. Each \"flavor\" is associated with a different hard fork with the name in parathesies - e.g. Remix VM (Shanghai) or for the choice of a chain to fork into the Remix VM."
-msgstr ""
+msgstr "**Remix VM** は、ブラウザ上のテスト用ブロックチェーンです。Remix VMには、いくつかの「種類」があります。各「種類」には、それぞれ違うハードフォークの名前がカッコ内に記述されており関連付けられています。例: Remix VM (Shanghai)は、すなわちRemix VMでフォークのチェーンを選択したことになります。"
 
 #: ../../create_deploy.md:70
 msgid "The **Remix VM** is convenient because it is a blockchain that runs in the browser and nothing else needs to be installed in order to run it."
-msgstr ""
+msgstr "**Remix VM** は、ブラウザー上で実行されるブロックチェーンなので、実行するのにインストールが不要なため便利です。"
 
 #: ../../create_deploy.md:72
 msgid "**Dev** is for connecting Remix to a local chain running on your computer."
-msgstr ""
+msgstr "**Dev** は、Remixをあなたのコンピュータ上で実行しているローカルチェーンに接続します。"
 
 #: ../../create_deploy.md:74
 msgid "**L2** is for connecting Remix to Optimism or Abritrum via a browser wallet.  Its essentially the same as Injected Provider, but it sets the wallet with the configuration of the specified L2."
-msgstr ""
+msgstr "**L2** は、RemixをOptimismやArbitrumへブラウザーウォレット経由で接続します。Injected Providerと本質的に違いはありませんが、特定のL2用に設定されたウォレットがセットされています。"
 
 #: ../../create_deploy.md:76
 msgid "(For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))"
-msgstr ""
+msgstr "(詳細は、[トランザクションの実行](https://remix-ide.readthedocs.io/en/latest/run.html)を参照してください)"
 
 #: ../../create_deploy.md:78
 msgid "Select the top Remix VM environment"
-msgstr ""
+msgstr "最上部のRemix VM環境を選択する"
 
 #: ../../create_deploy.md:81
 msgid "Choose the top first Remix VM in the dropdown list."
-msgstr ""
+msgstr "ドロップダウンリストの最上部の最初にあるRemix VMを選択します。"
 
 #: ../../create_deploy.md:83
 msgid "The Remix VM comes with 10 accounts funded with 100 ether."
-msgstr ""
+msgstr "Remix VMには、100イーサを保有している10個のアカウントが付属しています。"
 
 #: ../../create_deploy.md:85
 msgid "**NOTE:** When you are in the **Remix VM** and you reload the browser - the **Remix VM** will also restart to its fresh & default state.  For a more realistic testing environment, use a public testnet."
-msgstr ""
+msgstr "**注意:** **Remix VM**使用中に、ブラウザーをリロードすると、 **Remix VM** もまた再起動してリフレッシュされデフォルト状態に戻ります。よりリアルなテスト環境には、パブリックテストネットを使ってください。"
 
 #: ../../create_deploy.md:87
 msgid "![](images/a-run-remix-vm-accounts.png)"
@@ -143,7 +143,7 @@ msgstr "![](images/a-run-remix-vm-accounts.png)"
 
 #: ../../create_deploy.md:89
 msgid "Deploying a contract"
-msgstr ""
+msgstr "コントラクトのデプロイ"
 
 #: ../../create_deploy.md:92
 msgid "![](images/a-run-testContract.png)"
@@ -151,23 +151,23 @@ msgstr "![](images/a-run-testContract.png)"
 
 #: ../../create_deploy.md:94
 msgid "The constructor of `testContract` needs a parameter of the type `uint256`. Input a uint256 and click on `Deploy`."
-msgstr ""
+msgstr "`testContract` のコンストラクタは、 `uint256`型のパラメータが必要です。 uint256を入力して`Deploy`をクリックしてください。"
 
 #: ../../create_deploy.md:97
 msgid "The transaction is created which deploys the instance of `testContract` ."
-msgstr ""
+msgstr "`testContract` のインスタンスがトランザクションのデプロイによって作成されます。"
 
 #: ../../create_deploy.md:99
 msgid "In a more realistic blockchain, you would have to approve the transaction and then wait for the transaction to be mined. However, because we are using the `Remix VM`, the execution is immediate."
-msgstr ""
+msgstr "実際のブロックチェーンにおいては、トランザクションを承認し、トランザクションが作成されるのを待つ必要があります。しかし、 `Remix VM`を利用する場合は、即座に実行されます。"
 
 #: ../../create_deploy.md:101
 msgid "The terminal will give information about the transaction."
-msgstr ""
+msgstr "ターミナルにトランザクションに関する情報が表示されます。"
 
 #: ../../create_deploy.md:103
 msgid "The newly created instance is displayed in the **Deployed Contracts** section."
-msgstr ""
+msgstr " **Deployed Contracts** セクションに新しく作成されたインスタンスが表示されます。"
 
 #: ../../create_deploy.md:105
 msgid "![](images/a-remix-vm-instance.png)"
@@ -175,23 +175,23 @@ msgstr "![](images/a-remix-vm-instance.png)"
 
 #: ../../create_deploy.md:107
 msgid "Interacting with the deployed instance"
-msgstr ""
+msgstr "デプロイされたインスタンスとのやり取り"
 
 #: ../../create_deploy.md:109
 msgid "Clicking on the caret to the left of the instance of TESTCONTRACT will expand it so its functions are visible."
-msgstr ""
+msgstr "TESTCONTRACTのインスタンスの左にあるキャレットをクリックすると、その関数が展開され表示されます。"
 
 #: ../../create_deploy.md:111
 msgid "This new instance contains the 3 functions (`setP`, `setPN`, `get`)."
-msgstr ""
+msgstr "新しいインスタンスには3つの関数が含まれています(`setP`, `setPN`, `get`)。"
 
 #: ../../create_deploy.md:113
 msgid "Clicking on `setP` or `setPN` will create a new transaction."
-msgstr ""
+msgstr "`setP`または`setPN`をクリックして新しいトランザクションを作成してください。"
 
 #: ../../create_deploy.md:115
 msgid "`setP` is a `payable` function (payable functions have red buttons). With a payable function, value (ETH) can be sent to the contract. The amount of ETH is chosen in the VALUE input field and the unit of ETH is selected in the box to the right."
-msgstr ""
+msgstr "`setP`は、 `payable` 関数(Payable関数は赤いボタン)。payable関数で、値(ETH)をコントラクトへ送信できます。ETHの総量は、VALUEフィールドで選択し、ETHの単位は右にあるボックスで選びます。"
 
 #: ../../create_deploy.md:117
 msgid "![](images/a-remix-vm-value.png)"
@@ -199,15 +199,15 @@ msgstr "[](images/a-remix-vm-value.png)"
 
 #: ../../create_deploy.md:119
 msgid "`setPN` is not payable (an orange button - depending on the theme). It is not possible to send value (Ether) to this function."
-msgstr ""
+msgstr "`setPN` はpayableではありません(テーマによって色が変わりますがオレンジボタンです) 。この関数に値(Ether)を送信することはできません。"
 
 #: ../../create_deploy.md:121
 msgid "`get` is a **view function** (a blue button - depending on the theme). It doesn't execute a transaction because a `get` does not modify the state (it is only returning the value of the variable `value`)."
-msgstr ""
+msgstr "`get`は、**ビュー関数**です(テーマによって変わりますがブルーのボタンです)。これはトランザクションを実行しません。理由としては、`get`は状態を変更しないためです(`value`変数の値を返すのみ)。"
 
 #: ../../create_deploy.md:123
 msgid "The value that gets returned appears just below the `get` button."
-msgstr ""
+msgstr "返された値は、`get` ボタンのすぐ下に表示されます。"
 
 #: ../../create_deploy.md:125
 msgid "![](images/a-remix-vm-view.png)"
