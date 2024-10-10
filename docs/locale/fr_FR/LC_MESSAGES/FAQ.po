@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-12 15:35-0400\n"
-"PO-Revision-Date: 2024-09-26 01:30\n"
+"PO-Revision-Date: 2024-10-10 01:39\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +67,7 @@ msgstr "`Ctrl+Maj+F` : Ouvre l'explorateur de fichiers"
 
 #: ../../FAQ.md:25
 msgid "`CTRL+Alt+F` : Formats the code in the current file"
-msgstr ""
+msgstr "`CTRL+Alt+F` : Formats the code in the current file"
 
 #: ../../FAQ.md:27
 msgid "`Ctrl+Shift+A` : Opens the Plugin Manager"
