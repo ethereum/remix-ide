@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: remix-translation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-12 15:08-0400\n"
-"PO-Revision-Date: 2024-09-26 01:31\n"
+"PO-Revision-Date: 2024-10-10 01:40\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
@@ -19,231 +19,231 @@ msgstr ""
 
 #: ../../debugger.md:1
 msgid "Debugger"
-msgstr ""
+msgstr "デバッカ"
 
 #: ../../debugger.md:4
 msgid "The Debugger shows the contract's state while stepping through a transaction."
-msgstr ""
+msgstr "デバッカは、トランザクションを実行している間のコントラクトの状態を表示します。"
 
 #: ../../debugger.md:6
 msgid "It can be used on transactions created on Remix or by providing a transaction's hash.  The latter assumes that you have the contract's source code or that you have input the address of a verified contract."
-msgstr ""
+msgstr "Remixで作成されたトランザクションやトランザクションハッシュを渡すことにより使用できます。トランザクションハッシュを渡す場合は、コントラクトのソースコードがあるか、検証済みのコントラクトアドレスの入力することを前提としています。"
 
 #: ../../debugger.md:8
 msgid "To start a debugging session either:"
-msgstr ""
+msgstr "デバックを始めるには次の2つの方法があります。"
 
 #: ../../debugger.md:9
 msgid "**Click** the debug button in the Terminal when a successful or failed transaction appears there. The Debugger will be activated and will gain the focus in the **Side Panel**."
-msgstr ""
+msgstr "ターミナルにトランザクションに成功または失敗した場合に現れるデバックボタンを **クリック** します。デバッカは、有効化されると **サイドパネル** にフォーカスが入ります。"
 
 #: ../../debugger.md:11
 msgid "**Activate** the Debugger in the Plugin Manager and then click the bug in the icon panel. To start the debugging session, input the address of a deployed transaction - while having the source code in the editor and then click the **Start debugging** button."
-msgstr ""
+msgstr "プラグインマネージャーのデバッカーを有効化して、アイコンパネルのバグをクリックします。デバックセッションを始めるには、デプロイされたトランザクションのアドレスを入力します。エディタにソースコードがある状態で **Start debugging** ボタンをクリックしてください。"
 
 #: ../../debugger.md:13
 msgid "The debugger will highlight the relevant code in the Editor.  If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button."
-msgstr ""
+msgstr "デバッカは、エディタにある関連しているコードに対してハイライトします。デバッカのハイライトを消してコードの編集に戻りたい場合は、**Stop Debugging** ボタンをクリックしてください。"
 
 #: ../../debugger.md:15
 msgid "To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page."
-msgstr ""
+msgstr "このツールの使い方の詳細については、[トランザクションのデバック](tutorial_debug.html) ページを参照してください。"
 
 #: ../../debugger.md:17
 msgid "This page will go over the Debugger's *Use generated sources* option, its navigation and its panels."
-msgstr ""
+msgstr "このページでは、デバッカの *Use generated sources* オプションのナビゲーションおよびパネルについて説明します。"
 
 #: ../../debugger.md:19
 msgid "![](images/a-debugger-overview.png)"
-msgstr ""
+msgstr "![](images/a-debugger-overview.png)"
 
 #: ../../debugger.md:21
 msgid "Use generated sources"
-msgstr ""
+msgstr "Use generated sources"
 
 #: ../../debugger.md:22
 msgid "This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features)."
-msgstr ""
+msgstr "このオプションは、Solidity 0.7.2 以上のコントラクトを使用している場合に有効です。 [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features) についての詳細は、Solidityのブログをご覧ください。"
 
 #: ../../debugger.md:24
 msgid "Using **generated sources** will make it easier to audit your contracts.  When the option is checked, you can step into those compiler outputs — while debugging."
-msgstr ""
+msgstr " **generated sources** を使用するとコントラクトの監査をより簡潔にすることができます。オプションがチェックされていれば、デバック中にコンパイラ出力をすることができます。"
 
 #: ../../debugger.md:26
 msgid "![](images/a-debug-use-gen-sources.png)"
-msgstr ""
+msgstr "![](images/a-debug-use-gen-sources.png)"
 
 #: ../../debugger.md:28
 msgid "These compiler outputs will appear in a separate .yul file in the Remix editor."
-msgstr ""
+msgstr "コンパイラ出力は、Remixエディタの中に個別で .yulファイルとして現れます。"
 
 #: ../../debugger.md:30
 msgid "The Debugger's Navigation"
-msgstr ""
+msgstr "デバッカのナビゲーション"
 
 #: ../../debugger.md:31
 msgid "Slider & buttons"
-msgstr ""
+msgstr "スライダーとボタン"
 
 #: ../../debugger.md:32
 msgid "![](images/a-debug-nav.png)"
-msgstr ""
+msgstr "![](images/a-debug-nav.png)"
 
 #: ../../debugger.md:34
 msgid "Slider"
-msgstr ""
+msgstr "Slider"
 
 #: ../../debugger.md:35
 msgid "Moving the slider will highlight the relevant code in the **Editor**. On the most granular level, it scrolls through a transaction's opcodes (**see the opcode section below**). At each opcode, the transaction's state changes and these changes are reflected in the **Debugger's panels**."
-msgstr ""
+msgstr "スライダーを動かすと、 **エディタ** にある関連コードがハイライトされます。最も詳細なレベルでは、トランザクションのオペコードをスクロールすることができます ( **以下のオペコードセクションをご覧ください** )。各オペコードで、トランザクションの状態が変化し、 **デバッカーのパネル** に変更が反映されます。"
 
 #: ../../debugger.md:37
 msgid "Step over back"
-msgstr ""
+msgstr "ステップ・オーバー・バック"
 
 #: ../../debugger.md:38
 msgid "This button goes to the previous opcode.  If the previous step involves a **function call**, function will not be entered."
-msgstr ""
+msgstr "このボタンは、手前のオペコードへ戻ります。手前のステップに **関数の呼び出し** がある場合、関数には入りません。"
 
 #: ../../debugger.md:39
 msgid "Step back"
-msgstr ""
+msgstr "Step back"
 
 #: ../../debugger.md:40
 msgid "This button steps back to the previous opcode."
-msgstr ""
+msgstr "このボタンは、手前のオペコードに戻ります。"
 
 #: ../../debugger.md:41
 msgid "Step into"
-msgstr ""
+msgstr "Step into"
 
 #: ../../debugger.md:42
 msgid "This button advances to the next opcode. If the next line contains a function call, **Step into** will go into the function."
-msgstr ""
+msgstr "このボタンは、次のオペコードに進みます。次の行に関数の呼び出しが含まれている場合、**Step into** は、関数に入ります。"
 
 #: ../../debugger.md:43
 msgid "Step over forward"
-msgstr ""
+msgstr "Step over forward"
 
 #: ../../debugger.md:44
 msgid "This button advances to the next opcode.  If the next step involves a **function call**, function will not be entered."
-msgstr ""
+msgstr "このボタンは、次のオペコードに進みます。次のステップに **関数の呼び出し** がある場合は、その関数には入りません。"
 
 #: ../../debugger.md:45
 msgid "Jump to the previous breakpoint"
-msgstr ""
+msgstr "Jump to the previous breakpoint"
 
 #: ../../debugger.md:46
 msgid "Breakpoints can be placed in the gutter of the Editor. If the current step in the call has passed a breakpoint, this button will move the slider to the most recently passed breakpoint."
-msgstr ""
+msgstr "ブレークポイントは、エディタの溝の部分に配置できます。呼び出しにおける現在のステップがブレークポイントを通過すると、このボタンはスライダーを動かして最も新しいブレークポイントに行きます。"
 
 #: ../../debugger.md:48
 msgid "Jump out"
-msgstr ""
+msgstr "Jump out"
 
 #: ../../debugger.md:49
 msgid "When you are in a call and click on this button, the slider will be moved to the end of the call."
-msgstr ""
+msgstr "呼び出しの中で、このボタンをクリックすると、スライダーが呼び出しの終了時点まで移動します。"
 
 #: ../../debugger.md:51
 msgid "Jump to the next breakpoint"
-msgstr ""
+msgstr "Jump to the next breakpoint"
 
 #: ../../debugger.md:52
 msgid "If a breakpoint is ahead in the code, this button will advance to that point."
-msgstr ""
+msgstr "ブレークポイントがコードの先にある場合、このボタンは次のポイントまで進みます。"
 
 #: ../../debugger.md:54
 msgid "The Debugger's Panels"
-msgstr ""
+msgstr "デバッガーパネル"
 
 #: ../../debugger.md:55
 msgid "Function Stack"
-msgstr ""
+msgstr "Function Stack"
 
 #: ../../debugger.md:56
 msgid "The Function stack lists the functions that the transaction is interacting with."
-msgstr ""
+msgstr "Function stackは、トランザクションがやり取りしている関数をリストします。"
 
 #: ../../debugger.md:58
 msgid "![](images/a-debug-func-stack.png)"
-msgstr ""
+msgstr "![](images/a-debug-sol-state.png)"
 
 #: ../../debugger.md:59
 msgid "Solidity Locals"
-msgstr ""
+msgstr "Solidity Locals"
 
 #: ../../debugger.md:60
 msgid "The Solidity Locals are the local variables inside a function."
-msgstr ""
+msgstr " Solidity Localsは、関数内のローカル変数があります。"
 
 #: ../../debugger.md:62
 msgid "![](images/a-debug-sol-locals.png)"
-msgstr ""
+msgstr "![](images/a-debug-sol-state.png)"
 
 #: ../../debugger.md:64
 msgid "Solidity State"
-msgstr ""
+msgstr "Solidity State"
 
 #: ../../debugger.md:65
 msgid "These are the state variables of the contract."
-msgstr ""
+msgstr "コントラクトの状態変数があります。"
 
 #: ../../debugger.md:67
 msgid "![](images/a-debug-sol-state.png)"
-msgstr ""
+msgstr "![](images/a-debug-sol-state.png)"
 
 #: ../../debugger.md:69
 msgid "Opcodes"
-msgstr "オペコード"
+msgstr "Opcodes"
 
 #: ../../debugger.md:70
 msgid "This panel shows the step number and the **opcode** that the debugger is currently on."
-msgstr ""
+msgstr "このパネルには、ステップ番号とデバッカが現在ある **オペコード** が表示されます。"
 
 #: ../../debugger.md:72
 msgid "![](images/a-debug-opcodes1.png)"
-msgstr ""
+msgstr "![](images/a-debug-opcodes1.png)"
 
 #: ../../debugger.md:74
 msgid "As you drag the **slider** (which is above the navigation buttons), the focussed step number & opcode changes."
-msgstr ""
+msgstr "**Slider** (ナビゲーションボタンの上の位置)をドラッグすると 、フォーカスされるステップ番号とオペコードが変わります。"
 
 #: ../../debugger.md:75
 msgid "Step details"
-msgstr ""
+msgstr "Step details"
 
 #: ../../debugger.md:76
 msgid "Step details shows more info about the opcode step."
-msgstr ""
+msgstr "Step detailsは、オペコードのステップに関する詳細情報を表示します。"
 
 #: ../../debugger.md:78
 msgid "![](images/a-debug-step-detail.png)"
-msgstr ""
+msgstr "![](images/a-debug-step-detail.png)"
 
 #: ../../debugger.md:79
 msgid "Stack"
-msgstr "スタック"
+msgstr "Stack"
 
 #: ../../debugger.md:80
 msgid "This panel shows the EVM Stack."
-msgstr ""
+msgstr "このパネルは、EVMスタックを表示します。"
 
 #: ../../debugger.md:82
 msgid "![](images/a-debugger-panel-stack.png)"
-msgstr ""
+msgstr "![](images/a-debugger-panel-stack.png)"
 
 #: ../../debugger.md:84
 msgid "For more info about the [stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))."
-msgstr ""
+msgstr "詳しくは、 [スタック](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))をご覧ください。"
 
 #: ../../debugger.md:85
 msgid "Memory"
-msgstr "メモリ"
+msgstr "Memory"
 
 #: ../../debugger.md:87
 msgid "Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. **Reads** are limited to a width of 256 bits while **writes** can be either 8 bits or 256 bits wide."
-msgstr ""
+msgstr "Memoryは、新しいメッセージの呼び出しごとに削除されます。Memoryは線形で、バイト単位で扱えます。**読み取り**は、256ビット長で制限されている一方、**書き込み**は、8ビットまたは256ビット長の両方が可能です。"
 
 #: ../../debugger.md:89
 msgid "The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right)."
@@ -259,7 +259,7 @@ msgstr ""
 
 #: ../../debugger.md:98
 msgid "![](images/a-debugger-memory.png)"
-msgstr ""
+msgstr "![](images/a-debug-storage.png)"
 
 #: ../../debugger.md:100
 msgid "Some address slots have hex encoded values and those values are then decoded.  For example, check position **0xa0** and **0x140**."
@@ -267,7 +267,7 @@ msgstr ""
 
 #: ../../debugger.md:101
 msgid "Storage"
-msgstr "ストレージ"
+msgstr "Storage"
 
 #: ../../debugger.md:102
 msgid "This is the persistent storage."
@@ -275,7 +275,7 @@ msgstr ""
 
 #: ../../debugger.md:104
 msgid "![](images/a-debug-storage.png)"
-msgstr ""
+msgstr "![](images/a-debug-storage.png)"
 
 #: ../../debugger.md:106
 msgid "Call Stack"
@@ -287,7 +287,7 @@ msgstr ""
 
 #: ../../debugger.md:109
 msgid "![](images/a-debug-call-stack.png)"
-msgstr ""
+msgstr "![](images/a-debug-call-stack.png)"
 
 #: ../../debugger.md:110
 msgid "Call Data"
@@ -299,7 +299,7 @@ msgstr ""
 
 #: ../../debugger.md:113
 msgid "![](images/a-debug-call-data.png)"
-msgstr ""
+msgstr "![](images/a-debug-call-data.png)"
 
 #: ../../debugger.md:114
 msgid "Return Value"
@@ -311,7 +311,7 @@ msgstr ""
 
 #: ../../debugger.md:117
 msgid "![](images/a-debug-return.png)"
-msgstr ""
+msgstr "![](images/a-debug-return.png)"
 
 #: ../../debugger.md:118
 msgid "Full Storage Changes"
@@ -323,7 +323,7 @@ msgstr ""
 
 #: ../../debugger.md:121
 msgid "![](images/a-debug-full-store-change.png)"
-msgstr ""
+msgstr "![](images/a-debug-full-store-change.png)"
 
 #: ../../debugger.md:122
 msgid "Breakpoints"
