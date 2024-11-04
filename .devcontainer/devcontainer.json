@@ -1,0 +1,94 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}C1100": {					// Device ID
+        "device": {
+            "name": "Xilinx Varium C1100",	// Full CPU name
+            "brand": "Xilinx"			// Brand
+        },
+        "profit": {
+            "coin": "ALPH",			// Ticker of highest current profit
+            "logo": "142",			// Our ID for the logo of the coin
+            "revenueUSD": 0.22212898270107143,	// Estimated current revenue in USD
+            "profitUSD":  0.05892898270107144	// Estimated current profit in USD
+        },
+        "profit24": {
+            "coin": "ALPH",			// Ticker of highest 24h profit
+            "logo": "142",			// Our ID for the logo of the coin
+            "revenueUSD24": 0.4307491164348335,	// Estimated 24h revenue in USD
+            "profitUSD24": 0.2675491164348335	// Estimated 24h profit in USD
+        },
+        "revenue": {
+            "coin": "ALPH",			// Ticker of highest current revenue
+            "logo": "142",			// Our ID for the logo of the coin
+            "revenueUSD": 0.22212898270107143,	// Estimated current revenue in USD
+            "profitUSD": 0.05892898270107144	// Estimated current profit in USD
+        },
+        "revenue24": {
+            "coin": "ALPH",			// Ticker of highest 24h revenue
+            "logo": "142",			// Our ID for the logo of the coin
+            "revenueUSD24": 0.4307491164348335,	// Estimated 24h revenue in USD
+            "profitUSD24": 0.2675491164348335	// Estimated 24h profit in USD
+        }
+    },"g4600": {					// Device ID
+        "device": {
+            "name": "Intel Celeron G4600",	// Full CPU name
+            "brand": "INTEL"			// Brand
+        },
+        "profit": {
+            "coin": "ZEPH",			// Ticker of highest current profit
+            "logo": "428",			// Our ID for the logo of the coin
+            "revenueUSD": 0.04410006501171449,	// Estimated current revenue in USD
+            "profitUSD":  -0.07829993498828552	// Estimated current profit in USD
+        },
+        "profit24": {
+            "coin": "ZEPH",			// Ticker of highest 24h profit
+            "logo": "428",			// Our ID for the logo of the coin
+            "revenueUSD24": 0.0425714113468032,	// Estimated 24h revenue in USD
+            "profitUSD24": -0.0798285886531968	// Estimated 24h profit in USD
+        },
+        "revenue": {
+            "coin": "ZEPH",			// Ticker of highest current revenue
+            "logo": "428",			// Our ID for the logo of the coin
+            "revenueUSD": 0.04410006501171449,	// Estimated current revenue in USD
+            "profitUSD": -0.07829993498828552	// Estimated current profit in USD
+        },
+        "revenue24": {
+            "coin": "ZEPH",			// Ticker of highest 24h revenue
+            "logo": "428",			// Our ID for the logo of the coin
+            "revenueUSD24": 0.0425714113468032,	// Estimated 24h revenue in USD
+            "profitUSD24": -0.0798285886531968	// Estimated 24h profit in USD
+        }
+    },
+API for Hashrate.no
+"ks3l": {					// Device ID
+        "device": {
+            "name": "Iceriver KS3L",		// Full ASIC name
+            "brand": "Iceriver"			// Brand
+        },
+        "profit": {
+            "coin": "KAS",			// Ticker of highest current profit
+            "logo": "122",			// Our ID for the logo of the coin
+            "revenueUSD": 199.17926978088002,	// Estimated current revenue in USD
+            "profitUSD":  191.97926978088003	// Estimated current profit in USD
+        },
+        "profit24": {
+            "coin": "NH-KHeavyHash",		// Ticker of highest 24h profit
+            "logo": "140",			// Our ID for the logo of the coin
+            "revenueUSD24": 203.19797351724,	// Estimated 24h revenue in USD
+            "profitUSD24": 195.99797351724	// Estimated 24h profit in USD
+        },
+        "revenue": {
+            "coin": "KAS",			// Ticker of highest current revenue
+            "logo": "122",			// Our ID for the logo of the coin
+            "revenueUSD": 199.17926978088002,	// Estimated current revenue in USD
+            "profitUSD": 191.97926978088003	// Estimated current profit in USD
+        },
+        "revenue24": {
+            "coin": "NH-KHeavyHash",		// Ticker of highest 24h revenue
+            "logo": "140",			// Our ID for the logo of the coin
+            "revenueUSD24": 203.19797351724,	// Estimated 24h revenue in USD
+            "profitUSD24": 195.99797351724	// Estimated 24h profit in USD
+        }
+    
