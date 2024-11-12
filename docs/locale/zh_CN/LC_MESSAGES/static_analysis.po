@@ -54,7 +54,7 @@ msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-s
 msgstr "[Slither静态分析](https://github.com/crytic/slither#slither-the-solidity-source-analyzer)：全面的静态分析工具"
 
 #: ../../static_analysis.md:17
-msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
+msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remixd.html)."
 msgstr "**注意：** Slither 只能在 Remix 通过 [Remixd]（remix.html）连接到本地计算机文件系统时使用。"
 
 #: ../../static_analysis.md:19
@@ -110,8 +110,8 @@ msgid "Slither"
 msgstr "Slither"
 
 #: ../../static_analysis.md:45
-msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded."
-msgstr "要使用该插件运行 [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer)，需要使用 [Remixd](remix.html)将 Remix IDE 连接到文件系统。  Remixd 运行后，Slither 会自动加载。"
+msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remixd.html).  Once Remixd is running, Slither is automatically loaded."
+msgstr "要使用该插件运行 [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer)，需要使用 [Remixd](remixd.html)将 Remix IDE 连接到文件系统。  Remixd 运行后，Slither 会自动加载。"
 
 #: ../../static_analysis.md:47
 msgid "Solhint"

@@ -54,7 +54,7 @@ msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-s
 msgstr ""
 
 #: ../../static_analysis.md:17
-msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
+msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remixd.html)."
 msgstr ""
 
 #: ../../static_analysis.md:19
@@ -110,7 +110,7 @@ msgid "Slither"
 msgstr ""
 
 #: ../../static_analysis.md:45
-msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded."
+msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remixd.html).  Once Remixd is running, Slither is automatically loaded."
 msgstr ""
 
 #: ../../static_analysis.md:47
