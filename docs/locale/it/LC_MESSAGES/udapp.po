@@ -140,7 +140,7 @@ msgstr "Interazioni di livello basso"
 
 #: ../../udapp.md:60
 msgid "Low level interactions are used to send funds or calldata or funds & calldata to a contract through the **receive()** or **fallback()** function.  Typically, you should only need to implement the fallback function if you are following an upgrade or proxy pattern."
-msgstr "Le interazioni di basso livello sono utilizzate per inviare fondi o calldata o fondi & calldata a un contratto tramite la funzione **recieve()** o **fallback()**.  In genere, è necessario implementare la funzione di fallback solo se si segue uno schema di aggiornamento o proxy."
+msgstr "Le interazioni di basso livello sono utilizzate per inviare fondi o calldata o fondi & calldata a un contratto tramite la funzione **receive()** o **fallback()**.  In genere, è necessario implementare la funzione di fallback solo se si segue uno schema di aggiornamento o proxy."
 
 #: ../../udapp.md:62
 msgid "The low level interactions section is below the functions in each deployed contract."
