@@ -54,8 +54,8 @@ msgid "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-s
 msgstr "[Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): una completa herramienta de análisis estático"
 
 #: ../../static_analysis.md:17
-msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html)."
-msgstr "**NOTA:** Slither sólo puede utilizarse cuando Remix está conectado al sistema de archivos del ordenador local con [Remixd](remix.html)."
+msgid "**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remixd.html)."
+msgstr "**NOTA:** Slither sólo puede utilizarse cuando Remix está conectado al sistema de archivos del ordenador local con [Remixd](remixd.html)."
 
 #: ../../static_analysis.md:19
 msgid "How to use"
@@ -110,8 +110,8 @@ msgid "Slither"
 msgstr "Slither"
 
 #: ../../static_analysis.md:45
-msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded."
-msgstr "Para ejecutar [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) con este plugin, necesita conectar Remix IDE a su sistema de archivos con [Remixd](remix.html).  Una vez que Remixd esté funcionando, Slither se cargará automáticamente."
+msgid "To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remixd.html).  Once Remixd is running, Slither is automatically loaded."
+msgstr "Para ejecutar [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) con este plugin, necesita conectar Remix IDE a su sistema de archivos con [Remixd](remixd.html).  Una vez que Remixd esté funcionando, Slither se cargará automáticamente."
 
 #: ../../static_analysis.md:47
 msgid "Solhint"
