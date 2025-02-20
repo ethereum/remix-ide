@@ -130,7 +130,7 @@ msgid "Use your own INFURA IPFS node. This requires a subscription. [Learn more]
 msgstr ""
 
 #: ../../settings.md:49
-msgid "Use any external IPFS which doesn’t require any authentification."
+msgid "Use any external IPFS which doesn’t require any authentication."
 msgstr ""
 
 #: ../../settings.md:50
