@@ -29,43 +29,69 @@ Insert breakpoints, step through a contract, check high level and low level para
 <br>profile name: **debugger**
 <br>[Documentation](debugger.html)
 
+**Contract Verification** &nbsp;<br>
+Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
+<br>profile name: **contract-verification**
+
 **Solidity Unit Testing** &nbsp; ![](images/pi-sut.png)<br>
 Run unit test written in Solidity.
 <br>profile name: **solidityUnitTesting**
 <br>[Documentation](unittesting.html)
 
 **Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br>
-Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html).
+Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html) and with the linter, **Solhint**.
 <br>profile name: **solidityStaticAnalysis**
 <br>[Documentation](static_analysis.html)
+
+**Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;
+<br>Compile Vyper code using local or remote Vyper compiler.
+<br>profile name: **vyper** 
+<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/vyper.html)
 
 ## Additional Plugins
 
 (sorted alphabetically)
 
-**Celo Compiler / Deployer** &nbsp; ![](images/pi-celo.png)<br>
-Compile & Deploy to the Celo blockchain.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin
-<br>[Documentation](https://github.com/dexfair/celo-remix-plugin)
-<br>[Make an issue](https://github.com/dexfair/celo-remix-plugin/issues)
+**Arbitrum Stylus** &nbsp; ![](images/pi-welldone1.png)<br>
+Deployment and execution of smart contracts via Arbitrum Stylus
+<br>[Profile name](https://remix-plugin-arbitrum.welldonestudio.io): remix-plugin-arbitrum
+<br>[Documentation](https://docs.welldonestudio.io/code)
+<br>[Make an issue](https://github.com/dsrvlabs/arbitrum-stylus/issues)
+
+**BIF Solidity** &nbsp;<br>
+Compile Solidity smart contracts for the Xinghuo BIF (Blockchain-based Industrial Finance) network.
+<br>[Profile name](https://bif.remix-project.cn/solidity-compiler/): bif-solidity  
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/solidity-compiler/README.md)  
+<br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
+
+**BIF UDApp** &nbsp;<br>
+Deploy and interact with Solidity smart contracts on the Xinghuo BIF (Blockchain-based Industrial Finance) network.
+<br>[Profile name](https://bif.remix-project.cn/udapp/): bif-udapp  
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp/README.md)  
+<br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
+
+**BIF UDApp JS** &nbsp; <br>
+Deploy and interact with JavaScript-based smart contracts on the Xinghuo BIF (Blockchain-based Industrial Finance) network.
+<br>[Profile name](https://bif.remix-project.cn/udapp-js/): bif-udapp-js  
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp-js/README.md)  
+<br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
+
+**BuildBear** &nbsp; <br>
+Create private, forked testnets from any EVM chain with integrated explorer, faucet, and RPC for enhanced smart contract development.
+<br>[Profile name](https://remix-plugin.buildbear.io): buildbear  
+<br>[Documentation](https://www.buildbear.io/resources/guides-and-tutorials/remix_plugin)  
+<br>[Make an issue](https://github.com/BuildBear/remix-plugin/issues)
+
 
 **Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br>
 Deploy a contract to multiple chains (1 at a time) with the same address.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/celo/profile.json): celo-remix-plugin
-<br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin)
+<br>[Profile name](https://github.com/hexdivision/remix-contract-deployer-plugin): contract_deployer
+<br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin#getting-started-with-contract-deployer-plugin)
 <br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
 
-**Contract Verification - Etherscan** &nbsp; ![](images/pi-etherscan.png) &nbsp;
-<br>Verify contracts on Etherscan.
-<br>[Profile name](https://github.com/ethereum/remix-project/blob/master/apps/etherscan/src/profile.json): etherscan
-<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#etherscan)
-<br>[Make an issue](https://github.com/ethereum/remix-project/tree/master/apps/etherscan)
-
-**Contract Verification - Sourcify** &nbsp; ![](images/pi-sourcify.png) &nbsp;
-<br>Verify contracts and fetch verified contracts
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/source-verifier/profile.json): sourcify
-<br>[Documentation](https://docs.sourcify.dev/docs/intro/)
-<br>[Make an issue](https://github.com/sourcifyeth/remix-sourcify/issues)
+**Contract Verification** &nbsp;<br>
+Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
+<br>profile name: **contract-verification**
 
 **Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br>
 Find any smart contract, build your project faster.
@@ -74,22 +100,17 @@ Find any smart contract, build your project faster.
 <br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin)
 <br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)
 
-**Defi Explorer** &nbsp; ![](images/pi-defi-exp.png) &nbsp; <br>
-The Defi Explorer loads the Uniswap V2 Protocol into the File Explorers.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-explorer/profile.json): defiexplorer
-<br>[Documentation](https://remix-defi-explorer-plugin.readthedocs.io/en/latest/)
-<br>[Make an issue](https://github.com/Machinalabs/remix-defi-explorer-plugin/issues)
+**COTI Plugin** &nbsp; ![](images/pi-coti.png)<br>
+Develop and test privacy-preserving smart contracts on the COTI network directly within Remix IDE.
+<br>[Profile name](https://github.com/coti-io/coti-remix-plugin): coti-remix-plugin  
+<br>[Documentation](https://docs.coti.io/coti-documentation/running-a-coti-node)  
+<br>[Make an issue](https://github.com/coti-io/coti-remix-plugin/issues)
 
-**Defi Tutorials** &nbsp; (main panel) &nbsp; ![](images/pi-defi-tut.png) <br>
-Learn about UMA. This plugin works with the UMA tutorials plugin.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/defi-tutorials/profile.json): defiTutorials
-<br>[Make an issue](https://github.com/Machinalabs/remix-defi-tutorials-plugin/issues)
-
-**DGIT** &nbsp; ![](images/pi-dgit.png) &nbsp; Version Control <br>
-Clone repos from github & create GIT repos & use standard git commands. Also export/import to IPFS.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/dgit/profile.json): dgit
-<br>[Documentation](https://github.com/bunsenstraat/remix-storage-plugin)
-<br>[Make an issue](https://github.com/bunsenstraat/remix-storage-plugin/issues)
+**Defender Deploy** &nbsp;<br>
+Deploy smart contracts using OpenZeppelin Defender directly from Remix IDE.
+<br>[Profile name](https://remix.ethereum.org/#activate=defender-deploy): defender-deploy  
+<br>[Documentation](https://docs.openzeppelin.com/defender/remix-plugin)  
+<br>[Make an issue](https://github.com/OpenZeppelin/defender-deploy-plugin/issues)
 
 **Klaytn** &nbsp; ![](images/pi-klaytn.png)
 <br>Deploy & interact with smart contracts to the Klaytn public network, local klaytn nodes.
@@ -103,38 +124,35 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://remix-learneth-plugin.readthedocs.io/en/latest/index.html)
 <br>[Make an issue](https://github.com/bunsenstraat/remix-learneth-plugin/issues)
 
-**Lexon** &nbsp; ![](images/pi-lexon.png) &nbsp;
-<br>Lexon is a language that reads like a legal contract and compile into Solidity (and then bytecode). This plugin allows you to take Lexon code and to
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/lexon/profile.json): lexon
-<br>[Documentation](https://gitlab.com/lexon-foundation/lexon-remix)
-<br>[Make an issue](https://gitlab.com/lexon-foundation/lexon-remix/-/issues)
-
-**Moonbeam** &nbsp; ![](images/pi-moonbeam.png)
-<br>Compile and Deploy to the Moonbeam network
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/moonbeam/profile.json): moonbeam-remix-plugin
-<br>[Documentation](https://github.com/purestake/moonbeam-remix-plugin)
-<br>[Make an issue](https://github.com/PureStake/moonbeam-remix-plugin/issues)
-
-**Mythx Security Verification** &nbsp; ![](images/pi-mythx.png)
-<br>Free version and paid version for Mythx analysis.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/mythx/profile.json): mythx
-<br>[Documentation](https://docs.mythx.io/tools-integrations/remix)
-<br>[Make an issue](https://github.com/aquiladev/remix-mythx-plugin/issues)
-
-**Nahmii compiler** &nbsp; ![](images/pi-moonbeam.png)
+**Nahmii compiler** &nbsp;
 <br>Compile solidity contracts for the Nahmii network
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/nahmii/profile.json): nahmii-compiler
 <br>[Make an issue](https://github.com/nahmii-community/remix-nahmii-compiler-plugin/issues)
 
-**One Click Dapp** &nbsp; ![](images/pi-1click.png)
-<br>Makes a basic front end for your contract once it is deployed on a public testnet.  
-[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/one-click-dapp/profile.json): oneClickDapp
-<br>[Documentation](https://github.com/oneclickdapp/remix-plugin-one-click-dapp)
-<br>[Make an issue](https://github.com/oneclickdapp/remix-plugin-one-click-dapp/issues)
+**Restore Backup Zip** &nbsp;<br>
+Restore your backup of the zip file containing Remix IDE workspaces. The zip file will include both files and settings, to ensure data safety and portability.
+<br>[Profile name](https://remix.ethereum.org/#activate=backup-restore): backup-restore  
+<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/backup_restore.html)  
+<br>[Make an issue](https://github.com/ethereum/remix-project/issues)
+
+**Sentio** &nbsp; ![](images/pi-sentio.png)<br>
+Monitor and analyze your smart contracts directly within Remix IDE using Sentio's powerful observability tools.
+<br>[Profile name](https://remix.ethereum.org/#activate=sentio): sentio  
+<br>[Documentation](https://docs.sentio.xyz/docs/remix-ide-plugin)  
+<br>[Make an issue](https://github.com/sentioxyz/remix-plugin/issues)
+
+**SolidityScan** &nbsp;<br>
+Perform real-time security analysis of your Solidity smart contracts directly within Remix IDE using SolidityScan's automated auditing tools.
+<br>[Profile name](https://remix.ethereum.org/#activate=solidityscan): solidityscan  
+<br>[Documentation](https://docs.solidityscan.com/remix/)  
+<br>[Make an issue](https://github.com/ethereum/remix-project/issues)
+
+**Solhint**
+This plugin is now part of the Solidity Analyzers plugin.  
 
 **Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;
 <br>Compile contracts written in Cairo to Starknet
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet-cairo1-compiler
+<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/starknet-cairo1-compiler/profile.json): Starknet
 <br>[Documentation](https://github.com/NethermindEth/starknet-remix-plugin)
 <br>[Make an issue](https://github.com/NethermindEth/starknet-remix-plugin/issues)
 
@@ -144,22 +162,6 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix)
 <br>[Make an issue](/issues)
 
-**UMA Playground** &nbsp; (main panel)
-<br>Learn about the UMA protocol. This plugin is loaded from the DEFI Tutorial plugin.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-playground/profile.json): umaPlayground
-<br>[Make an issue](https://github.com/Machinalabs/remix-uma-playground/issues)
-
-**UMA Tutorials** &nbsp; (main panel)
-<br>This plugin is activated by the DEFI Tutorials
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/uma-tutorials/profile.json): umaTutorials
-<br>[Make an issue](https://github.com/Machinalabs/remix-uma-tutorials-plugin/issues)
-
-**Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;
-<br>Compile vyper code using local or remote Vyper compiler.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/vyper/profile.json): vyper
-<br>[Documentation](https://github.com/GrandSchtroumpf/vyper-remix)
-<br>[Make an issue](https://github.com/GrandSchtroumpf/vyper-remix)
-
 **Wallet Connect** &nbsp; (main panel)
 <br>Approve transactions on your mobile device
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect
@@ -167,9 +169,9 @@ Clone repos from github & create GIT repos & use standard git commands. Also exp
 
 **zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
 <br>Compile and deploy smart contracts for zkSync Era.
-<br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/zksync/profile.json): zkSync
-<br>[Documentation](https://docs.zksync.io/)
-<br>[Make an issue](https://github.com/NethermindEth/zksync-remix-plugin/issues)
+<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zksync  
+<br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)  
+<br>[Make an issue](https://github.com/matter-labs/zksync-remix-plugin/issues)
 
 **Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp;
 <br>ZoKrates is a toolbox for zkSNARKs on Ethereum.
