@@ -14,7 +14,7 @@ The `Solidity Analyzers` plugin gangs three analysis tools together to perform s
 - [Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations
 - [Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool
 
-**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
+**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remixd.html).
 
 How to use
 ------------
@@ -42,7 +42,7 @@ By default, warnings from external libraries are not shown.  If you check the bo
 
 Slither
 -------
-To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remix.html).  Once Remixd is running, Slither is automatically loaded. 
+To run [Slither](https://github.com/crytic/slither#slither-the-solidity-source-analyzer) with this plugin, you need to connect Remix IDE to your filesystem with [Remixd](remixd.html).  Once Remixd is running, Slither is automatically loaded. 
 
 Solhint
 -------
