@@ -60,26 +60,26 @@ Deployment and execution of smart contracts via Arbitrum Stylus
 
 **BIF Solidity** &nbsp;<br>
 Compile Solidity smart contracts for the Xinghuo BIF (Blockchain-based Industrial Finance) network.
-<br>[Profile name](https://bif.remix-project.cn/solidity-compiler/): bif-solidity  
-<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/solidity-compiler/README.md)  
+<br>[Profile name](https://bif.remix-project.cn/solidity-compiler/): bif-solidity
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/solidity-compiler/README.md)
 <br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
 
 **BIF UDApp** &nbsp;<br>
 Deploy and interact with Solidity smart contracts on the Xinghuo BIF (Blockchain-based Industrial Finance) network.
-<br>[Profile name](https://bif.remix-project.cn/udapp/): bif-udapp  
-<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp/README.md)  
+<br>[Profile name](https://bif.remix-project.cn/udapp/): bif-udapp
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp/README.md)
 <br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
 
 **BIF UDApp JS** &nbsp; <br>
 Deploy and interact with JavaScript-based smart contracts on the Xinghuo BIF (Blockchain-based Industrial Finance) network.
-<br>[Profile name](https://bif.remix-project.cn/udapp-js/): bif-udapp-js  
-<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp-js/README.md)  
+<br>[Profile name](https://bif.remix-project.cn/udapp-js/): bif-udapp-js
+<br>[Documentation](https://github.com/caict-4iot-dev/remix-bif-plugins/blob/main/apps/udapp-js/README.md)
 <br>[Make an issue](https://github.com/caict-4iot-dev/remix-bif-plugins/issues)
 
 **BuildBear** &nbsp; <br>
 Create private, forked testnets from any EVM chain with integrated explorer, faucet, and RPC for enhanced smart contract development.
-<br>[Profile name](https://remix-plugin.buildbear.io): buildbear  
-<br>[Documentation](https://www.buildbear.io/resources/guides-and-tutorials/remix_plugin)  
+<br>[Profile name](https://remix-plugin.buildbear.io): buildbear
+<br>[Documentation](https://www.buildbear.io/resources/guides-and-tutorials/remix_plugin)
 <br>[Make an issue](https://github.com/BuildBear/remix-plugin/issues)
 
 
@@ -102,14 +102,14 @@ Find any smart contract, build your project faster.
 
 **COTI Plugin** &nbsp; ![](images/pi-coti.png)<br>
 Develop and test privacy-preserving smart contracts on the COTI network directly within Remix IDE.
-<br>[Profile name](https://github.com/coti-io/coti-remix-plugin): coti-remix-plugin  
-<br>[Documentation](https://docs.coti.io/coti-documentation/running-a-coti-node)  
+<br>[Profile name](https://github.com/coti-io/coti-remix-plugin): coti-remix-plugin
+<br>[Documentation](https://docs.coti.io/coti-documentation/running-a-coti-node)
 <br>[Make an issue](https://github.com/coti-io/coti-remix-plugin/issues)
 
 **Defender Deploy** &nbsp;<br>
 Deploy smart contracts using OpenZeppelin Defender directly from Remix IDE.
-<br>[Profile name](https://remix.ethereum.org/#activate=defender-deploy): defender-deploy  
-<br>[Documentation](https://docs.openzeppelin.com/defender/remix-plugin)  
+<br>[Profile name](https://remix.ethereum.org/#activate=defender-deploy): defender-deploy
+<br>[Documentation](https://docs.openzeppelin.com/defender/remix-plugin)
 <br>[Make an issue](https://github.com/OpenZeppelin/defender-deploy-plugin/issues)
 
 **Klaytn** &nbsp; ![](images/pi-klaytn.png)
@@ -131,20 +131,20 @@ Deploy smart contracts using OpenZeppelin Defender directly from Remix IDE.
 
 **Restore Backup Zip** &nbsp;<br>
 Restore your backup of the zip file containing Remix IDE workspaces. The zip file will include both files and settings, to ensure data safety and portability.
-<br>[Profile name](https://remix.ethereum.org/#activate=backup-restore): backup-restore  
-<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/backup_restore.html)  
+<br>[Profile name](https://remix.ethereum.org/#activate=backup-restore): backup-restore
+<br>[Documentation](https://remix-ide.readthedocs.io/en/latest/backup_restore.html)
 <br>[Make an issue](https://github.com/ethereum/remix-project/issues)
 
 **Sentio** &nbsp; ![](images/pi-sentio.png)<br>
 Monitor and analyze your smart contracts directly within Remix IDE using Sentio's powerful observability tools.
-<br>[Profile name](https://remix.ethereum.org/#activate=sentio): sentio  
-<br>[Documentation](https://docs.sentio.xyz/docs/remix-ide-plugin)  
+<br>[Profile name](https://remix.ethereum.org/#activate=sentio): sentio
+<br>[Documentation](https://docs.sentio.xyz/docs/remix-ide-plugin)
 <br>[Make an issue](https://github.com/sentioxyz/remix-plugin/issues)
 
 **SolidityScan** &nbsp;<br>
 Perform real-time security analysis of your Solidity smart contracts directly within Remix IDE using SolidityScan's automated auditing tools.
-<br>[Profile name](https://remix.ethereum.org/#activate=solidityscan): solidityscan  
-<br>[Documentation](https://docs.solidityscan.com/remix/)  
+<br>[Profile name](https://remix.ethereum.org/#activate=solidityscan): solidityscan
+<br>[Documentation](https://docs.solidityscan.com/remix/)
 <br>[Make an issue](https://github.com/ethereum/remix-project/issues)
 
 **Solhint**
@@ -169,8 +169,8 @@ This plugin is now part of the Solidity Analyzers plugin.
 
 **zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
 <br>Compile and deploy smart contracts for zkSync Era.
-<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zksync  
-<br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)  
+<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zksync
+<br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)
 <br>[Make an issue](https://github.com/matter-labs/zksync-remix-plugin/issues)
 
 **Zokrates** &nbsp; ![](images/pi-zok.png) &nbsp;
