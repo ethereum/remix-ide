@@ -18,7 +18,9 @@ The EIP-7702 Template is located in the Template Explorer. To get to the Templat
 
 ![](images/a-aa-ws-template-7702.png)
 
-The Simple EIP 7702 template will have some basic files that can help introduce this EIP's features.  Be sure to check the README.md file in this template for more information.
+The Simple EIP 7702 template will have some basic files that can help introduce this EIP's features.  Be sure to check the README.md file in this template for more information.  
+
+The Account Abstraction template has many examples and resources for both EIP4337 and EIP7702.  It has a particularly good README file.
 
 ### Connecting an EOA account to a Smart Contract
 
@@ -96,3 +98,4 @@ When the transaction goes through, go to Remix’s terminal and click the new tr
 
 You will see both the Smart Contract Account and its associated Bundler.
 
+Note: Following [EIP-155](https://eips.ethereum.org/EIPS/eip-155), Safe Smart Account contracts use a deterministic deployment proxy so for a contract deployed using a smart account, the msg.sender will be: 0x4e59b44847b379578588920cA78FbF26c0B4956C.
