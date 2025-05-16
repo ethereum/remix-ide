@@ -18,9 +18,9 @@ The EIP-7702 Template is located in the Template Explorer. To get to the Templat
 
 ![](images/a-aa-ws-template-7702.png)
 
-The Simple EIP 7702 template will have some basic files that can help introduce this EIP's features.  Be sure to check the README.md file in this template for more information.  
+The Simple EIP-7702 template includes a README file that may be helpful to review as an introduction to this EIP's features. 
 
-The Account Abstraction template has many examples and resources for both EIP4337 and EIP7702.  It has a particularly good README file.
+The Account Abstraction template has many examples and resources for both EIP-4337 and ERC-7702, including a very informative README file.
 
 ### Connecting an EOA account to a Smart Contract
 
