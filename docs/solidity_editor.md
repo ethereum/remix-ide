@@ -64,7 +64,7 @@ Hovering over the squiggly line shows you the message from the Compiler.
 
 ![](images/a-editor-error-hover.png)
 
-Tabs and the File Explorer will also will also display whether a file contains errors or warnings.
+Tabs and the File Explorer will also display whether a file contains errors or warnings.
 
 ![](images/a-editor-errors-tabs-fe.png)
 
@@ -141,7 +141,7 @@ When you hover over a term with a definition, the definition will pop up. Hoveri
 
 When a file contains an error, its name will turn red, both in the File Explorer and on its tab at the top of the Editor.
 
-More about the Editor updates in this article: Major Updates to Remix Editor
+More about the Editor updates in this article: [Major Updates to Remix Editor](https://medium.com/remix-ide/a-major-update-comes-to-the-remix-editor-3bcb38366147)
 
 
 
