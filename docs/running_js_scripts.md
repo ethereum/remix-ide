@@ -114,7 +114,7 @@ For more script examples, please see [Frequently Asked Scripts](FAS.html).
 
 `require` or `import`statement is supported in a limited manner for Remix supported modules with Remix Scripts.
 
-For now, modules supported by Remix are:
+For now, NPM modules supported by Remix are:
 - ethers
 - web3
 - swarmgw
@@ -136,5 +136,7 @@ For now, modules supported by Remix are:
 - sindri
 - remix
 - hardhat (only for hardhat.ethers object)
+- @chainlink/functions-toolkit
+- @chainlink/ccip-js
 
 For unsupported modules, this error `<module_name> module require is not supported by Remix IDE` will be shown.
