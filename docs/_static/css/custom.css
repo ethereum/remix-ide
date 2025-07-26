@@ -355,12 +355,11 @@ nav.wy-nav-shift {
 /* Remove background from the search container */
 .wy-side-nav-search {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: end;
+  flex-direction: column;
+  align-items: stretch;
   background: none !important;
-  margin: 5rem 0 0;
-  padding: 0 var(--space-vertical-menu-pad-x);
   margin: 2.875rem 0 0 !important;
+  padding: 0 var(--space-vertical-menu-pad-x);
 }
 
 .wy-side-scroll hr {
