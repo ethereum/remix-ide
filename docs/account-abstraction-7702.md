@@ -17,7 +17,7 @@ For more information, see this [overview of EIP-7702](https://eip7702.io).
 
 The EIP-7702 template is located in the Template Explorer. To get to the Template Explorer, click the "hamburger menu" in the File Explorer, and select "Create Using Template".
 
-![workspace template section highlighting the simple EIP 7702 template.](images/a-aa-ws-template-7702.png)
+![workspace template section highlighting the simple EIP 7702 template.](images/account-abstraction-7702/a-aa-ws-template-7702.png)
 
 The Simple EIP-7702 template includes a README file that may be helpful to review as an introduction to this EIP's features.
 
@@ -27,7 +27,7 @@ The Account Abstraction template has many examples and resources for both EIP-43
 
 The 7702 GUI only appears in Remix when deploying to the Prague flavor of the Remix VM.
 
-![EIP 7702 GUI.](images/a-aa-7702-vm-prague.png)
+![EIP 7702 GUI.](images/account-abstraction-7702/a-aa-7702-vm-prague.png)
 
 The **Authorize Delegation** button will open a modal where you’ll input the contract’s address.
 
@@ -35,17 +35,17 @@ But before clicking that button, first you need the contract’s address — so 
 
 Then click the **Authorize** button and a modal will appear:
 
-![Authorization modal for connecting EOA to EIP 7702 contract code.](images/a-aa-7702-modal.png)
+![Authorization modal for connecting EOA to EIP 7702 contract code.](images/account-abstraction-7702/a-aa-7702-modal.png)
 
 And here, you’ll input the contract’s address. Then, when you hit Authorize, you are creating a pointer from the EOA to the Smart Contract Address.
 
 Then below the Account at the top of Deploy & Run, you’ll see a badge that contains the contract’s address.
 
-![Delegation badge containing the connected contract address.](images/a-aa-connection-badge.png)
+![Delegation badge containing the connected contract address.](images/account-abstraction-7702/a-aa-connection-badge.png)
 
 And in the **Deployed contracts** section, you’ll see this:
 
-![Deployed contracts sections showing two deployed contracts.](images/a-aa-deployed-7702.png)
+![Deployed contracts sections showing two deployed contracts.](images/account-abstraction-7702/a-aa-deployed-7702.png)
 
 And when you open up the account (which is the new deployment), you can see that it can execute code.
 
@@ -58,7 +58,7 @@ There is a graphic user interface (GUI) for creating Gnosis Safe Smart Accounts.
 This functionality is only available when connected to the **Sepolia test network**.
 And when connected to Sepolia, a new button will be displayed: **Create Smart Account**.
 
-![Deploy and run section showing a Create Smart Account button.](images/a-aa-gsa-create1.png)
+![Deploy and run section showing a Create Smart Account button.](images/account-abstraction-7702/a-aa-gsa-create1.png)
 
 Click on the Create Smart Account button and you’ll get a modal with information about Safe Smart Accounts, which will also show the address of the EOA that will be the Owner of the Smart Contract Account.
 
@@ -77,7 +77,7 @@ After the toaster goes away, there won’t appear to be any visible change in Re
 
 Go to the **Accounts** section of **Deploy & Run** and you will see the Smart Accounts. Select the address that begins with "[SMART]". The Owner of the account will then appear in a “badge” below it:
 
-![Deploy and run section showing a selected smart account.](images/a-aa-gssa-account-select.png)
+![Deploy and run section showing a selected smart account.](images/account-abstraction-7702/a-aa-gssa-account-select.png)
 
 #### Notice that there is no ETH in the account.
 
@@ -89,13 +89,13 @@ Compile a contract. And deploy using the newly created [SMART] account.
 
 Your wallet will issue you a signature request.
 
-![Metamask signature request.](images/a-aa-gssa-sig-request.png)
+![Metamask signature request.](images/account-abstraction-7702/a-aa-gssa-sig-request.png)
 
 In the image above from a wallet, the Safe address and an address for “Interacting with” can be seen.
 
 When the transaction goes through, go to Remix’s terminal and click the new transaction.
 
-![Remix terminal showing the smart contract account and its associated bundler.](images/a-aa-gsa-log.png)
+![Remix terminal showing the smart contract account and its associated bundler.](images/account-abstraction-7702/a-aa-gsa-log.png)
 
 You will see both the Smart Contract Account and its associated Bundler.
 
