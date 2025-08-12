@@ -3,7 +3,7 @@
 
 # Remix
 
-This repository contain only Remix's official [Read the Docs](https://readthedocs.org/) documentation source code. Documentation is available [here](https://remix-ide.readthedocs.io/en/latest/).
+This repository contain only Remix's official [Read the Docs](https://readthedocs.org/) documentation source code. The documentation can be found on the [Remix IDE documentation site](https://remix-ide.readthedocs.io/en/latest/).
 
 ## Remix Project Codebases
 
@@ -21,19 +21,18 @@ Remix About page
 
 ## About Remix Project
 
-Remix Project is a platform for development tools that use a plugin architecture. It encompasses sub-projects including Remix Plugin Engine, Remix Libraries, and of course Remix IDE.
+The **Remix Project** is a platform for development tools that use a plugin architecture. It encompasses sub-projects including Remix Plugin Engine, Remix Libraries, and of course Remix IDE.
 
-Remix IDE is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development with Solidity language as well as a playground for learning and teaching Ethereum.
+The **Remix IDE** is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development with Solidity language as well as a playground for learning and teaching Ethereum.
 
-Start developing using Remix on browser, visit: https://remix.ethereum.org
+You can start developing with Remix on the browser by visiting: https://remix.ethereum.org. If you prefer a desktop version, check out: https://github.com/remix-project-org/remix-desktop.
 
-For desktop version, see releases: https://github.com/ethereum/remix-desktop/releases
+![Remix IDE homepage](remix_screenshot.jpg)
 
-Remix libraries work as a core of native plugins of Remix IDE. Read more about libraries [here](https://github.com/ethereum/remix-project/blob/master/libs/README.md)
+The built-in plugins in Remix IDE are built on top of **Remix libraries**, which handle core operations like compiling and interacting with smart contracts.. Explore the [Remix libraries README](https://github.com/ethereum/remix-project/blob/master/libs/README.md) to learn more.
 
-![Remix screenshot](remix_screenshot.png)
 
-## Build
+## Setup the Documentation Locally
 
 Steps to build this project are as follows:
 
