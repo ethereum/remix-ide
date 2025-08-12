@@ -23,7 +23,9 @@ Remix About page
 
 The **Remix Project** is a platform for development tools that use a plugin architecture. It encompasses sub-projects including Remix Plugin Engine, Remix Libraries, and of course Remix IDE.
 
-The **Remix IDE** is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development with Solidity language as well as a playground for learning and teaching Ethereum. You can start developing with Remix on the browser by visiting: https://remix.ethereum.org. If you prefer a desktop version, check out our releases: https://github.com/ethereum/remix-desktop/releases.
+The **Remix IDE** is an open source web and desktop application. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development with Solidity language as well as a playground for learning and teaching Ethereum.
+
+You can start developing with Remix on the browser by visiting: https://remix.ethereum.org. If you prefer a desktop version, check out: https://github.com/ethereum/remix-desktop.
 
 ![Remix IDE homepage](remix_screenshot.jpg)
 
