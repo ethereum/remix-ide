@@ -2,7 +2,7 @@
 
 Remix IDE consists of four core components: the icon panel, side panel, main panel, and terminal. Since Remix v0.69.0, it also includes a top bar.
 
-![Layout for Remix IDE, highlighting the terminal, the side, main, and icon panel.](images/layout/a-layout1c.png)
+![Layout for Remix IDE, highlighting the terminal, topbar, and, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
 - Icon Panel - portal to most of Remix's core functions like the Solidity compiler, plugins, and deploy & run.
 - Top Bar - interface for workspace selection, GitHub authentication, themes, and Remix configuration settings.
