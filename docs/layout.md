@@ -21,7 +21,7 @@ When you load more plugins, that icons automatically appear in the icon panel. T
 
 ![Remix IDE Hometab.](images/layout/a-hometab.png)
 
-The home tab is located in the Main Panel. It can be closed, just like any of the main panel tabs. <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
+The home tab is located in the Main Panel. It can be closed, just like any of the main panel tabs. You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
 The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem.
 
