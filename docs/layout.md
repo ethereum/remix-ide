@@ -1,13 +1,14 @@
 # Navigating Remix
 
-The Remix IDE comprises of three panels: the icon panel, the side panel, and the main panel; and a terminal.
+Remix IDE consists of four core components: the icon panel, side panel, main panel, and terminal. Since Remix v0.69.0, it also includes a top bar.
 
 ![Layout for Remix IDE, highlighting the terminal, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
-1. Icon Panel - portal to most of Remix's core functions like the Solidity compiler, plugins, and deploy & run.
-2. Side Panel - interface for the file explorer, compiler, search page, deploy & run page, and certain plugins.
-3. Main Panel - for editing files, large format tools, and the home tab.
-4. Terminal - for viewing transaction receipts and various logs.
+- Icon Panel - portal to most of Remix's core functions like the Solidity compiler, plugins, and deploy & run.
+- Top Bar - interface for workspace selection, GitHub authentication, themes, and Remix configuration settings.
+- Side Panel - interface for the file explorer, compiler, search page, deploy & run page, and certain plugins.
+- Main Panel - for editing files, large format tools, and the home tab.
+- Terminal - for viewing transaction receipts and various logs.
 
 ## Default Tools
 
