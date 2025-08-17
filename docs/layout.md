@@ -18,7 +18,7 @@ When the Remix IDE is loaded for the first time - the icon panel shows these ico
 
 When you load more plugins, that icons automatically appear in the icon panel. To load more plugins go to the **[Plugin Manager](#plugin-manager)** and select a plugin from the list of available plugins.
 
-## Home tab
+## Home Tab
 
 ![Remix IDE Hometab.](images/layout/a-hometab.png)
 
