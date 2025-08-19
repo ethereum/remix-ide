@@ -1,49 +1,33 @@
-Navigating Remix
-================
-Remix IDE is comprised of three panels and a terminal.
+# Navigating Remix
 
-![](images/a-layout1c.png)
+Remix's layout consists of the following components: the top bar, icon panel, side panel, main panel, and terminal.
 
-1. Icon Panel - click to change which plugins appear in the Side Panel
-2. Side Panel - most but not all plugins have their interface here
-3. Main Panel - for editing files, large format tools, and the home tab
-4. Terminal - for viewing transaction receipts and various logs
+![Layout for Remix IDE, highlighting the terminal, topbar, and, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
-Default Tools
------------------------
+- Top Bar - interface for workspace selection, GitHub authentication and associated tools, themes, and the settings panel.
+- Icon Panel - indicates which plugins have been activated and which plugin is currently in the left or right side panel. Click an icon to select that plugin. Go to the Plugin Manager to activate other plugins.
+- Side Panel - interface for the File Explorer, Solidity Compiler, Git, Deploy & Run, and many other plugins. Visit the Plugin Manager for a full list of plugins.
+- Main Panel - contains tabs for editing files, Main Panel plugins (plugins that require more space than Side Panel plugins), and the Home Tab.
+- Terminal - a panel for viewing transaction receipts, various logs, and for executing JavaScript scripts.
 
-When Remix is loaded - the icon panel shows these icons by default.
+## Default Tools
 
-![](images/a-icons-at-load.png)
+When the Remix IDE is loaded for the first time - the Icon Panel shows these icons by default.
 
-To load more plugins go to the **[Plugin Manager](#plugin-manager)** or click on one of the featured plugins in the home tab.
+![Remix IDE default icons with annotations.](images/layout/a-icons-at-load.png)
 
-Home tab
---------
+When you load more plugins, that icons automatically appear in the icon panel. To load more plugins go to the **[Plugin Manager](#plugin-manager)** and select a plugin from the list of available plugins.
 
-![](images/a-hometab.png)
+## Home Tab
 
-The home tab is located in the Main Panel.  It can be closed, just like any of the main panel tabs.  <br> You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
+![Remix IDE Hometab.](images/layout/a-hometab.png)
 
-The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem. 
+The Home Tab is located in the Main Panel. It can be closed, just like any of the Main Panel tabs. You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
-### Solidity 
-Clicking the **Solidity button** in the featured plugins section of the home tab will activate  **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default).
+The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem.
 
-To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel.
-![](images/a-plug.png) <br>
-You can also get there by clicking the **More** button in the featured plugin list.
-
-Plugin Manager
----------------
+## Plugin Manager
 
 In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on.
 
-The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
-
-Themes
----------------
-
-Themes are chosen at the bottom of the **Settings** plugin. These are Bootstrap-based themes. The Dark and Light themes are most customized for Remix.
-
-![](images/a-themes.png) 
+The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case, you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
