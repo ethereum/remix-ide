@@ -1,18 +1,18 @@
 # Navigating Remix
 
-Remix IDE consists of four core components: the icon panel, side panel, main panel, and terminal. Since Remix v0.69.0, it also includes a top bar.
+Remix's layout consists of the following components: the top bar, icon panel, side panel, main panel, and terminal.
 
 ![Layout for Remix IDE, highlighting the terminal, topbar, and, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
-- Icon Panel - portal to most of Remix's core functions like the Solidity compiler, plugins, and deploy & run.
-- Top Bar - interface for workspace selection, GitHub authentication, themes, and Remix configuration settings.
-- Side Panel - interface for the file explorer, compiler, search page, deploy & run page, and certain plugins.
-- Main Panel - for editing files, large format tools, and the home tab.
-- Terminal - for viewing transaction receipts and various logs.
+- Top Bar - interface for workspace selection, GitHub authentication and associated tools, themes, and the settings panel.
+- Icon Panel - indicates which plugins have been activated and which plugin is currently in the left or right side panel. Click an icon to select that plugin. Go to the Plugin Manager to activate other plugins.
+- Side Panel - interface for the File Explorer, Solidity Compiler, Git, Deploy & Run, and many other plugins. Visit the Plugin Manager for a full list of plugins.
+- Main Panel - contains tabs for editing files, Main Panel plugins (plugins that require more space than Side Panel plugins), and the Home Tab.
+- Terminal - a panel for viewing transaction receipts, various logs, and for executing JavaScript scripts.
 
 ## Default Tools
 
-When the Remix IDE is loaded for the first time - the icon panel shows these icons by default.
+When the Remix IDE is loaded for the first time - the Icon Panel shows these icons by default.
 
 ![Remix IDE default icons with annotations.](images/layout/a-icons-at-load.png)
 
@@ -22,19 +22,12 @@ When you load more plugins, that icons automatically appear in the icon panel. T
 
 ![Remix IDE Hometab.](images/layout/a-hometab.png)
 
-The home tab is located in the Main Panel. It can be closed, just like any of the main panel tabs. You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
+The Home Tab is located in the Main Panel. It can be closed, just like any of the Main Panel tabs. You can also access it (even if closed) by clicking the Remix logo at the top of the icon panel.
 
 The home tab contains links to resources, announcements, tutorials, featured plugins and methods for loading files into Remix and shortcuts for connecting Remix to your local filesystem.
-
-## Solidity Compiler
-
-Clicking the **Solidity button** in the featured plugins section of the home tab will activate **Solidity Static Analysis** and **Solidity Unit Testing** as well as the Solidity Compiler and Deploy & Run (which are there by default).
-
-To see all the plugins go to the **Plugin Manager** - by selecting the plug in the icon panel.
-You can also get there by clicking the **Explore all plugins** button from the hometab on the "most used plugins" list.
 
 ## Plugin Manager
 
 In Remix, you only need to load the functionality you need - and the Plugin Manager is where you manage what plugins are turned off or on.
 
-The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
+The Plugin Manager is also the place you go when you are creating your own plugin and you want to load your local plugin into Remix. In that case, you'd click on the "Connect to a Local Plugin" link at the top of the Plugin Manager panel.
