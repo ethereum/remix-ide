@@ -11,7 +11,7 @@ There are two ways to start a debugging session, each one corresponds to a diffe
 ### Initiate Debugging from the transaction log in the Terminal
 Let's start with a basic contract ( or replace the contract below with your own ) 
 
-``` 
+```Solidity
 pragma solidity >=0.5.1 <0.6.0;
 contract Donation {
     address owner;
@@ -200,7 +200,7 @@ variable to zero and a second time for assigning the actual value.
 
 Here's an example of this issue.  If you are debugging the following contract:
 
-``` 
+```Solidity
 pragma solidity >=0.5.1 <0.6.0;
 
 contract ctr {

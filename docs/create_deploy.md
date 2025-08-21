@@ -18,7 +18,7 @@ In the File Explorer, create a new file by clicking on the new file icon, and na
 
 In the editor, paste in the following contract into the empty file:
 
-``` 
+```Solidity
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity ^0.8.18;

@@ -89,7 +89,7 @@ Memory is cleared for each new message call. Memory is linear and can be address
 The Memory panel consists of 3 columns.  You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right).
 
 The 1st column is the location in memory.  The 2nd column is the hex encoded value.  The 3rd column is the decoded value.  If there is nothing, then the question marks (**?**) will show - like this:
-```
+```Shell
 0x10: 00000000000000000000000000000000 ????????????????
 ```
 

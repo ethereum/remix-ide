@@ -15,7 +15,7 @@ Create a js file in your project workspace. Better to create it inside `scripts`
 
 Write your tests in the file. Here is a sample:
 
-```
+```JavaScript
 const { expect } = require("chai");
 
 describe("Sample", function () {
@@ -44,7 +44,7 @@ Click on `Run`, tests will be executed and result will be shown on Terminal.
 
 Similarly unit tests can be written to test the functionality of a smart contract. An example to test default `1_Storage.sol` contract can be as:
 
-```
+```JavaScript
 const { expect } = require("chai");
 
 describe("Storage", function () {
@@ -97,7 +97,7 @@ To debug a transaction in one of the tests, print the transaction hash and input
 
 Remix also supports methods of [hardhat-ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html#hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:
 
-```
+```TypeScript
 interface Libraries {
   [libraryName: string]: string;
 }
@@ -132,7 +132,7 @@ With this, one can run the tests for a hardhat project easily using Remix.
 
 Example to test `Storage` contract with this plugin methods can be as:
 
-```
+```JavaScript
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
@@ -155,6 +155,7 @@ describe("Storage", function () {
   });
 });
 ```
+
 Result will be as:
 
 ![](images/run_with_mocha_hhethers.png)
