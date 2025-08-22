@@ -1,5 +1,4 @@
-Testing using Chai & Mocha
-===================
+# Testing using Chai & Mocha
 
 _(Supported since Remix IDE v0.22.0)_
 
@@ -159,5 +158,3 @@ describe("Storage", function () {
 Result will be as:
 
 ![](images/run_with_mocha_hhethers.png)
-
-

@@ -1,10 +1,8 @@
-Truffle
-============
+# Truffle
 
 _(Supported since Remix IDE v0.23.0 and Remixd v0.6.0)_
 
-Remixd and Truffle
-------------------
+## Remixd and Truffle
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
@@ -14,14 +12,13 @@ If `remixd` is running locally on your device and shared folder is a **Truffle p
 
 Remixd looks for the `truffle-config.js` file in shared folder. If found, the Truffle websocket listener will run.
 
-The Truffle websocket listener is a websocket plugin similar to `remixd` and is used to perform Truffle specific actions with Remix IDE. 
+The Truffle websocket listener is a websocket plugin similar to `remixd` and is used to perform Truffle specific actions with Remix IDE.
 
 It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module.
 
 ![](images/a-truffle-remixd.png)
 
-Enable Truffle Compilation
-------------------
+## Enable Truffle Compilation
 
 ### Prerequisites
 
@@ -43,18 +40,17 @@ One can check the `Enable Truffle Compilation` box to run the compilation for Tr
 
 On clicking `Compile` button, a file named as `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Truffle for compilation.
 
-The result of the compilation will be shown in the Remix IDE terminal 
+The result of the compilation will be shown in the Remix IDE terminal
 
 ![](images/a-truffle-compilation-success.png)
 
 and also in the **remixd** terminal.
 
-Ganache Provider
-------------------
+## Ganache Provider
 
 _In Truffle, contracts are deployed by connecting to a built-in personal blockchain, i.e. Ganache. Read more about it in [Truffle documentation](https://trufflesuite.com/docs/truffle/quickstart/#migrating-with-truffle-develop)_
 
- **Ganache Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Truffle's built-in Ganache blockchain. `Ganache Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin.
+**Ganache Provider** is a plugin on Remix IDE which enables users to deploy the contract to the Truffle's built-in Ganache blockchain. `Ganache Provider` can be chosen from the list of environments in `Deploy & Run Transactions` plugin.
 
 ![](images/a-truffle-provider.png)
 
@@ -69,9 +65,3 @@ Once the correct endpoint is filled in the modal, just click on `OK` and the acc
 ![](images/a-truffle-provider-connected.png)
 
 Now, one can start deploying the contract from Remix IDE to the local Ganache node as usual.
-
-
-
-
-
-

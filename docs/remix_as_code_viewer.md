@@ -1,8 +1,6 @@
-Remix as code viewer
-=============================
+# Remix as code viewer
 
-Through Etherscan
-------------------
+## Through Etherscan
 
 Verified contracts on Etherscan can be viewed in Remix by making a simple change to the URL. Mostly for a multiple part contract verification, Remix provides a quick way to load all the contracts.
 
@@ -16,14 +14,13 @@ In the URL, change `etherscan.io` to `remix.ethereum.org`
 
 and reload. It will fetch the contracts verified on Etherscan.
 
-Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace. 
+Contracts verified on Ethereum mainnet and on other test networks (Ropsten, Rinkeby, Kovan & Goerli) will be loaded in respective directories under `etherscan-code-sample` workspace.
 
 ![](images/a-code-viewer-etherscan.png)
 
-This works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix. 
+This works for Etherscan testnet URLs `https://ropsten.etherscan.io`, `https://goerli.etherscan.io/` etc. If they are similarly updated, contracts will be loaded in Remix.
 
-Through GitHub
-------------------
+## Through GitHub
 
 Solidity files in GitHub can be loaded on Remix with a similar tweak. For a file with URL like:
 
