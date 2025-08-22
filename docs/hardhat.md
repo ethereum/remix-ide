@@ -1,10 +1,8 @@
-Hardhat
-============
+# Hardhat
 
 _(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_
 
-Remixd and Hardhat
-------------------
+## Remixd and Hardhat
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
@@ -14,14 +12,13 @@ If `remixd` is running locally on your device and shared folder is a **Hardhat p
 
 Remixd looks for the `hardhat.config.js` or `hardhat.config.ts` file in shared folder, and if it finds the file, the Hardhat websocket listener will run.
 
-The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE. 
+The Hardhat websocket listener is a websocket plugin similar to `remixd` and is used to perform Hardhat specific actions with Remix IDE.
 
 It doesn't need any separate installation as it is shipped with [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module.
 
 ![](images/a-hardhat-remixd.png)
 
-Enable Hardhat Compilation
-------------------
+## Enable Hardhat Compilation
 
 ### Prerequisites
 
@@ -43,7 +40,7 @@ One can check the `Enable Hardhat Compilation` box to run the compilation for Ha
 
 On clicking `Compile` button, a file with `remix-compiler.config.js` will be created on the project root which will be storing compiler configuration set in Remix's `Solidity Compiler` plugin. It is passed to Hardhat for compilation.
 
-The result of the compilation will be shown in the Remix IDE terminal 
+The result of the compilation will be shown in the Remix IDE terminal
 
 ![](images/a-hardhat-compilation-success.png)
 
@@ -51,8 +48,7 @@ and also in the **remixd** terminal.
 
 ![](images/a-hardhat-compilation-success-remixd.png)
 
-Hardhat Provider
-------------------
+## Hardhat Provider
 
 _In Hardhat, contracts are deployed by starting a local node. Read more about it in [Hardhat documentation](https://hardhat.org/getting-started/#connecting-a-wallet-or-dapp-to-hardhat-network)_
 
@@ -72,8 +68,7 @@ Once the correct endpoint is filled in the modal, just click on `OK` and the acc
 
 Now, one can start deploying the contract from Remix IDE to the Hardhat local node as usual.
 
-`console.log` in Remix IDE
----------------------------
+## `console.log` in Remix IDE
 
 _(Supported since Remix IDE v0.17.0)_
 
@@ -98,9 +93,3 @@ Similarly, `console.log` can be used while running unit tests using Remix Solidi
 For the tests including logging message, it will display in the Remix Terminal corresponding to test name.
 
 ![](images/hardhat-utesting-terminal.png)
-
-
-
-
-
-

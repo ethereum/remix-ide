@@ -1,14 +1,14 @@
-FAQ
-===
+# FAQ
+
 ### Supported devices & Browsers
 
 **Q:** What browsers will Remix work on?
 
-**A:** We support Firefox, Chrome, and Brave.  We do not test or look for errors in Safari, Edge or other browsers.
+**A:** We support Firefox, Chrome, and Brave. We do not test or look for errors in Safari, Edge or other browsers.
 
 **Q:** Will Remix work on a tablet or mobile device?
 
-**A:** We do not support the use of Remix on tablets or mobile phones. 
+**A:** We do not support the use of Remix on tablets or mobile phones.
 
 ### General
 
@@ -16,7 +16,7 @@ FAQ
 
 **A:** Yes - here is the list of keyboard shortcuts:
 
-`Ctrl+S`: Compiles the active Solidity file 
+`Ctrl+S`: Compiles the active Solidity file
 
 `Ctrl+Shift+S`: Compiles a Solidity file and runs a script when the script is displayed in the editor.<br>(go [here](running_js_scripts.html#compile-a-contract-and-run-a-script-on-the-fly) for more info about this functionality)
 
@@ -29,6 +29,7 @@ FAQ
 ### Solidity compiler
 
 **Q:** Error: compiler might be in a non-sane state
+
 ```text
 error: "Uncaught JavaScript exception: RangeError: Maximum call stack size exceeded.
 The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet.
@@ -44,7 +45,7 @@ Please change the compiler version in Solidity Plugin to the newer one or use an
 
 **Q:** How to verify a contract that imports other contracts?
 
-**A:** The verification tool does not recursively go through the import statements in a contract. So can only verify a 'flattened' contract.  
+**A:** The verification tool does not recursively go through the import statements in a contract. So can only verify a 'flattened' contract.
 
 A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option. This will assemble all the original code as well as the imported code into a single file.
 
@@ -64,7 +65,7 @@ A contract can be 'flattened' by right-clicking on it in the File Explorer and c
 
 **Q:** How to input a struct as input to a parameter of a function in the Deploy & Run module?
 
-**A:** For inputting a struct, just like a tuple, pass it in as an array [].  Also you need to put in the line:
+**A:** For inputting a struct, just like a tuple, pass it in as an array []. Also you need to put in the line:
 
 `pragma experimental ABIEncoderV2;` at the top of the solidity file.
 
@@ -100,9 +101,8 @@ contract daPeeps {
 }
 ```
 
-The input of initPeepToPeeps takes a struct.  If you input
+The input of initPeepToPeeps takes a struct. If you input
 `[1,2]` the transaction will go through.
-
 
 ### Plugin Developers
 
@@ -112,7 +112,7 @@ The input of initPeepToPeeps takes a struct.  If you input
 
 ### Analytics
 
-**Q:** What information does Remix save when Matomo Analytics is enabled?   
+**Q:** What information does Remix save when Matomo Analytics is enabled?
 
 **A:** We want to know:
 
@@ -124,9 +124,9 @@ The input of initPeepToPeeps takes a struct.  If you input
 
 **Q:** Is it opt-in or opt-out?
 
-**A:** We use Matomo as an opt-in analytics platform. 
+**A:** We use Matomo as an opt-in analytics platform.
 
-**Q:** Where is the info stored?  Is the info shared with 3rd parties? 
+**Q:** Where is the info stored? Is the info shared with 3rd parties?
 
 **A:** All data collected through Matomo is stored on our server. No data is given to third parties.
 
@@ -140,4 +140,4 @@ With this understanding, we can make adjustments to the UI as well as providing 
 
 **Q:** After I agree opt-in, can I change my mind?
 
-**A:** You can turn off or on Matomo in the Settings panel.  There are no consequences for not opting-in or opting-out.
+**A:** You can turn off or on Matomo in the Settings panel. There are no consequences for not opting-in or opting-out.

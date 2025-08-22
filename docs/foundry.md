@@ -1,10 +1,8 @@
-Foundry
-============
+# Foundry
 
-Deploying to Anvil
-------------------
+## Deploying to Anvil
 
-To deploy to Anvil, Foundry's test chain, it needs to be running on your computer. Then select the **Foundry Provider** in the **Environments** section of the **Deploy & Run** module. 
+To deploy to Anvil, Foundry's test chain, it needs to be running on your computer. Then select the **Foundry Provider** in the **Environments** section of the **Deploy & Run** module.
 
 ![](images/a-foundry-provider.png)
 
@@ -20,8 +18,7 @@ Once the correct endpoint is filled in the modal, just click on `OK` and the acc
 
 Now, one can start deploying the contract from Remix IDE to the local Anvil node as usual.
 
-Foundry Remappings
-------------------
+## Foundry Remappings
 
 Foundry manages dependencies using git submodules and can remap dependencies to make them easier to import. So import defined by remappings can have compilation errors on Remix IDE.
 
@@ -30,9 +27,3 @@ To support such compilation, Remix suggests running [compilation using a compile
 ![](images/a-foundry-cc.png)
 
 Further, more remappings can be added manually, if required.
-
-
-
-
-
-

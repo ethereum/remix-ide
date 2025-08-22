@@ -1,5 +1,4 @@
-Running Scripts
-===============
+# Running Scripts
 
 Remix IDE supports execution of JS & TS scripts.
 
@@ -9,7 +8,7 @@ Create a file with `.js` or `.ts` extension and put your logic inside it. To run
 
 - Click the green play button in the upper left of the Editor.
 
-- Right click on the script name in the `File Explorers` and click on the **Run** option. 
+- Right click on the script name in the `File Explorers` and click on the **Run** option.
 
 - `Ctrl+Shift+S` when the script is displayed in the editor.
 
@@ -34,26 +33,30 @@ Running it using one of options mentioned above will show result in Remix termin
 ![](images/a-running-scripts-run.png)
 
 ## Why run scripts in Remix?
-* To mimic how the front-end of your dapp will use web3.js or ethers.js
-* To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI.
-* To run some tests on a previous deployed contract.
 
-## Script to deploy a contract 
+- To mimic how the front-end of your dapp will use web3.js or ethers.js
+- To quickly deploy and interact with a bunch of instances of a contract without going through the Remix GUI.
+- To run some tests on a previous deployed contract.
 
-Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/)  or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
+## Script to deploy a contract
+
+Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io/) or [ethers.js](https://docs.ethers.io/) commands. The script needs to be wrapped in a self executing function.
 
 ## Setup
-1. These scripts will need to access the contract's ABI.  The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**.
+
+1. These scripts will need to access the contract's ABI. The ABI is located in the contract's metadata file. Make sure that this metadata file will be created by going to the **Settings** module and checking that the **Generate contract metadata** option is indeed **checked**.
 
 2. Compile a Solidity file - to generate the contract metadata.
 
-3. In the Deploy & Run plugin, choose the Environment. 
-    * Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider. 
+3. In the Deploy & Run plugin, choose the Environment.
+   - Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider.
 
 ## JS Scripts in the File Explorers
+
 In the **scripts** folder of a **workspace**, there are 2 example files: one using **web3.js** and the other using **ethers.js**.
 
 ## Compile a contract and run a script in one click
+
 When drafting a contract, it can be helpful to run a script just after the compilation succeeds.
 
 With this technique, one can write some code then quickly deploy and set the state of the contracts.
@@ -76,7 +79,8 @@ When you are ready to deploy the code for real, remove the NatSpec comment `@cus
 **ShortCut**: `Ctrl+Shift+S` , when editing a solidity file, will compile that file and then will run the script. In contrast, Ctrl+S will only start the compiling.
 
 ## An Example Script
-The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library.  Ethers.js could also be used.
+
+The example below deploys a solidity contract named **CustomERC20.sol**. This example is using the web3.js library. Ethers.js could also be used.
 
 For more information about this example, please see: [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)
 
@@ -115,6 +119,7 @@ For more script examples, please see [Frequently Asked Scripts](FAS.html).
 `require` or `import`statement is supported in a limited manner for Remix supported modules with Remix Scripts.
 
 For now, NPM modules supported by Remix are:
+
 - ethers
 - web3
 - swarmgw

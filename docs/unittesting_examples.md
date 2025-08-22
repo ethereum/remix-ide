@@ -1,11 +1,11 @@
-Testing by Example
-============
+# Testing by Example
 
 Here are some examples which can give you better understanding to plan your tests.
 
 **Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end.
 
 ### 1. Simple example
+
 In this example, we test setting & getting variables.
 
 Contract/Program to be tested: `Simple_storage.sol`
@@ -29,6 +29,7 @@ contract SimpleStorage {
     }
 }
 ```
+
 Test contract/program: `simple_storage_test.sol`
 
 ```Solidity
@@ -58,6 +59,7 @@ contract MyTest {
 ```
 
 ### 2. Testing a method involving `msg.sender`
+
 In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:
 
 Contract/Program to be tested: `Sender.sol`
@@ -66,16 +68,16 @@ Contract/Program to be tested: `Sender.sol`
 pragma solidity >=0.4.22 <0.7.0;
 contract Sender {
     address private owner;
-    
+
     constructor() public {
         owner = msg.sender;
     }
-    
+
     function updateOwner(address newOwner) public {
         require(msg.sender == owner, "only current owner can update owner");
         owner = newOwner;
     }
-    
+
     function getOwner() public view returns (address) {
         return owner;
     }
@@ -96,20 +98,20 @@ contract SenderTest is Sender {
     address acc0;
     address acc1;
     address acc2;
-    
+
     /// Initiate accounts variable
     function beforeAll() public {
-        acc0 = TestsAccounts.getAccount(0); 
+        acc0 = TestsAccounts.getAccount(0);
         acc1 = TestsAccounts.getAccount(1);
         acc2 = TestsAccounts.getAccount(2);
     }
-    
+
     /// Test if initial owner is set correctly
     function testInitialOwner() public {
         // account at zero index (account-0) is default account, so current owner should be acc0
         Assert.equal(getOwner(), acc0, 'owner should be acc0');
     }
-    
+
     /// Update owner first time
     /// This method will be called by default account(account-0) as there is no custom sender defined
     function updateOwnerOnce() public {
@@ -120,7 +122,7 @@ contract SenderTest is Sender {
         // check if owner is set to expected account
         Assert.equal(getOwner(), acc1, 'owner should be updated to acc1');
     }
-    
+
     /// Update owner again by defining custom sender
     /// #sender: account-1 (sender is account at index '1')
     function updateOwnerOnceAgain() public {
@@ -136,7 +138,7 @@ contract SenderTest is Sender {
 
 ### 3. Testing method execution
 
-With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed. 
+With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed.
 
 To help in such cases, Solidity introduced the `try-catch` statement in version `0.6.0`. Previously, we had to use low-level calls to track down what was going on.
 
@@ -164,7 +166,7 @@ contract AttendanceRegister {
         emit Added(name, class, now);
         return rollNumber;
     }
-    
+
     function getStudentName(uint rollNumber) public view returns (string memory) {
         return register[rollNumber].name;
     }
@@ -179,16 +181,16 @@ import "remix_tests.sol"; // this import is automatically injected by Remix.
 import "./AttendanceRegister.sol";
 
 contract AttendanceRegisterTest {
-   
+
     AttendanceRegister ar;
-    
+
     /// 'beforeAll' runs before all other tests
     function beforeAll () public {
         // Create an instance of contract to be tested
         ar = new AttendanceRegister();
     }
-    
-    /// For solidity version greater or equal to 0.6.0, 
+
+    /// For solidity version greater or equal to 0.6.0,
     /// See: https://solidity.readthedocs.io/en/v0.6.0/control-structures.html#try-catch
     /// Test 'add' using try-catch
     function testAddSuccessUsingTryCatch() public {
@@ -207,7 +209,7 @@ contract AttendanceRegisterTest {
             Assert.ok(false, 'failed unexpected');
         }
     }
-    
+
     /// Test failure case of 'add' using try-catch
     function testAddFailureUsingTryCatch1() public {
         // This will revert on 'require(class > 0 && class <= 12, "Invalid class");' for class '13'
@@ -220,7 +222,7 @@ contract AttendanceRegisterTest {
             Assert.ok(false, 'failed unexpected');
         }
     }
-    
+
     /// Test another failure case of 'add' using try-catch
     function testAddFailureUsingTryCatch2() public {
         // This will revert on 'require(register[rollNumber].class == 0, "Roll number not available");' for rollNumber '101'
@@ -233,7 +235,7 @@ contract AttendanceRegisterTest {
             Assert.ok(false, 'failed unexpected');
         }
     }
-    
+
     /// For solidity version less than 0.6.0, low level call can be used
     /// See: https://solidity.readthedocs.io/en/v0.6.0/units-and-global-variables.html#members-of-address-types
     /// Test success case of 'add' using low level call
@@ -247,7 +249,7 @@ contract AttendanceRegisterTest {
         // check if result is as expected
         Assert.equal(rollNumber, 102, 'wrong rollNumber');
     }
-    
+
     /// Test failure case of 'add' using low level call
     function testAddFailureUsingCall() public {
         bytes memory methodSign = abi.encodeWithSignature('add(uint256,string,uint256)', 102, 'duplicate', 10);
@@ -258,8 +260,8 @@ contract AttendanceRegisterTest {
 }
 ```
 
-
 ### 4. Testing a method involving `msg.value`
+
 In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:
 
 Contract/Program to be tested: `Value.sol`
@@ -268,43 +270,44 @@ Contract/Program to be tested: `Value.sol`
 pragma solidity >=0.4.22 <0.7.0;
 contract Value {
     uint256 public tokenBalance;
-    
+
     constructor() public {
         tokenBalance = 0;
     }
-    
+
     function addValue() payable public {
         tokenBalance = tokenBalance + (msg.value/10);
-    } 
-    
+    }
+
     function getTokenBalance() view public returns (uint256) {
         return tokenBalance;
     }
 }
 ```
+
 Test contract/program: `Value_test.sol`
 
 ```Solidity
 pragma solidity >=0.4.22 <0.7.0;
-import "remix_tests.sol"; 
+import "remix_tests.sol";
 import "./Value.sol";
 
 contract ValueTest{
     Value v;
-    
+
     function beforeAll() public {
         // create a new instance of Value contract
         v = new Value();
     }
-    
+
     /// Test initial balance
     function testInitialBalance() public {
         // initially token balance should be 0
         Assert.equal(v.getTokenBalance(), 0, 'token balance should be 0 initially');
     }
-    
+
     /// For Solidity version greater than 0.6.1
-    /// Test 'addValue' execution by passing custom ether amount 
+    /// Test 'addValue' execution by passing custom ether amount
     /// #value: 200
     function addValueOnce() public payable {
         // check if value is same as provided through devdoc
@@ -314,7 +317,7 @@ contract ValueTest{
         // As per the calculation, check the total balance
         Assert.equal(v.getTokenBalance(), 20, 'token balance should be 20');
     }
-    
+
     /// For Solidity version less than 0.6.2
     /// Test 'addValue' execution by passing custom ether amount again using low level call
     /// #value: 100
@@ -329,14 +332,16 @@ contract ValueTest{
 ```
 
 ### 5. Testing a method involving `msg.sender` and `msg.value`
+
 In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts.
 
 Contract/Program to be tested: `Donations.sol`
+
 ```Solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.4;
 
-contract donations{ 
+contract donations{
     struct Donation {
         uint id;
         uint amount;
@@ -352,7 +357,7 @@ contract donations{
     function donate(address _recipient, string memory _donor, string memory _msg) public payable {
         require(msg.value > 0, "The donation needs to be >0 in order for it to go through");
         amount = msg.value;
-        balances[_recipient] += amount;        
+        balances[_recipient] += amount;
         donationsMap[_recipient].push(Donation(id++,amount,_donor,_msg,block.timestamp));
     }
 
@@ -365,11 +370,11 @@ contract donations{
             revert();
         }
     }
-  
+
     function balances_getter(address _recipient) public view returns (uint){
             return balances[_recipient];
     }
-    
+
     function getBalance() public view returns(uint) {
             return msg.sender.balance;
     }
@@ -382,7 +387,7 @@ Test contract/program: `Donations_test.sol`
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.4.22 <0.9.0;
-import "remix_tests.sol"; 
+import "remix_tests.sol";
 import "remix_accounts.sol";
 import "../donations.sol";
 
@@ -400,7 +405,7 @@ contract testSuite is donations {
         donate(recipient, "Mario", "Are you a bird?");
         Assert.equal(balances_getter(recipient), 1000000000000000000, 'balances should be 1 Eth');
     }
-    
+
     /// #value: 1000000000000000000
     /// #sender: account-2
     function donateAcc2AndCheckBalance() public payable{
@@ -408,7 +413,7 @@ contract testSuite is donations {
         donate(recipient, "Tom", "Are you a plane?");
         Assert.equal(balances_getter(recipient), 2000000000000000000, 'balances should be 2 Eth');
     }
-    
+
     /// #value: 2000000000000000000
     /// #sender: account-3
     function donateAcc3AndCheckBalance() public payable{
@@ -416,7 +421,7 @@ contract testSuite is donations {
         donate(recipient, "Maria", "Are you a car?");
         Assert.equal(balances_getter(recipient), 4000000000000000000, 'balances should be 4 Eth');
     }
-    
+
     /// #sender: account-4
     function withdrawDonations() public payable{
         uint initialBal = getBalance();
