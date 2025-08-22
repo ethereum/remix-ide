@@ -61,7 +61,8 @@ Here is the list of modules under each category along with the example code whic
 `tx.origin` is useful only in very exceptional cases. If you use it for authentication, you usually want to replace it by "msg.sender", because otherwise any contract you call can act on your behalf.
 
 _Example:_
-```
+
+```Solidity
 require(tx.origin == owner);
 ```
 
@@ -70,7 +71,8 @@ require(tx.origin == owner);
 Potential Violation of Checks-Effects-Interaction pattern can lead to re-entrancy vulnerability.
 
 _Example:_
-```
+
+```Solidity
 // sending ether first
 msg.sender.transfer(amount);
 
@@ -83,7 +85,8 @@ balances[msg.sender] -= amount;
 Use of inline assembly is advised only in rare cases.
 
 _Example:_
-```
+
+```Solidity
 assembly {
             // retrieve the size of the code, this needs assembly
             let size := extcodesize(_addr)
@@ -94,7 +97,8 @@ assembly {
 `now` does not mean current time. `now` is an alias for `block.timestamp`. `block.timestamp` can be influenced by miners to a certain degree, be careful.
 
 _Example:_
-```
+
+```Solidity
 // using now for date comparison
 if(startDate > now)
     isStarted = true;
@@ -102,29 +106,35 @@ if(startDate > now)
 // using block.timestamp
 uint c = block.timestamp;
 ```
+
 -   **Low level calls: Semantics may be unclear**
 
 Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever possible. `send` does not throw an exception when not successful, make sure you deal with the failure case accordingly. Use `transfer` whenever failure of the ether transfer should rollback the whole transaction.
 
 _Example:_
-```
+
+```Solidity
 x.call('something');
 x.send(1 wei);
 ```
+
 -   **Blockhash usage: Semantics maybe unclear**
 
 `blockhash` is used to access the last 256 block hashes. A miner computes the block hash by "summing up" the information in the current block mined. By summing up the information in a clever way a miner can try to influence the outcome of a transaction in the current block.
 
 _Example:_
-```
+
+```Solidity
 bytes32 b = blockhash(100);
 ```
+
 -   **Selfdestruct: Beware of caller contracts**
 
 `selfdestruct` can block calling contracts unexpectedly. Be especially careful if this contract is planned to be used by other contracts (i.e. library contracts, interactions). Selfdestruction of the callee contract can leave callers in an inoperable state.
 
 _Example:_
-```
+
+```Solidity
 selfdestruct(address(0x123abc..));
 ```
 
@@ -134,7 +144,8 @@ selfdestruct(address(0x123abc..));
 If the gas requirement of a function is higher than the block gas limit, it cannot be executed. Please avoid loops in your functions or actions that modify large areas of storage
 
 _Example:_
-```
+
+```Solidity
 for (uint8 proposal = 0; proposal < proposals.length; proposal++) {
     if (proposals[proposal].voteCount > winningVoteCount) {
         winningVoteCount = proposals[proposal].voteCount;
@@ -148,7 +159,8 @@ for (uint8 proposal = 0; proposal < proposals.length; proposal++) {
 Never use `this` to call functions in the same contract, it only consumes more gas than normal local calls.
 
 _Example:_
-```
+
+```Solidity
 contract test {
     
     function callb() public {
@@ -165,7 +177,8 @@ contract test {
 The `delete` operation when applied to a dynamically sized array in Solidity generates code to delete each of the elements contained. If the array is large, this operation can surpass the block gas limit and raise an OOG exception. Also nested dynamically sized objects can produce the same results.
 
 _Example:_
-```
+
+```Solidity
 contract arr {
     uint[] users;
     function resetState() public{
@@ -179,7 +192,8 @@ contract arr {
 Loops that do not have a fixed number of iterations, for example, loops that depend on storage values, have to be used carefully: Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can stall the complete contract at a certain point. Additionally, using unbounded loops can incur in a lot of avoidable gas costs. Carefully test how many items at maximum you can pass to such functions to make it successful.
 
 _Example:_
-```
+
+```Solidity
 contract forLoopArr {
     uint[] array;
 
@@ -197,7 +211,8 @@ contract forLoopArr {
 Ether payout should not be done in a loop. Due to the block gas limit, transactions can only consume a certain amount of gas. The number of iterations in a loop can grow beyond the block gas limit which can cause the complete contract to be stalled at a certain point. If required, make sure that number of iterations are low and you trust each address involved.
 
 _Example:_
-```
+
+```Solidity
 contract etherTransferInLoop {
     address payable owner;
 
@@ -223,7 +238,8 @@ contract etherTransferInLoop {
 ERC20 Contracts `decimals` function should have `uint8` as return type.
 
 _Example:_
-```
+
+```Solidity
 contract EIP20 {
 
     uint public decimals = 12;
@@ -236,39 +252,46 @@ contract EIP20 {
 It warns for the methods which potentially should be constant/view/pure but are not.
 
 _Example:_
-```
+
+```Solidity
 function b(address a) public returns (bool) {
         return true;
 }
 ```
+
 -   **Similar variable names: Variable names are too similar**
 
 It warns on the usage of similar variable names.
 
 _Example:_
-```
+
+```Solidity
 // Variables have very similar names voter and voters.
 function giveRightToVote(address voter) public {
     require(voters[voter].weight == 0);
     voters[voter].weight = 1;
 }
 ```
+
 -   **No return: Function with 'returns' not returning**
 
 It warns for the methods which define a return type but never explicitly return a value.
 
 _Example:_
-```
+
+```Solidity
 function noreturn(string memory _dna) public returns (bool) {
        dna = _dna;
    }
 ```
+
 -   **Guard conditions: Use 'require' and 'assert' appropriately**
 
 Use `assert(x)` if you never ever want x to be false, not in any circumstance (apart from a bug in your code). Use `require(x)` if x can be false, due to e.g. invalid input or a failing external component.
 
 _Example:_
-```
+
+```Solidity
 assert(a.balance == 0);
 ```
 -   **Result not used: The result of an operation not used**
@@ -276,29 +299,34 @@ assert(a.balance == 0);
 A binary operation yields a value that is not used in the following. This is often caused by confusing assignment (=) and comparison (==).
 
 _Example:_
-```
+
+```Solidity
 c == 5;
 or
 a + b;
 ```
+
 -   **String Length: Bytes length != String length**
 
 Bytes and string length are not the same since strings are assumed to be UTF-8 encoded (according to the ABI definition) therefore one character is not necessarily encoded in one byte of data.
 
 _Example:_
-```
+
+```Solidity
 function length(string memory a) public pure returns(uint) {
     bytes memory x = bytes(a);
 
     return x.length;
 }
 ```
+
 -   **Delete from dynamic array: 'delete' on an array leaves a gap**
 
 Using `delete` on an array leaves a gap. The length of the array remains the same. If you want to remove the empty position you need to shift items manually and update the length property.
 
 _Example:_
-```
+
+```Solidity
 contract arr {
     uint[] array = [1,2,3];
 
@@ -308,12 +336,14 @@ contract arr {
     }
 }
 ```
--   **Data Truncated: Division on int/uint values truncates the result**
+
+- **Data Truncated: Division on int/uint values truncates the result**
 
 Division of integer values yields an integer value again. That means e.g. 10 / 100 = 0 instead of 0.1 since the result is an integer again. This does not hold for division of (only) literal values since those yield rational constants.
 
 _Example:_
-```
+
+```Solidity
 function contribute() payable public {
     uint fee = msg.value * uint256(feePercentage / 100);
     fee = msg.value * (p2 / 100);

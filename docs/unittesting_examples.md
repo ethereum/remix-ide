@@ -10,7 +10,7 @@ In this example, we test setting & getting variables.
 
 Contract/Program to be tested: `Simple_storage.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 
 contract SimpleStorage {
@@ -31,7 +31,7 @@ contract SimpleStorage {
 ```
 Test contract/program: `simple_storage_test.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 import "remix_tests.sol";
 import "./Simple_storage.sol";
@@ -62,7 +62,7 @@ In Solidity, `msg.sender` plays a great role in access management of a smart con
 
 Contract/Program to be tested: `Sender.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 contract Sender {
     address private owner;
@@ -84,7 +84,7 @@ contract Sender {
 
 Test contract/program: `Sender_test.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix
 import "remix_accounts.sol";
@@ -144,7 +144,7 @@ Here is an example test file that use both **try-catch** blocks and **low level 
 
 Contract/Program to be tested: `AttendanceRegister.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 contract AttendanceRegister {
     struct Student{
@@ -173,7 +173,7 @@ contract AttendanceRegister {
 
 Test contract/program: `AttendanceRegister_test.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix.
 import "./AttendanceRegister.sol";
@@ -264,7 +264,7 @@ In Solidity, ether can be passed along with a method call which is accessed insi
 
 Contract/Program to be tested: `Value.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 contract Value {
     uint256 public tokenBalance;
@@ -284,7 +284,7 @@ contract Value {
 ```
 Test contract/program: `Value_test.sol`
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.7.0;
 import "remix_tests.sol"; 
 import "./Value.sol";
@@ -332,7 +332,7 @@ contract ValueTest{
 In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts.
 
 Contract/Program to be tested: `Donations.sol`
-```
+```Solidity
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.4;
 
@@ -378,7 +378,7 @@ contract donations{
 
 Test contract/program: `Donations_test.sol`
 
-```
+```Solidity
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.4.22 <0.9.0;

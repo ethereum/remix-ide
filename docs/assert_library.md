@@ -1,11 +1,13 @@
 Remix Assert Library
 ====================
 
-* [Assert.ok(value[, message])](#assert-ok-value-message)
-* [Assert.equal(actual, expected[, message])](#assert-equal-actual-expected-message)
-* [Assert.notEqual(actual, expected[, message])](#assert-notequal-actual-expected-message)
-* [Assert.greaterThan(value1, value2[, message])](#assert-greaterthan-value1-value2-message)
-* [Assert.lesserThan(value1, value2[, message])](#assert-lesserthan-value1-value2-message)
+- [Remix Assert Library](#remix-assert-library)
+  - [Assert](#assert)
+    - [Assert.ok(value\[, message\])](#assertokvalue-message)
+    - [Assert.equal(actual, expected\[, message\])](#assertequalactual-expected-message)
+    - [Assert.notEqual(actual, expected\[, message\])](#assertnotequalactual-expected-message)
+    - [Assert.greaterThan(value1, value2\[, message\])](#assertgreaterthanvalue1-value2-message)
+    - [Assert.lesserThan(value1, value2\[, message\])](#assertlesserthanvalue1-value2-message)
 
 
 ## Assert
@@ -17,7 +19,8 @@ Remix Assert Library
 Tests if value is truthy. `message` is returned in case of failure.
 
 Examples:
-```
+
+```JavaScript
 Assert.ok(true);
 // OK
 Assert.ok(false, "it\'s false");
@@ -32,7 +35,8 @@ Assert.ok(false, "it\'s false");
 Tests if `actual` & `expected` values are same. `message` is returned in case of failure.
 
 Examples:
-```
+
+```JavaScript
 Assert.equal(string("a"), "a");
 // OK
 Assert.equal(uint(100), 100);
@@ -52,7 +56,8 @@ Assert.equal(foo.get(), 100, "value should be 100");
 Tests if `actual` & `expected` values are not same. `message` is returned in case of failure.
 
 Examples:
-```
+
+```Javascript
 Assert.notEqual(string("a"), "b");
 // OK
 foo.set(200)
@@ -68,7 +73,8 @@ Assert.notEqual(foo.get(), 200, "value should not be 200");
 Tests if `value1` is greater than `value2`. `message` is returned in case of failure.
 
 Examples:
-```
+
+```Javascript
 Assert.greaterThan(uint(2), uint(1));
 // OK
 Assert.greaterThan(uint(-2), uint(1));
@@ -87,7 +93,8 @@ Assert.greaterThan(int(-2), int(-1), "-2 is not greater than -1");
 Tests if `value1` is lesser than `value2`. `message` is returned in case of failure.
 
 Examples:
-```
+
+```Javascript
 Assert.lesserThan(int(-2), int(-1));
 // OK
 Assert.lesserThan(int(2), int(1), "2 is not lesser than 1");

@@ -29,7 +29,7 @@ FAQ
 ### Solidity compiler
 
 **Q:** Error: compiler might be in a non-sane state
-```
+```text
 error: "Uncaught JavaScript exception: RangeError: Maximum call stack size exceeded.
 The compiler might be in a non-sane state, please be careful and do not use further compilation data to deploy to mainnet.
 It is heavily recommended to use another browser not affected by this issue (Firefox is known to not be affected)."
@@ -40,13 +40,13 @@ Please change the compiler version in Solidity Plugin to the newer one or use an
 
 **Q:** I’m getting an issue with Maximum call stack exceed and various other errors, can't compile.
 
-**A:**  Try a different browser or a newer solidity compiler version.
+**A:** Try a different browser or a newer solidity compiler version.
 
 **Q:** How to verify a contract that imports other contracts?
 
-**A:**  The verification tool does not recursively go through the import statements in a contract.  So can only verify a 'flattened' contract.  
+**A:** The verification tool does not recursively go through the import statements in a contract. So can only verify a 'flattened' contract.  
 
-A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option.  This will assemble all the original code as well as the imported code into a single file.
+A contract can be 'flattened' by right-clicking on it in the File Explorer and choosing the `Flatten` option. This will assemble all the original code as well as the imported code into a single file.
 
 ### Deploy & Run
 
@@ -56,7 +56,7 @@ A contract can be 'flattened' by right-clicking on it in the File Explorer and c
 
 **Q:** Where is deploy button?
 
-**A:** It's in the **Deploy & Run Transactions** module. 
+**A:** It's in the **Deploy & Run Transactions** module.
 
 **Q:** How to pass a tuple to a public function in Remix?
 
@@ -70,7 +70,7 @@ A contract can be 'flattened' by right-clicking on it in the File Explorer and c
 
 For example, here's a solidity file with a struct as an input parameter.
 
-```
+```Solidity
 pragma solidity >=0.4.22 <0.6.0;
 pragma experimental ABIEncoderV2;
 

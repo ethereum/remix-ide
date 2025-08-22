@@ -14,7 +14,7 @@
 
 import sys
 import os
-
+import datetime
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -58,9 +58,9 @@ source_suffix = {
 master_doc = 'index'
 
 # General information about the project.
-project = u'Remix - Ethereum IDE'
-copyright = u'2019-24, Remix;'
 author = u'Remix Team'
+project = u'Remix - Ethereum IDE'
+copyright = u'2019 - %s, %s' % (datetime.datetime.now().year, author)
 
 github_doc_root = 'https://github.com/ethereum/remix-ide/tree/master/docs'
 

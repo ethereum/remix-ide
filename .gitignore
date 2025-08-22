@@ -12,3 +12,5 @@ docs/_build/doctrees/
 *.doctree
 .gitignore.swp
 .venv
+dirhtml
+_build

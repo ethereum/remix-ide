@@ -29,7 +29,7 @@ to define `<network_name>` or `<network_id>` as keys.
 
 Here is a sample metadata file for linking a library:
 
-```
+```json
 {
 	"VM:-": {
 		"linkReferences": {

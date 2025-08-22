@@ -17,7 +17,7 @@ Create a file with `.js` or `.ts` extension and put your logic inside it. To run
 
 Here is a sample .js script:
 
-```
+```JavaScript
 function test() {
   var num=12;
   if(num<10)
@@ -62,7 +62,7 @@ The script can contains Mocha tests to be run.
 
 In order to connect a contract with a script, add the **NatSpec** tag `@custom:dev-run-script` to the contract followed by the absolute file path, like:
 
-```
+```JavaScript
   /**
    * @title ContractName
    * @dev ContractDescription
@@ -80,7 +80,7 @@ The example below deploys a solidity contract named **CustomERC20.sol**. This ex
 
 For more information about this example, please see: [running async/await scripts](https://medium.com/remix-ide/running-js-async-await-scripts-in-remix-ide-3115b5dd7687?source=friends_link&sk=04e650dfa65905fdab0ecd5b10513d41)
 
-```
+```JavaScript
 (async () => {
   try {
     console.log('deploy...')
