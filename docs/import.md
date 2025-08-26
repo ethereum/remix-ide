@@ -17,23 +17,23 @@ Here are some example import statements:
 
 ### Import from NPM
 
-```javascript
+```Solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-```javascript
+```Solidity
 import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
 ```
 
 **Note:** In the example above, **@openzeppelin** is the name of the npm library. In the following example the library's name does not begin with an @ - but Remix will go and check npm for a library of that name.
 
-```javascript
+```Solidity
 import "solidity-linked-list/contracts/StructuredLinkedList.sol";
 ```
 
 ### Import from a Github URL
 
-```javascript
+```Solidity
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/math/SafeMath.sol";
 ```
 
@@ -41,21 +41,21 @@ You should specify the release tag (where available), otherwise you will get the
 
 ### Import from Swarm
 
-```javascript
-import "bzz-raw://5766400e5d6d822f2029b827331b354c41e0b61f73440851dd0d06f603dd91e5";
+```Solidity
+import 'bzz-raw://5766400e5d6d822f2029b827331b354c41e0b61f73440851dd0d06f603dd91e5';
 ```
 
 ### Import from IPFS
 
-```javascript
-import "ipfs://Qmdyq9ZmWcaryd1mgGZ4PttRNctLGUSAMpPqufsk6uRMKh";
+```Solidity
+import 'ipfs://Qmdyq9ZmWcaryd1mgGZ4PttRNctLGUSAMpPqufsk6uRMKh';
 ```
 
 ### Importing a local file not in .deps
 
 To import a file NOT in the **.deps** folder, use a relative path (**./**). For example:
 
-```javascript
+```Solidity
 import "./myLovelyLovelyLib.sol";
 ```
 
@@ -93,21 +93,19 @@ The 2 remix commands for loading are:
 - remix.loadurl(url)
 - remix.loadgist(id)
 
-```javascript
-remix.loadurl(
-  "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/math/SafeMath.sol"
-);
+```Solidity
+remix.loadurl('https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v2.5.0/contracts/math/SafeMath.sol')
 ```
 
-```javascript
-remix.loadgist("5362adf2000afa4cbdd2c6d239e06bf5");
+```Solidity
+remix.loadgist('5362adf2000afa4cbdd2c6d239e06bf5')
 ```
 
 ### Accessing files loaded from the Home tab or from a remix command
 
 When you load from github, a folder named `github` folder is created in the root of your current workspace. To import a file from the `github` folder, you would use a command like this:
 
-```javascript
+```Solidity
 import "github/OpenZeppelin/openzeppelin-contracts/contracts/math/SafeMath.sol";
 ```
 

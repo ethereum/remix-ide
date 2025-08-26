@@ -38,7 +38,7 @@ This file contains information about developing tests for a contract.
 
 Below is an example of a generic test file:
 
-```javascript
+```Solidity
 pragma solidity >=0.4.22 <0.8.0;
 import "remix_tests.sol"; // this import is automatically injected by Remix.
 import "remix_accounts.sol";
@@ -125,7 +125,7 @@ For interacting with a contract's method, the prime parameters of a transaction 
 
 One can input custom values for `msg.sender` & `msg.value` of transaction using NatSpec comments, like:
 
-```javascript
+```Solidity
 /// #sender: account-0
 /// #value: 10
 function checkSenderIs0AndValueis10 () public payable {

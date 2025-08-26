@@ -22,25 +22,25 @@ To specify the Vyper version, the EVM version, and optimize setting, add a comme
 
 As of 0.3.10, the recommended way to specify the version pragma is as follows:
 
-```python
+```Vyper
 #pragma version ^0.3.10
 ```
 
 ### Old way to specify Vyper version
 
-```python
+```Vyper
 # @version ^0.3.0
 ```
 
 ### EVM version
 
-```python
+```Vyper
 # @pragma evm-version paris
 ```
 
 ### Optimize
 
-```python
+```Vyper
 #pragma optimize codesize
 ```
 

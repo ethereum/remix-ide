@@ -71,7 +71,7 @@ A contract can be 'flattened' by right-clicking on it in the File Explorer and c
 
 For example, here's a solidity file with a struct as an input parameter.
 
-```javascript
+```Solidity
 pragma solidity >=0.4.22 <0.6.0;
 pragma experimental ABIEncoderV2;
 

@@ -69,7 +69,7 @@ $ remix-tests examples/simple_storage_test.sol
 
 Consider for a simple storage contract named `simple_storage.sol`:
 
-```javascript
+```Solidity
 pragma solidity >=0.4.22 <=0.8.0;
 
 contract SimpleStorage {
@@ -91,7 +91,7 @@ contract SimpleStorage {
 
 Test file `simple_storage_test.sol` can be as:
 
-```javascript
+```Solidity
 pragma solidity >=0.4.22 <=0.8.0;
 import "remix_tests.sol"; // injected by remix-tests
 import "./simple_storage.sol";
@@ -124,7 +124,7 @@ contract MyTest {
 
 Running `simple_storage_test.sol` file will output as:
 
-```text
+```Solidity
 $ remix-tests simple_storage_test.sol
 
 	👁	:: Running remix-tests - Unit testing for solidity ::	👁
@@ -152,7 +152,7 @@ $ remix-tests simple_storage_test.sol
 
 Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:
 
-```text
+```Solidity
 $ remix-tests --compiler 0.7.4 --evm istanbul --optimize true --runs 300 simple_storage_test.sol
 
 	👁	:: Running remix-tests - Unit testing for solidity ::	👁
