@@ -93,7 +93,7 @@ Similarly, to pass in a struct as a parameter of a function, it needs to be put 
 
 Consider a nested struct defined like this:
 
-```Solidity
+```javascript
 struct Garden {
     uint slugCount;
     uint wormCount;
@@ -107,13 +107,13 @@ struct Flower {
 
 If a function has the signature `fertilizer(Garden memory gardenPlot)` then the correct syntax is:
 
-```Solidity
-[1,2,[[3,"Petunia"]]]
+```javascript
+[1, 2, [[3, "Petunia"]]];
 ```
 
 To continue on this example, here's a sample contract:
 
-```Solidity
+```javascript
 pragma solidity >=0.4.22 <0.7.0;
 pragma experimental ABIEncoderV2;
 
@@ -140,8 +140,15 @@ contract Sunshine {
 
 After compiling, deploying the contract and opening up the deployed instance, we can then add the following input parameters to the function named **fertilizer** :
 
-```Solidity
-[1,2,[[3,"Black-eyed Susan"],[4,"Pansy"]]]
+```javascript
+[
+  1,
+  2,
+  [
+    [3, "Black-eyed Susan"],
+    [4, "Pansy"],
+  ],
+];
 ```
 
 The function **fertilizer** accepts a single parameter of the type **Garden**. The type **Garden** is a **struct**. Structs are wrapped in **square brackets**. Inside **Garden** is an array that is an array of structs named **theFlowers**. It gets a set of brackets for the array and another set for the struct. Thus the double square brackets.

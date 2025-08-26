@@ -62,7 +62,7 @@ Here is the list of modules under each category along with the example code whic
 
 _Example:_
 
-```Solidity
+```javascript
 require(tx.origin == owner);
 ```
 
@@ -72,7 +72,7 @@ Potential Violation of Checks-Effects-Interaction pattern can lead to re-entranc
 
 _Example:_
 
-```Solidity
+```javascript
 // sending ether first
 msg.sender.transfer(amount);
 
@@ -86,7 +86,7 @@ Use of inline assembly is advised only in rare cases.
 
 _Example:_
 
-```Solidity
+```javascript
 assembly {
             // retrieve the size of the code, this needs assembly
             let size := extcodesize(_addr)
@@ -99,7 +99,7 @@ assembly {
 
 _Example:_
 
-```Solidity
+```javascript
 // using now for date comparison
 if(startDate > now)
     isStarted = true;
@@ -114,7 +114,7 @@ Use of low level `call`, `callcode` or `delegatecall` should be avoided whenever
 
 _Example:_
 
-```Solidity
+```javascript
 x.call('something');
 x.send(1 wei);
 ```
@@ -125,7 +125,7 @@ x.send(1 wei);
 
 _Example:_
 
-```Solidity
+```javascript
 bytes32 b = blockhash(100);
 ```
 
@@ -135,7 +135,7 @@ bytes32 b = blockhash(100);
 
 _Example:_
 
-```Solidity
+```javascript
 selfdestruct(address(0x123abc..));
 ```
 
@@ -147,7 +147,7 @@ If the gas requirement of a function is higher than the block gas limit, it cann
 
 _Example:_
 
-```Solidity
+```javascript
 for (uint8 proposal = 0; proposal < proposals.length; proposal++) {
     if (proposals[proposal].voteCount > winningVoteCount) {
         winningVoteCount = proposals[proposal].voteCount;
@@ -162,7 +162,7 @@ Never use `this` to call functions in the same contract, it only consumes more g
 
 _Example:_
 
-```Solidity
+```javascript
 contract test {
 
     function callb() public {
@@ -180,7 +180,7 @@ The `delete` operation when applied to a dynamically sized array in Solidity gen
 
 _Example:_
 
-```Solidity
+```javascript
 contract arr {
     uint[] users;
     function resetState() public{
@@ -195,7 +195,7 @@ Loops that do not have a fixed number of iterations, for example, loops that dep
 
 _Example:_
 
-```Solidity
+```javascript
 contract forLoopArr {
     uint[] array;
 
@@ -214,7 +214,7 @@ Ether payout should not be done in a loop. Due to the block gas limit, transacti
 
 _Example:_
 
-```Solidity
+```javascript
 contract etherTransferInLoop {
     address payable owner;
 
@@ -242,7 +242,7 @@ ERC20 Contracts `decimals` function should have `uint8` as return type.
 
 _Example:_
 
-```Solidity
+```javascript
 contract EIP20 {
 
     uint public decimals = 12;
@@ -257,7 +257,7 @@ It warns for the methods which potentially should be constant/view/pure but are 
 
 _Example:_
 
-```Solidity
+```javascript
 function b(address a) public returns (bool) {
         return true;
 }
@@ -269,7 +269,7 @@ It warns on the usage of similar variable names.
 
 _Example:_
 
-```Solidity
+```javascript
 // Variables have very similar names voter and voters.
 function giveRightToVote(address voter) public {
     require(voters[voter].weight == 0);
@@ -283,7 +283,7 @@ It warns for the methods which define a return type but never explicitly return 
 
 _Example:_
 
-```Solidity
+```javascript
 function noreturn(string memory _dna) public returns (bool) {
        dna = _dna;
    }
@@ -295,7 +295,7 @@ Use `assert(x)` if you never ever want x to be false, not in any circumstance (a
 
 _Example:_
 
-```Solidity
+```javascript
 assert(a.balance == 0);
 ```
 
@@ -305,9 +305,9 @@ A binary operation yields a value that is not used in the following. This is oft
 
 _Example:_
 
-```Solidity
+```javascript
 c == 5;
-or
+or;
 a + b;
 ```
 
@@ -317,7 +317,7 @@ Bytes and string length are not the same since strings are assumed to be UTF-8 e
 
 _Example:_
 
-```Solidity
+```javascript
 function length(string memory a) public pure returns(uint) {
     bytes memory x = bytes(a);
 
@@ -331,7 +331,7 @@ Using `delete` on an array leaves a gap. The length of the array remains the sam
 
 _Example:_
 
-```Solidity
+```javascript
 contract arr {
     uint[] array = [1,2,3];
 
@@ -348,7 +348,7 @@ Division of integer values yields an integer value again. That means e.g. 10 / 1
 
 _Example:_
 
-```Solidity
+```javascript
 function contribute() payable public {
     uint fee = msg.value * uint256(feePercentage / 100);
     fee = msg.value * (p2 / 100);

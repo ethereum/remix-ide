@@ -48,7 +48,7 @@ Hit tab to accept the suggestion.
 In the Editor, when the Solidity Copilot is on, you can ask it a coding question with the `///` prompt.
 For example:
 
-```plain text
+```text
 /// write a function that returns an array with 3 elements from the function's parameters
 ```
 
