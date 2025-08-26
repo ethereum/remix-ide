@@ -1,10 +1,8 @@
-Slither
-============
+# Slither
 
 _(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)_
 
-Remixd and Slither
-------------------
+## Remixd and Slither
 
 **Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
 
@@ -12,15 +10,13 @@ When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is
 
 `Python3.6+ (pip3)` needs to already be installed on the System. In case of any discrepancy, Slither can also be installed along with other dependencies using command `remixd -i slither` _(This packaging of Slither with the remixd module is supported since Remixd `v0.6.3`)_
 
+when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)
 
- when `remixd` is running locally on your device, an additional websocket plugin will be listening on port `65523` which will be dedicated for Slither integration. (Supported since Remixd `v0.5.0`)
-
-The remixd Slither listener is a websocket plugin similar to remixd and is used to perform Slither analysis with Remix IDE. 
+The remixd Slither listener is a websocket plugin similar to remixd and is used to perform Slither analysis with Remix IDE.
 
 ![](images/a-slither-remixd.png)
 
-Enable Slither Analysis
-------------------
+## Enable Slither Analysis
 
 ### Prerequisites
 
@@ -40,15 +36,15 @@ If a project is shared through remixd and `localhost` workspace is loaded in Rem
 
 There is an info icon on the right side of the label which redirects to a specific section of Remix official documentation that explains how to use Slither Analysis and prerequisites for it.
 
-One can check the `Enable Slither Analysis` box to run the analysis using Slither along with the Remix's analysis library. 
+One can check the `Enable Slither Analysis` box to run the analysis using Slither along with the Remix's analysis library.
 
-Latest report of Slither analysis will be stored locally on project root with a file named as `remix-slither-report.json`. 
+Latest report of Slither analysis will be stored locally on project root with a file named as `remix-slither-report.json`.
 
 Slither Analysis report will also be displayed on the Remix IDE side after the Remix analysis report for better user readability.
 
 ![](images/a-slither-analysis-success.png)
 
-The result of the analysis will be shown in the Remix IDE terminal 
+The result of the analysis will be shown in the Remix IDE terminal
 
 ![](images/a-slither-analysis-success-terminal.png)
 
@@ -77,7 +73,3 @@ For example, if current `solc` version on the system is 0.8.4 and on the Remix I
 After successful analysis run:
 
 ![](images/a-slither-analysis-select-success.png)
-
-
-
-

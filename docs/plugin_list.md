@@ -45,7 +45,7 @@ Static code analysis is a process to debug the code by examining it and without 
 
 **Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;
 <br>Compile Vyper code using local or remote Vyper compiler.
-<br>profile name: **vyper** 
+<br>profile name: **vyper**
 <br>[Documentation](https://remix-ide.readthedocs.io/en/latest/vyper.html)
 
 ## Additional Plugins
@@ -81,7 +81,6 @@ Create private, forked testnets from any EVM chain with integrated explorer, fau
 <br>[Profile name](https://remix-plugin.buildbear.io): buildbear
 <br>[Documentation](https://www.buildbear.io/resources/guides-and-tutorials/remix_plugin)
 <br>[Make an issue](https://github.com/BuildBear/remix-plugin/issues)
-
 
 **Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br>
 Deploy a contract to multiple chains (1 at a time) with the same address.
@@ -148,7 +147,7 @@ Perform real-time security analysis of your Solidity smart contracts directly wi
 <br>[Make an issue](https://github.com/ethereum/remix-project/issues)
 
 **Solhint**
-This plugin is now part of the Solidity Analyzers plugin.  
+This plugin is now part of the Solidity Analyzers plugin.
 
 **Starknet** &nbsp; ![](images/pi-starknet.png) &nbsp;
 <br>Compile contracts written in Cairo to Starknet

@@ -1,7 +1,7 @@
-Frequently Asked Scripts
-========================
+# Frequently Asked Scripts
 
 Deploy with web3.js
+
 ```JavaScript
 (async () => {
   try {
@@ -31,6 +31,7 @@ Deploy with web3.js
 ```
 
 Deploy with Ethers
+
 ```JavaScript
 (async function() {
   try {

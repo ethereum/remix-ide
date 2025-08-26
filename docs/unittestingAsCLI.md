@@ -1,37 +1,36 @@
-Command Line Interface
-========================
-remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)
-------------------
+# Command Line Interface
+
+## remix-tests [![](https://badge.fury.io/js/%40remix-project%2Fremix-tests.svg)](https://www.npmjs.com/package/@remix-project/remix-tests)
 
 `remix-tests` is a tool which can be used as a CLI (Command Line Interface) solution to run the solidity unit tests. This is the same tool which works as a library underneath Remix's `Solidity Unit Testing` plugin. It is available on NPM as `@remix-project/remix-tests`.
 
-Get started
--------------
+## Get started
 
 You can install it using NPM:
 
-* As a dev dependency:
+- As a dev dependency:
 
 `npm install --save-dev @remix-project/remix-tests`
 
-* As a global NPM module:
+- As a global NPM module:
 
 `npm install -g @remix-project/remix-tests`
 
 To confirm installation, run:
+
 ```Shell
 $ remix-tests version
 0.1.36
 ```
+
 Version should be same as on NPM.
 
-How to use
--------------
+## How to use
 
 You can see all available options using `help` command.
 
 ```Shell
-$ remix-tests help           
+$ remix-tests help
 Usage: remix-tests [options] [command]
 
 Options:
@@ -66,11 +65,11 @@ $ remix-tests examples/simple_storage_test.sol
 
 **NOTE:** `remix-tests` will assume that name of test(s) file ends with `"_test.sol"`. e.g `simple_storage_test.sol`
 
-Example
---------
+## Example
+
 Consider for a simple storage contract named `simple_storage.sol`:
 
-```Solidity
+```javascript
 pragma solidity >=0.4.22 <=0.8.0;
 
 contract SimpleStorage {
@@ -92,8 +91,7 @@ contract SimpleStorage {
 
 Test file `simple_storage_test.sol` can be as:
 
-
-```Solidity
+```text
 pragma solidity >=0.4.22 <=0.8.0;
 import "remix_tests.sol"; // injected by remix-tests
 import "./simple_storage.sol";
@@ -150,12 +148,11 @@ $ remix-tests simple_storage_test.sol
 	 returned: 1
 ```
 
-Custom compiler context
-------------------------
+## Custom compiler context
 
 Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:
 
-```Solidity
+```text
 $ remix-tests --compiler 0.7.4 --evm istanbul --optimize true --runs 300 simple_storage_test.sol
 
 	👁	:: Running remix-tests - Unit testing for solidity ::	👁
@@ -186,9 +183,8 @@ Loading remote solc version v0.7.4+commit.3f05b770 ...
 
 Remember, custom compiler version will require internet connection to load compiler.
 
-As a CI solution
------------------
+## As a CI solution
 
-`remix-tests` can also be used for continuous integration (CI) testing. 
+`remix-tests` can also be used for continuous integration (CI) testing.
 
 For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration.
