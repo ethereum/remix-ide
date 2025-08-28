@@ -13,4 +13,3 @@ docs/_build/doctrees/
 .gitignore.swp
 .venv
 dirhtml
-_build

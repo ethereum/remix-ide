@@ -55,6 +55,8 @@ Useful links:
    :caption: Core Modules
 
    file_explorer
+   workspaces
+   git
    search_in_fe
    plugin_manager
    settings

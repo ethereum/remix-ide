@@ -124,7 +124,7 @@ contract MyTest {
 
 Running `simple_storage_test.sol` file will output as:
 
-```Solidity
+```console
 $ remix-tests simple_storage_test.sol
 
 	👁	:: Running remix-tests - Unit testing for solidity ::	👁
@@ -152,7 +152,7 @@ $ remix-tests simple_storage_test.sol
 
 Most of the `remix-tests` options are there to define a custom compiler context. With an extended custom compiler context, execution of above test file will go as:
 
-```text
+```console
 $ remix-tests --compiler 0.7.4 --evm istanbul --optimize true --runs 300 simple_storage_test.sol
 
 	👁	:: Running remix-tests - Unit testing for solidity ::	👁
