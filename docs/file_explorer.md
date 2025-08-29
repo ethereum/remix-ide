@@ -1,16 +1,20 @@
 # File Explorer
 
-The File Explorer is the plugin responsible for files. This plugin also contains many shortcuts and commands. For example, when you right-click on a file, you get a pop-up menu with options for manipulating the file. You can activate this icon by clicking the File Explorer icon on the Icon Panel.
+The File Explorer is the plugin responsible for managing files. It includes a pop-up menu that is activated when you right-click on a file.
 
 ![Remix Side Panel showing the File Explorer and the Icon Panel highlighting the File Explorer icon.](images/file-explorer/a-file-explorer1a.png)
 
-The green shield icon at the top of the File Explorer page on the Sidebar depicts that the plugin is maintained by Remix Team. When you click the caret next to the icon, the Sidebar will display details about the plugin, including a link to its documentation page.
+The green shield icon at the top of the File Explorer page on the Sidebar indicates that the plugin is maintained by Remix Team. When you click the caret next to the icon, the Sidebar will display details about the plugin, including a link to its documentation page.
 
 ![Remix Team shield icon and caret.](images/file-explorer/a-fe-top-caret.png)
 
 ## File storage
 
-By default, Remix IDE stores files in **IndexedDB**, a database built into your browser. When you write code in the Remix IDE, it is automatically stored locally in this browser database and not linked to any user account. It is important to note that browser storages are ephemeral and browser crashes might lead to complete loss of data. Thus, it is important to have an alternative file backup/saving strategy.
+By default, Remix IDE stores files in **IndexedDB**, a database built into the browser. Your data is only stored locally in your browser and not on an external server.
+
+Browser storage is ephemeral and browser crashes might lead to complete loss of data
+
+Thus, it is important to have an alternative file backup/saving strategy.
 
 **Some recommended strategies include:**
 
@@ -24,7 +28,7 @@ There are two ways you can save the files you create and use on Remix to your ha
 
 #### Remixd
 
-Remixd is an NPM package that allows you to share a specified folder on your computer with Remix IDE. Thus, your files are saved on IndexedDB and on the specified folder, so even if you wipe your browser storage, your files still exist on your computer. Learn more about Remixd on our [Remixd guide](remixd.html).
+Remixd is an NPM package that allows you to share a specified folder on your computer with Remix IDE. Thus, your files are saved on IndexedDB and on the specified folder. Learn more about Remixd on our [Remixd guide](remixd.html).
 
 #### Remix Desktop
 
@@ -84,11 +88,11 @@ When working with Remixd, and when adding files to the shared folder from your c
 
 Right-clicking on a file with a .sol extension will bring up a popup menu - which includes options for compiling & flattening, creating UML diagrams, and generating documentation.
 
-![](images/file-explorer/a-fe-rtclick-sol-file.png)
+![File Explorer right click on .sol file](images/file-explorer/a-fe-rtclick-sol-file.png)
 
 ### Right-Click on a Script
 
-![](images/file-explorer/a-fe-rtclick-script.png)
+![File Explorer right click on script file](images/file-explorer/a-fe-rtclick-script.png)
 
 Right-click on any file with a `.js` or `.ts` extension to get the **Run** option in the popup menu to run the script.
 
