@@ -65,6 +65,8 @@ Useful links:
    account-abstraction-7702
    terminal
    remixd
+   .. workspaces
+   .. git
 
 .. toctree::
    :maxdepth: 2

@@ -91,7 +91,15 @@ gettext_compact = False
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    ".venv", "venv", ".vscode", "env", ".tox",
+    "node_modules", ".git",
+    "**/.venv/**", "**/venv/**", "**/.vscode/**",
+    "**/site-packages/**", "**/*.dist-info/**", "**/__pycache__/**",
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
