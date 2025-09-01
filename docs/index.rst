@@ -55,6 +55,7 @@ Useful links:
    :caption: Core Modules
 
    file_explorer
+   git
    search_in_fe
    plugin_manager
    settings
@@ -66,7 +67,6 @@ Useful links:
    terminal
    remixd
    .. workspaces
-   .. git
 
 .. toctree::
    :maxdepth: 2
