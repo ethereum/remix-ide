@@ -1,18 +1,20 @@
-# Makefile for Sphinx documentation (classic style + venv + live-reload)
+# Makefile for Sphinx documentation
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD   = $(VENV_DIR)/bin/sphinx-build
 SPHINXAUTOBUILD = sphinx-autobuild
 PAPER         =
 SOURCEDIR     = .
 BUILDDIR      = _build
-
-# Optional: Python/requirements for a local venv
 PYTHON        ?= python3
 VENV_DIR      ?= .venv
 VENV          = $(VENV_DIR)/bin/activate
 REQ           ?= requirements.txt   # if present, will be used by `make install`
+VALE_CONFIG   = $(ROOT_DIR)/vale.ini
+TARGET        = *
+ALLFILES      =  *.md **/*.md
+ROOT_DIR = ..
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -29,13 +31,15 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(S
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
 
 .PHONY: help install run clean html dirhtml singlehtml pickle json htmlhelp qthelp applehelp devhelp epub \
-        latex latexpdf latexpdfja text man texinfo info gettext changes linkcheck doctest coverage xml pseudoxml
+        latex latexpdf latexpdfja text man texinfo info gettext changes linkcheck doctest coverage xml pseudoxml \
+				vale-install pymarkdownlnt-install lint-md
 
 # Help text
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  install    to create .venv and install doc dependencies (if requirements.txt exists)"
 	@echo "  run        to watch, rebuild and serve docs locally (live reload)"
+	@echo "  clean      to remove build artifacts"
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -60,6 +64,9 @@ help:
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
+	@echo "  vale-install       to install Vale for style checking"
+	@echo "  pymarkdownlnt-install  to install PyMarkdown linter"
+	@echo "  lint-md    to run markdown linting with PyMarkdown"
 
 
 
@@ -85,6 +92,22 @@ run: install
 		--re-ignore '(^|/)(_build|\.venv|venv|node_modules|\.git)/' \
 		$(SOURCEDIR) $(BUILDDIR)/dirhtml --open-browser --port 8000
 
+pymarkdownlnt-install:
+	@. $(VENV); test -d $(VENV_DIR)/lib/python*/site-packages/pymarkdown || pip install pymarkdownlnt
+
+lint-md: pymarkdownlnt-install
+	@. $(VENV); pymarkdownlnt --config $(ROOT_DIR)/.pymarkdown.json scan --recurse --exclude=./$(SPHINXDIR)/** $(SOURCEDIR)
+
+vale-install: install
+	@. $(VENV); test -d $(VENV_DIR)/lib/python*/site-packages/vale || pip install vale
+	@. $(VENV); test -f $(VALE_CONFIG)
+	@. $(VENV); find $(VENV_DIR)/lib/python*/site-packages/vale/vale_bin -size 195c -exec vale --version \;
+	@. $(VENV); vale sync
+
+spell-check: vale-install
+	@echo "Running Vale spelling check only..."
+	@. $(VENV); vale --filter='.Extends=="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md > vale-spelling.txt 2>&1 || true
+	@echo "Vale spelling results saved to vale-spelling.txt"
 
 clean:
 	rm -rf $(BUILDDIR)/*
