@@ -109,6 +109,10 @@ spell-check: vale-install
 	@. $(VENV); vale --filter='.Extends=="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md > vale-spelling.txt 2>&1 || true
 	@echo "Vale spelling results saved to vale-spelling.txt"
 
+general-checks: vale-install
+	@echo "General Vale checks"
+	@. $(VENV); vale --minAlertLevel=error --filter='.Extends!="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md
+
 clean:
 	rm -rf $(BUILDDIR)/*
 
