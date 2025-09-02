@@ -15,7 +15,6 @@ When you click the button, Remix takes you to the Workspace Templates page, wher
 - Remix Generic templates
 - OpenZeppelin templates (ERC20, ERC721, ERC1155)
 - Cookbook.dev templates
-- 0xProject ERC20
 - Gnosis Safe MultiSig template
 - Zero-Knowledge Proof (ZKP) templates (Circom, Noir, and Generic)
 - Uniswap v4 templates
@@ -23,7 +22,7 @@ When you click the button, Remix takes you to the Workspace Templates page, wher
 - Etherscan scripts for verifying contracts
 - CI scripts for unit tests and security analysis
 
-When you create the button, a modal with customization options will popup. The options differ depending on the template you choose.
+When you click the "**Create**" the button, a modal with customization options will popup. The options differ depending on the template you choose.
 
 For example, when you create a Workspace with an OpenZeppelin template, you can add customize the features of the contract you create. The image below shows the options available for customizing an OpenZeppelin ERC721 contract template.
 ![OpenZeppelin ERC721 contract template.](images/workspaces/a-fe-modal-oz.png)
