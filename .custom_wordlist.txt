@@ -66,11 +66,6 @@ preloaded
 Pragma
 Remappings
 remappings
-Remix's
-remixd
-Remixd
-Rinkeby
-Ropsten
 Routescan
 Sepolia
 Sindri
