@@ -22,6 +22,7 @@ Deployer
 Devs
 dapp
 dapps
+Dapp
 EIP's
 EOAs
 Ephemery
@@ -90,9 +91,8 @@ udapp
 Upgradeability
 VM's
 Vyper
-vyper
 Vyperlang
-websocket
+Websocket
 Workspace's
 Xinghuo
 Yul
