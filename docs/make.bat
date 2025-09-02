@@ -24,6 +24,10 @@ if "%REQ%" == "" (
 	set REQ=requirements.txt
 )
 
+REM Vale and linting configuration
+set VALE_CONFIG=..\vale.ini
+set ROOT_DIR=..
+
 set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees %SPHINXOPTS% %SOURCEDIR%
 set I18NSPHINXOPTS=%SPHINXOPTS% %SOURCEDIR%
 if NOT "%PAPER%" == "" (
@@ -56,6 +60,7 @@ if "%1" == "help" (
 	echo.Please use `make ^<target^>` where ^<target^> is one of
 	echo.  install    to create .venv and install doc dependencies (if requirements.txt exists)
 	echo.  run        to watch, rebuild and serve docs locally (live reload)
+	echo.  clean      to remove build artifacts
 	echo.  html       to make standalone HTML files
 	echo.  dirhtml    to make HTML files named index.html in directories
 	echo.  singlehtml to make a single large HTML file
@@ -80,6 +85,11 @@ if "%1" == "help" (
 	echo.  linkcheck  to check all external links for integrity
 	echo.  doctest    to run all doctests embedded in the documentation (if enabled)
 	echo.  coverage   to run coverage check of the documentation (if enabled)
+	echo.  vale-install       to install Vale for style checking
+	echo.  pymarkdownlnt-install  to install PyMarkdown linter
+	echo.  lint-md    to run markdown linting with PyMarkdown
+	echo.  spell-check        to run Vale spelling checks only
+	echo.  general-checks     to run Vale general style checks (excluding spelling)
 	goto end
 )
 
@@ -106,6 +116,52 @@ if "%1" == "run" (
 	echo Live docs: http://127.0.0.1:8000 (Ctrl+C to stop)
 	call %VENV_DIR%\Scripts\activate.bat
 	%SPHINXAUTOBUILD% -b dirhtml -d %BUILDDIR%/doctrees %SPHINXOPTS% --re-ignore "(^|/)(_build|\.venv|venv|node_modules|\.git)/" %SOURCEDIR% %BUILDDIR%/dirhtml --open-browser --port 8000
+	goto end
+)
+
+if "%1" == "pymarkdownlnt-install" (
+	call %VENV_DIR%\Scripts\activate.bat
+	python -c "import pymarkdown" 2>nul || pip install pymarkdownlnt
+	goto end
+)
+
+if "%1" == "lint-md" (
+	call make.bat pymarkdownlnt-install
+	call %VENV_DIR%\Scripts\activate.bat
+	pymarkdownlnt --config %ROOT_DIR%\.pymarkdown.json scan --recurse --exclude=.\%SPHINXDIR%\** %SOURCEDIR%
+	goto end
+)
+
+if "%1" == "vale-install" (
+	call make.bat install
+	call %VENV_DIR%\Scripts\activate.bat
+	python -c "import vale" 2>nul || pip install vale
+	if not exist "%VALE_CONFIG%" (
+		echo Error: Vale config file not found at %VALE_CONFIG%
+		exit /b 1
+	)
+	for /f %%i in ('dir /s /b %VENV_DIR%\Lib\site-packages\vale\vale_bin\*.exe 2^>nul') do (
+		"%%i" --version >nul 2>&1
+	)
+	vale sync
+	goto end
+)
+
+if "%1" == "spell-check" (
+	call make.bat vale-install
+	echo Running Vale spelling check only...
+	type "%ROOT_DIR%\.custom_wordlist.txt" >> "%ROOT_DIR%\styles\config\vocabularies\Remix\accept.txt"
+	call %VENV_DIR%\Scripts\activate.bat
+	vale --filter=".Extends==\"spelling\"" --config="%VALE_CONFIG%" %SOURCEDIR%\*.md > vale-spelling.txt 2>&1 || echo.
+	echo Vale spelling results saved to vale-spelling.txt
+	goto end
+)
+
+if "%1" == "general-checks" (
+	call make.bat vale-install
+	echo General Vale checks
+	call %VENV_DIR%\Scripts\activate.bat
+	vale --minAlertLevel=error --filter=".Extends!=\"spelling\"" --config="%VALE_CONFIG%" %SOURCEDIR%\*.md
 	goto end
 )
 
