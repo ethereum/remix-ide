@@ -10,7 +10,6 @@ BUILDDIR      = _build
 PYTHON        ?= python3
 VENV_DIR      ?= .venv
 VENV          = $(VENV_DIR)/bin/activate
-REQ           ?= requirements.txt   # if present, will be used by `make install`
 VALE_CONFIG   = $(ROOT_DIR)/vale.ini
 TARGET        = *
 ALLFILES      =  *.md **/*.md
@@ -78,11 +77,11 @@ help:
 install:
 	test -d $(VENV_DIR) || $(PYTHON) -m venv $(VENV_DIR)
 	. $(VENV); pip install -U pip wheel
-	@if [ -f "$(REQ)" ]; then \
-	  echo "Installing from $(REQ) ..."; \
-	  . $(VENV); pip install -r "$(REQ)"; \
+	@if [ -f "requirements.txt" ]; then \
+	  echo "Installing from requirements.txt ..."; \
+	  . $(VENV); pip install -r "requirements.txt"; \
 	else \
-	  echo "No $(REQ) found; installing minimal deps (sphinx + sphinx-autobuild) ..."; \
+	  echo "No requirements.txt found; installing minimal deps (sphinx + sphinx-autobuild) ..."; \
 	  . $(VENV); pip install -U sphinx sphinx-autobuild; \
 	fi
 
