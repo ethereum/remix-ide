@@ -106,6 +106,7 @@ vale-install: install
 
 spell-check: vale-install
 	@echo "Running Vale spelling check only..."
+	@cat $(ROOT_DIR)/.custom_wordlist.txt >> $(ROOT_DIR)/styles/config/vocabularies/Remix/accept.txt
 	@. $(VENV); vale --filter='.Extends=="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md > vale-spelling.txt 2>&1 || true
 	@echo "Vale spelling results saved to vale-spelling.txt"
 
