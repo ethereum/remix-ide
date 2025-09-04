@@ -56,6 +56,7 @@ Useful links:
 
    file_explorer
    workspaces
+   git
    search_in_fe
    plugin_manager
    settings
@@ -66,7 +67,6 @@ Useful links:
    account-abstraction-7702
    terminal
    remixd
-   .. git
 
 .. toctree::
    :maxdepth: 2
