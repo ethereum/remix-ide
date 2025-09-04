@@ -1,0 +1,18 @@
+# Enforce 'Remixd' in prose and `remixd` in code.
+# 1) If 'remixd' appears in prose, ask for 'Remixd'.
+extends: existence
+message: "Use 'Remixd' (capitalized) in prose; reserve backticked `remixd` for the CLI/script."
+level: error
+scope: text
+ignorecase: false
+tokens:
+  - '\bremixd\b'
+---
+# 2) If 'Remixd' appears in code, ask for lowercase `remixd`.
+extends: existence
+message: "In code, use lowercase `remixd` for the CLI/script."
+level: error
+scope: code
+ignorecase: false
+tokens:
+  - '\bRemixd\b'

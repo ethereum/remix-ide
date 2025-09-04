@@ -7,9 +7,13 @@ TODO
 .idea
 .vscode
 docs/_build/html
+docs/_build/linkcheck
 docs/_build/gettext/.doctrees
 docs/_build/doctrees/
 *.doctree
 .gitignore.swp
 .venv
 dirhtml
+styles/microsoft
+styles/proselint
+docs/vale-spelling.txt

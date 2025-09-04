@@ -1,0 +1,62 @@
+# Enforces preferred names/capitalization and common fixes.
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: true
+swap:
+  # Panels
+  Right Panel: Right Side Panel
+  Right-side Panel: Right Side Panel
+  Right side panel: Right Side Panel
+  Side panel: Side Panel
+  Main panel: Main Panel
+  Left Panel: Left Side Panel
+
+  # Tabs & plugin names
+  Editor tab: Editor Tab
+  Plugins and Tools: Plugins & Tools
+  plugins & tools: Plugins & Tools
+  Git Plugin: Git plugin
+  Solidity Unit Testing Plugin: Solidity Unit Testing plugin
+  Quick Dapp: QuickDapp
+  Quickdapp: QuickDapp
+  Learn ETH: LearnEth
+  LearnETH: LearnEth
+  Remix AI Assistant: RemixAI Assistant
+  RemixAI assistant: RemixAI Assistant
+  Remix Ai Assistant: RemixAI Assistant
+
+  # Specific features / components
+  File explorer: File Explorer
+
+  # Solidity Compiler + common misspelling
+  solidity compiler: Solidity Compiler
+  Solidity compiller: Solidity Compiler
+
+  # Run & Deploy (allow both full and short names; enforce '&' and capitalization)
+  Run and Deploy Transactions: Run & Deploy Transactions
+  run and deploy transactions: Run & Deploy Transactions
+  Run and Deploy: Run & Deploy
+  run and deploy: Run & Deploy
+  run & deploy: Run & Deploy
+  Run & deploy: Run & Deploy
+
+  # “Compile and Run …” (two variants are acceptable; normalize bad forms)
+  Compile & Run: Compile and Run
+
+  # Dropdown / selectbox (one word, lower-case)
+  drop down: dropdown
+  Drop down: dropdown
+  Drop-down: dropdown
+  drop-down: dropdown
+  Workspace drop down: Workspace dropdown
+  Workspace Drop down: Workspace dropdown
+  Workspace Drop-down: Workspace dropdown
+  Workspace drop-down: Workspace dropdown
+  Environment drop down: Environment dropdown
+  Environment Drop-down: Environment dropdown
+  Environment drop-down: Environment dropdown
+  select box: selectbox
+  Select box: selectbox
+  Select Box: selectbox
+  Workspace select box: Workspace selectbox
