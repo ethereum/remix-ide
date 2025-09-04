@@ -1,27 +1,70 @@
 # Working with Git in Remix
 
-## Git in the File Explorer
+In Remix, you can initialize Git for version control in your workspaces.
 
-In Remix, a workspace can be initialized with Git. The Git commands then operate on the workspace.
+## Connecting to GitHub
 
-### Initialize
+Before you can use Git in any of your workspaces, you have to login with GitHub using the "**Login with GitHub**" button on the Top Bar.
 
-For information about initializing a workspace, see this [section](#workspaces-initialized-with-git).
+![Remix Top Bar showing login with GitHub button.](images/git/login-with-github.png)
 
-### Clone
+Alternatively, you can add username and email to the Github section of the Git plugin. You can find the Git plugin on the Icon Panel represented by a branch icon.
 
-The clone command is located in the **Workspace hamburger menu**. For more information, see the section about [workspace operations](#workspace-operations)
+![Git plugin settings.](images/git/gh-login-manually.png)
 
-### Branch Management
+## Git operations in Remix
 
-When you are in a workspace that is initialized with Git, at the bottom of the File Explorer, you’ll see the place for managing branches.
+### Initializing Git in a Workspace
 
-![](images/a-fe-branch-man1.png)
+For information about initializing a workspace, see the section about initializing Git on the [Remix Workspaces](/workspaces/#initializing-a-workspace-with-git) page.
 
-Then when you click on the branch name, this section will expand with an interface for switching branches and for creating a new branch.
+### Cloning an existing repository into Remix
 
-![](images/a-fe-branch-man2.png)
+You can clone an existing repository from GitHub into Remix using "**CLONE**" accordion item in the Git plugin. You can clone a repository by loading it from GitHub using the "**Load from GitHub**" button and selecting one from your list of public repositories.
 
-For the rest of the Git commands, go to the DGit plugin.
+Alternatively, you can clone a repository by providing its URL in the "**CLONE FROM URL**" text box. When you clone a repository, Remix initializes it as a separate Workspace. See [Remix Workspaces](/workspaces) to learn more about Workspaces.
 
-For more info about the DGit plugin, see [this article](https://medium.com/remix-ide/github-in-remix-ide-356de378f7da).
+```{note}
+Remix stores your files in the browser and browser storage is limited. Cloning a repository that is too large will cause the Remix IDE. This is why you have to manually specify the depth and branches you want to clone. If you are using [Remixd](/remixd) you don't have to worry about cloning large repositories.
+```
+
+![Remix Git plugin clone section.](images/git/gh-clone.png)
+
+### Committing changes to Git
+
+You can commit the changes you made to your current Workspace using the "**SOURCE CONTROL**" accordion item in the Git plugin. Stage files individually using the plus icon next to them or all at once using the plus icon on the "**Changes**" dropdown label. Enter commit messages in the text box and commit the staged changes using the "**Commit**" button.
+
+![Remix Git plugin clone section.](images/git/gh-commit.png)
+
+### Adding a remote repository
+
+You can add a remote repository to your Workspace on Remix using the "**REMOTE**" accordion item by either loading from GitHub or adding it manually using a remote URL.
+
+![Remix Git plugin highlighting the REMOTE tool.](images/git/gh-remote-repo.png)
+
+### Running common commands
+
+The Git plugin has limited support for Git commands, as of Remix v0.70, you can run the following:
+
+- `git push`
+- `git push --force`
+- `git fetch`
+- `git pull`
+
+You can run these commands through the "**COMMANDS**" accordion item in the Git plugin.
+
+![Remix Git plugin showing common Git commands.](images/git/gh-git-commands.png)
+
+```{tip}
+You can view the output of some of these commands on the "**LOGS**" accordion item.
+```
+
+### Managing multiple branches
+
+You can manage the multiple branches associated with your Workspace initialized with Git or cloned from GitHub from the "**BRANCHES**" accordion item.
+
+![Remix Git Plugin showing multiple branches](images/git/gh-git-branches.png)
+
+You can view the current branch from the Footer.
+
+![Remix IDE branch indicator.](images/git/a-fe-branch-man1.png)
