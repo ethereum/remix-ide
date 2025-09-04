@@ -55,6 +55,7 @@ Useful links:
    :caption: Core Modules
 
    file_explorer
+   workspaces
    git
    search_in_fe
    plugin_manager
@@ -66,7 +67,6 @@ Useful links:
    account-abstraction-7702
    terminal
    remixd
-   .. workspaces
 
 .. toctree::
    :maxdepth: 2
