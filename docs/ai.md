@@ -1,6 +1,8 @@
 # AI Tools
 
-Remix has its own AI tool named **RemixAI** and a sub-project called **RemixAI Copilot** for code completion.
+Remix has its own AI tool named **RemixAI** and a sub-project called **RemixAI Copilot** for code completion. When you load Remix, the RemixAI Assistant appears in the Right Side Panel.
+
+![RemixAI Assistant Right Side Panel.](images/ai/remixai-right-panel.png)
 
 RemixAI is also used in the:
 
@@ -9,15 +11,31 @@ RemixAI is also used in the:
 - **Right-click menu options** of the Editor
 - **Triple slash** (///) for prepending an AI code request in a file in the Editor
 
+## Choosing an LLM for Code explanations
+
+In the RemixAI Assistant, you can choose which LLM to use for Code Explanations. The default LLM is MistralAI. But just click the MistralAI button and a modal will popup where you can select Anthropic, OpenAI, or MistralAI.
+
+![RemixAI LLM dropdown menu.](images/ai/llm-dropdown.png)
+
+## Adding Context to the LLM
+
+Clicking the `@Add context` button will bring up a modal where you can set the context of your request.
+
+![RemixAI add context flow.](images/ai/remixai-add-context.png)
+
+You can also set the context to the current Workspace while you type, by starting a request with `/w`.
+
 ## Code Completion
 
 When you type a space or a new line, the RemixAI Assistant will propose some code. The proposed code is a technique called, **code completion**. The RemixAI Assistant's suggested code will take into account what has already been written in the file.
 
-The switch to activate it is at the bottom left of the Main Panel when a file is active.
+The switch to activate it is at the bottom left of the Main Panel when a file is active. Once activated, suggests code using MistralAI LLM.
 
 ![Remix AI Copilot button.](images/ai/a-ai-switch.png)
 
 All other RemixAI tools are always on.
+
+When you load Remix, the RemixAI Assistant appears in the Right Side Panel.
 
 ## Editor: Right-click Menu
 
