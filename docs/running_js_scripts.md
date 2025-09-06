@@ -6,7 +6,7 @@ Remix IDE supports execution of JS & TS scripts.
 
 Create a file with `.js` or `.ts` extension and put your logic inside it. To run a script either:
 
-- Click the green play button in the upper left of the Editor.
+- Click the play button at the upper left of the Main Panel.
 
 - Right click on the script name in the `File Explorers` and click on the **Run** option.
 
