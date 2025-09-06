@@ -34,8 +34,6 @@ Remixd is an NPM package that allows you to share a specified folder on your com
 
 Remix Desktop is a version of the Remix IDE that exists as a native app on your computer instead of a browser app. Since it's a native app on your computer, the files are saved directly to your hard drive.
 
-Note that when using Remix Desktop, you cannot use a browser wallet like MetaMask, because Remix Desktop does not run in a browser. To connect to public networks, you need to use service like [Infura](https://www.infura.io/) and then use the WalletConnect plugin to approve transactions on your mobile device.
-
 ### Connecting Remix to remote Git repositories
 
 Remix IDE supports version control with version control platforms like GitHub (or similar like GitLab) and in the InterPlanetary File System (IPFS), allowing you to store the code you write on remote repositories.
