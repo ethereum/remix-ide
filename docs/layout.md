@@ -1,11 +1,11 @@
 # Navigating Remix
 
-Remix's layout consists of the following components: the top bar, icon panel, side panel, main panel, and terminal.
+Remix's layout consists of the following components: the top bar, icon panel, Side Panel, Main Panel, and terminal.
 
 ![Layout for Remix IDE, highlighting the terminal, topbar, and, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
 - Top Bar - interface for workspace selection, GitHub authentication and associated tools, themes, and the settings panel.
-- Icon Panel - indicates which plugins have been activated and which plugin is currently in the left or right side panel. Click an icon to select that plugin. Go to the Plugin Manager to activate other plugins.
+- Icon Panel - indicates which plugins have been activated and which plugin is currently in the left or Right Side Panel. Click an icon to select that plugin. Go to the Plugin Manager to activate other plugins.
 - Side Panel - interface for the File Explorer, Solidity Compiler, Git, Deploy & Run, and many other plugins. Visit the Plugin Manager for a full list of plugins.
 - Main Panel - contains tabs for editing files, Main Panel plugins (plugins that require more space than Side Panel plugins), and the Home Tab.
 - Terminal - a panel for viewing transaction receipts, various logs, and for executing JavaScript scripts.

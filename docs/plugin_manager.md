@@ -1,10 +1,10 @@
 # Plugin Manager
 
-![](images/a-plugin-man-overview.png)
-
 In Remix IDE you only load the functionality you need. Controlling which plugins are active or inactive happens in the **Plugin Manager**.
 
 This plugin architecture has made it possible to integrate tools made by the Remix team with tools made by external teams. This architecture also allows Remix or just parts of Remix to be integrated into other projects.
+
+![Remix Plugin Manager page.](images/plugin-manager/a-plugin-man-overview.png)
 
 ## Manage permissions
 
