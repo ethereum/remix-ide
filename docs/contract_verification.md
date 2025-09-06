@@ -14,7 +14,7 @@ This is the home view of the plugin where you can verify your contracts.
 
 ![](images/a-cv-verify-page.png)
 
-You can select which verification services you want to use. By default, all that have a valid configuration are selected. On Ethereum Mainnet, this will be all but Etherscan. In order to enable Etherscan, you need to input an API key in the Settings page.
+You can select which verification services you want to use. By default, all that have a valid configuration are selected. On Ethereum mainnet, this will be all but Etherscan. In order to enable Etherscan, you need to input an API key in the Settings page.
 
 ### The prerequisites for verification are:
 
@@ -42,7 +42,11 @@ In the settings page, you can configure custom API URLs for the verification ser
 
 ![](images/a-cv-settings-page.png)
 
-The settings are always stored per chain, meaning that if you change the settings for a chain, it will not affect other chains. If you want to verify or lookup contracts on Etherscan's instances on multiple chains (Explorer as a Service), you need to add an API key for each chain separately.
+The settings are always stored per chain, meaning that if you change the settings for a chain, it will not affect other chains. However, the Contract Verification plugin uses the Etherscan v2 API, meaning the same API key will work for over 50 different chains.
+
+```{important}
+For the time being, you’ll still need to input your Etherscan v2 API key on each different chain, but at least it will be the same key for all of them. This should be simplified in a coming release.
+```
 
 ## Verifying with constructor arguments
 

@@ -1,6 +1,6 @@
 # Deploy & Run
 
-![](images/a-run-icon.png) The Deploy & Run module is for sending transactions to the current **Environment**.
+The Deploy & Run module is for sending transactions to the current **Environment**.
 
 The three main actions of the Deploy & Run module are:
 
@@ -12,15 +12,19 @@ This documentation page will cover **Deploying** and **Accessing**. Interacting 
 
 ![](images/a-deploy-run1.png)
 
-To deploy a contract, you need to have a contract compiled. To check that there is a compiled contract, look in the <b>CONTRACT</b> select box under the VALUE input field.
+To deploy a contract, you need to have a contract compiled. To check that there is a compiled contract, look in the **CONTRACT** selectbox under the VALUE input field.
 
-If nothing is there, you'll need to compile a contract. If you do not see your desired contract in the CONTRACT select box list, make sure the file with the contract is the active tab in the Editor.
+If nothing is there, you'll need to compile a contract. If you do not see your desired contract in the CONTRACT selectbox list, make sure the file with the contract is the active tab in the Editor.
 
-Once the contract is selected, choose the chain for deployment and/or method for deployment in the **ENVIRONMENT** select box.
+Once the contract is selected, choose the chain for deployment and/or method for deployment in the **ENVIRONMENT** selectbox.
 
-**NOTE:** If you want to connect Remix with a browser wallet (like Metamask) you should use the Injected Provider. Then in the browser wallet, you can select your desired chain when you have input its configuration.
+```{note}
+If you want to connect Remix with a browser wallet (e.g., MetaMask,
+Phantom), use **Injected Provider**. Select your desired chain in the wallet.
 
-For assistance with getting the correct configuration (the RPC server address, etc.), click the plug icon next the word **ENVIRONMENT** to go to chainlist.org.
+```
+
+For assistance with getting the correct configuration (the RPC server address, etc.), click the plug icon next the word **ENVIRONMENT** to go to [chainlist.org](chainlist.org).
 
 ![](images/a-deploy-run-plug.png)
 
@@ -57,6 +61,8 @@ In collaborative workflows, sharing the state of the Remix VM is a great way to 
 - `L2 - Optimism Provider`: Connects Remix to an Injected Provider (using a browser wallet) with the settings for the Optimism mainnet.
 
 - `L2 - Arbitrum One Provider`: Connects Remix to an Injected Provider (using a browser wallet) with the settings for the Arbitrum One network.
+- `L2 - Linea Provider`: Connects Remix to an Injected Provider (using a browser wallet) with the settings for the Linea mainnet.
+- `L2 - Gnosis Provider`: Connects Remix to an Injected Provider (using a browser wallet) with the settings for the Gnosis chain.
 
 - `Ephemery Testnet`: Connects Remix to an Injected Provider (using a browser wallet) with the settings for the Ephemery network. [Ephemery](https://github.com/ephemery-testnet/ephemery-resources) is a test chain that regularly refreshes. As such, it is much easier to get test ETH from its faucets.
 
@@ -80,7 +86,26 @@ In collaborative workflows, sharing the state of the Remix VM is a great way to 
 
 Forking a chain will bring that chain to the Remix VM. Once it is forked, you'll have access to the 10 accounts loaded with 100 ETH.
 
-Careful though, if you refresh the browser, you’ll lose the forked chain.
+You can also fork the _current Remix VM_ state—including when the Environment is
+**Remix VM – Mainnet fork**. Use the **Fork** control in the Environment menu to
+create a named fork, then switch between forks from the same dropdown. This lets
+you snapshot a working state, try changes, and return to the original if needed.
+
+If **Save environment state** (Settings → General) is enabled, the Remix VM
+state (including forked VM states) is saved in the `.states` folder so you can
+refresh and resume later. Browser storage can still be cleared or corrupted, so
+back up important work with Remixd or Git.
+
+### Curate & delete Environments
+
+At the bottom of the **Environment** dropdown, click **Customize this list** to
+open the Environment Explorer. From there you can:
+
+- Show/hide networks that appear in the dropdown (e.g., Linea).
+- Delete old **in-browser forked states** you no longer need (look under
+  “Deploy to an In-browser Forked State” and click **Delete Environment**).
+
+![Customize environment list dropdown.](images/run/customize-env-list.png)
 
 ### Custom Fork
 
@@ -114,7 +139,7 @@ To run Remix Desktop and a local test node, use this Geth command:
 geth --http --http.corsdomain="package://a7df6d3c223593f3550b35e90d7b0b1f.mod" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console
 ```
 
-Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode)
+Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode).
 
 The Web3 Provider Endpoint for a local node is **http://localhost:8545**
 
