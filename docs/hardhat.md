@@ -4,7 +4,9 @@ _(Supported since Remix IDE v0.12.0 and Remixd v0.3.6)_
 
 ## Remixd and Hardhat
 
-**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
+```{note}
+If you have not used `remixd` before, read more about it {doc}`in the Remixd documentation </remixd>`.
+```
 
 If `remixd` is running locally on your device and shared folder is a **Hardhat project**, an additional websocket plugin will be listening on port `65522`. According to its documentation,
 
@@ -30,7 +32,7 @@ To use Hardhat compilation with Remix IDE efficiently:
 
 ### How to use
 
-If a hardhat project is shared through remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`.
+If a hardhat project is shared through Remixd and `localhost` workspace is loaded in Remix IDE, there will be an extra checkbox shown in `Solidity Compiler` plugin with the label `Enable Hardhat Compilation`.
 
 ![](images/a-hardhat-compilation.png)
 

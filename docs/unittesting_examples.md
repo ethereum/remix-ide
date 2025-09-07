@@ -4,7 +4,7 @@ Here are some examples which can give you better understanding to plan your test
 
 **Note:** Examples in this section are intended to give you a push for development. We don't recommend to rely on them without verifying at your end.
 
-### 1. Simple example
+## 1. Simple example
 
 In this example, we test setting & getting variables.
 
@@ -58,7 +58,7 @@ contract MyTest {
 }
 ```
 
-### 2. Testing a method involving `msg.sender`
+## 2. Testing a method involving `msg.sender`
 
 In Solidity, `msg.sender` plays a great role in access management of a smart contract methods interaction. Different `msg.sender` can help to test a contract involving multiple accounts with different roles. Here is an example for testing such case:
 
@@ -136,7 +136,7 @@ contract SenderTest is Sender {
 }
 ```
 
-### 3. Testing method execution
+## 3. Testing method execution
 
 With Solidity, one can directly verify the changes made by a method in storage by retrieving those variables from a contract. But testing for a successful method execution takes some strategy. Well that is not entirely true, when a test is successful - it is usually obvious why it passed. However, when a test fails, it is essential to understand why it failed.
 
@@ -260,7 +260,7 @@ contract AttendanceRegisterTest {
 }
 ```
 
-### 4. Testing a method involving `msg.value`
+## 4. Testing a method involving `msg.value`
 
 In Solidity, ether can be passed along with a method call which is accessed inside contract as `msg.value`. Sometimes, multiple calculations in a method are performed based on `msg.value` which can be tested with various values using Remix's Custom transaction context. See the example:
 
@@ -331,7 +331,7 @@ contract ValueTest{
 }
 ```
 
-### 5. Testing a method involving `msg.sender` and `msg.value`
+## 5. Testing a method involving `msg.sender` and `msg.value`
 
 In the following test, we will be emulating multiple accounts making deposits in a smart contract to the same recipient and finally having the recipient withdraw the lump sum of all donations. We are also verifying that the donations match the expected amounts. This example really drives home how could you switch between different accounts, while using a set of different msg.value amounts.
 

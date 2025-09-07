@@ -24,7 +24,7 @@ The Reset button at the top of the Setting panel will reset all of the settings 
 
 ![](images/a-settings-ai1.png)
 
-These settings are primarily for the code completion functions of Remix's AI tool, Solidity Copilot. See this [doc page](ai.html) for more information about AI in Remix.
+These settings are primarily for the code completion functions of Remix's AI tool, Solidity Copilot. See this {doc}`doc page </ai>` for more information about AI in Remix.
 
 There are two settings for Solidity Copilot:
 

@@ -27,7 +27,7 @@ Deploy & interact with smart contracts on the in-browser chain (JSVM), local nod
 **Debugger** &nbsp; ![](images/pi-debug.png)<br>
 Insert breakpoints, step through a contract, check high level and low level parameters, and fetch & debug a transaction of a verified contract.
 <br>profile name: **debugger**
-<br>[Documentation](debugger.html)
+<br>{doc}`Documentation </debugger>`
 
 **Contract Verification** &nbsp;<br>
 Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
@@ -161,14 +161,14 @@ This plugin is now part of the Solidity Analyzers plugin.
 <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix)
 <br>[Make an issue](/issues)
 
-**Wallet Connect** &nbsp; (main panel)
+**Wallet Connect** &nbsp; (Main Panel)
 <br>Approve transactions on your mobile device
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect
 <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)
 
 **zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
 <br>Compile and deploy smart contracts for zkSync Era.
-<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zksync
+<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zkSync
 <br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)
 <br>[Make an issue](https://github.com/matter-labs/zksync-remix-plugin/issues)
 
