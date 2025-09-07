@@ -13,7 +13,7 @@ The Reset button at the top of the Setting panel will reset all of the settings 
 - **Generate contract metadata** is used for deploying with libraries. See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)
 - **Always use Remix VM at Load** will make the Remix VM the selected **environment** when Remix loads.
 - **Word wrap** controls if word wrap is enabled in the Editor.
-- **Enable code completion in editor** controls code completion. Autocompleting Solidity code happens when you type in the Editor. This option has the Compiler run in the background. For more information about autocomplete, see the [Editor docs](solidity_editor.html#autocomplete).
+- **Enable code completion in editor** controls code completion. Autocompleting Solidity code happens when you type in the Editor. This option has the Compiler run in the background. For more information about autocomplete, see the {ref}`Editor docs <solidity_editor:autocomplete>`.
 - **Display gas estimates in editor** controls if gas estimates are shown. The gas estimates only works when a compilation is successful.
 - **Display errors in editor while typing**
 - **Personal mode** can be used when one is connecting to a **local node**. It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in GETH. Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone.

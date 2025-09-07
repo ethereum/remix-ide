@@ -7,7 +7,7 @@ Here is the list of Remix plugins that you will see in the Plugin Manager:
 **File Explorer** &nbsp; ![](images/pi-fe.png)<br>
 The File Explorers is where you can see the files.<br>
 profile name: **fileManager**
-<br>[Documentation](file_explorer.html)
+<br>{doc}`Documentation </file_explorer>`
 
 **Remixd** &nbsp; (No UI)
 <br>Remixd (with an npm package running locally) connects a folder on your filesystem to the Remix website. Please see the docs for instructions.
@@ -17,12 +17,12 @@ profile name: **fileManager**
 **Solidity Compiler** &nbsp; ![](images/pi-sol.png)<br>
 Compiles Solidity & YUL.
 <br>profile name: **solidity**
-<br>[Documentation](compile.html)
+<br>{doc}`Documentation </compile>`
 
 **Deploy & Run** &nbsp; ![](images/pi-deploy.png)<br>
 Deploy & interact with smart contracts on the in-browser chain (JSVM), local nodes, and public networks.
 <br>profile name: **udapp**
-<br>[Documentation](run.html)
+<br>{doc}`Documentation </run>`
 
 **Debugger** &nbsp; ![](images/pi-debug.png)<br>
 Insert breakpoints, step through a contract, check high level and low level parameters, and fetch & debug a transaction of a verified contract.
@@ -36,12 +36,12 @@ Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
 **Solidity Unit Testing** &nbsp; ![](images/pi-sut.png)<br>
 Run unit test written in Solidity.
 <br>profile name: **solidityUnitTesting**
-<br>[Documentation](unittesting.html)
+<br>{doc}`Documentation </unittesting>`
 
 **Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br>
-Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html) and with the linter, **Solhint**.
+Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with {doc}`Slither </slither>` and with the linter, **Solhint**.
 <br>profile name: **solidityStaticAnalysis**
-<br>[Documentation](static_analysis.html)
+<br>{doc}`Documentation </static_analysis>`
 
 **Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;
 <br>Compile Vyper code using local or remote Vyper compiler.

@@ -22,7 +22,7 @@ For information about initializing a workspace, see the section about initializi
 
 You can clone an existing repository from GitHub into Remix using "**CLONE**" accordion item in the Git plugin. You can clone a repository by loading it from GitHub using the "**Load from GitHub**" button and selecting one from your list of public repositories.
 
-Alternatively, you can clone a repository by providing its URL in the "**CLONE FROM URL**" text box. When you clone a repository, Remix initializes it as a separate Workspace. See {doc}`Remix Workspaces </workspaces:initializing>` to learn more about Workspaces.
+Alternatively, you can clone a repository by providing its URL in the "**CLONE FROM URL**" text box. When you clone a repository, Remix initializes it as a separate Workspace. See {doc}`Remix Workspaces </workspaces:initializing a workspace with git>` to learn more about Workspaces.
 
 ```{note}
 Remix stores your files in the browser and browser storage is limited. Cloning a repository that is too large will cause the Remix IDE. This is why you have to manually specify the depth and branches you want to clone. If you are using {doc}`Remixd </remixd>` you don't have to worry about cloning large repositories.

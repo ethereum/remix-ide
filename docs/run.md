@@ -8,7 +8,7 @@ The three main actions of the Deploy & Run module are:
 2. **Accessing** an onchain contract
 3. **Interacting** with the functions of a deployed contract
 
-This documentation page will cover **Deploying** and **Accessing**. Interacting will be covered in [Deploy & Run part 2](udapp.html).
+This documentation page will cover **Deploying** and **Accessing**. Interacting will be covered in {doc}`Deploy & Run part 2 </udapp>`.
 
 ![](images/a-deploy-run1.png)
 
@@ -178,7 +178,7 @@ Make sure this file is the active tab in the Editor. Then, in the field next to 
 Validating a transaction may take several seconds. During this time, the GUI
 shows it in a pending mode. When the transaction is mined, the number of
 pending transactions updates, and the transaction is added to the log
-([see terminal](terminal.html)).
+({doc}`see terminal </terminal>`).
 
 ## Using the Recorder
 

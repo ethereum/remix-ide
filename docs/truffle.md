@@ -4,7 +4,7 @@ _(Supported since Remix IDE v0.23.0 and Remixd v0.6.0)_
 
 ## Remixd and Truffle
 
-**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
+**Note:** If you have not used `remixd` before, read more about it {doc}`here </remixd>`
 
 If `remixd` is running locally on your device and shared folder is a **Truffle project**, an additional websocket plugin will be listening on port `65524`. According to its documentation,
 

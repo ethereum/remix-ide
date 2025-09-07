@@ -28,7 +28,7 @@ There are two ways you can save the files you create and use on Remix to your ha
 
 #### Remixd
 
-Remixd is an NPM package that allows you to share a specified folder on your computer with Remix IDE. Thus, your files are saved on IndexedDB and on the specified folder. Learn more about Remixd on our [Remixd guide](remixd.html).
+Remixd is an NPM package that allows you to share a specified folder on your computer with Remix IDE. Thus, your files are saved on IndexedDB and on the specified folder. Learn more about Remixd on our {doc}`Remixd guide </remixd>`.
 
 #### Remix Desktop
 

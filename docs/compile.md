@@ -60,14 +60,14 @@ When you publish your metadata to IPFS and deploy your code to the mainnet or a 
 
 ### Compile and Run script
 
-The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script. It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working. ([more about Compile & Run](running_js_scripts.html?#compile-a-contract-and-run-a-script-on-the-fly))
+The Compile and Run script button (**E. in fig. 1**) is for compiling and then immediately running a script. It's a time saver so that you can write some code, automatically run script that sets state of the contract - thus allowing you to quickly understand how the code is working. Learn {ref}`more about Compile and Run <running_js_scripts:compile a contract and run a script in one click>`.
 
 ### Compilation Errors and Warning
 
 Compilation Errors and Warning are displayed below the contract section.
 At each compilation, the static analysis tab builds a report.
 
-It is important to address reported issues even if the compiler doesn't complain. ([more about static analysis](static_analysis.html))
+It is important to address reported issues even if the compiler doesn't complain. ({doc}`more about static analysis </static_analysis>`)
 
 ## Advanced Compiler Configurations
 

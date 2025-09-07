@@ -63,7 +63,7 @@ import "./myLovelyLovelyLib.sol";
 
 ### Importing a file from your computer's filesystem
 
-This method uses **remixd** - the remix daemon. Please go to the [remixd docs](remixd.html) for instructions about how to bridge the divide between the browser and your computer's filesystem.
+This method uses **remixd** - the remix daemon. Please go to the {doc}`remixd docs </remixd>` for instructions about how to bridge the divide between the browser and your computer's filesystem.
 
 ### More about the import keyword
 

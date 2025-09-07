@@ -4,7 +4,7 @@ _(Supported since Remix IDE v0.15.0 and Remixd v0.5.0)_
 
 ## Remixd and Slither
 
-**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
+**Note:** If you have not used `remixd` before, read more about it {doc}`here </remixd>`
 
 When [remixd NPM](https://www.npmjs.com/package/@remix-project/remixd) module is installed, it also installs [Slither](https://github.com/crytic/slither) and [solc-select](https://github.com/crytic/solc-select#quickstart) and latest version of [solc](https://docs.soliditylang.org/en/latest/installing-solidity.html).
 

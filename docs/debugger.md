@@ -12,7 +12,7 @@ To start a debugging session either:
 
 The debugger will highlight the relevant code in the Editor. If you want to go back to editing the code without the Debugger's highlights, then click the **Stop Debugging** button.
 
-To learn more about how to use this tool go to the [Debugging Transactions](tutorial_debug.html) page.
+To learn more about how to use this tool go to the {doc}`Debugging Transactions </tutorial_debug>` page.
 
 This page will go over the Debugger's _Use generated sources_ option, its navigation and its panels.
 
@@ -164,4 +164,4 @@ Breakpoints can be placed in the gutter of the Editor to pause the debugger.
 
 The debugger's granular information gives users detailed information about what is happening in a transaction - so not only is the debugger good for debugging, it is also an excellent teaching tool.
 
-To learn about using the debugger, go to [Debugging Transactions](tutorial_debug.html).
+To learn about using the debugger, go to {doc}`Debugging Transactions </tutorial_debug>`.

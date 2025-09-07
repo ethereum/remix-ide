@@ -1,6 +1,6 @@
 # Debugging Transactions
 
-(also see this page's companion: [the Debugger Tour](debugger.html))
+(also see this page's companion: {doc}`the Debugger Tour </debugger>`)
 
 There are two ways to start a debugging session, each one corresponds to a different use case.
 

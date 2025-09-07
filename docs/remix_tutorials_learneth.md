@@ -24,7 +24,7 @@ This link will activate Learneth and then will open a specific tutorial - in thi
 https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
 ```
 
-**NOTE:** For other tricks about Remix URLs with parameters, go here: [locations](locations.html).
+**NOTE:** For other tricks about Remix URLs with parameters, go here: {doc}`locations </locations>`.
 
 ### Learneth Tutorials
 
