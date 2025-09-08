@@ -15,12 +15,21 @@ TARGET        = *
 ALLFILES      =  *.md **/*.md
 ROOT_DIR = ..
 
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, \
-then set SPHINXBUILD to its full path or add it to PATH. If you don't have Sphinx installed, \
-grab it from https://www.sphinx-doc.org/)
-endif
+# Bootstrap: create venv and install Sphinx only when needed
+$(VENV_DIR)/bin/python:
+	$(PYTHON) -m venv $(VENV_DIR)
+	. $(VENV); pip install -U pip wheel
+
+$(SPHINXBUILD): $(VENV_DIR)/bin/python
+	@if [ -f "requirements.txt" ]; then \
+	  . $(VENV); pip install -r requirements.txt; \
+	else \
+	  . $(VENV); pip install -U sphinx sphinx-autobuild; \
+	fi
+
+# Any target that calls sphinx needs the binary ready
+SPHINX_TARGETS := html dirhtml singlehtml pickle json htmlhelp qthelp applehelp devhelp epub latex latexpdf latexpdfja text man texinfo info gettext changes linkcheck doctest coverage xml pseudoxml
+$(SPHINX_TARGETS): $(SPHINXBUILD)
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -85,8 +94,15 @@ install:
 	  . $(VENV); pip install -U sphinx sphinx-autobuild; \
 	fi
 
+$(SPHINXAUTOBUILD): $(VENV_DIR)/bin/python
+	@if [ -f "requirements.txt" ]; then \
+	  . $(VENV); pip install -r requirements.txt || true; \
+	fi
+	. $(VENV); pip install -U sphinx-autobuild
+
+
 # Live-reload server (watches files, rebuilds on change, serves at 127.0.0.1:8000)
-run: install
+run: $(SPHINXAUTOBUILD)
 	@echo "Live docs: http://127.0.0.1:8000 (Ctrl+C to stop)"
 	. $(VENV); $(SPHINXAUTOBUILD) -b dirhtml \
 		-d $(BUILDDIR)/doctrees $(SPHINXOPTS) \
@@ -97,7 +113,12 @@ pymarkdownlnt-install:
 	@. $(VENV); test -d $(VENV_DIR)/lib/python*/site-packages/pymarkdown || pip install pymarkdownlnt
 
 lint-md: pymarkdownlnt-install
-	@. $(VENV); pymarkdownlnt --config $(ROOT_DIR)/.pymarkdown.json scan --recurse --exclude=./$(SPHINXDIR)/** $(SOURCEDIR)
+	@. $(VENV); pymarkdownlnt --config $(ROOT_DIR)/.pymarkdown.json scan \
+	  --recurse \
+	  --exclude='./$(BUILDDIR)/**' \
+	  --exclude='./$(VENV_DIR)/**' \
+	  --exclude='./.git/**' \
+	  $(SOURCEDIR)
 
 vale-install: install
 	@. $(VENV); test -d $(VENV_DIR)/lib/python*/site-packages/vale || pip install vale
@@ -107,7 +128,9 @@ vale-install: install
 
 spell-check: vale-install
 	@echo "Running Vale spelling check only..."
-	@cat $(ROOT_DIR)/.custom_wordlist.txt >> $(ROOT_DIR)/styles/config/vocabularies/Remix/accept.txt
+	@tmp=$$(mktemp); \
+	  cat $(ROOT_DIR)/styles/config/vocabularies/Remix/accept.txt $(ROOT_DIR)/.custom_wordlist.txt \
+	  | sort -u > $$tmp && mv $$tmp $(ROOT_DIR)/styles/config/vocabularies/Remix/accept.txt
 	@. $(VENV); vale --filter='.Extends=="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md > vale-spelling.txt 2>&1 || true
 	@echo "Vale spelling results saved to vale-spelling.txt"
 
