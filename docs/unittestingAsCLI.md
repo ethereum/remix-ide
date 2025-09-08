@@ -187,4 +187,4 @@ Remember, custom compiler version will require internet connection to load compi
 
 `remix-tests` can also be used for continuous integration (CI) testing.
 
-For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://travis-ci.org/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration.
+For implementation example, see [Su Squares contract](https://github.com/su-squares/ethereum-contract/tree/e542f37d4f8f6c7b07d90a6554424268384a4186) and [Travis build](https://app.travis-ci.com/su-squares/ethereum-contract/builds/446186067) that uses `remix-tests` for continuous integration.

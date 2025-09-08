@@ -98,7 +98,7 @@ If you are using Geth and https://remix.ethereum.org, please use the following G
 geth --http --http.corsdomain https://remix.ethereum.org
 ```
 
-Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/rpc/server)
+Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
 
 To run Remix using https://remix.ethereum.org and a local test node, use this Geth command:
 
@@ -114,7 +114,7 @@ To run Remix Desktop and a local test node, use this Geth command:
 geth --http --http.corsdomain="package://a7df6d3c223593f3550b35e90d7b0b1f.mod" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console
 ```
 
-Also see [Geth Docs on Dev mode](https://geth.ethereum.org/getting-started/dev-mode)
+Also see [Geth Docs on Dev mode](https://geth.ethereum.org/docs/developers/dapp-developer/dev-mode)
 
 The Web3 Provider Endpoint for a local node is **http://localhost:8545**
 

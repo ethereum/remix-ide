@@ -1,6 +1,6 @@
 # Community Support
 
-Do you have questions about Remix? Join our [Discord](https://discord.gg/nfv6ZYjAeP) server and get some help!
+Do you have questions about Remix? Join our [Discord](https://discord.com/invite/nfv6ZYjAeP) server and get some help!
 
 We post announcements and tips on [Twitter](https://twitter.com/ethereumremix).
 

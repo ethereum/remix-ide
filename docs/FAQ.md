@@ -108,7 +108,7 @@ The input of initPeepToPeeps takes a struct. If you input
 
 **Q:** Where do plugin developers go with their questions?
 
-**A:** First, join our [Discord server](https://discord.gg/zUNteAzJs3) and then go to the development-plugin channel.
+**A:** First, join our [Discord server](https://discord.com/invite/zUNteAzJs3) and then go to the development-plugin channel.
 
 ### Analytics
 

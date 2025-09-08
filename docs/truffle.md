@@ -24,7 +24,7 @@ It doesn't need any separate installation as it is shipped with [remixd NPM](htt
 
 To use Truffle compilation with Remix IDE efficiently:
 
-1. **Truffle** should be installed locally on the system [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)
+1. **Truffle** should be installed locally on the system [https://archive.trufflesuite.com/docs/truffle/getting-started/installation/](https://archive.trufflesuite.com/docs/truffle/getting-started/installation/)
 2. Shared folder should be a Truffle project containing `truffle-config.js`
 3. `Remixd` Truffle websocket listener should be running at `65524`
 

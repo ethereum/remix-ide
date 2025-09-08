@@ -84,9 +84,9 @@ Create private, forked testnets from any EVM chain with integrated explorer, fau
 
 **Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br>
 Deploy a contract to multiple chains (1 at a time) with the same address.
-<br>[Profile name](https://github.com/hexdivision/remix-contract-deployer-plugin): contract_deployer
-<br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin#getting-started-with-contract-deployer-plugin)
-<br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
+<br>[Profile name](https://github.com/groksmith/remix-contract-deployer-plugin): contract_deployer
+<br>[Documentation](https://github.com/groksmith/remix-contract-deployer-plugin#getting-started-with-contract-deployer-plugin)
+<br>[Make an issue](https://github.com/groksmith/remix-contract-deployer-plugin/issues)
 
 **Contract Verification** &nbsp;<br>
 Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
@@ -95,9 +95,9 @@ Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
 **Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br>
 Find any smart contract, build your project faster.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev
-<br>[Website](https://www.cookbook.dev)
-<br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin)
-<br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)
+<br>[Website](https://ai.cookbook.dev/)
+<br>[Documentation](https://github.com/CookbookDev/cookbook-remix-plugin)
+<br>[Make an issue](https://github.com/CookbookDev/cookbook-remix-plugin/issues)
 
 **COTI Plugin** &nbsp; ![](images/pi-coti.png)<br>
 Develop and test privacy-preserving smart contracts on the COTI network directly within Remix IDE.
