@@ -93,7 +93,7 @@ To see the name of the hard fork used in the current compilation, click the "Com
 
 According to the Solidity Docs, "the optimizer tries to simplify complicated expressions, which reduces both code size and execution cost, i.e., it can reduce gas needed for contract deployment as well as for external calls made to the contract."
 
-For recent versions of Solidity, it is [recommended to enable optimization](https://blog.soliditylang.org/2020/11/04/solidity-ama-1-recap/#why-do-you-think-people-are-generally-suspicious-of-the-optimizer-and-are-they-right-to-be).
+For recent versions of Solidity, it is [recommended to enable optimization](https://soliditylang.org/blog/2020/11/04/solidity-ama-1-recap/#:~:text=Why%20do%20you%20think%20people%20are%20generally%20suspicious%20of%20the%20optimizer%2C%20and%20are%20they%20right%20to%20be%3F).
 
 To learn more about optimization, (**Q. in the fig 2**) visit the [Solidity docs on the optimizer](https://docs.soliditylang.org/en/latest/internals/optimizer.html).
 

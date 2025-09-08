@@ -20,7 +20,7 @@ This page will go over the Debugger's _Use generated sources_ option, its naviga
 
 ## Use generated sources
 
-This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://blog.soliditylang.org/2020/09/28/solidity-0.7.2-release-announcement/#notable-new-features).
+This option is available for contracts using Solidity 0.7.2 or greater. See the solidity blog for more details about [generated sources](https://soliditylang.org/blog/2020/09/28/solidity-0.7.2-release-announcement/#:~:text=Notable%20New%20Features).
 
 Using **generated sources** will make it easier to audit your contracts. When the option is checked, you can step into those compiler outputs — while debugging.
 

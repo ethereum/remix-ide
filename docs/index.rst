@@ -19,7 +19,7 @@ Remix IDE is part of the `Remix Project <https://github.com/ethereum/remix-proje
 Remix IDE is located at `remix.ethereum.org <https://remix.ethereum.org>`__ and more information can be found in these docs. The IDE's repo is at `GitHub <https://github.com/ethereum/remix-project>`__.
 
 This set of documents covers instructions on how to use Remix.  
-Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-alpha.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//solidityintroduction&deactivate=home&minimizeterminal=true->`__ located inside of Remix IDE.
+Additional information can be found in our `blog <https://medium.com/remix-ide>`__ and in our tutorial tool, `LearnEth <https://remix-learneth-plugin.readthedocs.io/en/latest/index.html>`__ located inside of Remix IDE.
 
 Useful links:
 
