@@ -1,6 +1,6 @@
 # Navigating Remix
 
-Remix's layout consists of the following components: the top bar, icon panel, Side Panel, Main Panel, and terminal.
+Remix's layout consists of the following components: the Top Bar, Icon Panel, Side Panel, Main Panel, Terminal, and the Status Bar.
 
 ![Layout for Remix IDE, highlighting the terminal, topbar, and, the side, main, and icon panel.](images/layout/a-layout1c.png)
 
