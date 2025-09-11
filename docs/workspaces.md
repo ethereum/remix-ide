@@ -36,6 +36,6 @@ For other templates, the modal only contains a textbox for editing the Workspace
 To initialize a new Workspace for Git, check the box at the bottom of the Create Workspace modal.
 ![Create Workspace with template modal with Initialize Workspace with Git highlighted.](images/workspaces/a-fe-create-ws-modal.png)
 
-Git initialized workspaces will have the Git icon next to them in the **Workspaces** select box.
+Git initialized workspaces will have the Git icon next to them in the **Workspaces** selectbox.
 
 ![Workspaces initialized with Git](images/workspaces/a-fe-select-git.png)

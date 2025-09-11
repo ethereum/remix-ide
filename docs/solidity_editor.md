@@ -32,7 +32,7 @@ The default Workspace contains example TypeScript files.
 
 ## Editor & Autocompile
 
-When autocompile is enabled (in the Settings panel), compilation will occur each time the current file is changed, or another file is selected.
+When auto-compile is enabled (in the Solidity Compiler), compilation will occur each time the current file is changed, or another file is selected.
 
 ![](images/a-editor-settings.png)
 
