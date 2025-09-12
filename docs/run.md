@@ -48,7 +48,7 @@ In collaborative workflows, sharing the state of the Remix VM is a great way to 
 
 - `Remix VM (Cancun)` : Cancun is the current fork of Ethereum
 
-- `Remix VM - Mainnet fork` : This will fork the Ethereum mainnet and load it into the Remix VM. This is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about forking.)
+- `Remix VM - Mainnet fork` : This will fork the Ethereum Mainnet and load it into the Remix VM. This is useful for developing contracts that need to access deployed mainnet contracts. (See below for more info about forking.)
 
 - `Remix VM - Sepolia fork` : Same as above except this forks the Sepolia testnet. (See below for more info about forking.)
 
