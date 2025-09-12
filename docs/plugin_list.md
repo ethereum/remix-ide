@@ -168,7 +168,7 @@ This plugin is now part of the Solidity Analyzers plugin.
 
 **zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
 <br>Compile and deploy smart contracts for zkSync Era.
-<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zkSync
+<br>[Profile name](https://github.com/remix-project-org/remix-plugins-directory/blob/master/plugins/zksync/profile.json): ZKsync
 <br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)
 <br>[Make an issue](https://github.com/matter-labs/zksync-remix-plugin/issues)
 

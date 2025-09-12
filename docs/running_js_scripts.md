@@ -49,7 +49,7 @@ Remix accepts async/await scripts to run [web3.js](https://web3js.readthedocs.io
 2. Compile a Solidity file - to generate the contract metadata.
 
 3. In the Deploy & Run plugin, choose the Environment.
-   - Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually Metamask), and External HTTP Provider.
+   - Async/await scripts work on in all of the Environments: the Remix VM, Injected Provider (usually MetaMask), and External HTTP Provider.
 
 ## JS Scripts in the File Explorers
 
