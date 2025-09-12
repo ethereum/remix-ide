@@ -8,7 +8,7 @@ Clicking the Solidity icon in the icon panel brings you to the Solidity Compiler
 
 To select a contract to compile, choose a file in the File Explorer. Or if there are several files open, make sure the one you want to compile is the active file in the Editor.
 
-If there is not an active file in the editor or a file has not already been compiled, then the Solidity compiler will look like this:
+If there is not an active file in the editor or a file has not already been compiled, then the Solidity Compiler will look like this:
 
 ![](images/a-sol-comp-no-file.png)
 
@@ -34,11 +34,11 @@ The compiler version is selected in the **COMPILER** dropdown list (**A. in fig.
 You can compile (and deploy) contracts with versions of Solidity **older than 0.4.12**.
 However, the older compilers use a legacy AST — which we no longer support. Consequently, some plugins may not work and some functionality - e.g. source highlighting in the Editor may only be partially working.
 
-### Using the Contract select box
+### Using the Contract selectbox
 
 Because a Solidity file can include multiple contracts and because contracts can import other contracts, multiple contracts are often compiled. **However**, only 1 contract's compilation details can be retrieved at a time.
 
-To select the desired contract, use the **Contract** select box (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected.
+To select the desired contract, use the **Contract** selectbox (**F. in fig. 1**). Forgetting to select the right contract is a common mistake - so remember to verify that the contract you want is selected.
 
 ### Compilation Details and Publishing
 
@@ -77,7 +77,7 @@ Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 
 
 There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**).
 
-### Solidity or YUL
+### Solidity or Yul
 
 Since the Solidity version `0.5.7`, it is possible to compile `Yul` files. Please read the ([solidity documentation about Yul](https://docs.soliditylang.org/en/latest/yul.html)) which contain some code examples.
 You can use the language dropdown (**O. in fig 2**) to switch the language. **This dropdown list is only available for versions greater than or equal to `0.5.7`.**

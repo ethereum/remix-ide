@@ -12,7 +12,7 @@ The plugin can be activated by going to:
 
 ## Compiling a Vyper file
 
-A Vyper file (with a .vy extension) needs to be the active file in the Editor. To get some example files, click on the **Clone Vyper examples repo** button. This will clone a repo and put it in a new Workspace. Go to the File Explorer to see the files.
+A Vyper file (with a `.vy` extension) needs to be the active file in the Editor. To get some example files, click on the **Clone Vyper examples repo** button. This will clone a repo and put it in a new Workspace. Go to the File Explorer to see the files.
 
 ## Specifying Vyper version, EVM versions, and optimize
 

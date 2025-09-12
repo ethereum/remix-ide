@@ -53,6 +53,7 @@ Kovan
 localstorage
 Mainnet
 mainchain
+Mainnet
 mainnet
 Matomo
 Metamask

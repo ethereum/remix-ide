@@ -26,7 +26,7 @@ Using **generated sources** will make it easier to audit your contracts. When th
 
 ![](images/a-debug-use-gen-sources.png)
 
-These compiler outputs will appear in a separate .yul file in the Remix editor.
+These compiler outputs will appear in a separate `.yul` file in the Remix editor.
 
 ## The Debugger's Navigation
 
@@ -112,7 +112,7 @@ For more info about the [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_d
 
 Memory is cleared for each new message call. Memory is linear and can be addressed at byte level. **Reads** are limited to a width of 256 bits while **writes** can be either 8 bits or 256 bits wide.
 
-The Memory panel consists of 3 columns. You might need to make Remix's side panel a bit wider to get the formatting to be correct. (Drag the border between the main panel and the side panel to the right).
+The Memory panel consists of 3 columns. You might need to make Remix's Side Panel a bit wider to get the formatting to be correct. (Drag the border between the Main Panel and the Side Panel to the right).
 
 The 1st column is the location in memory. The 2nd column is the hex encoded value. The 3rd column is the decoded value. If there is nothing, then the question marks (**?**) will show - like this:
 

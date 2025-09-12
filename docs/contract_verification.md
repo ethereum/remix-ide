@@ -42,7 +42,11 @@ In the settings page, you can configure custom API URLs for the verification ser
 
 ![](images/a-cv-settings-page.png)
 
-The settings are always stored per chain, meaning that if you change the settings for a chain, it will not affect other chains. If you want to verify or lookup contracts on Etherscan's instances on multiple chains (Explorer as a Service), you need to add an API key for each chain separately.
+The settings are always stored per chain, meaning that if you change the settings for a chain, it will not affect other chains. However, the Contract Verification plugin uses the Etherscan v2 API, meaning the same API key will work for over 50 different chains.
+
+```{important}
+For the time being, you’ll still need to input your Etherscan v2 API key on each different chain, but at least it will be the same key for all of them.
+```
 
 ## Verifying with constructor arguments
 
