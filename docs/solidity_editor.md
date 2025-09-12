@@ -20,7 +20,7 @@ Files are open as tabs. When there are too many tabs to display, scrolling with 
 
 ![](images/a-editor-tabs.png)
 
-- The Play button works on the active tab. If a Solidity file is active, clicking Play will compile it. If a TS or JS file is active, Play will run the script.
+- The play button works on the active tab. If a Solidity file is active, clicking Play will compile it. If a TS or JS file is active, Play will run the script.
 - The magnifying glass icons (+/-) on the top left corner are to increase/decrease the font size.
 - The small type on the far right of the Editor is clickable to jump to a section.
 
@@ -32,7 +32,7 @@ The default Workspace contains example TypeScript files.
 
 ## Editor & Autocompile
 
-When autocompile is enabled (in the Settings panel), compilation will occur each time the current file is changed, or another file is selected.
+When auto-compile is enabled (in the Solidity Compiler), compilation will occur each time the current file is changed, or another file is selected.
 
 ![](images/a-editor-settings.png)
 

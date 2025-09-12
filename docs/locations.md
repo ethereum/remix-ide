@@ -29,7 +29,7 @@ There are many ways to customize Remix IDE by using url parameters. Here are som
 - [Load a GIST](#load-a-gist), [a file via a url](#load-a-file-via-a-url-into-the-editor) or a [base64 encoded string](#load-an-encoded-base64-string-into-a-sol-file-in-the-editor) into Remix's Editor.
 - Specify **the theme** (Dark or Light). [SEE MORE](#specifying-a-theme)
 - Specify which panels should be **minimized** - useful when embedding Remix in your site. [SEE MORE](#minimizing-remix-panels)
-- Select the **version of the Solidity** compiler, enable/disable the **optimizer**, turn on auto compile or choose the language for the Solidity compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)
+- Select the **version of the Solidity** compiler, enable/disable the **optimizer**, turn on auto compile or choose the language for the Solidity Compiler. [SEE MORE](#load-a-specific-version-of-the-solidity-compiler)
 - Load **verified contracts from Etherscan** using contract address [SEE MORE](#load-contracts-from-etherscan-via-address)
 
 ### Activating a list of plugins
@@ -38,7 +38,7 @@ The following example contains the url parameter **activate** followed by **a co
 
 The last plugin in the list will gain the focus.
 
-When you use the activate list, all other plugins that a user had loaded will be deactivated. This does not apply to the file explorer, the plugin manager, and the settings modules because these are never deactivated.
+When you use the activate list, all other plugins that a user had loaded will be deactivated. This does not apply to the File Explorer, the plugin manager, and the settings modules because these are never deactivated.
 
 ```text
 https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,defiexplorer

@@ -59,6 +59,7 @@ A quick way to compile is to hit **ctrl + s**. You can also compile by going to 
 
 Go to the **Deploy & Run Transactions** plugin.
 
+
 At the top of this plugin is the Environment selectbox. Here you can choose where you want to deploy your contract. There are many choices. For more info about these options see {ref}`this section <run:environment>` of the docs.
 
 For a brief synopsis:
@@ -71,7 +72,7 @@ The **Remix VM** is convenient because it is a blockchain that runs in the brows
 
 **Dev** is for connecting Remix to a local chain running on your computer.
 
-**L2** is for connecting Remix to Optimism or Abritrum via a browser wallet. Its essentially the same as Injected Provider, but it sets the wallet with the configuration of the specified L2.
+**L2** is for connecting Remix to Optimism or Arbitrum via a browser wallet. Its essentially the same as Injected Provider, but it sets the wallet with the configuration of the specified L2.
 
 (For details see [Running transactions](https://remix-ide.readthedocs.io/en/latest/run.html))
 

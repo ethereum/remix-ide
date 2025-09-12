@@ -45,8 +45,9 @@ gwei
 Hometab
 http
 Infura
-ipfs
+IPFS
 js
+JS
 Klaytn
 Kovan
 localstorage
@@ -69,7 +70,6 @@ remappings
 Routescan
 Sepolia
 Sindri
-sindri
 snarkjs
 Solc
 Solhint
