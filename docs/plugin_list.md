@@ -7,7 +7,7 @@ Here is the list of Remix plugins that you will see in the Plugin Manager:
 **File Explorer** &nbsp; ![](images/pi-fe.png)<br>
 The File Explorers is where you can see the files.<br>
 profile name: **fileManager**
-<br>[Documentation](file_explorer.html)
+<br>{doc}`Documentation </file_explorer>`
 
 **Remixd** &nbsp; (No UI)
 <br>Remixd (with an npm package running locally) connects a folder on your filesystem to the Remix website. Please see the docs for instructions.
@@ -17,17 +17,17 @@ profile name: **fileManager**
 **Solidity Compiler** &nbsp; ![](images/pi-sol.png)<br>
 Compiles Solidity & YUL.
 <br>profile name: **solidity**
-<br>[Documentation](compile.html)
+<br>{doc}`Documentation </compile>`
 
 **Deploy & Run** &nbsp; ![](images/pi-deploy.png)<br>
 Deploy & interact with smart contracts on the in-browser chain (JSVM), local nodes, and public networks.
 <br>profile name: **udapp**
-<br>[Documentation](run.html)
+<br>{doc}`Documentation </run>`
 
 **Debugger** &nbsp; ![](images/pi-debug.png)<br>
 Insert breakpoints, step through a contract, check high level and low level parameters, and fetch & debug a transaction of a verified contract.
 <br>profile name: **debugger**
-<br>[Documentation](debugger.html)
+<br>{doc}`Documentation </debugger>`
 
 **Contract Verification** &nbsp;<br>
 Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
@@ -36,12 +36,12 @@ Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
 **Solidity Unit Testing** &nbsp; ![](images/pi-sut.png)<br>
 Run unit test written in Solidity.
 <br>profile name: **solidityUnitTesting**
-<br>[Documentation](unittesting.html)
+<br>{doc}`Documentation </unittesting>`
 
 **Solidity Static Analysis** &nbsp; ![](images/pi-static.png)<br>
-Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with [Slither](slither.html) and with the linter, **Solhint**.
+Static code analysis is a process to debug the code by examining it and without actually executing the code. This plugin also has integrations with {doc}`Slither </slither>` and with the linter, **Solhint**.
 <br>profile name: **solidityStaticAnalysis**
-<br>[Documentation](static_analysis.html)
+<br>{doc}`Documentation </static_analysis>`
 
 **Vyper Compiler** &nbsp; ![](images/pi-vyper.png) &nbsp;
 <br>Compile Vyper code using local or remote Vyper compiler.
@@ -84,9 +84,9 @@ Create private, forked testnets from any EVM chain with integrated explorer, fau
 
 **Contract Deployer** &nbsp; ![](images/pi-deployer.png)<br>
 Deploy a contract to multiple chains (1 at a time) with the same address.
-<br>[Profile name](https://github.com/hexdivision/remix-contract-deployer-plugin): contract_deployer
-<br>[Documentation](https://github.com/hexdivision/remix-contract-deployer-plugin#getting-started-with-contract-deployer-plugin)
-<br>[Make an issue](https://github.com/hexdivision/remix-contract-deployer-plugin/issues)
+<br>[Profile name](https://github.com/groksmith/remix-contract-deployer-plugin): contract_deployer
+<br>[Documentation](https://github.com/groksmith/remix-contract-deployer-plugin#getting-started-with-contract-deployer-plugin)
+<br>[Make an issue](https://github.com/groksmith/remix-contract-deployer-plugin/issues)
 
 **Contract Verification** &nbsp;<br>
 Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
@@ -95,9 +95,9 @@ Verify contract code on Sourcify, Etherscan and Blockscout at the same time."
 **Cookbook.dev - Find any contract** &nbsp; ![](images/cookbook.svg)<br>
 Find any smart contract, build your project faster.
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/tree/master/plugins/cookbook.dev): cookbook.dev
-<br>[Website](https://www.cookbook.dev)
-<br>[Documentation](https://github.com/Breakthrough-Labs/cookbook-remix-plugin)
-<br>[Make an issue](https://github.com/Breakthrough-Labs/cookbook-remix-plugin/issues)
+<br>[Website](https://ai.cookbook.dev/)
+<br>[Documentation](https://github.com/CookbookDev/cookbook-remix-plugin)
+<br>[Make an issue](https://github.com/CookbookDev/cookbook-remix-plugin/issues)
 
 **COTI Plugin** &nbsp; ![](images/pi-coti.png)<br>
 Develop and test privacy-preserving smart contracts on the COTI network directly within Remix IDE.
@@ -161,14 +161,14 @@ This plugin is now part of the Solidity Analyzers plugin.
 <br>[Documentation](https://docs.tenderly.co/monitoring/integrations#remix)
 <br>[Make an issue](/issues)
 
-**Wallet Connect** &nbsp; (main panel)
+**Wallet Connect** &nbsp; (Main Panel)
 <br>Approve transactions on your mobile device
 <br>[Profile name](https://github.com/ethereum/remix-plugins-directory/blob/master/plugins/wallet-connect/profile.json): walletconnect
 <br>[Make an issue](https://github.com/yann300/remix-walletconnect/issues)
 
 **zkSync** &nbsp; ![](images/pi-zksync.png) &nbsp;
 <br>Compile and deploy smart contracts for zkSync Era.
-<br>[Profile name](https://zksync-remix-plugin.zksync.io/): zksync
+<br>[Profile name](https://github.com/remix-project-org/remix-plugins-directory/blob/master/plugins/zksync/profile.json): ZKsync
 <br>[Documentation](https://github.com/matter-labs/zksync-remix-plugin)
 <br>[Make an issue](https://github.com/matter-labs/zksync-remix-plugin/issues)
 

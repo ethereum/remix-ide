@@ -112,7 +112,7 @@ For more information about this example, please see: [running async/await script
 })()
 ```
 
-For more script examples, please see [Frequently Asked Scripts](FAS.html).
+For more script examples, please see {doc}`Frequently Asked Scripts </FAS>`.
 
 ## `require` in scripts at Remix
 
@@ -123,8 +123,8 @@ For now, NPM modules supported by Remix are:
 - ethers
 - web3
 - swarmgw
-- chai
-- starknet
+- Chai
+- Starknet
 - multihashes
 - zokrates-js
 - snarkjs

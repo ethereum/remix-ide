@@ -16,16 +16,16 @@ Alternatively, you can add username and email to the Github section of the Git p
 
 ### Initializing Git in a Workspace
 
-For information about initializing a workspace, see the section about initializing Git on the [Remix Workspaces](/workspaces/#initializing-a-workspace-with-git) page.
+For information about initializing a workspace, see the section about initializing Git on the {ref}`Remix Workspaces <workspaces:initializing a workspace with git>` page.
 
 ### Cloning an existing repository into Remix
 
 You can clone an existing repository from GitHub into Remix using "**CLONE**" accordion item in the Git plugin. You can clone a repository by loading it from GitHub using the "**Load from GitHub**" button and selecting one from your list of public repositories.
 
-Alternatively, you can clone a repository by providing its URL in the "**CLONE FROM URL**" text box. When you clone a repository, Remix initializes it as a separate Workspace. See [Remix Workspaces](/workspaces) to learn more about Workspaces.
+Alternatively, you can clone a repository by providing its URL in the "**CLONE FROM URL**" text box. When you clone a repository, Remix initializes it as a separate Workspace. See {doc}`Remix Workspaces <workspaces>` to learn more about Workspaces.
 
 ```{note}
-Remix stores your files in the browser and browser storage is limited. Cloning a repository that is too large will cause the Remix IDE. This is why you have to manually specify the depth and branches you want to clone. If you are using [Remixd](/remixd) you don't have to worry about cloning large repositories.
+Remix stores your files in the browser and browser storage is limited. Cloning a repository that is too large will cause the Remix IDE. This is why you have to manually specify the depth and branches you want to clone. If you are using {doc}`Remixd </remixd>` you don't have to worry about cloning large repositories.
 ```
 
 ![Remix Git plugin clone section.](images/git/gh-clone.png)

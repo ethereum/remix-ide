@@ -86,7 +86,7 @@ contract testSuite {
 
 Write sufficient unit tests to ensure that your contract works as expected under different scenarios.
 
-Remix injects a built-in `assert` library for testing. You can visit the library documentation [here](./assert_library).
+Remix injects a built-in `assert` library for testing. You can visit the library documentation {doc}`here </assert_library>`.
 
 Additionally, Remix allows the usage of special functions in the test file to make testing more structural. They are:
 
@@ -95,7 +95,7 @@ Additionally, Remix allows the usage of special functions in the test file to ma
 - `afterEach()` - Runs after each test
 - `afterAll()` - Runs after all tests
 
-To get started, see [this simple example](./unittesting_examples.html#simple-example).
+To get started, see {ref}`this simple example <unittesting_examples:1. Simple example>`.
 
 ## Run
 

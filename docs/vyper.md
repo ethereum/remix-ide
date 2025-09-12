@@ -67,7 +67,7 @@ The remote compilation is done using our remote containerized service that suppo
 
 ### Local Compiler
 
-The local compilation can be done by connecting Remix Online IDE to your file system with [Remixd](remixd.html) and then running a docker container that runs the Ape framework.
+The local compilation can be done by connecting Remix Online IDE to your file system with {doc}`Remixd </remixd>` and then running a docker container that runs the Ape framework.
 
 When the next version of Remix Desktop is ready, you’ll be able to run everything locally — both Remix, and the new Vyper compilers (still in Docker, of course).
 

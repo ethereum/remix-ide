@@ -6,8 +6,15 @@ You can access **Settings** for Remix by clicking the gear icon on the left side
 
 ![Remix General Settings Page](images/settings/a-settings-general.png)
 
-- **Generate contract metadata** is used for deploying with libraries. See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730).
-- **Enable code completion in editor** controls code completion. Autocompleting Solidity code happens when you type in the Editor. This option has the Compiler run in the background. For more information about autocomplete, see the [Editor docs](solidity_editor.html#autocomplete).
+
+### General Settings
+
+![](images/a-settings-general.png)
+
+- **Generate contract metadata** is used for deploying with libraries. See our blog post on the subject: [Deploying with Libraries](https://medium.com/remix-ide/deploying-with-libraries-on-remix-ide-24f5f7423b60?sk=68f9c2bf318e85e129e46fe44683a730)
+- **Always use Remix VM at Load** will make the Remix VM the selected **environment** when Remix loads.
+- **Word wrap** controls if word wrap is enabled in the Editor.
+- **Enable code completion in editor** controls code completion. Autocompleting Solidity code happens when you type in the Editor. This option has the Compiler run in the background. For more information about autocomplete, see the {ref}`Editor docs <solidity_editor:autocomplete>`.
 - **Display gas estimates in editor** controls if gas estimates are shown. The gas estimates only works when a compilation is successful.
 - **Display errors in editor while typing**
 - **Enable Personal Mode for web3 provider** can be used when one is connecting to a **local node**. It is used to have Remix temporarily save the passphrase - so that you don't need to **unlock** the account in Geth. Remix will not persist the passphrase - so if you refresh your browser the passphrase will be gone.
@@ -29,7 +36,7 @@ The general settings section has a subsection where you change your themes. For 
 
 ![RemixAI Assistant Settings Page](images/settings/a-settings-ai1.png)
 
-These settings are primarily for the code completion functions for the RemixAI Assistant. See the [RemixAI Assistant page](ai.html) for more information about AI in Remix.
+These settings are primarily for the code completion functions of Remix's AI tool, Solidity Copilot. See this {doc}`doc page </ai>` for more information about AI in Remix.
 
 ## Connected Accounts
 

@@ -12,9 +12,11 @@ The `Solidity Analyzers` plugin gangs three analysis tools together to perform s
 
 - [Remix Analysis](#remix-analysis): a basic analysis tool
 - [Solhint linter](https://github.com/protofire/solhint#rules): a Solidity linter for code and style guide validations
-- [Slither Static Analysis](https://github.com/crytic/slither#slither-the-solidity-source-analyzer): a comprehensive static analysis tool
+- [Slither Static Analysis](https://crytic.github.io/slither/slither.html): a comprehensive static analysis tool
 
-**NOTE:** Slither can only be used when Remix is connected to the local computer's filesystem with [Remixd](remix.html).
+```{note}
+Slither can only be used when Remix is connected to the local computer's filesystem with {doc}`Remixd </remixd>`.
+```
 
 ## How to use
 

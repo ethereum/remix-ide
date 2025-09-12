@@ -4,7 +4,7 @@ _(Supported since Remix IDE v0.23.0 and Remixd v0.6.0)_
 
 ## Remixd and Truffle
 
-**Note:** If you have not used `remixd` before, read more about it [here](./remixd.html)
+**Note:** If you have not used `remixd` before, read more about it {doc}`here </remixd>`
 
 If `remixd` is running locally on your device and shared folder is a **Truffle project**, an additional websocket plugin will be listening on port `65524`. According to its documentation,
 
@@ -24,7 +24,7 @@ It doesn't need any separate installation as it is shipped with [remixd NPM](htt
 
 To use Truffle compilation with Remix IDE efficiently:
 
-1. **Truffle** should be installed locally on the system [https://trufflesuite.com/docs/truffle/getting-started/installation/](https://trufflesuite.com/docs/truffle/getting-started/installation/)
+1. **Truffle** should be installed locally on the system [https://archive.trufflesuite.com/docs/truffle/getting-started/installation/](https://archive.trufflesuite.com/docs/truffle/getting-started/installation/)
 2. Shared folder should be a Truffle project containing `truffle-config.js`
 3. `Remixd` Truffle websocket listener should be running at `65524`
 
