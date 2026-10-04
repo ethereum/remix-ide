@@ -21,8 +21,10 @@ Celo
 Chai
 Circom
 circomlibjs
+Claude
 Coinbase
 config
+custodies
 contract_deployer
 DApp
 dApp
@@ -51,6 +53,7 @@ GitHub
 Gitter
 Goerli
 gwei
+hardcoding
 Holesky
 Hometab
 
@@ -59,6 +62,7 @@ IPFS
 JavaScript
 Klaytn
 Kovan
+Kurier
 localstorage
 mainchain
 Matomo
@@ -74,6 +78,7 @@ Ownable
 onchain
 OpenAI
 param
+passcode
 Pectra
 pluginManager
 preloaded
@@ -101,6 +106,7 @@ Starknet
 Storages
 Su
 Subgraph
+Subgraphs
 swarmgw
 templateSelection
 testnet
@@ -116,6 +122,7 @@ UIs
 uncheck
 Uniswap
 unpkg
+validator
 Upgradeability
 VM's
 VSCode
@@ -129,6 +136,7 @@ Xinghuo
 Yul
 zkSNARKs
 zkSync
+zkVerify
 Zokrates
 moveFund
 reentrancy

@@ -12,6 +12,7 @@ const onDOMContentLoaded = () => {
   addHrUnderSearchForm();
   updateMode();
   buildHeader();
+  buildSiteBanner();
   addFooterNote();
   updateFooterButtonIcons();
   toggleMobileMenu({ expanded: false });

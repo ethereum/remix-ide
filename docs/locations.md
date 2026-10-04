@@ -9,13 +9,13 @@ myst:
 
 ## Main Remix URLs
 
-- Remix IDE Online is located at [https://remix.ethereum.org](https://remix.ethereum.org).
+- Remix IDE Online is located at [https://app.remix.live](https://app.remix.live).
 
 - The alpha version of Remix is located at [https://alpha.remix.live](https://alpha.remix.live). This is not a stable version.
 
 - GitHub repository: [https://github.com/remix-project-org](https://github.com/remix-project-org). The README contains instructions for running Remix-IDE locally.
 
-- Remix Desktop is an Electron App. Here is the [release page](https://github.com/remix-project-org/remix-desktop/releases).
+- Remix Desktop is an Electron App. Here is the [download page](https://remix.live/desktop).
 
 - The Remix X account is [EthereumRemix](https://x.com/EthereumRemix).
 
@@ -46,7 +46,7 @@ Remix URL parameters follow these conventions:
 The following example contains the URL parameter **activate** followed by **a comma separated list of plugins**.
 
 ```text
-https://remix.ethereum.org/?#activate=LearnEth,noir-compiler
+https://app.remix.live/?#activate=LearnEth,noir-compiler
 ```
 
 **The last plugin in the list will gain the focus.**
@@ -61,7 +61,7 @@ In a Remix URL parameter, a plugin is referred to by its **name** as specified i
 To deactivate a list of plugins:
 
 ```text
-https://remix.ethereum.org/?#deactivate=debugger
+https://app.remix.live/?#deactivate=debugger
 ```
 
 #### Pass commands to a plugin's API via a URL param
@@ -75,13 +75,13 @@ call=plugin_name//function//parameter1//parameter2
 The URL below uses `activate` & `call`. It **activates** a number of plugins and **calls** the File Explorer to tell it to load one of the default Remix files:
 
 ```text
-https://remix.ethereum.org/?#activate=defiexplorer,solidity&call=fileManager//open//contracts/3_Ballot.sol
+https://app.remix.live/?#activate=defiexplorer,solidity&call=fileManager//open//contracts/3_Ballot.sol
 ```
 
 To load a specific tutorial in the LearnEth plugin:
 
 ```text
-https://remix.ethereum.org/?#activate=solidityUnitTesting,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
+https://app.remix.live/?#activate=solidityUnitTesting,solidity,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract
 ```
 
 #### Make calls to a number of different plugins' APIs
@@ -91,7 +91,7 @@ Use `calls` instead of `call` when you need to issue commands to multiple plugin
 For example, the URL below activates a list of plugins, then calls the LearnEth plugin's API and the File Explorer's API in sequence:
 
 ```text
-https://remix.ethereum.org/?#activate=solidityUnitTesting,solidity,LearnEth&calls=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract///fileManager//open//contracts/3_Ballot.sol
+https://app.remix.live/?#activate=solidityUnitTesting,solidity,LearnEth&calls=LearnEth//startTutorial//ethereum/remix-workshops//master//proxycontract///fileManager//open//contracts/3_Ballot.sol
 ```
 
 ### Loading content
@@ -101,7 +101,7 @@ https://remix.ethereum.org/?#activate=solidityUnitTesting,solidity,LearnEth&call
 The `url` parameter takes a URL, loads it into the Editor and saves it in a Workspace called **code-sample**:
 
 ```text
-https://remix.ethereum.org/#url=https://github.com/remix-project-org/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
+https://app.remix.live/#url=https://github.com/remix-project-org/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
 ```
 
 ```{important}
@@ -113,7 +113,7 @@ The **code-sample** workspaces are ephemeral and will not be persisted on a relo
 The `code` parameter takes a base64-encoded string of Solidity source code and loads it into the Editor as a `.sol` file, saving it in a Workspace called **code-sample**. To generate the base64 string, use `btoa()` in the browser console or any online base64 encoder.
 
 ```text
-https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVAoKcHJhZ21hIHNvbGlkaXR5IDAuOC40OwoKLyoqCiAqIEB0aXRsZSBXb25kZXJmdWxDb2RlCiAqIEBkZXYgV2VsY29tZSB0byBSZW1peAogKi8KY29udHJhY3QgWW91IHsKCiAgICBhZGRyZXNzIHByaXZhdGUgb3duZXI7CiAgICAKICAgIC8qKgogICAgICogQGRldiBTZXQgY29udHJhY3QgZGVwbG95ZXIgYXMgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYKICAgICAqLwogICAgY29uc3RydWN0b3IoKSB7CiAgICAgICAgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYgPSBtc2cuc2VuZGVyOwoKICAgIH0KCiAgICAvKioKICAgICAqIEBkZXYgQ2hhbmdlIG1vb2QKICAgICAqIEBwYXJhbSBuZXdPd25lciBhZGRyZXNzIG9mIG5ldyBvd25lcgogICAgICovCiAgICBmdW5jdGlvbiBjaGFuZ2VNb29kKGFkZHJlc3MgbmV3TW9vZEFkZHIpIHB1YmxpYyB7CiAgICAgICAgb3duZXJNb29kID0gbmV3TW9vZEFkZHI7CiAgICB9Cn0=
+https://app.remix.live/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVAoKcHJhZ21hIHNvbGlkaXR5IDAuOC40OwoKLyoqCiAqIEB0aXRsZSBXb25kZXJmdWxDb2RlCiAqIEBkZXYgV2VsY29tZSB0byBSZW1peAogKi8KY29udHJhY3QgWW91IHsKCiAgICBhZGRyZXNzIHByaXZhdGUgb3duZXI7CiAgICAKICAgIC8qKgogICAgICogQGRldiBTZXQgY29udHJhY3QgZGVwbG95ZXIgYXMgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYKICAgICAqLwogICAgY29uc3RydWN0b3IoKSB7CiAgICAgICAgeW91QW5kWW91cldvbmRlcmZ1bFNlbGYgPSBtc2cuc2VuZGVyOwoKICAgIH0KCiAgICAvKioKICAgICAqIEBkZXYgQ2hhbmdlIG1vb2QKICAgICAqIEBwYXJhbSBuZXdPd25lciBhZGRyZXNzIG9mIG5ldyBvd25lcgogICAgICovCiAgICBmdW5jdGlvbiBjaGFuZ2VNb29kKGFkZHJlc3MgbmV3TW9vZEFkZHIpIHB1YmxpYyB7CiAgICAgICAgb3duZXJNb29kID0gbmV3TW9vZEFkZHI7CiAgICB9Cn0=
 ```
 
 #### Load contracts from Etherscan via address
@@ -121,7 +121,7 @@ https://remix.ethereum.org/?#code=Ly8gU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IE1JVAoKcH
 The `address` parameter takes an address and loads the **verified contract** found for the address on Ethereum mainnet and saves it into the `etherscan-code-sample` workspace of the File Explorer:
 
 ```text
-https://remix.ethereum.org/#address=0xdac17f958d2ee523a2206206994597c13d831ec7
+https://app.remix.live/#address=0xdac17f958d2ee523a2206206994597c13d831ec7
 ```
 
 #### Load a Solidity contract from GitHub
@@ -132,10 +132,10 @@ With a GitHub URL of a Solidity contract like this one:
 https://github.com/remix-project-org/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
 ```
 
-Then delete the **GitHub** part and type `remix.ethereum.org` in its place, like this:
+Then delete the **GitHub** part and type `app.remix.live` in its place, like this:
 
 ```text
-https://remix.ethereum.org/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
+https://app.remix.live/ethereum/remix-project/blob/master/apps/remix-ide/contracts/app/solidity/mode.sol
 ```
 
 Remix will fetch the Solidity file and open it up in the File Explorer in a Workspace named **code-sample**.
@@ -145,19 +145,19 @@ Remix will fetch the Solidity file and open it up in the File Explorer in a Work
 The `gist` parameter fetches all files from a GitHub Gist and saves them into a workspace named `gist-<gist-id>` in the File Explorer.
 
 ```text
-https://remix.ethereum.org/?gist=0fe90e825327ef313c88aedfe66ec142
+https://app.remix.live/?gist=0fe90e825327ef313c88aedfe66ec142
 ```
 
 To also have the GIST visible in the Editor, use both `gist` & `call`:
 
 ```text
-https://remix.ethereum.org/?#activate=solidity,fileManager&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
+https://app.remix.live/?#activate=solidity,fileManager&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
 ```
 
 To load the GIST, have it visible in the Editor, and activate a list of plugins:
 
 ```text
-https://remix.ethereum.org/?#activate=solidity,LearnEth&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
+https://app.remix.live/?#activate=solidity,LearnEth&gist=0fe90e825327ef313c88aedfe66ec142&call=fileManager//open//gist-0fe90e825327ef313c88aedfe66ec142/gridMix4.sol
 ```
 
 ### Compiler settings
@@ -167,7 +167,7 @@ https://remix.ethereum.org/?#activate=solidity,LearnEth&gist=0fe90e825327ef313c8
 The `version` parameter pins the compiler to a specific build, which is useful for reproducibility or working with contracts that require a particular version. The version string follows the format `soljson-v<version>+commit.<hash>`, where both the version number and commit hash are required.
 
 ```text
-https://remix.ethereum.org/?#version=soljson-v0.6.6+commit.6c089d02
+https://app.remix.live/?#version=soljson-v0.6.6+commit.6c089d02
 ```
 
 ```{note}
@@ -177,13 +177,13 @@ You need to specify both the Solidity version and the commit.
 To load a custom compiler from a URL instead:
 
 ```text
-https://remix.ethereum.org/#version=https://solidity-blog.s3.eu-central-1.amazonaws.com/data/08preview/soljson.js
+https://app.remix.live/#version=https://solidity-blog.s3.eu-central-1.amazonaws.com/data/08preview/soljson.js
 ```
 
 To enable autoCompile:
 
 ```text
-https://remix.ethereum.org/#autoCompile=true
+https://app.remix.live/#autoCompile=true
 ```
 
 #### Select the language for the Solidity Compiler
@@ -191,7 +191,7 @@ https://remix.ethereum.org/#autoCompile=true
 The `language` parameter sets the compiler language. Valid values are `Solidity` (the default) and `Yul`. Yul is an intermediate language used for low-level EVM programming and compiler development.
 
 ```text
-https://remix.ethereum.org/#language=Yul
+https://app.remix.live/#language=Yul
 ```
 
 ### UI / Appearance
@@ -201,19 +201,19 @@ https://remix.ethereum.org/#language=Yul
 The following URL will **close everything except the Main Panel & the icon panel** (the side and terminal are minimized).
 
 ```text
-https://remix.ethereum.org/?#embed=true
+https://app.remix.live/?#embed=true
 ```
 
 To minimize just the Side Panel, use this URL:
 
 ```text
-https://remix.ethereum.org/?#minimizesidepanel=true
+https://app.remix.live/?#minimizesidepanel=true
 ```
 
 To minimize just the terminal, use this URL:
 
 ```text
-https://remix.ethereum.org/?#minimizeterminal=true
+https://app.remix.live/?#minimizeterminal=true
 ```
 
 #### Specify a theme
@@ -221,7 +221,7 @@ https://remix.ethereum.org/?#minimizeterminal=true
 The `theme` parameter accepts `Dark` or `Light`. To link to Remix with a theme specified, use this URL:
 
 ```text
-https://remix.ethereum.org/?#theme=Dark
+https://app.remix.live/?#theme=Dark
 ```
 
 ### Combine multiple parameters
@@ -236,5 +236,5 @@ Multiple parameters can be combined in a single URL by chaining them with `&`. T
 - `version=soljson-v0.6.6+commit.6c089d02.js` — loads a specific compiler version
 
 ```text
-https://remix.ethereum.org/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js
+https://app.remix.live/?#activate=solidity,solidityUnitTesting,LearnEth&theme=Light&minimizeterminal=true&optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js
 ```

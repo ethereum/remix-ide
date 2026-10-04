@@ -1,0 +1,252 @@
+/**
+ * Embedded API console
+ */
+
+.api-console {
+  --api-console-ok: #1B7F4B;
+  --api-console-bad: #C0392B;
+  --api-console-line: color-mix(in srgb, var(--color-body-light) 30%, transparent);
+
+  border: 1px solid var(--api-console-line);
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
+  overflow: hidden;
+  font-size: var(--size-body-small);
+}
+
+:root[style*=dark] .api-console,
+:root[style*=black] .api-console {
+  --api-console-ok: #4ADE80;
+  --api-console-bad: #FF8B7D;
+}
+
+/* Request line */
+
+.api-console-request {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  padding: 0.75rem;
+  background: var(--color-code-background);
+}
+
+.api-console-method {
+  font-family: monospace;
+  font-size: var(--size-body-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 0.125rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.api-console-url {
+  flex: 1 1 12rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-body);
+}
+
+.api-console-send {
+  font-family: inherit;
+  font-size: var(--size-body-small);
+  font-weight: 600;
+  color: #FFFFFF;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-width: 6.5rem;
+}
+
+.api-console-send:hover:not(:disabled) {
+  background: var(--color-hover);
+}
+
+.api-console-send:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Ellipsis that animates only while the request is in flight */
+.api-console-send[aria-busy="true"]::after {
+  content: "";
+  animation: api-console-ellipsis 1.2s steps(4, end) infinite;
+}
+
+@keyframes api-console-ellipsis {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .api-console-send[aria-busy="true"]::after {
+    content: "...";
+    animation: none;
+  }
+}
+
+/* Note line, for transport failures that never produced a response */
+
+.api-console-note {
+  margin: 0;
+  padding: 0.75rem;
+  color: var(--api-console-bad);
+  border-top: 1px solid var(--api-console-line);
+}
+
+/* Response */
+
+.api-console-response-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid var(--api-console-line);
+}
+
+.api-console-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: var(--size-body-small);
+  font-weight: 600;
+  color: var(--color-body);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.api-console-chevron {
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  width: 0.4rem;
+  height: 0.4rem;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.api-console-toggle[aria-expanded="false"] .api-console-chevron {
+  transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .api-console-chevron { transition: none; }
+}
+
+.api-console-badge {
+  font-family: monospace;
+  font-size: var(--size-body-xs);
+  font-weight: 700;
+  color: var(--api-console-bad);
+}
+
+.api-console-badge[data-ok="true"] {
+  color: var(--api-console-ok);
+}
+
+/* A status the page deliberately demonstrates, such as the 402 that a
+   request without payment is supposed to return. Not a failure. */
+.api-console-badge[data-ok="expected"] {
+  color: var(--color-primary);
+}
+
+.api-console-meta {
+  font-size: var(--size-body-xs);
+  color: var(--color-body-light);
+}
+
+.api-console-copy {
+  margin-left: auto;
+  font-family: inherit;
+  font-size: var(--size-body-xs);
+  color: var(--color-body-light);
+  background: none;
+  border: 1px solid var(--api-console-line);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.api-console-copy:hover {
+  color: var(--color-body);
+}
+
+.api-console-body {
+  margin: 0;
+  padding: 0.75rem;
+  max-height: 24rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--color-code-background);
+  border-top: 1px solid var(--api-console-line);
+  /* Set explicitly: long values wrap onto the next line rather than
+     scrolling sideways, and the indentation of the JSON is preserved. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+}
+
+.api-console-body code {
+  display: block;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: var(--size-body-small);
+  line-height: 1.5;
+  /* sphinx_rtd_theme sets `white-space: nowrap` on every `code` element,
+     which would flatten the payload onto a single line. Same specificity,
+     so this wins on load order: html_css_files come after the theme. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* One block per line of the payload, so the response stacks vertically
+   whatever the surrounding stylesheet does with whitespace. */
+.api-console-row {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* JSON tokens */
+
+.api-console-token[data-token="key"] { color: var(--color-primary); }
+.api-console-token[data-token="string"] { color: var(--api-console-ok); }
+.api-console-token[data-token="number"] { color: var(--color-body); font-weight: 600; }
+.api-console-token[data-token="boolean"],
+.api-console-token[data-token="null"] { color: var(--api-console-bad); }
+
+/* Request body */
+
+.api-console-request-body {
+  border-top: 1px solid var(--api-console-line);
+}
+
+.api-console-label {
+  margin: 0;
+  padding: 0.5rem 0.75rem 0;
+  font-size: var(--size-body-xs);
+  font-weight: 600;
+  color: var(--color-body-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.api-console-request-body .api-console-body {
+  border-top: none;
+  max-height: 12rem;
+}

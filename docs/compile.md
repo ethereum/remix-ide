@@ -17,7 +17,7 @@ To select a contract to compile, choose a file in the File Explorer. Or if there
 
 If there is not an active file in the editor or a file has not already been compiled, then the Solidity Compiler will look like this:
 
-![Solidity Compiler panel with no file loaded](images/a-sol-comp-no-file.png)
+![Solidity Compiler panel with no file loaded](images/compile/a-sol-comp-no-file.png)
 
 ### Triggering compilation
 
@@ -27,7 +27,7 @@ Compiling is triggered when you:
 - use the shortcut `control + s`.
 - right click on a file in the File Explorer and select the **Compile** option
 
-![Solidity Compiler basic configuration panel](images/a-sol-comp-basic.png)
+![Solidity Compiler basic configuration panel](images/compile/a-sol-comp-basic.png)
 
 ### Auto Compile
 
@@ -80,7 +80,7 @@ It is important to address reported issues even if the compiler doesn't complain
 
 Clicking on Advanced Compiler Configurations will open this panel (**M. in fig. 2 below**).
 
-![Solidity Compiler advanced configuration panel](images/a-sol-comp-adv.png)
+![Solidity Compiler advanced configuration panel](images/compile/a-sol-comp-adv.png)
 
 There is a radio button to choose whether to configure the compiler through the interface (**N. in fig 2**) or to use a JSON file for the configuration (**R. in fig 2**).
 

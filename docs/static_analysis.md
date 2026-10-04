@@ -11,7 +11,7 @@ Static code analysis is a process of debugging code by examining it without exec
 
 The `Solidity Analyzers` plugin combines three analysis tools to perform static analysis on Solidity smart contracts. Each tool checks for security vulnerabilities and bad development practices, among other issues. The plugin can be activated from the Remix `Plugin Manager`.
 
-![Activating Solidity Analyzers from the Plugin Manager](images/a-ssa-activate.png)
+![Activating Solidity Analyzers from the Plugin Manager](images/static-analysis/a-ssa-activate.png)
 
 `Solidity Analyzers` can also be loaded by clicking on the `Solidity` icon in the featured plugins section of Remix's home tab. This button loads the following plugins: Solidity Compiler, Solidity Unit Testing, and Static Analyzers.
 
@@ -31,19 +31,19 @@ Slither can only be used on {doc}`Remix Desktop </desktop>`.
 
 At the top of the panel, check the tools that you want to use.
 
-![Solidity Analyzers panel with tool selection checkboxes](images/a-ssa-1.png)
+![Solidity Analyzers panel with tool selection checkboxes](images/static-analysis/a-ssa-1.png)
 
 ### Errors & Warnings
 
 By default, `Solidity Analyzers` will show both errors and warnings. The combined number of errors and warnings is shown in the badge on that tool's tab.
 
-![Error and warning badges on the analysis tool tabs](images/a-ssa-err-warn.png)
+![Error and warning badges on the analysis tool tabs](images/static-analysis/a-ssa-err-warn.png)
 
 If you check `Hide warnings`, warnings will be hidden and you'll exclusively see the errors.
 
 **NOTE:** Remix Analysis does not flag errors — it only shows warnings, so if you check `Hide warnings`, nothing will be shown in the Remix Analysis tab.
 
-![Hide warnings checkbox in Solidity Analyzers](images/a-ssa-show-hide-warnings.png)
+![Hide warnings checkbox in Solidity Analyzers](images/static-analysis/a-ssa-show-hide-warnings.png)
 
 #### Warnings from external libraries
 

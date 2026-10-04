@@ -108,7 +108,7 @@ lint-md: pymarkdownlnt-install
 	  $(SOURCEDIR)
 
 .vale-stamp: $(VENV_DIR)/bin/python
-	@. $(VENV); pip install vale
+	@. $(VENV); pip install vale==3.21.0.0
 	@test -f $(VALE_CONFIG)
 	@. $(VENV); vale sync
 	@touch .vale-stamp
@@ -125,13 +125,13 @@ spell-check: vale-install
 	  sed "s|StylesPath[[:space:]]*=.*|StylesPath = $$tmp_dir/styles|" \
 	    $(VALE_CONFIG) > $$tmp_dir/vale.ini; \
 	  . $(VENV); vale --filter='.Extends=="spelling"' \
-	    --config=$$tmp_dir/vale.ini $(SOURCEDIR)/*.md > vale-spelling.txt 2>&1 || true; \
+	    --config=$$tmp_dir/vale.ini $$(find $(SOURCEDIR) -name '*.md' -not -path '*/.venv/*' -not -path '*/_build/*' -not -path '*/locale/*') > vale-spelling.txt 2>&1 || true; \
 	  rm -rf $$tmp_dir
 	@echo "Vale spelling results saved to vale-spelling.txt"
 
 style-checks: vale-install
 	@echo "General Vale checks"
-	@. $(VENV); vale --minAlertLevel=error --filter='.Extends!="spelling"' --config=$(VALE_CONFIG) $(SOURCEDIR)/*.md
+	@. $(VENV); vale --minAlertLevel=error --filter='.Extends!="spelling"' --config=$(VALE_CONFIG) $$(find $(SOURCEDIR) -name '*.md' -not -path '*/.venv/*' -not -path '*/_build/*' -not -path '*/locale/*')
 
 clean:
 	rm -rf $(BUILDDIR)/dirhtml && rm -rf $(BUILDDIR)/doctrees

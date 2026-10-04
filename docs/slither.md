@@ -37,21 +37,21 @@ The `Slither` checkbox in the Solidity Static Analysis plugin will be greyed out
 
 If you load a local project in Remix Desktop, there will be an extra checkbox shown in `Solidity Static Analysis` plugin with the label `Slither` (On Remix Web, this option will be greyed out).
 
-![Slither checkbox in the Solidity Static Analysis plugin](images/a-slither-analysis.png)
+![Slither checkbox in the Solidity Static Analysis plugin](images/slither/a-slither-analysis.png)
 
 The Slither Analysis report will be displayed on the Slither tab of the Solidity Static Analysis plugin, next to the Remix analysis report for better readability.
 
-![Slither analysis report in the Solidity Static Analysis plugin](images/a-slither-analysis-success.png)
+![Slither analysis report in the Solidity Static Analysis plugin](images/slither/a-slither-analysis-success.png)
 
 The result of the analysis will be shown in the Remix IDE terminal.
 
-![Slither analysis result in the Remix IDE terminal](images/a-slither-analysis-success-terminal.png)
+![Slither analysis result in the Remix IDE terminal](images/slither/a-slither-analysis-success-terminal.png)
 
 To only run Slither Analysis, deselect the `Remix` and `Solhint` checkboxes and click on "Analyze". Now it will show only the Slither Analysis report.
 
 By default, it doesn't show the warnings for external libraries like remix-tests.sol, hardhat/console.sol etc. To have a look at them, check the box with label `Show warnings for external libraries`.
 
-![Slither analysis report showing warnings for external libraries](images/a-slither-analysis-ext-libs.png)
+![Slither analysis report showing warnings for external libraries](images/slither/a-slither-analysis-ext-libs.png)
 
 ### More Details
 
@@ -61,8 +61,8 @@ If the versions differ, the Slither Websocket plugin will use `solc-select` to s
 
 For example, if the local `solc` version is 0.8.4 and Remix IDE is set to 0.8.6, the logs will show the version switch.
 
-![Slither Websocket plugin log showing solc version selection](images/a-slither-analysis-select.png)
+![Slither Websocket plugin log showing solc version selection](images/slither/a-slither-analysis-select.png)
 
 After a successful analysis run:
 
-![Slither analysis success after solc version switch](images/a-slither-analysis-select-success.png)
+![Slither analysis success after solc version switch](images/slither/a-slither-analysis-select-success.png)

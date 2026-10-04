@@ -9,7 +9,7 @@ const preloadFonts = () => {
     const link = document.createElement("link");
     link.rel = "preload";
     link.as = "font";
-    link.href = `_static/fonts/${filename}`;
+    link.href = docRootPath(`_static/fonts/${filename}`);
     link.crossOrigin = "";
     document.head.appendChild(link);
   });
@@ -55,11 +55,15 @@ const updateEditButtonLabel = () => {
 const preloadColorModeIcons = () => {
   const icons = COLOR_MODES.map(({ icon }) => icon);
   icons.forEach((path, idx) => {
-    fetch(path)
-      .then(response => response.text())
+    fetch(docRootPath(path))
+      .then(response => {
+        if (!response.ok) throw new Error(`${response.status} for ${path}`);
+        return response.text();
+      })
       .then(data => {
         loadedSvgs[icons[idx].value] = data;
       })
+      .catch(error => console.warn(`Could not preload icon: ${error.message}`))
   })
 }
 
@@ -277,6 +281,92 @@ const buildHeader = () => {
   menuButton.addEventListener("click", toggleMobileMenu);
   appendSvg(HAMBURGER_PATH, menuButton, MOBILE_MENU_ICON_CLASS);
   navButtonContainer.appendChild(menuButton);
+}
+
+let bannerObserver = null;
+
+/**
+ * Builds the site banner from the SITE_BANNER config and places it above the
+ * header. Does nothing when there is no banner configured, or when the reader
+ * has already dismissed this one.
+ */
+const buildSiteBanner = () => {
+  if (!SITE_BANNER || isBannerDismissed()) return;
+
+  const banner = document.createElement("div");
+  banner.classList.add(SITE_BANNER_CLASS);
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-label", "Site notice");
+
+  const innerBanner = document.createElement("div");
+  innerBanner.classList.add("inner-banner");
+  banner.appendChild(innerBanner);
+
+  const message = document.createElement("p");
+  message.classList.add("banner-message");
+  const lead = document.createElement("strong");
+  lead.innerText = SITE_BANNER.lead;
+  message.appendChild(lead);
+  message.append(` ${SITE_BANNER.text}`);
+  innerBanner.appendChild(message);
+
+  // Skipped when the reader is already on that page, or when it is not in the
+  // side nav to resolve a URL from
+  const linkHref = SITE_BANNER.link && !isCurrentPage(SITE_BANNER.link.doc)
+    ? findDocHref(SITE_BANNER.link.doc)
+    : null;
+
+  if (linkHref) {
+    const link = document.createElement("a");
+    link.classList.add("banner-link");
+    link.setAttribute("href", linkHref);
+    link.innerText = SITE_BANNER.link.label;
+    innerBanner.appendChild(link);
+  }
+
+  if (SITE_BANNER.dismissible) {
+    const dismissButton = document.createElement("button");
+    dismissButton.classList.add("banner-dismiss");
+    dismissButton.setAttribute("type", "button");
+    dismissButton.setAttribute("aria-label", "Dismiss notice");
+    dismissButton.addEventListener("click", dismissSiteBanner);
+    appendSvg(CLOSE_PATH, dismissButton, "banner-close-icon");
+    innerBanner.appendChild(dismissButton);
+  }
+
+  document.querySelector(`.${WRAPPER_CLASS}`).prepend(banner);
+  trackBannerHeight(banner);
+}
+
+/**
+ * Keeps the layout offset in step with the banner's height, which changes when
+ * the message wraps: on load, on resize, and on font size changes.
+ * @param {HTMLElement} banner - The banner element to measure.
+ */
+const trackBannerHeight = (banner) => {
+  const updateHeight = () => setBannerHeight(banner.offsetHeight);
+  updateHeight();
+
+  if (typeof ResizeObserver === "undefined") return;
+  bannerObserver = new ResizeObserver(updateHeight);
+  bannerObserver.observe(banner);
+}
+
+/**
+ * Removes the banner, collapses the space it occupied, and remembers the
+ * dismissal so it stays gone across pages and visits.
+ */
+const dismissSiteBanner = () => {
+  const banner = document.querySelector(`.${SITE_BANNER_CLASS}`);
+  if (!banner) return;
+
+  localStorage.setItem(LS_DISMISSED_BANNER, SITE_BANNER.id);
+  if (bannerObserver) {
+    bannerObserver.disconnect();
+    bannerObserver = null;
+  }
+  banner.remove();
+  setBannerHeight(0);
 }
 
 /**

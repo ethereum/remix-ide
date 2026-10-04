@@ -11,11 +11,13 @@ Remix is widely used by developers at every level, from first-time smart contrac
 
 ## Verifying the Remix URL
 
-Remix is hosted at [remix.ethereum.org](https://remix.ethereum.org) (a subdomain of [ethereum.org](https://ethereum.org)) and at [remix.live](https://remix.live). The only valid Remix URLs are:
+Remix is hosted on the [remix.live](https://remix.live) domain. The only valid Remix URLs are:
 
-- Stable: [remix.ethereum.org](https://remix.ethereum.org)
+- Stable: [app.remix.live](https://app.remix.live)
 - Alpha: [alpha.remix.live](https://alpha.remix.live)
 - Beta: [beta.remix.live](https://beta.remix.live)
+
+Remix used to be hosted at `remix.ethereum.org`. That address now redirects to [app.remix.live](https://app.remix.live), so landing on the new URL from an old link or bookmark is expected. Wherever you start from, the address bar should end up showing one of the three URLs above.
 
 If you are directed to some site that looks like Remix but has a **similar but different URL** - it is NOT Remix and is likely a phishing scam.
 
@@ -69,13 +71,14 @@ These interactive tutorials by WTF Academy are available in the LearnEth plugin.
 
 <!-- vale Vale.Spelling = NO -->
 <!-- vale Vale.Terms = NO -->
+
 ::::{grid} 3
 :gutter: 3
 
 :::{grid-item-card} Reentrancy Attack
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//reentrancy-attack
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//reentrancy-attack
 
 The classic Ethereum exploit. Learn how recursive external calls can drain contract balances.
 :::
@@ -83,7 +86,7 @@ The classic Ethereum exploit. Learn how recursive external calls can drain contr
 :::{grid-item-card} Access Control
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//access-control-exploit
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//access-control-exploit
 
 Identify missing or misconfigured access controls that expose privileged functions.
 :::
@@ -91,7 +94,7 @@ Identify missing or misconfigured access controls that expose privileged functio
 :::{grid-item-card} Integer Overflow
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//integer-overflow
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//integer-overflow
 
 Understand how arithmetic overflows can wrap values unexpectedly and how to prevent them.
 :::
@@ -99,7 +102,7 @@ Understand how arithmetic overflows can wrap values unexpectedly and how to prev
 :::{grid-item-card} tx.origin Phishing
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//tx-origin-phishing-attack
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//tx-origin-phishing-attack
 
 Understand why using `tx.origin` for authorization is dangerous and how attackers exploit it.
 :::
@@ -107,7 +110,7 @@ Understand why using `tx.origin` for authorization is dangerous and how attacker
 :::{grid-item-card} Front-Running
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//front-running
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//front-running
 
 Learn how transaction ordering can be exploited by miners or bots to extract value.
 :::
@@ -115,12 +118,13 @@ Learn how transaction ordering can be exploited by miners or bots to extract val
 :::{grid-item-card} Oracle Manipulation
 :columns: 12 6 4 4
 :link-type: url
-:link: https://remix.ethereum.org/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//oracle-manipulation
+:link: https://app.remix.live/?#activate=solidityUnitTesting,LearnEth&call=LearnEth//startTutorial//ethereum/remix-workshops//master//oracle-manipulation
 
 Understand how price oracles can be manipulated within a single transaction to exploit DeFi protocols.
 :::
 
 ::::
+
 <!-- vale Vale.Spelling = YES -->
 <!-- vale Vale.Terms = YES -->
 

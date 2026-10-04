@@ -34,7 +34,7 @@ With Remix Desktop, you can:
 
 ## Installing Remix Desktop
 
-Remix Desktop is available for macOS, Linux, and Windows. To install it for your operating system, visit the [Remix Desktop releases page](https://github.com/remix-project-org/remix-desktop/releases) and choose the installer for your operating system.
+Remix Desktop is available for macOS, Linux, and Windows. To install it for your operating system, visit the [Remix Desktop download page](https://remix.live/desktop) and choose the installer for your operating system.
 
 ![Remix Desktop releases page](images/desktop/releases.png)
 

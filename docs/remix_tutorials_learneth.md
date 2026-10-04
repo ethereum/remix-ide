@@ -20,7 +20,7 @@ The tutorials contain `.md` files for instructions and can also contain example 
 To open LearnEth, you need to activate the LearnEth plugin in the Plugin Manager. Alternatively, you can activate it by clicking the link below which automatically opens the Remix IDE with LearnEth enabled.
 
 ```text
-https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth
+https://app.remix.live/?#activate=udapp,solidity,LearnEth
 ```
 
 ```{tip}
@@ -31,7 +31,6 @@ For other tricks about Remix URLs with parameters, visit {doc}`locations. </loca
 When you open a LearnEth tutorial, the example files associated with it will be loaded into a new Workspace called "LearnEth Tutorials".
 
 ![LearnEth Layout](images/remix_tutorials/learneth-layout.png)
-
 
 ### Loading LearnEth with Other Repositories
 

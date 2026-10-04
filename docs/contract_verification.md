@@ -21,7 +21,7 @@ To verify a contract, you need to have:
 2. The same contract source code compiled in Remix, using the same compiler version, optimization settings, and EVM version that were used during deployment.
 3. Constructor arguments matching those used during deployment (if applicable).
 
-With the above, you can select which verification services you want to use for your verification by checking their boxes. By default, all of them have valid configurations that allow you to verify without any setup. The only exception to this is verification using Etherscan on Ethereum mainnet; this requires a valid [Etherscan API key](https://docs.etherscan.io/getting-started) which you can provide on the settings tab.
+With the above, you can select which verification services you want to use for your verification by checking their boxes. By default, all of them have valid configurations that allow you to verify without any setup. The only exception to this is verification using Etherscan on Ethereum mainnet; this requires a valid [Etherscan API key](https://docs.etherscan.io/introduction) which you can provide on the settings tab.
 
 ### Verifying with constructor arguments
 

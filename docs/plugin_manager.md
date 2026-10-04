@@ -17,7 +17,7 @@ This plugin architecture has made it possible to integrate tools made by the Rem
 
 When plugins need to access other plugins for their operation, a modal will appear to ask you for permission.
 
-![Remix permission modal](images/a-permission-modal.png)
+![Remix permission modal](images/plugin-manager/a-permission-modal.png)
 
 Often, the same plugin will want to do the same action multiple times. So when granting permission, it's helpful to click the **Remember this choice** box. If you don't, you might get this modal repeatedly popping up.
 
@@ -27,7 +27,7 @@ You can view the permissions that you have granted to plugins by clicking on the
 
 A modal will appear like the one below where you can view and erase the granted permission.
 
-![Plugin Manager permissions modal showing granted plugin permissions](images/a-plugin-manager-modal.png)
+![Plugin Manager permissions modal showing granted plugin permissions](images/plugin-manager/a-plugin-manager-modal.png)
 
 ## Plugin devs: load a local plugin
 

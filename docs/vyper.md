@@ -9,13 +9,13 @@ myst:
 
 Vyper contracts can be compiled in Remix with the **Vyper compiler**.
 
-![Vyper compiler plugin panel](images/a-vyper-pi-basic.png)
+![Vyper compiler plugin panel](images/vyper/a-vyper-pi-basic.png)
 
 The plugin can be activated by going to:
 
 1. the Plugin Manager and clicking on the Vyper compiler's activate button.
 2. the File Explorer, then by right-clicking on a .vy file and selecting compile in the pop-up menu.
-3. https://remix.ethereum.org/#activate=vyper
+3. https://app.remix.live/#activate=vyper
 
 ## Compiling a Vyper file
 
@@ -82,4 +82,4 @@ When there are compiler errors in the Vyper plugin, a card will appear at the bo
 
 Errors appear one at a time. Fix one error, and the next one, if it exists, will appear.
 
-![Vyper compiler showing an error card at the bottom of the panel](images/a-vyper-compiler-error.png)
+![Vyper compiler showing an error card at the bottom of the panel](images/vyper/a-vyper-compiler-error.png)

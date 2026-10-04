@@ -53,11 +53,12 @@ If the contract's constructor function has parameters, you will need to specify 
 ```
 
 ## Verifying on deployment
+
 When connected to a public network, there is a switch to enable contract verification.
 
 ![The contract verification switch.](images/deploy-and-run/deploy-verify-switch.png)
 
-The contract's source-code and metadata will be submitted to Etherscan, Sourcify, Blockscout, and Routescan.  For the verification to go through on Etherscan, their API needs to be input either in the Remix Settings panel or in the Contract Verification plugin's Settings tab.  Verification can also be done using the Contract Verification plugin.
+The contract's source-code and metadata will be submitted to Etherscan, Sourcify, Blockscout, and Routescan. For the verification to go through on Etherscan, their API needs to be input either in the Remix Settings panel or in the Contract Verification plugin's Settings tab. Verification can also be done using the Contract Verification plugin.
 
 ## Loading deployed contracts
 
@@ -151,18 +152,18 @@ When using a local provider (Hardhat or Foundry), make sure the node is running 
 
 ### More About External HTTP Provider
 
-If you are using Geth and https://remix.ethereum.org, please use the following Geth command to allow requests from Remix:
+If you are using Geth and https://app.remix.live, please use the following Geth command to allow requests from Remix:
 
 ```shell
-geth --http --http.corsdomain https://remix.ethereum.org
+geth --http --http.corsdomain https://app.remix.live
 ```
 
 Also see [Geth Docs about the http server](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
 
-To run Remix using https://remix.ethereum.org and a local test node, use this Geth command:
+To run Remix using https://app.remix.live and a local test node, use this Geth command:
 
 ```shell
-geth --http --http.corsdomain="https://remix.ethereum.org" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console
+geth --http --http.corsdomain="https://app.remix.live" --http.api web3,eth,debug,personal,net --vmdebug --datadir <path/to/local/folder/for/test/chain> --dev console
 ```
 
 If you are using Remix-alpha or a local version of Remix, replace the URL of the --http.corsdomain with the URL of Remix that you are using.
@@ -178,7 +179,7 @@ Also see [Geth Docs on Dev mode](https://geth.ethereum.org/docs/developers/dapp-
 The Web3 Provider Endpoint for a local node is **http://localhost:8545**
 
 ```{warning}
-Avoid using a wildcard with the Geth flag `--http.corsdomain`. Using `--http.corsdomain *` allows any origin to access your node. Only use this when running a **test chain** with **test accounts**. For real accounts or mainnet, always specify the exact URL, e.g. `--http.corsdomain 'https://remix.ethereum.org'`.
+Avoid using a wildcard with the Geth flag `--http.corsdomain`. Using `--http.corsdomain *` allows any origin to access your node. Only use this when running a **test chain** with **test accounts**. For real accounts or mainnet, always specify the exact URL, e.g. `--http.corsdomain 'https://app.remix.live'`.
 ```
 
 ## Forking Chains in Remix

@@ -25,6 +25,8 @@
   /* Spacing */
   --space-side-width: 22.5rem;
   --space-nav-height: 4.25rem;
+  /* Overwritten with the banner's measured height while one is displayed */
+  --space-banner-height: 0px;
   --space-vertical-menu-pad-x: 1.625rem;
 
   /* Shadows */
@@ -38,6 +40,11 @@
   --color-primary: #2F6DF2;
   --color-primary-transparent: #3B98F620;
   --color-hover: #2F6DF2B2;
+
+  /* Emphasis inside the site banner. A shade of --color-primary picked to stay
+     readable on the banner's tinted background, where --color-primary itself
+     only reaches 4:1 */
+  --color-notice-accent: #1C4FC2;
 
   --color-a: #E0E7F8;
   --color-b: #DFE6F4;
@@ -55,6 +62,7 @@
   --color-primary: #007AA6 !important;
   --color-primary-transparent: #007AA618;
   --color-hover: #007AA6E5;
+  --color-notice-accent: #4FC3E8 !important;
 
   --color-a: var(--color-code-background);
   --color-b: var(--color-code-background);
@@ -71,6 +79,7 @@
   --color-primary: #709EFF !important;
   --color-primary-transparent: #709EFF10;
   --color-hover: #709EFFE5;
+  --color-notice-accent: #709EFF !important;
 
   --color-a: #131A2B;
   --color-b: #121927;

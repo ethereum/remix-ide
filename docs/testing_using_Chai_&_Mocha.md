@@ -40,11 +40,11 @@ describe("Sample", function () {
 
 Once done with writing the tests, right click on file name in `File Explorers` plugin. It will show some options along with option to `Run`. This `Run` option is used to run the JavaScript scripts.
 
-![File Explorer context menu showing the Run option for a test file](images/run_with_mocha_option.png)
+![File Explorer context menu showing the Run option for a test file](images/chai-mocha/run_with_mocha_option.png)
 
 Click on `Run`, tests will be executed and result will be shown on Terminal.
 
-![Terminal showing Mocha test execution results](images/run_with_mocha_result.png)
+![Terminal showing Mocha test execution results](images/chai-mocha/run_with_mocha_result.png)
 
 ## Test a contract
 
@@ -91,17 +91,17 @@ describe("Storage", function () {
 
 Result will be as:
 
-![Terminal showing Mocha test results for the Storage contract](images/run_with_mocha_storage_test.png)
+![Terminal showing Mocha test results for the Storage contract](images/chai-mocha/run_with_mocha_storage_test.png)
 
 ## Debugging a test transaction
 
 To debug a transaction in one of the tests, print the transaction hash and input that in the [Remix Debugger plugin](https://remix-ide.readthedocs.io/en/latest/tutorial_debug.html).
 
-![Terminal showing a printed transaction hash from a Mocha test](images/run_with_mocha_print_hash.png)
+![Terminal showing a printed transaction hash from a Mocha test](images/chai-mocha/run_with_mocha_print_hash.png)
 
 ## Hardhat-ethers support
 
-Remix also supports methods of [hardhat-ethers](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:
+Remix also supports methods of [hardhat-ethers](https://v2.hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ethers) plugin of Hardhat framework. Available methods under this plugin are:
 
 ```TypeScript
 interface Libraries {
@@ -164,4 +164,4 @@ describe("Storage", function () {
 
 Result will be as:
 
-![Terminal showing Mocha test results using hardhat-ethers](images/run_with_mocha_hhethers.png)
+![Terminal showing Mocha test results using hardhat-ethers](images/chai-mocha/run_with_mocha_hhethers.png)
