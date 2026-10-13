@@ -37,10 +37,9 @@ Choosing an LLM for code explanations
 In the RemixAI Assistant, there is a choice of LLMs for use in **code explanations**
 and in the AI Assistant.
 
-Remix selects a default model for you, which may be **Auto LLM Mode**, where Remix picks the best
-model for each request. To change it, click the model name below the prompt box, or type ``/model``.
+For most users, the LLM selector will default to **Auto LLM Mode**, where Remix picks the best model for each request. To change it, click the model name below the prompt box, or type ``/model``.
 You can select models from **OpenRouter**, **AWS Bedrock**, **Anthropic**, **Mistral AI**, **OpenAI**,
-and **Local (Ollama)**. AWS Bedrock models need your own API key.
+and **Local (Ollama)**. AWS Bedrock models need your own API key. You can also use your own OpenRouter key.
 
 .. image:: images/ai/available-models.png
    :alt: RemixAI LLM dropdown menu
