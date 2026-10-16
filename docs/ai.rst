@@ -5,7 +5,7 @@ AI Tools
    :description: RemixAI is Remix IDE's built-in AI assistant and Copilot for Solidity smart contract development, code completion, and explanation.
    :keywords: remixai, ai assistant, code completion, solidity ai, remix ide ai
 
-Remix has its own AI tool named **RemixAI Assistant**, which appears in the Right Side Panel once you log into your Remix account.
+Remix has its own AI tool named **RemixAI Assistant**, which appears in the Right Side Panel. Sign in to your Remix account to use its AI models. Without an account, you can still use local models through `Ollama <Using a local LLM for privacy_>`_.
 
 Access to RemixAI varies by your Remix plan:
 
@@ -26,12 +26,10 @@ RemixAI is also integrated into other parts of the IDE including:
 - `The Explain contract button <explain contract_>`_
 - The **Explain compiler error** button when an error is thrown in the Solidity Compiler.
 - **Right-click menu options** in the Editor.
-- **Code requests in the Editor** by prepending an AI code request in a file with a double slash (``//``).
 
-The RemixAI Assistant retains your conversation history within a session, so you can refer back to earlier responses or continue a previous request.
+The RemixAI Assistant saves your conversations, so you can return to an earlier conversation and continue it later. From the chat history, you can search past conversations and archive the ones you no longer need.
 
-.. note::
-   The chat history is stored in your browser's storage, thus, you will not be able to access it when you log in to your Remix account on another device.
+Conversations are stored in your browser and can be synced to the cloud. The chat history shows whether your conversations are synced.
 
 Choosing an LLM for code explanations
 -------------------------------------
@@ -39,14 +37,35 @@ Choosing an LLM for code explanations
 In the RemixAI Assistant, there is a choice of LLMs for use in **code explanations**
 and in the AI Assistant.
 
-The default LLM is **Mistral Medium**. Click the MistralAI button and a modal will pop up
-where you can select models from **Anthropic**, **OpenAI**, **Mistral**, **Local Models (Ollama)**, and Open Weight models.
+For most users, the LLM selector will default to **Auto LLM Mode**, where Remix picks the best model for each request. To change it, click the model name below the prompt box, or type ``/model``.
+You can select models from **OpenRouter**, **AWS Bedrock**, **Anthropic**, **Mistral AI**, **OpenAI**,
+and **Local (Ollama)**. AWS Bedrock models need your own API key. You can also use your own OpenRouter key.
 
 .. image:: images/ai/available-models.png
    :alt: RemixAI LLM dropdown menu
 
 The RemixAI Assistant responds in the language in which it is asked and can answer
 questions about Solidity, JavaScript/TypeScript, Vyper, and other programming languages.
+
+Using low-cost models
+^^^^^^^^^^^^^^^^^^^^^
+
+To make your credits last longer, click the **low-cost AI** toggle next to the model name
+in the RemixAI Assistant. This limits the model selector to the cheapest tier of models
+across all providers and switches the assistant to the first available low-cost model.
+
+.. image:: images/ai/low-cost-models.png
+   :alt: Model selector with the low-cost AI toggle on
+
+Click the toggle again to see every model. The assistant switches back to **Auto LLM Mode**,
+or to the default model if Auto LLM Mode is not available.
+
+The toggle turns off when you reload Remix. If your plan does not include any low-cost
+models, the toggle is disabled.
+
+When you buy the starter credit pack, Remix turns the toggle on for you and switches
+the assistant to a low-cost model. A message in the chat tells you which model it switched to,
+and you can turn the toggle off at any time to choose a different model.
 
 Using a local LLM for privacy
 -----------------------------
@@ -61,14 +80,10 @@ a **local LLM**.
 Remix supports **Ollama**, a local AI model runner that allows you to download and
 run large language models (LLMs) directly on your own machine.
 
-The Ollama LLMs supported by Remix include:
+Remix lists every model you have installed in Ollama. What a model can do in Remix depends on its capabilities:
 
-- ``codestral:latest``
-- ``qwen3-coder:latest``
-- ``gpt-oss:latest``
-- ``deepseek-coder-v2:latest`` (recommended for code completion)
-- ``codegemma:7b``
-- ``codegemma:2b`` (lightweight option)
+- **Agent features**, such as Remix MCP or generating and editing workspaces, need a model that supports **tool calling**.
+- **Code completion** needs a model that supports **fill-in-the-middle (FIM)**.
 
 In addition to privacy, Remix’s Ollama integration provides:
 
@@ -77,10 +92,9 @@ In addition to privacy, Remix’s Ollama integration provides:
 - **Fill-in-the-Middle (FIM) support** – advanced code completion features
 
 .. note::
-   The Ollama integration does not support agentic workflows available in the
-   online RemixAI service, such as Remix MCP or generating and editing
-   Workspaces. Its capabilities are limited to code completion and
-   conversational interactions.
+   If none of your installed models supports tool calling, you can still chat with
+   Ollama, but agent features such as Remix MCP are not available. Install a model
+   that supports tool calling to use them.
 
 
 Setting up Ollama in Remix
@@ -89,7 +103,7 @@ Before using Ollama with Remix, ensure the following requirements are met:
 
 - **Ollama is installed** on your system. Visit the
   `Ollama website <https://ollama.com/>`_ to download and install it.
-- **At least one supported or recommended model** is installed locally.
+- **At least one model** is installed locally.
 
 After completing the setup, start the Ollama server by running:
 
@@ -102,6 +116,8 @@ By default, the Ollama service listens on:
 ::
 
    http://localhost:11434
+
+If Remix cannot reach Ollama on port ``11434``, it also checks ports ``11435`` and ``11436``.
 
 You can confirm that Ollama is running by visiting the URL above. If it is running, you should see the message below.
 
@@ -144,7 +160,7 @@ If "app.remix.live" is configured properly, you will get the message below:
 .. tip::
    If you run into any issues check out our `Ollama troubleshooting guide <https://github.com/remix-project-org/remix-project/blob/master/OLLAMA_SETUP.md#troubleshooting>`_.
 
-After the setup, select Ollama as the model on RemixAI and it will automatically detect the supported models you have on your device. You can select your preferred model and use it for code completion and assistance.
+After the setup, select Ollama as the model on RemixAI and it will automatically detect the models installed on your device. You can select your preferred model and use it for code completion and assistance.
 
 .. image:: images/ai/ollama-remix.png
    :alt: RemixAI assistant with Ollama as the model
@@ -200,7 +216,7 @@ Gas optimization with RemixAI (Pro & Starter plans)
 ---------------------------------------------------
 On Ethereum and other EVM chains, every computation and storage operation your contract performs costs gas, which your users pay for in real money each time they call it. RemixAI supports **Gas optimization audits** to help you find and fix inefficiencies that inflate these costs before you deploy.
 
-To start one, enter ``/start-gas-optimization-audit`` in the prompt box, or click the **Tools** pill. RemixAI will ask which contract you want to optimize, then list the focus areas it will check, including:
+To start one, enter ``/gas-audit`` in the prompt box, or click the **Audit** pill. RemixAI will ask which contract you want to optimize, then list the focus areas it will check, including:
 
 - **Loop optimization** – e.g. ``for`` loops over arrays or mappings
 - **Storage vs. memory** – e.g. unnecessary storage reads or writes
@@ -226,11 +242,11 @@ Security audits with RemixAI
 -----------------------------
 Unlike a regular application, a smart contract can't be patched after it's deployed, so a vulnerability that slips through can mean an irreversible loss of funds. RemixAI can audit your contracts with a **Slither** scan, and you can also select from over 47 **security checklists**, sourced from the Cyfrin Audit Checklists repo, covering a wide range of attack categories, all from within Remix. Auditing with checklists means you know exactly which vulnerabilities RemixAI is checking for, rather than relying on Slither's static analysis alone.
 
-Start an audit by opening the **AI Assistant** and typing ``/audit``, or by clicking the **Tools** pill. By default, this runs a Slither scan against your contract.
+Start an audit by opening the **AI Assistant** and typing ``/audit``, or by clicking the **Audit** pill. By default, this runs a Slither scan against your contract.
 
 To go beyond the default Slither scan, load one or more checklists before you start the audit:
 
-1. Type ``/load-security-audit-checklist`` into the prompt box, or click the **Tools** pill.
+1. Type ``/load-audit-checklist`` into the prompt box, or click the **Audit** pill.
 2. Select the checklists that are closely related to your contract. A checklist you've already loaded shows an **in workspace** badge.
 
 .. image:: images/ai/audit-checklist.png
@@ -242,7 +258,7 @@ When you then start the audit with ``/audit``, the Checklist Modal opens again. 
    Loading too many checklists at once can make your audits take a long time to run and use a lot of AI resources.
 
 
-You can access security audits, gas optimization, AI skills, and other AI features from the pills above the AI Assistant, shown in the image below:
+You can access security audits, gas optimization, AI skills, and other AI features from the pills above the prompt box in the AI Assistant: **Code**, **Explain**, **Learn**, **Deploy**, **Audit**, and **Skills**.
 
 .. image:: images/ai/pills.png
    :alt: RemixAI pills
@@ -251,7 +267,7 @@ You can access security audits, gas optimization, AI skills, and other AI featur
 
 Using external API keys for RemixAI (Pro & Starter plans)
 ---------------------------------------------------------
-RemixAI allows you to add your own API keys and use your own available tokens. To add your own API keys, click the **Settings** icon on the top right of the Top Bar, select RemixAI Assistant, and scroll to the bottom. You will find the option under the "Bring Your Own Keys" Section. Currently, we support keys from Anthropic, OpenAI, Mistral, and Moonshot/Kimi.
+RemixAI allows you to add your own API keys and use your own available tokens. To add your own API keys, click the **Settings** icon on the top right of the Top Bar, select RemixAI Assistant, and scroll to the bottom. You will find the option under the **Bring Your Own API Keys** section. Currently, you can add an **OpenRouter API Key** and an **AWS Bedrock API Key**.
 
 .. image:: images/ai/external-providers.png
    :alt: RemixAI Assistant Bring Your Own API Keys settings
@@ -274,20 +290,25 @@ The following MCP servers are available in RemixAI:
 
 - **Remix IDE Server** (Built-in) – Always connected. Gives the AI direct access to
   your workspace files and IDE features such as compilation, file management, and
-  Slither static analysis.
+  Slither static analysis. It also includes **ethSkills**, a curated Ethereum knowledge
+  base designed specifically for AI agents. ethSkills covers production-ready guidance
+  across gas costs, L2s, token standards, DeFi protocols, security patterns, contract
+  auditing, and more, helping the AI avoid stale or hallucinated answers about Ethereum
+  development.
 - **OpenZeppelin Contracts** – Gives the AI access to OpenZeppelin's audited contract 
   library, so it can suggest secure, battle-tested implementations rather than 
   generating patterns from scratch.
 - **Web Search** – Allows the AI to retrieve up-to-date information such as recent 
   protocol changes, audit reports, and external documentation.
-- **ethSkills** – A curated Ethereum knowledge base designed specifically for AI 
-  agents. It covers production-ready guidance across gas costs, L2s, token standards, 
-  DeFi protocols, security patterns, contract auditing, and more, helping the AI avoid 
-  stale or hallucinated answers about Ethereum development.
+- **OpenZeppelin Contracts Cairo**, **OpenZeppelin Contracts Stellar**, and
+  **OpenZeppelin Contracts Stylus** – Give the AI access to OpenZeppelin's contract
+  libraries for Cairo, Stellar, and Arbitrum Stylus.
 - **Alchemy** – Allows the AI to query live on-chain data including account balances, 
   transaction histories, and contract state via Alchemy's infrastructure.
 - **Etherscan** – Allows the AI to look up deployed contracts, inspect verified source 
   code, and retrieve transaction data directly from the block explorer.
+- **Sourcify** – Allows the AI to work with Sourcify, a smart contract verification service.
+- **Circle** – Gives the AI access to Circle's API to help generate code.
 - **The Graph API** – Allows the AI to query indexed blockchain data via GraphQL 
   subgraphs, useful for retrieving protocol analytics and historical event data.
 
@@ -336,30 +357,18 @@ Ask RemixAI about language features, best practices, or protocol mechanics. The 
 Code completion
 ---------------
 
-When you type a space or start a new line, the RemixAI Assistant may propose code
-suggestions. This feature is known as **code completion**.
+When you type a space or start a new line, RemixAI may suggest code inline. This
+feature is known as **code completion**, and the suggestions take into account
+what has already been written in the file.
 
-The suggestions take into account what has already been written in the file.
+To turn code completion on or off, click **RemixAI Copilot** in the status bar at
+the bottom right of Remix. You can also use the **RemixAI Copilot** toggle in
+**Settings** > **RemixAI Assistant**.
 
-The toggle to enable code completion is located at the bottom-left of the Main Panel
-when a file is active. Once enabled, code completion uses the **MistralAI** LLM by default. If Ollama is configured as the active model, code completion will use the selected Ollama model instead.
+Press ``Tab`` to accept a suggestion.
 
-.. image:: images/ai/copilot-switch.png
-   :alt: Remix AI Copilot button
-
-As you type, RemixAI proposes a suggestion inline.
-
-.. image:: images/ai/a-ai-completion-proposal.png
-   :alt: RemixAI completion proposal
-
-Press ``Tab`` to accept the suggestion.
-
-.. image:: images/ai/a-ai-completion-accepted.png
-   :alt: RemixAI accepted completion
-
-.. note::
-
-   All other RemixAI tools are always enabled.
+If Ollama is configured as the active model, code completion uses the selected
+Ollama model, which must support fill-in-the-middle (FIM).
 
 
 .. _explain contract:
@@ -376,29 +385,14 @@ Editor: Right-click Menu
 ------------------------
 
 When you right-click a function in the Editor, a popup menu appears with options
-powered by RemixAI, including:
+powered by RemixAI:
 
-- **Explain this function**
+- **Explain the function "<name>"**
 - **Explain this code**
-- **Generate documentation**
-
-.. image:: images/ai/a-ai-editor-popup-menu.png
-   :alt: Remix AI right click menu
+- **Generate documentation for the function "<name>"**
 
 The **Explain this code** option can be triggered with or without selecting code.
 If no code is selected, RemixAI considers the code surrounding the cursor.
-
-
-Ask RemixAI with //
----------------------------
-
-With the AI Copilot enabled, start a comment with ``//`` to send a code request
-directly from the Editor. Example:
-
-::
-
-   // write a function that returns an array with 3 elements from the function's parameters
-
 
 
 Compilers: Explain Error
@@ -411,4 +405,4 @@ Click the button to send the error message to RemixAI. The Assistant will explai
 the cause of the error and suggest how to fix it.
 
 .. image:: images/ai/a-ai-solcomp1.png
-   :alt: Compiler Explain Error
+   :alt: Ask RemixAI button on a compiler error
