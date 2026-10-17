@@ -101,9 +101,7 @@ The Remix VM supports multiple EVM forks letting you simulate different network 
 
 The **state** of the Remix VM chain is saved in the **.states folder** in the File Explorer. If you do not want the Remix VM state to be saved, uncheck **Save environment state** in the Settings panel.
 
-Saving the state means you can refresh the browser and not lose your work, the caveat being that browser storage is inherently unstable. Pushing to a remote repository avoids relying on browser storage entirely.
-
-<!-- TODO: Add info about cloud storage after beta -->
+Saving the state means you can refresh the browser and not lose your work, the caveat being that browser storage is inherently unstable. To avoid relying on browser storage, enable cloud storage, which saves your workspace to your Remix account and syncs every change, or push your workspace to a remote repository. See {doc}`File Explorer </file_explorer>` for how to enable cloud storage.
 
 In collaborative workflows, you can share the VM state by having teammates load the **state.json** file into their Remix instance.
 

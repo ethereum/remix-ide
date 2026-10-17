@@ -159,3 +159,9 @@ The progress and result appear in the Remix terminal. A successful verification 
 ![zkVerify verification output in the Remix terminal](images/circom/zkverify-success.png)
 
 The status moves from `Submitted`, once the proof reaches the network, through `IncludedInBlock` while it is being processed, to `Finalized` when the result is settled. The **Job ID** identifies this verification on zkVerify. Once it succeeds, the button turns green and reads **Verified on zkVerify**, with the same Job ID shown beneath it.
+
+## Creating a dApp from your circuit
+
+Once you have compiled your circuit, run the trusted setup, and generated a proof, you can turn the circuit into a dApp. Click **Create ZK DApp** at the bottom of the Circom plugin panel, below the **Generate Proof** button. The button stays disabled until those steps are done.
+
+QuickDApp then asks whether the dApp should verify proofs with a deployed verifier contract or with zkVerify, and generates a dApp that creates proofs in the browser. See {doc}`QuickDApp </quickdapp>` for the full flow.
