@@ -1,5 +1,8 @@
 /**
  * Theme tokens
+ *
+ * The active theme is set by JS as a data-theme attribute on the root element:
+ * light (the default, no override needed), dark, or black.
  */
 
 /* Base / light mode theme colors */
@@ -39,12 +42,18 @@
   --color-code-background: #F4F4F4;
   --color-primary: #2F6DF2;
   --color-primary-transparent: #3B98F620;
-  --color-hover: #2F6DF2B2;
+  --color-hover: #1C4FC2;
 
-  /* Emphasis inside the site banner. A shade of --color-primary picked to stay
-     readable on the banner's tinted background, where --color-primary itself
-     only reaches 4:1 */
-  --color-notice-accent: #1C4FC2;
+  /* Text set on a --color-primary fill, such as buttons */
+  --color-on-primary: var(--color-background);
+
+  /* A shade of --color-primary that stays readable on tinted and code
+     backgrounds (the side nav gradient, the site banner, code blocks), where
+     --color-primary itself drops below 4.5:1 */
+  --color-primary-strong: #1C4FC2;
+
+  /* Background of every other table row */
+  --color-table-stripe: #F3F6F6;
 
   --color-a: #E0E7F8;
   --color-b: #DFE6F4;
@@ -54,15 +63,16 @@
 }
 
 /* Dark mode theme colors */
-:root[style*=dark] {
-  --color-background: #2A2C3F !important;
-  --color-body: #F8F8F8 !important;
-  --color-body-light: #A2A3C8 !important;
-  --color-code-background: #1A1B29 !important;
-  --color-primary: #007AA6 !important;
-  --color-primary-transparent: #007AA618;
-  --color-hover: #007AA6E5;
-  --color-notice-accent: #4FC3E8 !important;
+:root[data-theme="dark"] {
+  --color-background: #2A2C3F;
+  --color-body: #F8F8F8;
+  --color-body-light: #A2A3C8;
+  --color-code-background: #1A1B29;
+  --color-primary: #00ACEB;
+  --color-primary-transparent: #00ACEB18;
+  --color-hover: #1AC2FF;
+  --color-primary-strong: #4FC3E8;
+  --color-table-stripe: #709EFF10;
 
   --color-a: var(--color-code-background);
   --color-b: var(--color-code-background);
@@ -71,15 +81,16 @@
 }
 
 /* Black mode theme colors */
-:root[style*=black] {
-  --color-background: #0E0E0E !important;
-  --color-body: #F8F8F8 !important;
-  --color-body-light: #CDCDCD !important;
-  --color-code-background: #313131 !important;
-  --color-primary: #709EFF !important;
+:root[data-theme="black"] {
+  --color-background: #0E0E0E;
+  --color-body: #F8F8F8;
+  --color-body-light: #CDCDCD;
+  --color-code-background: #313131;
+  --color-primary: #709EFF;
   --color-primary-transparent: #709EFF10;
-  --color-hover: #709EFFE5;
-  --color-notice-accent: #709EFF !important;
+  --color-hover: #8FB3FF;
+  --color-primary-strong: #709EFF;
+  --color-table-stripe: #709EFF10;
 
   --color-a: #131A2B;
   --color-b: #121927;
