@@ -81,14 +81,16 @@ To keep control of the configuration, install without it and register the server
 
 ```bash
 npx @coinbase/payments-mcp --client claude-code --no-auto-config
-claude mcp add --transport stdio payments-mcp -- node /Users/YOUR_USERNAME/.payments-mcp/bundle.js
+claude mcp add --transport stdio payments-mcp -- node $HOME/.payments-mcp/bundle.js
 ```
 
-Replace `YOUR_USERNAME` with your own home directory. The same registration can be done as JSON:
+The shell fills in `$HOME` with your home directory, so the command works as written on macOS, Linux, and WSL. The same registration can be done as JSON:
 
 ```bash
-claude mcp add-json payments-mcp '{"type":"stdio","command":"node","args":["/Users/YOUR_USERNAME/.payments-mcp/bundle.js"]}'
+claude mcp add-json payments-mcp '{"type":"stdio","command":"node","args":["'"$HOME"'/.payments-mcp/bundle.js"]}'
 ```
+
+The quotes around `$HOME` close the single-quoted JSON, insert your home directory, and reopen it, so keep them as they are if you copy the command.
 
 Quit Claude Code completely, restart it, then confirm the server is registered and healthy:
 
