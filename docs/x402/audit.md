@@ -38,11 +38,11 @@ The server matches your contract against a library of security audit categories 
 }
 ```
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `sources` | Object | Yes | Map of filename to source code content, the same shape `/compile` takes |
-| `sources[filename].content` | string | Yes | Solidity source code |
-| `maxCategories` | number | No | Maximum number of categories to match. Defaults to `12`, maximum `20` |
+| Parameter                   | Type   | Required | Description                                                             |
+| --------------------------- | ------ | -------- | ----------------------------------------------------------------------- |
+| `sources`                   | Object | Yes      | Map of filename to source code content, the same shape `/compile` takes |
+| `sources[filename].content` | string | Yes      | Solidity source code                                                    |
+| `maxCategories`             | number | No       | Maximum number of categories to match. Defaults to `12`, maximum `20`   |
 
 ### Output
 
@@ -56,13 +56,13 @@ The server matches your contract against a library of security audit categories 
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `success` | boolean | Whether the request completed |
-| `markdown` | string | The checklist report, in markdown |
-| `matchedCategories` | number | How many categories were matched to the contract |
-| `model` | string | AI model used for the analysis |
-| `tokensUsed` | number | Tokens consumed by the model |
+| Field               | Type    | Description                                      |
+| ------------------- | ------- | ------------------------------------------------ |
+| `success`           | boolean | Whether the request completed                    |
+| `markdown`          | string  | The checklist report, in markdown                |
+| `matchedCategories` | number  | How many categories were matched to the contract |
+| `model`             | string  | AI model used for the analysis                   |
+| `tokensUsed`        | number  | Tokens consumed by the model                     |
 
 The `markdown` field is what you pass to `/do_audit` in step 2.
 
@@ -87,10 +87,10 @@ This takes your sources and a checklist, works through the code against every ch
 }
 ```
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `sources` | Object | Yes | Map of filename to source code content |
-| `checklist` | string | Yes | Audit checklist in markdown, normally the `markdown` field from `/get_audit_checklist` |
+| Parameter   | Type   | Required | Description                                                                            |
+| ----------- | ------ | -------- | -------------------------------------------------------------------------------------- |
+| `sources`   | Object | Yes      | Map of filename to source code content                                                 |
+| `checklist` | string | Yes      | Audit checklist in markdown, normally the `markdown` field from `/get_audit_checklist` |
 
 The `checklist` parameter is required, but it does not have to come from step 1. If you have your own checklist in markdown, you can send that instead.
 
@@ -113,14 +113,14 @@ The `checklist` parameter is required, but it does not have to come from step 1.
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `success` | boolean | Whether the audit completed |
-| `markdown` | string | The audit report, in markdown |
-| `findingsCount` | number | Total number of findings |
-| `severity` | Object | Counts by severity level |
-| `model` | string | AI model used for the audit |
-| `tokensUsed` | number | Tokens consumed by the model |
+| Field           | Type    | Description                   |
+| --------------- | ------- | ----------------------------- |
+| `success`       | boolean | Whether the audit completed   |
+| `markdown`      | string  | The audit report, in markdown |
+| `findingsCount` | number  | Total number of findings      |
+| `severity`      | Object  | Counts by severity level      |
+| `model`         | string  | AI model used for the audit   |
+| `tokensUsed`    | number  | Tokens consumed by the model  |
 
 Each finding in the report carries a severity, a category, a description of the problem, and a recommendation for fixing it.
 
@@ -144,15 +144,15 @@ contract MyToken {
         balances[to] += amount;
     }
 }
-    `
-  }
+    `,
+  },
 };
 
 // Step 1: work out which security categories apply (0.05 USDC)
 const checklistResponse = await x402Fetch(`${BASE_URL}/get_audit_checklist`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ sources, maxCategories: 12 })
+  body: JSON.stringify({ sources, maxCategories: 12 }),
 });
 
 const checklist = await checklistResponse.json();
@@ -162,7 +162,7 @@ console.log(`Matched ${checklist.matchedCategories} categories`);
 const auditResponse = await x402Fetch(`${BASE_URL}/do_audit`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ sources, checklist: checklist.markdown })
+  body: JSON.stringify({ sources, checklist: checklist.markdown }),
 });
 
 const audit = await auditResponse.json();
@@ -174,10 +174,10 @@ The contract above has an unrestricted `mint` function, so expect access control
 
 ## Costs
 
-| Call | Price |
-|------|-------|
+| Call                   | Price     |
+| ---------------------- | --------- |
 | `/get_audit_checklist` | 0.05 USDC |
-| `/do_audit` | 0.10 USDC |
+| `/do_audit`            | 0.10 USDC |
 | Both, for one contract | 0.15 USDC |
 
 These are the most expensive fixed-price calls the server offers, so check your contract compiles before auditing it. A contract that does not compile still costs you the audit fee.
