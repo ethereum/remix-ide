@@ -17,12 +17,13 @@ Payment settlement runs through a facilitator service, which means you pay no ga
 |--------|----------|-------|
 | POST | `/compile` | 0.01 USDC |
 | POST | `/analyze` | 0.02 USDC |
-| POST | `/get_audit_checklist` | 0.05 USDC |
-| POST | `/do_audit` | 0.10 USDC |
+| POST | `/get_audit_checklist` | 0.05 to 0.30 USDC, by model |
+| POST | `/do_audit` | 0.15 to 0.70 USDC, by model |
+| GET | `/job/:id` | Free |
 | GET | `/info` | Free |
 | GET | `/health` | Free |
 
-The two audit endpoints run an AI security review of your sources and are covered on the {doc}`AI audit </x402/audit>` page.
+The two audit endpoints run an AI security review of your sources. They take a `model` parameter that sets the price, and they run as background jobs: the paid request returns a job ID, and you collect the result from `/job/:id`. Both are covered on the {doc}`AI audit </x402/audit>` page.
 
 The hosted service is at `https://api.remix.live/mcp/x402-http/`, so the compile endpoint is `https://api.remix.live/mcp/x402-http/compile`.
 
@@ -211,23 +212,31 @@ Get Base Sepolia ETH from the [Alchemy faucet](https://www.alchemy.com/faucets/b
 
 ## Errors
 
-An unfunded wallet is rejected before any work happens:
+A payment the facilitator cannot verify or settle is rejected with another `402` before any work happens. The usual causes are a wallet without enough USDC on the right network, or a signature for the wrong amount or network:
 
 ```json
 {
-  "error": "Insufficient USDC balance"
+  "error": "Invalid or unconfirmed payment"
 }
 ```
 
-A signature the facilitator cannot verify is rejected the same way:
+Fix the cause and retry. Nothing has been charged at this point.
+
+A request that is missing a required field, such as `sources`, or `model` on the audit endpoints, is rejected with `400` before payment settles.
+
+If the service fails after the payment has settled, the response says so, so you know you have been charged:
 
 ```json
 {
-  "error": "Payment verification failed"
+  "success": false,
+  "error": "Service execution failed",
+  "message": "An unexpected error occurred during compilation",
+  "paymentStatus": "settled",
+  "requestId": "compile-1760529600000"
 }
 ```
 
-Either way, fix the cause and retry. A payment that settles but hits a broken contract still returns a result. Compilation failures come back with `success: false` and the usual `errors` array:
+A payment that settles but hits a broken contract still returns a result. Compilation failures come back with `success: false` and the usual `errors` array:
 
 ```json
 {
@@ -253,7 +262,6 @@ The gasless part is the payment. Compilation and analysis involve no other on-ch
 
 ## Further reading
 
-- [HTTP x402 endpoint specifications](https://github.com/remix-project-org/x402/blob/main/HTTP_X402_ENDPOINTS.md)
-- [MCP usage guide](https://github.com/remix-project-org/x402/blob/main/MCP_USAGE.md), for using the server with AI agents
-- [API reference](https://github.com/remix-project-org/x402/blob/main/API_REFERENCE.md)
-- Working examples live in `src/examples/` in the server repository, including `compile-http.js`
+- [HTTP API reference](https://github.com/remix-project-org/x402/blob/main/HTTP_API_REFERENCE.md)
+- [MCP API reference](https://github.com/remix-project-org/x402/blob/main/MCP_API_REFERENCE.md), for using the server with AI agents
+- Working examples live in `src/examples/` in the server repository, including `compile-http.js` and `do-audit-example.js`
