@@ -30,14 +30,17 @@ Each tool has its own page in this section, with full parameter and response ref
 
 Compilation, analysis, and the AI audit services are also reachable as REST endpoints, under `https://api.remix.live/mcp/x402-http/`:
 
-| Method | Endpoint                | Price     |
-| ------ | ----------------------- | --------- |
-| POST   | `/compile`              | 0.01 USDC |
-| POST   | `/analyze`              | 0.02 USDC |
-| POST   | `/get_audit_checklist`  | 0.05 USDC |
-| POST   | `/do_audit`             | 0.10 USDC |
-| GET    | `/info`                 | Free      |
-| GET    | `/health`               | Free      |
+| Method | Endpoint                | Price                       |
+| ------ | ----------------------- | --------------------------- |
+| POST   | `/compile`              | 0.01 USDC                   |
+| POST   | `/analyze`              | 0.02 USDC                   |
+| POST   | `/get_audit_checklist`  | 0.05 to 0.30 USDC, by model |
+| POST   | `/do_audit`             | 0.15 to 0.70 USDC, by model |
+| GET    | `/job/:id`              | Free                        |
+| GET    | `/info`                 | Free                        |
+| GET    | `/health`               | Free                        |
+
+The audit endpoints let you choose between three AI models, which set the price, and return their results through `/job/:id` rather than in the response.
 
 The split runs both ways: the deployment tools are MCP-only, and the two audit endpoints are HTTP-only. `/info` reports the server's name, version, endpoints and prices, and the network it settles on, which makes it a quick way to confirm what you are talking to:
 
@@ -59,17 +62,11 @@ To work against a testnet instead, you have to run the server yourself on Base S
 
 ## Paying for calls
 
-Compilation and analysis are fixed price. The deployment tools are priced dynamically, because the server pays the deployment gas for you: the quote is that gas cost with a multiplier applied, plus a flat fee.
+Compilation and analysis are fixed price. The AI audit is priced by the model you pick. The deployment tools are priced dynamically, because the server pays the deployment gas for you: the quote is that gas cost with a multiplier applied, plus a flat fee.
 
 The x402 payment itself is gasless. You sign an authorization rather than sending a transaction, and a facilitator service settles it on chain and pays that transaction's gas. This covers the payment only. The gas to actually deploy a contract is real, and is what the deployment tools price in.
 
-If your balance does not cover a call, it is rejected before any work is done:
-
-```json
-{
-  "error": "Insufficient USDC balance. Required: 0.01 USDC, Available: 0.005 USDC"
-}
-```
+If your balance does not cover a call, the payment fails verification and the call is rejected before any work is done, so nothing is charged.
 
 ## Best practices
 
@@ -85,7 +82,7 @@ If your balance does not cover a call, it is rejected before any work is done:
 ## Support
 
 - [The x402 server repository](https://github.com/remix-project-org/x402) for issues, questions, and feature requests
-- [HTTP x402 endpoints](https://github.com/remix-project-org/x402/blob/main/HTTP_X402_ENDPOINTS.md) for direct API usage
-- [MCP usage guide](https://github.com/remix-project-org/x402/blob/main/MCP_USAGE.md) for using the server programmatically
+- [HTTP API reference](https://github.com/remix-project-org/x402/blob/main/HTTP_API_REFERENCE.md) for direct API usage
+- [MCP API reference](https://github.com/remix-project-org/x402/blob/main/MCP_API_REFERENCE.md) for using the server programmatically
 - [x402 protocol documentation](https://docs.x402.org/introduction) for the protocol itself
 - [agentic.market](https://agentic.market) to discover and validate x402 services
