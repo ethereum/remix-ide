@@ -23,8 +23,11 @@
   color: var(--color-body);
 }
 
+/* Read the Docs pads the first <nav> on the page by the height of its fixed
+   footer ad, as an inline style. That nav is this header, so without
+   !important the links collapse to the top of the bar. */
 nav.nav-bar {
-  padding-bottom: 0px;
+  padding-bottom: 0px !important;
 }
 
 img {
