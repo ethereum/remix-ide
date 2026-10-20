@@ -27,8 +27,6 @@ const rearrangeDom = () => {
   bodyDivs.forEach((div) => wrapperDiv.appendChild(div));
   document.body.prepend(wrapperDiv);
 
-  moveRstVersions()
-
   const backdrop = document.createElement("div");
   backdrop.classList.add("backdrop");
   wrapperDiv.appendChild(backdrop);
@@ -383,60 +381,11 @@ const toggleMobileMenu = (options = {}) => {
     }
   };
   document
-    .querySelectorAll('[data-toggle="rst-versions"]')
-    .forEach((e) => handleClassToggle(e, MOBILE_MENU_TOGGLE_CLASS));
-  document
     .querySelectorAll('[data-toggle="wy-nav-shift"]')
     .forEach((e) => handleClassToggle(e, MOBILE_MENU_TOGGLE_CLASS));
   handleClassToggle(document.querySelector(`.${WRAPPER_CLASS}`), "menu-open");
 }
 
-/**
- * Updates the flyover menu by modifying the DOM elements.
- */
-const updateFlyoverMenu = () => { 
-  const rtdCurrentVersion = document.querySelector(".rst-current-version");
-  if (!rtdCurrentVersion) return
-
-  // Assign current label and caret elements to variables
-  // Acts as fallback if injected not yet available for removal
-  const rtdLabel = rtdCurrentVersion.querySelector(".fa.fa-book");
-  rtdLabel.textContent = "RTD"; // Update label to RTD
-  const caretDown = rtdCurrentVersion.querySelector(".fa.fa-caret-down");
-  // Clear inner HTML of rtdVersion
-  rtdCurrentVersion.innerHTML = " ";
-  // Append rtdLabel and caret to rtdVersion
-  rtdCurrentVersion.appendChild(rtdLabel);
-  rtdCurrentVersion.appendChild(caretDown);
-  // Append new span with "Latest" label
-  const latestSpan = document.createElement("span");
-  latestSpan.textContent = "Latest";
-  rtdCurrentVersion.appendChild(latestSpan);
-}
-
-/**
- * Force opens the menu, then hides everything except the RTD watermark links
- */
-const hideFlyoverMenu = () => {
-  const intervalId = setInterval(() => {
-    const rtdCurrentVersion = document.querySelector(".rst-current-version");
-    const injected = document.querySelector(".rst-other-versions .injected");
-
-    if (injected) {
-      const dlItems = injected.getElementsByTagName("dl") || [];
-      Array.from(dlItems).forEach(item => item.classList.add("hidden"));
-      const hr = injected.getElementsByTagName("hr") || [];
-      Array.from(hr).forEach(item => item.classList.add("hidden"));
-
-      const flyover = document.querySelector(".rst-versions");
-      rtdCurrentVersion && rtdCurrentVersion.classList.add("hidden");
-      flyover.classList.add(FLYOVER_MENU_TOGGLE_CLASS);
-
-      // Clear the interval once the .injected element is available
-      clearInterval(intervalId);
-    }
-  }, 100); // Check every 100 milliseconds
-}
 /**
  * Sets up click-to-zoom on all content images.
  * Creates a fullscreen overlay that closes on click or Escape.

@@ -16,12 +16,12 @@ const onDOMContentLoaded = () => {
   addFooterNote();
   updateFooterButtonIcons();
   toggleMobileMenu({ expanded: false });
-  updateFlyoverMenu();
-  setTimeout(hideFlyoverMenu, 250);
   setupImageZoom();
 };
 
 function main() {
+  // Registered before DOMContentLoaded so the event is not missed if addons data arrives first
+  document.addEventListener("readthedocs-addons-data-ready", handleAddonsDataReady);
   document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
   document.addEventListener("click", handleGeneralClick);
   document.addEventListener("keydown", handleKeyDown);

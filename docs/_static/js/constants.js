@@ -34,7 +34,7 @@ const REMIX_IDE_URL = "https://app.remix.live";
 // Learn menu
 const LEARNETH_PLUGIN_TUTORIALS_URL = `${REMIX_IDE_URL}/?#activate=LearnEth`;
 const VIDEOS_URL = "https://www.youtube.com/channel/UCjTUPyFEr2xDGN6Cg8nKDaA";
-const ARTICLES_URL = "https://medium.com/remix-ide";
+const ARTICLES_URL = "https://ethereumremix.substack.com/";
 
 /**
  * type NavItem = { name: string } & ({ href: string } | { items: NavItem[] })
@@ -83,5 +83,4 @@ const SITE_BANNER = {
 };
 
 const MOBILE_MENU_TOGGLE_CLASS = "shift";
-const FLYOVER_MENU_TOGGLE_CLASS = "shift-up";
 const WRAPPER_CLASS = "unified-wrapper";

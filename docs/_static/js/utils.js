@@ -190,14 +190,6 @@ const setBannerHeight = (height) => {
   document.body.style.setProperty("--space-banner-height", `${height}px`);
 }
 
-const moveRstVersions = () => {
-  const rstVersions = document.querySelector(".rst-versions");
-  if (!rstVersions) return
-  rstVersions.remove();
-  const wyNavSide = document.querySelector("nav.wy-nav-side");
-  wyNavSide.appendChild(rstVersions);
-}
-
 const handleGeneralClick = (e) => {
   if (e.target.closest(".backdrop")) {
     toggleMobileMenu({ expanded: false });
@@ -262,14 +254,32 @@ const toggleMenu = (id, options = {}) => {
 const getDisplayName = (locale) => new Intl.DisplayNames([locale], { type: "language" }).of(locale)
 
 /**
- * Select available language anchor links from flyover menu and return list of objects
- * @returns { { label: string, href: string }[] }
+ * Languages this project is published in, from Read the Docs addons data.
+ * Stays empty off Read the Docs (e.g. `make run`), where there is no addons data.
+ * @type { { label: string, href: string, isActive: boolean }[] }
  */
-const getLanguages = () => {
-  const languageLinksSelector = ".rst-other-versions .injected dl:first-child dd a"
-  const links = document.querySelectorAll(languageLinksSelector)
-  if (!links) return [];
-  return Array.from(links).map((a) => ({ label: getDisplayName(a.textContent), href: a.href }))
+let rtdLanguages = [];
+
+/**
+ * Handles the `readthedocs-addons-data-ready` event: stores the current language and its
+ * translations, each linked to the same page in that language, then fills the language menu.
+ */
+const handleAddonsDataReady = (event) => {
+  const { projects } = event.detail.data();
+  const currentRoot = projects.current.urls.documentation;
+  const pagePath = window.location.href.startsWith(currentRoot)
+    ? window.location.href.slice(currentRoot.length)
+    : "";
+
+  rtdLanguages = [projects.current, ...projects.translations]
+    .map((project) => ({
+      label: getDisplayName(project.language.code),
+      href: project.urls.documentation + pagePath,
+      isActive: project.slug === projects.current.slug,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+
+  buildLanguageList();
 }
 
 /**
@@ -277,18 +287,17 @@ const getLanguages = () => {
  */
 const buildLanguageList = () => {
   const languageMenuItemsBox = document.querySelector("." + LANGUAGE_MENU_ITEMS_CLASS);
+  // Header not built yet; the list is built when the menu is first opened
+  if (!languageMenuItemsBox) return;
 
-  const languages = getLanguages()
-
-  const addLanguageToDOM = ({ href, label }) => {
+  const toAnchor = ({ href, label, isActive }) => {
     const langAnchor = document.createElement("a")
     langAnchor.setAttribute("href", href)
     langAnchor.innerText = label
-    const isActive = label === getDisplayName(document.documentElement.lang)
     if (isActive) langAnchor.classList.add("active")
-    languageMenuItemsBox.appendChild(langAnchor)
+    return langAnchor
   }
-  languages.forEach(addLanguageToDOM)
+  languageMenuItemsBox.replaceChildren(...rtdLanguages.map(toAnchor))
 }
 
 /**
