@@ -21,11 +21,11 @@ This is static AI analysis, not a substitute for a human audit. Treat the output
 
 Both endpoints take a required `model` parameter, and the model sets the price:
 
-| Model | `/get_audit_checklist` | `/do_audit` | Both, for one contract |
-|-------|------------------------|-------------|------------------------|
-| `DeepSeek` | 0.05 USDC | 0.15 USDC | 0.20 USDC |
-| `Sonnet` | 0.15 USDC | 0.25 USDC | 0.40 USDC |
-| `Fable` | 0.30 USDC | 0.70 USDC | 1.00 USDC |
+| Model      | `/get_audit_checklist` | `/do_audit` | Both, for one contract |
+| ---------- | ---------------------- | ----------- | ---------------------- |
+| `DeepSeek` | 0.05 USDC              | 0.15 USDC   | 0.20 USDC              |
+| `Sonnet`   | 0.15 USDC              | 0.25 USDC   | 0.40 USDC              |
+| `Fable`    | 0.30 USDC              | 0.70 USDC   | 1.00 USDC              |
 
 `DeepSeek` is the fast, low-cost option, and `Fable` gives the most thorough review. Each model has fallbacks: if the chosen model is unavailable, the server retries with a related model, and the `model` field in the result reports the one that actually ran.
 
@@ -95,12 +95,12 @@ The server matches your contract against a library of security audit categories 
 }
 ```
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `sources` | Object | Yes | Map of filename to source code content, the same shape `/compile` takes |
-| `sources[filename].content` | string | Yes | Solidity source code |
-| `model` | string | Yes | `DeepSeek`, `Sonnet`, or `Fable`. Sets the price |
-| `maxCategories` | number | No | Maximum number of categories to match. Defaults to `12`, maximum `20` |
+| Parameter                   | Type   | Required | Description                                                             |
+| --------------------------- | ------ | -------- | ----------------------------------------------------------------------- |
+| `sources`                   | Object | Yes      | Map of filename to source code content, the same shape `/compile` takes |
+| `sources[filename].content` | string | Yes      | Solidity source code                                                    |
+| `model`                     | string | Yes      | `DeepSeek`, `Sonnet`, or `Fable`. Sets the price                        |
+| `maxCategories`             | number | No       | Maximum number of categories to match. Defaults to `12`, maximum `20`   |
 
 ### Checklist output
 
@@ -116,13 +116,13 @@ This is the `result` field of the completed job:
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `success` | boolean | Whether the request completed |
-| `markdown` | string | The checklist report, in markdown |
-| `matchedCategories` | number | How many categories were matched to the contract |
-| `model` | string | The model that ran the analysis, which may be a fallback |
-| `tokensUsed` | number | Tokens consumed by the model |
+| Field               | Type    | Description                                              |
+| ------------------- | ------- | -------------------------------------------------------- |
+| `success`           | boolean | Whether the request completed                            |
+| `markdown`          | string  | The checklist report, in markdown                        |
+| `matchedCategories` | number  | How many categories were matched to the contract         |
+| `model`             | string  | The model that ran the analysis, which may be a fallback |
+| `tokensUsed`        | number  | Tokens consumed by the model                             |
 
 The `markdown` field is what you pass to `/do_audit` in step 2.
 
@@ -150,11 +150,11 @@ This takes your sources and a checklist, works through the code against every ch
 }
 ```
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `sources` | Object | Yes | Map of filename to source code content |
-| `checklist` | string | Yes | Audit checklist in markdown, normally the `markdown` field from `/get_audit_checklist` |
-| `model` | string | Yes | `DeepSeek`, `Sonnet`, or `Fable`. Sets the price |
+| Parameter   | Type   | Required | Description                                                                            |
+| ----------- | ------ | -------- | -------------------------------------------------------------------------------------- |
+| `sources`   | Object | Yes      | Map of filename to source code content                                                 |
+| `checklist` | string | Yes      | Audit checklist in markdown, normally the `markdown` field from `/get_audit_checklist` |
+| `model`     | string | Yes      | `DeepSeek`, `Sonnet`, or `Fable`. Sets the price                                       |
 
 The `checklist` parameter is required, but it does not have to come from step 1. If you have your own checklist in markdown, you can send that instead. The two steps do not have to use the same model either.
 
@@ -179,14 +179,14 @@ This is the `result` field of the completed job:
 }
 ```
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `success` | boolean | Whether the audit completed |
-| `markdown` | string | The audit report, in markdown |
-| `findingsCount` | number | Total number of findings |
-| `severity` | Object | Counts by severity level |
-| `model` | string | The model that ran the audit, which may be a fallback |
-| `tokensUsed` | number | Tokens consumed by the model |
+| Field           | Type    | Description                                           |
+| --------------- | ------- | ----------------------------------------------------- |
+| `success`       | boolean | Whether the audit completed                           |
+| `markdown`      | string  | The audit report, in markdown                         |
+| `findingsCount` | number  | Total number of findings                              |
+| `severity`      | Object  | Counts by severity level                              |
+| `model`         | string  | The model that ran the audit, which may be a fallback |
+| `tokensUsed`    | number  | Tokens consumed by the model                          |
 
 Each finding in the report carries a severity, a category, a description of the problem, and a recommendation for fixing it.
 
@@ -211,8 +211,8 @@ contract MyToken {
         balances[to] += amount;
     }
 }
-    `
-  }
+    `,
+  },
 };
 
 // Poll a job every 5 seconds until it finishes, for up to 10 minutes
@@ -234,7 +234,7 @@ async function waitForJob(jobStatusUrl) {
 const checklistJob = await x402Fetch(`${BASE_URL}/get_audit_checklist`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ sources, model: MODEL, maxCategories: 12 })
+  body: JSON.stringify({ sources, model: MODEL, maxCategories: 12 }),
 }).then((response) => response.json());
 
 const checklist = await waitForJob(checklistJob.jobStatusUrl);
@@ -244,7 +244,11 @@ console.log(`Matched ${checklist.matchedCategories} categories`);
 const auditJob = await x402Fetch(`${BASE_URL}/do_audit`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ sources, checklist: checklist.markdown, model: MODEL })
+  body: JSON.stringify({
+    sources,
+    checklist: checklist.markdown,
+    model: MODEL,
+  }),
 }).then((response) => response.json());
 
 const audit = await waitForJob(auditJob.jobStatusUrl);

@@ -8,7 +8,7 @@
  */
 const docRootPath = (path) => {
   if (/^([a-z]+:)?\/\//i.test(path) || path.startsWith("/")) return path;
-  return `${document.documentElement.dataset.contentRoot || ""}${path}`;
+  return `${document.documentElement.dataset.content_root || ""}${path}`;
 }
 
 const appendSvg = (path, container, className) => {
@@ -99,8 +99,8 @@ const updateMode = () => {
   // Set the color scheme based on the mode
   localStorage.setItem(LS_COLOR_SCHEME, mode);
 
-  // Select document and set the style attribute to denote color-scheme attribute
-  document.documentElement.setAttribute("style", `--color-scheme: ${mode}`);
+  // Theme styles key off this attribute, see tokens.css
+  document.documentElement.dataset.theme = mode;
 }
 
 const updateColorModeIcon = () => {
@@ -183,9 +183,6 @@ const isBannerDismissed = () =>
  * The header, the side nav and the content are all offset from the top of the
  * viewport, so they have to move down by however tall the banner turns out to
  * be — which changes when the message wraps on narrow screens.
- *
- * Set on the body rather than the root element: updateMode() overwrites the
- * root's whole style attribute, which would wipe this out on a theme change.
  *
  * @param {number} height - The banner's height in pixels.
  */

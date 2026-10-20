@@ -14,8 +14,8 @@
   font-size: var(--size-body-small);
 }
 
-:root[style*=dark] .api-console,
-:root[style*=black] .api-console {
+:root[data-theme="dark"] .api-console,
+:root[data-theme="black"] .api-console {
   --api-console-ok: #4ADE80;
   --api-console-bad: #FF8B7D;
 }
@@ -36,8 +36,8 @@
   font-size: var(--size-body-xs);
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  color: var(--color-primary-strong);
+  border: 1px solid var(--color-primary-strong);
   border-radius: 4px;
   padding: 0.125rem 0.5rem;
   flex-shrink: 0;
@@ -57,7 +57,7 @@
   font-family: inherit;
   font-size: var(--size-body-small);
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--color-on-primary);
   background: var(--color-primary);
   border: none;
   border-radius: 4px;
@@ -161,7 +161,7 @@
 /* A status the page deliberately demonstrates, such as the 402 that a
    request without payment is supposed to return. Not a failure. */
 .api-console-badge[data-ok="expected"] {
-  color: var(--color-primary);
+  color: var(--color-primary-strong);
 }
 
 .api-console-meta {
@@ -224,7 +224,7 @@
 
 /* JSON tokens */
 
-.api-console-token[data-token="key"] { color: var(--color-primary); }
+.api-console-token[data-token="key"] { color: var(--color-primary-strong); }
 .api-console-token[data-token="string"] { color: var(--api-console-ok); }
 .api-console-token[data-token="number"] { color: var(--color-body); font-weight: 600; }
 .api-console-token[data-token="boolean"],
