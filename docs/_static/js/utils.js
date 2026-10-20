@@ -8,7 +8,7 @@
  */
 const docRootPath = (path) => {
   if (/^([a-z]+:)?\/\//i.test(path) || path.startsWith("/")) return path;
-  return `${document.documentElement.dataset.contentRoot || ""}${path}`;
+  return `${document.documentElement.dataset.content_root || ""}${path}`;
 }
 
 const appendSvg = (path, container, className) => {
