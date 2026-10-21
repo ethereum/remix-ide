@@ -31,10 +31,6 @@ Thus, it is important to have an alternative file backup/saving strategy.
 
 ### Cloud storage
 
-```{note}
-Cloud storage is currently only available to users in our beta program.
-```
-
 Enabling cloud storage on Remix web saves your work to your Remix account, auto-syncing every change so nothing is lost to browser crashes. Your files are available on any device when you are logged in.
 
 Snapshots of your workspace are taken automatically as you work. Each snapshot captures the workspace state at a single point in time and is not a complete backup; it may be seconds to minutes behind your actual files. Each snapshot is kept for 7 days before being removed. You can download all snapshots currently within that window as a single zip file to inspect locally.
