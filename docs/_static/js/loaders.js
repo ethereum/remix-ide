@@ -130,8 +130,9 @@ const buildHeader = () => {
 
   const homeLink = document.createElement("a");
   homeLink.classList.add("home-link");
-  homeLink.href = REMIX_HOME_URL;
-  homeLink.ariaLabel = "Remix project home";
+  // The docs home page, from wherever this page sits in the tree
+  homeLink.href = docRootPath("");
+  homeLink.ariaLabel = "Remix documentation home";
   innerHeader.appendChild(homeLink);
 
   appendSvg(REMIX_LOGO_PATH, homeLink, REMIX_LOGO_CLASS);
